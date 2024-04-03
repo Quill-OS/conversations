@@ -1,0 +1,41 @@
+kobo:/kobo/mnt/onboard/.adds/inkbox# ls -shal
+total 13M    
+     4 drwxr-xr-x   27 user     user        4.0K Jun 12 10:38 .config
+     0 -rwxr-xr-x    1 root     root         530 Apr 23 14:47 2048
+    81 -rwxr-xr-x    1 root     root       81.2K Apr 23 14:47 2048-bin
+     0 -rw-r--r--    1 root     root         261 Apr 23 14:47 AUTHORS
+    33 -rw-r--r--    1 root     root       33.7K Apr 23 14:47 LICENSE
+     0 drwxr-xr-x   29 root     root           0 Apr 23 14:47 dictionary
+     5 -rw-r--r--    1 root     root        5.8K Jun 12 10:00 eink.qss
+     0 -rwxr-xr-x    1 root     root         563 Apr 23 14:47 epub.sh
+     3 -rwxr-xr-x    1 root     root        3.8K Apr 23 18:02 explore_local_library.sh
+     1 -rwxr-xr-x    1 root     root        1.0K Apr 23 14:47 find_epub_metadata.sh
+     0 -rwxr-xr-x    1 root     root         203 Apr 23 14:47 inkbox
+  7898 -rwxr-xr-x    1 root     root        7.7M Jun 13 17:03 inkbox-bin
+     4 -rwxr-xr-x    1 root     root        4.3K May 23 09:17 inkbox.sh
+     0 -rwxr-xr-x    1 root     root         348 Apr 23 14:47 install_developer-key.sh
+     0 -rwxr-xr-x    1 root     root         940 Apr 23 14:47 launch_user_application.sh
+     0 -rwxr-xr-x    1 root     root          85 Apr 23 14:47 lockscreen
+   137 -rwxr-xr-x    1 root     root      137.1K Jun 13 17:03 lockscreen-bin
+     0 -rwxr-xr-x    1 root     root          86 Apr 23 14:47 oobe-inkbox
+  3016 -rwxr-xr-x    1 root     root        2.9M Jun 13 17:03 oobe-inkbox-bin
+     0 -rwxr-xr-x    1 root     root         178 Apr 23 14:47 pdf_get_total_pages_number.sh
+     1 -rwxr-xr-x    1 root     root        1.4K May 21 13:06 qalculate
+  1861 -rwxr-xr-x    1 root     root        1.8M Apr 23 14:47 qalculate-bin
+     0 -rwxr-xr-x    1 root     root         579 Apr 23 14:47 qreversi
+   116 -rwxr-xr-x    1 root     root      116.8K Apr 23 14:47 qreversi-bin
+     0 -rwxr-xr-x    1 root     root         599 Apr 23 18:02 remount_tmpfs_launch.sh
+     0 -rwxr-xr-x    1 root     root         157 Apr 23 14:47 reset-config.sh
+     0 -rwxr-xr-x    1 root     root         298 Apr 23 14:47 splash.sh
+     1 -rwxr-xr-x    1 root     root        2.0K Apr 23 14:47 split-txt.py
+     0 -rwxr-xr-x    1 root     root         307 Apr 23 14:47 split.sh
+     0 drwxr-xr-x    5 root     root           0 Apr 23 14:47 system
+     0 -rwxr-xr-x    1 root     root         122 Apr 23 14:47 test_ping.sh
+     0 -rwxr-xr-x    1 root     root         252 Apr 23 14:47 wake.sh
+kobo:/kobo/mnt/onboard/.adds/inkbox# ps | grep inkbox
+  661 root      0:00 [inkbox-splash]
+ 2333 root      0:02 squashfuse -o allow_other,nosuid /opt/isa/inkbox.isa /kobo/mnt/onboard/.adds/inkbox
+ 2466 root      0:00 {inkbox.sh} /bin/sh /mnt/onboard/.adds/inkbox/inkbox.sh
+ 2551 root      0:00 {inkbox} /bin/sh ./inkbox
+ 2552 root      0:01 /mnt/onboard/.adds/inkbox/inkbox-bin
+kobo:/kobo/mnt/onboard/.adds/inkbox#

@@ -1,0 +1,117 @@
+[  445.022941] 8189fs: loading out-of-tree module taints kernel.
+/mnt # ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+/mnt # ifconfig -a
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+sit0      Link encap:IPv6-in-IPv4  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr 58:B0:D4:7B:BE:22  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+/mnt # ifconfig wlan0 up
+[  462.541234] 
+[  462.542751] ============================================
+[  462.548070] WARNING: possible recursive locking detected
+[  462.553388] 5.16.0 #1 Tainted: G           O     
+[  462.558099] --------------------------------------------
+[  462.563416] ifconfig/148 is trying to acquire lock:
+[  462.568300] c2bb12b4 (pmutex){+.+.}-{3:3}, at: phy_RFSerialRead_8188F+0x28/0x1fc [8189fs]
+[  462.577101] 
+[  462.577101] but task is already holding lock:
+[  462.582940] c2bb10d8 (pmutex){+.+.}-{3:3}, at: netdev_open+0x2c/0x4c [8189fs]
+[  462.590631] 
+[  462.590631] other info that might help us debug this:
+[  462.597164]  Possible unsafe locking scenario:
+[  462.597164] 
+[  462.603087]        CPU0
+[  462.605537]        ----
+[  462.607986]   lock(pmutex);
+[  462.610793]   lock(pmutex);
+[  462.613598] 
+[  462.613598]  *** DEADLOCK ***
+[  462.613598] 
+[  462.619520]  May be due to missing lock nesting notation
+[  462.619520] 
+[  462.626311] 2 locks held by ifconfig/148:
+[  462.630327]  #0: c164a3e4 (rtnl_mutex){+.+.}-{3:3}, at: devinet_ioctl+0xec/0x684
+[  462.637771]  #1: c2bb10d8 (pmutex){+.+.}-{3:3}, at: netdev_open+0x2c/0x4c [8189fs]
+[  462.645886] 
+[  462.645886] stack backtrace:
+[  462.650251] CPU: 0 PID: 148 Comm: ifconfig Tainted: G           O      5.16.0 #1
+[  462.657659] Hardware name: Freescale i.MX6 SoloLite (Device Tree)
+[  462.663768] [<c010e7b0>] (unwind_backtrace) from [<c010a284>] (show_stack+0x10/0x14)
+[  462.671545] [<c010a284>] (show_stack) from [<c083e1c0>] (dump_stack_lvl+0x58/0x70)
+[  462.679138] [<c083e1c0>] (dump_stack_lvl) from [<c016b7f8>] (__lock_acquire+0x868/0x16f4)
+[  462.687339] [<c016b7f8>] (__lock_acquire) from [<c016d0bc>] (lock_acquire+0x290/0x320)
+[  462.695275] [<c016d0bc>] (lock_acquire) from [<c084525c>] (__mutex_lock+0xbc/0x360)
+[  462.702950] [<c084525c>] (__mutex_lock) from [<c084557c>] (mutex_lock_interruptible_nested+0x18/0x20)
+[  462.712184] [<c084557c>] (mutex_lock_interruptible_nested) from [<bf0ad458>] (phy_RFSerialRead_8188F+0x28/0x1fc [8189fs])
+[  462.723685] [<bf0ad458>] (phy_RFSerialRead_8188F [8189fs]) from [<bf0ad6ac>] (PHY_QueryRFReg_8188F+0xc/0x24 [8189fs])
+[  462.735315] [<bf0ad6ac>] (PHY_QueryRFReg_8188F [8189fs]) from [<bf08e3f0>] (rtw_hal_read_rfreg+0x18/0x24 [8189fs])
+[  462.746674] [<bf08e3f0>] (rtw_hal_read_rfreg [8189fs]) from [<bf0b7bac>] (odm_get_rf_reg+0xc/0x10 [8189fs])
+[  462.757423] [<bf0b7bac>] (odm_get_rf_reg [8189fs]) from [<bf0cdcc0>] (odm_config_rf_reg_8188f+0x78/0x198 [8189fs])
+[  462.768780] [<bf0cdcc0>] (odm_config_rf_reg_8188f [8189fs]) from [<bf0cddf4>] (odm_config_rf_radio_a_8188f+0x14/0x1c [8189fs])
+[  462.781198] [<bf0cddf4>] (odm_config_rf_radio_a_8188f [8189fs]) from [<bf0cda7c>] (odm_read_and_config_mp_8188f_radioa+0x1f8/0x218 [8189fs])
+[  462.794821] [<bf0cda7c>] (odm_read_and_config_mp_8188f_radioa [8189fs]) from [<bf0b8e84>] (odm_config_rf_with_header_file+0x50/0x90 [8189fs])
+[  462.808522] [<bf0b8e84>] (odm_config_rf_with_header_file [8189fs]) from [<bf0aee04>] (PHY_RF6052_Config8188F+0x198/0x250 [8189fs])
+[  462.821274] [<bf0aee04>] (PHY_RF6052_Config8188F [8189fs]) from [<bf0ad958>] (PHY_RFConfig8188F+0x8/0xc [8189fs])
+[  462.832555] [<bf0ad958>] (PHY_RFConfig8188F [8189fs]) from [<bf0b0560>] (rtl8188fs_hal_init+0x154/0x608 [8189fs])
+[  462.843819] [<bf0b0560>] (rtl8188fs_hal_init [8189fs]) from [<bf08e684>] (rtw_hal_init+0x2c/0xb8 [8189fs])
+[  462.854489] [<bf08e684>] (rtw_hal_init [8189fs]) from [<bf06d88c>] (_netdev_open+0x4c/0x11c [8189fs])
+[  462.864720] [<bf06d88c>] (_netdev_open [8189fs]) from [<bf06d990>] (netdev_open+0x34/0x4c [8189fs])
+[  462.874768] [<bf06d990>] (netdev_open [8189fs]) from [<c0655bc8>] (__dev_open+0x144/0x170)
+[  462.883563] [<c0655bc8>] (__dev_open) from [<c0655f04>] (__dev_change_flags+0x18c/0x1b8)
+[  462.891679] [<c0655f04>] (__dev_change_flags) from [<c0655f44>] (dev_change_flags+0x14/0x44)
+[  462.900140] [<c0655f44>] (dev_change_flags) from [<c06ee39c>] (devinet_ioctl+0x350/0x684)
+[  462.908345] [<c06ee39c>] (devinet_ioctl) from [<c06f0794>] (inet_ioctl+0x224/0x260)
+[  462.916022] [<c06f0794>] (inet_ioctl) from [<c062ef40>] (sock_ioctl+0x190/0x480)
+[  462.923437] [<c062ef40>] (sock_ioctl) from [<c027867c>] (vfs_ioctl+0x20/0x38)
+[  462.930598] [<c027867c>] (vfs_ioctl) from [<c02790b4>] (sys_ioctl+0xc0/0x998)
+[  462.937753] [<c02790b4>] (sys_ioctl) from [<c0100080>] (ret_fast_syscall+0x0/0x1c)
+[  462.945342] Exception stack(0xc398ffa8 to 0xc398fff0)
+[  462.950408] ffa0:                   0015a404 bedb5c90 00000003 00008914 bedb5c90 0015a404
+[  462.958596] ffc0: 0015a404 bedb5c90 bedb5e6c 00000036 0012e710 00000000 bedb5e68 bedb5e6c
+[  462.966781] ffe0: bedb5c95 bedb5c2c 00102e4f 0000ab4c
+/mnt # ifconfig
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+wlan0     Link encap:Ethernet  HWaddr 58:B0:D4:7B:BE:22  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+/mnt #

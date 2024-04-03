@@ -1,0 +1,56 @@
+kobo:/# echo true > /boot/flags/GUI_DEBUG
+kobo:/# restart inkbox_gui
+ * Stopping InkBox GUI ...                                                                                            [ ok ]
+ * Starting InkBox GUI ...
+ * Starting InkBox Daemon (ibxd) ...                                                                                  [ ok ]
+ * WARNING: you are stopping a sysinit service
+ * Stopping udev ...                                                                                                  [ ok ]
+ * Starting udev ...                                                                                                  [ ok ]
+ * Setting up GUI user applications                                                                                   [ ok ]
+ * WARNING: sshd has already been started
+kobo:/# iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+kobofb: Finished initialization.
+22/01/2024 @ 16:20:52 | main: Running on device n306
+22/01/2024 @ 16:20:52 | main: Device has Wi-Fi capabilities
+22/01/2024 @ 16:20:56 | functions: checkconfig: Warning: File '.config/e-2-audio/enabled' doesn't exist, returning false
+22/01/2024 @ 16:20:56 | main: Audio is disabled
+22/01/2024 @ 16:20:56 | functions: checkconfig: Warning: File '.config/18-encrypted_storage/status' doesn't exist, returning false
+22/01/2024 @ 16:20:56 | sleepThread: Sleep pipe thread active
+22/01/2024 @ 16:20:56 | functions: checkconfig: Warning: File '/external_root/run/encfs_mounted' doesn't exist, returning false
+22/01/2024 @ 16:20:56 | functions: checkconfig: Warning: File '/external_root/boot/flags/ALERT' doesn't exist, returning false
+22/01/2024 @ 16:20:56 | functions: checkconfig: Warning: File '/tmp/suspendBook' doesn't exist, returning false
+22/01/2024 @ 16:20:57 | sleepThread: Looking for messages in pipe
+22/01/2024 @ 16:21:03 | functions: checkconfig: Warning: File '.config/18-encrypted_storage/status' doesn't exist, returning false
+22/01/2024 @ 16:21:04 | toast: Displaying message 'Generating database'
+22/01/2024 @ 16:21:05 | MainWindow: Checking for available updates
+22/01/2024 @ 16:21:05 | functions: checkconfig: Warning: File '/mnt/onboard/onboard/.inkbox/can_update' doesn't exist, returning false
+22/01/2024 @ 16:21:05 | MainWindow: checkForUpdate: No update available.
+QLayout: Attempting to add QLayout "" to localLibraryWidget "localLibraryWidget", which already has a layout
+QLayout: Attempting to add QLayout "" to localLibraryWidget "localLibraryWidget", which already has a layout
+QLayout: Attempting to add QLayout "" to localLibraryWidget "localLibraryWidget", which already has a layout
+QLayout: Attempting to add QLayout "" to localLibraryWidget "localLibraryWidget", which already has a layout
+22/01/2024 @ 16:21:06 | toast: Displaying message 'Generating database'
+22/01/2024 @ 16:21:07 | MainWindow: Setting initial brightness to 50
+22/01/2024 @ 16:21:07 | functions: checkconfig: Warning: File '/tmp/oobe-inkbox_completed' doesn't exist, returning false
+22/01/2024 @ 16:21:07 | functions: checkconfig: Warning: File '/tmp/inkbox-cinematicBrightness_auto' doesn't exist, returning false
+22/01/2024 @ 16:21:07 | functions: checkconfig: Warning: File '/tmp/inkbox-cinematicBrightness_ran' doesn't exist, returning false
+22/01/2024 @ 16:21:07 | functions: cinematicBrightness: Setting brightness to 50
+22/01/2024 @ 16:21:09 | MainWindow: Showing USB Mass Storage dialog
+22/01/2024 @ 16:21:09 | functions: checkconfig: Warning: File '/inkbox/resetDialog' doesn't exist, returning false
+22/01/2024 @ 16:21:09 | functions: checkconfig: Warning: File '/inkbox/updateDialog' doesn't exist, returning false
+22/01/2024 @ 16:21:09 | localLibraryWidget: Generating database
+22/01/2024 @ 16:21:12 | localLibraryWidget: Reading database
+22/01/2024 @ 16:21:12 | localLibraryWidget: Main path is '/mnt/onboard/onboard/'
+22/01/2024 @ 16:21:12 | localLibraryWidget: Main path is empty: true
+22/01/2024 @ 16:21:12 | localLibraryWidget: Hiding items
+22/01/2024 @ 16:21:12 | toast: Displaying message 'Library is empty'
+22/01/2024 @ 16:21:12 | localLibraryWidget: Database is empty
+22/01/2024 @ 16:21:12 | homePageWidget: Reading database
+22/01/2024 @ 16:21:12 | homePageWidget: Reading recent books database
+22/01/2024 @ 16:21:12 | homePageWidget: setupDisplay: Failed to open recent books database file for reading at '/mnt/onboard/onboard/.database/RecentBooks.db'
+qUncompress: Input data is corrupted
+22/01/2024 @ 16:21:12 | homePageWidget: Setting up home page
+22/01/2024 @ 16:21:12 | homePageWidget: No books found in recent books database
+22/01/2024 @ 16:21:12 | homePageWidget: No books found in pinned books database

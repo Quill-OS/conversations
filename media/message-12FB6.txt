@@ -1,0 +1,55 @@
+kobo:~# insmod /modules/drivers/mmc/card/sdio_wifi_pwr.ko                                      
+kobo:~# lsmod                                                                                  
+Module                  Size  Used by                                                          
+sdio_wifi_pwr            593  0                                                                
+8189fs               1294344  0                                                                
+usb_f_mass_storage     38079  0                                                                
+libcomposite           44430  1 usb_f_mass_storage                                             
+configfs               23581  3 libcomposite,usb_f_mass_storage                                
+kobo:~# ip a                                                                                   
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default              
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00                                      
+    inet 127.0.0.1/8 scope host lo                                                             
+       valid_lft forever preferred_lft forever                                                 
+5: eth0: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000          
+    link/ether 58:b0:d4:9d:a6:8e brd ff:ff:ff:ff:ff:ff                                         
+kobo:~# udhcpc -i eth0                                                                         
+udhcpc: started, v1.33.0                                                                       
+udhcpc: sending discover                                                                       
+udhcpc: sendto: Network is down                                                                
+udhcpc: read error: Network is down, reopening socket                                          
+udhcpc: sending discover                                                                       
+udhcpc: sendto: Network is down                                                                
+udhcpc: read error: Network is down, reopening socket                                          
+udhcpc: sending discover                                                                       
+udhcpc: sendto: Network is down                                                                
+udhcpc: read error: Network is down, reopening socket                                          
+udhcpc: sending discover                                                                       
+udhcpc: sendto: Network is down                                                                
+udhcpc: read error: Network is down, reopening socket                                          
+udhcpc: sending discover                                                                       
+udhcpc: sendto: Network is down                                                                
+udhcpc: read error: Network is down, reopening socket                                          
+udhcpc failed to get a DHCP lease                                                              
+udhcpc: read error: Network is down, reopening socket                                          
+udhcpc: read error: Network is down, reopening socket                                          
+^C                                                                                             
+kobo:~# /usr/local/bin/wifi/connect_to_network.sh hotspotttssss 12345678                       
+Successfully initialized wpa_supplicant                                                        
+rfkill: Cannot get wiphy information                                                           
+ioctl[SIOCSIWAP]: Operation not permitted                                                      
+no such user dhcpcd                                                                            
+dhcpcd-9.4.0 starting                                                                          
+eth0: waiting for carrier                                                                      
+timed out                                                                                      
+dhcpcd exited                                                                                  
+dhcpcd_fork_cb: truncated read 0 (expected 4)                                                  
+DHCP request failed.                                                                           
+kobo:~# udhcpc -i eth0                                                                         
+udhcpc: ioctl 0x8933 failed: No such device                                                    
+kobo:~# ip a                                                                                   
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default              
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00                                      
+    inet 127.0.0.1/8 scope host lo                                                             
+       valid_lft forever preferred_lft forever                                                 
+kobo:~# 

@@ -1,0 +1,424 @@
+From 93123e8172093a2aac38542d7b626ebcf11f6cdb Mon Sep 17 00:00:00 2001
+From: Andreas Kemnade <andreas@kemnade.info>
+Date: Fri, 26 Aug 2022 06:27:38 +0000
+Subject: [PATCH] remove make_devicenodes script
+
+no need for it, the kernel build scripts already do their job
+---
+ initrd/devnodes-bpi.txt          |  3 ++
+ initrd/devnodes-emu.txt          |  3 ++
+ initrd/devnodes-imx.txt          |  3 ++
+ kernel/config/config-bpi         |  2 +-
+ kernel/config/config-bpi-diags   |  2 +-
+ kernel/config/config-emu         |  2 +-
+ kernel/config/config-emu-diags   |  2 +-
+ kernel/config/config-kt          |  2 +-
+ kernel/config/config-kt-diags    |  2 +-
+ kernel/config/config-n236        |  2 +-
+ kernel/config/config-n249        |  2 +-
+ kernel/config/config-n306        |  2 +-
+ kernel/config/config-n437        |  2 +-
+ kernel/config/config-n613        |  2 +-
+ kernel/config/config-n613-diags  |  2 +-
+ kernel/config/config-n705        |  2 +-
+ kernel/config/config-n705-diags  |  2 +-
+ kernel/config/config-n873        |  2 +-
+ kernel/config/config-n873-spl    |  2 +-
+ kernel/config/config-n905b       |  2 +-
+ kernel/config/config-n905b-diags |  2 +-
+ kernel/config/config-n905c       |  2 +-
+ kernel/config/config-n905c-diags |  2 +-
+ kernel/config/config-spt1        |  2 +-
+ scripts/build_kernel.sh          |  2 -
+ scripts/make_devicenodes.sh      | 63 --------------------------------
+ 26 files changed, 30 insertions(+), 86 deletions(-)
+ create mode 100644 initrd/devnodes-bpi.txt
+ create mode 100644 initrd/devnodes-emu.txt
+ create mode 100644 initrd/devnodes-imx.txt
+ delete mode 100755 scripts/make_devicenodes.sh
+
+diff --git a/initrd/devnodes-bpi.txt b/initrd/devnodes-bpi.txt
+new file mode 100644
+index 0000000000..f85bd0a68a
+--- /dev/null
++++ b/initrd/devnodes-bpi.txt
+@@ -0,0 +1,3 @@
++nod dev/console 0620 0 0 c 5 1
++nod dev/null 0666 0 0 c 1 3
++nod dev/ttyAMA0 0660 0 0 c 204 64
+diff --git a/initrd/devnodes-emu.txt b/initrd/devnodes-emu.txt
+new file mode 100644
+index 0000000000..f74c1f84f9
+--- /dev/null
++++ b/initrd/devnodes-emu.txt
+@@ -0,0 +1,3 @@
++nod dev/console 0620 0 0 c 5 1
++nod dev/null 0666 0 0 c 1 3
++nod dev/ttyS0 0660 0 0 c 4 64
+diff --git a/initrd/devnodes-imx.txt b/initrd/devnodes-imx.txt
+new file mode 100644
+index 0000000000..f3b713b472
+--- /dev/null
++++ b/initrd/devnodes-imx.txt
+@@ -0,0 +1,3 @@
++nod dev/console 0620 0 0 c 5 1
++nod dev/null 0666 0 0 c 1 3
++nod dev/ttymxc0 0660 0 0 c 207 16
+diff --git a/kernel/config/config-bpi b/kernel/config/config-bpi
+index ae4b1016fd..99104dd607 100644
+--- a/kernel/config/config-bpi
++++ b/kernel/config/config-bpi
+@@ -145,7 +145,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ # CONFIG_RELAY is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-bpi/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-bpi.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-bpi/"
+ # CONFIG_INITRAMFS_FORCE is not set
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+diff --git a/kernel/config/config-bpi-diags b/kernel/config/config-bpi-diags
+index 03eb2ed4a5..ffb4fc479d 100644
+--- a/kernel/config/config-bpi-diags
++++ b/kernel/config/config-bpi-diags
+@@ -145,7 +145,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ # CONFIG_RELAY is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-bpi-recovery/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-bpi.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-bpi-recovery/"
+ # CONFIG_INITRAMFS_FORCE is not set
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+diff --git a/kernel/config/config-emu b/kernel/config/config-emu
+index 8742eb7e44..115032e6d4 100644
+--- a/kernel/config/config-emu
++++ b/kernel/config/config-emu
+@@ -159,7 +159,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ # CONFIG_RELAY is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-emu/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-emu.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-emu/"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ CONFIG_RD_GZIP=y
+diff --git a/kernel/config/config-emu-diags b/kernel/config/config-emu-diags
+index edb9c6546d..59f3c769be 100644
+--- a/kernel/config/config-emu-diags
++++ b/kernel/config/config-emu-diags
+@@ -159,7 +159,7 @@ CONFIG_NAMESPACES=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ # CONFIG_RELAY is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-emu-recovery/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-emu.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-emu-recovery/"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ CONFIG_RD_GZIP=y
+diff --git a/kernel/config/config-kt b/kernel/config/config-kt
+index b3e8128758..2e630dd925 100644
+--- a/kernel/config/config-kt
++++ b/kernel/config/config-kt
+@@ -74,7 +74,7 @@ CONFIG_USER_NS=y
+ CONFIG_PID_NS=y
+ CONFIG_NET_NS=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-kt/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-kt/"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-kt-diags b/kernel/config/config-kt-diags
+index a31127771d..18ed42eaf6 100644
+--- a/kernel/config/config-kt-diags
++++ b/kernel/config/config-kt-diags
+@@ -69,7 +69,7 @@ CONFIG_LOG_BUF_SHIFT=14
+ # CONFIG_RELAY is not set
+ # CONFIG_NAMESPACES is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-kt-recovery/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-kt-recovery/"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n236 b/kernel/config/config-n236
+index 51c773f348..cdd8092f6d 100644
+--- a/kernel/config/config-n236
++++ b/kernel/config/config-n236
+@@ -90,7 +90,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ # CONFIG_RELAY is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n236"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n236"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n249 b/kernel/config/config-n249
+index 5e96e01e1e..2f63b496e4 100644
+--- a/kernel/config/config-n249
++++ b/kernel/config/config-n249
+@@ -167,7 +167,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ CONFIG_RELAY=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n249/"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n249/"
+ # CONFIG_INITRAMFS_FORCE is not set
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+diff --git a/kernel/config/config-n306 b/kernel/config/config-n306
+index 2da6951cf4..37ab5ced8e 100644
+--- a/kernel/config/config-n306
++++ b/kernel/config/config-n306
+@@ -127,7 +127,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ CONFIG_RELAY=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n306"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n306"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n437 b/kernel/config/config-n437
+index 7c91ae5596..bc603836d3 100644
+--- a/kernel/config/config-n437
++++ b/kernel/config/config-n437
+@@ -90,7 +90,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ # CONFIG_RELAY is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n437"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-n437"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n613 b/kernel/config/config-n613
+index 96005bcf11..dcff49c7ae 100644
+--- a/kernel/config/config-n613
++++ b/kernel/config/config-n613
+@@ -76,7 +76,7 @@ CONFIG_USER_NS=y
+ CONFIG_PID_NS=y
+ CONFIG_NET_NS=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-glo"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-glo"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n613-diags b/kernel/config/config-n613-diags
+index aaa85b9533..3407d7a6f7 100644
+--- a/kernel/config/config-n613-diags
++++ b/kernel/config/config-n613-diags
+@@ -71,7 +71,7 @@ CONFIG_LOG_BUF_SHIFT=14
+ # CONFIG_RELAY is not set
+ # CONFIG_NAMESPACES is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-glo-recovery"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-glo-recovery"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n705 b/kernel/config/config-n705
+index 739574db1d..adc18d9377 100644
+--- a/kernel/config/config-n705
++++ b/kernel/config/config-n705
+@@ -76,7 +76,7 @@ CONFIG_USER_NS=y
+ CONFIG_PID_NS=y
+ CONFIG_NET_NS=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-mini"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-mini"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n705-diags b/kernel/config/config-n705-diags
+index 2ee85a1c15..037f4b4797 100644
+--- a/kernel/config/config-n705-diags
++++ b/kernel/config/config-n705-diags
+@@ -71,7 +71,7 @@ CONFIG_LOG_BUF_SHIFT=14
+ # CONFIG_RELAY is not set
+ # CONFIG_NAMESPACES is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-mini-recovery"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-mini-recovery"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n873 b/kernel/config/config-n873
+index 1137db45bc..4f528db20d 100644
+--- a/kernel/config/config-n873
++++ b/kernel/config/config-n873
+@@ -136,7 +136,7 @@ CONFIG_NET_NS=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ CONFIG_RELAY=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-libra"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-libra"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n873-spl b/kernel/config/config-n873-spl
+index 4199275929..5afa0850c0 100644
+--- a/kernel/config/config-n873-spl
++++ b/kernel/config/config-n873-spl
+@@ -122,7 +122,7 @@ CONFIG_GENERIC_SCHED_CLOCK=y
+ # CONFIG_SYSFS_DEPRECATED is not set
+ CONFIG_RELAY=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.33-libra_spl/_install"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.33-libra_spl/_install"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n905b b/kernel/config/config-n905b
+index 788bec7b00..39d53b1f5d 100644
+--- a/kernel/config/config-n905b
++++ b/kernel/config/config-n905b
+@@ -76,7 +76,7 @@ CONFIG_USER_NS=y
+ CONFIG_PID_NS=y
+ CONFIG_NET_NS=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch-b"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch-b"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n905b-diags b/kernel/config/config-n905b-diags
+index 9ee3d33048..312550b525 100644
+--- a/kernel/config/config-n905b-diags
++++ b/kernel/config/config-n905b-diags
+@@ -71,7 +71,7 @@ CONFIG_LOG_BUF_SHIFT=14
+ # CONFIG_RELAY is not set
+ # CONFIG_NAMESPACES is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch-b-recovery"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch-b-recovery"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n905c b/kernel/config/config-n905c
+index c51d267973..ee81e1b775 100644
+--- a/kernel/config/config-n905c
++++ b/kernel/config/config-n905c
+@@ -76,7 +76,7 @@ CONFIG_USER_NS=y
+ CONFIG_PID_NS=y
+ CONFIG_NET_NS=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-n905c-diags b/kernel/config/config-n905c-diags
+index ab35a9702b..4144df67af 100644
+--- a/kernel/config/config-n905c-diags
++++ b/kernel/config/config-n905c-diags
+@@ -71,7 +71,7 @@ CONFIG_LOG_BUF_SHIFT=14
+ # CONFIG_RELAY is not set
+ # CONFIG_NAMESPACES is not set
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch-recovery"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch-recovery"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ # CONFIG_RD_GZIP is not set
+diff --git a/kernel/config/config-spt1 b/kernel/config/config-spt1
+index 27c95219ba..fbacb997e7 100644
+--- a/kernel/config/config-spt1
++++ b/kernel/config/config-spt1
+@@ -78,7 +78,7 @@ CONFIG_USER_NS=y
+ CONFIG_PID_NS=y
+ CONFIG_NET_NS=y
+ CONFIG_BLK_DEV_INITRD=y
+-CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-spt1"
++CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-spt1"
+ CONFIG_INITRAMFS_ROOT_UID=0
+ CONFIG_INITRAMFS_ROOT_GID=0
+ CONFIG_RD_GZIP=y
+diff --git a/scripts/build_kernel.sh b/scripts/build_kernel.sh
+index 7f55ed1258..8af7f1ab46 100755
+--- a/scripts/build_kernel.sh
++++ b/scripts/build_kernel.sh
+@@ -92,8 +92,6 @@ else
+ fi
+ 
+ cd "${GITDIR}"
+-echo "---- Making device nodes ----"
+-env "GITDIR=${PWD}" scripts/make_devicenodes.sh
+ 
+ if [ "$1" == "n705" ]; then
+ 	cd $GITDIR/kernel/linux-2.6.35.3
+diff --git a/scripts/make_devicenodes.sh b/scripts/make_devicenodes.sh
+deleted file mode 100755
+index c1807d5386..0000000000
+--- a/scripts/make_devicenodes.sh
++++ /dev/null
+@@ -1,63 +0,0 @@
+-#!/bin/sh
+-
+-if [ -z "${GITDIR}" ]; then
+-	echo "You must specify the GITDIR environment variable."
+-	exit 1
+-else
+-	make_nodes() {
+-		mkdir -p dev
+-		sudo mknod dev/console c 5 1
+-		sudo mknod dev/null c 1 3
+-		if [ "${1}" == "emu" ]; then
+-			sudo mknod dev/ttyAMA0 c 204 64
+-		elif [ "${1}" == "bpi" ]; then
+-			sudo mknod dev/ttyS0 c 4 64
+-		else
+-			sudo mknod dev/ttymxc0 c 207 16
+-		fi
+-	}
+-
+-	cd ${GITDIR}/initrd/n705
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n905c
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n613
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n705-diags
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n905c-diags
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n613-diags
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n873-spl
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n873
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n873-diags
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n905b
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n905b-diags
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n236
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n437
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n306
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/n249
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/kt
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/kt-diags
+-	make_nodes 2>/dev/null
+-	cd ${GITDIR}/initrd/emu
+-	make_nodes emu 2>/dev/null
+-	cd ${GITDIR}/initrd/emu-diags
+-	make_nodes emu 2>/dev/null
+-	cd ${GITDIR}/initrd/bpi
+-	make_nodes bpi 2>/dev/null
+-	cd ${GITDIR}/initrd/bpi-diags
+-	make_nodes bpi 2>/dev/null
+-	echo "Done making devices nodes."
+-fi
+-- 
+2.30.2
+

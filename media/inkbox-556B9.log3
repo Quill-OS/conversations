@@ -1,0 +1,44 @@
+~ # /-[J[Jls /lib/modules
+ls: /lib/modules: No such file or directory
+~ # ~ # ls /lib/modules[J~ # unsquashfs /opt/modules.sqsh -d /lib/modules[J-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules[J[15D-d /lib/modules /op~ # unsquashfs -d /lib/modules /opt/[Jus[J[Js[Jmo~ # unsquashfs -d /lib/modules /opt/modules.sqsh [J
+Parallel unsquashfs: Using 1 processor
+66 inodes (65 blocks) to write
+
+
+
+created 64 files
+created 32 directories
+created 2 symlinks
+created 0 devices
+created 0 fifos
+created 0 sockets
+~ # modpr~ # modprobe [Jtps65185[Jx-regulator
+~ # ~ # modprobe tps6518x-regulator[J[J[J[J[J[J[J[J[J[Jhwmon
+~ # cd /lib[J[J[J[J[J[J[Jcd /
+/ # nc -lp 54321 | tar --xbb[J[J[J[Jxvv
+punt!
+
+/ # modpr/ # modprobe [Jg_ether
+/ # ifco/ # ifconfig [Jusb0 192.168.0.214 up
+/ # / # ifconfig usb0 192.168.0.214 up[J/ # modprobe g_ether[J/ # nc -lp 54321 | tar -xvv[J
+drwxr-xr-x root/root         0 2021-11-23 20:15:33 lib/firmware/imx/epdc/
+-rw-r--r-- root/root   5369171 2021-10-17 20:55:18 lib/firmware/imx/epdc/epdc-vision5.fw
+-rw-r--r-- root/root   1240775 2021-11-22 20:26:40 lib/firmware/imx/epdc/epdc_E60_V220.fw
+-rw-r--r-- root/root   2686291 2021-10-17 20:40:45 lib/firmware/imx/epdc/epdc-librah2o.fw
+-rw-r--r-- root/root   2686280 2020-12-28 18:35:50 lib/firmware/imx/epdc/epdc_PENG060D-kobo.fw
+-rw-r--r-- root/root   5368136 2020-12-28 18:35:50 lib/firmware/imx/epdc/epdc-tolino3.fw
+lrwxrwxrwx root/root         0 2021-11-23 20:15:33 lib/firmware/imx/epdc/epdc.fw -> epdc_PENG060D-kobo.fw
+-rw-r--r-- root/root   6577632 2020-12-28 18:35:50 lib/firmware/imx/epdc/epdc-tolino2.fw
+-rw-r--r-- root/root    871968 2021-11-22 20:26:41 lib/firmware/imx/epdc/epdc_E97_V110.fw
+-rw-r--r-- root/root    985543 2021-11-22 20:26:40 lib/firmware/imx/epdc/epdc_E060SCM.fw
+-rw-r--r-- root/root    734431 2021-11-22 20:26:40 lib/firmware/imx/epdc/epdc_E60_V110.fw
+-rw-r--r-- root/root    661227 2021-11-22 20:26:41 lib/firmware/imx/epdc/epdc_ED060XH2C1.fw
+-rw-r--r-- root/root   2686280 2021-10-15 08:43:35 lib/firmware/imx/epdc/epdc.fw.bk
+
+
+/ # 
+/ # modpr/ # modprobe [Jmxc_.[Jepdc_v22_fb
+/ # / # /etc/init.d/inkbox-splash developer_splash[J/ # less /etc/init.d/inkbox-splash developer_splash[J/ # /etc/init.d/inkbox-splash alert_splash[J
+
+/ # 
+/ # / # /etc/init.d/inkbox-splash alert_splash[J/ #

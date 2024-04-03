@@ -1,0 +1,47 @@
+From 5362237d2177db3cb993b8e1f5b68bc241ef4dbe Mon Sep 17 00:00:00 2001
+From: Andreas Kemnade <andreas@kemnade.info>
+Date: Thu, 28 Mar 2024 22:28:49 +0000
+Subject: [PATCH] use u-boot from submodule for n249
+
+In a first step use the same version
+---
+ .gitmodules             | 3 +++
+ bootloader/u-boot-fslc  | 1 +
+ scripts/build_u-boot.sh | 2 +-
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+ create mode 160000 bootloader/u-boot-fslc
+
+diff --git a/.gitmodules b/.gitmodules
+index df5d5e1190..f7a8cba0bb 100644
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -4,3 +4,6 @@
+ [submodule "inkbox-os-init"]
+ 	path = inkbox-os-init
+ 	url = https://github.com/Kobo-InkBox/inkbox-os-init
++[submodule "bootloader/u-boot-fslc"]
++	path = bootloader/u-boot-fslc
++	url = https://github.com/Kobo-InkBox/u-boot-fslc
+diff --git a/bootloader/u-boot-fslc b/bootloader/u-boot-fslc
+new file mode 160000
+index 0000000000..e45fdb097f
+--- /dev/null
++++ b/bootloader/u-boot-fslc
+@@ -0,0 +1 @@
++Subproject commit e45fdb097f1e785fae0bc7dde498e966bc973354
+diff --git a/scripts/build_u-boot.sh b/scripts/build_u-boot.sh
+index ceb923e3db..790977d5f9 100755
+--- a/scripts/build_u-boot.sh
++++ b/scripts/build_u-boot.sh
+@@ -63,7 +63,7 @@ elif [ "${DEVICE}" == "n306" ] || [ "${DEVICE}" == "n306c" ]; then
+ 
+ 	popd
+ elif [ "${DEVICE}" == "n249" ]; then
+-	pushd "${GITDIR}/bootloader/mx6sll-n249"
++	pushd "${GITDIR}/bootloader/u-boot-fslc"
+ 
+ 	make ARCH=arm CROSS_COMPILE="${TARGET}-" -j${THREADS} distclean
+ 	make ARCH=arm CROSS_COMPILE="${TARGET}-" -j${THREADS} mx6sllclarahd_defconfig
+-- 
+2.30.2
+

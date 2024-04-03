@@ -1,0 +1,48 @@
+diff --git a/src/main.cpp b/src/main.cpp
+index 07152e7..382fc53 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -7,19 +7,18 @@
+ 
+ bool logEnabled = false;
+ 
+-void log(string to_log)
++void log(std::string to_log)
+ {
+     if(logEnabled == true)
+     {
+-        cout << to_log << endl;
+-
++        std::cout << to_log << std::endl;
+     }
+ }
+ 
+ int main()
+ {
+     const char* tmp = getenv("DEBUG");
+-    string envVar;
++    std::string envVar;
+ 
+     if(tmp != NULL)
+     {
+@@ -37,4 +36,4 @@ int main()
+     monitor_dev.join();
+ 
+     return 0;
+-}
+\ No newline at end of file
++}
+diff --git a/src/main.h b/src/main.h
+index c0b1a57..c860a0f 100644
+--- a/src/main.h
++++ b/src/main.h
+@@ -3,6 +3,6 @@
+ 
+ #include <string>
+ 
+-void log(string message);
++void log(std::string message);
+ 
+-#endif
+\ No newline at end of file
++#endif

@@ -1,0 +1,67 @@
+// Book 1
+        string_checkconfig(".config/08-recent_books/1");
+        if(checkconfig_str_val == "") {
+            ui->book1Btn->hide();
+        }
+        else {
+            relative_path = checkconfig_str_val.split("/").last();
+            relative_path.prepend("  ");
+            relative_path.append("  ");
+            ui->book1Btn->setText(relative_path);
+            existing_recent_books = true;
+        }
+        // Book 2
+        string_checkconfig(".config/08-recent_books/2");
+        if(checkconfig_str_val == "") {
+            ui->book2Btn->hide();
+        }
+        else {
+            relative_path = checkconfig_str_val.split("/").last();
+            relative_path.prepend("  ");
+            relative_path.append("  ");
+            ui->book2Btn->setText(relative_path);
+            existing_recent_books = true;
+        }
+        // Book 3
+        string_checkconfig(".config/08-recent_books/3");
+        if(checkconfig_str_val == "") {
+            ui->book3Btn->hide();
+        }
+        else {
+            relative_path = checkconfig_str_val.split("/").last();
+            relative_path.prepend("  ");
+            relative_path.append("  ");
+            ui->book3Btn->setText(relative_path);
+            existing_recent_books = true;
+        }
+        // Book 4
+        string_checkconfig(".config/08-recent_books/4");
+        if(checkconfig_str_val == "") {
+            ui->book4Btn->hide();
+        }
+        else {
+            relative_path = checkconfig_str_val.split("/").last();
+            relative_path.prepend("  ");
+            relative_path.append("  ");
+            ui->book4Btn->setText(relative_path);
+            existing_recent_books = true;
+        }
+
+        // Preventing from having the same label two times
+        if(ui->book2Btn->text() == ui->book1Btn->text()) {
+            ui->book2Btn->hide();
+        }
+        if(ui->book3Btn->text() == ui->book1Btn->text()) {
+            ui->book3Btn->hide();
+        }
+        if(ui->book4Btn->text() == ui->book1Btn->text()) {
+            ui->book4Btn->hide();
+        }
+
+        if(existing_recent_books == false) {
+            ui->recentBooksLabel->show();
+        }
+        else {
+            ui->recentBooksLabel->hide();
+        }
+    }

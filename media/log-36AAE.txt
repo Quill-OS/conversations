@@ -1,0 +1,374 @@
+U-Boot 2009.08 (Dec 21 2011 - 14:48:38)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 160000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Board: MX50 ARM2 board
+Boot Reason: [POR]
+Boot Device: MMC
+I2C:   ready
+DRAM:  256 MB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+temperature 28
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+In:    serial
+Out:   serial
+Err:   serial
+Net:   got MAC address from IIM: 00:00:00:00:00:00
+FEC0
+Hit any key to stop autoboot:  0
+
+MMC read: dev # 0, block # 2048, count 5120 partition # 0 ...
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+SD set clock 50MHz
+5120 blocks read: OK
+
+MMC read: dev # 0, block # 10240, count 600 partition # 0 ...
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+SD set clock 50MHz
+600 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   Linux-2.6.35.3
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1673520 Bytes =  1.6 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Verifying Checksum ... OK
+## Loading init Ramdisk from Legacy Image at 70c00000 ...
+   Image Name:   Normal Rootfs
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    286848 Bytes = 280.1 kB
+   Load Address: 70308000
+   Entry Point:  70308000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Linux version 2.6.35.3 (nonasuomy@Marceline) (gcc version 4.4.1 (Sourcery G++ Lite 2009q3-67) ) #9 PREEMPT Sat May 14 00:10:40 EDT 2022
+CPU: ARMv7 Processor [412fc085] revision 5 (ARMv7), cr=10c53c7f
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Machine: Freescale MX50 ARM2 Board
+Ignoring unrecognised tag 0x54410009
+Ignoring unrecognised tag 0x54410008
+Memory policy: ECC disabled, Data cache writeback
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 63754
+Kernel command line: console=ttymxc4,115200 rawtable=0xF40000 root=/dev/ram0 rdinit=/sbin/init rootfstype=ramfs
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 251MB = 251MB total
+Memory: 249200k/249200k available, 7824k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xf9e00000 - 0xffe00000   (  96 MB)
+    vmalloc : 0x90000000 - 0xf4000000   (1600 MB)
+    lowmem  : 0x80000000 - 0x8fb00000   ( 251 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .init : 0x80008000 - 0x80027000   ( 124 kB)
+      .text : 0x80027000 - 0x80416000   (4028 kB)
+      .data : 0x80434000 - 0x804ae7a0   ( 490 kB)
+SLUB: Genslabs=9, HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Hierarchical RCU implementation.
+        RCU-based detection of stalled CPUs is disabled.
+        Verbose stalled-CPUs detection is disabled.
+NR_IRQS:396
+MXC GPIO hardware
+MXC IRQ initialized
+You should not call the gpmi_set_parent
+MXC_Early serial console at MMIO 0x63f90000 (options '115200')
+bootconsole [ttymxc4] enabled
+Console: colour dummy device 80x30
+Mix log static memory : 7fe00000 - 7fffffff
+              address : 90400000
+  There is not the last log.
+Initialize a static memory for mix_logger.
+##### LOG START #####
+Calibrating delay loop... 799.53 BogoMIPS (lpj=3997696)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+regulator: core version 0.5
+NET: Registered protocol family 16
+i.MX IRAM pool: 128 KB@0x90040000
+CPU is i.MX50 Revision 1.1
+IR Power is LDO4
+ This is TPS65181.
+PWR3DET:power 3 detect
+FEC disable
+Using SDMA I.API
+MXC DMA API initialized
+IMX usb wakeup probe
+IMX usb wakeup probe
+bio: create slab <bio-0> at 0
+CSPI: mxc_spi-0 probed
+CSPI: mxc_spi-2 probed
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+wm831x 0-0034: WM8321 revision C
+wm831x 0-0034: Security key had non-zero value 1
+regulator: VCORE: 850 <--> 1100 mV at 1000 mV at 0 uA
+regulator: VPERI: 950 <--> 1250 mV at 1250 mV at 0 uA
+regulator: DCDC3: at 1800 mV
+regulator: DCDC4: at 2900 mV
+regulator: LDO1: 900 <--> 3300 mV at 1200 mV
+regulator: LDO2: 900 <--> 3300 mV at 1200 mV
+regulator: LDO3: 900 <--> 3300 mV at 2500 mV
+regulator: LDO4: 900 <--> 3300 mV at 3200 mV
+regulator: LDO5: 900 <--> 3300 mV at 2900 mV
+regulator: LDO6: 900 <--> 3300 mV at 2500 mV
+regulator: LDO7: 1000 <--> 3500 mV at 1800 mV
+regulator: LDO8: 1000 <--> 3500 mV at 2500 mV
+regulator: LDO9: 1000 <--> 3500 mV at 3100 mV
+regulator: LDO10: 1000 <--> 3500 mV at 3200 mV
+regulator: LDO11: 800 <--> 1550 mV at 1200 mV
+Advanced Linux Sound Architecture Driver Version 1.0.23.
+Switching to clocksource mxc_timer1
+mxsdhci: MXC Secure Digital Host Controller Interface driver(all reset on error version)
+mxsdhci: MXC SDHCI Controller Driver.
+mmc0: SDHCI detect irq 179 irq 1 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver.
+mmc1: SDHCI detect irq 0 irq 2 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver.
+mmc2: SDHCI detect irq 228 irq 3 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver.
+mmc3: SDHCI detect irq 0 irq 4 INTERNAL DMA
+NET: Registered protocol family 2
+IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+Unpacking initramfs...
+Freeing initrd memory: 280K
+LPMode driver module loaded
+Static Power Management for Freescale i.MX5
+PM driver module loaded
+sdram autogating driver module loaded
+Bus freq driver module loaded
+mxc_dvfs_core_probe
+DVFS driver module loaded
+i.MXC CPU frequency driver
+DVFS PER driver module loaded
+ashmem: initialized
+msgmni has been set to 487
+alg: No test for stdrng (krng)
+cryptodev: driver loaded.
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+regulator: DISPLAY:
+regulator: VCOM: at 1250 mV
+regulator: V3P3_CTRL:
+regulator: PMIC_TEMP:
+regulator: PWR0_CTRL:
+regulator: PWR2_CTRL:
+regulator: VSYS_EPD:
+tps65180 1-0048: PMIC TPS6518x for eInk display
+mmc0: new high speed SDHC card at address e624
+mmc2: new high speed MMC card at address 0001
+Serial: MXC Internal UART driver
+mxcuart register
+mxcintuart.2: ttymxc2 at MMIO 0x5000c000 (irq = 33) is a Freescale i.MX
+mxcintuart.3: ttymxc3 at MMIO 0x53ff0000 (irq = 13) is a Freescale i.MX
+mxcintuart.4: ttymxc4 at MMIO 0x63f90000 (irq = 86) is a Freescale i.MX
+console [ttymxc4] enabled, bootconsole disabled
+console [ttymxc4] enabled, bootconsole disabled
+mxcswuart register
+mxcintswuart.0: ttymxc0 at MMIO 0x53fbc000 (irq = 31) is a Freescale i.MX
+SSW:ssw port register 0
+mxcintswuart.1: ttymxc1 at MMIO 0x53fc0000 (irq = 32) is a Freescale i.MX
+SSW:ssw port register 1
+loop: module loaded
+FEC Ethernet Driver
+PPP generic driver version 2.4.2
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+input: gpio-keys as /devices/platform/gpio-keys/input/input0
+irtp_init
+irtp_connect
+input: SONY IR Touchpanel as /devices/virtual/input/input1
+IRTP: register early_suspend
+input: wm831x_on as /devices/platform/imx-i2c.0/i2c-0/0-0034/wm831x-on/input/input2
+input: phxlit_vbus as /devices/platform/phxlit_vbus.0/input/input3
+phxlit_vbus phxlit_vbus.0: event(type 5 code 12)
+wm831x-rtc wm831x-rtc: rtc core: registered wm831x as rtc0
+mxc_rtc mxc_rtc.0: rtc core: registered mxc_rtc as rtc1
+using rtc device, wm831x, for alarms
+i2c /dev entries driver
+APM Battery Driver
+MXC WatchDog Driver 2.0
+MXC Watchdog # 0 Timer: initial timeout 60 sec
+mmcblk0: mmc0:e624 SU04G 3.69 GiB
+ mmcblk0: p1 p2 p3 < p5 p6 p7 p8 p9 p10 > p4
+mmcblk2: mmc2:0001 SEM02G 1.82 GiB
+ mmcblk2:
+logger: created 64K log 'log_main'
+logger: created 64K log 'log_events'
+logger: created 64K log 'log_radio'
+logger: created 64K log 'log_system'
+logger: created 2047K log 'log_mix'
+logger: created 64K log 'log_kernel'
+Past log manager.
+[PASTLOG Err:past_mmc_initialize(502)]Open error
+CS42L52: CODEC revision C1
+DMA Sound Buffers Allocated:UseIram=1 buf->addr=f8006000 buf->area=90046000 size=24576
+DMA Sound Buffers Allocated:UseIram=1 buf->addr=79048000 buf->area=f9e01000 size=24576
+asoc: CS42L52 dai <-> imx-ssi-2-0 mapping ok
+ALSA device list:
+  #0: imx-3stack (CS42L52 codec)
+nf_conntrack version 0.5.0 (3898 buckets, 15592 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+NET: Registered protocol family 17
+VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 2
+tps65180_vsys_enable : wait VSYS_EPD.
+regulator_init_complete: incomplete constraints, leaving PWR2_CTRL on
+regulator_init_complete: incomplete constraints, leaving PMIC_TEMP on
+epdc_progress_work_func start progress.
+tps65180_display_enable fail to read vcom from eMMC. -1
+mxc_epdc_fb mxc_epdc_fb: Unable to enable DISPLAY regulator.err = 0xffffffff
+------------[ cut here ]------------
+WARNING: at drivers/regulator/core.c:1423 _regulator_disable+0x30/0x118()
+unbalanced disables for DISPLAY
+Modules linked in:
+regulator_init_complete: incomplete constraints, leaving LDO11 on
+[<8002c66c>] (unwind_backtrace+0x0/0xec) from [<8004cca8>] (warn_slowpath_common+0x4c/0x64)
+[<8004cca8>] (warn_slowpath_common+0x4c/0x64) from [<8004cd40>] (warn_slowpath_fmt+0x2c/0x3c)
+[<8004cd40>] (warn_slowpath_fmt+0x2c/0x3c) from [<801bc17c>] (_regulator_disable+0x30/0x118)
+[<801bc17c>] (_regulator_disable+0x30/0x118) from [<801bc33c>] (regulator_disable+0x1c/0x30)
+[<801bc33c>] (regulator_disable+0x1c/0x30) from [<801b64c0>] (epdc_powerup+0x2ac/0x32c)
+[<801b64c0>] (epdc_powerup+0x2ac/0x32c) from [<801b7a2c>] (epdc_progress_work_func+0x58/0x13c)
+[<801b7a2c>] (epdc_progress_work_func+0x58/0x13c) from [<8005f58c>] (worker_thread+0x178/0x228)
+[<8005f58c>] (worker_thread+0x178/0x228) from [<800628c8>] (kthread+0x78/0x80)
+[<800628c8>] (kthread+0x78/0x80) from [<800289c0>] (kernel_thread_exit+0x0/0x8)
+---[ end trace 65d63041105f78c1 ]---
+regulator_init_complete: incomplete constraints, leaving LDO7 on
+regulator_init_complete: incomplete constraints, leaving LDO6 on
+regulator_init_complete: incomplete constraints, leaving LDO5 on
+powerup retry.
+tps65180_display_enable fail to read vcom from eMMC. -1
+mxc_epdc_fb mxc_epdc_fb: Unable to enable DISPLAY regulator.err = 0xffffffff
+------------[ cut here ]------------
+WARNING: at drivers/regulator/core.c:1423 _regulator_disable+0x30/0x118()
+unbalanced disables for DISPLAY
+Modules linked in:
+regulator_init_complete: incomplete constraints, leaving LDO3 on
+
+[<8002c66c>] (unwind_backtrace+0x0/0xec) from [<8004cca8>] (warn_slowpath_common+0x4c/0x64)
+[<8004cca8>] (warn_slowpath_common+0x4c/0x64) from [<8004cd40>] (warn_slowpath_fmt+0x2c/0x3c)
+[<8004cd40>] (warn_slowpath_fmt+0x2c/0x3c) from [<801bc17c>] (_regulator_disable+0x30/0x118)
+[<801bc17c>] (_regulator_disable+0x30/0x118) from [<801bc33c>] (regulator_disable+0x1c/0x30)
+[<801bc33c>] (regulator_disable+0x1c/0x30) from [<801b64c0>] (epdc_powerup+0x2ac/0x32c)
+[<801b64c0>] (epdc_powerup+0x2ac/0x32c) from [<801b7a2c>] (epdc_progress_work_func+0x58/0x13c)
+[<801b7a2c>] (epdc_progress_work_func+0x58/0x13c) from [<8005f58c>] (worker_thread+0x178/0x228)
+[<8005f58c>] (worker_thread+0x178/0x228) from [<800628c8>] (kthread+0x78/0x80)
+regulator_init_complete: incomplete constraints, leaving LDO2 on
+[<800628c8>] (kthread+0x78/0x80) from [<800289c0>] (kernel_thread_exit+0x0/0x8)
+---[ end trace 65d63041105f78c2 ]---
+powerup retry out. (powerup error count: 1
+epdc_progress_work_func Fails to powerup.-1
+epdc_progress_work_func end progress.
+regulator_init_complete: incomplete constraints, leaving LDO1 on
+input: sub_cpu_pwrbutton as /devices/platform/mxc_spi.2/spi3.2/sub_cpu_pwrbutton/input/input4
+wm831x-rtc wm831x-rtc: setting system clock to 2010-01-01 01:03:12 UTC (1262307792)
+tps65180_display_enable fail to read vcom from eMMC. -1
+------------[ cut here ]------------
+WARNING: at drivers/regulator/core.c:1423 _regulator_disable+0x30/0x118()
+unbalanced disables for DISPLAY
+Modules linked in:
+[<8002c66c>] (unwind_backtrace+0x0/0xec) from [<8004cca8>] (warn_slowpath_common+0x4c/0x64)
+[<8004cca8>] (warn_slowpath_common+0x4c/0x64) from [<8004cd40>] (warn_slowpath_fmt+0x2c/0x3c)
+[<8004cd40>] (warn_slowpath_fmt+0x2c/0x3c) from [<801bc17c>] (_regulator_disable+0x30/0x118)
+[<801bc17c>] (_regulator_disable+0x30/0x118) from [<801bc33c>] (regulator_disable+0x1c/0x30)
+[<801bc33c>] (regulator_disable+0x1c/0x30) from [<8022b4d0>] (get_temperature+0x40/0x50)
+[<8022b4d0>] (get_temperature+0x40/0x50) from [<8022b4ec>] (calculate_battery_capacity+0xc/0x8c)
+[<8022b4ec>] (calculate_battery_capacity+0xc/0x8c) from [<80315a14>] (sub_cpu_bci_probe+0x2b4/0x36c)
+[<80315a14>] (sub_cpu_bci_probe+0x2b4/0x36c) from [<801e5908>] (platform_drv_probe+0x18/0x1c)
+[<801e5908>] (platform_drv_probe+0x18/0x1c) from [<801e4aa8>] (driver_probe_device+0xc8/0x184)
+[<801e4aa8>] (driver_probe_device+0xc8/0x184) from [<801e4bc4>] (__driver_attach+0x60/0x84)
+[<801e4bc4>] (__driver_attach+0x60/0x84) from [<801e42c4>] (bus_for_each_dev+0x44/0x74)
+[<801e42c4>] (bus_for_each_dev+0x44/0x74) from [<801e3c18>] (bus_add_driver+0x98/0x214)
+[<801e3c18>] (bus_add_driver+0x98/0x214) from [<801e4eb0>] (driver_register+0xa8/0x138)
+[<801e4eb0>] (driver_register+0xa8/0x138) from [<80027370>] (do_one_initcall+0x58/0x1a8)
+[<80027370>] (do_one_initcall+0x58/0x1a8) from [<80008408>] (kernel_init+0xa8/0x168)
+[<80008408>] (kernel_init+0xa8/0x168) from [<800289c0>] (kernel_thread_exit+0x0/0x8)
+---[ end trace 65d63041105f78c3 ]---
+Warning: unable to open an initial console.
+Root-NFS: No NFS server available, giving up.
+VFS: Unable to mount root fs via NFS, trying floppy.
+VFS: Cannot open root device "ram0" or unknown-block(2,0)
+Please append a correct "root=" boot option; here are the available partitions:
+b300         3872256 mmcblk0 driver: mmcblk
+  b301           10240 mmcblk0p1
+  b302           10240 mmcblk0p2
+  b303               1 mmcblk0p3
+  b304         1479680 mmcblk0p4
+  b305           16408 mmcblk0p5
+  b306          139288 mmcblk0p6
+  b307           10264 mmcblk0p7
+  b308           40984 mmcblk0p8
+  b309           49176 mmcblk0p9
+  b30a         1178456 mmcblk0p10
+b340         1912832 mmcblk2 driver: mmcblk
+Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(2,0)
+[<8002c66c>] (unwind_backtrace+0x0/0xec) from [<80316734>] (panic+0x6c/0xf0)
+[<80316734>] (panic+0x6c/0xf0) from [<80008e04>] (mount_block_root+0x1c8/0x208)
+[<80008e04>] (mount_block_root+0x1c8/0x208) from [<80009060>] (prepare_namespace+0x12c/0x184)
+[<80009060>] (prepare_namespace+0x12c/0x184) from [<80008480>] (kernel_init+0x120/0x168)
+[<80008480>] (kernel_init+0x120/0x168) from [<800289c0>] (kernel_thread_exit+0x0/0x8)

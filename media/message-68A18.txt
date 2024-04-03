@@ -1,0 +1,32 @@
+[  445.858616] [sdhci_suspend-1755] skip suspend for mmc1
+[  445.858858] PM: suspend of devices complete after 3.265 msecs
+[  445.858875] suspend wp cpu=800000000
+[  445.859093] PM: late suspend of devices complete after 0.203 msecs
+[  445.863288] PM: early resume of devices complete after 0.132 msecs
+[  446.034296] [sdhci_resume-1792] skip resume for mmc1
+[  446.035521] [zForce_ir_touch_recv_data-116] command Activate (0) ...
+[  446.036402] [zForce_ir_touch_recv_data-121] command Resolution (0) ...
+[  446.036918] [zForce_ir_touch_recv_data-134] command Frequency (0) ...
+[  446.072346] PM: resume of devices complete after 208.926 msecs
+[  446.139535] Restarting tasks ... Sat Jul 30 19:46:43 2022 | configUpdate: inotify read up
+Sat Judone.
+l 30 19:46:43 2022 | configUpdate: Failed to read from buffer
+Sat Jul 30 19:46:43 2022 | configUpdate: All events read
+Sat Jul 30 19:46:43 2022 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Sat Jul 30 19:46:43 2022 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Sat Jul 30 19:46:43 2022 | watchdog: Watchdog event received
+Sat Jul 30 19:46:43 2022 | watchdog: Launching 'after' thread because of goingSleep job
+Sat Jul 30 19:46:43 2022 | undefined: Got back from suspend
+Sat Jul 30 19:46:43 2022 | goingSleep: FATAL error: stopping suspend attempts after 0 failed attempts
+Sat Jul 30 19:46:43 2022 | goingSleep: Exiting goSleep
+Sat Jul 30 19:46:44 2022 | watchdog: Event from monitorEvents requested after thread, but watchdogNextStep already wanted it: skipping monitorEvents request
+Sat Jul 30 19:46:44 2022 | watchdog: Launching watchdogNextStep request
+Sat Jul 30 19:46:44 2022 | watchdog: Launching afterSleep thread from request by watchdogNextStep
+Sat Jul 30 19:46:44 2022 | afterSleep: Launching afterSleep
+Sat Jul 30 19:46:44 2022 | afterSleep: Returning from deep sleep
+Sat Jul 30 19:46:44 2022 | functions: Wrote: "false" to: /tmp/sleep_mode
+Sat Jul 30 19:46:44 2022 | functions: Posix spawning /sbin/hwclock
+Sat Jul 30 19:46:44 2022 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Sat Jul 30 19:47:04 2022 | undefined: Actually starting idle sleep now
+Sat Jul 30 19:47:04 2022 | idleSleep: Input device name: zForce-ir-touch
+Sat Jul 30 19:47:04 2022 | idleSleep: Input device bus: 24 vendor: 0 product: 0

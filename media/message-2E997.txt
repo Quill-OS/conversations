@@ -1,0 +1,61 @@
+pmbootstrap log
+(25/42) Installing libatomic (12.2.1_git20220924-r10)
+(26/42) Installing gmp (6.2.1-r3)
+(27/42) Installing isl26 (0.26-r1)
+(28/42) Installing mpfr4 (4.2.0-r1)
+(29/42) Installing mpc1 (1.3.1-r1)
+(30/42) Installing gcc (12.2.1_git20220924-r10)
+(31/42) Installing libstdc++-dev (12.2.1_git20220924-r10)
+(32/42) Installing musl-dev (1.2.3_git20230411-r0)
+(33/42) Installing libc-dev (0.7.2-r5)
+(34/42) Installing g++ (12.2.1_git20220924-r10)
+(35/42) Installing make (4.4.1-r1)
+(36/42) Installing fortify-headers (1.1-r3)
+(37/42) Installing build-base (0.5-r3)
+(38/42) Installing hiredis (1.1.0-r2)
+(39/42) Installing ccache (4.8-r1)
+(40/42) Installing libexpat (2.5.0-r1)
+(41/42) Installing pcre2 (10.42-r1)
+(42/42) Installing git (2.40.0-r1)
+Executing busybox-1.36.0-r7.trigger
+Executing ca-certificates-20230106-r1.trigger
+OK: 280 MiB in 110 packages
+(214589) [20:16:42] (native) % chown root:abuild /var/cache/distfiles
+(214589) [20:16:42] (native) % chmod g+w /var/cache/distfiles
+(214589) [20:16:42] (native) generate abuild keys
+(214589) [20:16:42] (native) % busybox su pmos -c PACKAGER='pmos <pmos@local>' HOME=/home/pmos abuild-keygen -n -q -a
+writing RSA key
+(214589) [20:16:46] (native) % cp /mnt/pmbootstrap-abuild-config/pmos@local-6445760a.rsa.pub /etc/apk/keys/
+(214589) [20:16:46] (native) % cp /tmp/gzip_wrapper.sh /usr/local/bin/gzip
+(214589) [20:16:46] (native) % chmod +x /usr/local/bin/gzip
+(214589) [20:16:46] (native) % adduser pmos abuild
+(214589) [20:16:46] (native) % sed -i -e s/^CLEANUP=.*/CLEANUP=''/ /etc/abuild.conf
+(214589) [20:16:46] (native) % sed -i -e s/^ERROR_CLEANUP=.*/ERROR_CLEANUP=''/ /etc/abuild.conf
+(214589) [20:16:46] (native) % touch /var/local/pmbootstrap_chroot_build_init_done
+(214589) [20:16:46] ERROR: Could not find export JOBS= line in /home/pi/.local/var/pmbootstrap/chroot_native/etc/abuild.conf
+(214589) [20:16:46] See also: <https://postmarketos.org/troubleshooting>
+(214589) [20:16:46] Traceback (most recent call last):
+  File "/home/pi/pmbootstrap/pmb/__init__.py", line 52, in main
+    getattr(frontend, args.action)(args)
+  File "/home/pi/pmbootstrap/pmb/helpers/frontend.py", line 325, in install
+    pmb.install.install(args)
+  File "/home/pi/pmbootstrap/pmb/install/_install.py", line 1074, in install
+    create_device_rootfs(args, step, steps)
+  File "/home/pi/pmbootstrap/pmb/install/_install.py", line 1008, in create_device_rootfs
+    pmb.build.package(args, pkgname, args.deviceinfo["arch"])
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 535, in package
+    if not init_buildenv(args, apkbuild, arch, strict, force, cross, suffix,
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 207, in init_buildenv
+    depends, built = build_depends(args, apkbuild, depends_arch, strict)
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 155, in build_depends
+    if package(args, depend, arch, strict=strict):
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 535, in package
+    if not init_buildenv(args, apkbuild, arch, strict, force, cross, suffix,
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 216, in init_buildenv
+    pmb.build.other.configure_abuild(args, suffix)
+  File "/home/pi/pmbootstrap/pmb/build/other.py", line 155, in configure_abuild
+    raise RuntimeError("Could not find " + prefix + " line in " + path)
+RuntimeError: Could not find export JOBS= line in /home/pi/.local/var/pmbootstrap/chroot_native/etc/abuild.conf
+
+(215169) [20:18:51] % tail -n 60 -F /home/pi/.local/var/pmbootstrap/log.txt
+(215169) [20:18:51] *** output passed to pmbootstrap stdout, not to this log ***

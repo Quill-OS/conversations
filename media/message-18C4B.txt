@@ -1,0 +1,43 @@
+dk@dk-ThinkPad-E560:~/.local/var/pmbootstrap/cache_git/pmaports$ git checkout kobo-nia-test 
+Already on 'kobo-nia-test'
+Your branch is up to date with 'ak/kobo-nia-test'.
+dk@dk-ThinkPad-E560:~/.local/var/pmbootstrap/cache_git/pmaports$ git pull
+warning: redirecting to https://gitlab.com/akemnade/pmaports.git/
+remote: Enumerating objects: 33, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 24 (delta 14), reused 1 (delta 0), pack-reused 0
+Unpacking objects: 100% (24/24), 3.70 KiB | 344.00 KiB/s, done.
+From https://gitlab.com/akemnade/pmaports
+   c70e0bd4a..85c92ec17  kobo-nia-test -> ak/kobo-nia-test
+Updating c70e0bd4a..85c92ec17
+Fast-forward
+ device/testing/device-kobo-nia/APKBUILD            |  6 ++--
+ device/testing/device-kobo-nia/deviceinfo          |  3 +-
+ device/testing/linux-kobo-clara-mainline/APKBUILD  |  8 ++---
+ .../config-kobo-clara-mainline.armv7               |  4 +--
+ .../u-boot-kobo-nia/0001-do-not-append-quiet.patch | 30 ++++++++++++++++++
+ device/testing/u-boot-kobo-nia/APKBUILD            | 36 ++++++++++++++++++++++
+ device/testing/u-boot-kobo-nia/u-boot-env.txt      |  2 ++
+ 7 files changed, 78 insertions(+), 11 deletions(-)
+ create mode 100644 device/testing/u-boot-kobo-nia/0001-do-not-append-quiet.patch
+ create mode 100644 device/testing/u-boot-kobo-nia/APKBUILD
+ create mode 100644 device/testing/u-boot-kobo-nia/u-boot-env.txt
+dk@dk-ThinkPad-E560:~/.local/var/pmbootstrap/cache_git/pmaports$ de
+de: command not found
+dk@dk-ThinkPad-E560:~/.local/var/pmbootstrap/cache_git/pmaports$ cd 
+dk@dk-ThinkPad-E560:~$ pmbootstrap build device-kobo-nia --force
+[22:22:53] Update package index for armv7 (4 file(s))
+  0%                                                                           [sudo] password for dk: 
+[22:22:59] Update package index for x86_64 (4 file(s))
+[22:23:03] (native) install bash bc bison devicepkg-dev findutils flex gmp-dev lzop mpc1-dev mpfr-dev openssl-dev perl
+[22:23:04] (native) install ccache-cross-symlinks gcc-armv7 g++-armv7
+[22:23:04] (native) build armv7/linux-kobo-clara-mainline-6.1.12-r2.apk
+[22:36:10] (native) install ccache-cross-symlinks gcc-armv7 g++-armv7 crossdirect
+[22:36:10] (buildroot_armv7) build armv7/u-boot-kobo-nia-2016.03-r0.apk
+[22:36:11] Register qemu binfmt (arm)
+[22:38:10] (buildroot_armv7) install devicepkg-dev kobo-epdc-extractor linux-kobo-clara-mainline perl postmarketos-base u-boot-kobo-nia u-boot-tools
+[22:38:23] (native) install ccache-cross-symlinks gcc-armv7 g++-armv7 crossdirect
+[22:38:24] (buildroot_armv7) build armv7/device-kobo-nia-0.1-r1.apk
+[22:38:31] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[22:38:31] DONE!

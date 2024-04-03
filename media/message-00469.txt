@@ -1,0 +1,19 @@
+```
+Starting kernel ...
+
+
+[    0.004786] /cpus/cpu@0 missing clock-frequency property
+[    0.423758] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.423804] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    5.729042] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021c08 ntx_machine_poweroff
+[    5.740172] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[    5.809910] ==== calc_soc_by_voltageMethod E60U22 ====
+[    6.035837] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    6.051293] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    6.058402] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    6.072735] gpio-keys gpio-keys: Error applying setting, reverse things back
+
+can't run '/etc/init.d/rcS': No such file or directory
+chroot: can't execute '/sbin/getchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/getty': No such file or directory
+chroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gettchroot: can't execute '/sbin/gett
+```

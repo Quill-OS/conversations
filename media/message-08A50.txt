@@ -1,0 +1,74 @@
+kobo:/navit/bin# env LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/qtlib
+ QT_PLUGIN_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/ ./harbour-navit
+error:graphics_svg_debug:module_graphics_svg_debug_init:enter svg_debug plugin_init
+QPainter::begin: Paint device returned engine == 0, type: 2
+QPainter::begin: Paint device returned engine == 0, type: 2
+error:navit:graphics_new:Using virtual dpi 245.000000, real dpi -3918046825401278474489954304.000000 factor 1
+error:navit:command_register_callbacks:could not resolve object in cs=0x177e1c8:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0x177e6d8:
+error:navit:command_register_callbacks:	vehicle.position_valid
+error:navit:command_register_callbacks:	^
+error:navit:command_register_callbacks:could not resolve object in cs=0x177ec60:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0x177f348:
+error:navit:command_register_callbacks:	navigation.nav_status==-1 || navigation.nav_status==1 || navigation.nav_status==2
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0x177f7b8:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0x177fc48:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+kobo:/navit/bin# env LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/qtlib
+ QT_PLUGIN_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/ ./harbour-navit
+error:graphics_svg_debug:module_graphics_svg_debug_init:enter svg_debug plugin_init
+QPainter::begin: Paint device returned engine == 0, type: 2
+QPainter::begin: Paint device returned engine == 0, type: 2
+error:navit:graphics_new:Using virtual dpi 245.000000, real dpi -3918046825401278474489954304.000000 factor 1
+error:navit:command_register_callbacks:could not resolve object in cs=0xe8e238:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe8e748:
+error:navit:command_register_callbacks:	vehicle.position_valid
+error:navit:command_register_callbacks:	^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe8ecd0:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe8f3b8:
+error:navit:command_register_callbacks:	navigation.nav_status==-1 || navigation.nav_status==1 || navigation.nav_status==2
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe8f828:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe8fcb8:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe90128:
+error:navit:command_register_callbacks:	navigation.nav_status>=3
+error:navit:command_register_callbacks:	           ^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe90680:
+error:navit:command_register_callbacks:	vehicle.position_valid
+error:navit:command_register_callbacks:	^
+error:navit:command_register_callbacks:could not resolve object in cs=0xe93bb8:
+error:navit:command_register_callbacks:	follow>1
+error:navit:command_register_callbacks:	^
+error:vehicle_qt5:vehicle_priv* vehicle_qt5_new_qt5(vehicle_methods*, callback_list*, attr**):Got NO QGeoPositionInfoSource
+error:speech_qt5_espeak:bool qt5_espeak_init_espeak(speech_priv*, attr**):Sample rate is 22050
+error:speech_qt5_espeak:bool qt5_espeak_init_language(speech_priv*, attr**):Unable to set Language
+error:speech_qt5_espeak:speech_priv* qt5_espeak_new(speech_methods*, attr**, attr*):Unable to initialize espeak language
+error:speech_qt5_espeak:Qt5EspeakAudioOut::Qt5EspeakAudioOut(int, const char*):Raw audio format not supported by backend, cannot play audio.
+error:map_binfile:map_binfile_open:Failed to load '/root/Maps/map.navit.bin'
+error:map_binfile:map_binfile_open:Failed to load '/root/Maps/map.navit.heightlines.bin'
+error:navit:xinclude:Unable to include '/usr/share/harbour-navit/maps/*.xml'
+error:navit:xinclude:Unable to include '/root/.navit/navit_layout_*.xml'
+error:navit:xml_parse_file:could not open XML file
+error:navit:traffic_get_messages_from_xml_file:could not retrieve stored traffic messages
+error:navit:osd_std_config:Error in saved command: not_ready, item=0xe93b00.
+error:navit:osd_std_config:Error in saved command: not_ready, item=0xe905c8.
+QPainter::begin: Paint device returned engine == 0, type: 2
+QPainter::worldMatrix: Painter not active
+./harbour-navit: relocation error: ./harbour-navit: symbol _ZN7QMatrixC1Effffff, version Qt_5 not defined in file libQt5Gui.so.5 with link time reference
+kobo:/navit/bin# 
+

@@ -1,0 +1,1330 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.15 (root@8261d039a6f0) (gcc version 4.9.4 (crosstool-NG 1.23.0.72-23ba174 - NiLuJe) ) #1 SMP PREEMPT Sat Aug 19 08:00:23 UTC 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Freescale i.MX6 ULL DDR3 NTX Board
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] On node 0 totalpages: 65280
+[    0.000000] free_area_init_node: node 0, pgdat 80ef30c0, node_mem_map 8fbf7000
+[    0.000000]   Normal zone: 508 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 65024 pages, LIFO batch:15
+[    0.000000]   HighMem zone: 256 pages, LIFO batch:0
+[    0.000000] PERCPU: Embedded 12 pages/cpu @8fbcf000 s16652 r8192 d24308 u49152
+[    0.000000] pcpu-alloc: s16652 r8192 d24308 u49152 alloc=12*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772
+[    0.000000] Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ramfs root=/dev/ram0 rdinit=/sbin/init printk.time quiet
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242940K/261120K available (5455K kernel code, 224K rwdata, 2120K rodata, 7476K init, 388K bss, 18180K reserved, 0K cma-reserved, 1024K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff000000   (1776 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .text : 0x80008000 - 0x8076e0b8   (7577 kB)
+[    0.000000]       .init : 0x8076f000 - 0x80ebc000   (7476 kB)
+[    0.000000]       .data : 0x80ebc000 - 0x80ef41a0   ( 225 kB)
+[    0.000000]        .bss : 0x80ef7000 - 0x80f58090   ( 389 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Additional per-CPU info printed with stalls.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] mxc_clocksource_init 24000000
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000054] clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.002887] Console: colour dummy device 80x30
+[    0.002931] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.002967] pid_max: default: 32768 minimum: 301
+[    0.003185] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.003213] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.004331] CPU: Testing write buffer coherency: ok
+[    0.004811] /cpus/cpu@0 missing clock-frequency property
+[    0.004852] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.004955] Setting up static identity map for 0x80008280 - 0x800082d8
+[    0.041186] Brought up 1 CPUs
+[    0.041227] SMP: Total of 1 processors activated (48.00 BogoMIPS).
+[    0.041246] CPU: All CPU(s) started in SVC mode.
+[    0.042324] devtmpfs: initialized
+[    0.058533] device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"
+[    0.067054] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.067987] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.068772] pinctrl core: initialized pinctrl subsystem
+[    0.071629] NET: Registered protocol family 16
+[    0.072492] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.100738] cpuidle: using governor ladder
+[    0.130802] cpuidle: using governor menu
+[    0.173435] ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ramfs root=/dev/ram0 rdinit=/sbin/init printk.time quiet
+[    0.173482] hwcfg_size_setup() hwcfg_szie=110
+[    0.173515] ***_MemoryRequest:48: request memory region! addr=8ffffe00, len=110***
+[    0.173572] hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51
+[    0.173600] boot_port_setup() boot_port=1
+[    0.173624] ntxfw_size_setup() ntxfw_size=1034
+[    0.173652] ***_MemoryRequest:48: request memory region! addr=8ff71400, len=1034***
+[    0.173699] ntxfw[0],"E60U22A0_2fl_hdr_200520",type=0x6,sz=16
+[    0.173721] lm3630fl dual color table : 1 temperatures ,c1_pwr=0x0,c2_pwr=0x0
+[    0.173753] ntxfw[1],"E60U22A0_2fl_tab_200520",type=0x7,sz=844
+[    0.173786] ntxfw_p_setup() ntxfw_p=8ff71400,vaddr=9007c400,size=1034,name="E60U22A1",ver=0.0.0.0,items=2
+[    0.174301] No ATAGs?
+[    0.174365] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.174388] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.178367] imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.179000] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    0.202995] mxs-dma 1804000.dma-apbh: initialized
+[    0.207240] PMU: ricoh61x_i2c_init:
+[    0.208409] SCSI subsystem initialized
+[    0.209227] usbcore: registered new interface driver usbfs
+[    0.209413] usbcore: registered new interface driver hub
+[    0.209673] usbcore: registered new device driver usb
+[    0.214044] sy7636_probe calling
+[    0.214109] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78
+[    0.214147] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1
+[    0.216201] sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89
+[    0.216230] sy7636_detect calling
+[    0.223630] sy7636_detect():opmode=0x0
+[    0.223653] sy7636_detect success
+[    0.224305] sy7636 0-0062: PMIC SY7636 for eInk display
+[    0.224327] sy7636_probe success
+[    0.224385] i2c i2c-0: IMX I2C adapter registered
+[    0.224423] i2c i2c-0: can't use DMA
+[    0.225776] PMU: ricoh61x_i2c_probe:
+[    0.226493] ricoh61x_pre_init,line=956
+[    0.230585] ricoh61x irq gpio 129
+[    0.230615] invalid sleep gpio: -2
+[    0.230638] invalid dc_det gpio: -2
+[    0.230664] ricoh61x chg gpio 128
+[    0.230701] ricoh61x bat_low gpio 131
+[    0.231347] PMU: ricoh61x_irq_init: g_full_flag: 0, CHGSTS1: 0x00
+[    0.245053] ricoh61x_irq_init: ricoh619_pmic_irq=1
+[    0.246789] i2c i2c-3: IMX I2C adapter registered
+[    0.246857] i2c i2c-3: can't use DMA
+[    0.247195] pps_core: LinuxPPS API ver. 1 registered
+[    0.247217] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.247294] PTP clock support registered
+[    0.249990] MIPI CSI2 driver module loaded
+[    0.250669] Advanced Linux Sound Architecture Driver Initialized.
+[    0.254194] PMU: ricoh61x_regulator_init
+[    0.254512] PMU: ricoh61x_regulator_probe
+[    0.257606] RICOH619_DC1 at 900000uv suspend
+[    0.263583] RICOH619_DC2 at 3000000uv suspend
+[    0.284699] RICOH619_DC4 at 1140000uv suspend
+[    0.294765] RICOH619_DC5 at 1700000uv suspend
+[    0.313720] RICOH619_LDO2 at 3000000uv suspend
+[    0.423415] sy7636-pmic sy7636-pmic: num_regulators 4
+[    0.423546] sy7636-pmic sy7636-pmic: on_delay1=0x2
+[    0.423577] sy7636-pmic sy7636-pmic: on_delay2=0x2
+[    0.423605] sy7636-pmic sy7636-pmic: on_delay3=0x2
+[    0.423632] sy7636-pmic sy7636-pmic: on_delay4=0x2
+[    0.423659] sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+[    0.423687] sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944606744
+[    0.423760] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.423804] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    0.423851] sy7636_regulator_probe(1014): SY7636@8c17a780
+[    0.423874] sy7636_regulator_probe():initial vcom=-2500000uV
+[    0.423874]  _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    0.430073] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    0.431436] sy7636_get_temperature():temperature = 0,reg=0x0
+[    0.432292] sy7636_get_temperature():temperature = 0,reg=0x0
+[    0.433367] PMU RTC: ricoh61x_rtc_probe, ricoh61x driver run at 24H-mode
+[    0.433396] PMU RTC: we never using periodic function and interrupt
+[    0.435699] ricoh61x_rtc_Pon_get_clr, PON=1 -- CTRL2=0x0
+[    0.438287] PMU: ricoh61x_rtc_alarm_enable :0
+[    0.439517] PMU: ricoh61x_rtc_probe register rtc device
+[    0.440948] PMU: ricoh61x_rtc_read_alarm
+[    0.443476] rtc_ricoh619 rtc_ricoh619: PMU: read alarm: 8/18/2023 18:33:41 *****
+[    0.445459] rtc_ricoh619 rtc_ricoh619: rtc core: registered rtc_ricoh619 as rtc0
+[    0.445610] [ricoh61x_irq_sync_unlock-283] set 0xAE to 0x60
+[    0.446610] PMU: ricoh61x_rtc_alarm_enable :0
+[    0.447698] RICOH61x RTC Register Success
+[    0.448410] Switched to clocksource mxc_timer1
+[    0.474275] NET: Registered protocol family 2
+[    0.475715] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.475804] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.475896] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.476029] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.476088] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.476515] NET: Registered protocol family 1
+[    5.281730] imx rpmsg driver is registered.
+[    5.284063] Bus freq driver module loaded
+[    5.286291] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    5.307493] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    5.308216] fuse init (API version 7.23)
+[    5.314989] bounce: pool size: 64 pages
+[    5.315039] io scheduler noop registered
+[    5.315072] io scheduler deadline registered
+[    5.315505] io scheduler cfq registered (default)
+[    5.316486] imx-weim 21b8000.weim: Driver registered.
+[    5.321993] lm3630a_bl_parse_dt pchip=8c1e2850,hwen_gpio 91
+[    5.334145] lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+[    5.336702] imx-sdma 20ec000.sdma: no event needs to be remapped
+[    5.336922] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    5.344974] imx-sdma 20ec000.sdma: initialized
+[    5.504680] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+[    5.524449] console [ttymxc0] enabled
+[    5.526336] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+[    5.564212] imx-rng 2284000.rngb: iMX RNG Registered.
+[    5.564908] imx sema4 driver is registered.
+[    5.565111] [drm] Initialized drm 1.1.0 20060810
+[    5.566434] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    5.592811] brd: module loaded
+[    5.606282] loop: module loaded
+[    5.610041] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.610091] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    5.610589] usbcore: registered new interface driver usb-storage
+[    5.613158] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    5.614894] 2184000.usb supply vbus not found, using dummy regulator
+[    5.621158] mousedev: PS/2 mouse device common for all mice
+[    5.623151] input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[    5.899963] Begin i2c recv message:{ 55, 55, 55, 55, ff, ff, ff, ff, }
+[    5.900061] [elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[    5.900082] Begin i2c send message:{ 53, 00, 00, 01, }
+[    5.901631] Begin i2c recv message:{ 52, 01, 2c, 31, }
+[    5.901690] [__elan_touch_init-395] firmware version 52 01 2C 31 (12C3)
+[    5.901707] Begin i2c send message:{ 53, f0, 00, 01, }
+[    5.903225] Begin i2c recv message:{ 52, f1, b5, 01, }
+[    5.903284] [__elan_touch_init-402] firmware ID 52 F1 B5 01 (1B50)
+[    5.903304] Begin i2c send message:{ 53, 01, 00, 01, }
+[    5.904826] Begin i2c recv message:{ 52, 05, 56, 81, }
+[    5.904883] [__elan_touch_init-434] boot code version  52 05 56 81
+[    5.904897] Begin i2c send message:{ 53, 60, 00, 00, }
+[    5.906412] Begin i2c recv message:{ 52, 60, 9c, 51, }
+[    5.906465] [__elan_touch_init-439] x resolution: 1436 
+[    5.906480] Begin i2c send message:{ 53, 63, 00, 00, }
+[    5.907996] Begin i2c recv message:{ 52, 63, 80, 71, }
+[    5.908049] [__elan_touch_init-444] y resolution: 1920 
+[    5.908744] input: elan-touch as /devices/virtual/input/input1
+[    5.910080] elan ts starts in interrupt mode.
+[    5.910410] cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+[    5.913290] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+[    5.913641] i2c /dev entries driver
+[    5.914958] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021c08 ntx_machine_poweroff
+[    5.925495] syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+[    5.925813] PMU: ricoh61x_battery_init
+[    5.926091] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[    5.937006] ricoh619_battery_dt_init type_n=0
+[    5.937115] ricoh619-battery ricoh619-battery: alarm_vol_mv=3250
+[    5.937139] ricoh619-battery ricoh619-battery: fg_poff_vbat=3350
+[    5.937164] ricoh61x_battery_probe type_n=0,temp is 1
+[    5.937183] ricoh61x_battery_probe() TempDetect=0
+[    5.937201] ricoh61x_battery_probe info->num=7,temp is 8
+[    5.941176] PMU FG_RESET : ricoh61x_init_battery : initial pswr = 100
+[    5.941852] PMU : ricoh61x_init_battery : POWER off history 0x0a is 0x10 
+[    5.942523] PMU : ricoh61x_init_battery : POWER control function 0x0d is 0x00 
+[    5.946827] PMU : ricoh61x_init_battery : off is 470099, on is 470120, period is 21, fpon_flag is 0
+[    5.946856] PMU: ricoh61x_set_OCV_table : 00% voltage = 3431000 uV
+[    5.946877] PMU: ricoh61x_set_OCV_table : 10% voltage = 3571400 uV
+[    5.946897] PMU: ricoh61x_set_OCV_table : 20% voltage = 3728900 uV
+[    5.946917] PMU: ricoh61x_set_OCV_table : 30% voltage = 3766700 uV
+[    5.946938] PMU: ricoh61x_set_OCV_table : 40% voltage = 3775300 uV
+[    5.946958] PMU: ricoh61x_set_OCV_table : 50% voltage = 3786300 uV
+[    5.946978] PMU: ricoh61x_set_OCV_table : 60% voltage = 3822900 uV
+[    5.946998] PMU: ricoh61x_set_OCV_table : 70% voltage = 3902300 uV
+[    5.947018] PMU: ricoh61x_set_OCV_table : 80% voltage = 3960900 uV
+[    5.947038] PMU: ricoh61x_set_OCV_table : 90% voltage = 4048800 uV
+[    5.947058] PMU: ricoh61x_set_OCV_table : 100% voltage = 4137900 uV
+[    5.947081] PMU : ricoh61x_set_OCV_table : target_vsys is 2869 target_ibat is 179
+[    5.947105] PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(2928) is out of range(3431000) 
+[    5.947137] PMU : ricoh61x_scaling_OCV_table : new table
+[    5.947157] PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v
+[    5.947176] PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35690 v
+[    5.947196] PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37265 v
+[    5.947216] PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37656 v
+[    5.947235] PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37741 v
+[    5.947254] PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37851 v
+[    5.947274] PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38217 v
+[    5.947293] PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38999 v
+[    5.947312] PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39585 v
+[    5.947331] PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 40464 v
+[    5.947351] PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41355 v
+[    5.976477] PMU : ricoh61x_init_charger : GCHGDET (0xDA) is 0x8
+[    5.979429] PMU : ricoh61x_init_charger : after CHGISET_REG (0xb8) is 0x44 info->ch_ichg is 0xff info->ch_icchg is 0x1
+[    5.980104] PMU : ricoh61x_init_charger : before BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+[    5.981894] PMU : ricoh61x_init_charger : after BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+[    5.982568] PMU : ricoh61x_init_charger : before BATSET2_REG (0xbb) is 0x33 info->ch_vrchg is 0xff info->ch_vfchg is 0xff 
+[    5.987524] PMU : ricoh61x_init_charger : test test val 48, val2 3 vfchg 4200
+[    5.988191] PMU : ricoh61x_init_charger : test test val 64, val2 1 icchg 100
+[    5.988221] PMU : ricoh61x_init_charger : 100 min 4109000, 100 max 4233000 vfchg 4200 icchg 100 rbat 278
+[    5.991145] PMU: ricoh61x_init_fgsoca : * 00% voltage = 3429700 uV
+[    5.991171] PMU: ricoh61x_init_fgsoca : * 10% voltage = 3568900 uV
+[    5.991191] PMU: ricoh61x_init_fgsoca : * 20% voltage = 3726400 uV
+[    5.991212] PMU: ricoh61x_init_fgsoca : * 30% voltage = 3765500 uV
+[    5.991232] PMU: ricoh61x_init_fgsoca : * 40% voltage = 3774100 uV
+[    5.991252] PMU: ricoh61x_init_fgsoca : * 50% voltage = 3785100 uV
+[    5.991272] PMU: ricoh61x_init_fgsoca : * 60% voltage = 3821700 uV
+[    5.991292] PMU: ricoh61x_init_fgsoca : * 70% voltage = 3899800 uV
+[    5.991312] PMU: ricoh61x_init_fgsoca : * 80% voltage = 3958400 uV
+[    5.991332] PMU: ricoh61x_init_fgsoca : * 90% voltage = 4046300 uV
+[    5.991352] PMU: ricoh61x_init_fgsoca : * 100% voltage = 4135500 uV
+[    5.991372] calc_soc_by_voltageMethod(): FG not ready , getting vbatt from ADC .
+[    5.992668] measure_vbatt_ADC():4167000 uV
+[    5.992690] ==== calc_soc_by_voltageMethod E60U22 ====
+[    5.998530] PMU : calc_soc_by_voltageMethod : VBAT is 4167000 [uV], soc is 10000 [0.01%] ----------
+[    5.999202] PMU: ricoh61x_init_fgsoca : * Rbat = 278 mOhm   n_cap = 898 mAH
+[    5.999858] Create pmic_battery.1 in platform
+[    6.001809] sy7636_sensor_probe starting
+[    6.002403] sy7636_sensor_probe success
+[    6.008994] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    6.010428] sdhci: Secure Digital Host Controller Interface driver
+[    6.010455] sdhci: Copyright(c) Pierre Ossman
+[    6.010485] sdhci-pltfm: SDHCI platform and OF driver helper
+[    6.013241] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    6.013368] sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+[    6.014841] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    6.016692] led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+[    6.058654] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    6.059859] /soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+[    6.060235] sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+[    6.060268] sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+[    6.063208] led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+[    6.109642] mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+[    6.120661] led_classdev_register():led_cdev->name=GLED,name=GLED
+[    6.121545] usbcore: registered new interface driver usbhid
+[    6.121570] usbhid: USB HID core driver
+[    6.143600] fsl-asrc 2034000.asrc: driver registered
+[    6.147241] NET: Registered protocol family 17
+[    6.147319] lib80211: common routines for IEEE802.11 drivers
+[    6.147341] lib80211_crypt: registered algorithm 'NULL'
+[    6.147380] lib80211_crypt: registered algorithm 'WEP'
+[    6.147417] lib80211_crypt: registered algorithm 'CCMP'
+[    6.147454] lib80211_crypt: registered algorithm 'TKIP'
+[    6.151218] ntx_wifi_bt_power_init() : done 
+[    6.151242] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[    6.151250] Wifi / BT power control 0
+[    6.151258] Wifi already off.
+[    6.151294] wifi 3v3 power off
+[    6.151304] _ntx_wifi_bt_power_ctrl() : done 
+[    6.171297] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(7704):EPD 1024x758 
+[    6.171337] imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+[    6.174503] imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+[    6.176309] mmc0: host does not support reading read-only switch, assuming write-enable
+[    6.189538] mmc0: new high speed SDHC card at address 0001
+[    6.198493] mmcblk0: mmc0:0001 SD16G 29.1 GiB 
+[    6.200292]  mmcblk0: p1 p2 p3 p4
+[    6.204693] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    6.204735] waveform_size_setup() wf_size=582529
+[    6.204750] ***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+[    6.204805] waveform_p_setup() wf_p=8ff71a00,vaddr=91000a00,size=582529
+[    6.205203] mxc_epdc_fb_init_hw(7479)
+[    6.205257] [epdc_firmware_work_func]:fw p=91000a00,size=582529,fb_data@8d200000,pdata=80ed1e18
+[    6.205269] mxc_epdc_fb_fw_handler(6995),fw=8c195ee8
+[    6.205277] mxc_epdc_fb_fw_handler(): fw p=91000a00,size=582529
+[    6.205333] imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+[    6.205348] imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R345_ADFB11_ED060XH7U4_VB3300-FOC_TC
+[    6.205398] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[    6.208537] EPD QOS_WR 0x7, QOS_RD 0x7
+[    6.208574] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+[    6.208589] fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfee9=>-279 10mV,-2790000 uV
+[    6.208608] drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,DisplayResolution=1
+[    6.221190] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    6.237462] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    6.244582] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    6.258957] gpio-keys gpio-keys: Error applying setting, reverse things back
+[    6.266180] Power:do-not-wakeup-hibernation=0
+[    6.266207] Hall:do-not-wakeup-hibernation=0
+[    6.267047] _sy7636_vcom_get_voltage() : vcom=-2790000uV
+[    6.268466] rtc_ricoh619 rtc_ricoh619: setting system clock to 2023-08-19 08:31:27 UTC (1692433887)
+[    6.281784] TMST_SY7636: disabling
+[    6.339727] sy7636_get_temperature():temperature = 28,reg=0x1c
+[    6.339813] RICOH619_LDORTC2: disabling
+[    6.341548] RICOH619_LDORTC1: disabling
+[    6.343272] RICOH619_LDO10: disabling
+[    6.344982] RICOH619_LDO9: disabling
+[    6.346699] RICOH619_LDO4: disabling
+[    6.348428] RICOH619_LDO3: disabling
+[    6.350148] RICOH619_LDO1: disabling
+[    6.351251] SD1_SPWR: disabling
+[    6.351269] vref-3v3: disabling
+[    6.351629] ALSA device list:
+[    6.351644]   No soundcards found.
+[    6.367268] Freeing unused kernel memory: 7476K (8076f000 - 80ebc000)
+[    7.928100] imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+[    8.029870] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(173871)[mAs], cc_sum_dec(-12231)
+[    8.031691] PMU calc_capacity_in_period Half-Clear CC, cc_sum is over 1%
+[    8.032394] PMU: ricoh61x_displayed_work : dsoc_temp(9500), soc(10000), cc_delta(-537)
+[    8.032441] PMU: ricoh61x_displayed_work : status(0), rsoc_ready_flag(0)
+[    8.041505] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 100 cc_delta -37
+[    8.058508] PMU:check_charge_status_2 Charge Complete in PowerOff
+[    8.061013] PMU : set_current_time2register : second is 1692433889, hour is 470120
+[    8.075008] PMU FG_RESET : calc_capacity_2 : capacity 9463 init_pswr 95 cc_delta -37
+[    8.083027] PMU FG_RESET : ricoh61x_displayed_work : initial  dsoc  is  10000
+[    8.085507] PMU : set_current_time2register : second is 1692433889, hour is 470120
+[    8.098910] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(12231)[mAs], cc_sum_dec(-12231)
+[    8.099597] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(95), cc_delta(-37)
+[    8.099660] PMU:STATUS= 3: IBAT= 0: VSYS= 4333000: VBAT= 4129400: DSOC= 10000: RSOC= 9900: cc_delta=-37: rrf= 0
+[    8.954622] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[    9.309293] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[    9.321705] random: tr urandom read with 41 bits of entropy available
+[   11.910452] usb plugged 1
+[   12.402374] ntx_power_key_hook():state=0
+[   15.479883] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   15.523931] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   20.909408] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[   24.902857] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   24.925529] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: 
+[   25.574730] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   25.582446] squashfs: SQUASHFS error: unable to read xattr id index table
+[   28.894941] EXT4-fs (loop2): mounted filesystem with ordered data mode. Opts: (null)
+[   32.234930] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[   32.234951] PMU2: Watchdog timeout triggered. ===============
+[   34.482817] random: nonblocking pool is initialized
+[   37.110062] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 95 cc_delta -37
+[   37.123769] PMU FG_RESET : calc_capacity_2 : capacity 9463 init_pswr 95 cc_delta -37
+[   37.132173] PMU : set_current_time2register : second is 1692433918, hour is 470120
+[   37.144560] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(12271)[mAs], cc_sum_dec(-12271)
+[   37.145019] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(95), cc_delta(-37)
+[   37.145037] PMU:STATUS= 6: IBAT= -1: VSYS= 4351250: VBAT= 4136700: DSOC= 10000: RSOC= 9400: cc_delta=-37: rrf= 0
+[   42.389169] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+[   64.231451] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[   64.231471] PMU2: Watchdog timeout triggered. ===============
+[   66.151148] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 95 cc_delta -38
+[   66.166524] PMU FG_RESET : calc_capacity_2 : capacity 9462 init_pswr 95 cc_delta -38
+[   66.177735] PMU : set_current_time2register : second is 1692433947, hour is 470120
+[   66.189114] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(12293)[mAs], cc_sum_dec(-12293)
+[   66.190306] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(95), cc_delta(-38)
+[   66.190330] PMU:STATUS= 6: IBAT= 0: VSYS= 4353000: VBAT= 4147075: DSOC= 10000: RSOC= 9400: cc_delta=-38: rrf= 0
+[   67.337013] EXT4-fs (loop9): mounted filesystem with ordered data mode. Opts: (null)
+[   67.490124] sy7636_get_temperature():temperature = 28,reg=0x1c
+[   67.925530] EXT4-fs (loop10): mounted filesystem with ordered data mode. Opts: (null)
+[   95.201814] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 95 cc_delta -38
+[   95.216437] PMU FG_RESET : calc_capacity_2 : capacity 9462 init_pswr 95 cc_delta -38
+[   95.226530] PMU : set_current_time2register : second is 1692433976, hour is 470120
+[   95.237736] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(12318)[mAs], cc_sum_dec(-12318)
+[   95.238196] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(95), cc_delta(-38)
+[   95.238214] PMU:STATUS= 6: IBAT= -1: VSYS= 4353000: VBAT= 4142200: DSOC= 10000: RSOC= 9400: cc_delta=-38: rrf= 0
+[   96.227764] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[   96.227784] PMU2: Watchdog timeout triggered. ===============
+[   97.103539] EXT4-fs (loop12): mounted filesystem with ordered data mode. Opts: (null)
+[  100.187784] imx_epdc_v2_fb 228c000.epdc: blank = 1
+[  101.356898] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  101.356915] [_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0
+[  101.362195] drivers/video/backlight/lm3630a_bl.c(1381) lm3630a_update_status(0)
+[  101.362202] _fl_lm3630a_percentage(1209) _fl_lm3630a_percentage(0)
+[  101.362209] [_lm3630a_set_FL-1073] led A c=0,b=0, led B c=0,b=0
+[  101.362212] _lm3630a_set_FL():FL PWR[OFF] 
+[  116.983803] udevd[1224]: starting version 3.2.9
+[  117.519343] udevd[1225]: starting eudev-3.2.9
+[  124.241510] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 95 cc_delta -38
+[  124.255411] PMU FG_RESET : calc_capacity_2 : capacity 9462 init_pswr 95 cc_delta -38
+[  124.263825] PMU : set_current_time2register : second is 1692434005, hour is 470120
+[  124.274267] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(12355)[mAs], cc_sum_dec(-12355)
+[  124.274721] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(95), cc_delta(-38)
+[  124.274739] PMU:STATUS= 6: IBAT= -1: VSYS= 4350000: VBAT= 4131800: DSOC= 10000: RSOC= 9400: cc_delta=-38: rrf= 0
+[  128.092575] ntx_power_key_hook():state=0
+[  128.148638] ntx_power_key_hook():state=0
+[  128.224225] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  128.224244] PMU2: Watchdog timeout triggered. ===============
+[  129.293495] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  131.700919] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  134.105313] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  136.507844] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  138.909620] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  141.312661] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  143.724603] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  146.126916] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  147.053970] udevd[1712]: starting version 3.2.9
+[  147.590243] udevd[1713]: starting eudev-3.2.9
+[  148.509348] udevd[1722]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/enabled} for writing: Permission denied
+[  148.529222] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  148.559534] udevd[1722]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/authorized} for writing: Permission denied
+[  149.890346] udevd[1722]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: Permission denied
+[  149.981641] udevd[1722]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: Permission denied
+[  150.931743] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  153.279785] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 95 cc_delta -38
+[  153.293234] PMU FG_RESET : calc_capacity_2 : capacity 9462 init_pswr 95 cc_delta -38
+[  153.301859] PMU : set_current_time2register : second is 1692434034, hour is 470120
+[  153.311477] PMU: cc_sum = 12385: cc_cap_res= 28: cc_cap_mas = -1945723192
+[  153.311494] PMU: cc_cap_offset= -28: 
+[  153.311506] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  153.311520] PMU:STATUS= 6: IBAT= -1: VSYS= 4341750: VBAT= 4135775: DSOC= 10000: RSOC= 9400: cc_delta=-38: rrf= 1
+[  153.338055] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  155.740245] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  158.142826] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  159.355928] PMU: cc_sum = 6: cc_cap_res= 2: cc_cap_mas = -1945723192
+[  159.355948] PMU: cc_cap_offset= -30: 
+[  159.358299] PMU : set_current_time2register : second is 1692434040, hour is 470120
+[  159.386970] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  159.386991] PMU: cc_cap_offset= -30: 
+[  159.387004] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  159.387018] PMU:STATUS= 6: IBAT= -1: VSYS= 4347250: VBAT= 4134875: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  160.220734] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  160.220753] PMU2: Watchdog timeout triggered. ===============
+[  160.545655] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  162.947923] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  165.349698] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  167.751441] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  170.153328] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  172.555167] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  174.957045] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  177.358930] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  179.760621] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  182.162431] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  184.564246] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  186.966109] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  188.410097] PMU: cc_sum = 27: cc_cap_res= 9: cc_cap_mas = -1945723192
+[  188.410117] PMU: cc_cap_offset= -39: 
+[  188.411779] PMU : set_current_time2register : second is 1692434069, hour is 470120
+[  188.423708] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  188.423726] PMU: cc_cap_offset= -39: 
+[  188.423737] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  188.423751] PMU:STATUS= 6: IBAT= -1: VSYS= 4346500: VBAT= 4134275: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  189.368067] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  191.770199] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  192.216967] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  192.216987] PMU2: Watchdog timeout triggered. ===============
+[  194.180347] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  195.019666] sy7636_get_temperature():temperature = 28,reg=0x1c
+[  196.589814] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  198.771917] [_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0
+[  198.771939] _lm3630a_set_FL():FL PWR[ON] 
+[  198.906125] [_lm3630a_set_FL-1073] led A c=31,b=3, led B c=0,b=0
+[  198.945460] [_lm3630a_set_FL-1073] led A c=31,b=11, led B c=0,b=0
+[  198.983749] [_lm3630a_set_FL-1073] led A c=31,b=14, led B c=0,b=0
+[  198.993096] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  199.024832] [_lm3630a_set_FL-1073] led A c=31,b=16, led B c=0,b=0
+[  199.070132] [_lm3630a_set_FL-1073] led A c=31,b=18, led B c=0,b=0
+[  199.113375] [_lm3630a_set_FL-1073] led A c=31,b=20, led B c=0,b=0
+[  199.153953] [_lm3630a_set_FL-1073] led A c=31,b=25, led B c=0,b=0
+[  199.194679] [_lm3630a_set_FL-1073] led A c=31,b=30, led B c=0,b=0
+[  199.235368] [_lm3630a_set_FL-1073] led A c=31,b=36, led B c=0,b=0
+[  199.275907] [_lm3630a_set_FL-1073] led A c=31,b=39, led B c=0,b=0
+[  199.316270] [_lm3630a_set_FL-1073] led A c=31,b=43, led B c=0,b=0
+[  199.356235] [_lm3630a_set_FL-1073] led A c=31,b=47, led B c=0,b=0
+[  199.396250] [_lm3630a_set_FL-1073] led A c=31,b=50, led B c=0,b=0
+[  199.436952] [_lm3630a_set_FL-1073] led A c=31,b=53, led B c=0,b=0
+[  199.477416] [_lm3630a_set_FL-1073] led A c=31,b=59, led B c=0,b=0
+[  199.517873] [_lm3630a_set_FL-1073] led A c=31,b=64, led B c=0,b=0
+[  199.558648] [_lm3630a_set_FL-1073] led A c=31,b=71, led B c=0,b=0
+[  199.599336] [_lm3630a_set_FL-1073] led A c=31,b=79, led B c=0,b=0
+[  199.639951] [_lm3630a_set_FL-1073] led A c=31,b=86, led B c=0,b=0
+[  199.680544] [_lm3630a_set_FL-1073] led A c=31,b=92, led B c=0,b=0
+[  199.721033] [_lm3630a_set_FL-1073] led A c=31,b=98, led B c=0,b=0
+[  199.762416] [_lm3630a_set_FL-1073] led A c=31,b=102, led B c=0,b=0
+[  199.804609] [_lm3630a_set_FL-1073] led A c=31,b=108, led B c=0,b=0
+[  199.845264] [_lm3630a_set_FL-1073] led A c=31,b=109, led B c=0,b=0
+[  199.886195] [_lm3630a_set_FL-1073] led A c=31,b=113, led B c=0,b=0
+[  199.929543] [_lm3630a_set_FL-1073] led A c=31,b=114, led B c=0,b=0
+[  199.971006] [_lm3630a_set_FL-1073] led A c=31,b=117, led B c=0,b=0
+[  200.011652] [_lm3630a_set_FL-1073] led A c=31,b=119, led B c=0,b=0
+[  200.052393] [_lm3630a_set_FL-1073] led A c=31,b=121, led B c=0,b=0
+[  200.093082] [_lm3630a_set_FL-1073] led A c=31,b=123, led B c=0,b=0
+[  200.133699] [_lm3630a_set_FL-1073] led A c=31,b=124, led B c=0,b=0
+[  200.174289] [_lm3630a_set_FL-1073] led A c=31,b=125, led B c=0,b=0
+[  200.214866] [_lm3630a_set_FL-1073] led A c=31,b=127, led B c=0,b=0
+[  200.255509] [_lm3630a_set_FL-1073] led A c=31,b=128, led B c=0,b=0
+[  200.296141] [_lm3630a_set_FL-1073] led A c=31,b=130, led B c=0,b=0
+[  200.336243] [_lm3630a_set_FL-1073] led A c=31,b=132, led B c=0,b=0
+[  200.376231] [_lm3630a_set_FL-1073] led A c=31,b=133, led B c=0,b=0
+[  200.416228] [_lm3630a_set_FL-1073] led A c=31,b=136, led B c=0,b=0
+[  200.456246] [_lm3630a_set_FL-1073] led A c=31,b=139, led B c=0,b=0
+[  200.496219] [_lm3630a_set_FL-1073] led A c=31,b=141, led B c=0,b=0
+[  200.536265] [_lm3630a_set_FL-1073] led A c=31,b=142, led B c=0,b=0
+[  200.576239] [_lm3630a_set_FL-1073] led A c=31,b=144, led B c=0,b=0
+[  200.616259] [_lm3630a_set_FL-1073] led A c=31,b=146, led B c=0,b=0
+[  200.656238] [_lm3630a_set_FL-1073] led A c=31,b=147, led B c=0,b=0
+[  200.696224] [_lm3630a_set_FL-1073] led A c=31,b=149, led B c=0,b=0
+[  200.736248] [_lm3630a_set_FL-1073] led A c=31,b=150, led B c=0,b=0
+[  200.776881] [_lm3630a_set_FL-1073] led A c=31,b=152, led B c=0,b=0
+[  200.819058] [_lm3630a_set_FL-1073] led A c=31,b=154, led B c=0,b=0
+[  200.859724] [_lm3630a_set_FL-1073] led A c=31,b=155, led B c=0,b=0
+[  201.394807] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  203.797266] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  206.199650] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  208.602452] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  211.005207] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  213.407992] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  215.810655] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  217.561320] PMU: cc_sum = 54: cc_cap_res= 18: cc_cap_mas = -1945723192
+[  217.561375] PMU: cc_cap_offset= -57: 
+[  217.563839] PMU : set_current_time2register : second is 1692434098, hour is 470120
+[  217.580950] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  217.580994] PMU: cc_cap_offset= -57: 
+[  217.581033] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  217.581086] PMU:STATUS= 6: IBAT= -2: VSYS= 4331500: VBAT= 4124500: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  218.213924] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  220.616736] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  223.019598] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  224.213502] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  224.213534] PMU2: Watchdog timeout triggered. ===============
+[  225.421663] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  227.824321] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  230.226480] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  232.628731] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  235.031034] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  237.433649] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  239.836257] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  242.238987] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  244.641596] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  247.044236] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  247.050806] PMU: cc_sum = 73: cc_cap_res= 24: cc_cap_mas = -1945723192
+[  247.050855] PMU: cc_cap_offset= -81: 
+[  247.053387] PMU : set_current_time2register : second is 1692434128, hour is 470120
+[  247.070885] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  247.070928] PMU: cc_cap_offset= -81: 
+[  247.070967] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  247.071019] PMU:STATUS= 6: IBAT= -2: VSYS= 4332500: VBAT= 4124500: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  249.446512] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  251.849204] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  254.251525] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  256.210935] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  256.210989] PMU2: Watchdog timeout triggered. ===============
+[  256.654192] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  259.056732] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  259.158491] Begin i2c recv message:{ 5a, 14, db, 91, 00, 00, 00, 01, }
+[  259.244618] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  259.279944] sy7636_get_temperature():temperature = 28,reg=0x1c
+[  261.458995] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  262.544482] Begin i2c recv message:{ 5a, 30, 15, 66, 00, 00, 00, 01, }
+[  262.588497] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  263.852150] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  263.860873] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  265.214164] Begin i2c recv message:{ 5a, 41, c6, 64, 00, 00, 00, 01, }
+[  265.271941] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  266.263198] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  266.481933] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[  266.481953] Wifi / BT power control 1
+[  266.481961] wifi 3v3 power on
+[  266.538553] Wifi On
+[  266.538634] _ntx_wifi_bt_power_ctrl() : done 
+[  266.610922] sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+[  266.637819] mmc1: new high speed SDIO card at address 0001
+[  266.718588] RTL871X: module init start
+[  266.718614] RTL871X: rtl8189fs v4.3.24.1_16872.20160217
+[  266.718623] RTL871X: build time: Jun 12 2022 22:07:39
+[  266.726661] RTL871X: CHIP TYPE: RTL8188F
+[  266.727161] RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+[  266.727179] RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+[  266.727392] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  266.729244] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  266.729258] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  266.729562] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  266.729573] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  266.729665] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  266.729730] RTL871X: EEPROM type is E-FUSE
+[  266.730109] RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+[  266.771915] RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+[  266.771931] RTL871X: Efuse Realmap:
+[  266.771939] 29 81 03 CC 00 00 50 00 00 00 04 CC 0A 0C 00 00
+[  266.771985] 27 28 28 29 2A 2A 2D 2D 2D 2E 2E 25 FF FF FF FF
+[  266.772029] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772073] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772117] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772161] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772205] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772249] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772294] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772338] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772382] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772426] FF FF FF FF FF FF FF FF 20 1E 19 00 00 00 00 FF
+[  266.772470] FF 11 00 10 00 FF 00 FF 00 00 FF FF FF FF FF FF
+[  266.772514] 3E 10 01 02 23 FF FF FF 20 04 4C 02 79 F1 21 02
+[  266.772558] 0C 00 22 04 00 08 00 32 FF 21 02 0C 00 22 2A 01
+[  266.772601] 01 00 00 00 00 00 00 00 00 00 00 00 02 00 FF FF
+[  266.772646] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  266.772689] 00 EB 00 6E 01 00 00 00 00 FF 58 B0 D4 BF C6 1A
+[  266.772733] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772777] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772821] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772865] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772909] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772953] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.772998] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773042] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773086] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773130] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773174] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773218] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773262] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773306] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  266.773418] RTL871X: hal_com_config_channel_plan chplan:0x20
+[  266.773430] RTL871X: Hal_DetectWoWMode
+[  266.774519] RTL871X: kfree flag:1
+[  266.774528] RTL871X: bb_gain:1
+[  266.776882] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+[  266.776893] RTL871X: SetHwReg8188F: hci_sus_state=3
+[  266.777639] RTL871X: SetHwReg8188F: hci_sus_state=0
+[  266.777649] RTL871X: rtw_hal_read_chip_info in 50 ms
+[  266.777864] RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13
+[  266.779468] RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+[  266.780735] RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+[  266.780781] RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+[  266.781567] RTL871X: default power by rate loaded
+[  266.782797] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.782815] RTL871X: unsupported channel: 114 at 5G
+[  266.782827] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.782834] RTL871X: unsupported channel: 114 at 5G
+[  266.782844] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.782851] RTL871X: unsupported channel: 114 at 5G
+[  266.782926] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.782933] RTL871X: unsupported channel: 114 at 5G
+[  266.782943] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.782950] RTL871X: unsupported channel: 114 at 5G
+[  266.782960] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.782967] RTL871X: unsupported channel: 114 at 5G
+[  266.783046] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.783053] RTL871X: unsupported channel: 114 at 5G
+[  266.783062] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.783069] RTL871X: unsupported channel: 114 at 5G
+[  266.783079] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  266.783086] RTL871X: unsupported channel: 114 at 5G
+[  266.783250] RTL871X: default power limit loaded
+[  266.783587] RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:bf:c6:1a
+[  266.783811] RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+[  266.783897] RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:bf:c6:1a
+[  266.802579] RTL871X: oob_irq ZERO!
+[  266.802738] RTL871X: module init ret=0
+[  267.551591] RTL871X: LeaveAllPowerSaveMode(eth0): bup=0 Skip!
+[  267.551620] RTL871X: rtw_wx_set_scan: bDriverStopped=True, bup=0, hw_init_completed=0
+[  268.275709] RTL871X: LeaveAllPowerSaveMode(eth0): bup=0 Skip!
+[  268.275738] RTL871X: rtw_wx_set_scan: bDriverStopped=True, bup=0, hw_init_completed=0
+[  268.666239] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  268.783245] RTL871X: +871x_drv - drv_open, bup=0
+[  268.783543] RTL871X: FW does not exist before power on!!
+[  268.784325] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  268.786163] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  268.786174] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  268.786487] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  268.786499] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  268.786594] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  268.786604] RTL871X: Power on ok!
+[  268.786849] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[  268.786861] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768
+[  268.786875] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[  268.786883] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[  268.786891] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[  269.023373] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00040105
+[  269.023890] RTL871X: _8051Reset8188: Finish
+[  269.037443] RTL871X: _FWFreeToGo: Polling FW ready OK! (87, 10ms), REG_MCUFWDL:0x000401c6
+[  269.037462] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[  269.037472] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 250ms
+[  269.037482] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[  269.037538] RTL871X: HalDetectPwrDownMode(): PDN=0
+[  269.037548] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+[  269.587278] RTL871X: ADAPTIVITY_VERSION 9.0
+[  269.587303] RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+[  269.587316] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+[  269.587325] RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+[  269.587334] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+[  269.588127] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  269.588181] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  270.308752] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  270.308905] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:1
+[  270.309297] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x86070
+[  270.310086] RTL871X: MAC Address = 58:b0:d4:bf:c6:1a
+[  270.311343] RTL871X: -871x_drv - drv_open, bup=1
+[  270.332452] RTL871X: start rtl8188fs_xmit_thread(eth0)
+[  271.068690] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  272.314292] RTL871X: HwRateToMRate(): Non supported Rate [ff]!!!
+[  272.322090] RTL871X: ==>rtw_ps_processor .fw_state(8)
+[  272.322141] RTL871X: ==>ips_enter cnts:1
+[  272.322171] RTL871X: nolinked power save enter
+[  272.322202] RTL871X: ===> rtw_ips_pwr_down...................
+[  272.322235] RTL871X: ====> rtw_ips_dev_unload...
+[  272.369515] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+[  272.369574] RTL871X: SetHwReg8188F: hci_sus_state=3
+[  272.379802] RTL871X: SetHwReg8188F: hci_sus_state=0
+[  272.379862] RTL871X: <=== rtw_ips_pwr_down..................... in 60ms
+[  273.470764] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  275.872578] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  276.102403] PMU: cc_sum = 54: cc_cap_res= 18: cc_cap_mas = -1945723192
+[  276.102423] PMU: cc_cap_offset= -99: 
+[  276.104236] PMU : set_current_time2register : second is 1692434157, hour is 470120
+[  276.117327] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  276.117347] PMU: cc_cap_offset= -99: 
+[  276.117360] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  276.117374] PMU:STATUS= 6: IBAT= -1: VSYS= 4357750: VBAT= 4141550: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  278.274486] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  280.676568] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  283.079086] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  285.481034] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  287.882758] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  288.208641] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  288.208696] PMU2: Watchdog timeout triggered. ===============
+[  290.284503] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  292.686416] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  295.088116] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  297.490007] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  299.891931] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  302.293794] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  304.695688] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  305.142857] PMU: cc_sum = 48: cc_cap_res= 16: cc_cap_mas = -1945723192
+[  305.142877] PMU: cc_cap_offset= -15: 
+[  305.144692] PMU : set_current_time2register : second is 1692434186, hour is 470120
+[  305.157790] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  305.157810] PMU: cc_cap_offset= -15: 
+[  305.157822] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  305.157835] PMU:STATUS= 6: IBAT= -2: VSYS= 4333000: VBAT= 4129400: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  307.097289] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  309.499287] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  311.901008] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  314.303480] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  314.810429] Begin i2c recv message:{ 5a, 01, bf, 86, 00, 00, 00, 01, }
+[  314.839773] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  315.087323] RTL871X: _rtw_pwr_wakeup call ips_leave....
+[  315.087350] RTL871X: ==>ips_leave cnts:1
+[  315.087357] RTL871X: ===>  rtw_ips_pwr_up..............
+[  315.087382] RTL871X: ===> ips_netdrv_open.........
+[  315.099413] RTL871X: FW does not exist before power on!!
+[  315.100216] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  315.102077] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  315.102088] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  315.102392] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  315.102402] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  315.102499] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  315.102510] RTL871X: Power on ok!
+[  315.102745] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[  315.102758] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768
+[  315.102771] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[  315.102779] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[  315.102787] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[  315.315419] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00040505
+[  315.315920] RTL871X: _8051Reset8188: Finish
+[  315.338748] RTL871X: _FWFreeToGo: Polling FW ready OK! (117, 30ms), REG_MCUFWDL:0x000405c6
+[  315.338767] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[  315.338777] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 240ms
+[  315.338786] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[  315.338844] RTL871X: HalDetectPwrDownMode(): PDN=0
+[  315.338853] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+[  315.926306] RTL871X: ADAPTIVITY_VERSION 9.0
+[  315.926332] RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+[  315.926344] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+[  315.926353] RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+[  315.926362] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+[  315.929285] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  315.929357] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  316.644297] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  316.644445] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:1
+[  316.644832] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x86070
+[  316.646605] RTL871X: <===  rtw_ips_pwr_up.............. in 1560ms
+[  316.646619] RTL871X: nolinked power save leave
+[  316.646729] RTL871X: ==> ips_leave.....LED(0x01028282)...
+[  316.705370] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  318.178611] RTL871X: survey done event(35) band:0 for eth0
+[  318.178715] RTL871X: rtw_indicate_scan_done(eth0)
+[  318.196462] RTL871X: HwRateToMRate(): Non supported Rate [ff]!!!
+[  318.227086] RTL871X: ==>rtw_ps_processor .fw_state(8)
+[  318.227145] RTL871X: ==>ips_enter cnts:2
+[  318.227174] RTL871X: nolinked power save enter
+[  318.227204] RTL871X: ===> rtw_ips_pwr_down...................
+[  318.227239] RTL871X: ====> rtw_ips_dev_unload...
+[  318.288639] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+[  318.288659] RTL871X: SetHwReg8188F: hci_sus_state=3
+[  318.289474] RTL871X: SetHwReg8188F: hci_sus_state=0
+[  318.289488] RTL871X: <=== rtw_ips_pwr_down..................... in 70ms
+[  319.107958] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  320.205215] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  320.205236] PMU2: Watchdog timeout triggered. ===============
+[  321.509888] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  322.999628] sy7636_get_temperature():temperature = 28,reg=0x1c
+[  323.911874] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  325.470846] Begin i2c recv message:{ 5a, 42, 40, 9f, 00, 00, 00, 01, }
+[  325.642082] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  326.313876] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  327.229255] Begin i2c recv message:{ 5a, 42, 87, a7, 00, 00, 00, 01, }
+[  327.485390] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  328.716594] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  331.118620] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  331.191599] Begin i2c recv message:{ 5a, 42, 72, 97, 00, 00, 00, 01, }
+[  331.405426] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  332.894341] Begin i2c recv message:{ 5a, 42, 93, ad, 00, 00, 00, 01, }
+[  333.065631] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  333.520702] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  333.614493] Begin i2c recv message:{ 5a, 42, 9c, a1, 00, 00, 00, 01, }
+[  333.771297] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  334.182397] PMU: cc_sum = 44: cc_cap_res= 14: cc_cap_mas = -1945723192
+[  334.182416] PMU: cc_cap_offset= -29: 
+[  334.184231] PMU : set_current_time2register : second is 1692434215, hour is 470120
+[  334.197585] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  334.197604] PMU: cc_cap_offset= -29: 
+[  334.197617] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  334.197630] PMU:STATUS= 6: IBAT= -1: VSYS= 4351500: VBAT= 4140375: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  334.249911] Begin i2c recv message:{ 5a, 42, 8a, 95, 00, 00, 00, 01, }
+[  334.392728] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  334.815212] Begin i2c recv message:{ 5a, 42, 84, 98, 00, 00, 00, 01, }
+[  334.971979] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  335.366378] Begin i2c recv message:{ 5a, 42, bd, ad, 00, 00, 00, 01, }
+[  335.466765] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  335.832936] Begin i2c recv message:{ 5a, 42, a8, 9c, 00, 00, 00, 01, }
+[  335.919110] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  335.924432] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  336.832711] Begin i2c recv message:{ 5a, 42, 92, a1, 00, 00, 00, 01, }
+[  336.975560] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  338.226103] Begin i2c recv message:{ 5a, 43, 1b, 31, 00, 00, 00, 01, }
+[  338.330024] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  338.368935] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  340.732076] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  343.134230] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  343.590763] Begin i2c recv message:{ 5a, 43, 24, 32, 00, 00, 00, 01, }
+[  343.663018] Begin i2c recv message:{ 5a, 43, 1a, 37, 00, 00, 00, 01, }
+[  343.678508] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  345.536231] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  347.938130] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  350.339864] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  352.055322] Begin i2c recv message:{ 5a, 43, 1f, 5e, 00, 00, 00, 01, }
+[  352.184058] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  352.201658] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  352.201678] PMU2: Watchdog timeout triggered. ===============
+[  352.741820] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  353.855274] Begin i2c recv message:{ 5a, 43, 24, 3a, 00, 00, 00, 01, }
+[  354.026522] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  355.143797] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  357.044600] Begin i2c recv message:{ 5a, 43, 31, 31, 00, 00, 00, 01, }
+[  357.358015] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  357.545741] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  359.948650] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  362.350720] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  362.410979] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[  362.411027] RTL871X: _rtw_pwr_wakeup call ips_leave....
+[  362.411039] RTL871X: ==>ips_leave cnts:2
+[  362.411047] RTL871X: ===>  rtw_ips_pwr_up..............
+[  362.411072] RTL871X: ===> ips_netdrv_open.........
+[  362.411379] RTL871X: FW does not exist before power on!!
+[  362.412133] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  362.413997] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  362.414009] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  362.414324] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  362.414335] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  362.415051] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  362.415073] RTL871X: Power on ok!
+[  362.418825] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[  362.418849] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768
+[  362.418863] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[  362.418872] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[  362.418880] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[  362.634585] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00040505
+[  362.635104] RTL871X: _8051Reset8188: Finish
+[  362.648726] RTL871X: _FWFreeToGo: Polling FW ready OK! (117, 20ms), REG_MCUFWDL:0x000405c6
+[  362.648744] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[  362.648754] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 230ms
+[  362.648763] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[  362.648821] RTL871X: HalDetectPwrDownMode(): PDN=0
+[  362.648831] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+[  363.129394] RTL871X: ADAPTIVITY_VERSION 9.0
+[  363.129419] RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+[  363.129432] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+[  363.129440] RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+[  363.129450] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+[  363.130279] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  363.130334] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  363.217837] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1945723192
+[  363.217851] PMU: cc_cap_offset= -43: 
+[  363.219454] PMU : set_current_time2register : second is 1692434244, hour is 470120
+[  363.230839] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  363.230849] PMU: cc_cap_offset= -43: 
+[  363.230859] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  363.230872] PMU:STATUS= 6: IBAT= -1: VSYS= 4340000: VBAT= 4127525: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  363.832266] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  363.832410] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:1
+[  363.832798] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x86070
+[  363.834609] RTL871X: <===  rtw_ips_pwr_up.............. in 1420ms
+[  363.834624] RTL871X: nolinked power save leave
+[  363.834739] RTL871X: ==> ips_leave.....LED(0x01028282)...
+[  363.834843] RTL871X: set_mode = IW_MODE_INFRA
+[  363.835015] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  363.847212] RTL871X: set bssid:00:00:00:00:00:00
+[  363.847366] RTL871X: =>rtw_wx_set_essid
+[  363.847381] RTL871X: ssid=, len=32
+[  363.847472] RTL871X: set ssid [] fw_state=0x00000008
+[  363.847482] RTL871X: Set SSID under fw_state=0x00000008
+[  363.847504] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: DIRECT-08-HP OfficeJet Pro 6970(10:62:e5:75:07:09, ch1) rssi:-64
+[  363.847519] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: DK-Wlan-2G(34:31:c4:41:97:6c, ch1) rssi:-56
+[  363.847536] RTL871X: rtw_select_and_join_from_scanned_queue: candidate: DK-Wlan-2G(34:31:c4:41:97:6c, ch:1)
+[  363.847549] RTL871X: link to Artheros AP
+[  363.847589] RTL871X: [HT] HAL Support STBC = 0x01
+[  363.847601] RTL871X: [HT] Declare supporting RX STBC = 1
+[  363.847653] RTL871X: rtw_chk_start_clnt_join(eth0) req: 1,0,0
+[  363.847664] RTL871X: rtw_chk_start_clnt_join(eth0) union: 1,0,0
+[  363.851516] RTL871X: <=rtw_wx_set_essid, ret 0
+[  363.878915] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[  363.946312] RTL871X: OnBeacon: beacon keys ready
+[  363.946341] RTL871X: link to Artheros AP
+[  363.946352] RTL871X: start auth
+[  363.946371] RTL871X: issue_auth
+[  363.952080] RTL871X: OnAuthClient
+[  363.952106] RTL871X: auth success, start assoc
+[  363.952136] RTL871X: network.SupportedRates[0]=82
+[  363.952144] RTL871X: network.SupportedRates[1]=84
+[  363.952152] RTL871X: network.SupportedRates[2]=8B
+[  363.952160] RTL871X: network.SupportedRates[3]=96
+[  363.952167] RTL871X: network.SupportedRates[4]=8C
+[  363.952175] RTL871X: network.SupportedRates[5]=12
+[  363.952183] RTL871X: network.SupportedRates[6]=98
+[  363.952190] RTL871X: network.SupportedRates[7]=24
+[  363.952198] RTL871X: network.SupportedRates[8]=B0
+[  363.952205] RTL871X: network.SupportedRates[9]=48
+[  363.952213] RTL871X: network.SupportedRates[10]=60
+[  363.952220] RTL871X: network.SupportedRates[11]=6C
+[  363.952230] RTL871X: bssrate_len = 12
+[  363.955521] RTL871X: OnAssocRsp
+[  363.955544] RTL871X: assoc reject, status code: 45
+[  363.955561] RTL871X: report_join_res(-4)
+[  363.955574] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+[  363.956042] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+[  363.958469] RTL871X: _rtw_join_timeout_handler, fw_state=8
+[  363.958487] RTL871X: indicate disassoc
+[  363.958933] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+[  364.753115] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  366.971897] RTL871X: survey done event(1b) band:0 for eth0
+[  366.971939] RTL871X: rtw_indicate_scan_done(eth0)
+[  366.974986] RTL871X: wpa_set_auth_algs, AUTH_ALG_OPEN_SYSTEM
+[  366.975024] RTL871X: set_mode = IW_MODE_INFRA
+[  366.975881] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  366.976070] RTL871X: 
+[  366.976070]  wpa_ie(length:22):
+[  366.976088] RTL871X: 0x30 0x14 0x01 0x00 0x00 0x0f 0xac 0x04 
+[  366.976098] RTL871X: 0x01 0x00 0x00 0x0f 0xac 0x04 0x01 0x00 
+[  366.976108] RTL871X: 0x00 0x0f 0xac 0x02 0x00 0x00 0x00 0x00 
+[  366.980320] RTL871X: HwRateToMRate(): Non supported Rate [ff]!!!
+[  366.988651] RTL871X: SetHwReg8188F, 6281, RCR= 700060ca
+[  366.988726] RTL871X: rtw_wx_set_freq: set to channel 1
+[  366.991932] RTL871X: =>rtw_wx_set_essid
+[  366.991953] RTL871X: ssid=DK-Wlan-2G, len=10
+[  366.992021] RTL871X: set ssid [DK-Wlan-2G] fw_state=0x00000008
+[  366.992031] RTL871X: Set SSID under fw_state=0x00000008
+[  366.992052] RTL871X: [by_bssid:0][assoc_ssid:DK-Wlan-2G][to_roam:0] new candidate: DK-Wlan-2G(34:31:c4:41:97:6c, ch1) rssi:-50
+[  366.992068] RTL871X: rtw_select_and_join_from_scanned_queue: candidate: DK-Wlan-2G(34:31:c4:41:97:6c, ch:1)
+[  366.992080] RTL871X: link to Artheros AP
+[  366.992101] RTL871X: [HT] HAL Support STBC = 0x01
+[  366.992114] RTL871X: [HT] Declare supporting RX STBC = 1
+[  366.992167] RTL871X: rtw_chk_start_clnt_join(eth0) req: 1,0,0
+[  366.992178] RTL871X: rtw_chk_start_clnt_join(eth0) union: 1,0,0
+[  366.992973] RTL871X: <=rtw_wx_set_essid, ret 0
+[  366.993396] RTL871X: set bssid:34:31:c4:41:97:6c
+[  366.993415] RTL871X: Set BSSID under fw_state=0x00000088
+[  367.155181] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  367.195784] RTL871X: rtw_wx_set_mlme
+[  367.195810] RTL871X: rtw_wx_set_mlme, cmd=0, reason=3
+[  367.195883] RTL871X: set bssid:00:00:00:00:00:00
+[  367.195933] RTL871X: =>rtw_wx_set_essid
+[  367.195944] RTL871X: ssid=í/}Ô'ÓŠÉ’+"o¬Æ¡½ßÈ‹ÄN?»c—“LDú, len=32
+[  367.195960] RTL871X: set ssid [í/}Ô'ÓŠÉ’+"o¬Æ¡½ßÈ‹ÄN?»c—“LDúðþÊ‰D\€‹] fw_state=0x00000088
+[  367.195969] RTL871X: Set SSID under fw_state=0x00000088
+[  367.195978] RTL871X: <=rtw_wx_set_essid, ret 0
+[  367.222440] RTL871X: wpa_set_auth_algs, AUTH_ALG_OPEN_SYSTEM
+[  367.222478] RTL871X: set_mode = IW_MODE_INFRA
+[  367.223643] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  367.224268] RTL871X: 
+[  367.224268]  wpa_ie(length:22):
+[  367.224292] RTL871X: 0x30 0x14 0x01 0x00 0x00 0x0f 0xac 0x04 
+[  367.224304] RTL871X: 0x01 0x00 0x00 0x0f 0xac 0x04 0x01 0x00 
+[  367.224314] RTL871X: 0x00 0x0f 0xac 0x02 0x00 0x00 0x00 0x00 
+[  367.224553] RTL871X: SetHwReg8188F, 6281, RCR= 700060ca
+[  367.224603] RTL871X: rtw_wx_set_freq: set to channel 1
+[  367.234721] RTL871X: =>rtw_wx_set_essid
+[  367.234746] RTL871X: ssid=DK-Wlan-2G, len=10
+[  367.234818] RTL871X: set ssid [DK-Wlan-2G] fw_state=0x00000088
+[  367.234828] RTL871X: Set SSID under fw_state=0x00000088
+[  367.234839] RTL871X: <=rtw_wx_set_essid, ret 0
+[  367.235084] RTL871X: set bssid:34:31:c4:41:97:6c
+[  367.235100] RTL871X: Set BSSID under fw_state=0x00000088
+[  367.427953] RTL871X: OnBeacon: beacon keys ready
+[  367.427981] RTL871X: link to Artheros AP
+[  367.427992] RTL871X: start auth
+[  367.428012] RTL871X: issue_auth
+[  367.436192] RTL871X: OnAuthClient
+[  367.436210] RTL871X: auth success, start assoc
+[  367.436234] RTL871X: network.SupportedRates[0]=82
+[  367.436242] RTL871X: network.SupportedRates[1]=84
+[  367.436250] RTL871X: network.SupportedRates[2]=8B
+[  367.436258] RTL871X: network.SupportedRates[3]=96
+[  367.436266] RTL871X: network.SupportedRates[4]=8C
+[  367.436273] RTL871X: network.SupportedRates[5]=12
+[  367.436281] RTL871X: network.SupportedRates[6]=98
+[  367.436289] RTL871X: network.SupportedRates[7]=24
+[  367.436296] RTL871X: network.SupportedRates[8]=B0
+[  367.436303] RTL871X: network.SupportedRates[9]=48
+[  367.436311] RTL871X: network.SupportedRates[10]=60
+[  367.436319] RTL871X: network.SupportedRates[11]=6C
+[  367.436328] RTL871X: bssrate_len = 12
+[  367.441612] RTL871X: OnAssocRsp
+[  367.441645] RTL871X: report_join_res(2)
+[  367.441660] RTL871X: rtw_joinbss_update_network
+[  367.441674] RTL871X: +rtw_update_ht_cap()
+[  367.441702] RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:34:31:c4:41:97:6c macid:0
+[  367.441711] RTL871X: rtw_joinbss_update_stainfo
+[  367.441731] RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff
+[  367.441743] RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3
+[  367.441754] RTL871X: ### Set STA_(0) info ###
+[  367.441767] RTL871X: assoc success
+[  367.441973] RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f
+[  367.446112] RTL871X: WMM(0): 0, a42b
+[  367.446186] RTL871X: WMM(1): 0, a44f
+[  367.446241] RTL871X: WMM(2): 0, 5e4322
+[  367.446295] RTL871X: WMM(3): 0, 2f3222
+[  367.446306] RTL871X: wmm_para_seq(0): 0
+[  367.446314] RTL871X: wmm_para_seq(1): 1
+[  367.446321] RTL871X: wmm_para_seq(2): 2
+[  367.446329] RTL871X: wmm_para_seq(3): 3
+[  367.446338] RTL871X: HTOnAssocRsp
+[  367.446403] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitmap:0x000ff005
+[  367.446418] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+[  367.446418] 	 ==> rssi_level:0, rate_bitmap:0x000ff005
+[  367.446433] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005
+[  367.446568] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=0x13
+[  367.446706] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000000
+[  367.447026] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)
+[  367.447345] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15
+[  367.447365] RTL871X: LocPsPoll: 2
+[  367.447375] RTL871X: LocNullData: 3
+[  367.447385] RTL871X: LocQosNull: 4
+[  367.447397] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)
+[  367.447530] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen(578), TotalPageNum(5)
+[  367.447545] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0
+[  367.447719] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1
+[  367.452279] RTL871X: recv eapol packet
+[  367.454916] RTL871X: send eapol packet
+[  367.455061] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  367.456025] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+[  367.456078] RTL871X: phydm_rssi_report mac_id:0, mac:34:31:c4:41:97:6c, rssi:48
+[  367.456098] RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:True, Firstcont:True
+[  367.470660] RTL871X: recv eapol packet
+[  367.471760] RTL871X: send eapol packet
+[  367.471889] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  367.472206] RTL871X:  ~~~~set sta key:unicastkey
+[  367.472370] RTL871X:  ~~~~set sta key:groupkey
+[  367.472395] RTL871X: ==> rtw_set_key algorithm(4),keyid(2),key_mask(0)
+[  367.474069] RTL871X: set pairwise key camid:4, addr:34:31:c4:41:97:6c, kid:0, type:AES
+[  367.486305] RTL871X: set group key camid:5, addr:34:31:c4:41:97:6c, kid:2, type:AES
+[  367.487522] RTL871X: SetHwReg8188F, 6274, RCR= 700060ce
+[  367.633215] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4
+[  368.978731] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+[  368.980810] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x01, WirelessMode:0x0b, rate_bitmap:0x000f0000
+[  368.980833] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+[  368.980833] 	 ==> rssi_level:1, rate_bitmap:0x000f0000
+[  368.980848] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xf0000
+[  368.980986] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xf0000 init_rate=0x13
+[  369.088713] Begin i2c recv message:{ 5a, 26, b9, 51, 00, 00, 00, 01, }
+[  369.401484] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  369.562592] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  370.028790] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+[  370.035801] RTL871X: OnAction_back
+[  370.035838] RTL871X: OnAction_back, action=0
+[  370.035907] RTL871X: issue_addba_rsp(eth0) ra=34:31:c4:41:97:6c status=0, tid=0, size=16
+[  370.078704] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+[  370.978634] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+[  371.324426] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[  371.524646] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=1 len=4
+[  371.967338] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  372.978636] RTL871X: do rtw_gw_addr_query()RTL871X: rtw_gw_addr_query Gateway Mac:	34:31:c4:41:97:6a
+[  372.978974] RTL871X: rtw_gw_addr_query Gateway IP:	192.168.178.1
+[  374.370546] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  375.574053] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[  376.775252] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  379.177885] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  380.905390] PMU: ricoh61x_rtc_set_time
+[  380.905431] rtc_ricoh619 rtc_ricoh619: PMU: print_time *** rtc-time : 8/19/2023 8:37:43 *****
+[  380.908525] PMU: ricoh61x_rtc_alarm_enable :0
+[  381.580481] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  383.983131] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  384.198496] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  384.198530] PMU2: Watchdog timeout triggered. ===============
+[  386.076693] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[  386.385492] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  388.789322] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  388.978852] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  388.983075] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  390.978563] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 55
+[  391.191883] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  392.303485] PMU: cc_sum = 46: cc_cap_res= 15: cc_cap_mas = -1945723192
+[  392.303539] PMU: cc_cap_offset= -58: 
+[  392.306011] PMU : set_current_time2register : second is 1692434274, hour is 470120
+[  392.324571] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  392.324619] PMU: cc_cap_offset= -58: 
+[  392.324659] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  392.324712] PMU:STATUS= 6: IBAT= -1: VSYS= 4388500: VBAT= 4161100: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  392.978561] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 57
+[  393.594352] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  394.978559] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  395.996922] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  396.978556] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  398.160154] sy7636_get_temperature():temperature = 28,reg=0x1c
+[  398.399611] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  398.978567] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  399.479998] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  400.802381] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  400.978553] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  402.978569] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  403.204922] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  404.978558] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  405.607390] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  406.978565] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  408.010139] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  408.978556] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  409.822483] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  410.413284] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  410.978589] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  412.816956] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  412.978554] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  414.978592] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 54
+[  415.220073] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  416.195337] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  416.195368] PMU2: Watchdog timeout triggered. ===============
+[  416.978559] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  417.623084] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  418.978590] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  420.026595] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  420.164769] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  420.978563] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  421.382891] PMU: cc_sum = 72: cc_cap_res= 24: cc_cap_mas = -1945723192
+[  421.382947] PMU: cc_cap_offset= -82: 
+[  421.385422] PMU : set_current_time2register : second is 1692434303, hour is 470120
+[  421.403909] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  421.403958] PMU: cc_cap_offset= -82: 
+[  421.404000] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  421.404053] PMU:STATUS= 6: IBAT= -2: VSYS= 4335250: VBAT= 4124200: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  422.429666] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  422.978594] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 53
+[  424.832362] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  424.978551] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  426.978556] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  427.235067] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  428.978567] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 53
+[  429.638134] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  430.509248] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  430.978559] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  432.040987] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  432.978571] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  434.444058] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  434.978558] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  436.847721] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  436.978566] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 54
+[  438.978559] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  439.250546] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  440.952533] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  440.978562] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  441.653059] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  442.978560] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  444.055741] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  444.978593] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  446.458337] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  446.978618] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  448.193018] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  448.193072] PMU2: Watchdog timeout triggered. ===============
+[  448.861215] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  448.978589] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  450.466060] PMU: cc_sum = 72: cc_cap_res= 24: cc_cap_mas = -1945723192
+[  450.466119] PMU: cc_cap_offset= -6: 
+[  450.468365] PMU : set_current_time2register : second is 1692434332, hour is 470120
+[  450.486593] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  450.486644] PMU: cc_cap_offset= -6: 
+[  450.486685] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  450.486741] PMU:STATUS= 6: IBAT= -2: VSYS= 4333000: VBAT= 4125700: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  450.978562] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  451.264047] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  451.397417] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  452.978595] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  453.666672] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  454.978561] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  456.069362] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  456.978593] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 56
+[  458.472082] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  458.978581] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 53
+[  460.875433] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  460.978550] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 52
+[  461.642443] RTL871X: recv eapol packet
+[  461.645361] RTL871X:  ~~~~set sta key:groupkey
+[  461.645436] RTL871X: ==> rtw_set_key algorithm(4),keyid(1),key_mask(0)
+[  461.646324] RTL871X: send eapol packet
+[  461.646555] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  461.652462] RTL871X: set group key camid:6, addr:34:31:c4:41:97:6c, kid:1, type:AES
+[  461.659963] RTL871X: SetHwReg8188F, 6274, RCR= 700760ce
+[  461.842472] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  462.978568] RTL871X: CurIGValue=57, EntryMinUndecoratedSmoothedPWDB = 53
+[  463.278331] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  464.521002] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+[  464.521032] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  465.680896] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  466.978842] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  466.978918] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  468.084854] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  468.978547] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 55
+[  468.981216] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=55
+[  470.348343] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_TX_TRAFFIC_LEAVE
+[  470.348535] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  470.487560] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  472.287316] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  472.890502] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  474.978881] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  474.978958] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  475.293155] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  476.978555] RTL871X: CurIGValue=60, EntryMinUndecoratedSmoothedPWDB = 55
+[  477.696681] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  478.126512] Begin i2c recv message:{ 5a, 50, 4c, 48, 00, 00, 00, 01, }
+[  478.978602] RTL871X: CurIGValue=60, EntryMinUndecoratedSmoothedPWDB = 53
+[  478.981279] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=53
+[  479.546245] PMU: cc_sum = 69: cc_cap_res= 23: cc_cap_mas = -1945723192
+[  479.546300] PMU: cc_cap_offset= -29: 
+[  479.548840] PMU : set_current_time2register : second is 1692434361, hour is 470120
+[  479.567645] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  479.567698] PMU: cc_cap_offset= -29: 
+[  479.567738] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  479.567791] PMU:STATUS= 6: IBAT= -2: VSYS= 4337000: VBAT= 4126325: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  480.099436] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  480.189971] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  480.190001] PMU2: Watchdog timeout triggered. ===============
+[  480.706264] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  480.978552] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 52
+[  482.502485] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  482.834315] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  482.978609] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 53
+[  484.103132] Begin i2c recv message:{ 5a, 50, 6b, 3c, 00, 00, 00, 01, }
+[  484.905883] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  484.978562] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 52
+[  486.978580] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 53
+[  487.308742] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  488.978577] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 52
+[  489.478760] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[  489.486068] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[  489.712539] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  490.978555] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 53
+[  492.115568] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  492.978577] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 52
+[  493.085285] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  493.279635] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  494.518920] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  494.978555] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 49
+[  496.921524] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  496.978557] RTL871X: CurIGValue=53, EntryMinUndecoratedSmoothedPWDB = 43
+[  496.981206] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=43
+[  497.366817] Begin i2c recv message:{ 5a, 00, 31, 3e, 00, 00, 00, 01, }
+[  497.519756] sy7636_get_temperature():temperature = 28,reg=0x1c
+[  498.978626] RTL871X: CurIGValue=43, EntryMinUndecoratedSmoothedPWDB = 43
+[  499.324113] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  500.978616] RTL871X: CurIGValue=43, EntryMinUndecoratedSmoothedPWDB = 43
+[  501.078338] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  501.726557] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  501.963980] Begin i2c recv message:{ 5a, 00, 00, 43, 00, 00, 00, 01, }
+[  502.686270] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  502.978548] RTL871X: CurIGValue=43, EntryMinUndecoratedSmoothedPWDB = 43
+[  504.129862] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  504.133844] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  504.216976] Begin i2c recv message:{ 5a, 00, 00, 00, 00, 00, 00, 00, }
+[  504.978572] RTL871X: CurIGValue=43, EntryMinUndecoratedSmoothedPWDB = 51
+[  504.981292] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=51
+[  506.532330] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  506.978580] RTL871X: CurIGValue=51, EntryMinUndecoratedSmoothedPWDB = 55
+[  508.623693] PMU: cc_sum = 69: cc_cap_res= 23: cc_cap_mas = -1945723192
+[  508.623749] PMU: cc_cap_offset= -52: 
+[  508.626271] PMU : set_current_time2register : second is 1692434390, hour is 470120
+[  508.645627] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+[  508.645706] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  508.651893] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[  508.651946] PMU: cc_cap_offset= -52: 
+[  508.651987] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[  508.652042] PMU:STATUS= 6: IBAT= -2: VSYS= 4334750: VBAT= 4125700: DSOC= 10000: RSOC= 10000: cc_delta=-38: rrf= 1
+[  508.935627] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  511.339554] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  512.187650] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  512.187705] PMU2: Watchdog timeout triggered. ===============
+[  512.978848] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  512.978927] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  513.742528] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  514.075527] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_RX_TRAFFIC_LEAVE
+[  514.075606] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  514.783847] RTL871X: adaptive_early_32k(): bcn_cnt = 101

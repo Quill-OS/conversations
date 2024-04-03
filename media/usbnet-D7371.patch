@@ -1,0 +1,21 @@
+diff --git a/etc/init.d/usbnet b/etc/init.d/usbnet
+index 775b1f3..687c2ce 100755
+--- a/etc/init.d/usbnet
++++ b/etc/init.d/usbnet
+@@ -14,11 +14,12 @@ start() {
+ 	HOST_ADDRESS="$(cat /boot/flags/USBNET_HOST_ADDRESS 2>/dev/null)"
+ 	IP="$(cat /boot/flags/USBNET_IP 2>/dev/null)"
+ 	DEVICE="$(cat /opt/inkbox_device)"
++	[ "$(uname -r | grep -o '[^-]*$')" == "n306c" ] && DEVICE="n306c"
+ 
+ 	if [ "${ROOTED}" == "true" ]; then
+ 		if [ "${FLAG}" == "true" ]; then
+ 			rc-service mass_storage stop &>/dev/null
+-			if [ "${DEVICE}" == "n705" ] || [ "${DEVICE}" == "n905b" ] || [ "${DEVICE}" == "n905c" ] || [ "${DEVICE}" == "n613" ] || [ "${DEVICE}" == "n236" ] || [ "${DEVICE}" == "n437" ]; then
++			if [ "${DEVICE}" == "n705" ] || [ "${DEVICE}" == "n905b" ] || [ "${DEVICE}" == "n905c" ] || [ "${DEVICE}" == "n613" ] || [ "${DEVICE}" == "n236" ] || [ "${DEVICE}" == "n437" ] || [ "${DEVICE}" == "n306c" ]; then
+ 				insmod "/modules/g_ether.ko" dev_addr="${DEVICE_ADDRESS}" host_addr="${HOST_ADDRESS}"
+ 			elif [ "${DEVICE}" == "n306" ] || [ "${DEVICE}" == "n873" ] || [ "${DEVICE}" == "bpi" ]; then
+ 				insmod "/modules/fs/configfs/configfs.ko"
+diff --git a/sbin/ipd b/sbin/ipd
+index 9f37efd..2e247d1 100755
+Binary files a/sbin/ipd and b/sbin/ipd differ

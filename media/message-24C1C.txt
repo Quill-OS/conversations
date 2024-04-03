@@ -1,0 +1,57 @@
+drivers/input/touchscreen/zforce_i2c.c: In function 'zforce_touch_event':
+drivers/input/touchscreen/zforce_i2c.c:407:2: error: implicit declaration of function 'input_mt_sync_frame' [-Werror=implicit-function-declaration]
+  input_mt_sync_frame(ts->input);
+  ^
+drivers/input/touchscreen/zforce_i2c.c: In function 'zforce_suspend':
+drivers/input/touchscreen/zforce_i2c.c:629:3: error: implicit declaration of function 'input_device_enabled' [-Werror=implicit-function-declaration]
+   if (!input_device_enabled(input)) {
+   ^
+drivers/input/touchscreen/zforce_i2c.c: In function 'zforce_parse_dt':
+drivers/input/touchscreen/zforce_i2c.c:722:2: error: implicit declaration of function 'of_property_read_u32' [-Werror=implicit-function-declaration]
+  if (of_property_read_u32(np, "x-size", &pdata->x_max)) {
+  ^
+  CC      lib/klist.o
+drivers/input/touchscreen/zforce_i2c.c: In function 'zforce_probe':
+drivers/input/touchscreen/zforce_i2c.c:798:2: error: implicit declaration of function 'devm_regulator_get_optional' [-Werror=implicit-function-declaration]
+  ts->reg_vdd = devm_regulator_get_optional(&client->dev, "vdd");
+  ^
+drivers/input/touchscreen/zforce_i2c.c:798:14: warning: assignment makes pointer from integer without a cast
+  ts->reg_vdd = devm_regulator_get_optional(&client->dev, "vdd");
+              ^
+drivers/input/touchscreen/zforce_i2c.c:801:15: error: 'EPROBE_DEFER' undeclared (first use in this function)
+   if (ret == -EPROBE_DEFER)
+               ^
+drivers/input/touchscreen/zforce_i2c.c:801:15: note: each undeclared identifier is reported only once for each function it appears in
+drivers/input/touchscreen/zforce_i2c.c:815:2: error: implicit declaration of function 'devm_add_action' [-Werror=implicit-function-declaration]
+  ret = devm_add_action(&client->dev, zforce_reset, ts);
+  ^
+drivers/input/touchscreen/zforce_i2c.c:830:2: error: implicit declaration of function 'devm_input_allocate_device' [-Werror=implicit-function-declaration]
+  input_dev = devm_input_allocate_device(&client->dev);
+  ^
+drivers/input/touchscreen/zforce_i2c.c:830:12: warning: assignment makes pointer from integer without a cast
+  input_dev = devm_input_allocate_device(&client->dev);
+            ^
+drivers/input/touchscreen/zforce_i2c.c:865:55: error: 'INPUT_MT_DIRECT' undeclared (first use in this function)
+  input_mt_init_slots(input_dev, ZFORCE_REPORT_POINTS, INPUT_MT_DIRECT);
+                                                       ^
+drivers/input/touchscreen/zforce_i2c.c:865:2: error: too many arguments to function 'input_mt_init_slots'
+  input_mt_init_slots(input_dev, ZFORCE_REPORT_POINTS, INPUT_MT_DIRECT);
+  ^
+In file included from drivers/input/touchscreen/zforce_i2c.c:22:0:
+include/linux/input/mt.h:38:5: note: declared here
+ int input_mt_init_slots(struct input_dev *dev, unsigned int num_slots);
+     ^
+drivers/input/touchscreen/zforce_i2c.c: At top level:
+drivers/input/touchscreen/zforce_i2c.c:946:3: error: implicit declaration of function 'of_match_ptr' [-Werror=implicit-function-declaration]
+   .of_match_table = of_match_ptr(zforce_dt_idtable),
+   ^
+drivers/input/touchscreen/zforce_i2c.c:946:34: error: 'zforce_dt_idtable' undeclared here (not in a function)
+   .of_match_table = of_match_ptr(zforce_dt_idtable),
+                                  ^
+drivers/input/touchscreen/zforce_i2c.c:952:1: warning: data definition has no type or storage class
+ module_i2c_driver(zforce_driver);
+ ^
+drivers/input/touchscreen/zforce_i2c.c:952:1: warning: type defaults to 'int' in declaration of 'module_i2c_driver' [-Wimplicit-int]
+drivers/input/touchscreen/zforce_i2c.c:952:1: warning: parameter names (without types) in function declaration
+drivers/input/touchscreen/zforce_i2c.c:942:26: warning: 'zforce_driver' defined but not used [-Wunused-variable]
+ static struct i2c_driver zforce_driver = {

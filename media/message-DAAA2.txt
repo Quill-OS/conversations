@@ -1,0 +1,44 @@
+kobo:~# iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+ifsctl mnt rootfs[FBInk] Unidentified Kobo device code (40)!
+ ro
+ * Mounting root filesystem read-only ...
+kobofb: Finished initialization.
+kobo:~# 17/06/2023 @ 06:19:21 | main: Running on device n437
+17/06/2023 @ 06:19:21 | main: Device has Wi-Fi capabilities
+17/06/2023 @ 06:19:24 | sleepThread: Sleep pipe thread active
+17/06/2023 @ 06:19:25 | sleepThread: Looking for messages in pipe
+17/06/2023 @ 06:19:29 | homePageWidget: Reading database
+17/06/2023 @ 06:19:29 | homePageWidget: Reading recent books database
+17/06/2023 @ 06:19:29 | homePageWidget: Setting up home page
+qUncompress: Input data is corrupted
+qUncompress: Input data is corrupted
+qUncompress: Input data is corrupted
+qUncompress: Input data is corrupted
+qUncompress: Input data is corrupted
+qUncompress: Input data is corrupted
+qUncompress: Input data is corrupted
+17/06/2023 @ 06:19:30 | homePageWidget: No books found in pinned books database
+17/06/2023 @ 06:19:30 | MainWindow: Checking for available updates
+17/06/2023 @ 06:19:30 | MainWindow: checkForUpdate: No update available.
+17/06/2023 @ 06:19:31 | MainWindow: Showing USB Mass Storage dialog
+17/06/2023 @ 06:19:32 | MainWindow: Setting initial brightness to 30
+17/06/2023 @ 06:19:32 | functions: cinematicBrightness: Setting brightness to 30
+17/06/2023 @ 06:19:35 | generalDialog: Cancel button clicked
+17/06/2023 @ 06:19:36 | wifiDialog: Wi-Fi dialog checkbox clicked: 2
+17/06/2023 @ 06:19:36 | wifiDialog: Clicked refresh button
+/lib/rc/sh/openrc-run.sh: line 49: can't open /run/ibxd: Interrupted system call
+17/06/2023 @ 06:19:38 | wifiDialog: Retrieved network list successfully
+17/06/2023 @ 06:19:38 | wifiDialog: MAC is: 00:1C:F0:F5:FA:0E
+17/06/2023 @ 06:19:38 | wifiDialog: Network name is: 'SentFromMyToaster-EXT'
+17/06/2023 @ 06:19:38 | wifiDialog: Encryption type is: true
+17/06/2023 @ 06:19:38 | wifiDialog: Signal strength is: 60
+17/06/2023 @ 06:19:38 | wifiDialog: Skipping additional items from network information
+17/06/2023 @ 06:19:38 | wifiDialog: Data lines count is below 4; skipping
+17/06/2023 @ 06:19:38 | wifiDialog: Found 1 valid networks
+/lib/rc/sh/openrc-run.sh: line 49: can't open /run/ibxd: Interrupted system call
+17/06/2023 @ 06:19:38 | wifiDialog: Current network name is: SentFromMyToaster-EXT
+17/06/2023 @ 06:19:38 | wifiDialog: Found current network in vector
+17/06/2023 @ 06:19:38 | network: Applying variables for network
+17/06/2023 @ 06:19:38 | wifiDialog: pureNetworkList size is: 1, entry at 0 slated for removal
+Segmentation fault

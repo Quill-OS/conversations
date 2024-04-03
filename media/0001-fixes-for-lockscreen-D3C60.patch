@@ -1,0 +1,110 @@
+From 466d84149e0055f14eebb174db4218a57c28dc87 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Sat, 1 Oct 2022 19:28:41 +0200
+Subject: [PATCH] fixes for lockscreen
+
+---
+ src/functions.h           |  5 ++++-
+ src/settings/settings.cpp | 41 ++++++++++++++++++++++++---------------
+ src/settings/settings.h   |  3 +++
+ 3 files changed, 32 insertions(+), 17 deletions(-)
+
+diff --git a/src/functions.h b/src/functions.h
+index d427517..731c9ae 100644
+--- a/src/functions.h
++++ b/src/functions.h
+@@ -1168,8 +1168,11 @@ namespace {
+     void askForPermissions() {
+         if(QFile(".config/12-lockscreen/password").exists() == true and QFile(".config/12-lockscreen/salt").exists() == true) {
+             QProcess process;
+-            process.startDetached("lockscreen", QStringList());
++            process.start("lockscreen", QStringList());
++            process.waitForStarted(-1);
++            process.waitForFinished(-1);
+         }
++
+     }
+ }
+ 
+diff --git a/src/settings/settings.cpp b/src/settings/settings.cpp
+index 85a14f8..54603e1 100644
+--- a/src/settings/settings.cpp
++++ b/src/settings/settings.cpp
+@@ -405,6 +405,8 @@ settings::settings(QWidget *parent) :
+     stylesheetFile.open(QFile::ReadOnly);
+     this->setStyleSheet(stylesheetFile.readAll());
+     stylesheetFile.close();
++
++    ignoreCalls = false;
+ }
+ 
+ settings::~settings()
+@@ -763,28 +765,35 @@ void settings::on_resetBtn_clicked()
+ void settings::on_setPasscodeBtn_clicked()
+ {
+     log("'Set passcode' button clicked", className);
+-    // Ask for password before change
+-    askForPermissions();
+-    changePassword();
+-
++    if(checkconfig(".config/12-lockscreen/config") == true) {
++        // Ask for password before change
++        askForPermissions();
++        this->repaint();
++        changePassword();
++    }
++    else {
++        showToastNative("Enable lock screen first");
++    }
+ }
+ 
+ void settings::on_enableLockscreenCheckBox_toggled(bool checked)
+ {
+-    askForPermissions();
++    if(ignoreCalls == false) {
++        askForPermissions();
+ 
+-    QFile(".config/12-lockscreen/password").remove();
+-    QFile(".config/12-lockscreen/salt").remove();
++        QFile(".config/12-lockscreen/password").remove();
++        QFile(".config/12-lockscreen/salt").remove();
+ 
+-    QString settingString = "lockscreen";
+-    if(checked == true) {
+-        logEnabled(settingString, className);
+-        string_writeconfig(".config/12-lockscreen/config", "true");
+-        changePassword();
+-    }
+-    else {
+-        logDisabled(settingString, className);
+-        string_writeconfig(".config/12-lockscreen/config", "false");
++        QString settingString = "lockscreen";
++        if(checked == true) {
++            logEnabled(settingString, className);
++            string_writeconfig(".config/12-lockscreen/config", "true");
++            changePassword();
++        }
++        else {
++            logDisabled(settingString, className);
++            string_writeconfig(".config/12-lockscreen/config", "false");
++        }
+     }
+ }
+ 
+diff --git a/src/settings/settings.h b/src/settings/settings.h
+index df3e619..75e5534 100644
+--- a/src/settings/settings.h
++++ b/src/settings/settings.h
+@@ -28,6 +28,9 @@ public:
+     bool timezone_not_user_change = true;
+     bool enableEncryptedStorageUserChange = false;
+ 
++    // To avoid clicking things at start
++    bool ignoreCalls = true;
++
+     explicit settings(QWidget *parent = nullptr);
+     ~settings();
+ 
+-- 
+2.37.3
+

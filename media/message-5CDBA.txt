@@ -1,0 +1,186 @@
+U-Boot 2009.08-lab126 (Apr 04 2012 - 20:06:50)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 50000000Hz
+ipg per clock : 50000000Hz
+uart clock    : 24000000Hz
+ahb clock     : 100000000Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 800000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+MMC:  FSL_ESDHC: 0, FSL_ESDHC: 1
+Board: Whitney WFO
+Boot Reason: [POR]
+Boot Device: MMC
+Board Id: 00614011214201A0
+S/N: B01114082142063E
+DRAM:  256 MB
+Using default environment
+
+In:    serial
+Out:   logbuff
+Err:   logbuff
+Quick Memory Test 0x70000000, 0xfffe000
+POST done in 13 ms
+Hit any key to stop autoboot:  0 
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   Linux-2.6.31-rt11-lab126
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    5197856 Bytes =  5 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+Starting kernel ...
+2.6.31-rt11-lab126 #1 Mon Jul 20 11:13:48 PDT 2015 armv7l
+INFO:Loaded module /lib/modules/eink_fb_waveform.ko  (39524 bytes)
+INFO:Loaded module /lib/modules/mxc_epdc_fb.ko default_panel_hw_init=1 default_update_mode=1 (50808 bytes)
+INFO:eink initialized... (486400 bytes)
+INFO:Using default keypad setting. (not passing "kb_rev" to module)
+INFO:Loaded module /lib/modules/whitney_button.ko  (9268 bytes)
+Press [ENTER] for recovery menu...       0 /INFO:!!! Checking MBR /dev/mmcblk0 !!!!  
+INFO:partition 2, start sector is 782336
+INFO:partition 3, start sector is 913408
+INFO:partition 4, start sector is 978944
+INFO:maximizing partition 6754304 sectors
+INFO:*** Partition table verified for /dev/mmcblk0 ***
+INFO:Checking for updates... (auto-pilot mode)
+/dev/mmcblk0p4:
+CHS=4/16/105536 size=3458203648 bytes
+flag type      first       last  lba first   lba size
+Partition p1:
+0x00 0x0b         16 <large>            16    6754288
+    CHS: 0/1/1 - <large>
+Partition p2:
+Partition p3:
+Partition p4:
+INFO:Setup loop device /dev/loop0 for /dev/mmcblk0p4 + 8192
+INFO:No update*.bin found; no update needed.
+INFO:no updates found.
+BOOTING DEFAULT.
+  argc == 10
+  argv[0]: "kinit"
+  argv[1]: "consoleblank=0"
+  argv[2]: "rootwait"
+  argv[3]: "ro"
+  argv[4]: "ip=off"
+  argv[5]: "root=/dev/mmcblk0p1"
+  argv[6]: "quiet"
+  argv[7]: "eink=fslepdc"
+  argv[8]: "video=mxcepdcfb:E60,bpp=8,x_mem=2M"
+  argv[9]: "console=ttymxc0,115200"
+  argc == 4
+  argv[0]: "IP-Config"
+  argv[1]: "-i"
+  argv[2]: "Linux kinit"
+  argv[3]: "ip=off"
+IP-Config: no devices to configure
+kinit: do_mounts
+kinit: name_to_dev_t(/dev/mmcblk0p1) = dev(179,1)
+kinit: root_dev = dev(179,1)
+kinit: /dev/root appears to be a ext3 filesystem
+kinit: trying to mount /dev/root on /root with type ext3
+kinit: Mounted root (ext3 filesystem) readonly.
+info system:emiting_event:mounted_proc:
+info system:emiting_event:mounted_sys:
+info system:emiting_event:mounted_dev:
+info system:emiting_event:mounted_tmpfs:
+info milestone:5.49:sy50:
+init.exe: recevent pre-start process (536) terminated with status 1
+info system:start:time=5540:
+info hardware:no_wan::WiFi only device. No WAN found
+info system:config:platform=yoshi,board=whitney,rev=20,proto=N,wifi=Y,wan=N:
+info milestone:5.78:sy51:
+info milestone:6.56:sy99:
+info system:done:time=6590:
+info system_cramfs_loopbacks:mountingcramfs:Mounting compressed directories filesystem images:
+info system_cramfs_loopbacks:mounted:Image /lib/firmware/cyttsp.cramfs.img mounted:
+info system_cramfs_loopbacks:mounted:Image /usr/share/X11/xkb.cramfs.img mounted:
+info system_cramfs_loopbacks:mounted:Image /usr/java/lib/fonts.cramfs.img mounted:
+info system_cramfs_loopbacks:mounted:Image /etc/kdb.src.cramfs.img mounted:
+info system_cramfs_loopbacks:mounted:Image /usr/lib/locale.cramfs.img mounted:
+info system_cramfs_loopbacks:mounted:Image /usr/share/keyboard.cramfs.img mounted:
+info system:emiting_event:mounted_cramfs_loopbacks:
+info milestone:7.16:fs75:
+info system:emiting_event:loaded_modules_dependencies:
+info modules:modprobe:loading module g_file_storage:
+info system:emiting_event:loaded_g_file_storage:
+info modules:modprobe:loading module fuse:
+info system:emiting_event:loaded_fuse:
+info hardware:no_wan::WiFi only device. No WAN found
+info system:emiting_event:loaded_ppp_async:
+info milestone:7.53:fs00:
+info modules:modprobe:loading module whitney_button:
+info system:emiting_event:loaded_whitney_button:
+
+
+
+Welcome to Kindle!
+
+kindle login: info filesystems_var_local:runfixup:Running /var/local/system/fixup:
+info jb_bridge:main::i can fix this (r18869)
+info zforce:start:version=2.0b0r12:
+info system:emiting_event:loaded_touch:
+info jb_bridge:main::these are not the droids you're looking for
+info system:emiting_event:mounted_varLocal:
+info milestone:8.05:fs25:
+info milestone:8.07:vi00:
+info milestone:8.26:vi99:
+info display:started:time=8270:
+info system:emiting_event:display_ready:
+info battery:charged:cap=96,mV=4121,mAH=1328:
+info userstore:run:time=8530,action=start:
+info system:emiting_event:battery_ready:
+info userstore:found_shutdown_flag::Found SHUTDOWN flag file
+info system:emiting_event:mounted_userstore:
+info milestone:10.05:fs50:
+info milestone:10.07:fs90:
+info milestone:10.10:fs99:
+info milestone:10.13:sys99:
+info system:emiting_event:dbus_ready:
+info dbus:check-update:status=2:dbus_ready sent
+info hardware:no_wan::WiFi only device. No WAN found
+info milestone:11.40:xx00:
+info X:load:time=11480:
+info X:xorg.conf:Generating xorg.conf:
+info X:makexconfig:Whitney Input device detection status:
+info X:makexconfig:Keypad: OK:
+info X:makexconfig:Touch device: OK:
+info X:makexconfig:Accelerometer device: N/A !!:
+info X:xorg.conf:xorg.conf generated:
+info milestone:12.95:xx50:
+info X:starting:time=12990:
+info usbnet:kh_msg::switching from usbms to usbnet
+info usbnet:kh_msg::setting volumd useUsbForNetwork 1 . . .
+info usbnet:kh_msg::sending an usbUnconfigured event
+info usbnet:kh_msg::sending an usbPlugOut event
+info usbnet:kh_msg::waiting for volumd . . .
+fsl-usb2-udc fsl-usb2-udc: dma_pool_destroy udc_td, fa416000 busy
+info usbnet:kh_msg::reconfiguring usb0 interface
+info usbnet:kh_msg::starting telnetd
+info usbnet:kh_msg::starting sshd
+info milestone:17.78:xx99:
+info X:started:time=17820:
+info system:emiting_event:x_setup_ready:
+info locale:read:lang=en_US.utf8,lc_all=en_US.utf8:Retrieved Language
+info system:emiting_event:langpicker_ready:
+info blanket_f:module already loaded:splash:
+info milestone:19.10:pi00:
+info milestone:19.10:fr00:
+info milestone:19.57:fr50:
+info milestone:19.57:pi99:
+info milestone:19.59:fr51:
+info framework:starting:time=19740:
+info hardware:no_wan::WiFi only device. No WAN found
+MAC from kernel xx:xx:xx:xx:86:A1
+wmi_control_rx() : Unknown id 0x101e
+boot: I def:rbt:reset=user_reboot,version=271528:

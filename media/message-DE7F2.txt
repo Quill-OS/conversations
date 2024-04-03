@@ -1,0 +1,77 @@
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$ pmbootstrap sideload linux-kobo-clara-mainline
+[18:26:11] Copying packages to dk-x86@172.16.42.1
+dk-x86@172.16.42.1's password: 
+[18:26:16] Installing packages at dk-x86@172.16.42.1
+dk-x86@172.16.42.1's password: 
+[sudo] password for dk-x86@kobo-nia: 
+The following packages will be upgraded:
+  linux-kobo-clara-mainline
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue [Y/n]? 
+(1/1) Upgrading linux-kobo-clara-mainline (6.3.0_p20230815173342-r0 -> 6.3.0_p20230815182530-r0)
+Executing busybox-1.36.1-r1.trigger
+Executing postmarketos-mkinitfs-2.1.1-r0.trigger
+18:26:41.073562 Generating for kernel version: 6.3.0
+18:26:41.077333 Output directory: /boot
+18:26:41.079920 Unknown or no compression format set, using gzip
+18:26:41.082379 == Generating initramfs ==
+18:26:41.085085 - Using compression format gzip with level "default"
+18:26:41.087187 - Searching for directories specified in /usr/share/mkinitfs/dirs
+18:26:41.097500 -- Creating directories from: /usr/share/mkinitfs/dirs/00-initramfs-base.dirs
+18:26:41.105863 - Searching for directories specified in /etc/mkinitfs/dirs
+18:26:41.128151 - Searching for file lists from /usr/share/mkinitfs/files
+18:26:41.135043 -- Including files from: /usr/share/mkinitfs/files/00-initramfs-base.files
+18:26:41.273642 -- Including files from: /usr/share/mkinitfs/files/01-kobo-epdc-extractor.files
+18:26:41.330093 -- Including files from: /usr/share/mkinitfs/files/30-postmarketos-bootsplash.files
+18:26:41.390978 - Searching for file lists from /etc/mkinitfs/files
+18:26:41.397146 - Searching for hook scripts from /usr/share/mkinitfs/hooks
+18:26:41.401421 -- Including script: /usr/share/mkinitfs/hooks/80-start-epd.sh
+18:26:41.412556 - Searching for hook scripts from /etc/mkinitfs/hooks
+18:26:41.419739 - Searching for kernel modules from /usr/share/mkinitfs/modules
+18:26:41.424671 -- Including modules from: /usr/share/mkinitfs/modules/00-default.modules
+18:26:41.556371 - Searching for kernel modules from /etc/mkinitfs/modules
+18:26:41.594876 - Writing and verifying archive:  initramfs
+18:26:46.765364 initramfs completed in: 5.68s
+18:26:46.766820 Unknown or no compression format set, using gzip
+18:26:46.768140 == Generating initramfs-extra ==
+18:26:46.769578 - Using compression format gzip with level "default"
+18:26:46.770916 - Searching for file lists from /usr/share/mkinitfs/files-extra
+18:26:46.780150 -- Including files from: /usr/share/mkinitfs/files-extra/00-initramfs-extra-base.files
+18:26:47.126986 - Searching for file lists from /etc/mkinitfs/files-extra
+18:26:47.131333 - Searching for hook scripts from /usr/share/mkinitfs/hooks-extra
+18:26:47.137793 - Searching for hook scripts from /etc/mkinitfs/hooks-extra
+18:26:47.148973 - Searching for kernel modules from /usr/share/mkinitfs/modules-extra
+18:26:47.152398 -- Unable to find dir, skipping...
+18:26:47.159480 - Searching for kernel modules from /etc/mkinitfs/modules-extra
+18:26:47.162336 -- Unable to find dir, skipping...
+18:26:47.177620 - Writing and verifying archive:  initramfs-extra
+18:26:51.382271 initramfs-extra completed in: 4.61s
+18:26:51.383742 == Using boot-deploy to finalize/install files ==
+==> kernel: device-tree blob operations
+==> initramfs: creating uInitrd
+Image Name:   uInitrd
+Created:      Tue Aug 15 18:26:52 2023
+Image Type:   ARM Linux RAMDisk Image (uncompressed)
+Data Size:    2722540 Bytes = 2658.73 KiB = 2.60 MiB
+Load Address: 00000000
+Entry Point:  00000000
+==> kernel: creating uImage
+Image Name:   postmarketOS
+Created:      Tue Aug 15 18:26:53 2023
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    6105128 Bytes = 5962.04 KiB = 5.82 MiB
+Load Address: 80008000
+Entry Point:  80008000
+==> Checking free space at /boot
+... OK!
+==> Installing: /boot/initramfs
+==> Installing: /boot/initramfs-extra
+==> Installing: /boot/imx6ull-kobo-nia.dtb
+==> Installing: /boot/uImage
+==> Installing: /boot/uInitrd
+18:26:57.765624 boot-deploy completed in: 6.38s
+18:26:57.792194 mkinitfs completed in: 16.78s
+OK: 1057 MiB in 698 packages
+Connection to 172.16.42.1 closed.
+[18:26:56] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[18:26:56] DONE!

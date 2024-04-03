@@ -1,0 +1,440 @@
++ export 'TERM=linux'
++ cat /opt/device
++ DEVICE=n306
++ mount -t proc proc /proc
+mount: mounting proc on /proc failed: Device or resource busy
++ mount -t sysfs sysfs /sys
+mount: mounting sysfs on /sys failed: Device or resource busy
++ sleep 1
++ mount -t devtmpfs devtmpfs /dev
+mount: mounting devtmpfs on /dev failed: Device or resource busy
++ mount -t tmpfs tmpfs -o 'size=16M' /tmp
++ '[' n306 '==' kt ]
++ hostname inkbox
++ ifconfig lo up
++ DFL_KEY_RAW='Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 59 (KEY_F1)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+***********************************************
+  This device is grabbed by another process.
+  No events are available to evtest while the
+  other grab is active.
+  In most cases, this is caused by an X driver,
+  try VT-switching and re-run evtest again.
+  Run the following command to see processes with
+  an open fd on this device
+ "fuser -v /dev/input/event0"
+***********************************************'
++ awk '/Testing .../{p=1}p'
++ echo 'Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 59 (KEY_F1)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+***********************************************
+  This device is grabbed by another process.
+  No events are available to evtest while the
+  other grab is active.
+  In most cases, this is caused by an X driver,
+  try VT-switching and re-run evtest again.
+  Run the following command to see processes with
+  an open fd on this device
+ "fuser -v /dev/input/event0"
+***********************************************'
++ DFL_KEY='Testing ... (interrupt to exit)
+***********************************************
+  This device is grabbed by another process.
+  No events are available to evtest while the
+  other grab is active.
+  In most cases, this is caused by an X driver,
+  try VT-switching and re-run evtest again.
+  Run the following command to see processes with
+  an open fd on this device
+ "fuser -v /dev/input/event0"
+***********************************************'
++ grep -q KEY_POWER
++ echo 'Testing ... (interrupt to exit)
+***********************************************
+  This device is grabbed by another process.
+  No events are available to evtest while the
+  other grab is active.
+  In most cases, this is caused by an X driver,
+  try VT-switching and re-run evtest again.
+  Run the following command to see processes with
+  an open fd on this device
+ "fuser -v /dev/input/event0"
+***********************************************'
++ grep -q KEY_KATAKANA
++ echo 'Testing ... (interrupt to exit)
+***********************************************
+  This device is grabbed by another process.
+  No events are available to evtest while the
+  other grab is active.
+  In most cases, this is caused by an X driver,
+  try VT-switching and re-run evtest again.
+  Run the following command to see processes with
+  an open fd on this device
+ "fuser -v /dev/input/event0"
+***********************************************'
++ uname -a
++ KERNEL_VERSION='Linux inkbox 4.1.15 #1 SMP PREEMPT Sun Sep 18 13:22:47 CEST 2022 armv7l GNU/Linux'
++ cat /opt/build_id
++ KERNEL_BUILD_ID=Zxedqqw6
++ cat /opt/commit
++ KERNEL_GIT_COMMIT=
++ mount -t ext4 /dev/mmcblk0p1 /mnt
++ mkdir -p /mnt/flags
++ cat /mnt/flags/DISPLAY_DEBUG
++ DISPLAY_DEBUG=
++ umount /mnt
++ '['  '==' true ]
++ main
++ echo 'Linux inkbox 4.1.15 #1 SMP PREEMPT Sun Sep 18 13:22:47 CEST 2022 armv7l GNU/Linux'
+Linux inkbox 4.1.15 #1 SMP PREEMPT Sun Sep 18 13:22:47 CEST 2022 armv7l GNU/Linux
++ echo 'InkBox OS, kernel build Zxedqqw6, commit '
+InkBox OS, kernel build Zxedqqw6, commit 
++ echo 'Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>'
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
++ echo
+
++ echo 'Checking filesystems ...'
+Checking filesystems ...
++ echo
+
++ /usr/bin/fsck.ext4 -y /dev/mmcblk0p1
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1 is in use.
+e2fsck: Cannot continue, aborting.
+
+
++ '[' n306 '==' n705 ]
++ '[' n306 '==' n905b ]
++ '[' n306 '==' n905c ]
++ '[' n306 '==' n613 ]
++ '[' n306 '==' n236 ]
++ '[' n306 '==' n437 ]
++ '[' n306 '==' n306 ]
++ /usr/bin/fsck.ext4 -y /dev/mmcblk0p2
+e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 444288/512000 blocks
++ '[' n306 '==' n705 ]
++ '[' n306 '==' n905b ]
++ '[' n306 '==' n905c ]
++ '[' n306 '==' n613 ]
++ '[' n306 '==' n236 ]
++ '[' n306 '==' n437 ]
++ '[' n306 '==' n306 ]
++ /usr/bin/fsck.ext4 -y /dev/mmcblk0p3
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p3 is mounted.
+e2fsck: Cannot continue, aborting.
+
+
++ /usr/bin/fsck.ext4 -y /dev/mmcblk0p4
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4 is mounted.
+e2fsck: Cannot continue, aborting.
+
+
++ echo
+
++ dd 'if=/dev/mmcblk0' 'bs=256' 'skip=3' 'count=1' 'status=none'
++ UID_FLAG_RAW=1
++ UID_FLAG=1
++ '[' 1 '!=' 1 ]
++ :
++ mount -t ext4 /dev/mmcblk0p1 /mnt
++ KERNEL_FLASH=
++ WILL_UPDATE=
++ DIAGS_BOOT=
++ STARTX=true
++ MOUNT_RW=
++ INITRD_DEBUG=
++ DONT_BOOT=
++ ENCRYPT_LOCK=
++ LOGIN_SHELL=
++ USBNET_IP=
++ BOOT_USB_DEBUG=false
++ DFL=
++ '['  '==' true ]
++ '[' '!' -z  ]
++ '['  '==' true ]
++ '[' false '==' true ]
++ '['  '==' true ]
++ '['  '==' true ]
++ umount /mnt
++ read -t 5 -n 1 -s -r -p '(initrd) Hit any key to stop auto-boot ... ' KEY
+(initrd) Hit any key to stop auto-boot ... + evtest /dev/input/event0
++ echo
+
++ '['  '=='  ]
++ grep value
++ cat /tmp/input-log
++ INPUT_LOG=
++ export INPUT_LOG
++ '[' n306 '!=' kt ]
++ head+ dd 'if=/dev/mmcblk0' 'bs=512' 'skip=79872' 'count=1' -c6
+ 'status=none'
++ export 'ROOT_FLAG=rooted'
++ '[' rooted '==' rooted ]
++ echo 'Security policy not enforced; root access permitted.'
+Security policy not enforced; root access permitted.
++ '['  '=='  ]
++ '['  '!=' true ]
++ '['  '!=' true ]
++ '['  '!=' true ]
++ /etc/init.d/inkbox-splash
++ sleep 2
++ /etc/init.d/inkbox-splash progress_bar_init
++ set_progress 0
++ echo 0
++ progress_sleep
++ sleep 0.5
+mkfifo: /run/progress_bar_fifo: File exists
++ set_progress 5
++ echo 5
++ progress_sleep
++ sleep 0.5
++ '[' n306 '==' n905b ]
++ '[' n306 '==' n873 ]
++ '[' n306 '==' n236 ]
++ '[' n306 '==' n437 ]
++ '[' n306 '==' kt ]
++ '['  '==' true ]
++ /etc/init.d/overlay-mount ro
+mount: mounting /dev/mmcblk0p3 on /rootfs-part failed: Device or resource busy
+Verifying root filesystem's digital signature ...
+Done.
+losetup: /rootfs-part/overlaymount-rootfs.squashfs
+mount: mounting /dev/loop1 on /overlaymount-rootfs failed: Device or resource busy
+mount: mounting devtmpfs on /overlaymount-rootfs/dev failed: Device or resource busy
+mount: mounting sysfs on /overlaymount-rootfs/sys failed: Device or resource busy
+mount: mounting proc on /overlaymount-rootfs/proc failed: Device or resource busy
++ OVERLAYMOUNT_EXITCODE=0
++ '[' 0 '!=' 0 ]
++ set_progress 15
++ echo 15
++ progress_sleep
++ sleep 0.5
++ mount -t ext4 /dev/mmcblk0p1 /mnt/boot
++ mount -t tmpfs tmpfs -o 'size=8M' /mnt/root
++ '['  '==' bash ]
++ '['  '==' zsh ]
++ '['  '==' fish ]
++ '[' '!' -z  ]
++ cp /opt/passwd_root /tmp/passwd
++ mount --bind /tmp/passwd /mnt/etc/passwd
++ mount -t ext4 /dev/mmcblk0p4 /mnt/opt/storage
++ mkdir -p /mnt/opt/storage/config
++ mkdir -p /mnt/opt/config
++ mount --bind /mnt/opt/storage/config /mnt/opt/config
++ mkdir -p /mnt/opt/storage/update
++ mkdir -p /mnt/opt/update
++ mount --bind /mnt/opt/storage/update /mnt/opt/update
++ mkdir -p /mnt/opt/storage/X11/rootfs/work
++ mkdir -p /mnt/opt/storage/X11/rootfs/write
++ mkdir -p /mnt/opt/X11/rootfs
++ mount --bind /mnt/opt/storage/X11/rootfs /mnt/opt/X11/rootfs
++ set_progress 30
++ echo 30
++ progress_sleep
++ sleep 0.5
++ mkdir -p /mnt/opt/storage/gui_rootfs
++ mkdir -p /mnt/opt/gui_rootfs
++ mount --bind /mnt/opt/storage/gui_rootfs /mnt/opt/gui_rootfs
++ '[' '!' -e /mnt/opt/storage/ssh ]
++ '[' '!' -e /mnt/opt/storage/ssh/sshd_config ]
++ mount --bind /mnt/opt/storage/ssh /mnt/etc/ssh
++ echo -e 'PermitRootLogin yes\nSubsystem sftp internal-sftp\n# If sshfs doesn'"'"'t work, first enable read-write support, then begin a connection with sshfs'
++ mount --bind /tmp/sshd_config /mnt/etc/ssh/sshd_config
++ set_progress 40
++ echo 40
++ progress_sleep
++ sleep 0.5
++ mkdir -p /mnt/opt/root
++ mkdir -p /mnt/opt/key
++ mkdir -p /mnt/selinux
++ losetup /dev/loop7 /opt/root.sqsh
+losetup: /opt/root.sqsh
++ mount /dev/loop7 /mnt/opt/root -o ro,nodev,nosuid,noexec
++ losetup /dev/loop6 /opt/key.sqsh
+losetup: /opt/key.sqsh
++ mount /dev/loop6 /mnt/opt/key -o ro,nodev,nosuid,noexec
++ losetup /dev/loop5 /opt/modules.sqsh
+losetup: /opt/modules.sqsh
++ mount /dev/loop5 /mnt/lib/modules -o ro,nodev,nosuid,noexec
++ mount --rbind /proc /mnt/proc
++ mount --rbind /sys /mnt/sys
++ mount --rbind /dev /mnt/dev
++ mount -t tmpfs tmpfs -o 'size=16M' /mnt/tmp
++ mount -t tmpfs tmpfs -o 'size=8M' /mnt/var/log
++ mount -t tmpfs tmpfs -o 'size=128K' /mnt/opt/developer
++ set_progress 45
++ echo 45
++ progress_sleep
++ sleep 0.5
++ '[' -e /opt/firmware.sqsh ]
++ '[' -e /etc/resolv.conf ]
++ touch /tmp/resolv.conf
++ mount --bind /tmp/resolv.conf /mnt/etc/resolv.conf
++ mount -t tmpfs tmpfs -o 'nosuid,noexec,nodev,size=512K' /mnt/var/db/dhcpcd
++ touch /mnt/var/db/dhcpcd/duid
++ touch /mnt/opt/storage/dhcpcd_duid
++ mount --bind /mnt/opt/storage/dhcpcd_duid /mnt/var/db/dhcpcd/duid
++ mount -t selinuxfs selinuxfs /mnt/selinux
++ /etc/init.d/developer-key
++ cat /mnt/opt/developer/key/valid-key
++ OVERRIDE_SIGNATURE_VERIFICATION=
++ '['  '==' true ]
++ busybox chroot /mnt /usr/bin/openssl dgst -sha256 -verify /opt/key/public.pem -signature /opt/storage/gui_rootfs.isa.dgst /opt/storage/gui_rootfs.isa
++ '[' 0 '!=' 0 ]
++ busybox chroot /mnt /bin/squashfuse /opt/storage/gui_rootfs.isa /opt/gui_rootfs/read
+fuse: bad mount point `/opt/gui_rootfs/read': No such file or directory
++ '[' n306 '!=' kt ]
++ busybox chroot /mnt /bin/fuse-overlayfs -o 'lowerdir=/opt/gui_rootfs/read,upperdir=/opt/gui_rootfs/write,workdir=/opt/gui_rootfs/work' /kobo
+fuse-overlayfs: cannot retrieve path for /opt/gui_rootfs/write: No such file or directory
+/etc/init.d/rcS: line 459: can't create /mnt/kobo/inkbox/remount: nonexistent directory
++ echo false
++ set_progress 50
++ echo 50
++ progress_sleep
++ sleep 0.5
++ '[' true '==' true ]
++ /etc/init.d/startx
+
+Starting X11 windowing system ...
+Validating packages' digital signatures ...
+losetup: /mnt/opt/storage/X11/base.img: No such file or directory
+mount: mounting /dev/loop2 on /mnt/opt/X11/base failed: Invalid argument
+KoBox base rootfs package's signature is invalid! Aborting launch ...
++ set_progress 90
++ echo 90
++ progress_sleep
++ sleep 0.5
++ chroot /mnt /sbin/openrc sysinit
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ...
+ * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ...                                                                                                                                                                          [ ok ]
+ * Clock skew detected with `(null)'
+ * Adjusting mtime of `/run/openrc/deptree' to Sat Sep 17 16:11:26 2022
+ * WARNING: clock skew detected!
+ * Mounting debug filesystem ...                                                                                                                                                                             [ ok ]
+ * Mounting config filesystem ...                                                                                                                                                                            [ ok ]
+ * Mounting fuse control filesystem ...                                                                                                                                                                      [ ok ]
+ * Remounting devtmpfs on /dev ...                                                                                                                                                                           [ ok ]
+ * Mounting /dev/shm ...                                                                                                                                                                                     [ ok ]
+ * Starting udev ...
+ * start-stop-daemon: /sbin/udevd is already running
+ * Failed to start udev                                                                                                                                                                                      [ !! ]
+ * ERROR: udev failed to start
++ set_progress 100
++ echo 100
++ sleep 1
++ echo stop
++ /etc/init.d/initrd-fifo
++ chroot /mnt /sbin/openrc boot
+ * WARNING: clock skew detected!
+ * Starting udev ...
+ * start-stop-daemon: /sbin/udevd is already running
+ * Failed to start udev                                                                                                                                                                                      [ !! ]
+ * ERROR: udev failed to start                                                                                                                                                                               [ ok ]
+ * Starting USBNet ...
+ * USB networking is disabled. Please set the USBNET_ENABLE flag and try again.                                                                                                                              [ ok ]
+ * Splash screen ...                                                                                                                                                                                         [ ok ]
+ * Mounting onboard storage filesystem ...
+losetup: /opt/storage/onboard
+mount: mounting /dev/loop0 on /data/onboard failed: Device or resource busy                                                                                                                                  [ !! ]
+ * ERROR: onboard_mount failed to start
+ * Starting InkBox Power Daemon (ipd) ...                                                                                                                                                                    [ ok ]
++ chroot /mnt /sbin/openrc default
+ * WARNING: clock skew detected!
+ * Starting udev ...
+ * start-stop-daemon: /sbin/udevd is already running
+ * Failed to start udev                                                                                                                                                                                      [ !! ]
+ * ERROR: udev failed to start
+ * Mounting onboard storage filesystem ...
+losetup: /opt/storage/onboard
+mount: mounting /dev/loop0 on /data/onboard failed: Device or resource busy                                                                                                                                  [ !! ]
+ * ERROR: onboard_mount failed to start
+ * Starting battery watchdog ...                                                                                                                                                                             [ ok ]
+ * Setting hostname ...                                                                                                                                                                                      [ ok ]
+ * Starting InkBox Daemon (ibxd) ...                                                                                                                                                                         [ ok ]
+ * Checking for available updates ...
+mkdir: cannot create directory ‘/data/onboard/.inkbox’: Read-only file system
+Update skipped or no update available, aborting ...
+/lib/rc/sh/openrc-run.sh: line 38: can't create /data/onboard/.inkbox/can_update: nonexistent directory
+/lib/rc/sh/openrc-run.sh: line 39: can't create /data/onboard/.inkbox/can_really_update: nonexistent directory                                                                                               [ ok ]
+ * Starting InkBox GUI ...
+fuse-overlayfs: cannot retrieve path for /opt/gui_rootfs/write: No such file or directory
+ * Starting InkBox Daemon (ibxd) ...                                                                                                                                                                         [ ok ]
+fuse: bad mount point `/kobo/mnt/onboard/.adds/inkbox': No such file or directory
+mount: mounting /opt/config on /kobo/mnt/onboard/.adds/inkbox/.config failed: No such file or directory
+fuse: bad mount point `/kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo': No such file or directory
+mount: mounting /lib/qt5-plugins/libkobo.so.1 on /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so failed: No such file or directory
+mount: mounting /usr/local/share/inkbox/stylesheets/eink-768x1024.qss on /kobo/mnt/onboard/.adds/inkbox/eink.qss failed: No such file or directory
+ * Setting up GUI user applications
+mkdir: cannot create directory ‘/data/onboard/.apps’: Read-only file system                                                                                                                                  [ ok ]
+mount: mounting sysfs on /kobo/sys failed: No such file or directory
+mount: mounting proc on /kobo/proc failed: No such file or directory
+mount: mounting tmpfs on /kobo/tmp failed: No such file or directory
+mount: mounting tmpfs on /kobo/var/run failed: No such file or directory
+mount: mounting /dev on /kobo/dev failed: No such file or directory
+mount: mounting /dev/pts on /kobo/dev/pts failed: No such file or directory
+mkdir: cannot create directory ‘/kobo/dev’: Read-only file system
+mount: mounting / on /kobo/external_root failed: No such file or directory
+mount: mounting /dev on /kobo/external_root/dev failed: No such file or directory
+mount: mounting /dev/pts on /kobo/external_root/dev/pts failed: No such file or directory
+mount: mounting /proc on /kobo/external_root/proc failed: No such file or directory
+mount: mounting /tmp on /kobo/external_root/tmp failed: No such file or directory
+mount: mounting /run on /kobo/external_root/run failed: No such file or directory
+mount: mounting /var on /kobo/external_root/var failed: No such file or directory
+mount: mounting /opt/isa on /kobo/external_root/opt/isa failed: No such file or directory
+mount: mounting /opt/root on /kobo/external_root/opt/root failed: No such file or directory
+mount: mounting /opt/update on /kobo/external_root/opt/update failed: No such file or directory
+mount: mounting /opt/storage on /kobo/external_root/opt/storage failed: No such file or directory
+mount: mounting /data/onboard on /kobo/external_root/data/onboard failed: No such file or directory
+touch: cannot touch '/kobo/opt/version': Read-only file system
+touch: cannot touch '/kobo/bin/kobo_config.sh': No such file or directory
+mkdir: cannot create directory ‘/kobo/usr’: Read-only file system
+touch: cannot touch '/kobo/etc/localtime': No such file or directory
+mount: mounting /usr/share/zoneinfo on /kobo/usr/share/zoneinfo failed: No such file or directory
+mount: mounting /data/config/19-timezone/config on /kobo/etc/localtime failed: No such file or directory
+mount: mounting /opt/version on /kobo/opt/version failed: No such file or directory
+mount: mounting /bin/kobo_config.sh on /kobo/bin/kobo_config.sh failed: No such file or directory
+mount: mounting /opt/bin/fbink/fbink on /kobo/external_root/opt/bin/fbink/fbink failed: No such file or directory
+mount: mounting /opt/inkbox_device on /kobo/opt/inkbox_device failed: No such file or directory
+mount: mounting /opt/inkbox_device on /kobo/external_root/opt/inkbox_device failed: No such file or directory
+mount: mounting /opt/X11/extensions_folders_list on /kobo/external_root/opt/X11/extensions_folders_list failed: No such file or directory
+mount: mounting /opt/X11/extensions_list on /kobo/external_root/opt/X11/extensions_list failed: No such file or directory
+mount: mounting /opt/X11/nographic_extensions_folders_list on /kobo/external_root/opt/X11/nographic_extensions_folders_list failed: No such file or directory
+mount: mounting /opt/X11/nographic_extensions_list on /kobo/external_root/opt/X11/nographic_extensions_list failed: No such file or directory
+mount: mounting /boot on /kobo/external_root/boot failed: No such file or directory
+mount: mounting /lib/modules on /kobo/external_root/lib/modules failed: No such file or directory
+touch: cannot touch '/kobo/tmp/resolv.conf': No such file or directory
+mount: mounting /etc/resolv.conf on /kobo/tmp/resolv.conf failed: No such file or directory
+/lib/rc/sh/openrc-run.sh: line 118: can't create /kobo/run/wifi_able: nonexistent directory
+/usr/bin/inkbox.sh: line 9: can't create /kobo/tmp/first_launch_since_boot: nonexistent directory                                                                                                            [ ok ]
++ exit 0
+

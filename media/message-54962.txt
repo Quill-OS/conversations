@@ -1,0 +1,74 @@
+[nicolas@fedora libvterm]$ make V=1
+TBL src/encoding/DECdrawing.tbl
+TBL src/encoding/uk.tbl
+CC src/encoding.c
+CC src/keyboard.c
+CC src/mouse.c
+CC src/parser.c
+CC src/pen.c
+CC src/screen.c
+CC src/state.c
+CC src/unicode.c
+src/unicode.c:306:12: warning: 'mk_wcswidth_cjk' defined but not used [-Wunused-function]
+ static int mk_wcswidth_cjk(const uint32_t *pwcs, size_t n)
+            ^~~~~~~~~~~~~~~
+src/unicode.c:215:12: warning: 'mk_wcswidth' defined but not used [-Wunused-function]
+ static int mk_wcswidth(const uint32_t *pwcs, size_t n)
+            ^~~~~~~~~~~
+CC src/vterm.c
+LINK libvterm.la
+/usr/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/bin/ld: src/.libs/encoding.o: error adding symbols: file in wrong format
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:55: libvterm.la] Error 1
+[nicolas@fedora libvterm]$ make clean
+./libtool --quiet --mode=clean rm -f src/encoding.lo src/keyboard.lo src/mouse.lo src/parser.lo src/pen.lo src/screen.lo src/state.lo src/unicode.lo src/vterm.lo src/encoding/DECdrawing.inc src/encoding/uk.inc
+./libtool --quiet --mode=clean rm -f t/harness.lo t/harness
+./libtool --quiet --mode=clean rm -f libvterm.la bin/unterm bin/vterm-ctrl bin/vterm-dump
+[nicolas@fedora libvterm]$ make VERBOSE=1
+TBL src/encoding/DECdrawing.tbl
+TBL src/encoding/uk.tbl
+CC src/encoding.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/encoding.c  -fPIC -DPIC -o src/.libs/encoding.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/encoding.c -o src/encoding.o >/dev/null 2>&1
+CC src/keyboard.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/keyboard.c  -fPIC -DPIC -o src/.libs/keyboard.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/keyboard.c -o src/keyboard.o >/dev/null 2>&1
+CC src/mouse.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/mouse.c  -fPIC -DPIC -o src/.libs/mouse.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/mouse.c -o src/mouse.o >/dev/null 2>&1
+CC src/parser.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/parser.c  -fPIC -DPIC -o src/.libs/parser.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/parser.c -o src/parser.o >/dev/null 2>&1
+CC src/pen.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/pen.c  -fPIC -DPIC -o src/.libs/pen.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/pen.c -o src/pen.o >/dev/null 2>&1
+CC src/screen.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/screen.c  -fPIC -DPIC -o src/.libs/screen.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/screen.c -o src/screen.o >/dev/null 2>&1
+CC src/state.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/state.c  -fPIC -DPIC -o src/.libs/state.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/state.c -o src/state.o >/dev/null 2>&1
+CC src/unicode.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/unicode.c  -fPIC -DPIC -o src/.libs/unicode.o
+src/unicode.c:306:12: warning: 'mk_wcswidth_cjk' defined but not used [-Wunused-function]
+ static int mk_wcswidth_cjk(const uint32_t *pwcs, size_t n)
+            ^~~~~~~~~~~~~~~
+src/unicode.c:215:12: warning: 'mk_wcswidth' defined but not used [-Wunused-function]
+ static int mk_wcswidth(const uint32_t *pwcs, size_t n)
+            ^~~~~~~~~~~
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/unicode.c -o src/unicode.o >/dev/null 2>&1
+CC src/vterm.c
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/vterm.c  -fPIC -DPIC -o src/.libs/vterm.o
+libtool: compile:  arm-kobo-linux-gnueabihf-gcc -Wall -Iinclude -std=c99 -Wpedantic -c src/vterm.c -o src/vterm.o >/dev/null 2>&1
+LINK libvterm.la
+libtool: link: gcc -shared  -fPIC -DPIC  src/.libs/encoding.o src/.libs/keyboard.o src/.libs/mouse.o src/.libs/parser.o src/.libs/pen.o src/.libs/screen.o src/.libs/state.o src/.libs/unicode.o src/.libs/vterm.o      -Wl,-soname -Wl,libvterm.so.0 -o .libs/libvterm.so.0.0.3
+/usr/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/bin/ld: src/.libs/encoding.o: error adding symbols: file in wrong format
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:55: libvterm.la] Error 1
+[nicolas@fedora libvterm]$

@@ -1,0 +1,40 @@
+[ 1451.383955] Dongle Host Driver, version 5.90.125.120.1
+[ 1451.383963] Compiled in drivers/net/wireless/bcmdhd on Feb  7 2022 at 21:21:30
+[ 1451.956327] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 1451.957985] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 1451.959635] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 1451.962585] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[ 1451.965864] mmc2: queuing unknown CIS tuple 0x80 (8 bytes)
+[ 1451.967189] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 1451.969486] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 1451.971784] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 1451.991750] mmc2: new high speed SDIO card at address 0001
+[ 1451.998284] dhd_customer_oob_irq_map: customer specific Host GPIO number is (127)
+[ 1451.998310] dhd_customer_oob_irq_map: customer specific Host GPIO irq number is (383)
+[ 1451.998812] [bcmsdh_probe-241] IRQ=383 Type=414 
+[ 1451.999061] F1 signature read @0x18000000=0x1591a962
+[ 1452.004250] DHD: dongle ram size is set to 245760(orig 245760)
+[ 1452.004617] wl_iw_attach thr:8ee started
+[ 1452.004707] wl_iw_bt_init thr:8ef started
+[ 1452.004803] dhd_attach thr:8f0 started
+[ 1452.004879] dhd_attach thr:8f1 started
+[ 1452.004946] dhd_attach thr:8f2 started
+[ 1452.007629] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+[ 1452.052001] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[ 1453.043820] dhdsdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+[ 1453.043831] dhd_bus_init: clock state is wrong. state = 1
+[ 1453.043840] [bcmsdh_register_oob_intr-634] IRQ=383 Type=414 
+[ 1453.043862] add wake up source irq 105
+[ 1453.043904] dhd_bus_start failed bus is not ready
+[ 1453.043924] dhd_open: failed with code -19
+[ 1453.043931] dev_wlc_ioctl: Error dev_open: -1
+[ 1454.043822] dhdsdio_htclk: HT Avail timeout (1000000): clkctl 0x50
+[ 1454.043833] dhd_bus_init: clock state is wrong. state = 1
+[ 1454.043874] dhd_bus_start failed bus is not ready
+[ 1454.043893] dev_wlc_ioctl: Error dev_open: -1
+[ 1455.043848] dev_wlc_ioctl: Error dev_open: -1
+[ 1456.043862] dev_wlc_ioctl: Error dev_open: -1
+[ 1456.043872] Set ISCAN for wl_iw_iscan failed with 0
+~ # ifconfig wlan0 up
+ifconfig: SIOCSIFFLAGS: Operation not permitted
+~ #

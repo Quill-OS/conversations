@@ -1,0 +1,62 @@
+make_i386_sysv_elf_gas.S: Assembler messages:
+make_i386_sysv_elf_gas.S:31: Error: unrecognized symbol type ""
+make_i386_sysv_elf_gas.S:34: Error: bad instruction `movl 0x4(%esp),%eax'
+make_i386_sysv_elf_gas.S:38: Error: selected processor does not support `leal -0x8(%eax),%eax' in ARM mode
+make_i386_sysv_elf_gas.S:41: Error: bad instruction `andl $-16,%eax'
+make_i386_sysv_elf_gas.S:44: Error: selected processor does not support `leal -0x2c(%eax),%eax' in ARM mode
+make_i386_sysv_elf_gas.S:48: Error: bad instruction `movl 0xc(%esp),%ecx'
+make_i386_sysv_elf_gas.S:49: Error: bad instruction `movl %ecx,0x14(%eax)'
+make_i386_sysv_elf_gas.S:52: Error: bad instruction `stmxcsr (%eax)'
+make_i386_sysv_elf_gas.S:54: Error: bad instruction `fnstcw 0x4(%eax)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:64: Error: selected processor does not support `leal 0xc(%eax),%ecx' in ARM mode
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:65: Error: bad instruction `movl %ecx,0x20(%eax)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:68: Error: bad instruction `call 1f'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:70: Error: bad instruction `popl %ecx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:72: Error: bad instruction `addl $trampoline-1b,%ecx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:75: Error: bad instruction `movl %ecx,0x1c(%eax)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:78: Error: bad instruction `call 2f'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:80: Error: bad instruction `popl %ecx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:82: Error: bad instruction `addl $finish-2b,%ecx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:85: Error: bad instruction `movl %ecx,0x18(%eax)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:87: Error: bad instruction `ret'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:91: Error: bad instruction `movl %edi,(%esp)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:92: Error: bad instruction `movl %esi,0x4(%esp)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:93: Error: bad instruction `pushl %ebp'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:95: Error: bad instruction `jmp *%ebx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:98: Error: bad instruction `call 3f'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:100: Error: bad instruction `popl %ebx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:102: Error: bad instruction `addl $_GLOBAL_OFFSET_TABLE_+[.-3b],%ebx'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:105: Error: bad instruction `xorl %eax,%eax'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:106: Error: bad instruction `movl %eax,(%esp)'
+/home/build/inkbox/neochat-fuck/boost/libs/context/src/asm/make_i386_sysv_elf_gas.S:108: Error: bad instruction `call _exit'
+make[2]: *** [libs/context/CMakeFiles/boost_context.dir/build.make:75: libs/context/CMakeFiles/boost_context.dir/src/asm/make_i386_sysv_elf_gas.S.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2782: libs/context/CMakeFiles/boost_context.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[  3%] Building CXX object libs/chrono/CMakeFiles/boost_chrono.dir/src/process_cpu_clocks.cpp.o
+[  3%] Linking CXX static library ../../stage/lib/libboost_exception.a
+[  3%] Built target boost_exception
+[  4%] Building CXX object libs/nowide/CMakeFiles/boost_nowide.dir/src/cstdio.cpp.o
+[  4%] Linking CXX static library ../../stage/lib/libboost_stacktrace_noop.a
+[  4%] Linking CXX static library ../../stage/lib/libboost_atomic.a
+[  4%] Built target boost_stacktrace_noop
+[  4%] Building CXX object libs/nowide/CMakeFiles/boost_nowide.dir/src/cstdlib.cpp.o
+[  4%] Built target boost_atomic
+[  4%] Building CXX object libs/nowide/CMakeFiles/boost_nowide.dir/src/filebuf.cpp.o
+[  4%] Building CXX object libs/chrono/CMakeFiles/boost_chrono.dir/src/thread_clock.cpp.o
+[  4%] Building CXX object libs/container/CMakeFiles/boost_container.dir/src/dlmalloc.cpp.o
+[  4%] Building CXX object libs/container/CMakeFiles/boost_container.dir/src/global_resource.cpp.o
+[  5%] Building CXX object libs/nowide/CMakeFiles/boost_nowide.dir/src/iostream.cpp.o
+[  5%] Building CXX object libs/nowide/CMakeFiles/boost_nowide.dir/src/stat.cpp.o
+[  6%] Building CXX object libs/container/CMakeFiles/boost_container.dir/src/monotonic_buffer_resource.cpp.o
+[  6%] Building CXX object libs/container/CMakeFiles/boost_container.dir/src/pool_resource.cpp.o
+[  6%] Building CXX object libs/container/CMakeFiles/boost_container.dir/src/synchronized_pool_resource.cpp.o
+[  6%] Linking CXX static library ../../stage/lib/libboost_nowide.a
+[  6%] Built target boost_nowide
+[  7%] Building CXX object libs/container/CMakeFiles/boost_container.dir/src/unsynchronized_pool_resource.cpp.o
+[  7%] Linking CXX static library ../../stage/lib/libboost_random.a
+[  7%] Built target boost_random
+[  7%] Linking CXX static library ../../stage/lib/libboost_chrono.a
+[  7%] Built target boost_chrono
+[  7%] Linking CXX static library ../../stage/lib/libboost_container.a
+[  7%] Built target boost_container
+make: *** [Makefile:136: all] Error 2

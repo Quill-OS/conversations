@@ -1,0 +1,98 @@
+Andreas Kemnade's email about his experience:
+```
+Hi,
+
+I just did the experiment on my Libra H2O with broken display:
+
+[root@(none) ~]# cat /dev/zero >/dev/mmcblk0
+cat: write error: No space left on device
+[root@(none) ~]#
+[root@(none) ~]# ls
+Segmentation fault
+[root@(none) ~]# reboot
+Segmentation fault
+[root@(none) ~]# After waitpid, command failed to terminate correctly: No such file or directory
+
+-- device enumerates as
+[2563460.346373] hid-generic 0003:1FC9:0128.001B: hiddev1,hidraw1: USB HID v1.10 Device [   NXP    SemiConductor Inc  SE Blank 6SLL] on usb-0000:00:14.0-6.1/input0
+
+Then I did
+uuu u-boot-dtb.imx
+
+U-Boot 2020.10-00024-gfcf25705fc (Dec 29 2021 - 17:52:52 +0100)
+
+CPU:   Freescale i.MX6SLL rev1.1 996 MHz (running at 792 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 35C
+Reset cause: POR
+Model: Kobo Libra H2O
+Board: MX6SLL Kobo Clara HD
+DRAM:  512 MiB
+MMC:   FSL_SDHC: 0, FSL_SDHC: 1
+Loading Environment from MMC... *** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Boot from USB for uuu
+Hit any key to stop autoboot:  0
+=>
+=>
+=> ums 0 mmc 0
+UMS: LUN 0, dev 0, hwpart 0, sector 0x0, count 0xe90e80
+usb dr_mode not found
+
+here the device enumerates as USB Mass storage device on host and I
+copied the backup back.
+[2563712.144191] usb 1-6.1: new high-speed USB device number 90 using xhci_hcd
+[2563712.244952] usb 1-6.1: New USB device found, idVendor=18d1, idProduct=0d02, bcdDevice= 2.21
+[2563712.244965] usb 1-6.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[2563712.244973] usb 1-6.1: Product: USB download gadget
+[2563712.244980] usb 1-6.1: Manufacturer: U-Boot
+[2563712.247494] usb-storage 1-6.1:1.0: USB Mass Storage device detected
+[2563712.247964] scsi host3: usb-storage 1-6.1:1.0
+[2563713.260874] scsi 3:0:0:0: Direct-Access     Linux    UMS disk 0       ffff PQ: 0 ANSI: 2
+[2563713.261887] sd 3:0:0:0: Attached scsi generic sg2 type 0
+[2563713.262250] sd 3:0:0:0: [sdc] 15273600 512-byte logical blocks: (7.82 GB/7.28 GiB)
+[2563713.262435] sd 3:0:0:0: [sdc] Write Protect is off
+[2563713.262443] sd 3:0:0:0: [sdc] Mode Sense: 0f 00 00 00
+[2563713.262646] sd 3:0:0:0: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[2563713.314523] sd 3:0:0:0: [sdc] Attached SCSI removable disk
+
+CTRL+C - Operation aborted
+=> reset
+resetting ...
+
+
+U-Boot 2016.03-00063-gb1f1e06 (Jul 23 2019 - 13:43:57 +0800)
+
+CPU:   Freescale i.MX6SLL rev1.1 996 MHz (running at 792 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 35C
+Reset cause: WDOG
+Board: MX6SLL LPDDR2 NTX
+I2C:   ready
+DRAM:  512 MiB
+__get_sd_number(),cfg23=0,cfg24=0
+force_idle_bus: sda=1 scl=0 sda.gp=0x56 scl.gp=0x55
+MMC:   board_mmc_init() : isd=0
+board_mmc_init() : wifi=2
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=536870912
+switch to partitions #0, OK
+mmc0(part 0) is current device
+mmc read 0x9ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x9ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+RC5T619_regulator_init : VDD_SOC_IN : 1275000uV, VDD_ARM_IN : 1275000uV
+RC5T619_watchdog(1,32)
+ntx_hw_late_init()
+mmc read 0x9ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+```

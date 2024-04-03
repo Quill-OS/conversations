@@ -1,0 +1,283 @@
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5167, tv_nsec=941519608}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5167, tv_nsec=946916942}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5167, tv_nsec=950103942}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5167, tv_nsec=950699942}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa08) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=57408942}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\2\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=66969275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=69594275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=73104608}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=79595942}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=82460608}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=181463608}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=189159608}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=191972275}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=197118275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa08) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=308283942}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\2\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=315868275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=323067275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=330323275}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=346665275}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=348894942}) = 0
+clock_gettime64(CLOCK_REALTIME, 0x7e86f228) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_REALTIME, {tv_sec=1613229180, tv_nsec=208107109}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa08) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=469757609}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\2\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=478986609}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=483805275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=485998275}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=492911942}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=497648942}) = 0
+write(32, "\0", 1)                      = 1
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa08) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=604003275}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\2\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=612422609}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=619027609}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=622187609}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=638311609}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=642430275}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+mmap2(NULL, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659de000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659d2000
+mmap2(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x659c6000
+munmap(0x659c6000, 49152)               = 0
+munmap(0x659d2000, 49152)               = 0
+munmap(0x659de000, 73728)               = 0
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base=";\3\5\0\17\0`\1\0\0\0\0\7\0\17\0\20\0)\0\202\3\n\0\t\0`\1\17\0`\1"..., iov_len=76}], 1) = 76
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f9b8) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=733543942}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa10) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=739140275}) = 0
+poll([{fd=5, events=POLLIN}, {fd=36, events=POLLIN}], 2, 0) = 1 ([{fd=5, revents=POLLIN}])
+read(5, "\3\0\0\0\0\0\0\0", 16)         = 8
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86fa48) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=749106942}) = 0
+clock_gettime64(CLOCK_MONOTONIC, 0x7e86f478) = -1 ENOSYS (Function not implemented)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=5168, tv_nsec=756867942}) = 0
+write(5, "\1\0\0\0\0\0\0\0", 8)         = 8
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="+\0\1\0", iov_len=4}], 1) = 4
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86f570, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=3, events=POLLIN|POLLOUT}], 1, -1) = 1 ([{fd=3, revents=POLLOUT}])
+writev(3, [{iov_base="&\0\2\0C\0\0\0", iov_len=8}], 1) = 8
+futex(0x695211a0, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x7e86e648, FUTEX_WAIT_PRIVATE, 2, NULL) = -1 EAGAIN (Resource temporarily unavailable)
+^C|MAP_ANONYMOUS, -1, 0strace: Process 9072 detached

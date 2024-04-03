@@ -1,0 +1,431 @@
+Starting kernel ...                                                                            
+                                                                                               
+[    0.000000] Booting Linux on physical CPU 0x0                                               
+[    0.000000] Linux version 4.1.15 (szybet@ArchSzybet) (gcc version 4.9.4 (crosstool-NG 1.23.2
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d                 
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache        
+[    0.000000] Machine model: Freescale i.MX6 ULL DDR3 NTX Board                               
+[    0.000000] Memory policy: Data cache writealloc                                            
+[    0.000000] PERCPU: Embedded 12 pages/cpu @8fbcf000 s16908 r8192 d24052 u49152              
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772      
+[    0.000000] Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfe
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)                             
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)                 
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)                   
+[    0.000000] Memory: 243036K/261120K available (5709K kernel code, 225K rwdata, 2156K rodata)
+[    0.000000] Virtual kernel memory layout:                                                   
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)                               
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)                               
+[    0.000000]     vmalloc : 0x90000000 - 0xff000000   (1776 MB)                               
+[    0.000000]     lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)                               
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)                               
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)                               
+[    0.000000]       .text : 0x80008000 - 0x807b675c   (7866 kB)                               
+[    0.000000]       .init : 0x807b7000 - 0x80ea4000   (7092 kB)                               
+[    0.000000]       .data : 0x80ea4000 - 0x80edc7a0   ( 226 kB)                               
+[    0.000000]        .bss : 0x80edf000 - 0x80f401d8   ( 389 kB)                               
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1                      
+[    0.000000] Preemptible hierarchical RCU implementation.                                    
+[    0.000000]  Additional per-CPU info printed with stalls.                                   
+[    0.000000]  RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.                           
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1                    
+[    0.000000] NR_IRQS:16 nr_irqs:16 16                                                        
+[    0.000000] mxc_clocksource_init 24000000                                                   
+[    0.000000] Switching to timer-based delay loop, resolution 41ns                            
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns       
+[    0.000053] clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7s
+[    0.002848] Console: colour dummy device 80x30                                              
+[    0.002892] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.0)
+[    0.002926] pid_max: default: 32768 minimum: 301                                            
+[    0.003146] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)                     
+[    0.003175] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)                
+[    0.004304] CPU: Testing write buffer coherency: ok                                         
+[    0.004778] /cpus/cpu@0 missing clock-frequency property                                    
+[    0.004821] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000                                
+[    0.004933] Setting up static identity map for 0x80008280 - 0x800082d8                      
+[    0.041191] Brought up 1 CPUs                                                               
+[    0.041231] SMP: Total of 1 processors activated (48.00 BogoMIPS).                          
+[    0.041250] CPU: All CPU(s) started in SVC mode.                                            
+[    0.042313] devtmpfs: initialized                                                           
+[    0.058635] device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"           
+[    0.066909] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5         
+[    0.067853] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911s
+[    0.068592] pinctrl core: initialized pinctrl subsystem                                     
+[    0.071415] NET: Registered protocol family 16                                              
+[    0.072325] DMA: preallocated 256 KiB pool for atomic coherent allocations                  
+[    0.100724] cpuidle: using governor ladder                                                  
+[    0.130781] cpuidle: using governor menu                                                    
+[    0.173263] ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_sue
+[    0.173309] hwcfg_size_setup() hwcfg_szie=110                                               
+[    0.173400] hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51               
+[    0.173426] boot_port_setup() boot_port=1                                                   
+[    0.173451] ntxfw_size_setup() ntxfw_size=1034                                              
+[    0.174004] No ATAGs?                                                                       
+[    0.174073] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.     
+[    0.174096] hw-breakpoint: maximum watchpoint size is 8 bytes.                              
+[    0.178062] imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver                   
+[    0.178694] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver              
+[    0.203774] mxs-dma 1804000.dma-apbh: initialized                                           
+[    0.207901] PMU: ricoh61x_i2c_init:                                                         
+[    0.209088] SCSI subsystem initialized                                                      
+[    0.209864] usbcore: registered new interface driver usbfs                                  
+[    0.210051] usbcore: registered new interface driver hub                                    
+[    0.210326] usbcore: registered new device driver usb                                       
+[    0.214684] sy7636_probe calling                                                            
+[    0.214745] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78                                 
+[    0.214780] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1                         
+[    0.216832] sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89                                
+[    0.216860] sy7636_detect calling                                                           
+[    0.224276] sy7636_detect():opmode=0x0                                                      
+[    0.224298] sy7636_detect success                                                           
+[    0.224997] sy7636 0-0062: PMIC SY7636 for eInk display                                     
+[    0.225019] sy7636_probe success                                                            
+[    0.225081] i2c i2c-0: IMX I2C adapter registered                                           
+[    0.225119] i2c i2c-0: can't use DMA                                                        
+[    0.226502] PMU: ricoh61x_i2c_probe:                                                        
+[    0.227221] ricoh61x_pre_init,line=956                                                      
+[    0.231305] ricoh61x irq gpio 129                                                           
+[    0.231335] invalid sleep gpio: -2                                                          
+[    0.231359] invalid dc_det gpio: -2                                                         
+[    0.231384] ricoh61x chg gpio 128                                                           
+[    0.231502] ricoh61x bat_low gpio 131                                                       
+[    0.232158] PMU: ricoh61x_irq_init: g_full_flag: 0, CHGSTS1: 0x00                           
+[    0.245736] ricoh61x_irq_init: ricoh619_pmic_irq=1                                          
+[    0.247472] i2c i2c-3: IMX I2C adapter registered                                           
+[    0.247520] i2c i2c-3: can't use DMA                                                        
+[    0.247835] pps_core: LinuxPPS API ver. 1 registered                                        
+[    0.247857] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@>
+[    0.247938] PTP clock support registered                                                    
+[    0.250683] MIPI CSI2 driver module loaded                                                  
+[    0.251373] Advanced Linux Sound Architecture Driver Initialized.                           
+[    0.253689] Bluetooth: Core ver 2.20                                                        
+[    0.253818] NET: Registered protocol family 31                                              
+[    0.253841] Bluetooth: HCI device and connection manager initialized                        
+[    0.253882] Bluetooth: HCI socket layer initialized                                         
+[    0.253914] Bluetooth: L2CAP socket layer initialized                                       
+[    0.254027] Bluetooth: SCO socket layer initialized                                         
+[    0.255317] PMU: ricoh61x_regulator_init                                                    
+[    0.255640] PMU: ricoh61x_regulator_probe                                                   
+[    0.258757] RICOH619_DC1 at 900000uv suspend                                                
+[    0.263526] RICOH619_DC2 at 3000000uv suspend                                               
+[    0.284650] RICOH619_DC4 at 1140000uv suspend                                               
+[    0.294731] RICOH619_DC5 at 1700000uv suspend                                               
+[    0.313767] RICOH619_LDO2 at 3000000uv suspend                                              
+[    0.423459] sy7636-pmic sy7636-pmic: num_regulators 4                                       
+[    0.423585] sy7636-pmic sy7636-pmic: on_delay1=0x2                                          
+[    0.423615] sy7636-pmic sy7636-pmic: on_delay2=0x2                                          
+[    0.423644] sy7636-pmic sy7636-pmic: on_delay3=0x2                                          
+[    0.423672] sy7636-pmic sy7636-pmic: on_delay4=0x2                                          
+[    0.423698] sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2        
+[    0.423727] sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944606744                        
+[    0.423794] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!                        
+[    0.423837] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!                     
+[    0.423885] sy7636_regulator_probe(1014): SY7636@8c17a780                                   
+[    0.423907] sy7636_regulator_probe():initial vcom=-2500000uV                                
+[    0.423907]  _sy7636_vcom_get_voltage() : vcom=-2500000uV                                   
+[    0.430099] _sy7636_vcom_get_voltage() : vcom=-2500000uV                                    
+[    0.431443] sy7636_get_temperature():temperature = 0,reg=0x0                                
+[    0.432325] sy7636_get_temperature():temperature = 0,reg=0x0                                
+[    0.433417] PMU RTC: ricoh61x_rtc_probe, ricoh61x driver run at 24H-mode                    
+[    0.433447] PMU RTC: we never using periodic function and interrupt                         
+[    0.435753] ricoh61x_rtc_Pon_get_clr, PON=1 -- CTRL2=0x20                                   
+[    0.439579] PMU: ricoh61x_rtc_probe register rtc device                                     
+[    0.441004] PMU: ricoh61x_rtc_read_alarm                                                    
+[    0.443475] rtc_ricoh619 rtc_ricoh619: PMU: read alarm: 1/1/2011 0:0:0 *****                
+[    0.445447] rtc_ricoh619 rtc_ricoh619: rtc core: registered rtc_ricoh619 as rtc0            
+[    0.445584] [ricoh61x_irq_sync_unlock-283] set 0xAE to 0x60                                 
+[    0.447680] RICOH61x RTC Register Success                                                   
+[    0.448425] Switched to clocksource mxc_timer1                                              
+[    0.474227] NET: Registered protocol family 2                                               
+[    0.475654] TCP established hash table entries: 2048 (order: 1, 8192 bytes)                 
+[    0.475743] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)                       
+[    0.475835] TCP: Hash tables configured (established 2048 bind 2048)                        
+[    0.475971] UDP hash table entries: 256 (order: 1, 8192 bytes)                              
+[    0.476031] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)                         
+[    0.476461] NET: Registered protocol family 1                                               
+[    5.052072] imx rpmsg driver is registered.                                                 
+[    5.054401] Bus freq driver module loaded                                                   
+[    5.056670] futex hash table entries: 256 (order: 2, 16384 bytes)                           
+[    5.076935] squashfs: version 4.0 (2009/01/31) Phillip Lougher                              
+[    5.077693] fuse init (API version 7.23)                                                    
+[    5.084636] bounce: pool size: 64 pages                                                     
+[    5.084701] io scheduler noop registered                                                    
+[    5.084738] io scheduler deadline registered                                                
+[    5.085191] io scheduler cfq registered (default)                                           
+[    5.086201] imx-weim 21b8000.weim: Driver registered.                                       
+[    5.091730] lm3630a_bl_parse_dt pchip=8c1e1610,hwen_gpio 91                                 
+[    5.103870] lm3630a_bl 0-0036: LM3630A[1] backlight register OK.                            
+[    5.106439] imx-sdma 20ec000.sdma: no event needs to be remapped                            
+[    5.106658] imx-sdma 20ec000.sdma: loaded firmware 3.3                                      
+[    5.114640] imx-sdma 20ec000.sdma: initialized                                              
+[    5.275960] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a X
+[    6.187184] console [ttymxc0] enabled                                                       
+[    6.192805] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is aX
+[    6.239370] imx-rng 2284000.rngb: iMX RNG Registered.                                       
+[    6.245130] imx sema4 driver is registered.                                                 
+[    6.249612] [drm] Initialized drm 1.1.0 20060810                                            
+[    6.255539] [drm] Initialized vivante 1.0.0 20120216 on minor 0                             
+[    6.287936] brd: module loaded                                                              
+[    6.304702] loop: module loaded                                                             
+[    6.311497] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver                      
+[    6.318092] ehci-mxc: Freescale On-Chip EHCI Host driver                                    
+[    6.324028] usbcore: registered new interface driver usb-storage                            
+[    6.332719] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator             
+[    6.341952] 2184000.usb supply vbus not found, using dummy regulator                        
+[    6.356257] mousedev: PS/2 mouse device common for all mice                                 
+[    6.364030] input: ntx_event0 as /devices/platform/ntx_event0/input/input0                  
+[    6.629949] [elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff             
+[    6.638887] [__elan_touch_init-361] firmware version 52 01 2C 31 (12C3)                     
+[    6.647032] [__elan_touch_init-368] firmware ID 52 F1 B5 01 (1B50)                          
+[    6.654799] [__elan_touch_init-400] boot code version  52 05 56 81                          
+[    6.662542] [__elan_touch_init-405] x resolution: 1436                                      
+[    6.669292] [__elan_touch_init-410] y resolution: 1920                                      
+[    6.675167] input: elan-touch as /devices/virtual/input/input1                              
+[    6.682398] elan ts starts in interrupt mode.                                               
+[    6.687143] cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+[    6.698663] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as 1
+[    6.707740] i2c /dev entries driver                                                         
+[    6.712696] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021cf
+[    6.723222] syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16      
+[    6.731535] PMU: ricoh61x_battery_init                                                      
+[    6.735571] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V9
+[    6.746485] ricoh619_battery_dt_init type_n=0                                               
+[    6.751009] ricoh619-battery ricoh619-battery: alarm_vol_mv=3250                            
+[    6.757049] ricoh619-battery ricoh619-battery: fg_poff_vbat=3350                            
+[    6.763130] ricoh61x_battery_probe type_n=0,temp is 1                                       
+[    6.768209] ricoh61x_battery_probe() TempDetect=0                                           
+[    6.772982] ricoh61x_battery_probe info->num=7,temp is 8                                    
+[    6.782367] PMU FG_RESET : ricoh61x_init_battery : initial pswr = 100                       
+[    6.789562] PMU : ricoh61x_init_battery : POWER off history 0x0a is 0x20                    
+[    6.797045] PMU : ricoh61x_init_battery : POWER control function 0x0d is 0x00               
+[    6.808768] PMU : ricoh61x_init_battery : off is 368494, on is 368495, period is 1, fpon_fl0
+[    6.817764] PMU: ricoh61x_set_OCV_table : 00% voltage = 3431000 uV                          
+[    6.824018] PMU: ricoh61x_set_OCV_table : 10% voltage = 3571400 uV                          
+[    6.830269] PMU: ricoh61x_set_OCV_table : 20% voltage = 3728900 uV                          
+[    6.836477] PMU: ricoh61x_set_OCV_table : 30% voltage = 3766700 uV                          
+[    6.842722] PMU: ricoh61x_set_OCV_table : 40% voltage = 3775300 uV                          
+[    6.850002] PMU: ricoh61x_set_OCV_table : 50% voltage = 3786300 uV                          
+[    6.856318] PMU: ricoh61x_set_OCV_table : 60% voltage = 3822900 uV                          
+[    6.862946] PMU: ricoh61x_set_OCV_table : 70% voltage = 3902300 uV                          
+[    6.869364] PMU: ricoh61x_set_OCV_table : 80% voltage = 3960900 uV                          
+[    6.875621] PMU: ricoh61x_set_OCV_table : 90% voltage = 4048800 uV                          
+[    6.881957] PMU: ricoh61x_set_OCV_table : 100% voltage = 4137900 uV                         
+[    6.888330] PMU : ricoh61x_set_OCV_table : target_vsys is 2869 target_ibat is 179           
+[    6.895991] PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(2928) is out of 
+[    6.905945] PMU : ricoh61x_scaling_OCV_table : new table                                    
+[    6.911432] PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v                       
+[    6.917940] PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35690 v                       
+[    6.924512] PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37265 v                       
+[    6.931073] PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37656 v                       
+[    6.937585] PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37741 v                       
+[    6.944144] PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37851 v                       
+[    6.950722] PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38217 v                       
+[    6.957217] PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38999 v                       
+[    6.963773] PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39585 v                       
+[    6.970322] PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 40464 v                       
+[    6.976812] PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41355 v                      
+[    7.041011] PMU : ricoh61x_init_charger : GCHGDET (0xDA) is 0x0                             
+[    7.054266] PMU : ricoh61x_init_charger : after CHGISET_REG (0xb8) is 0x44 info->ch_ichg is1
+[    7.066651] PMU : ricoh61x_init_charger : before BATSET1_REG (0xba) is 0x49 info->ch_vbatovf
+[    7.078618] PMU : ricoh61x_init_charger : after BATSET1_REG (0xba) is 0x49 info->ch_vbatovsf
+[    7.088875] PMU : ricoh61x_init_charger : before BATSET2_REG (0xbb) is 0x33 info->ch_vrchg  
+[    7.107130] PMU : ricoh61x_init_charger : test test val 48, val2 3 vfchg 4200               
+[    7.115432] PMU : ricoh61x_init_charger : test test val 64, val2 1 icchg 100                
+[    7.122691] PMU : ricoh61x_init_charger : 100 min 4109000, 100 max 4233000 vfchg 4200 icchg8
+[    7.135904] PMU: ricoh61x_init_fgsoca : * 00% voltage = 3429700 uV                          
+[    7.142261] PMU: ricoh61x_init_fgsoca : * 10% voltage = 3568900 uV                          
+[    7.148591] PMU: ricoh61x_init_fgsoca : * 20% voltage = 3726400 uV                          
+[    7.154841] PMU: ricoh61x_init_fgsoca : * 30% voltage = 3765500 uV                          
+[    7.161169] PMU: ricoh61x_init_fgsoca : * 40% voltage = 3774100 uV                          
+[    7.167413] PMU: ricoh61x_init_fgsoca : * 50% voltage = 3785100 uV                          
+[    7.173743] PMU: ricoh61x_init_fgsoca : * 60% voltage = 3821700 uV                          
+[    7.180033] PMU: ricoh61x_init_fgsoca : * 70% voltage = 3899800 uV                          
+[    7.186278] PMU: ricoh61x_init_fgsoca : * 80% voltage = 3958400 uV                          
+[    7.192569] PMU: ricoh61x_init_fgsoca : * 90% voltage = 4046300 uV                          
+[    7.198869] PMU: ricoh61x_init_fgsoca : * 100% voltage = 4135500 uV                         
+[    7.205238] calc_soc_by_voltageMethod(): FG not ready , getting vbatt from ADC .            
+[    7.214457] measure_vbatt_ADC():4146000 uV                                                  
+[    7.218746] ==== calc_soc_by_voltageMethod E60U22 ====                                      
+[    7.225830] PMU: ricoh61x_init_fgsoca : * Rbat = 278 mOhm   n_cap = 898 mAH                 
+[    7.233914] Create pmic_battery.1 in platform                                               
+[    7.257686] sy7636_sensor_probe starting                                                    
+[    7.264534] sy7636_sensor_probe success                                                     
+[    7.291063] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)                              
+[    7.300703] Bluetooth: Virtual HCI driver ver 1.5                                           
+[    7.309604] Bluetooth: HCI UART driver ver 2.3                                              
+[    7.314393] Bluetooth: HCI UART protocol H4 registered                                      
+[    7.320017] Bluetooth: HCI UART protocol Three-wire (H5) registered                         
+[    7.334106] sdhci: Secure Digital Host Controller Interface driver                          
+[    7.341458] sdhci: Copyright(c) Pierre Ossman                                               
+[    7.346056] sdhci-pltfm: SDHCI platform and OF driver helper                                
+[    7.364112] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified               
+[    7.371477] sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host                            
+[    7.379006] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found                         
+[    7.387134] led_classdev_register():led_cdev->name=mmc1::,name=mmc1::                       
+[    7.438688] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA              
+[    7.449437] /soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified               
+[    7.456961] sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found                          
+[    7.463279] sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found                         
+[    7.470416] led_classdev_register():led_cdev->name=mmc0::,name=mmc0::                       
+[    7.519590] mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA              
+[    7.537752] led_classdev_register():led_cdev->name=GLED,name=GLED                           
+[    7.552552] usbcore: registered new interface driver usbhid                                 
+[    7.560341] usbhid: USB HID core driver                                                     
+[    7.576255] fsl-asrc 2034000.asrc: driver registered                                        
+[    7.585234] NET: Registered protocol family 17                                              
+[    7.590235] Bluetooth: RFCOMM TTY layer initialized                                         
+[    7.595190] Bluetooth: RFCOMM socket layer initialized                                      
+[    7.600698] Bluetooth: RFCOMM ver 1.11                                                      
+[    7.604653] Bluetooth: BNEP (Ethernet Emulation) ver 1.3                                    
+[    7.610184] Bluetooth: BNEP filters: protocol multicast                                     
+[    7.615568] Bluetooth: BNEP socket layer initialized                                        
+[    7.620736] Bluetooth: HIDP (Human Interface Emulation) ver 1.2                             
+[    7.626794] Bluetooth: HIDP socket layer initialized                                        
+[    7.631953] lib80211: common routines for IEEE802.11 drivers                                
+[    7.641730] ntx_wifi_bt_power_init() : done                                                 
+[    7.646153] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[    7.651241] mmc0: host does not support reading read-only switch, assuming write-enable     
+[    7.659349] Wifi / BT power control 0                                                       
+[    7.663025] Wifi already off.                                                               
+[    7.666029] wifi 3v3 power off                                                              
+[    7.669202] _ntx_wifi_bt_power_ctrl() : done                                                
+[    7.677955] mmc0: new high speed SDHC card at address aaaa                                  
+[    7.684137] mmcblk0: mmc0:aaaa SS16G 14.8 GiB                                               
+[    7.691123] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(7704):EPD 1024x758                     
+[    7.697874] imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16                        
+[    7.708092] imx_epdc_v2_fb 228c000.epdc: EPDC version = 30                                  
+[    7.713865]  mmcblk0: p1 p2 p3 p4                                                           
+[    7.741851] _sy7636_vcom_get_voltage() : vcom=-2500000uV                                    
+[    7.747213] waveform_size_setup() wf_size=582529                                            
+[    7.752026] waveform_p_setup() wf_p=8ff71a00,vaddr=91000a00,size=582529                     
+[    7.759122] mxc_epdc_fb_init_hw(7479)                                                       
+[    7.762845] [epdc_firmware_work_func]:fw p=91000a00,size=582529,fb_data@8d190000,pdata=80eb8
+[    7.771654] EPD QOS_WR 0x7, QOS_RD 0x7                                                      
+[    7.775445] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .              
+[    7.782734] mxc_epdc_fb_fw_handler(6995),fw=8d14dee8                                        
+[    7.787711] mxc_epdc_fb_fw_handler(): fw p=91000a00,size=582529                             
+[    7.793679] fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfee9=>-279 10mV,-2790000 uV          
+[    7.801316] ------------[ cut here ]------------                                            
+[    7.805965] WARNING: CPU: 0 PID: 49 at mm/page_alloc.c:2668 __alloc_pages_nodemask+0x3c8/0x)
+[    7.814813] drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,Dis1
+[    7.824720] Modules linked in:                                                              
+[    7.827881] CPU: 0 PID: 49 Comm: kworker/0:3 Not tainted 4.1.15 #1                          
+[    7.834113] Hardware name: Freescale i.MX6 Ultralite (Device Tree)                          
+[    7.840341] Workqueue: events epdc_firmware_work_func                                       
+[    7.845450] [<80016240>] (unwind_backtrace) from [<800126e8>] (show_stack+0x10/0x14)        
+[    7.853249] [<800126e8>] (show_stack) from [<8056d42c>] (dump_stack+0x84/0xc4)              
+[    7.860520] [<8056d42c>] (dump_stack) from [<800394f8>] (warn_slowpath_common+0x80/0xb0)    
+[    7.868656] [<800394f8>] (warn_slowpath_common) from [<800395c4>] (warn_slowpath_null+0x1c/)
+[    7.877461] [<800395c4>] (warn_slowpath_null) from [<800b3c50>] (__alloc_pages_nodemask+0x3)
+[    7.886638] [<800b3c50>] (__alloc_pages_nodemask) from [<800c6974>] (kmalloc_order+0x10/0x2)
+[    7.895208] [<800c6974>] (kmalloc_order) from [<8025acb4>] (mxc_epdc_fb_fw_handler+0xa28/0x)
+[    7.903950] [<8025acb4>] (mxc_epdc_fb_fw_handler) from [<8025b168>] (epdc_firmware_work_fun)
+[    7.913386] [<8025b168>] (epdc_firmware_work_func) from [<8004c5c0>] (process_one_work+0x12)
+[    7.922473] [<8004c5c0>] (process_one_work) from [<8004c81c>] (worker_thread+0x4c/0x480)    
+[    7.930603] [<8004c81c>] (worker_thread) from [<800514b0>] (kthread+0xdc/0xf4)              
+[    7.937845] [<800514b0>] (kthread) from [<8000f4e8>] (ret_from_fork+0x14/0x2c)              
+[    7.945124] ---[ end trace f1f709c1be2d548b ]---                                            
+[    7.949910] Unable to handle kernel paging request at virtual address e344e700              
+[    7.957146] pgd = 80004000                                                                  
+[    7.959861] [e344e700] *pgd=00000000                                                        
+[    7.963468] Internal error: Oops: 5 [#1] PREEMPT SMP ARM                                    
+[    7.968788] Modules linked in:                                                              
+[    7.971872] CPU: 0 PID: 49 Comm: kworker/0:3 Tainted: G        W       4.1.15 #1            
+[    7.979273] Hardware name: Freescale i.MX6 Ultralite (Device Tree)                          
+[    7.985468] Workqueue: events epdc_firmware_work_func                                       
+[    7.990546] task: 8cee6140 ti: 8d14c000 task.ti: 8d14c000                                   
+[    7.995957] PC is at memcpy+0xc0/0x330                                                      
+[    7.999717] LR is at mxc_epdc_fb_fw_handler+0xa40/0xe2c                                     
+[    8.004954] pc : [<80208720>]    lr : [<8025accc>]    psr: 80000113                         
+[    8.004954] sp : 8d14de5c  ip : 00000000  fp : 8d191000                                     
+[    8.016438] r10: 91000aa2  r9 : 80f30ccc  r8 : 000000a2                                     
+[    8.021673] r7 : 91000a00  r6 : 80f30c98  r5 : 80f30be4  r4 : 8d190000                      
+[    8.028209] r3 : 5244dc5e  r2 : 80000000  r1 : e344e700  r0 : 00000000                      
+[    8.034747] Flags: Nzcv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment kernel             
+[    8.042065] Control: 10c53c7d  Table: 8000406a  DAC: 00000015                               
+[    8.047821] Process kworker/0:3 (pid: 49, stack limit = 0x8d14c210)                         
+[    8.054097] Stack: (0x8d14de5c to 0x8d14e000)                                               
+[    8.058465] de40:                                                                00000000   
+[    8.066655] de60: 8d190000 8025accc 80f237b4 00000053 8cee6188 80ee2e68 00000070 0000006a   
+[    8.074844] de80: 5244dc5e 5244dc5e 8e55c806 6d600870 00000000 00000000 00000000 00000000   
+[    8.083033] dea0: 00000000 00000000 5244dc5e 93c6b074 8071962c 8d14ded4 8fbd2380 8d190598   
+[    8.091223] dec0: 8d190000 8d1905cc 8fbd5700 00000000 00000000 8d126f00 8fbd2380 8025b168   
+[    8.099412] dee0: 8d190000 80eb9e18 0008e381 91000a00 8d14df24 8056fa1c 8d126f00 8d190598   
+[    8.107602] df00: 8fbd2380 8004c5c0 8d14c000 8fbd2380 00000001 8fbd2380 8d126f18 8fbd2394   
+[    8.115791] df20: 8d14c000 00000008 80edc5a1 8d126f00 8fbd2380 8004c81c 80ea6100 8fbd24e4   
+[    8.123981] df40: 8d126f00 00000000 8d138080 8d126f00 8004c7d0 00000000 00000000 00000000   
+[    8.132170] df60: 00000000 800514b0 4efee9cd 00000000 fece49eb 8d126f00 00000000 00000000   
+[    8.140360] df80: 8d14df80 8d14df80 00000000 00000000 8d14df90 8d14df90 8d14dfac 8d138080   
+[    8.148549] dfa0: 800513d4 00000000 00000000 8000f4e8 00000000 00000000 00000000 00000000   
+[    8.156739] dfc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000   
+[    8.164927] dfe0: 00000000 00000000 00000000 00000000 00000013 00000000 aa35b3e5 30a2fc1d   
+[    8.173125] [<80208720>] (memcpy) from [<8025accc>] (mxc_epdc_fb_fw_handler+0xa40/0xe2c)    
+[    8.181234] [<8025accc>] (mxc_epdc_fb_fw_handler) from [<8025b168>] (epdc_firmware_work_fun)
+[    8.190645] [<8025b168>] (epdc_firmware_work_func) from [<8004c5c0>] (process_one_work+0x12)
+[    8.199703] [<8004c5c0>] (process_one_work) from [<8004c81c>] (worker_thread+0x4c/0x480)    
+[    8.207808] [<8004c81c>] (worker_thread) from [<800514b0>] (kthread+0xdc/0xf4)              
+[    8.215047] [<800514b0>] (kthread) from [<8000f4e8>] (ret_from_fork+0x14/0x2c)              
+[    8.222284] Code: e4808004 e480e004 e8bd01e0 e1b02f82 (14d13001)                            
+[    8.228390] ---[ end trace f1f709c1be2d548c ]---                                            
+[    8.233199] Unable to handle kernel paging request at virtual address ffffffec              
+[    8.240438] pgd = 80004000                                                                  
+[    8.243154] [ffffffec] *pgd=8fdfd821, *pte=00000000, *ppte=00000000                         
+[    8.249486] Internal error: Oops: 17 [#2] PREEMPT SMP ARM                                   
+[    8.254892] Modules linked in:                                                              
+[    8.257975] CPU: 0 PID: 49 Comm: kworker/0:3 Tainted: G      D W       4.1.15 #1            
+[    8.265377] Hardware name: Freescale i.MX6 Ultralite (Device Tree)                          
+[    8.271573] task: 8cee6140 ti: 8d14c000 task.ti: 8d14c000                                   
+[    8.276985] PC is at kthread_data+0x4/0xc                                                   
+[    8.281006] LR is at wq_worker_sleeping+0xc/0xd0                                            
+[    8.285634] pc : [<800519f0>]    lr : [<8004d384>]    psr: 00000193                         
+[    8.285634] sp : 8d14dc30  ip : 00000001  fp : 8d14dc6c                                     
+[    8.297118] r10: 00000001  r9 : 00000000  r8 : 8cee63ec                                     
+[    8.302351] r7 : 80ea65f8  r6 : 8cee6140  r5 : 8fbd2800  r4 : 00000000                      
+[    8.308887] r3 : 00000000  r2 : 00000000  r1 : 00000000  r0 : 8cee6140                      
+[    8.315424] Flags: nzcv  IRQs off  FIQs on  Mode SVC_32  ISA ARM  Segment user              
+[    8.322654] Control: 10c53c7d  Table: 8000406a  DAC: 00000015                               
+[    8.328408] Process kworker/0:3 (pid: 49, stack limit = 0x8d14c210)                         
+[    8.334683] Stack: (0x8d14dc30 to 0x8d14e000)                                               
+[    8.339052] dc20:                                     80ea2800 8fbd2800 8cee6140 8056fb7c   
+[    8.347241] dc40: 8d14dc54 8fbd2e00 8cee65b8 8fbd2e00 8d14c000 8d14da44 00000001 8c04c000   
+[    8.355430] dc60: 8d14dc88 8cee6368 8d14dc7c 8056fda4 8cee6140 8d14da44 80208722 8003ac3c   
+[    8.363620] dc80: 806f28a8 8d14dca4 8d14dc88 8d14dc88 80ea993c 80edf29c 80ea993c 8d14de10   
+[    8.371808] dca0: 60000193 0000000b 80208724 00000001 80208722 80012b08 8d14c210 0000000b   
+[    8.379998] dcc0: 00000000 00000000 00000000 00000008 806e8630 806e8638 65000000 38303834   
+[    8.388187] dce0: 20343030 30383465 34303065 62386520 65313064 31652030 66323062 28203238   
+[    8.396377] dd00: 31643431 31303033 80002029 8d14dd2c 8d191000 e344e700 8d14de10 00000005   
+[    8.404566] dd20: 80eb3630 8d14de10 80f30ccc 91000aa2 8d191000 8056c244 80eb3630 8001c7cc   
+[    8.412756] dd40: 8c04c000 8006f964 00000a6c 0000071a 800078d0 80004000 e344e700 8001c848   
+[    8.420944] dd60: 80ea9bec 00000005 8001c7dc 80009288 00000000 8056c668 806f800c 8d14dd8c   
+[    8.429134] dd80: 00000000 800394fc 806f28a8 ffff5dcb be2d548b f1f709c1 00000a6c 800b3c50   
+[    8.437323] dda0: 80edc63e 00000014 80ea6584 00000141 000000a2 800395c4 00000000 91000aa2   
+[    8.445512] ddc0: 8d191000 800b3c50 8d14dddc 8057000c 00000033 00000001 00000000 8006f590   
+[    8.453701] dde0: 00000000 00000000 00000000 00000000 80f237b4 00000033 80208720 80000113   
+[    8.461892] de00: ffffffff 8d14de44 000000a2 800131d8 00000000 e344e700 80000000 5244dc5e   
+[    8.470081] de20: 8d190000 80f30be4 80f30c98 91000a00 000000a2 80f30ccc 91000aa2 8d191000   
+[    8.478270] de40: 00000000 8d14de5c 8025accc 80208720 80000113 ffffffff 8d191000 00000000   
+[    8.486460] de60: 8d190000 8025accc 80f237b4 00000053 8cee6188 80ee2e68 00000070 0000006a   
+[    8.494649] de80: 5244dc5e 5244dc5e 8e55c806 6d600870 00000000 00000000 00000000 00000000   
+[    8.502838] dea0: 00000000 00000000 5244dc5e 93c6b074 8071962c 8d14ded4 8fbd2380 8d190598   
+[    8.511028] dec0: 8d190000 8d1905cc 8fbd5700 00000000 00000000 8d126f00 8fbd2380 8025b168   
+[    8.519217] dee0: 8d190000 80eb9e18 0008e381 91000a00 8d14df24 8056fa1c 8d126f00 8d190598   
+[    8.527406] df00: 8fbd2380 8004c5c0 8d14c000 8fbd2380 00000001 8fbd2380 8d126f18 8fbd2394   
+[    8.535596] df20: 8d14c000 00000008 80edc5a1 8d126f00 8fbd2380 8004c81c 80ea6100 8fbd24e4   
+[    8.543785] df40: 8d126f00 00000000 8d138080 8d126f00 8004c7d0 00000000 00000000 00000000   
+[    8.551974] df60: 00000000 800514b0 4efee9cd 00000000 fece49eb 8d126f00 00000000 00000000   
+[    8.560164] df80: 8d14df80 8d14df80 00000001 00010001 8d14df90 8d14df90 8d14dfac 8d138080   
+[    8.568352] dfa0: 800513d4 00000000 00000000 8000f4e8 00000000 00000000 00000000 00000000   
+[    8.576541] dfc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000   
+[    8.584730] dfe0: 00000000 00000000 00000000 00000000 00000013 00000000 aa35b3e5 30a2fc1d   
+[    8.592926] [<800519f0>] (kthread_data) from [<8004d384>] (wq_worker_sleeping+0xc/0xd0)     
+[    8.600948] [<8004d384>] (wq_worker_sleeping) from [<8056fb7c>] (__schedule+0x324/0x50c)    
+[    8.609054] [<8056fb7c>] (__schedule) from [<8056fda4>] (schedule+0x40/0x98)                
+[    8.616120] [<8056fda4>] (schedule) from [<8003ac3c>] (do_exit+0x60c/0x95c)                 
+[    8.623101] [<8003ac3c>] (do_exit) from [<80012b08>] (die+0x41c/0x428)                      
+[    8.629645] [<80012b08>] (die) from [<8056c244>] (__do_kernel_fault.part.0+0x64/0x74)       
+[    8.637492] [<8056c244>] (__do_kernel_fault.part.0) from [<8001c7cc>] (do_sect_fault+0x0/0x)
+[    8.646122] [<8001c7cc>] (do_sect_fault) from [<8006f964>] (vprintk_default+0x0/0x28)       
+[    8.653967] [<8006f964>] (vprintk_default) from [<80004000>] (0x80004000)                   
+[    8.660769] Code: e513001c e7e00150 e12fff1e e5903280 (e5130014)                            
+[    8.666872] ---[ end trace f1f709c1be2d548d ]---                                            
+[    8.671497] Fixing recursive fault but reboot is needed!

@@ -1,0 +1,123 @@
+scripts/build_kernel.sh: line 46: cd: too many arguments
+---- Building Kobo Nia (N306) kernel ----
+---- Building ROOT kernel for n306 ----
+make: arm-nickel-linux-gnueabihf-gcc: No such file or directory
+./scripts/gcc-version.sh: line 25: arm-nickel-linux-gnueabihf-gcc: command not found
+./scripts/gcc-version.sh: line 26: arm-nickel-linux-gnueabihf-gcc: command not found
+./scripts/gcc-version.sh: line 25: arm-nickel-linux-gnueabihf-gcc: command not found
+./scripts/gcc-version.sh: line 26: arm-nickel-linux-gnueabihf-gcc: command not found
+  CLEAN   .tmp_versions
+  CLEAN   scripts/basic
+  CLEAN   scripts/dtc
+  CLEAN   scripts/genksyms
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/arm/include/generated
+  CLEAN   .config
+cp: target 'bb/kernel-master/initrd/n306/etc/init.d/rcS' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/etc/init.d/startx' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/etc/init.d/inkbox-splash' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/etc/init.d/developer-key' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/etc/init.d/overlay-mount' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/etc/init.d/initrd-fifo' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/opt/bin/uidgen' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/bin/checksum-verify' is not a directory
+cp: target 'bb/kernel-master/initrd/n306/sbin/setup-wifi' is not a directory
+fatal: not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+---- Kernel build ID is: WRu5ByVw ----
+---- Kernel commit is:  ----
+make: arm-nickel-linux-gnueabihf-gcc: No such file or directory
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+drivers/input/misc/Kconfig:815:warning: leading whitespace ignored
+make: arm-nickel-linux-gnueabihf-gcc: No such file or directory
+  CHK     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/bitsperlong.h
+  UPD     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/cputime.h
+  WRAP    arch/arm/include/generated/asm/current.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm/include/generated/asm/errno.h
+  WRAP    arch/arm/include/generated/asm/exec.h
+  WRAP    arch/arm/include/generated/asm/ioctl.h
+  WRAP    arch/arm/include/generated/asm/ipcbuf.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm/include/generated/asm/msgbuf.h
+  CHK     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/param.h
+  WRAP    arch/arm/include/generated/asm/parport.h
+  WRAP    arch/arm/include/generated/asm/poll.h
+  WRAP    arch/arm/include/generated/asm/preempt.h
+  WRAP    arch/arm/include/generated/asm/resource.h
+  WRAP    arch/arm/include/generated/asm/rwsem.h
+  WRAP    arch/arm/include/generated/asm/scatterlist.h
+  UPD     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/seccomp.h
+  WRAP    arch/arm/include/generated/asm/segment.h
+  WRAP    arch/arm/include/generated/asm/sections.h
+  WRAP    arch/arm/include/generated/asm/sembuf.h
+  WRAP    arch/arm/include/generated/asm/serial.h
+  WRAP    arch/arm/include/generated/asm/shmbuf.h
+  WRAP    arch/arm/include/generated/asm/siginfo.h
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/sizes.h
+  WRAP    arch/arm/include/generated/asm/socket.h
+  WRAP    arch/arm/include/generated/asm/sockios.h
+  WRAP    arch/arm/include/generated/asm/termbits.h
+  WRAP    arch/arm/include/generated/asm/termios.h
+  WRAP    arch/arm/include/generated/asm/timex.h
+  WRAP    arch/arm/include/generated/asm/trace_clock.h
+  WRAP    arch/arm/include/generated/asm/unaligned.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/basic/bin2c
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/conmakehash
+  HOSTCC  scripts/sortextable
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/genksyms/genksyms.o
+/bin/sh: line 1: arm-nickel-linux-gnueabihf-gcc: command not found
+  HOSTCC  scripts/dtc/flattree.o
+  CC      scripts/mod/devicetable-offsets.s
+make[2]: *** [scripts/Makefile.build:259: scripts/mod/empty.o] Error 127
+  SHIPPED scripts/genksyms/parse.tab.c
+make[2]: *** Waiting for unfinished jobs....
+/bin/sh: line 1: arm-nickel-linux-gnueabihf-gcc: command not found
+make[2]: *** [scripts/Makefile.build:153: scripts/mod/devicetable-offsets.s] Error 127
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  SHIPPED scripts/genksyms/lex.lex.c
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  SHIPPED scripts/genksyms/keywords.hash.c
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/dtc/util.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+make[1]: *** [scripts/Makefile.build:403: scripts/mod] Error 2
+make[1]: *** Waiting for unfinished jobs....
+  HOSTLD  scripts/dtc/dtc
+  HOSTLD  scripts/genksyms/genksyms
+make: *** [Makefile:555: scripts] Error 2
+---- There was an error during the build process, aborting... ----

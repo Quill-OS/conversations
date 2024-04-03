@@ -1,0 +1,64 @@
+n file included from /mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/qfloat16.h:1,
+                 from /mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h:44,
+                 from /mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/qendian.h:1,
+                 from /mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/src/corelib/codecs/qutfcodec.cpp:43:
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:300:7: error: ‘numeric_limits’ is not a class template
+  300 | class numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> : public numeric_limits<float>
+      |       ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:300:77: error: expected template-name before ‘<’ token
+  300 | class numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> : public numeric_limits<float>
+      |                                                                             ^
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:300:77: error: expected ‘{’ before ‘<’ token
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:344:18: error: ‘numeric_limits’ is not a class template
+  344 | template<> class numeric_limits<const QT_PREPEND_NAMESPACE(qfloat16)>
+      |                  ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:344:69: error: ‘std::numeric_limits’ is not a template
+  344 | template<> class numeric_limits<const QT_PREPEND_NAMESPACE(qfloat16)>
+      |                                                                     ^
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:300:7: note: previous declaration here
+  300 | class numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> : public numeric_limits<float>
+      |       ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:345:28: error: expected template-name before ‘<’ token
+  345 |     : public numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> {};
+      |                            ^
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:346:18: error: ‘numeric_limits’ is not a class template
+  346 | template<> class numeric_limits<volatile QT_PREPEND_NAMESPACE(qfloat16)>
+      |                  ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:346:72: error: ‘std::numeric_limits’ is not a template
+  346 | template<> class numeric_limits<volatile QT_PREPEND_NAMESPACE(qfloat16)>
+      |                                                                        ^
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:300:7: note: previous declaration here
+  300 | class numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> : public numeric_limits<float>
+      |       ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:347:28: error: expected template-name before ‘<’ token
+  347 |     : public numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> {};
+      |                            ^
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:348:18: error: ‘numeric_limits’ is not a class template
+  348 | template<> class numeric_limits<const volatile QT_PREPEND_NAMESPACE(qfloat16)>
+      |                  ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:348:78: error: ‘std::numeric_limits’ is not a template
+  348 | template<> class numeric_limits<const volatile QT_PREPEND_NAMESPACE(qfloat16)>
+      |                                                                              ^
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:300:7: note: previous declaration here
+  300 | class numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> : public numeric_limits<float>
+      |       ^~~~~~~~~~~~~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qfloat16.h:349:28: error: expected template-name before ‘<’ token
+  349 |     : public numeric_limits<QT_PREPEND_NAMESPACE(qfloat16)> {};
+      |                            ^
+In file included from /mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/qendian.h:1,
+                 from /mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/src/corelib/codecs/qutfcodec.cpp:43:
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h: In static member function ‘static constexpr QSpecialInteger<S> QSpecialInteger<S>::max()’:
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h:331:30: error: ‘std::numeric_limits’ is not a template
+  331 |     { return QSpecialInteger(std::numeric_limits<T>::max()); }
+      |                              ^~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h:331:54: error: incomplete type ‘std::numeric_limits’ used in nested name specifier
+  331 |     { return QSpecialInteger(std::numeric_limits<T>::max()); }
+      |                                                      ^~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h: In static member function ‘static constexpr QSpecialInteger<S> QSpecialInteger<S>::min()’:
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h:333:30: error: ‘std::numeric_limits’ is not a template
+  333 |     { return QSpecialInteger(std::numeric_limits<T>::min()); }
+      |                              ^~~
+/mnt/HDD/Project/Public/kobo-nia-audio-new/inkbox/wget/qt-everywhere-src-5.15.1/qtbase/include/QtCore/../../src/corelib/global/qendian.h:333:54: error: incomplete type ‘std::numeric_limits’ used in nested name specifier
+  333 |     { return QSpecialInteger(std::numeric_limits<T>::min()); }
+      |                                                      ^~~
+make: *** [Makefile:383: qutfcodec.o] Błąd 1

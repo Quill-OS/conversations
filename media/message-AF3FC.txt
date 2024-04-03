@@ -1,0 +1,61 @@
+pmbootstrap log
+      |                                              |
+      |                                              struct regulator_desc *
+In file included from ../drivers/regulator/sy7636-regulator.c:29:
+../include/linux/regulator/driver.h:690:35: note: expected 'struct device *' but argument is of type 'struct regulator_desc *'
+  690 | regulator_register(struct device *dev,
+      |                    ~~~~~~~~~~~~~~~^~~
+../drivers/regulator/sy7636-regulator.c:995:63: warning: passing argument 2 of 'regulator_register' from incompatible pointer type [-Wincompatible-pointer-types]
+  995 |                 rdev[i] = regulator_register(&sy7636_reg[id], &config);
+      |                                                               ^~~~~~~
+      |                                                               |
+      |                                                               struct regulator_config *
+../include/linux/regulator/driver.h:691:49: note: expected 'const struct regulator_desc *' but argument is of type 'struct regulator_config *'
+  691 |                    const struct regulator_desc *regulator_desc,
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+../drivers/regulator/sy7636-regulator.c:995:27: error: too few arguments to function 'regulator_register'
+  995 |                 rdev[i] = regulator_register(&sy7636_reg[id], &config);
+      |                           ^~~~~~~~~~~~~~~~~~
+../include/linux/regulator/driver.h:690:1: note: declared here
+  690 | regulator_register(struct device *dev,
+      | ^~~~~~~~~~~~~~~~~~
+../drivers/regulator/sy7636-regulator.c: At top level:
+../drivers/regulator/sy7636-regulator.c:133:12: warning: 'vcom2_uV_to_rs' defined but not used [-Wunused-function]
+  133 | static int vcom2_uV_to_rs(int uV)
+      |            ^~~~~~~~~~~~~~
+../drivers/regulator/sy7636-regulator.c:124:12: warning: 'vcom2_rs_to_uV' defined but not used [-Wunused-function]
+  124 | static int vcom2_rs_to_uV(unsigned int reg_setting)
+      |            ^~~~~~~~~~~~~~
+make[4]: *** [../scripts/Makefile.build:250: drivers/regulator/sy7636-regulator.o] Error 1
+make[3]: *** [../scripts/Makefile.build:500: drivers/regulator] Error 2
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [../scripts/Makefile.build:500: drivers] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [/home/pmos/build/src/linux-d25208f72840275f34c8594a93f60d437d9b37fa/Makefile:2005: .] Error 2
+make: *** [Makefile:231: __sub-make] Error 2
+>>> ERROR: linux-kobo-clara-mainline: build failed
+(034259) [23:30:48] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(034259) [23:30:48] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+(034259) [23:30:48] ERROR: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' CROSS_COMPILE=armv7-alpine-linux-musleabihf- CC=armv7-alpine-linux-musleabihf-gcc GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d -f
+(034259) [23:30:48] See also: <https://postmarketos.org/troubleshooting>
+(034259) [23:30:48] Traceback (most recent call last):
+  File "/home/dk/pmbootstrap/pmb/__init__.py", line 63, in main
+    getattr(frontend, args.action)(args)
+  File "/home/dk/pmbootstrap/pmb/helpers/frontend.py", line 115, in build
+    if not pmb.build.package(args, package, arch_package, force,
+  File "/home/dk/pmbootstrap/pmb/build/_package.py", line 540, in package
+    (output, cmd, env) = run_abuild(args, apkbuild, arch, strict, force, cross,
+  File "/home/dk/pmbootstrap/pmb/build/_package.py", line 467, in run_abuild
+    pmb.chroot.user(args, cmd, suffix, "/home/pmos/build", env=env)
+  File "/home/dk/pmbootstrap/pmb/chroot/user.py", line 26, in user
+    return pmb.chroot.root(args, cmd, suffix, working_dir, output,
+  File "/home/dk/pmbootstrap/pmb/chroot/root.py", line 83, in root
+    return pmb.helpers.run_core.core(args, msg, cmd_sudo, None, output,
+  File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 351, in core
+    check_return_code(args, code, log_message)
+  File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 221, in check_return_code
+    raise RuntimeError(f"Command failed (exit code {str(code)}): " +
+RuntimeError: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' CROSS_COMPILE=armv7-alpine-linux-musleabihf- CC=armv7-alpine-linux-musleabihf-gcc GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d -f
+
+(069011) [23:31:59] % tail -n 60 -F /home/dk/.local/var/pmbootstrap/log.txt
+(069011) [23:31:59] *** output passed to pmbootstrap stdout, not to this log ***

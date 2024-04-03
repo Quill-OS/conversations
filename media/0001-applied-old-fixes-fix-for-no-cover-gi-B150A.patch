@@ -1,0 +1,89 @@
+From 9945dd15a89e6f78640d91a8c820b9eb0317a691 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Sat, 27 Aug 2022 19:20:59 +0200
+Subject: [PATCH] applied old fixes, fix for no cover, gitignore and readme fix
+
+---
+ .gitignore  |  1 +
+ README.md   |  2 +-
+ src/main.rs | 28 ++++++++++++++++++++--------
+ 3 files changed, 22 insertions(+), 9 deletions(-)
+ create mode 100644 .gitignore
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..e420ee4
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++target/*
+diff --git a/README.md b/README.md
+index cf5655f..5198668 100644
+--- a/README.md
++++ b/README.md
+@@ -11,5 +11,5 @@ cargo install cross
+ ```
+ build it:
+ ```
+-~/.cargo/bin/cross build --target armv7-unknown-linux-musleabihf
++~/.cargo/bin/cross build --target armv7-unknown-linux-musleabihf --release 
+ ```
+diff --git a/src/main.rs b/src/main.rs
+index 8d89aee..9d273d9 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -33,31 +33,43 @@ fn main() {
+         let mut doc = EpubDoc::new(&epub_file).unwrap();
+ 
+         // Title
+-        let title = doc.mdata("title").unwrap();
++        let title = doc.mdata("title").unwrap_or("Unknown".to_string());
+ 
+         // Cover
+         let file_digest = digest_file(&epub_file).unwrap().to_string();
+-        let mut cover_path = main_path.clone() + &file_digest + ".t";
+-        let cover_path_converted = main_path.clone() + &file_digest;
++        let cover_path = main_path.clone() + &file_digest + ".t";
++        let mut cover_path_converted = main_path.clone() + &file_digest;
+         if !Path::new(&cover_path_converted).exists() {
+             if extract_cover == true {
+                 let cover_data = doc.get_cover();
+                 if cover_data.is_ok() {
+                     let f = fs::File::create(cover_path.clone());
+-                    let mut f = f.unwrap();
+-                    f.write_all(&cover_data.unwrap()).unwrap();
++                    if f.is_ok() {
++                        let mut f = f.unwrap();
++                        if cover_data.is_ok() {
++                            if f.write_all(&cover_data.unwrap()).is_err() {
++                                cover_path_converted = "".to_string();
++                            }
++                        }
++                        else {
++                            cover_path_converted = "".to_string();
++                        }
++                    }
++                    else {
++                        cover_path_converted = "".to_string();
++                    }
+                 }
+                 else {
+-                    cover_path = "".to_string();
++                    cover_path_converted = "".to_string();
+                 }
+             }
+         }
+ 
+         // Publication date
+-        let publication_date = doc.mdata("date").unwrap();
++        let publication_date = doc.mdata("date").unwrap_or("Unknown".to_string());
+ 
+         // Author
+-        let author = doc.mdata("creator").unwrap();
++        let author = doc.mdata("creator").unwrap_or("Unknown".to_string());
+ 
+         let json = r#"{
+             "BookID": "book_id_replace",
+-- 
+2.37.2
+

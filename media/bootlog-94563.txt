@@ -1,0 +1,128 @@
+U-Boot 2009.08-inkbox (May 02 2021 - 20:56:09)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 200000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+GPMI clock    : 24000000Hz
+BCH clock     : 24000000Hz
+Board: MX50 RDP board
+Boot Reason: [POR]
+Boot Device: SD
+I2C:   ready
+DRAM:  256 MB
+NAND:  No NAND device found!!!
+0 MiB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+In:    serial
+Out:   serial
+Err:   serial
+[_get_sd_number] g_sd_number:0
+
+MMC read: dev # 0, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 0, block # 1024, count 1 partition # 0 ... 
+1 blocks read: OK
+1 keys,0x00,0x01
+
+**************************************
+
+**  Boot to basic diagnostics mode  **
+
+**************************************
+ram p=70000000,size=268435456
+
+MMC read: dev # 0, block # 18431, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+
+MMC read: dev # 0, block # 14335, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 0, block # 14336, count 1957 partition # 0 ... 
+1957 blocks read: OK
+Kernel RAM visiable size=255M->255M
+init TPS65185 power ...
+Net:   No ethernet found.
+Hit any key to stop autoboot:  0 
+
+MMC read: dev # 0, block # 19455, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 0, block # 19456, count 16384 partition # 0 ... 
+16384 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   linux-2.6.35.3-inkbox+
+   Created:      2021-05-05   0:49:58 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    4804304 Bytes =  4.6 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+*** InkBox system diagnostics ***
+Version 1.0, built Tue May 4 2021
+
+Available options:
+1 - System Info
+2 - Battery Info
+3 - Graphics test
+4 - Sleep mode test
+5 - Utilities
+6 - Reboot
+7 - Power off
+8 - Exit to shell
+
+Diagnostics => 5
+Entering Utilities subsystem ...
+
+Available options:
+1 - Flash kernel to MMC
+2 - Flash U-Boot to MMC
+3 - Erase MMC
+4 - Back
+
+Utilities => 4
+
+Available options:
+1 - System Info
+2 - Battery Info
+3 - Graphics test
+4 - Sleep mode test
+5 - Utilities
+6 - Reboot
+7 - Power off
+8 - Exit to shell
+
+Diagnostics => 1
+---- General info ----
+Kernel version: 2.6.35.3-inkbox+
+Device: n905c
+Status: Rooted
+F/W version: Not available
+Time: Tue May  4 01:14:37 UTC 2021
+---- Memory info ----
+MemTotal:         254588 kB
+MemFree:          217428 kB
+---- Processor info ----
+Architecture: armv7l
+< OK > 
+Diagnostics => 

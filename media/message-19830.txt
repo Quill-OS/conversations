@@ -1,0 +1,42 @@
+kobo-nia:~$ evtest
+No device specified, trying to scan all of /dev/input/event*
+Not running as root, no devices may be available.
+Available devices:
+/dev/input/event0:	gpio-keys
+/dev/input/event1:	ektf2232
+Select the device event number [0-1]: 0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 5 (EV_SW)
+    Event code 0 (SW_LID) state 0
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1692965356.230552, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1692965356.230552, -------------- SYN_REPORT ------------
+Event: time 1692965356.411795, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1692965356.411795, -------------- SYN_REPORT ------------
+Event: time 1692965378.130126, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1692965378.130126, -------------- SYN_REPORT ------------
+Event: time 1692965378.772553, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1692965378.772553, -------------- SYN_REPORT ------------
+Event: time 1692965380.632785, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1692965380.632785, -------------- SYN_REPORT ------------
+Event: time 1692965381.843594, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1692965381.843594, -------------- SYN_REPORT ------------
+Event: time 1692965385.474208, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1692965385.474208, -------------- SYN_REPORT ------------
+Event: time 1692965386.768260, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1692965386.768260, -------------- SYN_REPORT ------------
+Event: time 1692965387.795239, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1692965387.795239, -------------- SYN_REPORT ------------
+Event: time 1692965387.875618, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1692965387.875618, -------------- SYN_REPORT ------------
+Event: time 1692965389.167646, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1692965389.167646, -------------- SYN_REPORT ------------
+Event: time 1692965390.459153, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1692965390.459153, -------------- SYN_REPORT ------------

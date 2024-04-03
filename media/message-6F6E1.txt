@@ -1,0 +1,35 @@
+``` is 460
+[ 2604.118024] PMU FG_RESET : calc_capacity_2 : capacity 9400 init_pswr 94 cc_delta 0
+[ 2604.124750] PMU: ricoh61x_battery_suspend status(7), rrf(0), suspend_soc(9357), suspend_cc(0)
+[ 2604.124763] PMU: ricoh61x_battery_suspend DSOC(9357), init_pswr(94), cc_delta(1)
+[ 2604.126463] PMU : set_current_time2register : second is 1699386898, hour is 472051
+[ 2604.156400] PMU FG_RESET : calc_capacity_2 : capacity 9400 init_pswr 94 cc_delta 0
+[ 2604.163211] PMU: ricoh61x_battery_suspend : STATUS(7), DSOC(9357), RSOC(9400), init_pswr*100(9400), cc_delta(0) ====================
+[ 2604.163225] PMU: ricoh61x_battery_suspend : fl_current(0), slp_state(1), sus_current(7420), hiber_current(560)
+[ 2604.192860] PM: suspend of devices complete after 115.657 msecs
+[ 2604.192882] PM: suspend devices took 0.120 seconds
+[ 2605.198538] PM: late suspend of devices complete after 1005.623 msecs
+[ 2605.200964] PM: noirq suspend of devices complete after 2.392 msecs
+[ 2605.200980] Disabling non-boot CPUs ...
+[ 2605.200990] Turn off M/F mix!
+[ 2605.202639] PM: noirq resume of devices complete after 1.548 msecs
+[ 2605.203685] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[ 2605.206460] IRQ gpio=0, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[ 2605.209150] IRQ gpio=1, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0xcf,when interrupt is comming
+[ 2605.213859] PMU:_config_ricoh619_charger_params set DCP/CDP charging.
+[ 2605.237806] PM: early resume of devices complete after 34.752 msecs
+[ 2605.240550] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[ 2605.253645] EPD QOS_WR 0x7, QOS_RD 0x7
+[ 2605.253701] ntx_power_key_hook():state=0
+[ 2605.270755] PMU: ricoh61x_battery_resume START ================================================================================
+[ 2605.272073] PMU : ricoh61x_battery_resume : 	suspend_period_time is 1304, sleepExitTime is 1699388202 sleepEntryTime is 1699386898 ==========
+[ 2605.273669] PMU : ricoh61x_battery_resume : 	RICOH61x_INT_IR_ADCL 0x00
+[ 2605.280455] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(160165)[mAs], cc_sum_dec(30853)
+[ 2605.281688] PMU calc_capacity_in_period Half-Clear CC, cc_sum is over 1%
+[ 2605.289897] PMU FG_RESET : calc_capacity : capacity 98 init_pswr 98 cc_delta 95
+[ 2605.305810] PMU: check_charge_status_2 g_full_flag=1 but OCV is low
+[ 2605.305823] PMU:check_charge_status_2 Resume Sus_soc(9357), cc(495)
+[ 2605.307545] PMU : set_current_time2register : second is 1699388202, hour is 472052
+[ 2605.328341] PMU FG_RESET : calc_capacity_2 : capacity 9895 init_pswr 98 cc_delta 95
+[ 2605.335128] PMU: ricoh61x_battery_resume : STATUS(7), DSOC(9852), RSOC(9895), init_pswr*100(9800), cc_delta(95) ====================
+```

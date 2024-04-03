@@ -1,0 +1,88 @@
+static int __elan_touch_init(struct i2c_client *client)
+{
+	int rc;
+	int major,minor;
+	int retry_cnt=5;
+	uint8_t buf_recv[4] = { 0 };
+	uint8_t getFirmwareVer[] = {0x53,0x00,0x00,0x01};
+	uint8_t getFirmwareId[] = {0x53,0xF0,0x00,0x01};
+	uint8_t cmd_x[] = {0x53, 0x60, 0x00, 0x00}; /*Get x resolution*/
+	uint8_t cmd_y[] = {0x53, 0x63, 0x00, 0x00}; /*Get y resolution*/
+	uint8_t cmd_bc[] = {0x53, 0x01, 0x00, 0x01};/* Get BootCode Version*/
+	
+	do {
+		rc = __hello_packet_handler(client);
+	} while (rc<0 && retry_cnt--);
+
+	if (rc < 0)
+		goto hand_shake_failed;
+	
+	i2c_master_send(client, getFirmwareVer, 4);
+	rc = i2c_master_recv(client, buf_recv, 4);
+	major = ((buf_recv[1] & 0x0f) << 4) | ((buf_recv[2] & 0xf0) >> 4);
+	minor = ((buf_recv[2] & 0x0f) << 4) | ((buf_recv[3] & 0xf0) >> 4);
+	g_fw_version = major << 8 | minor;
+	printk ("[%s-%d] firmware version %02X %02X %02X %02X (%04X)\n", __func__, __LINE__, buf_recv[0], buf_recv[1], buf_recv[2], buf_recv[3],g_fw_version);
+
+	i2c_master_send(client, getFirmwareId, 4);
+	rc = i2c_master_recv(client, buf_recv, 4);
+	major = ((buf_recv[1] & 0x0f) << 4) | ((buf_recv[2] & 0xf0) >> 4);
+	minor = ((buf_recv[2] & 0x0f) << 4) | ((buf_recv[3] & 0xf0) >> 4);
+	g_fw_id = major << 8 | minor;
+	printk ("[%s-%d] firmware ID %02X %02X %02X %02X (%04X)\n", __func__, __LINE__, buf_recv[0], buf_recv[1], buf_recv[2], buf_recv[3],g_fw_id);
+
+	if( 0x2422==g_fw_id || 0x0E00==g_fw_id){  //13.3"
+		gELAN_I2C_format = 2;
+	}
+	else if( g_fw_id!=0x10D3 ){
+		//printk("%s():fw_id=0x%x,pcbid=%d\n",__FUNCTION__,fw_id,(int)gptHWCFG->m_val.bPCB);
+		if (40==gptHWCFG->m_val.bPCB || 
+				49==gptHWCFG->m_val.bPCB || 
+				52==gptHWCFG->m_val.bPCB) 
+		{
+#ifdef MSP430_HOMEPAD
+			// E60Q5X , E60QD2 , E60QG2
+			msp430_homepad_sensitivity_set(0x05);
+#endif
+		}
+		gELAN_I2C_format = 1;
+	}
+
+	if(2==gELAN_I2C_format) {
+		IDX_PACKET_SIZE = 34;
+	}
+	else {
+		IDX_PACKET_SIZE = 8;
+	}
+
+	gElanBuffer = kmalloc(IDX_PACKET_SIZE*IDX_QUEUE_SIZE*sizeof(uint8_t),GFP_KERNEL);
+	packet_buf = kmalloc(IDX_PACKET_SIZE*sizeof(uint8_t),GFP_KERNEL);
+
+	if(1==gELAN_I2C_format) {
+		i2c_master_send(client, cmd_bc, 4);
+		rc = i2c_master_recv(client, buf_recv, 4);
+		printk ("[%s-%d] boot code version  %02X %02X %02X %02X\n", __func__, __LINE__, buf_recv[0], buf_recv[1], buf_recv[2], buf_recv[3]);
+
+		i2c_master_send(client, cmd_x, 4);
+		rc = i2c_master_recv(client, buf_recv, 4);
+		xResolution = (((buf_recv[2])) | ((buf_recv[3] & 0xf0) << 4));
+		printk ("[%s-%d] x resolution: %d \n", __func__, __LINE__, xResolution);
+
+		i2c_master_send(client, cmd_y, 4);
+		rc = i2c_master_recv(client, buf_recv, 4);
+		yResolution =  (((buf_recv[2])) | ((buf_recv[3] & 0xf0) << 4));
+		printk ("[%s-%d] y resolution: %d \n", __func__, __LINE__, yResolution);
+
+		if( (0x0DE1==g_fw_id && (0x10A6==g_fw_version||0x10A5==g_fw_version)) || 
+			(0x00B6==g_fw_id && 0x10A1==g_fw_version) ) {
+			__elan_10A6_calibration (client);
+		} else if(0x0499==g_fw_id){
+			__elan_touch_calibration (client);
+		}
+		return 4;
+	}
+
+	hand_shake_failed:
+	gpio_set_value(elan_touch_data.rst_gpio, 0);
+	return rc;
+}

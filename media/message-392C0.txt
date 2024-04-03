@@ -1,0 +1,375 @@
+nicolas@gentoo-ryzen ~/Documents/inkbox-git/build-koboplatformplugin-Kobo_glibc-Release $ make
+CROSS_TC=arm-kobo-linux-gnueabihf MINIMAL=1 KOBO=true make -C /home/nicolas/Documents/inkbox-git/qt5-kobo-platform-plugin/FBInk pic
+make[1]: Entering directory '/home/nicolas/Documents/inkbox-git/qt5-kobo-platform-plugin/FBInk'
+make staticlib SHARED=true
+make[2]: Entering directory '/home/nicolas/Documents/inkbox-git/qt5-kobo-platform-plugin/FBInk'
+mkdir -p Release/shared/cutef8 Release/static/cutef8 Release/shared/libunibreak/src Release/static/libunibreak/src Release/shared/qimagescale Release/static/qimagescale
+arm-kobo-linux-gnueabihf-gcc-ar rc Release/libfbink.a Release/static/fbink.o Release/static/cutef8/utf8.o Release/static/cutef8/dfa.o  
+arm-kobo-linux-gnueabihf-gcc-ranlib Release/libfbink.a
+make[2]: Leaving directory '/home/nicolas/Documents/inkbox-git/qt5-kobo-platform-plugin/FBInk'
+make[1]: Leaving directory '/home/nicolas/Documents/inkbox-git/qt5-kobo-platform-plugin/FBInk'
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/nicolas/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -Wall -Wextra -D_REENTRANT -fPIC -DQT_NO_FOREACH -DFBINK_FOR_KOBO -DQT_NO_DEBUG -DQT_PLUGIN -DQT_WIDGETS_LIB -DQT_SERVICE_SUPPORT_LIB -DQT_EVENTDISPATCHER_SUPPORT_LIB -DQT_FONTDATABASE_SUPPORT_LIB -DQT_FB_SUPPORT_LIB -DQT_GUI_LIB -DQT_DEVICEDISCOVERY_SUPPORT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR='"/home/nicolas/Documents/inkbox-git/build-koboplatformplugin-Kobo_glibc-Release"' -I../qt5-kobo-platform-plugin -I. -I../qt5-kobo-platform-plugin/src -I../qt5-kobo-platform-plugin/FBInk -I../qt5-kobo-platform-plugin/FBInk/libi2c-staged/include -I../../../qt-bin/qt-linux-5.15.2-kobo/include -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtWidgets -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtServiceSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtServiceSupport/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtServiceSupport/5.15.2/QtServiceSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtEventDispatcherSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtEventDispatcherSupport/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtEventDispatcherSupport/5.15.2/QtEventDispatcherSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtFontDatabaseSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtFontDatabaseSupport/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtFontDatabaseSupport/5.15.2/QtFontDatabaseSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtFbSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtFbSupport/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtFbSupport/5.15.2/QtFbSupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtGui/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtGui/5.15.2/QtGui -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtGui -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtDeviceDiscoverySupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtDeviceDiscoverySupport/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtDeviceDiscoverySupport/5.15.2/QtDeviceDiscoverySupport -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtCore/5.15.2 -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtCore/5.15.2/QtCore -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtTest -I../../../qt-bin/qt-linux-5.15.2-kobo/include/QtCore -I. -I../../../qt-bin/qt-linux-5.15.2-kobo/mkspecs/linux-kobo-gnueabihf-g++ -o kobodevicedescriptor.o ../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:17:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:27:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:36:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:44:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:51:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:60:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:69:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:77:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:84:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:99:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:113:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:124:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:131:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:138:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:156:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:186:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:214:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::dpi' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::width' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::height' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalWidth' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::physicalHeight' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:222:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+ };
+ ^
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: sorry, unimplemented: non-trivial designated initializers not supported
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: warning: missing initializer for member 'KoboDeviceDescriptor::touchscreenSettings' [-Wmissing-field-initializers]
+../qt5-kobo-platform-plugin/src/kobodevicedescriptor.cpp:236:1: warning: missing initializer for member 'KoboDeviceDescriptor::frontlightSettings' [-Wmissing-field-initializers]

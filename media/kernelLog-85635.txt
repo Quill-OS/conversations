@@ -1,0 +1,306 @@
++ mkimage -V
++ '[' 0 '!=' 0 ']'
++ sudo --version
++ '[' 0 '!=' 0 ']'
++ '[' /home/build/inkbox/kernel == '' ']'
++ '[' /home/build/inkbox/kernel/toolchain/arm-nickel-linux-gnueabihf == '' ']'
++ '[' arm-linux-gnueabihf == '' ']'
++ '[' 4 == '' ']'
++ cd /home/build/inkbox/kernel/toolchain/arm-nickel-linux-gnueabihf/bin
++ export PATH=/home/dk/.cargo/bin:/home/dk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/build/inkbox/kernel/toolchain/arm-nickel-linux-gnueabihf/bin
++ PATH=/home/dk/.cargo/bin:/home/dk/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/build/inkbox/kernel/toolchain/arm-nickel-linux-gnueabihf/bin
++ cd -
++ '[' n306 == n705 ']'
++ '[' n306 == n905c ']'
++ '[' n306 == n613 ']'
++ '[' n306 == n873 ']'
++ '[' n306 == n905b ']'
++ '[' n306 == n236 ']'
++ '[' n306 == n437 ']'
++ '[' n306 == n306 ']'
++ echo '---- Building Kobo Nia (N306) kernel ----'
+---- Building Kobo Nia (N306) kernel ----
++ '[' root == std ']'
++ '[' root == root ']'
++ echo '---- Building ROOT kernel for n306 ----'
+---- Building ROOT kernel for n306 ----
++ cd /home/build/inkbox/kernel
++ '[' n306 == n705 ']'
++ '[' n306 == n905c ']'
++ '[' n306 == n613 ']'
++ '[' n306 == n873 ']'
++ '[' n306 == n905b ']'
++ '[' n306 == emu ']'
++ '[' n306 == bpi ']'
++ '[' n306 == n236 ']'
++ '[' n306 == n437 ']'
++ '[' n306 == n306 ']'
++ cd /home/build/inkbox/kernel/kernel/linux-4.1.15-n306
++ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- mrproper
+  CLEAN   .
+  CLEAN   arch/arm/vdso
+  CLEAN   usr
+  CLEAN   .tmp_versions
+  CLEAN   scripts/basic
+  CLEAN   scripts/dtc
+  CLEAN   scripts/genksyms
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/arm/include/generated
+  CLEAN   .config .version
++ cp /home/build/inkbox/kernel/kernel/config/config-n306 /home/build/inkbox/kernel/kernel/linux-4.1.15-n306/.config
++ mkdir -p /home/build/inkbox/kernel/kernel/out/n306
++ '[' root == std ']'
++ '[' root == root ']'
++ sudo mkdir -p /home/build/inkbox/kernel/initrd/n306/etc/init.d
++ sudo mkdir -p /home/build/inkbox/kernel/initrd/n306/opt/bin
++ sudo su -c 'echo '\''rooted'\'' > /home/build/inkbox/kernel/initrd/n306/opt/root'
++ sudo cp /home/build/inkbox/kernel/initrd/common/rcS-root /home/build/inkbox/kernel/initrd/n306/etc/init.d/rcS
++ sudo cp /home/build/inkbox/kernel/initrd/common/init /home/build/inkbox/kernel/initrd/n306/etc/init.d/init
++ sudo cp /home/build/inkbox/kernel/initrd/common/startx /home/build/inkbox/kernel/initrd/n306/etc/init.d/startx
++ sudo cp /home/build/inkbox/kernel/initrd/common/inkbox-splash /home/build/inkbox/kernel/initrd/n306/etc/init.d/inkbox-splash
++ sudo cp /home/build/inkbox/kernel/initrd/common/developer-key /home/build/inkbox/kernel/initrd/n306/etc/init.d/developer-key
++ sudo cp /home/build/inkbox/kernel/initrd/common/overlay-mount /home/build/inkbox/kernel/initrd/n306/etc/init.d/overlay-mount
++ sudo cp /home/build/inkbox/kernel/initrd/common/initrd-fifo /home/build/inkbox/kernel/initrd/n306/etc/init.d/initrd-fifo
++ sudo cp /home/build/inkbox/kernel/initrd/common/uidgen /home/build/inkbox/kernel/initrd/n306/opt/bin/uidgen
++ sudo cp /home/build/inkbox/kernel/initrd/common/checksum-verify /home/build/inkbox/kernel/initrd/n306/bin/checksum-verify
++ sudo cp /home/build/inkbox/kernel/initrd/common/setup-wifi /home/build/inkbox/kernel/initrd/n306/sbin/setup-wifi
++ mkdir -p /home/build/inkbox/kernel/kernel/out/n306
++ build_id_gen /home/build/inkbox/kernel/initrd/n306/opt/
++ '[' -z /home/build/inkbox/kernel/initrd/n306/opt/ ']'
+++ tr -dc A-Za-z0-9
+++ head -c 8
++ BUILD_ID=gFBsuEgl
+++ git rev-parse HEAD
+++ head -c 7
++ GIT_COMMIT=930ae5d
++ echo '---- Kernel build ID is: gFBsuEgl ----'
+---- Kernel build ID is: gFBsuEgl ----
++ echo '---- Kernel commit is: 930ae5d ----'
+---- Kernel commit is: 930ae5d ----
++ sudo su -c 'echo gFBsuEgl > '\''/home/build/inkbox/kernel/initrd/n306/opt//build_id'\'''
++ sudo su -c 'echo 930ae5d > '\''/home/build/inkbox/kernel/initrd/n306/opt//commit'\'''
++ '[' n306 == n705 ']'
++ '[' n306 == n905c ']'
++ '[' n306 == n613 ']'
++ '[' n306 == n873 ']'
++ '[' n306 == n905b ']'
++ '[' n306 == emu ']'
++ '[' n306 == bpi ']'
++ '[' n306 == n236 ']'
++ '[' n306 == n437 ']'
++ '[' n306 == n306 ']'
++ cd /home/build/inkbox/kernel/kernel/linux-4.1.15-n306
++ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage -j4
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+drivers/input/misc/Kconfig:815:warning: leading whitespace ignored
+  CHK     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/bitsperlong.h
+  WRAP    arch/arm/include/generated/asm/cputime.h
+  WRAP    arch/arm/include/generated/asm/current.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm/include/generated/asm/errno.h
+  WRAP    arch/arm/include/generated/asm/exec.h
+  UPD     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/ioctl.h
+  CHK     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/ipcbuf.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  UPD     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm/include/generated/asm/msgbuf.h
+  WRAP    arch/arm/include/generated/asm/param.h
+  WRAP    arch/arm/include/generated/asm/parport.h
+  WRAP    arch/arm/include/generated/asm/poll.h
+  WRAP    arch/arm/include/generated/asm/preempt.h
+  WRAP    arch/arm/include/generated/asm/resource.h
+  WRAP    arch/arm/include/generated/asm/rwsem.h
+  WRAP    arch/arm/include/generated/asm/scatterlist.h
+  WRAP    arch/arm/include/generated/asm/seccomp.h
+  WRAP    arch/arm/include/generated/asm/sections.h
+  WRAP    arch/arm/include/generated/asm/segment.h
+  WRAP    arch/arm/include/generated/asm/sembuf.h
+  WRAP    arch/arm/include/generated/asm/serial.h
+  WRAP    arch/arm/include/generated/asm/shmbuf.h
+  WRAP    arch/arm/include/generated/asm/siginfo.h
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/sizes.h
+  WRAP    arch/arm/include/generated/asm/socket.h
+  HOSTCC  scripts/basic/bin2c
+  WRAP    arch/arm/include/generated/asm/sockios.h
+  WRAP    arch/arm/include/generated/asm/termbits.h
+  WRAP    arch/arm/include/generated/asm/termios.h
+  WRAP    arch/arm/include/generated/asm/timex.h
+  WRAP    arch/arm/include/generated/asm/trace_clock.h
+  WRAP    arch/arm/include/generated/asm/unaligned.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  Generating include/generated/mach-types.h
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/genksyms/genksyms.o
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/flattree.o
+  CC      scripts/mod/devicetable-offsets.s
+  MKELF   scripts/mod/elfconfig.h
+  GEN     scripts/mod/devicetable-offsets.h
+  HOSTCC  scripts/mod/sumversion.o
+  SHIPPED scripts/genksyms/parse.tab.c
+  SHIPPED scripts/genksyms/lex.lex.c
+  SHIPPED scripts/genksyms/keywords.hash.c
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTLD  scripts/genksyms/genksyms
+  HOSTCC  scripts/conmakehash
+  HOSTCC  scripts/dtc/util.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/sortextable
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  CC      kernel/bounds.s
+In file included from include/linux/kernel.h:11,
+                 from include/asm-generic/bug.h:13,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/page-flags.h:9,
+                 from kernel/bounds.c:9:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CHK     include/generated/bounds.h
+  UPD     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+In file included from include/linux/kernel.h:11,
+                 from include/linux/sched.h:17,
+                 from arch/arm/kernel/asm-offsets.c:14:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  CHK     include/generated/asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  HOSTLD  scripts/dtc/dtc
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  HOSTCC  usr/gen_init_cpio
+  UPD     include/generated/compile.h
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from init/main.c:15:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CC      init/do_mounts_rd.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from init/do_mounts.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+In file included from include/linux/kernel.h:11,
+                 from init/do_mounts_rd.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  GEN     usr/initramfs_data.cpio.xz
+  CC      init/do_mounts_initrd.o
+In file included from include/linux/kernel.h:11,
+                 from init/do_mounts_initrd.c:12:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/ccXBc930.s: Assembler messages:
+/tmp/ccXBc930.s:957: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccXBc930.s:1118: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccXBc930.s:1161: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccXBc930.s:1400: Error: selected processor does not support `cpsie i' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: init/main.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+  CC      arch/arm/vfp/vfpmodule.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/kobject.h:20,
+                 from include/linux/device.h:17,
+                 from include/linux/node.h:17,
+                 from include/linux/cpu.h:16,
+                 from arch/arm/vfp/vfpmodule.c:12:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  AS      arch/arm/vfp/entry.o
+  AS      arch/arm/vfp/vfphw.o
+  CC      arch/arm/vfp/vfpsingle.o
+In file included from include/linux/kernel.h:11,
+                 from arch/arm/vfp/vfpsingle.c:33:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/ccQprHfD.s: Assembler messages:
+/tmp/ccQprHfD.s:326: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccQprHfD.s:590: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccQprHfD.s:653: Error: selected processor does not support `isb ' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: arch/arm/vfp/vfpmodule.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+  LDS     arch/arm/vdso/vdso.lds
+  CC      arch/arm/vdso/vgettimeofday.o
+make: *** [Makefile:947: init] Error 2
+make: *** Waiting for unfinished jobs....
+  AS      arch/arm/vdso/datapage.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/rbtree.h:32,
+                 from include/linux/hrtimer.h:18,
+                 from arch/arm/vdso/vgettimeofday.c:19:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  HOSTCC  arch/arm/vdso/vdsomunge
+/tmp/ccilQqk8.s: Assembler messages:
+/tmp/ccilQqk8.s:65: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:79: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccilQqk8.s:82: Error: selected processor does not support `mrrc p15,1,r4,r5,c14' in ARM mode
+/tmp/ccilQqk8.s:98: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:113: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:206: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:216: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:235: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:247: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:316: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccilQqk8.s:327: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccilQqk8.s:330: Error: selected processor does not support `mrrc p15,1,r6,r7,c14' in ARM mode
+/tmp/ccilQqk8.s:349: Error: selected processor does not support `dmb ish' in ARM mode
+make[1]: *** [scripts/Makefile.build:259: arch/arm/vdso/vgettimeofday.o] Error 1
+make: *** [Makefile:947: arch/arm/vdso] Error 2
+make: *** [Makefile:947: arch/arm/vfp] Error 2
+  AS      usr/initramfs_data.o
+  LD      usr/built-in.o
++ '[' 2 == 0 ']'
++ echo '---- There was an error during the build process, aborting... ----'
+---- There was an error during the build process, aborting... ----
++ exit 1

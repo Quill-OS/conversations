@@ -1,0 +1,71 @@
+[build@inkbox libinput]$ DESTDIR=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot meson setup --cross-file ../meson-kobo.txt build
+The Meson build system
+Version: 1.0.1
+Source dir: /home/build/inkbox/compiled-binaries/libinput
+Build dir: /home/build/inkbox/compiled-binaries/libinput/build
+Build type: cross build
+Project name: libinput
+Project version: 1.23.0
+C compiler for the host machine: arm-kobo-linux-gnueabihf-gcc (gcc 11.2.0 "arm-kobo-linux-gnueabihf-gcc (crosstool-NG 1.24.0.519_3e2d99d - NiLuJe) 11.2.0")
+C linker for the host machine: arm-kobo-linux-gnueabihf-gcc ld.bfd 1.24.0.519
+C compiler for the build machine: cc (gcc 12.1.0 "cc (GCC) 12.1.0")
+C linker for the build machine: cc ld.bfd 2.38
+Build machine cpu family: aarch64
+Build machine cpu: aarch64
+Host machine cpu family: arm
+Host machine cpu: arm
+Target machine cpu family: arm
+Target machine cpu: arm
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wlogical-op: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wuninitialized: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES (cached)
+Compiler for C supports arguments -Wimplicit-fallthrough: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wincompatible-pointer-types: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Fetching value of define "static_assert" :  
+Header "dirent.h" has symbol "versionsort" : YES 
+Header "errno.h" has symbol "program_invocation_short_name" : YES 
+Has header "xlocale.h" : YES 
+Checking if "locale.h" : links: YES 
+Header "sys/ptrace.h" has symbol "PTRACE_ATTACH" : YES 
+Found pkg-config: /usr/bin/pkg-config (1.8.1)
+Run-time dependency libudev found: YES 243
+Run-time dependency mtdev found: YES 1.1.5
+Run-time dependency libevdev found: YES 1.13.0
+Library m found: YES
+Library rt found: YES
+Configuring 80-libinput-device-groups.rules using configuration
+Configuring 90-libinput-fuzz-override.rules using configuration
+Configuring 80-libinput-device-groups-litest.rules using configuration
+Configuring 90-libinput-fuzz-override-litest.rules using configuration
+Header "sys/epoll.h" has symbol "epoll_create1" : YES 
+Configuring test-util-includes-util-bits.h.c using configuration
+Configuring test-util-includes-util-input-event.h.c using configuration
+Configuring test-util-includes-util-list.h.c using configuration
+Configuring test-util-includes-util-macros.h.c using configuration
+Configuring test-util-includes-util-matrix.h.c using configuration
+Configuring test-util-includes-util-prop-parsers.h.c using configuration
+Configuring test-util-includes-util-ratelimit.h.c using configuration
+Configuring test-util-includes-util-strings.h.c using configuration
+Configuring test-util-includes-util-time.h.c using configuration
+Configuring libinput-version.h using configuration
+Program test/test_quirks_files.py found: YES (/home/build/inkbox/compiled-binaries/libinput/test/test_quirks_files.py)
+meson.build:485: WARNING: Project targets '>= 0.49.0' but uses feature introduced in '0.56.0': meson.project_source_root.
+Found CMake: NO
+Run-time dependency gtk4 found: NO (tried pkgconfig and cmake)
+Run-time dependency gtk+-3.0 found: NO (tried pkgconfig)
+
+meson.build:553:2: ERROR: Dependency "gtk+-3.0" not found, tried pkgconfig
+
+A full log can be found at /home/build/inkbox/compiled-binaries/libinput/build/meson-logs/meson-log.txt
+[build@inkbox libinput]$

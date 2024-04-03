@@ -1,0 +1,48 @@
+execve("./fbink", ["./fbink", "-k", "-f"], 0xbed01d98 /* 17 vars */) = 0
+uname({sysname="Linux", nodename="kindle", ...}) = 0
+brk(NULL)                               = 0x179000
+brk(0x179d00)                           = 0x179d00
+set_tls(0x1794c0)                       = 0
+brk(0x19ad00)                           = 0x19ad00
+brk(0x19b000)                           = 0x19b000
+open("/dev/fb0", O_RDWR|O_CLOEXEC)      = 3
+open("/proc/usid", O_RDONLY|O_CLOEXEC)  = 4
+fcntl64(4, F_GETFD)                     = 0x1 (flags FD_CLOEXEC)
+fstat64(4, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40000000
+read(4, "B01114082142063E", 1024)       = 16
+close(4)                                = 0
+munmap(0x40000000, 4096)                = 0
+brk(0x19a000)                           = 0x19a000
+write(2, "[FBInk] Detected a Kindle Touch "..., 59[FBInk] Detected a Kindle Touch (0x11 => Whitney on Yoshi)
+) = 59
+write(2, "[FBInk] Enabled Kindle with Pear"..., 48[FBInk] Enabled Kindle with Pearl screen quirks
+) = 48
+write(2, "[FBInk] Clock tick frequency app"..., 50[FBInk] Clock tick frequency appears to be 100 Hz
+) = 50
+write(2, "[FBInk] Screen density set to 16"..., 38[FBInk] Screen density set to 167 dpi
+) = 38
+ioctl(3, FBIOGET_VSCREENINFO, 0x176e0c) = 0
+write(2, "[FBInk] Variable fb info: 600x80"..., 72[FBInk] Variable fb info: 600x800, 8bpp @ rotation: 1 (Clockwise, 90°)
+) = 72
+ioctl(3, FBIOGET_FSCREENINFO, 0x176dc0) = 0
+write(2, "[FBInk] Fixed fb info: ID is \"mx"..., 101[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 2179072 bytes & line length: 608 bytes
+) = 101
+write(2, "[FBInk] Fontsize set to 16x16 (I"..., 57[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+) = 57
+write(2, "[FBInk] Line length: 37 cols, Pa"..., 49[FBInk] Line length: 37 cols, Page size: 50 rows
+) = 49
+write(2, "[FBInk] Pen colors set to #00000"..., 84[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+) = 84
+mmap2(NULL, 2179072, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0x40001000
+getpid()                                = 2741
+ioctl(3, _IOC(_IOC_WRITE, 0x46, 0x2e, 0x48), 0xbeb1b8d0) = -1 EPERM (Operation not permitted)
+write(2, "[FBInk] [refresh_kindle] MXCFB_S"..., 69[FBInk] [refresh_kindle] MXCFB_SEND_UPDATE: Operation not permitted!
+) = 69
+write(2, "[FBInk] [fbink_cls] Failed to re"..., 50[FBInk] [fbink_cls] Failed to refresh the screen!
+) = 50
+munmap(0x40001000, 2179072)             = 0
+close(3)                                = 0
+exit_group(-1)                          = ?
++++ exited with 255 +++
+kindle:/tmp#

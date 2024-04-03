@@ -1,0 +1,74 @@
+Starting kernel ...
+
+[    0.004770] /cpus/cpu@0 missing clock-frequency property
+[    0.423838] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.423879] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    5.534525] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021c08 ntx_machine_poweroff
+[    5.545653] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[    5.610654] ==== calc_soc_by_voltageMethod E60U22 ====
+[    5.841263] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gps
+[    5.856677] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    5.863841] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  s
+[    5.878176] gpio-keys gpio-keys: Error applying setting, reverse things back
+Linux inkbox 4.1.15 #1 SMP PREEMPT Sat Feb 19 21:21:19 CET 2022 armv7l GNU/Linux
+InkBox OS, kernel build 3NMth0qo
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+
+Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1: clean, 12/3840 files, 2246/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+ext2fs_open2: Bad magic number in super-block
+/usr/bin/fsck.ext4: Superblock invalid, trying backup blocks...
+/usr/bin/fsck.ext4: Bad magic number in super-block while trying to open /dev/mmcblk0p2
+
+The superblock could not be read or does not describe a valid ext2/ext3/ext4
+filesystem.  If the device is valid and it really contains an ext2/ext3/ext4
+filesystem (and not swap or ufs or something else), then the superblock
+is corrupt, and you might try running e2fsck with an alternate superblock:
+    e2fsck -b 8193 <device>
+ or
+    e2fsck -b 32768 <device>
+
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p3: clean, 15/32768 files, 91310/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4: clean, 48/930240 files, 756023/3715712 blocks
+
+Generating device UID ...
+Done. UID:
+zPXwkQVAV161kzUeXHyn63nP23AjGtQflPxn6nKsiDpb0OpJG3KmYw5yh5yjTEwgcyqqkvTs789vE8EUL4sxhjLqGpSGNHzzloL2hcYxyxcdyinb1jK80lkxzRmyibvvO0snc
+Flashing UID to MMC ...
+0+1 records in
+0+1 records out
+256 bytes (256B) copied, 0.005237 seconds, 47.7KB/s
+Done.
+0+1 records in
+0+1 records out
+2 bytes (2B) copied, 0.002991 seconds, 668B/s
+(initrd) Hit any key to stop auto-boot ... 
+mount: mounting /dev/mmcblk0p2 on /recoveryfs-part failed: Invalid argument
+Utility root filesystem's signature is invalid! Shutting down ...
+umount: can't unmount /recoveryfs-part: Invalid argument
+tar: can't open '/opt/splash-rootfs.tar.xz': No such file or directory
+cp: can't create '/splash/bin/busybox': No such file or directory
+mount: mounting devtmpfs on /splash/dev failed: No such file or directory
+mount: mounting sysfs on /splash/sys failed: No such file or directory
+mount: mounting proc on /splash/proc failed: No such file or directory
+ln: /splash/bin/sh: No such file or directory
+ln: /splash/bin/cat: No such file or directory
+chroot: can't execute '/opt/fbink/fbink': No such file or directory
+chroot: can't execute '/bin/sh': No such file or directory
+mount: mounting /dev/mmcblk0p1 on /mnt/boot failed: No such file or directory
+WARNING: User violated security policy!
+Flashing a new kernel that does not allow root access...
+dd: can't open '/mnt/opt/recovery/restore/uImage-std': No such file or directory
+/etc/init.d/rcS: line 178: can't create /mnt/boot/flags/ALERT: nonexistent directory
+umount: can't unmount /mnt/boot: No such file or directory
+Done, rebooting...
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes
+Requesting system poweroff
+[   17.708421] reboot: Power down

@@ -1,0 +1,34 @@
+kobo:~# rm /tmp/inkbox; wget 192.168.64.2:8000/inkbox -O /tmp/inkbox; chmod +x /tmp/inkbox; umount -l -f /kobo/mnt/onboard/.adds/inkbox/inkbox-bin; mount --bind /tmp/inkbox /kobo/mnt/onboard/.adds/inkbox/inkbox-bin; killall inkbox-bin inkbox inkbox.sh; en
+v QT_QPA_PLATFORM=kobo chroot /kobo /mnt/onboard/.adds/inkbox/inkbox.sh
+rm: cannot remove '/tmp/inkbox': No such file or directory
+--2023-07-21 16:55:15--  http://192.168.64.2:8000/inkbox
+Connecting to 192.168.64.2:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8077772 (7.7M) [application/octet-stream]
+Saving to: '/tmp/inkbox'
+
+/tmp/inkbox                                                     100%[======================================================================================================================================================>]   7.70M  8.48MB/s    in 0.9s    
+
+2023-07-21 16:55:16 (8.48 MB/s) - '/tmp/inkbox' saved [8077772/8077772]
+
+umount: can't unmount /kobo/mnt/onboard/.adds/inkbox/inkbox-bin: Invalid argument
+killall: inkbox.sh: no process killed
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+21/07/2023 @ 16:55:29 | main: Running on device n249
+21/07/2023 @ 16:55:29 | main: Device has Wi-Fi capabilities
+21/07/2023 @ 16:55:29 | sleepThread: Sleep pipe thread active
+21/07/2023 @ 16:55:30 | sleepThread: Looking for messages in pipe
+21/07/2023 @ 16:55:32 | MainWindow: Checking for available updates
+21/07/2023 @ 16:55:32 | MainWindow: checkForUpdate: No update available.
+Screen refresh failed! Region: 0 0 1072 1448
+Screen refresh failed! Region: 0 0 1072 1448
+Screen refresh failed! Region: 25 179 868 69
+21/07/2023 @ 16:55:33 | MainWindow: Showing USB Mass Storage dialog
+Screen refresh failed! Region: 25 738 67 69
+Screen refresh failed! Region: 549 221 630 350
+Screen refresh failed! Region: 38 221 630 906
+Screen refresh failed! Region: 675 252 568 136
+21/07/2023 @ 16:55:34 | MainWindow: Setting initial brightness to 60
+21/07/2023 @ 16:55:34 | MainWindow: Ignoring cinematic brightness call because it has already been done
+Screen refresh failed! Region: 25 179 522 69

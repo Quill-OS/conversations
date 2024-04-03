@@ -1,0 +1,171 @@
+
+
+U-Boot 2009.08 (Feb 20 2024 - 14:31:26)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 266666666Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Board: MX50 RDP board
+Boot Reason: [POR]
+Boot Device: SD
+I2C:   ready
+DRAM:  512 MB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+In:    serial
+Out:   serial
+Err:   serial
+[_get_sd_number] g_sd_number:2
+
+MMC read: dev # 2, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 1024, count 1 partition # 0 ... 
+1 blocks read: OK
+PCB ID is 41
+ESDin=0,UPGKey=-1,PWRKey=0
+ram p=70000000,size=536870912
+
+MMC read: dev # 2, block # 14335, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 14336, count 13235 partition # 0 ... 
+13235 blocks read: OK
+
+MMC read: dev # 2, block # 18431, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+
+MMC read: dev # 2, block # 45055, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+Kernel RAM visiable size=505M->505M
+init TPS65185 power ...
+Relock PLL1 to 1GHz ...
+mx50 pll1: 1000MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 250000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Hit any key to stop autoboot:  0 
+
+MMC read: dev # 2, block # 81919, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 2, block # 81920, count 16384 partition # 0 ... 
+16384 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   r?_#1 Feb 20 13:38:24
+   Created:      2024-02-20  21:38:32 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    7255424 Bytes =  6.9 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Linux version 2.6.35.3-850-gbc67621-inkbox+ (angus@midas) (gcc version 4.4.1 (Sourcery G++ Lite 2009q3-67) ) #1 PREEMPT Tue Feb 20 13:38:24 PST 2024
+CPU: ARMv7 Processor [412fc085] revision 5 (ARMv7), cr=10c53c7f
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Machine: Freescale MX50 Reference Design Platform
+Ignoring unrecognised tag 0x54410009
+Memory policy: ECC disabled, Data cache writeback
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 128270
+Kernel command line: console=ttymxc0,115200 rootwait rw lpj=4997120 root=/dev/ram0 rdinit=/sbin/init rootfstype=ramfs hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8f989800 waveform_sz=6776288 mem=505M selinux=0 printk.time mx50_1GHz
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 505MB = 505MB total
+[    0.000000] Memory: 502700k/502700k available, 14420k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xf9e00000 - 0xffe00000   (  96 MB)
+[    0.000000]     vmalloc : 0xa0000000 - 0xf4000000   (1344 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x9f900000   ( 505 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .init : 0x80008000 - 0x80578000   (5568 kB)
+[    0.000000]       .text : 0x80578000 - 0x80934000   (3824 kB)
+[    0.000000]       .data : 0x80950000 - 0x8098d5a0   ( 246 kB)
+[    0.000000] SLUB: Genslabs=11, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU-based detection of stalled CPUs is disabled.
+[    0.000000] 	Verbose stalled-CPUs detection is disabled.
+[    0.000000] NR_IRQS:368
+[    0.000000] MXC GPIO hardware
+[    0.000000] MXC IRQ initialized
+[    0.000000] MXC_Early serial console at MMIO 0x53fc0000 (options '115200')
+[    0.000000] bootconsole [ttymxc0] enabled
+[    0.000000] Console: colour dummy device 80x30
+[    1.547091] Calibrating delay loop (skipped) preset value.. 999.42 BogoMIPS (lpj=4997120)
+[    1.555364] pid_max: default: 32768 minimum: 301
+[    1.560052] Security Framework initialized
+[    1.564203] SELinux:  Disabled at boot.
+[    1.568094] Mount-cache hash table entries: 512
+[    1.572930] CPU: Testing write buffer coherency: ok
+[    1.578199] devtmpfs: initialized
+[    1.584752] regulator: core version 0.5
+[    1.588856] NET: Registered protocol family 16
+[    1.593402] i.MX IRAM pool: 128 KB@0xa0040000
+[    1.598907] hwcfg_size_setup() hwcfg_szie=110
+[    1.603341] hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=a006ee00,size=110
+[    1.609800] NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too new !! Please update hardware config tool !!
+[    1.619812] hwcfg_p_setup() pcba="(null)" !!
+[    1.624121] NtxHwCfg_GetCfgFldVal:[WARNING]Config version too new !! Please update hardware config tool !!
+[    1.633867] root_path_setup() rootdev=0,rootpart=1
+[    1.638707] CPU is i.MX50 Revision 1.1
+[    1.642541] [check_hardware_name-615] PCBA ID is 41
+[    1.649073] [mxc_board_init-3180] register esdhc3 as mmcblk0
+[    1.658133] Using SDMA I.API
+[    1.661157] MXC DMA API initialized
+[    1.665047] IMX usb wakeup probe
+[    1.668673] IMX usb wakeup probe
+[    1.677462] bio: create slab <bio-0> at 0
+[    1.682255] regulator: DCDC_3V15: 3150 mV 
+[    1.687567] SCSI subsystem initialized
+[    1.692234] CSPI: mxc_spi-2 probed
+[    1.696072] usbcore: registered new interface driver usbfs
+[    1.701879] usbcore: registered new interface driver hub
+[    1.707399] usbcore: registered new device driver usb
+[    1.718053] mc13892 Rev 0.0 FinVer 0 detected
+[    1.722456] Initializing regulators for mx50 rdp.
+[    1.727622] regulator: SW1: 600 <--> 1375 mV at 600 mV 
+[    1.734154] Device spi3.0 probed
+[    1.738040] Switching to clocksource mxc_timer1
+[    1.744242] NET: Registered protocol family 2
+[    1.748859] IP route cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    1.756436] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    1.764004] TCP bind hash table entries: 16384 (order: 4, 65536 bytes)
+[    1.770754] TCP: Hash tables configured (established 16384 bind 16384)
+[    1.777349] TCP reno registered
+[    1.780522] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    1.786426] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    1.792876] NET: Registered protocol family 1
+ððüðüŒüüüüðÿðü|þ|ÿŒðü`þà€ü€€àü|Ààœ|ÿŒüœppø€|ð€

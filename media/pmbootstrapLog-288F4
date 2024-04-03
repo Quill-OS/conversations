@@ -1,0 +1,41 @@
+pmbootstrap init
+[13:27:33] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+[13:27:33] Work path [/home/pi/.local/var/pmbootstrap]: 
+[13:27:34] NOTE: pmaports path: /home/pi/.local/var/pmbootstrap/cache_git/pmaports
+[13:27:34] Choose the postmarketOS release channel.
+[13:27:34] Available (7):
+[13:27:34] * edge: Rolling release / Most devices / Occasional breakage: https://postmarketos.org/edge
+[13:27:34] * v22.12: Latest release / Recommended for best stability
+[13:27:34] * v22.06: Old release (unsupported)
+[13:27:34] * v21.12: Old release (unsupported)
+[13:27:34] * v21.06: Old release (unsupported)
+[13:27:34] * v21.03: Old release (unsupported)
+[13:27:34] * v20.05: Old release (unsupported)
+[13:27:34] Channel [edge]: edge
+[13:27:52] Choose your target device vendor (either an existing one, or a new one for porting).
+[13:27:52] Available vendors (76): acer, alcatel, amazon, amediatech, apple, ark, arrow, asus, beelink, bq, cubietech, cutiepi, dongshanpi, essential, fairphone, finepower, fly, goclever, google, gp, hisense, htc, huawei, infocus, jolla, klipad, kobo, lark, leeco, lenovo, lg, mangopi, medion, meizu, microsoft, mobvoi, motorola, nextbit, nobby, nokia, nvidia, odroid, oneplus, oppo, ouya, pegatron, pine64, planet, purism, qemu, radxa, raspberry, samsung, semc, sharp, shift, sipeed, sony, sourceparts, surftab, t2m, tablet, tokio, tolino, trekstor, vernee, videostrong, volla, wexler, wiko, wileyfox, xiaomi, xunlong, yu, zte, zuk
+[13:27:52] Vendor [qemu]: kobo
+[13:28:33] Available codenames (2): clara, librah2o
+[13:28:33] Device codename: kobo-nia
+[13:28:40] You are about to do a new device port for 'kobo-kobo-nia'.
+[13:28:40] Continue? (y/n) [y]: n
+[13:28:43] Vendor [kobo]: kobo
+[13:28:48] Available codenames (2): clara, librah2o
+[13:28:48] Device codename: nia
+[13:28:50] You are about to do a new device port for 'kobo-nia'.
+[13:28:50] Continue? (y/n) [y]: y
+[13:28:57] Generating new aports for: kobo-nia...
+[13:28:57] Device architecture (armv7/aarch64/x86_64/x86/riscv64) [armv7]: armv7
+[13:30:39] Who produced the device (e.g. LG)?
+[13:30:39] Manufacturer: unknown
+[13:32:49] What is the official name (e.g. Google Nexus 5)?
+[13:32:49] Name: Kobo Nia
+[13:32:54] In what year was the device released (e.g. 2012)?
+[13:32:54] Year: 2020
+[13:33:18] What type of device is it?
+[13:33:18] Valid types are: desktop, laptop, convertible, server, tablet, handset, watch, embedded, vm
+[13:33:18] Chassis: tablet
+[13:33:49] Does the device have a hardware keyboard? (y/n) [n]: n
+[13:33:51] Does the device have a sdcard or other external storage medium? (y/n) [n]: y
+[13:34:00] Which flash method does the device support?
+[13:34:00] Flash method (0xffff/fastboot/heimdall/none/rkdeveloptool/uuu) [0xffff]: 

@@ -1,0 +1,82 @@
+diff --git a/initrd/common/rcS-root b/initrd/common/rcS-root
+index c221a71d91..52307ae53d 100755
+--- a/initrd/common/rcS-root
++++ b/initrd/common/rcS-root
+@@ -353,7 +353,7 @@ main() {
+ 					[ ! -e /mnt/opt/storage/ssh ] && mkdir -p /mnt/opt/storage/ssh
+ 					[ ! -e /mnt/opt/storage/ssh/sshd_config ] && touch /mnt/opt/storage/ssh/sshd_config
+ 					mount --bind /mnt/opt/storage/ssh /mnt/etc/ssh
+-					echo "PermitRootLogin yes" > /tmp/sshd_config
++					echo -e "PermitRootLogin yes\nSubsystem sftp internal-sftp\n# If sshfs doesn't work, first enable read-write support, then begin a connection with sshfs" > /tmp/sshd_config
+ 					mount --bind /tmp/sshd_config /mnt/etc/ssh/sshd_config
+ 					set_progress 40
+ 					progress_sleep
+diff --git a/kernel/config/config-n306 b/kernel/config/config-n306
+index d025b1cfd3..0e274a5a0f 100644
+--- a/kernel/config/config-n306
++++ b/kernel/config/config-n306
+@@ -3521,12 +3521,12 @@ CONFIG_ZLIB_INFLATE=y
+ CONFIG_LZO_COMPRESS=y
+ CONFIG_LZO_DECOMPRESS=y
+ CONFIG_XZ_DEC=y
+-CONFIG_XZ_DEC_X86=y
+-CONFIG_XZ_DEC_POWERPC=y
+-CONFIG_XZ_DEC_IA64=y
++# CONFIG_XZ_DEC_X86 is not set
++# CONFIG_XZ_DEC_POWERPC is not set
++# CONFIG_XZ_DEC_IA64 is not set
+ CONFIG_XZ_DEC_ARM=y
+ CONFIG_XZ_DEC_ARMTHUMB=y
+-CONFIG_XZ_DEC_SPARC=y
++# CONFIG_XZ_DEC_SPARC is not set
+ CONFIG_XZ_DEC_BCJ=y
+ # CONFIG_XZ_DEC_TEST is not set
+ CONFIG_DECOMPRESS_XZ=y
+diff --git a/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elan_touch_i2c.c b/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elan_touch_i2c.c
+index e148368714..ee09f232b9 100644
+--- a/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elan_touch_i2c.c
++++ b/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elan_touch_i2c.c
+@@ -771,7 +771,8 @@ static int elan_touch_suspend(struct platform_device *pdev, pm_message_t state)
+ {
+ 	if (gSleep_Mode_Suspend) {
+ 		gpio_set_value(elan_touch_data.rst_gpio, 0);
+-//		disable_irq_wake (elan_touch_data.client->irq);
++		// Edited by szybet to avoid waking up from sleep by touchscreen. i dont know that i do but it works
++		// disable_irq_wake (elan_touch_data.client->irq);
+ 		free_irq(elan_touch_data.client->irq, &elan_touch_data);
+ 		gTouchDisabled = 1;
+ 		isCalibrated = 0;
+@@ -790,7 +791,8 @@ static int elan_touch_suspend(struct platform_device *pdev, pm_message_t state)
+ 		return -1;
+ 	}
+ 	else
+-		enable_irq_wake (elan_touch_data.client->irq);
++		// Edited by szybet to avoid waking up from sleep by touchscreen. i dont know that i do but it works
++		// enable_irq_wake (elan_touch_data.client->irq);
+ 	return 0;
+ }
+ 
+@@ -804,7 +806,8 @@ static int elan_touch_resume(struct platform_device *pdev)
+ 		elan_touch_register_interrupt(elan_touch_data.client);
+ 	}
+ 	else
+-		disable_irq_wake (elan_touch_data.client->irq);
++		// Edited by szybet to avoid waking up from sleep by touchscreen. i dont know that i do but it works
++		// disable_irq_wake (elan_touch_data.client->irq);
+ 	gTouchDisabled = 0;
+ 
+ 	return 0;
+diff --git a/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elants_i2c.c b/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elants_i2c.c
+index 0efd766a54..5a9b890173 100644
+--- a/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elants_i2c.c
++++ b/kernel/linux-4.1.15-n306/drivers/input/touchscreen/elants_i2c.c
+@@ -1200,7 +1200,8 @@ static int __maybe_unused elants_i2c_suspend(struct device *dev)
+ 	}
+ 
+ 	if (device_may_wakeup(dev))
+-		ts->wake_irq_enabled = (enable_irq_wake(client->irq) == 0);
++		// ts->wake_irq_enabled = (enable_irq_wake(client->irq) == 0);
++		// Edited by szybet to avoid waking up from sleep by touchscreen. i dont know that i do but it works
+ 
+ 	return 0;
+ }

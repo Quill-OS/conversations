@@ -1,0 +1,302 @@
+[  253.529124] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  253.559808] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  253.563657] usb plugged 1                                                                   
+[  253.578599] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  254.746921] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.               
+[  256.211227] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  256.211250] PMU2: Watchdog timeout triggered. ===============                               
+[  263.352227] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  263.356001] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xcd,when interrupt is cog
+[  263.371779] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  273.102205] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  273.105964] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  273.109719] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xc4,when interrupt is cog
+[  273.112705] PMU:charger_usb_isr                                                             
+[  273.127329] usb unplugged                                                                   
+[  274.384088] PMU: cc_sum = 479: cc_cap_res= 59: cc_cap_mas = -1945723192                     
+[  274.384142] PMU: cc_cap_offset= -6:                                                         
+[  274.384195] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 1: current_soc= 0: rsoc_limit= 0:
+[  274.384243] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 1: current_soc= 0: rsoc_limit= 0:
+[  274.384275] ==== DISABLE ibat ====                                                          
+[  274.387736] PMU: ricoh61x_displayed_work IBAT= 101: ibat_table[85%]= 370: ibat_soc= 8450 ***
+[  274.387795] PMU: cc_delta= 1: ibat_soc= 8450: full_rate= 1: 30: dsoc_var= 0: 3: IBAT= 101: :
+[  274.390389] PMU : set_current_time2register : second is 1325427726, hour is 368174          
+[  274.413981] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192                        
+[  274.414003] PMU: cc_cap_offset= -6:                                                         
+[  274.414019] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(98)                            
+[  274.414040] PMU:STATUS= 6: IBAT= 101: VSYS= 4312750: VBAT= 4113500: DSOC= 9836: RSOC= 9600:1
+[  280.479711] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  280.483424] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  280.487068] PMU:charger_usb_isr                                                             
+[  280.711267] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  280.715054] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x4,when interrupt is comg
+[  280.719515] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  280.730252] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  280.738781] usb plugged 1                                                                   
+[  280.760478] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  281.219624] sy7636_get_temperature():temperature = 24,reg=0x18                              
+[  281.694185] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.               
+[  287.915106] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  287.918881] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xc9,when interrupt is cog
+[  287.925220] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  288.207310] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  288.207336] PMU2: Watchdog timeout triggered. ===============                               
+[  303.565380] PMU: cc_sum = 343: cc_cap_res= 14: cc_cap_mas = -1947541816                     
+[  303.565434] PMU: cc_cap_offset= 8:                                                          
+[  303.565486] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 1: current_soc= 0: rsoc_limit= 0:
+[  303.565533] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 1: current_soc= 0: rsoc_limit= 0:
+[  303.568100] PMU : set_current_time2register : second is 1325427755, hour is 368174          
+[  303.585653] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1947541816                        
+[  303.585696] PMU: cc_cap_offset= 8:                                                          
+[  303.585736] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  303.585789] PMU:STATUS= 6: IBAT= -1: VSYS= 4314250: VBAT= 4102800: DSOC= 9879: RSOC= 9600: 1
+[  320.204481] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  320.204536] PMU2: Watchdog timeout triggered. ===============                               
+[  332.746076] PMU: cc_sum = 40: cc_cap_res= 13: cc_cap_mas = -1947541816                      
+[  332.746130] PMU: cc_cap_offset= -5:                                                         
+[  332.746184] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 0: current_soc= 0: rsoc_limit= 0:
+[  332.746232] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 0: current_soc= 0: rsoc_limit= 0:
+[  332.748812] PMU : set_current_time2register : second is 1325427784, hour is 368174          
+[  332.766461] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1947541816                        
+[  332.766504] PMU: cc_cap_offset= -5:                                                         
+[  332.766544] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  332.766597] PMU:STATUS= 6: IBAT= -1: VSYS= 4313500: VBAT= 4101300: DSOC= 9900: RSOC= 9600: 1
+[  337.325720] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  337.329357] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  337.333143] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xc4,when interrupt is cog
+[  337.336106] PMU:charger_usb_isr                                                             
+[  337.351003] usb unplugged                                                                   
+[  340.685868] FAT-fs (loop0): Volume was not properly unmounted. Some data may be corrupt. Pl.
+[  344.682856] imx_epdc_v2_fb 228c000.epdc: blank = 0                                          
+[  346.709888] sy7636_get_temperature():temperature = 24,reg=0x18                              
+[  348.580546] [_lm3630a_set_FL-1073] led A c=31,b=124, led B c=0,b=0                          
+[  352.201851] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  352.201905] PMU2: Watchdog timeout triggered. ===============                               
+[  361.880582] PMU : set_current_time2register : second is 1325427813, hour is 368174          
+[  361.905035] PMU: cc_sum = 2029: cc_cap_res= 76: cc_cap_mas = -1947541816                    
+[  361.905080] PMU: cc_cap_offset= -81:                                                        
+[  361.905121] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  361.905175] PMU:STATUS= 3: IBAT= -58: VSYS= 4152250: VBAT= 4152000: DSOC= 9875: RSOC= 9543:1
+[  384.199330] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  384.199384] PMU2: Watchdog timeout triggered. ===============                               
+[  391.032045] PMU: cc_sum = 1710: cc_cap_res= 70: cc_cap_mas = -1947541908                    
+[  391.032101] PMU: cc_cap_offset= -51:                                                        
+[  391.050524] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1947541796                        
+[  391.050571] PMU: cc_cap_offset= -51:                                                        
+[  391.050621] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is 0, cc_delta_cap_now is 0
+[  391.050668] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_d0
+[  391.050739] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 85, dsoc is 980
+[  391.050786] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is 0, offset_mas is -1, value i0
+[  391.053336] PMU : set_current_time2register : second is 1325427842, hour is 368174          
+[  391.058336] PMU:STATUS= 7: IBAT= -57: VSYS= 4150500: VBAT= 4155600: DSOC= 9875: RSOC= 9543:1
+[  416.196679] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  416.196732] PMU2: Watchdog timeout triggered. ===============                               
+[  420.354282] PMU: cc_sum = 1738: cc_cap_res= 79: cc_cap_mas = -1947541796                    
+[  420.354338] PMU: cc_cap_offset= -30:                                                        
+[  420.354390] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -6, cc_delta_cap_now is0
+[  420.354439] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_d8
+[  420.354512] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 85, dsoc is 986
+[  420.354562] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -32, offset_mas is -32, valu5
+[  420.357137] PMU : set_current_time2register : second is 1325427872, hour is 368174          
+[  420.362244] PMU:STATUS= 7: IBAT= -60: VSYS= 4148500: VBAT= 4154100: DSOC= 9870: RSOC= 9543:1
+[  423.016363] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  423.019911] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  423.023343] PMU:charger_usb_isr                                                             
+[  423.168532] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  423.171383] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x4,when interrupt is comg
+[  423.174820] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  423.200492] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  423.208788] usb plugged 1                                                                   
+[  423.233617] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  423.759929] sy7636_get_temperature():temperature = 24,reg=0x18                              
+[  424.235767] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.               
+[  427.599866] [_lm3630a_set_FL-1073] led A c=31,b=123, led B c=0,b=0                          
+[  427.637911] [_lm3630a_set_FL-1073] led A c=31,b=121, led B c=0,b=0                          
+[  427.703837] [_lm3630a_set_FL-1073] led A c=31,b=119, led B c=0,b=0                          
+[  427.742982] [_lm3630a_set_FL-1073] led A c=31,b=117, led B c=0,b=0                          
+[  427.783692] [_lm3630a_set_FL-1073] led A c=31,b=114, led B c=0,b=0                          
+[  427.827201] [_lm3630a_set_FL-1073] led A c=31,b=113, led B c=0,b=0                          
+[  427.869574] [_lm3630a_set_FL-1073] led A c=31,b=109, led B c=0,b=0                          
+[  427.909697] [_lm3630a_set_FL-1073] led A c=31,b=108, led B c=0,b=0                          
+[  427.949781] [_lm3630a_set_FL-1073] led A c=31,b=102, led B c=0,b=0                          
+[  427.989878] [_lm3630a_set_FL-1073] led A c=31,b=98, led B c=0,b=0                           
+[  428.029968] [_lm3630a_set_FL-1073] led A c=31,b=92, led B c=0,b=0                           
+[  428.070067] [_lm3630a_set_FL-1073] led A c=31,b=86, led B c=0,b=0                           
+[  428.110156] [_lm3630a_set_FL-1073] led A c=31,b=79, led B c=0,b=0                           
+[  428.150203] [_lm3630a_set_FL-1073] led A c=31,b=71, led B c=0,b=0                           
+[  428.190273] [_lm3630a_set_FL-1073] led A c=31,b=64, led B c=0,b=0                           
+[  428.230305] [_lm3630a_set_FL-1073] led A c=31,b=59, led B c=0,b=0                           
+[  428.270428] [_lm3630a_set_FL-1073] led A c=31,b=53, led B c=0,b=0                           
+[  428.310394] [_lm3630a_set_FL-1073] led A c=31,b=50, led B c=0,b=0                           
+[  428.350433] [_lm3630a_set_FL-1073] led A c=31,b=47, led B c=0,b=0                           
+[  428.390414] [_lm3630a_set_FL-1073] led A c=31,b=43, led B c=0,b=0                           
+[  428.430400] [_lm3630a_set_FL-1073] led A c=31,b=39, led B c=0,b=0                           
+[  428.470405] [_lm3630a_set_FL-1073] led A c=31,b=36, led B c=0,b=0                           
+[  428.510394] [_lm3630a_set_FL-1073] led A c=31,b=30, led B c=0,b=0                           
+[  428.550426] [_lm3630a_set_FL-1073] led A c=31,b=25, led B c=0,b=0                           
+[  428.590412] [_lm3630a_set_FL-1073] led A c=31,b=20, led B c=0,b=0                           
+[  428.630854] [_lm3630a_set_FL-1073] led A c=31,b=18, led B c=0,b=0                           
+[  428.671025] [_lm3630a_set_FL-1073] led A c=31,b=16, led B c=0,b=0                           
+[  428.711131] [_lm3630a_set_FL-1073] led A c=31,b=14, led B c=0,b=0                           
+[  428.751282] [_lm3630a_set_FL-1073] led A c=31,b=11, led B c=0,b=0                           
+[  428.791370] [_lm3630a_set_FL-1073] led A c=31,b=3, led B c=0,b=0                            
+[  428.831572] [_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0                            
+[  428.872155] [_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0                           
+[  447.855186] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  447.858984] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xcd,when interrupt is cog
+[  447.871274] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  448.194021] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  448.194075] PMU2: Watchdog timeout triggered. ===============                               
+[  449.535550] PMU: cc_sum = 2460: cc_cap_res= 20: cc_cap_mas = -1945723172                    
+[  449.535604] PMU: cc_cap_offset= -10:                                                        
+[  449.535656] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is 7, cc_delta_cap_now is 0
+[  449.535705] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_d0
+[  449.564870] PMU : set_current_time2register : second is 1325427901, hour is 368174          
+[  449.582587] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192                        
+[  449.582632] PMU: cc_cap_offset= -10:                                                        
+[  449.582673] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  449.582726] PMU:STATUS= 3: IBAT= 104: VSYS= 4293500: VBAT= 4092725: DSOC= 9870: RSOC= 9532:1
+[  456.942219] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  456.945920] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  456.949625] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xc4,when interrupt is cog
+[  456.952548] PMU:charger_usb_isr                                                             
+[  456.967299] usb unplugged                                                                   
+[  459.617627] PMU: cc_sum = 322: cc_cap_res= 7: cc_cap_mas = -1945723192                      
+[  459.617647] PMU: cc_cap_offset= -17:                                                        
+[  459.617662] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 0: current_soc= -1945839680: rso:
+[  459.617675] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 0: current_soc= -1945839680: rso:
+[  459.617683] ==== DISABLE ibat ====                                                          
+[  459.628536] PMU: ricoh61x_displayed_work IBAT= -1: ibat_table[85%]= 370: ibat_soc= 8450 ****
+[  459.628562] PMU: cc_delta= 0: ibat_soc= 8450: full_rate= 0: 30: dsoc_var= 0: 0: IBAT= -1: D:
+[  459.630269] PMU : set_current_time2register : second is 1325427911, hour is 368174          
+[  459.650953] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192                        
+[  459.650972] PMU: cc_cap_offset= -17:                                                        
+[  459.650984] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  459.650998] PMU:STATUS= 6: IBAT= -1: VSYS= 4311500: VBAT= 4097925: DSOC= 9870: RSOC= 9500: 1
+[  460.815900] FAT-fs (loop0): Volume was not properly unmounted. Some data may be corrupt. Pl.
+[  464.225999] imx_epdc_v2_fb 228c000.epdc: blank = 0                                          
+[  468.144022] [_lm3630a_set_FL-1073] led A c=31,b=124, led B c=0,b=0                          
+[  480.191373] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  480.191427] PMU2: Watchdog timeout triggered. ===============                               
+[  487.997571] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  488.001045] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  488.004360] PMU:charger_usb_isr                                                             
+[  488.207217] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  488.211011] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x4,when interrupt is comg
+[  488.215572] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  488.240288] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  488.248800] usb plugged 1                                                                   
+[  488.269925] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  488.692019] PMU : set_current_time2register : second is 1325427940, hour is 368174          
+[  488.709678] PMU: cc_sum = 2029: cc_cap_res= 76: cc_cap_mas = -1947541816                    
+[  488.709691] PMU: cc_cap_offset= -93:                                                        
+[  488.709702] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(98)                            
+[  488.709715] PMU:STATUS= 3: IBAT= -58: VSYS= 4151500: VBAT= 4157800: DSOC= 9845: RSOC= 9532:1
+[  488.719657] sy7636_get_temperature():temperature = 24,reg=0x18                              
+[  489.182160] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.               
+[  494.265547] [_lm3630a_set_FL-1073] led A c=31,b=123, led B c=0,b=0                          
+[  494.329640] [_lm3630a_set_FL-1073] led A c=31,b=121, led B c=0,b=0                          
+[  494.368360] [_lm3630a_set_FL-1073] led A c=31,b=119, led B c=0,b=0                          
+[  494.407547] [_lm3630a_set_FL-1073] led A c=31,b=117, led B c=0,b=0                          
+[  494.448090] [_lm3630a_set_FL-1073] led A c=31,b=114, led B c=0,b=0                          
+[  494.491672] [_lm3630a_set_FL-1073] led A c=31,b=113, led B c=0,b=0                          
+[  494.534246] [_lm3630a_set_FL-1073] led A c=31,b=109, led B c=0,b=0                          
+[  494.574347] [_lm3630a_set_FL-1073] led A c=31,b=108, led B c=0,b=0                          
+[  494.617585] [_lm3630a_set_FL-1073] led A c=31,b=102, led B c=0,b=0                          
+[  494.660926] [_lm3630a_set_FL-1073] led A c=31,b=98, led B c=0,b=0                           
+[  494.700979] [_lm3630a_set_FL-1073] led A c=31,b=92, led B c=0,b=0                           
+[  494.741123] [_lm3630a_set_FL-1073] led A c=31,b=86, led B c=0,b=0                           
+[  494.781221] [_lm3630a_set_FL-1073] led A c=31,b=79, led B c=0,b=0                           
+[  494.822357] [_lm3630a_set_FL-1073] led A c=31,b=71, led B c=0,b=0                           
+[  494.862603] [_lm3630a_set_FL-1073] led A c=31,b=64, led B c=0,b=0                           
+[  494.902762] [_lm3630a_set_FL-1073] led A c=31,b=59, led B c=0,b=0                           
+[  494.943005] [_lm3630a_set_FL-1073] led A c=31,b=53, led B c=0,b=0                           
+[  494.983069] [_lm3630a_set_FL-1073] led A c=31,b=50, led B c=0,b=0                           
+[  495.023115] [_lm3630a_set_FL-1073] led A c=31,b=47, led B c=0,b=0                           
+[  495.063113] [_lm3630a_set_FL-1073] led A c=31,b=43, led B c=0,b=0                           
+[  495.103120] [_lm3630a_set_FL-1073] led A c=31,b=39, led B c=0,b=0                           
+[  495.143150] [_lm3630a_set_FL-1073] led A c=31,b=36, led B c=0,b=0                           
+[  495.183114] [_lm3630a_set_FL-1073] led A c=31,b=30, led B c=0,b=0                           
+[  495.223121] [_lm3630a_set_FL-1073] led A c=31,b=25, led B c=0,b=0                           
+[  495.263358] [_lm3630a_set_FL-1073] led A c=31,b=20, led B c=0,b=0                           
+[  495.303643] [_lm3630a_set_FL-1073] led A c=31,b=18, led B c=0,b=0                           
+[  495.343703] [_lm3630a_set_FL-1073] led A c=31,b=16, led B c=0,b=0                           
+[  495.383743] [_lm3630a_set_FL-1073] led A c=31,b=14, led B c=0,b=0                           
+[  495.423697] [_lm3630a_set_FL-1073] led A c=31,b=11, led B c=0,b=0                           
+[  495.463736] [_lm3630a_set_FL-1073] led A c=31,b=3, led B c=0,b=0                            
+[  495.503720] [_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0                            
+[  495.544198] [_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0                           
+[  509.210813] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  509.214595] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xcd,when interrupt is cog
+[  509.226806] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  512.188739] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  512.188793] PMU2: Watchdog timeout triggered. ===============                               
+[  517.877126] PMU: cc_sum = 2153: cc_cap_res= 17: cc_cap_mas = -1947541816                    
+[  517.877180] PMU: cc_cap_offset= -76:                                                        
+[  517.877235] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 6: current_soc= 0: rsoc_limit= 0:
+[  517.877282] PMU: ricoh61x_displayed_work rrf= 1: cc_delta= 6: current_soc= 0: rsoc_limit= 0:
+[  517.879856] PMU : set_current_time2register : second is 1325427969, hour is 368174          
+[  517.897481] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1947541816                        
+[  517.897523] PMU: cc_cap_offset= -76:                                                        
+[  517.897561] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  517.897614] PMU:STATUS= 6: IBAT= 101: VSYS= 4293000: VBAT= 4092700: DSOC= 9888: RSOC= 9500:1
+[  524.961991] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  524.965679] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  524.969416] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xc4,when interrupt is cog
+[  524.972316] PMU:charger_usb_isr                                                             
+[  524.986876] usb unplugged                                                                   
+[  527.260830] FAT-fs (loop0): Volume was not properly unmounted. Some data may be corrupt. Pl.
+[  531.226027] imx_epdc_v2_fb 228c000.epdc: blank = 0                                          
+[  535.076677] [_lm3630a_set_FL-1073] led A c=31,b=124, led B c=0,b=0                          
+[  537.515455] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  537.519069] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comg
+[  537.522640] PMU:charger_usb_isr                                                             
+[  537.688878] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  537.691548] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x4,when interrupt is comg
+[  537.694760] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comg
+[  537.700509] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  537.708792] usb plugged 1                                                                   
+[  537.714997] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)            
+[  538.724876] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.               
+[  543.196143] [_lm3630a_set_FL-1073] led A c=31,b=123, led B c=0,b=0                          
+[  543.249369] [_lm3630a_set_FL-1073] led A c=31,b=121, led B c=0,b=0                          
+[  543.287761] [_lm3630a_set_FL-1073] led A c=31,b=119, led B c=0,b=0                          
+[  543.326788] [_lm3630a_set_FL-1073] led A c=31,b=117, led B c=0,b=0                          
+[  543.365815] [_lm3630a_set_FL-1073] led A c=31,b=114, led B c=0,b=0                          
+[  543.409551] [_lm3630a_set_FL-1073] led A c=31,b=113, led B c=0,b=0                          
+[  543.452091] [_lm3630a_set_FL-1073] led A c=31,b=109, led B c=0,b=0                          
+[  543.492223] [_lm3630a_set_FL-1073] led A c=31,b=108, led B c=0,b=0                          
+[  543.532364] [_lm3630a_set_FL-1073] led A c=31,b=102, led B c=0,b=0                          
+[  543.572456] [_lm3630a_set_FL-1073] led A c=31,b=98, led B c=0,b=0                           
+[  543.612551] [_lm3630a_set_FL-1073] led A c=31,b=92, led B c=0,b=0                           
+[  543.652652] [_lm3630a_set_FL-1073] led A c=31,b=86, led B c=0,b=0                           
+[  543.692781] [_lm3630a_set_FL-1073] led A c=31,b=79, led B c=0,b=0                           
+[  543.732846] [_lm3630a_set_FL-1073] led A c=31,b=71, led B c=0,b=0                           
+[  543.773219] [_lm3630a_set_FL-1073] led A c=31,b=64, led B c=0,b=0                           
+[  543.813263] [_lm3630a_set_FL-1073] led A c=31,b=59, led B c=0,b=0                           
+[  543.853276] [_lm3630a_set_FL-1073] led A c=31,b=53, led B c=0,b=0                           
+[  543.893265] [_lm3630a_set_FL-1073] led A c=31,b=50, led B c=0,b=0                           
+[  543.933305] [_lm3630a_set_FL-1073] led A c=31,b=47, led B c=0,b=0                           
+[  543.973383] [_lm3630a_set_FL-1073] led A c=31,b=43, led B c=0,b=0                           
+[  544.014611] [_lm3630a_set_FL-1073] led A c=31,b=39, led B c=0,b=0                           
+[  544.054777] [_lm3630a_set_FL-1073] led A c=31,b=36, led B c=0,b=0                           
+[  544.094804] [_lm3630a_set_FL-1073] led A c=31,b=30, led B c=0,b=0                           
+[  544.134764] [_lm3630a_set_FL-1073] led A c=31,b=25, led B c=0,b=0                           
+[  544.174815] [_lm3630a_set_FL-1073] led A c=31,b=20, led B c=0,b=0                           
+[  544.185052] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  544.185085] PMU2: Watchdog timeout triggered. ===============                               
+[  544.216277] [_lm3630a_set_FL-1073] led A c=31,b=18, led B c=0,b=0                           
+[  544.255966] [_lm3630a_set_FL-1073] led A c=31,b=16, led B c=0,b=0                           
+[  544.295710] [_lm3630a_set_FL-1073] led A c=31,b=14, led B c=0,b=0                           
+[  544.335734] [_lm3630a_set_FL-1073] led A c=31,b=11, led B c=0,b=0                           
+[  544.375702] [_lm3630a_set_FL-1073] led A c=31,b=3, led B c=0,b=0                            
+[  544.415681] [_lm3630a_set_FL-1073] led A c=12,b=4, led B c=0,b=0                            
+[  544.456174] [_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0                           
+[  547.060764] PMU : set_current_time2register : second is 1325427998, hour is 368174          
+[  547.086497] PMU: cc_sum = 226: cc_cap_res= 75: cc_cap_mas = -1945723192                     
+[  547.086544] PMU: cc_cap_offset= -51:                                                        
+[  547.086584] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(99)                            
+[  547.086638] PMU:STATUS= 3: IBAT= -94: VSYS= 4130500: VBAT= 4130925: DSOC= 9863: RSOC= 9532:1
+[  554.085812] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comg
+[  554.089629] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xcd,when interrupt is cog
+[  554.102350] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)

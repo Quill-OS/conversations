@@ -1,0 +1,216 @@
+U-Boot 2016.03-inkbox (Jun 20 2023 - 20:40:34 +0000)
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+CPU:   Commercial temperature grade (0C to 95C) at 39C
+Reset cause: POR
+Board: MX6ULL NTX
+I2C:   ready
+DRAM:  256 MiB
+force_idle_bus: sda=0 scl=0 sda.gp=0x15 scl.gp=0x14
+MMC:   board_mmc_init() : isd=1 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=268435456
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x8ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x8ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+RC5T619 write to [0x11] 1 bytes failed !!
+ntx_hw_late_init()
+mmc read 0x8ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout():3 mbr partition added
+fuse bank 0 offset 3 is 0x5C310013
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x80800000 0x14000 0x5000
+
+MMC read: dev # 0, block # 81920, count 20480 ... 20480 blocks read: OK
+Booting from mmc ...
+mmc read 0x83000000 0x505 0x1
+
+MMC read: dev # 0, block # 1285, count 1 ... 1 blocks read: OK
+dtb size = 40347@83000000
+mmc read 0x83000000 0x506 0x55
+
+MMC read: dev # 0, block # 1286, count 85 ... 85 blocks read: OK
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+ESDin=0,UPGKey=0,PWRKey=1,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x9fade0 ]
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Using Device Tree in place at 83000000, end 8300cd9a
+
+Starting kernel ...
+
+[    0.004774] /cpus/cpu@0 missing clock-frequency property
+[    0.256317] dt_get_rsens() RSENS dts property 21000000
+[    0.257826] bd71827-power bd71827-power: Power-on-reset off
+[    0.259190] bd71827-power bd71827-power: bd71827_init_hardware() battery through_voltage = 3264000
+[    0.259949] bd71827-power bd71827-power: Temperature = 30
+[    0.262632] bd71827-power bd71827-power: Current second 1689540480
+[    0.262662] bd71827-power bd71827-power: Last power off second 1689540254
+[    0.262687] bd71827-power bd71827-power: Till HBNT over 15 dsys to relax check
+[    0.264649] bd71827-power bd71827-power: bd71827_init_hardware() coulomb_cnt = 51455306
+[    0.768598] bd71827-power bd71827-power: VM_OCV_3 = 3767000
+[    0.769866] bd71827-power bd71827-power: bd71827_init_hardware() sorg = 47, soc_cal = 31, voltage 3767000, soc 48, charge 2, dc 0
+[    0.772259] bd71827-power bd71827-power: bd71827_init_hardware() CC_CCNTD = 51455306
+[    0.772291] bd71827-power bd71827-power: bd71827_init_hardware() pwr->soc = 47
+[    0.772317] bd71827-power bd71827-power: bd71827_init_hardware() pwr->clamp_soc = 47
+[    1.007547] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    1.007591] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    3.999788] drivers/input/misc/usb_plug.c(56):skip usb_plug_handler() when mxc_usbplug not exist !
+[    6.695301] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021db0 ntx_machine_poweroff
+Interface 'lo': flags set to 0001.
+
+Linux inkbox #1 SMP PREEMPT Sun Jul 16 22:41:30 CEST 2023 GNU/Linux
+InkBox OS, kernel build xhRfTSzI, commit d2521ed
+
+Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+boot: clean, 14/3840 files, 2248/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 497273/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+rootfs: clean, 15/32768 files, 72394/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+user: clean, 51/192768 files, 579654/769894 blocks
+
+(initrd) Hit ENTER to stop auto-boot ... 
+
+ * Device is rooted; not enforcing security policy
+ * Boot mode: Standard
+Verifying root filesystem's digital signature ...
+Done.
+ * Mounted root filesystem
+[   25.960724] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   25.968236] squashfs: SQUASHFS error: unable to read xattr id index table
+ * Mounted core SquashFS archives
+ * Mounted essential filesystems
+Verified OK
+
+Starting X11 windowing system ...
+Validating packages' digital signatures ...
+/opt/X11/extensions-base/netsurf.isa: Verification succeeded
+
+X.Org X Server 1.20.5
+X Protocol Version 11, Revision 0
+Build Operating System: Linux 5.4.34-0-lts armv8l Alpine Linux
+Current Operating System: Linux inkbox 4.1.15 #1 SMP PREEMPT Sun Jul 16 22:41:30 CEST 2023 armv7l
+Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ramfs root=/dev/ram0 rdint
+Build Date: 13 April 2021  04:46:44PM
+ 
+Current version of pixman: 0.38.4
+        Before reporting problems, check http://wiki.x.org
+        to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+        (++) from command line, (!!) notice, (II) informational,
+        (WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Sun Jul 16 20:49:38 2023
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported high keycode 372 for name <I372> ignored
+>                   X11 cannot support keycodes above 255.
+>                   This warning only shows for the first high keycode.
+> Internal error:   Could not resolve keysym XF86MonBrightnessCycle
+> Internal error:   Could not resolve keysym XF86RotationLockToggle
+Errors from xkbcomp are not fatal to the X server
+X11 windowing system was successfully initialized.
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+ [ ok ]
+ * Starting USBNet ... * USB networking is disabled. Please set the USBNET_ENABLE flag and try again.
+ [ ok ]
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Starting InkBox Power Daemon (ipd) ... [ ok ]
+ * Starting battery watchdog ... [ ok ]
+cat: /sys/devices/platform/pmic_battery.1/power_supply/mc13892_bat/capacity: No such file or directory
+sh: 5: unknown operand
+ * Setting hostname ... [ ok ]
+ * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Checking for available updates ...Update skipped or no update available, aborting ...
+ [ ok ]
+ * Starting InkBox GUI ... * Starting InkBox Daemon (ibxd) ... [ ok ]
+touch: setting times of '/kobo/bin/kobo_config.sh': Invalid argument
+touch: setting times of '/kobo/etc/localtime': Invalid argument
+ * WARNING: you are stopping a sysinit service
+ * Stopping udev ... [ ok ]
+ * Starting udev ... [ ok ]
+[  146.790224] udevd[1703]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/enabled} for writing: Permission denied
+[  146.857334] udevd[1703]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/authorized} for writing: Permission denied
+[  148.059615] udevd[1711]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: Permission denied
+[  148.230728] udevd[1711]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: Permission denied
+ * Setting up GUI user applications
+ [ ok ]
+ [ ok ]
+
+Welcome to InkBox OS 2.0
+Kernel 4.1.15 on armv7l (/dev/ttymxc0)
+
+kobo login: root
+Password: 
+Welcome to InkBox OS!
+login[1772]: root login on 'ttymxc0'
+
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+kobo:~# 
+kobo:~# 
+kobo:~# ls
+kobo:~# ls
+kobo:~# 

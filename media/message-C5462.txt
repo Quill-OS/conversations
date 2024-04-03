@@ -1,0 +1,33 @@
+[ 2764.573546] Wifi / BT power control 1
+[ 2764.623725] _ntx_wifi_power_ctrl() end.
+[ 2764.623836] 
+[ 2764.623842] Dongle Host Driver, version 5.90.125.120.1
+[ 2764.623850] Compiled in drivers/net/wireless/bcmdhd on Feb  8 2022 at 23:38:30
+[ 2765.196228] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 2765.197891] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 2765.199545] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 2765.202498] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[ 2765.205781] mmc2: queuing unknown CIS tuple 0x80 (8 bytes)
+[ 2765.207108] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 2765.209407] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 2765.211704] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 2765.230310] mmc2: new high speed SDIO card at address 0001
+[ 2765.236051] dhd_customer_oob_irq_map: customer specific Host GPIO number is (127)
+[ 2765.236063] dhd_customer_oob_irq_map: customer specific Host GPIO irq number is (383)
+[ 2765.236362] [bcmsdh_probe-241] IRQ=383 Type=414 
+[ 2765.236487] F1 signature read @0x18000000=0x1591a962
+[ 2765.239498] DHD: dongle ram size is set to 245760(orig 245760)
+[ 2765.239711] wl_iw_attach thr:cc6 started
+[ 2765.239754] wl_iw_bt_init thr:cc7 started
+[ 2765.239800] dhd_attach thr:cc8 started
+[ 2765.239838] dhd_attach thr:cc9 started
+[ 2765.239872] dhd_attach thr:cca started
+[ 2765.240494] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+[ 2765.283228] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[ 2765.525065] [bcmsdh_register_oob_intr-634] IRQ=383 Type=414 
+[ 2765.525113] add wake up source irq 105
+[ 2765.527588] Firmware up: op_mode=1, Broadcom Dongle Host Driver mac=78:45:61:50:d0:5e
+[ 2765.890241] Firmware version = wl0: Apr 11 2014 17:50:29 version 5.90.195.89.23 FWID 01-83cee08a
+[ 2765.903626] wl_iw_set_essid: join SSID=�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD� ch=0
+[ 2766.025799] wl_iw_iscan_set_scan: Scan from SIOCGIWSCAN not supported
+[ 2767.027458] wl_iw_iscan_set_scan: Scan from SIOCGIWSCAN not supported

@@ -1,0 +1,1097 @@
+From f7520c7a5547f24bcf714b33f90b09fb44d49be4 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Sun, 11 Sep 2022 20:21:54 +0200
+Subject: [PATCH] more characters in keyboard, and a general redesign
+
+---
+ .../virtualKeyboard/virtualkeyboard.cpp       | 379 +++++++-----------
+ src/widgets/virtualKeyboard/virtualkeyboard.h |  11 +-
+ .../virtualKeyboard/virtualkeyboard.ui        | 225 ++++++-----
+ 3 files changed, 266 insertions(+), 349 deletions(-)
+
+diff --git a/src/widgets/virtualKeyboard/virtualkeyboard.cpp b/src/widgets/virtualKeyboard/virtualkeyboard.cpp
+index fe80830..e00800a 100644
+--- a/src/widgets/virtualKeyboard/virtualkeyboard.cpp
++++ b/src/widgets/virtualKeyboard/virtualkeyboard.cpp
+@@ -9,7 +9,6 @@ virtualkeyboard::virtualkeyboard(QWidget *parent) :
+     ui(new Ui::virtualkeyboard)
+ {   
+     ui->setupUi(this);
+-    shift = false;
+ 
+     ui->n1->setProperty("type", "borderless");
+     ui->n2->setProperty("type", "borderless");
+@@ -223,446 +222,308 @@ void virtualkeyboard::on_eraseBtn_clicked()
+ 
+ void virtualkeyboard::on_spt_clicked()
+ {
+-    ui->lineEdit->insert(".");
++    ui->lineEdit->insert(ui->spt->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_sat_clicked()
+ {
+-    ui->lineEdit->insert("@");
+-    QString text = ui->lineEdit->text();
+-    global::keyboard::keyboardText = text;
++    if(specialCharacters == true) {
++        specialCharacters = false;
++        reverseKeys(keyboardMode::lowerCase);
++    }
++    else {
++        reverseKeys(keyboardMode::specialCharacters);
++        specialCharacters = true;
++    }
+ }
+ 
+ void virtualkeyboard::on_n1_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("!");
+-    }
+-    else {
+-        ui->lineEdit->insert("1");
+-    }
++    ui->lineEdit->insert(ui->n1->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n2_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("/");
+-    }
+-    else {
+-        ui->lineEdit->insert("2");
+-    }
++    ui->lineEdit->insert(ui->n2->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n3_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("#");
+-    }
+-    else {
+-        ui->lineEdit->insert("3");
+-    }
++    ui->lineEdit->insert(ui->n3->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n4_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("$");
+-    }
+-    else {
+-        ui->lineEdit->insert("4");
+-    }
++    ui->lineEdit->insert(ui->n4->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n5_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("%");
+-    }
+-    else {
+-        ui->lineEdit->insert("5");
+-    }
++    ui->lineEdit->insert(ui->n5->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n6_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("^");
+-    }
+-    else {
+-        ui->lineEdit->insert("6");
+-    }
++    ui->lineEdit->insert(ui->n6->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n7_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("&");
+-    }
+-    else {
+-        ui->lineEdit->insert("7");
+-    }
++    ui->lineEdit->insert(ui->n7->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n8_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("*");
+-    }
+-    else {
+-        ui->lineEdit->insert("8");
+-    }
++    ui->lineEdit->insert(ui->n8->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n9_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("(");
+-    }
+-    else {
+-        ui->lineEdit->insert("9");
+-    }
++    ui->lineEdit->insert(ui->n9->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_n0_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert(")");
+-    }
+-    else {
+-        ui->lineEdit->insert("0");
+-    }
++    ui->lineEdit->insert(ui->n0->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lq_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("Q");
+-    }
+-    else {
+-        ui->lineEdit->insert("q");
+-    }
++    ui->lineEdit->insert(ui->lq->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lw_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("W");
+-    }
+-    else {
+-        ui->lineEdit->insert("w");
+-    }
++    ui->lineEdit->insert(ui->lw->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_le_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("E");
+-    }
+-    else {
+-        ui->lineEdit->insert("e");
+-    }
++    ui->lineEdit->insert(ui->le->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lr_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("R");
+-    }
+-    else {
+-        ui->lineEdit->insert("r");
+-    }
++    ui->lineEdit->insert(ui->lr->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lt_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("T");
+-    }
+-    else {
+-        ui->lineEdit->insert("t");
+-    }
++    ui->lineEdit->insert(QString(ui->lt->text().back()));
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_ly_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("Y");
+-    }
+-    else {
+-        ui->lineEdit->insert("y");
+-    }
++    ui->lineEdit->insert(ui->ly->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lu_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("U");
+-    }
+-    else {
+-        ui->lineEdit->insert("u");
+-    }
++    ui->lineEdit->insert(ui->lu->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_li_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("I");
+-    }
+-    else {
+-        ui->lineEdit->insert("i");
+-    }
++    ui->lineEdit->insert(ui->li->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lo_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("O");
+-    }
+-    else {
+-        ui->lineEdit->insert("o");
+-    }
++    ui->lineEdit->insert(ui->lo->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lp_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("P");
+-    }
+-    else {
+-        ui->lineEdit->insert("p");
+-    }
++    ui->lineEdit->insert(ui->lp->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_la_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("A");
+-    }
+-    else {
+-        ui->lineEdit->insert("a");
+-    }
++    ui->lineEdit->insert(ui->la->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_ls_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("S");
+-    }
+-    else {
+-        ui->lineEdit->insert("s");
+-    }
++    ui->lineEdit->insert(QString(ui->la->text().back()));
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_ld_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("D");
+-    }
+-    else {
+-        ui->lineEdit->insert("d");
+-    }
++    ui->lineEdit->insert(ui->ld->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lf_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("F");
+-    }
+-    else {
+-        ui->lineEdit->insert("f");
+-    }
++    ui->lineEdit->insert(ui->lf->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lg_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("G");
+-    }
+-    else {
+-        ui->lineEdit->insert("g");
+-    }
++    ui->lineEdit->insert(ui->lg->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lh_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("H");
+-    }
+-    else {
+-        ui->lineEdit->insert("h");
+-    }
++    ui->lineEdit->insert(ui->lh->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lj_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("J");
+-    }
+-    else {
+-        ui->lineEdit->insert("j");
+-    }
++    ui->lineEdit->insert(ui->lj->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lk_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("K");
+-    }
+-    else {
+-        ui->lineEdit->insert("k");
+-    }
++    ui->lineEdit->insert(ui->lk->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_ll_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("L");
+-    }
+-    else {
+-        ui->lineEdit->insert("l");
+-    }
++    ui->lineEdit->insert(ui->ll->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lz_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("Z");
+-    }
+-    else {
+-        ui->lineEdit->insert("z");
+-    }
++    ui->lineEdit->insert(ui->lz->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lx_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("X");
+-    }
+-    else {
+-        ui->lineEdit->insert("x");
+-    }
++    ui->lineEdit->insert(ui->lx->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lc_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("C");
+-    }
+-    else {
+-        ui->lineEdit->insert("c");
+-    }
++    ui->lineEdit->insert(ui->lc->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lv_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("V");
+-    }
+-    else {
+-        ui->lineEdit->insert("v");
+-    }
++    ui->lineEdit->insert(ui->lv->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lb_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("B");
+-    }
+-    else {
+-        ui->lineEdit->insert("b");
+-    }
++    ui->lineEdit->insert(ui->lb->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_ln_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("N");
+-    }
+-    else {
+-        ui->lineEdit->insert("n");
+-    }
++    ui->lineEdit->insert(ui->ln->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+ 
+ void virtualkeyboard::on_lm_clicked()
+ {
+-    if(shift == true) {
+-        ui->lineEdit->insert("M");
+-    }
+-    else {
+-        ui->lineEdit->insert("m");
+-    }
++    ui->lineEdit->insert(ui->lm->text());
++
+     QString text = ui->lineEdit->text();
+     global::keyboard::keyboardText = text;
+ }
+@@ -671,27 +532,29 @@ void virtualkeyboard::on_shiftBtn_clicked()
+ {
+     if(shift == true) {
+         shift = false;
++        reverseKeys(keyboardMode::lowerCase);
+     }
+     else {
++        reverseKeys(keyboardMode::upperCase);
+         shift = true;
+     }
+-    reverseKeys();
++
+ }
+ 
+-void virtualkeyboard::reverseKeys() {
+-    if(shift == true) {
++void virtualkeyboard::reverseKeys(keyboardMode keyboardMode) {
++    currentMode = keyboardMode;
++    if(keyboardMode == keyboardMode::upperCase) {
+         ui->shiftBtn->setText("⇪");
+-
+-        ui->n1->setText("!");
+-        ui->n2->setText("/");
+-        ui->n3->setText("#");
+-        ui->n4->setText("$");
+-        ui->n5->setText("%");
+-        ui->n6->setText("^");
+-        ui->n7->setText("&&");
+-        ui->n8->setText("*");
+-        ui->n9->setText("(");
+-        ui->n0->setText(")");
++        ui->n1->setText("1");
++        ui->n2->setText("2");
++        ui->n3->setText("3");
++        ui->n4->setText("4");
++        ui->n5->setText("5");
++        ui->n6->setText("6");
++        ui->n7->setText("7");
++        ui->n8->setText("8");
++        ui->n9->setText("9");
++        ui->n0->setText("0");
+ 
+         ui->la->setText("A");
+         ui->lb->setText("B");
+@@ -720,7 +583,7 @@ void virtualkeyboard::reverseKeys() {
+         ui->ly->setText("Y");
+         ui->lz->setText("Z");
+     }
+-    else {
++    else if(keyboardMode == keyboardMode::lowerCase) {
+         ui->shiftBtn->setText("⇧");
+ 
+         ui->n1->setText("1");
+@@ -761,6 +624,50 @@ void virtualkeyboard::reverseKeys() {
+         ui->ly->setText("y");
+         ui->lz->setText("z");
+     }
++    else if(keyboardMode == keyboardMode::specialCharacters) {
++        ui->shiftBtn->setText("⇧");
++
++        ui->n1->setText("1");
++        ui->n2->setText("2");
++        ui->n3->setText("3");
++        ui->n4->setText("4");
++        ui->n5->setText("5");
++        ui->n6->setText("6");
++        ui->n7->setText("7");
++        ui->n8->setText("8");
++        ui->n9->setText("9");
++        ui->n0->setText("0");
++
++        ui->lq->setText("@");
++        ui->lw->setText("#");
++        ui->le->setText("€");
++        ui->lr->setText("%");
++        // Important
++        ui->lt->setText("&&");
++        ui->ly->setText("-");
++        ui->lu->setText("+");
++        ui->li->setText("(");
++        ui->lo->setText(")");
++        ui->lp->setText("*");
++        // Important
++        ui->la->setText("\"");
++        ui->ls->setText("'");
++        ui->ld->setText(":");
++        ui->lf->setText(";");
++        ui->lg->setText("!");
++        ui->lh->setText("?");
++        ui->lj->setText(",");
++        ui->lk->setText("_");
++        ui->ll->setText("/");
++        ui->lz->setText("~");
++
++        ui->lx->setText("{");
++        ui->lc->setText("}");
++        ui->lv->setText("[");
++        ui->lb->setText("]");
++        ui->ln->setText("<");
++        ui->lm->setText(">");
++    }
+     QTimer::singleShot(1000, this, SLOT(adjust_size_function()));
+ }
+ 
+diff --git a/src/widgets/virtualKeyboard/virtualkeyboard.h b/src/widgets/virtualKeyboard/virtualkeyboard.h
+index 042fb3a..31c85cc 100644
+--- a/src/widgets/virtualKeyboard/virtualkeyboard.h
++++ b/src/widgets/virtualKeyboard/virtualkeyboard.h
+@@ -16,8 +16,14 @@ public:
+     QString className = this->metaObject()->className();
+     explicit virtualkeyboard(QWidget *parent = nullptr);
+     ~virtualkeyboard();
+-    bool shift;
+-    void reverseKeys();
++    bool shift = false;
++    bool specialCharacters = false;
++    enum class keyboardMode {
++        lowerCase,
++        upperCase,
++        specialCharacters,
++    };
++    void reverseKeys(keyboardMode keyboardMode);
+     void clearLineEdit();
+ 
+ private slots:
+@@ -66,6 +72,7 @@ private slots:
+ 
+ private:
+     Ui::virtualkeyboard *ui;
++    keyboardMode currentMode = keyboardMode::lowerCase;
+ 
+ signals:
+     void adjust_size();
+diff --git a/src/widgets/virtualKeyboard/virtualkeyboard.ui b/src/widgets/virtualKeyboard/virtualkeyboard.ui
+index e64bb5d..3aac739 100644
+--- a/src/widgets/virtualKeyboard/virtualkeyboard.ui
++++ b/src/widgets/virtualKeyboard/virtualkeyboard.ui
+@@ -39,6 +39,9 @@
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
++       <property name="currentIndex">
++        <number>0</number>
++       </property>
+        <widget class="QWidget" name="page">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="leftMargin">
+@@ -57,231 +60,231 @@
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="13" column="3">
+             <layout class="QGridLayout" name="gridLayout_4">
+-             <item row="6" column="9">
+-              <widget class="QPushButton" name="ll">
++             <item row="2" column="12">
++              <widget class="QPushButton" name="lp">
+                <property name="text">
+-                <string>l</string>
++                <string>p</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="9">
+-              <widget class="QPushButton" name="spt">
++             <item row="7" column="3">
++              <widget class="QPushButton" name="lx">
+                <property name="text">
+-                <string>.</string>
++                <string>x</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="3">
+-              <widget class="QPushButton" name="lf">
++             <item row="2" column="3">
++              <widget class="QPushButton" name="le">
+                <property name="text">
+-                <string>f</string>
++                <string>e</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="0">
+-              <widget class="QPushButton" name="shiftBtn">
++             <item row="0" column="12">
++              <widget class="QPushButton" name="n0">
+                <property name="text">
+-                <string>⇧</string>
++                <string>0</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="8">
+-              <widget class="QPushButton" name="li">
++             <item row="2" column="4">
++              <widget class="QPushButton" name="lr">
+                <property name="text">
+-                <string>i</string>
++                <string>r</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="3">
+-              <widget class="QPushButton" name="lc">
++             <item row="7" column="6">
++              <widget class="QPushButton" name="lv">
+                <property name="text">
+-                <string>c</string>
++                <string>v</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="8">
+-              <widget class="QPushButton" name="lm">
++             <item row="0" column="7">
++              <widget class="QPushButton" name="n6">
+                <property name="text">
+-                <string>m</string>
++                <string>6</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="11">
+-              <widget class="QPushButton" name="eraseBtn">
++             <item row="0" column="2">
++              <widget class="QPushButton" name="n2">
+                <property name="text">
+-                <string>⌫</string>
++                <string>2</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="6">
+-              <widget class="QPushButton" name="ly">
++             <item row="0" column="3">
++              <widget class="QPushButton" name="n3">
+                <property name="text">
+-                <string>y</string>
++                <string>3</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="11">
+-              <widget class="QPushButton" name="n0">
++             <item row="0" column="10">
++              <widget class="QPushButton" name="n9">
+                <property name="text">
+-                <string>0</string>
++                <string>9</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="0">
++             <item row="0" column="1">
+               <widget class="QPushButton" name="n1">
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="2">
+-              <widget class="QPushButton" name="le">
++             <item row="7" column="4">
++              <widget class="QPushButton" name="lc">
+                <property name="text">
+-                <string>e</string>
++                <string>c</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="9">
+-              <widget class="QPushButton" name="lo">
++             <item row="7" column="1">
++              <widget class="QPushButton" name="shiftBtn">
+                <property name="text">
+-                <string>o</string>
++                <string>⇧</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="2">
+-              <widget class="QPushButton" name="lx">
++             <item row="7" column="7">
++              <widget class="QPushButton" name="lb">
+                <property name="text">
+-                <string>x</string>
++                <string>b</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="2">
+-              <widget class="QPushButton" name="n3">
++             <item row="0" column="9">
++              <widget class="QPushButton" name="n8">
+                <property name="text">
+-                <string>3</string>
++                <string>8</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="7">
+-              <widget class="QPushButton" name="n7">
++             <item row="2" column="7">
++              <widget class="QPushButton" name="ly">
+                <property name="text">
+-                <string>7</string>
++                <string>y</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="7">
++             <item row="2" column="8">
+               <widget class="QPushButton" name="lu">
+                <property name="text">
+                 <string>u</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="0">
+-              <widget class="QPushButton" name="la">
++             <item row="0" column="6">
++              <widget class="QPushButton" name="n5">
+                <property name="text">
+-                <string>a</string>
++                <string>5</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="11">
+-              <widget class="QPushButton" name="sat">
++             <item row="2" column="2">
++              <widget class="QPushButton" name="lw">
+                <property name="text">
+-                <string>@</string>
++                <string>w</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="9">
+-              <widget class="QPushButton" name="n9">
++             <item row="2" column="6">
++              <widget class="QPushButton" name="lt">
+                <property name="text">
+-                <string>9</string>
++                <string>t</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="5">
+-              <widget class="QPushButton" name="lg">
++             <item row="7" column="9">
++              <widget class="QPushButton" name="lm">
+                <property name="text">
+-                <string>g</string>
++                <string>m</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="1">
+-              <widget class="QPushButton" name="lw">
++             <item row="7" column="12">
++              <widget class="QPushButton" name="eraseBtn">
+                <property name="text">
+-                <string>w</string>
++                <string>⌫</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="5">
+-              <widget class="QPushButton" name="lt">
++             <item row="0" column="8">
++              <widget class="QPushButton" name="n7">
+                <property name="text">
+-                <string>t</string>
++                <string>7</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="0">
++             <item row="2" column="1">
+               <widget class="QPushButton" name="lq">
+                <property name="text">
+                 <string>q</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="1">
+-              <widget class="QPushButton" name="ls">
++             <item row="2" column="9">
++              <widget class="QPushButton" name="li">
+                <property name="text">
+-                <string>s</string>
++                <string>i</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="6">
+-              <widget class="QPushButton" name="n6">
++             <item row="7" column="2">
++              <widget class="QPushButton" name="lz">
+                <property name="text">
+-                <string>6</string>
++                <string>z</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="5">
+-              <widget class="QPushButton" name="n5">
++             <item row="7" column="10">
++              <widget class="QPushButton" name="spt">
+                <property name="text">
+-                <string>5</string>
++                <string>.</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="5">
+-              <widget class="QPushButton" name="lv">
++             <item row="0" column="4">
++              <widget class="QPushButton" name="n4">
+                <property name="text">
+-                <string>v</string>
++                <string>4</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="11">
+-              <widget class="QPushButton" name="lp">
++             <item row="2" column="10">
++              <widget class="QPushButton" name="lo">
+                <property name="text">
+-                <string>p</string>
++                <string>o</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="1">
+-              <widget class="QPushButton" name="n2">
++             <item row="7" column="8">
++              <widget class="QPushButton" name="ln">
+                <property name="text">
+-                <string>2</string>
++                <string>n</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="6">
+-              <widget class="QPushButton" name="lb">
++             <item row="6" column="12">
++              <widget class="QPushButton" name="ll">
+                <property name="text">
+-                <string>b</string>
++                <string>l</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="6">
+-              <widget class="QPushButton" name="lh">
++             <item row="6" column="10">
++              <widget class="QPushButton" name="lk">
+                <property name="text">
+-                <string>h</string>
++                <string>k</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="7">
++             <item row="6" column="9">
+               <widget class="QPushButton" name="lj">
+                <property name="text">
+                 <string>j</string>
+@@ -289,51 +292,51 @@
+               </widget>
+              </item>
+              <item row="6" column="8">
+-              <widget class="QPushButton" name="lk">
++              <widget class="QPushButton" name="lh">
+                <property name="text">
+-                <string>k</string>
++                <string>h</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="7">
+-              <widget class="QPushButton" name="ln">
++             <item row="6" column="7">
++              <widget class="QPushButton" name="lg">
+                <property name="text">
+-                <string>n</string>
++                <string>g</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="2" column="3">
+-              <widget class="QPushButton" name="lr">
++             <item row="6" column="6">
++              <widget class="QPushButton" name="lf">
+                <property name="text">
+-                <string>r</string>
++                <string>f</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="3">
+-              <widget class="QPushButton" name="n4">
++             <item row="6" column="4">
++              <widget class="QPushButton" name="ld">
+                <property name="text">
+-                <string>4</string>
++                <string>d</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="6" column="2">
+-              <widget class="QPushButton" name="ld">
++             <item row="6" column="3">
++              <widget class="QPushButton" name="ls">
+                <property name="text">
+-                <string>d</string>
++                <string>s</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="0" column="8">
+-              <widget class="QPushButton" name="n8">
++             <item row="6" column="2">
++              <widget class="QPushButton" name="la">
+                <property name="text">
+-                <string>8</string>
++                <string>a</string>
+                </property>
+               </widget>
+              </item>
+-             <item row="7" column="1">
+-              <widget class="QPushButton" name="lz">
++             <item row="6" column="1">
++              <widget class="QPushButton" name="sat">
+                <property name="text">
+-                <string>z</string>
++                <string>#</string>
+                </property>
+               </widget>
+              </item>
+-- 
+2.37.3
+

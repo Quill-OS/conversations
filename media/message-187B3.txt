@@ -1,0 +1,119 @@
+lying setting, reverse things back
+Interface 'lo': flags set to 0001.
+
+Linux inkbox #1 SMP PREEMPT Mon Jun 19 16:50:10 UTC 2023 GNU/Linux
+InkBox OS, kernel build TGnAxfuB, commit 75d47ae
+
+Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+boot: clean, 15/3840 files, 2249/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 487261/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+rootfs: clean, 20/32768 files, 72398/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+user: recovering journal
+Setting free inodes count to 192570 (was 192590)
+Setting free blocks count to 190018 (was 190040)
+user: clean, 198/192768 files, 579876/769894 blocks
+
+0+1 records in
+0+1 records out
+256 bytes (256B) copied, 0.000338 seconds, 739.6KB/s
+(initrd) Hit ENTER to stop auto-boot ... 
+
+ * Device is not rooted; enforcing security policy
+ * Boot mode: Standard
+Verifying root filesystem's digital signature ...
+Done.
+ * Mounted root filesystem
+[   25.261104] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   25.277739] squashfs: SQUASHFS error: unable to read xattr id index table
+ * Mounted core SquashFS archives
+ * Mounted essential filesystems
+Verified OK
+
+Starting X11 windowing system ...
+Validating packages' digital signatures ...
+/opt/X11/extensions-base/netsurf.isa: Verification succeeded
+
+X.Org X Server 1.20.5
+X Protocol Version 11, Revision 0
+Build Operating System: Linux 5.4.34-0-lts armv8l Alpine Linux
+Current Operating System: Linux inkbox 4.1.15 #1 SMP PREEMPT Mon Jun 19 16:50:10 UTC 2023 armv7l
+Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M t
+Build Date: 13 April 2021  04:46:44PM
+ 
+Current version of pixman: 0.38.4
+        Before reporting problems, check http://wiki.x.org
+        to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+        (++) from command line, (!!) notice, (II) informational,
+        (WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Mon Jun 19 22:04:07 2023
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported high keycode 372 for name <I372> ignored
+>                   X11 cannot support keycodes above 255.
+>                   This warning only shows for the first high keycode.
+> Internal error:   Could not resolve keysym XF86MonBrightnessCycle
+> Internal error:   Could not resolve keysym XF86RotationLockToggle
+Errors from xkbcomp are not fatal to the X server
+X11 windowing system was successfully initialized.
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+ [ ok ]
+ * Starting USBNet ...cat: /opt/root/rooted: No such file or directory
+ * Permission denied; USB networking is disabled.
+ [ !! ]
+ * ERROR: usbnet failed to start
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Starting InkBox Power Daemon (ipd) ... [ ok ]
+ * Starting USBNet ...cat: /opt/root/rooted: No such file or directory
+ * Permission denied; USB networking is disabled.
+ [ !! ]
+ * ERROR: usbnet failed to start
+ * Starting battery watchdog ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Checking for available updates ...Update skipped or no update available, aborting ...
+ [ ok ]
+ * Starting InkBox GUI ... * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * WARNING: you are stopping a sysinit service
+ * Stopping udev ... [ ok ]
+ * Starting udev ... [ ok ]
+[  147.479610] udevd[1713]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/enabled} for writing: Permission denied
+[  147.538789] udevd[1713]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/authorized} for writing: Permission denied
+[  148.749046] udevd[1713]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: Permission denied
+[  148.875783] udevd[1713]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: Permission denied
+ * Setting up GUI user applications
+ [ ok ]
+cat: /opt/root/rooted: No such file or directory
+Not starting SSHd, device is not rooted.
+ [ ok ]
+
+Welcome to InkBox OS 2.0
+Kernel 4.1.15 on armv7l (/dev/ttymxc0)
+
+kobo login: (II) Server terminated successfully (0). Closing log file.
+[  312.612103] Freezing of tasks failed after 20.012 seconds (1 tasks refusing to freeze, wq_busy=0):
+[  368.189370] udevd[2565]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/enabled} for writing: Permission denied
+[  368.244163] udevd[2565]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/authorized} for writing: Permission denied
+[  369.420916] udevd[2570]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: Permission denied
+[  369.536375] udevd[2570]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: Permission denied
+

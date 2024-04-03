@@ -1,0 +1,110 @@
++ cat /opt/inkbox_device
++ DEVICE=n437
++ dirname ./explore_local_library.sh
++ cd .
++ date '+%s'
++ pre_epubtool_epoch=1687189761
++ EXTRACT_COVER=1 LD_LIBRARY_PATH=/lib:system/lib system/bin/epubtool
++ json='{
+            "database":[
+            '
++ '[' n437 '==' kt ]
++ system/lib/ld-musl-armhf.so.1 /external_root/opt/bin/fbink/fbink -e
+[FBInk] Unidentified Kobo device code (40)!
++ eval 'FBINK_VERSION='"'"'v1.23.1-34-g3577ce7' 'for' 'Kobo'"'"';viewWidth=1072;viewHeight=1448;screenWidth=1072;screenHeight=1448;viewHoriOrigin=0;viewVertOrigin=4;viewVertOffset=4;DPI=167;BPP=8;lineLength=1088;FONTW=16;FONTH=16;FONTSIZE_MULT=2;FONTNAME='"'"'IBM'"'"';glyphWidth=8;glyphHeight=8;MAXCOLS=67;MAXROWS=90;isPerfectFit=1;FBID='"'"'mxc_epdc_fb'"'"';USER_HZ=100;penFGColor=0;penBGColor=255;deviceName='"'"'Unknown!'"'"';deviceId=40;deviceCodename='"''"';devicePlatform='"''"';isKoboNonMT=0;ntxBootRota=2;ntxRotaQuirk=0;isNTX16bLandscape=0;currentRota=3;canRotate=0;'
++ FBINK_VERSION='v1.23.1-34-g3577ce7 for Kobo'
++ viewWidth=1072
++ viewHeight=1448
++ screenWidth=1072
++ screenHeight=1448
++ viewHoriOrigin=0
++ viewVertOrigin=4
++ viewVertOffset=4
++ DPI=167
++ BPP=8
++ lineLength=1088
++ FONTW=16
++ FONTH=16
++ FONTSIZE_MULT=2
++ FONTNAME=IBM
++ glyphWidth=8
++ glyphHeight=8
++ MAXCOLS=67
++ MAXROWS=90
++ isPerfectFit=1
++ FBID=mxc_epdc_fb
++ USER_HZ=100
++ penFGColor=0
++ penBGColor=255
++ deviceName='Unknown!'
++ deviceId=40
++ deviceCodename=
++ devicePlatform=
++ isKoboNonMT=0
++ ntxBootRota=2
++ ntxRotaQuirk=0
++ isNTX16bLandscape=0
++ currentRota=3
++ canRotate=0
++ calculate 1072/6.6
++ awk 'BEGIN { print 1072/6.6 }'
++ result=162.424
++ printf '%.0f\n' 162.424
++ calculate 1448/6.6
++ awk 'BEGIN { print 1448/6.6 }'
++ result=219.394
++ printf '%.0f\n' 219.394
++ coverSize='162!x219!'
++ cd /mnt/onboard/onboard/.thumbnails
++ '[' 14bc35cee1d42854cc50955a54d5dc01e75ee44dcd81fb8575213f14df1b8d87 '!=' '*' ]
++ busybox-initrd stat -c '%Y' 14bc35cee1d42854cc50955a54d5dc01e75ee44dcd81fb8575213f14df1b8d87
++ cover_epoch=1687186880
++ '[' 1687186880 -ge 1687189761 ]
++ '[' 65531afe2efe476d0a9b0d50a77d28f17df7f2ed12c0981f47d26ec149efc989 '!=' '*' ]
++ busybox-initrd stat -c '%Y' 65531afe2efe476d0a9b0d50a77d28f17df7f2ed12c0981f47d26ec149efc989
++ cover_epoch=1687188948
++ '[' 1687188948 -ge 1687189761 ]
++ '[' bca977e47acd5ac71dfc499bf0020ab01ea9aafd78ad768e176d8ee681033e82 '!=' '*' ]
++ busybox-initrd stat -c '%Y' bca977e47acd5ac71dfc499bf0020ab01ea9aafd78ad768e176d8ee681033e82
++ cover_epoch=1687188998
++ '[' 1687188998 -ge 1687189761 ]
++ cd -
++ awk '{ print $2 }'
++ tr -d '"'
++ tr -d ,
++ grep '"BookID"\:'
++ tail -n 1
++ echo '{
+            "database":[
+            '
++ last_book_id=
++ book_id=1
++ IFS='
+'
++ set -f
++ find /mnt/onboard/onboard '(' -path /mnt/onboard/onboard/.inkbox -o -path /mnt/onboard/onboard/.apps -o -path /mnt/onboard/onboard/.thumbnails ')' -prune -o -name '*.txt' -or -name '*.TXT'
++ '[' -d /mnt/onboard/onboard/.inkbox ]
++ continue
++ '[' -d /mnt/onboard/onboard/.apps ]
++ continue
++ '[' -d /mnt/onboard/onboard/.thumbnails ]
++ continue
++ find /mnt/onboard/onboard '(' -path /mnt/onboard/onboard/.inkbox -o -path /mnt/onboard/onboard/.apps -o -path /mnt/onboard/onboard/.thumbnails ')' -prune -o -name '*.pdf' -or -name '*.PDF'
++ '[' -d /mnt/onboard/onboard/.inkbox ]
++ continue
++ '[' -d /mnt/onboard/onboard/.apps ]
++ continue
++ '[' -d /mnt/onboard/onboard/.thumbnails ]
++ continue
++ find /mnt/onboard/onboard '(' -path /mnt/onboard/onboard/.inkbox -o -path /mnt/onboard/onboard/.apps -o -path /mnt/onboard/onboard/.thumbnails -o -path /mnt/onboard/onboard/.screensaver ')' -prune -o -name '*.png' -or -name '*.PNG' -or -name '*.jpg' -or -name '*.JPG' -or -name '*.jpeg' -or -name '*.JPEG' -or -name '*.bmp' -or -name '*.BMP' -or -name '*.tif' -or -name '*.TIF' -or -name '*.tiff' -or -name '*.TIFF'
++ '[' -d /mnt/onboard/onboard/.inkbox ]
++ continue
++ '[' -d /mnt/onboard/onboard/.apps ]
++ continue
++ '[' -d /mnt/onboard/onboard/.thumbnails ]
++ continue
++ unset IFS
++ set +f
++ echo '{
+            "database":[
+            ]}'

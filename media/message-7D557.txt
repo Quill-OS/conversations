@@ -1,0 +1,158 @@
+kobo-nia:/sys/class/power_supply$ dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #4-postmarketOS Sat Apr 29 20:21:29 UTC 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Kobo Nia
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] cma: Reserved 64 MiB at 0x8ac00000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: console=ttymxc0,115200 debug
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 178920K/262144K available (8192K kernel code, 1051K rwdata, 2216K rodata, 1024K init, 351K bss, 17688K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000002] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000038] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.002447] Console: colour dummy device 80x30
+[    0.002518] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.002554] pid_max: default: 32768 minimum: 301
+[    0.002917] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.002957] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.004160] CPU: Testing write buffer coherency: ok
+[    0.005910] Setting up static identity map for 0x80100000 - 0x80100060
+[    0.007006] devtmpfs: initialized
+[    0.019344] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.019789] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.019836] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.024265] pinctrl core: initialized pinctrl subsystem
+[    0.027512] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.029275] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.031275] thermal_sys: Registered thermal governor 'step_wise'
+[    0.031337] cpuidle: using governor menu
+[    0.031433] CPU identified as i.MX6ULL, silicon rev 1.1
+[    0.060329] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.060430] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.061969] imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+[    0.062645] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    0.094408] usbcore: registered new interface driver usbfs
+[    0.094515] usbcore: registered new interface driver hub
+[    0.094621] usbcore: registered new device driver usb
+[    0.098414] i2c i2c-0: IMX I2C adapter registered
+[    0.100690] i2c i2c-3: IMX I2C adapter registered
+[    0.101232] pps_core: LinuxPPS API ver. 1 registered
+[    0.101250] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.101295] PTP clock support registered
+[    0.105129] clocksource: Switched to clocksource mxc_timer1
+[    0.105604] VFS: Disk quotas dquot_6.6.0
+[    0.105689] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.126334] NET: Registered PF_INET protocol family
+[    0.126858] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.128704] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.128779] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.128813] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.128885] TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.128971] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.129140] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.129194] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.129506] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.132444] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    0.135897] Trying to unpack rootfs image as initramfs...
+[    0.146704] Initialise system trusted keyrings
+[    0.147202] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    0.168006] fuse: init (API version 7.37)
+[    0.168967] Key type asymmetric registered
+[    0.168989] Asymmetric key parser 'x509' registered
+[    0.169212] io scheduler mq-deadline registered
+[    0.169228] io scheduler kyber registered
+[    0.188794] mxs-dma 1804000.dma-apbh: initialized
+[    0.198706] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+[    0.531091] Freeing initrd memory: 1440K
+[    0.531309] imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+[    0.531352] imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+[    0.788322] printk: console [ttymxc0] enabled
+[    0.793686] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+[    0.835917] imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+[    0.849091] random: crng init done
+[    0.873356] brd: module loaded
+[    0.884225] loop: module loaded
+[    0.913814] rn5t618 3-0032: mask_invert=true is deprecated; please switch to unmask_base
+[    0.930506] i2c_dev: i2c /dev entries driver
+[    0.939424] sdhci: Secure Digital Host Controller Interface driver
+[    0.944335] sdhci: Copyright(c) Pierre Ossman
+[    0.947471] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.964997] usbcore: registered new interface driver usbhid
+[    0.969393] usbhid: USB HID core driver
+[    0.977934] NET: Registered PF_INET6 protocol family
+[    0.983650] Segment Routing with IPv6
+[    0.986401] In-situ OAM (IOAM) with IPv6
+[    0.989361] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.995461] NET: Registered PF_PACKET protocol family
+[    0.999366] mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+[    1.005215] mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+[    1.014756] Registering SWP/SWPB emulation handler
+[    1.019757] Loading compiled-in X.509 certificates
+[    1.042074] imx_usb 2184000.usb: No over current polarity defined
+[    1.068607] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.078488] mmc0: new high speed SDHC card at address aaaa
+[    1.083894] mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+[    1.093368]  mmcblk0: p1 p2
+[    1.221947] imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+[    1.233793] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    1.244912] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    1.250720] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    1.263636] gpio-keys gpio-keys: Error applying setting, reverse things back
+[    1.271440] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.281649] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.287607] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.296767] Freeing unused kernel image (initmem) memory: 1024K
+[    1.301562] cfg80211: failed to load regulatory.db
+[    1.305422] Run /init as init process
+[    1.307801]   with arguments:
+[    1.309465]     /init
+[    1.310436]   with environment:
+[    1.312274]     HOME=/
+[    1.313330]     TERM=linux
+[    1.999864] using random self ethernet address
+[    2.003032] using random host ethernet address
+[    2.032914] usb0: HOST MAC da:4f:15:2c:8b:35
+[    2.035969] usb0: MAC fe:3f:9a:31:a0:a2
+[    2.434161] IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+[    2.520337] EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+[    7.029061] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+[    7.039791] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: none.
+[    7.064413] EXT4-fs (mmcblk0p1): unmounting filesystem.
+[    7.321998] EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+[   10.224069] udevd[710]: starting version 3.2.11
+[   10.366490] udevd[710]: starting eudev-3.2.11
+[   10.973431] lm3630a_bl 0-0036: LM3630A backlight register OK.
+[   11.009073] mc: Linux media interface: v0.10
+[   11.090174] rc5t619-rtc rc5t619-rtc: registered as rtc0
+[   11.096134] videodev: Linux video capture interface: v2.00
+[   11.105396] rc5t619-rtc rc5t619-rtc: setting system clock to 2023-04-29T21:13:58 UTC (1682802838)
+[   11.179264] rn5t618-power rn5t618-power: Fuel gauge not enabled, enabling now
+[   11.179295] rn5t618-power rn5t618-power: Expect imprecise results
+[   11.231346] pxp 21cc000.pxp: Device registered as /dev/video0
+[   12.785732] EXT4-fs (mmcblk0p2): re-mounted. Quota mode: none.
+[   31.845206] LDO1: disabling
+[   31.847290] LDO3: disabling
+[   31.855511] LDO4: disabling
+[   31.857526] LDO9: disabling
+[   31.865477] LDO10: disabling
+[   31.867568] LDORTC1: disabling
+[   31.875489] LDORTC2: disabling
+kobo-nia:/sys/class/power_supply$ 

@@ -1,0 +1,89 @@
+kobo-nia:~$ DISPLAY=:0 xev
+Outer window is 0x3000001, inner window is 0x3000002
+
+PropertyNotify event, serial 8, synthetic NO, window 0x3000001,
+    atom 0x27 (WM_NAME), time 433358, state PropertyNewValue
+
+PropertyNotify event, serial 9, synthetic NO, window 0x3000001,
+    atom 0x22 (WM_COMMAND), time 433358, state PropertyNewValue
+
+PropertyNotify event, serial 10, synthetic NO, window 0x3000001,
+    atom 0x28 (WM_NORMAL_HINTS), time 433358, state PropertyNewValue
+
+CreateNotify event, serial 11, synthetic NO, window 0x3000001,
+    parent 0x3000001, window 0x3000002, (10,10), width 50, height 50
+border_width 4, override NO
+
+PropertyNotify event, serial 14, synthetic NO, window 0x3000001,
+    atom 0x107 (WM_PROTOCOLS), time 433368, state PropertyNewValue
+
+MapNotify event, serial 15, synthetic NO, window 0x3000001,
+    event 0x3000001, window 0x3000002, override NO
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x115 (_NET_WM_STATE), time 433387, state PropertyNewValue
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x10f (_NET_WM_DESKTOP), time 433387, state PropertyNewValue
+
+ConfigureNotify event, serial 20, synthetic NO, window 0x3000001,
+    event 0x3000001, window 0x3000001, (0,0), width 178, height 178,
+    border_width 0, above 0x2a00011, override NO
+
+ReparentNotify event, serial 20, synthetic NO, window 0x3000001,
+    event 0x3000001, window 0x3000001, parent 0xc00803,
+    (12,58), override NO
+
+ConfigureNotify event, serial 20, synthetic NO, window 0x3000001,
+    event 0x3000001, window 0x3000001, (12,58), width 178, height 178,
+    border_width 0, above 0xc00812, override NO
+
+ConfigureNotify event, serial 20, synthetic YES, window 0x3000001,
+    event 0x3000001, window 0x3000001, (423,337), width 178, height 178,
+    border_width 0, above 0x0, override NO
+
+MapNotify event, serial 20, synthetic NO, window 0x3000001,
+    event 0x3000001, window 0x3000001, override NO
+
+VisibilityNotify event, serial 20, synthetic NO, window 0x3000001,
+    state VisibilityUnobscured
+
+Expose event, serial 20, synthetic NO, window 0x3000001,
+    (0,0), width 178, height 10, count 3
+
+Expose event, serial 20, synthetic NO, window 0x3000001,
+    (0,10), width 10, height 58, count 2
+
+Expose event, serial 20, synthetic NO, window 0x3000001,
+    (68,10), width 110, height 58, count 1
+
+Expose event, serial 20, synthetic NO, window 0x3000001,
+    (0,68), width 178, height 110, count 0
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x176 (WM_STATE), time 433572, state PropertyNewValue
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x160 (_NET_WM_ALLOWED_ACTIONS), time 433572, state PropertyNewValue
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x115 (_NET_WM_STATE), time 433572, state PropertyNewValue
+
+FocusIn event, serial 20, synthetic NO, window 0x3000001,
+    mode NotifyWhileGrabbed, detail NotifyNonlinear
+
+KeymapNotify event, serial 20, synthetic NO, window 0x0,
+    keys:  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   
+           0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x10c (_NET_FRAME_EXTENTS), time 433580, state PropertyNewValue
+
+PropertyNotify event, serial 20, synthetic NO, window 0x3000001,
+    atom 0x115 (_NET_WM_STATE), time 433581, state PropertyNewValue
+
+PropertyNotify event, serial 27, synthetic NO, window 0x3000001,
+    atom 0x115 (_NET_WM_STATE), time 433597, state PropertyNewValue
+
+PropertyNotify event, serial 33, synthetic NO, window 0x3000001,
+    atom 0x164 (_NET_WM_ICON_GEOMETRY), time 433928, state PropertyNewValue

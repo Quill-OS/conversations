@@ -1,0 +1,102 @@
+EB2.3.4
+0003EB41
+Found LFP100 r00
+clock_init: (0) clocks NOT changed
+mmc: detected SD 2.0 or later
+SD1 found
+SD1 kernel passes CBF
+init started: BusyBox v1.18.4 (2013-11-13 09:00:18 PST)
+starting pid 260, tty '': '/etc/init.d/rcS'
+cat: can't open '/sys/devices/platform/lf1000-gpio/board_id': No such file or directory
+tar: dev/i2c-0: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/gpio: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/idct: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/ga3d: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/pts: implausibly old time stamp 1970-01-01 00:00:00
+tar: dev/ram0: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/loop0: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/loop1: implausibly old time stamp 1918-12-25 06:18:08
+tar: dev/loop2: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/loop3: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/loop4: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/loop5: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/loop6: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/loop7: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtdblock0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/device: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtdblock1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtdblock2: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mmcblk0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mmcblk0p1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mmcblk0p2: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mmcblk0p3: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/root: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mmcblk0p4: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/tty: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/console: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/ptmx: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/ttyS0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/fb0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/fb1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/fb2: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/fuse: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/watchdog: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/ubi_ctrl: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/cpu_dma_latency: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/network_latency: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/network_throughput: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/usbdev1.1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/rtc0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/input/event0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/input/event1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/input/event2: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/input: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mem: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/kmem: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/null: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/zero: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/full: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/random: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/urandom: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/kmsg: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/i2c-1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtd0: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtd0ro: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtd1: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtd1ro: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtd2: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/mtd2ro: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/snd/timer: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev/snd: implausibly old time stamp 1918-12-25 06:18:09
+tar: dev: implausibly old time stamp 1918-12-25 06:18:09
+Emerald Base: +++ 1.35 11 80 22 Bgn Mounting SD /LF/Bulk
+Emerald Base: +++ 1.51 12 93 22 End Mounting SD /LF/Bulk
+failed to write/read.
+: Bad address
+Emerald Base: found LFP100 codec
+Emerald Base: Starting lfd ...
++++ AppManager: VideoDaemon: Started Process: 2.41 0.04
+Starting system logging.
+Recovery Keep-Alives: boot_image=PLAY boot_source=NOR panic=0 power=WARM request=PLAY shutdown=DIRTY raw=0003EB46
+
+nice: can't execute '/usr/bin/syncd': No such file or directory
+Emerald Base: Locale: could not find /var/screens-fr/LEGAL.png, defaulting to english
+Emerald Base: Locale: Loading /var/screens/Madrid-Boot-logoCW.png
+Emerald Base: Starting touch screen driver ...
+setcal: Reading TS sensitivity calibration data from /flags/set-ts.sh
+Emerald Base: setcal: Reading TS sensitivity calibration data from /flags/set-ts.sh
+setcal: /flags/set-ts.sh success
+Emerald Base: setcal: /flags/set-ts.sh success
+setcal: Setting tails to 0 based on /flags/set-ts.sh version 4
+Emerald Base: setcal: Setting tails to 0 based on /flags/set-ts.sh version 4
+setcal: Using USERCAL in /flags/pointercal 53540 -290 -11516999 152 40424 -11531553 65536
+Emerald Base: setcal: Using USERCAL in /flags/pointercal 53540 -290 -11516999 152 40424 -11531553 65536
+Launching AppManager normally
++++    3.93   110   234    22 Bgn CartManager
+Emerald Base: +++ 3.99 112 238 22 Bgn AppManager
+Emerald Base: Use ADC settings from NOR -89 2072
+Playing WAVE '/var/sounds/startup.wav' : Signed 16 bit Little Endian, Rate 32000 Hz, Stereo
++++    6.41   262   330    22 Bgn Start splash video
++++    6.47   267   331    22 End End splash video
+starting pid 498, tty '/dev/ttyS0': '-/bin/sh'
+~ #

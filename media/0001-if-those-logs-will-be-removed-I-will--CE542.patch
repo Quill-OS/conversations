@@ -1,0 +1,43 @@
+From d268eb73b1c081ab7ec36b26c92e82f849c895c9 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Thu, 29 Jun 2023 14:32:55 +0200
+Subject: [PATCH] if those logs will be removed I will be seriously mad
+
+---
+ src/localLibrary/locallibrarywidget.cpp | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+diff --git a/src/localLibrary/locallibrarywidget.cpp b/src/localLibrary/locallibrarywidget.cpp
+index b315dd2..7e32699 100644
+--- a/src/localLibrary/locallibrarywidget.cpp
++++ b/src/localLibrary/locallibrarywidget.cpp
+@@ -136,19 +136,17 @@ void localLibraryWidget::setupDatabase() {
+         QStringList args;
+         args << "env" << "icon_width_divider=" + QString::number(stdIconWidthDivider - 1.5) << "icon_height_divider=" + QString::number(stdIconHeightDivider - 1.5) << "./explore_local_library.sh" << booksList;
+ 
+-        /*
+-        *   Logs/steps needed to debug the database creation
+-        *   for(int i = 0; i < args.count(); i++) {
+-        *       log("Arguments for database creation: '" + args[i] + "'", className);
+-        *   }
+-        */
+-
++        // Logs/steps needed to debug the database creation
++        for(int i = 0; i < args.count(); i++) {
++            log("Arguments for database creation: '" + args[i] + "'", className);
++        }
++        
+         QProcess *proc = new QProcess();
+         proc->start(prog, args);
+         proc->waitForFinished(-1);
+         QJsonDocument jsonDocument = QJsonDocument::fromJson(readFile(global::localLibrary::rawDatabasePath).toUtf8());
+-        // log("stdout of process: " + proc->readAllStandardOutput(), className);
+-        // log("stderr of process: " + proc->readAllStandardError(), className);
++        log("stdout of process: " + proc->readAllStandardOutput(), className);
++        log("stderr of process: " + proc->readAllStandardError(), className);
+         QFile::remove(global::localLibrary::rawDatabasePath);
+         proc->deleteLater();
+ 
+-- 
+2.41.0
+

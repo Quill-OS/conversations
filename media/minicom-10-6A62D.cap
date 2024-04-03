@@ -1,0 +1,431 @@
+$€þŒ	 € ð0ð€è`€àà€t @ÿü€P@ï @ÁÀÀÀÿÀü˜ ð> Ñþ	€ˆþÀà@ÀÀüüæÿ ¢ýàÿÿ†|þŽþ¾àAàð „¨	P@€@€0`@ €@(8ø@@àððÀÿ ~ð„üàÀ@8  (@€’@ø€ @@@  @€à&ð:€@€@ B  ð€ÀÀ€à ðÄ<pàøð"€ðxðøH   8€D„    Äðà@ÄøÀøx< À@€€p$Aøø€üøÀàØpàðð€øþ€ð"*ô`  ø à€þ8@âþÀ àÀþø€Èøü€  "þÿü'j!é¥
+CPU:   Commercial temperature grade (0C to 95C) at 32C
+Reset cause: POR
+Model: Kobo Nia
+Board: MX6ULL Kobo Nia
+DRAM:  256 MiB
+MMC:   FSL_SDHC: 1, FSL_SDHC: 0
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+Normal Boot
+Hit any key to stop autoboot:  2  0
+=> 
+=> 
+=> 
+=> U-Boot 2020.10-00026-ge45fdb
+Unknown command 'U-Boot' - try 'help'
+=> 
+
+U-Boot 2020.10-00026-ge45fdb097f (Apr 27 2023 - 22:15:30 +0200)
+
+CPU:   Freescale i.MX6ULL rev1.1 900 MHz (running at 396 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 33C
+Reset cause: POR
+Model: Kobo Nia
+Board: MX6ULL Kobo Nia
+DRAM:  256 MiB
+MMC:   FSL_SDHC: 1, FSL_SDHC: 0
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+Normal Boot
+Hit any key to stop autoboot:  2  1  0 
+517 bytes read in 10 ms (49.8 KiB/s)
+## Executing script at 82000000
+Wrong image format for "source" command
+=> help
+?         - alias for 'help'
+base      - print or set address offset
+bdinfo    - print Board Info structure
+blkcache  - block cache diagnostics and control
+boot      - boot default, i.e., run 'bootcmd'
+bootd     - boot default, i.e., run 'bootcmd'
+bootefi   - Boots an EFI payload from memory
+bootelf   - Boot from an ELF image in memory
+bootm     - boot application image from memory
+bootvx    - Boot vxWorks from an ELF image
+bootz     - boot Linux zImage image from memory
+button    - manage buttons
+clocks    - display clocks
+cmp       - memory compare
+coninfo   - print console devices and information
+cp        - memory copy
+crc32     - checksum calculation
+dcache    - enable or disable data cache
+dm        - Driver model low level access
+download_mode- Go to mfg download mode
+echo      - echo args to console
+editenv   - edit environment variable
+env       - environment handling commands
+erase     - erase FLASH memory
+exit      - exit script
+ext2load  - load binary file from a Ext2 filesystem
+ext2ls    - list files in a directory (default /)
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+ext4write - create a file in the root directory
+false     - do nothing, unsuccessfully
+fastboot  - run as a fastboot usb or udp device
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+flinfo    - print FLASH memory information
+fstype    - Look up a filesystem type
+fstypes   - List supported filesystem types
+fuse      - Fuse sub-system
+go        - start application at address 'addr'
+gpio      - query and control gpio pins
+help      - print command description/usage
+i2c       - I2C sub-system
+icache    - enable or disable instruction cache
+iminfo    - print header information for application image
+imxtract  - extract a part of a multi-image
+itest     - return true/false on integer compare
+kobohiddenread- read kobo hidden partitions
+led       - manage LEDs
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loadb     - load binary file over serial line (kermit mode)
+loads     - load S-Record file over serial line
+loadx     - load binary file over serial line (xmodem mode)
+loady     - load binary file over serial line (ymodem mode)
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+md        - memory display
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mtest     - simple RAM read/write test
+mw        - memory write (fill)
+nm        - memory modify (constant address)
+panic     - Panic with optional message
+pinmux    - show pin-controller muxing
+printenv  - print environment variables
+protect   - enable or disable FLASH write protection
+reset     - Perform RESET of the CPU
+run       - run commands in an environment variable
+save      - save file to a filesystem
+saveenv   - save environment variables to persistent storage
+setenv    - set environment variables
+setexpr   - set environment variable as the result of eval expression
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+test      - minimal test like /bin/sh
+true      - do nothing, successfully
+ums       - Use the UMS [USB Mass Storage]
+version   - print monitor, compiler and linker version
+=> þÀøàR"   @  €€² @$$À@€€€
+
+U-Boot 2020.10-00026-ge45fdb097f (Apr 27 2023 - 22:15:30 +0200)
+
+CPU:   Freescale i.MX6ULL rev1.1 900 MHz (running at 396 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 33C
+Reset cause: POR
+Model: Kobo Nia
+Board: MX6ULL Kobo Nia
+DRAM:  256 MiB
+MMC:   FSL_SDHC: 1, FSL_SDHC: 0
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+Normal Boot
+Hit any key to stop autoboot:  2  1  0 
+517 bytes read in 10 ms (49.8 KiB/s)
+## Executing script at 82000000
+Wrong image format for "source" command
+=> setenv bootargs console=ttymxc0,115200 debug
+=> @ÀÐàÀøÀÀ€@@!€!€@à!@À,  3ž@8€€p ÿ@A#àþ±(\@€@x	H€€€@€ðþð
+
+U-Boot 2020.10-00026-ge45fdb097f (Apr 27 2023 - 22:15:30 +0200)
+
+CPU:   Freescale i.MX6ULL rev1.1 900 MHz (running at 396 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 33C
+Reset cause: POR
+Model: Kobo Nia
+Board: MX6ULL Kobo Nia
+DRAM:  256 MiB
+MMC:   FSL_SDHC: 1, FSL_SDHC: 0
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+Normal Boot
+Hit any key to stop autoboot:  2  0 
+517 bytes read in 10 ms (49.8 KiB/s)
+## Executing script at 82000000
+Wrong image format for "source" command
+=> >ÿÿ;@à€ÀôøŸ€L=<ÿàzü$€@Ÿ˜ @p@` @ÿñÿ€à€
+
+U-Boot 2020.10-00026-ge45fdb097f (Apr 27 2023 - 22:15:30 +0200)
+
+CPU:   Freescale i.MX6ULL rev1.1 900 MHz (running at 396 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 33C
+Reset cause: POR
+Model: Kobo Nia
+Board: MX6ULL Kobo Nia
+DRAM:  256 MiB
+MMC:   FSL_SDHC: 1, FSL_SDHC: 0
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+Normal Boot
+Hit any key to stop autoboot:  2  1  0 
+=> setenv bootargs console=ttymxc0,115200 debug
+=> 
+=> oad mmc 0:1 0x80800000 vmlinuz
+Unknown command 'oad' - try 'help'
+=> load mmc 0:1 0x80800000 vmlinuz
+5763208 bytes read in 364 ms (15.1 MiB/s)
+=> load mmc 0:1 0x83000000 imx6ull-kobo-nia.dtb
+30606 bytes read in 19 ms (1.5 MiB/s)
+=> load mmc 0:1 0x85000000 uInitrd
+1473390 bytes read in 117 ms (12 MiB/s)
+=> 
+=> bootz 0x80800000 0x85000000 0x83000000 
+Kernel image @ 0x80800000 [ 0x000000 - 0x57f088 ]
+## Loading init Ramdisk from Legacy Image at 85000000 ...
+   Image Name:   uInitrd
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1473326 Bytes = 1.4 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+data abort
+pc : [<8ffb303c>]	   lr : [<8ffb3f9f>]
+reloc pc : [<8780f03c>]	   lr : [<8780ff9f>]
+sp : 8ef9aaa8  ip : 00000048	 fp : 00000004
+r10: 00000003  r9 : 8efa1ed0	 r8 : 8ffebd80
+r7 : 8ffebdec  r6 : 8ffebdf0	 r5 : 80800000  r4 : 8efa45ac
+r3 : 56190527  r2 : 8efa45ca	 r1 : 00000008  r0 : 08300000
+Flags: nZCv  IRQs off  FIQs off  Mode SVC_32 (T)
+Code: 89a8 8ffe b510 4b0a (6802) 4604 
+Resetting CPU ...
+
+resetting ...
+
+
+U-Boot 2020.10-00026-ge45fdb097f (Apr 27 2023 - 22:15:30 +0200)
+
+CPU:   Freescale i.MX6ULL rev1.1 900 MHz (running at 396 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 38C
+Reset cause: WDOG
+Model: Kobo Nia
+Board: MX6ULL Kobo Nia
+DRAM:  256 MiB
+MMC:   FSL_SDHC: 1, FSL_SDHC: 0
+Loading Environment from MMC... OK
+In:    serial
+Out:   serial
+Err:   serial
+Normal Boot
+Hit any key to stop autoboot:  2  1  0 
+517 bytes read in 10 ms (49.8 KiB/s)
+## Executing script at 82000000
+Wrong image format for "source" command
+=> => setenv bootargs console=ttymxc0,115200 debug
+Unknown command '=>' - try 'help'
+=> => 
+Unknown command '=>' - try 'help'
+=> => oad mmc 0:1 0x80800000 vmUnknmmc 0:1 0x80800000 vmlinuz
+Unknown command '=>' - try 'help'
+=> 5763208 bytes read in 364 ms (15imx6ull-kobo-nia.dtb                                 
+Unknown command '5763208' - try 'help'
+=> 30606 bytes read in 19 ms (1.5 M     
+Unknown command '30606' - try 'help'
+=> => load mmc 0:1 0x85000000 uInit       
+Unknown command '=>' - try 'help'
+=> 1473390 bytes read in 117 ms (12          
+Unknown command '1473390' - try 'help'
+=> =>                              
+Unknown command '=>' - try 'help'
+=> bootz 0x80800000 0x85000000 0x83000000
+zimage: Bad magic!
+=> setenv bootargs console=ttymxc0,115200 debug
+=> load mmc 0:1 0x80800000 vmlinuz
+5763208 bytes read in 364 ms (15.1 MiB/s)
+=> load mmc 0:1 0x83000000 imx6ull-kobo-nia.dtb
+30606 bytes read in 19 ms (1.5 MiB/s)
+=> load mmc 0:1 0x85000000 uInitrd
+1473390 bytes read in 118 ms (11.9 MiB/s)
+=> bootz 0x80800000 0x85000000 0x83000000
+Kernel image @ 0x80800000 [ 0x000000 - 0x57f088 ]
+## Loading init Ramdisk from Legacy Image at 85000000 ...
+   Image Name:   uInitrd
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1473326 Bytes = 1.4 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 83000000
+   Booting using the fü   Loading Device Tree to 8ee26000, end 8ee3078d ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #4-postmarketOS Sat Apr 29 20:21:29 UTC 2023
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Kobo Nia
+Memory policy: Data cache writeback
+cma: Reserved 64 MiB at 0x8ac00000
+Zone ranges:
+  Normal   [mem 0x0000000080000000-0x000000008fffffff]
+  HighMem  empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000080000000-0x000000008fffffff]
+Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+CPU: All CPU(s) started in SVC mode.
+pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+pcpu-alloc: [0] 0 
+Built 1 zonelists, mobility grouping on.  Total pages: 65024
+Kernel command line: console=ttymxc0,115200 debug
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 178920K/262144K available (8192K kernel code, 1051K rwdata, 2216K rodata, 1024K init, 351K bss, 17688K reserved, 65536K cma-reserved, 0K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80100000 - 0x80100060
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor menu
+CPU identified as i.MX6ULL, silicon rev 1.1
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-3: IMX I2C adapter registered
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Trying to unpack rootfs image as initramfs...
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+fuse: init (API version 7.37)
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+io scheduler kyber registered
+mxs-dma 1804000.dma-apbh: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+Freeing initrd memory: 1440K
+imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+printk: console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+random: crng init done
+brd: module loaded
+loop: module loaded
+rn5t618 3-0032: mask_invert=true is deprecated; please switch to unmask_base
+i2c_dev: i2c /dev entries driver
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered PF_PACKET protocol family
+mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+Registering SWP/SWPB emulation handler
+Loading compiled-in X.509 certificates
+imx_usb 2184000.usb: No over current polarity defined
+mmc0: host does not support reading read-only switch, assuming write-enable
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+ mmcblk0: p1 p2
+imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Freeing unused kernel image (initmem) memory: 1024K
+cfg80211: failed to load regulatory.db
+Run /init as init process
+  with arguments:
+    /init
+  with environment:
+    HOME=/
+    TERM=linux
+### postmarketOS initramfs ###
+NOTE: All output from the initramfs gets redirected to:
+/pmOS_init.log
+If you want to disable this behavior (e.g. because you're
+debugging over serial), please add this to your kernel
+command line: PMOS_NO_OUTPUT_REDIRECT
+using random self ethernet address
+using random host ethernet address
+usb0: HOST MAC da:4f:15:2c:8b:35
+usb0: MAC fe:3f:9a:31:a0:a2
+IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: none.
+EXT4-fs (mmcblk0p1): unmounting filesystem.
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+LDO1: disabling
+LDO3: disabling
+LDO4: disabling
+LDO9: disabling
+LDO10: disabling
+LDORTC1: disabling
+LDORTC2: disabling
+
+Welcome to postmarketOS
+Kernel 6.1.12 on an armv7l (/dev/ttymxc0)
+kobo-nia login: 

@@ -1,0 +1,30 @@
+In file included from src/dither.h:4,
+                 from src/dither.cpp:1:
+/mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/include/stdint.h:9:16: fatal error: stdint.h: No such file or directory
+    9 | # include_next <stdint.h>
+      |                ^~~~~~~~~~
+compilation terminated.
+In file included from /mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/arm-kobo-linux-gnueabihf/bits/c++config.h:586,
+                 from /mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/type_traits:38,
+                 from ../../qt-kobo/qt-linux-5.15.2-kobo/include/QtCore/qglobal.h:45,
+                 from ../../qt-kobo/qt-linux-5.15.2-kobo/include/QtCore/QtCore:4,
+                 from src/kobodevicedescriptor.h:4,
+                 from src/kobodevicedescriptor.cpp:1:
+/mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/arm-kobo-linux-gnueabihf/bits/os_defines.h:39:10: fatal error: features.h: No such file or directory
+   39 | #include <features.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:1402: dither.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Makefile:1614: kobodevicedescriptor.o] Error 1
+In file included from /mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/arm-kobo-linux-gnueabihf/bits/c++config.h:586,
+                 from /mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/type_traits:38,
+                 from ../../qt-kobo/qt-linux-5.15.2-kobo/include/QtCore/qglobal.h:45,
+                 from ../../qt-kobo/qt-linux-5.15.2-kobo/include/QtGui/qtguiglobal.h:43,
+                 from ../../qt-kobo/qt-linux-5.15.2-kobo/include/QtGui/5.15.2/QtGui/qpa/qplatformcursor.h:51,
+                 from ../../qt-kobo/qt-linux-5.15.2-kobo/include/QtFbSupport/5.15.2/QtFbSupport/private/qfbcursor_p.h:54,
+                 from src/kobofbscreen.h:4,
+                 from src/kobofbscreen.cpp:1:
+/mnt/HDD/Project/qt-kobo/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/arm-kobo-linux-gnueabihf/bits/os_defines.h:39:10: fatal error: features.h: No such file or directory
+   39 | #include <features.h>
+      |          ^~~~~~~~~~~~

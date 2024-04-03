@@ -1,0 +1,74 @@
+```
+kobo:/# sh -x /mnt/onboard/.adds/inkbox/inkbox
+inkbox      inkbox-bin  inkbox.sh
+kobo:/# sh -x /mnt/onboard/.adds/inkbox/inkbox
+inkbox      inkbox-bin  inkbox.sh
+kobo:/# sh -x /mnt/onboard/.adds/inkbox/inkbox.sh
++ killall -q nickel sickel hindenburg
++ cd /mnt/onboard/.adds/inkbox
++ cat .config/09-dpi/config
++ DPI=212
++ cat /opt/inkbox_genuine
++ GENUINE_OS=true
++ cat /opt/inkbox_device
++ DEVICE=n306
++ cat /tmp/first_launch_since_boot
++ FIRST_LAUNCH_SINCE_BOOT=false
++ cat .config/12-lockscreen/config
++ LOCKSCREEN=false
++ [ true == true ]
++ cat /external_root/boot/flags/FIRST_BOOT
++ FIRST_BOOT=
++ cat /external_root/boot/flags/GUI_DEBUG
++ GUI_DEBUG=true
++ cat /inkbox/remount
++ MOUNT_RULE=
++ [  != false ]
++ umount -l -f /inkbox
++ mount -t tmpfs tmpfs /inkbox
++ [ true == true ]
++ DEBUG=1
++ mkdir -p .flags
++ mkdir -p /inkbox
++ mkdir -p /mnt/onboard/onboard/.database
++ mkdir -p .config/00-kobox
++ mkdir -p .config/01-demo
++ mkdir -p .config/02-clock
++ mkdir -p .config/03-brightness
++ mkdir -p .config/04-book
++ mkdir -p .config/05-quote
++ mkdir -p .config/06-words
++ mkdir -p .config/07-words_number
++ mkdir -p .config/08-recent_books
++ mkdir -p .config/09-dpi
++ mkdir -p .config/10-dark_mode
++ mkdir -p .config/11-menubar
++ mkdir -p .config/12-lockscreen
++ mkdir -p .config/13-epub_page_size
++ mkdir -p .config/14-reader_scrollbar
++ mkdir -p .config/15-sleep_timeout
++ mkdir -p .config/16-global_reading_settings
++ mkdir -p .config/17-wifi_connection_information
++ mkdir -p .config/18-encrypted_storage
++ mkdir -p .config/19-timezone
++ mkdir -p .config/20-sleep_daemon
++ mkdir -p .config/21-local_library
++ mkdir -p .config/22-usb
++ mkdir -p .config/23-updates
++ mkdir -p .config/e-2-audio
++ rm /var/run/brightness
++ [ n306 != n236 ]
++ [ n306 != n437 ]
++ ln -s /sys/class/backlight/mxc_msp430.0/brightness /var/run/brightness
++ [ 212 != false ]
++ [ 212 ==  ]
++ [  == true ]
++ [  == lockscreen ]
++ [ false == true ]
++ QT_FONT_DPI=212 ADDSPATH=/mnt/onboard/.adds/ QTPATH=/mnt/onboard/.adds//qt-linux-5.15.2-kobo LD_LIBRARY_PATH=/mnt/onboard/.adds//qt-linux-5.15.2-kobolib:lib: DEBUG=1 ./inkbox
+/mnt/onboard/.adds/inkbox/inkbox-bin: error while loading shared libraries: libQt5Widgets.so.5: cannot open shared object file: No such file or directory
+/mnt/onboard/.adds/inkbox/inkbox-bin: error while loading shared libraries: libQt5Widgets.so.5: cannot open shared object file: No such file or directory
+/mnt/onboard/.adds/inkbox/inkbox-bin: error while loading shared libraries: libQt5Widgets.so.5: cannot open shared object file: No such file or directory
+
+
+```

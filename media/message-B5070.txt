@@ -1,0 +1,240 @@
+12/08/2022 @ 23:28:43 | libraryWidget: Gutenberg sync in progress
+12/08/2022 @ 23:28:43 | toast: Displaying message 'Sync in progress'
+This plugin does not support setParent!
+--2022-08-12 23:28:45--  http://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv
+Resolving www.gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to www.gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv [following]
+--2022-08-12 23:28:45--  https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv
+Connecting to www.gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 13939505 (13M) [text/csv]
+Saving to: 'catalog.csv'
+
+catalog.csv         100%[===================>]  13.29M   936KB/s    in 23s     
+
+2022-08-12 23:29:09 (604 KB/s) - 'catalog.csv' saved [13939505/13939505]
+
+/
+--2022-08-12 23:29:12--  http://gutenberg.org/files/68688/68688-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68688/68688-h/images/cover.jpg [following]
+--2022-08-12 23:29:12--  https://gutenberg.org/files/68688/68688-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 252644 (247K) [image/jpeg]
+Saving to: 'latest-books/1/cover.jpg'
+
+latest-books/1/cove 100%[===================>] 246.72K   425KB/s    in 0.6s    
+
+2022-08-12 23:29:13 (425 KB/s) - 'latest-books/1/cover.jpg' saved [252644/252644]
+
+--2022-08-12 23:29:21--  http://gutenberg.org/files/68689/68689-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68689/68689-h/images/cover.jpg [following]
+--2022-08-12 23:29:22--  https://gutenberg.org/files/68689/68689-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 245401 (240K) [image/jpeg]
+Saving to: 'latest-books/2/cover.jpg'
+
+latest-books/2/cove 100%[===================>] 239.65K   422KB/s    in 0.6s    
+
+2022-08-12 23:29:23 (422 KB/s) - 'latest-books/2/cover.jpg' saved [245401/245401]
+
+--2022-08-12 23:29:27--  http://gutenberg.org/files/68690/68690-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68690/68690-h/images/cover.jpg [following]
+--2022-08-12 23:29:28--  https://gutenberg.org/files/68690/68690-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 256126 (250K) [image/jpeg]
+Saving to: 'latest-books/3/cover.jpg'
+
+latest-books/3/cove 100%[===================>] 250.12K   426KB/s    in 0.6s    
+
+2022-08-12 23:29:29 (426 KB/s) - 'latest-books/3/cover.jpg' saved [256126/256126]
+
+--2022-08-12 23:29:36--  http://gutenberg.org/files/68691/68691-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68691/68691-h/images/cover.jpg [following]
+--2022-08-12 23:29:37--  https://gutenberg.org/files/68691/68691-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-08-12 23:29:38 ERROR 404: Not Found.
+
+--2022-08-12 23:29:43--  http://gutenberg.org/files/68692/68692-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68692/68692-h/images/cover.jpg [following]
+--2022-08-12 23:29:44--  https://gutenberg.org/files/68692/68692-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 249586 (244K) [image/jpeg]
+Saving to: 'latest-books/5/cover.jpg'
+
+latest-books/5/cove 100%[===================>] 243.74K   424KB/s    in 0.6s    
+
+2022-08-12 23:29:45 (424 KB/s) - 'latest-books/5/cover.jpg' saved [249586/249586]
+
+--2022-08-12 23:29:51--  http://gutenberg.org/files/68693/68693-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68693/68693-h/images/cover.jpg [following]
+--2022-08-12 23:29:51--  https://gutenberg.org/files/68693/68693-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 129589 (127K) [image/jpeg]
+Saving to: 'latest-books/6/cover.jpg'
+
+latest-books/6/cove 100%[===================>] 126.55K   308KB/s    in 0.4s    
+
+2022-08-12 23:29:52 (308 KB/s) - 'latest-books/6/cover.jpg' saved [129589/129589]
+
+--2022-08-12 23:29:53--  http://gutenberg.org/files/68694/68694-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68694/68694-h/images/cover.jpg [following]
+--2022-08-12 23:29:53--  https://gutenberg.org/files/68694/68694-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 272730 (266K) [image/jpeg]
+Saving to: 'latest-books/7/cover.jpg'
+
+latest-books/7/cove 100%[===================>] 266.34K   478KB/s    in 0.6s    
+
+2022-08-12 23:29:55 (478 KB/s) - 'latest-books/7/cover.jpg' saved [272730/272730]
+
+--2022-08-12 23:30:00--  http://gutenberg.org/files/68695/68695-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68695/68695-h/images/cover.jpg [following]
+--2022-08-12 23:30:00--  https://gutenberg.org/files/68695/68695-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-08-12 23:30:01 ERROR 404: Not Found.
+
+--2022-08-12 23:30:03--  http://gutenberg.org/files/68696/68696-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68696/68696-h/images/cover.jpg [following]
+--2022-08-12 23:30:03--  https://gutenberg.org/files/68696/68696-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-08-12 23:30:04 ERROR 404: Not Found.
+
+--2022-08-12 23:30:06--  http://gutenberg.org/files/68697/68697-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68697/68697-h/images/cover.jpg [following]
+--2022-08-12 23:30:06--  https://gutenberg.org/files/68697/68697-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 603797 (590K) [image/jpeg]
+Saving to: 'latest-books/10/cover.jpg'
+
+latest-books/10/cov 100%[===================>] 589.65K   768KB/s    in 0.8s    
+
+2022-08-12 23:30:08 (768 KB/s) - 'latest-books/10/cover.jpg' saved [603797/603797]
+
+--2022-08-12 23:30:13--  http://gutenberg.org/files/68698/68698-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68698/68698-h/images/cover.jpg [following]
+--2022-08-12 23:30:13--  https://gutenberg.org/files/68698/68698-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 316975 (310K) [image/jpeg]
+Saving to: 'latest-books/11/cover.jpg'
+
+latest-books/11/cov 100%[===================>] 309.55K   498KB/s    in 0.6s    
+
+2022-08-12 23:30:15 (498 KB/s) - 'latest-books/11/cover.jpg' saved [316975/316975]
+
+--2022-08-12 23:30:20--  http://gutenberg.org/files/68699/68699-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68699/68699-h/images/cover.jpg [following]
+--2022-08-12 23:30:20--  https://gutenberg.org/files/68699/68699-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 233430 (228K) [image/jpeg]
+Saving to: 'latest-books/12/cover.jpg'
+
+latest-books/12/cov 100%[===================>] 227.96K   404KB/s    in 0.6s    
+
+2022-08-12 23:30:21 (404 KB/s) - 'latest-books/12/cover.jpg' saved [233430/233430]
+
+--2022-08-12 23:30:22--  http://gutenberg.org/files/68700/68700-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68700/68700-h/images/cover.jpg [following]
+--2022-08-12 23:30:22--  https://gutenberg.org/files/68700/68700-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1263831 (1.2M) [image/jpeg]
+Saving to: 'latest-books/13/cover.jpg'
+
+latest-books/13/cov 100%[===================>]   1.21M   861KB/s    in 1.4s    
+
+2022-08-12 23:30:25 (861 KB/s) - 'latest-books/13/cover.jpg' saved [1263831/1263831]
+
+--2022-08-12 23:30:31--  http://gutenberg.org/files/68701/68701-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68701/68701-h/images/cover.jpg [following]
+--2022-08-12 23:30:32--  https://gutenberg.org/files/68701/68701-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 250314 (244K) [image/jpeg]
+Saving to: 'latest-books/14/cover.jpg'
+
+latest-books/14/cov 100%[===================>] 244.45K   314KB/s    in 0.8s    
+
+2022-08-12 23:30:33 (314 KB/s) - 'latest-books/14/cover.jpg' saved [250314/250314]
+
+--2022-08-12 23:30:35--  http://gutenberg.org/files/68702/68702-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68702/68702-h/images/cover.jpg [following]
+--2022-08-12 23:30:36--  https://gutenberg.org/files/68702/68702-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-08-12 23:30:37 ERROR 404: Not Found.
+
+--2022-08-12 23:30:39--  http://gutenberg.org/files/68703/68703-h/images/cover.jpg
+Resolving gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to gutenberg.org|152.19.134.47|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://gutenberg.org/files/68703/68703-h/images/cover.jpg [following]
+--2022-08-12 23:30:39--  https://gutenberg.org/files/68703/68703-h/images/cover.jpg
+Connecting to gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 890898 (870K) [image/jpeg]
+Saving to: 'latest-books/16/cover.jpg'
+
+latest-books/16/cov 100%[===================>] 870.02K   781KB/s    in 1.1s    
+
+2022-08-12 23:30:41 (781 KB/s) - 'latest-books/16/cover.jpg' saved [890898/890898]
+
+

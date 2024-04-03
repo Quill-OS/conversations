@@ -1,0 +1,60 @@
+```
+eBR-1A # boot
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x80800000 0x14000 0x4800
+
+MMC read: dev # 0, block # 81920, count 18432 ... 18432 blocks read: OK
+Booting from mmc ...
+mmc read 0x83000000 0x505 0x1
+
+MMC read: dev # 0, block # 1285, count 1 ... 1 blocks read: OK
+dtb size = 41589@83000000
+mmc read 0x83000000 0x506 0x57
+
+MMC read: dev # 0, block # 1286, count 87 ... 87 blocks read: OK
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x1,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8t
+Kernel image @ 0x80800000 [ 0x000000 - 0x76daf0 ]
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Using Device Tree in place at 83000000, end 8300d274
+
+Starting kernel ...
+
+/cpus/cpu@0 missing clock-frequency property
+sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021c08 ntx_machine_poweroff
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+==== calc_soc_by_voltageMethod E60U22 ====
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 22900s
+gpio-keys gpio-keys: Error applying setting, reverse things back
+Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/init.txt for guidanc.
+---[ end Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/init.txt fo.
+imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+```

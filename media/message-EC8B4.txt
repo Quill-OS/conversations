@@ -1,0 +1,118 @@
+[    6.240175] gpio-keys gpio-keys: Error applying setting, reverse things back
+Interface 'lo': flags set to 0001.
+
+Linux inkbox #1 SMP PREEMPT Mon Dec 26 01:31:10 CET 2022 GNU/Linux
+InkBox OS, kernel build Nks3MnHS, commit 4788760
+
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1: clean, 20/3840 files, 2254/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p2: clean, 430/128016 files, 48485/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p3: clean, 1019/32768 files, 97684/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4: clean, 28082/930240 files, 3227616/3715712 blocks
+
+(initrd) Hit ENTER to stop auto-boot ... 
+
+ * Device is rooted; not enforcing security policy
+ * Starting init ramdisk USB debug framework
+tcpsvd: listening on 0.0.0.0:21, starting
+ * Boot mode: Standard
+Verifying root filesystem's digital signature ...
+Done.
+ * Mounted root filesystem
+[   23.836505] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   23.844257] squashfs: SQUASHFS error: unable to read xattr id index table
+ * Mounted core SquashFS archives
+ * Mounted essential filesystems
+Verified OK
+ * GUI root filesystem's digital signature is invalid!
+ * Aborting boot and powering off
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+ [ ok ]
+ * Starting USBNet ... [ ok ]
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Starting InkBox Power Daemon (ipd) ... [ ok ]
+ * Starting battery watchdog ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Checking for available updates ...Update skipped or no update available, aborting ...
+ [ ok ]
+ * Starting InkBox GUI ... * Starting InkBox Daemon (ibxd) ... [ ok ]
+fuse: bad mount point `/kobo/mnt/onboard/.adds/inkbox': No such file or directory
+mount: mounting /opt/config on /kobo/mnt/onboard/.adds/inkbox/.config failed: No such file or directory
+fuse: bad mount point `/kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo': No such file or directory
+Can't open squashfs image: No such file or directory
+mount: mounting /lib/qt5-plugins/libkobo.so.1 on /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so failed: No such file or directory
+mount: mounting /usr/local/share/inkbox/stylesheets/eink-768x1024.qss on /kobo/mnt/onboard/.adds/inkbox/eink.qss failed: No such file or directory
+ * Setting up GUI user applications
+mount: mounting /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/ on /data/onboard/.apps/Conway/Conway/system-lib/qt failed: No such file or directory
+ * Failed to bind-mount system libraries at '/data/onboard/.apps/Conway/Conway/system-lib'.
+ [ !! ]
+ * Successfully set up application 'Conway'
+mount: mounting /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/ on /data/onboard/.apps/sanki/sanki/system-lib/qt failed: No such file or directory
+ * Failed to bind-mount system libraries at '/data/onboard/.apps/sanki/sanki/system-lib'.
+ [ !! ]
+ * Successfully set up application 'sanki'
+ [ ok ]
+mount: mounting sysfs on /kobo/sys failed: No such file or directory
+mount: mounting proc on /kobo/proc failed: No such file or directory
+mount: mounting tmpfs on /kobo/tmp failed: No such file or directory
+mount: mounting tmpfs on /kobo/var/run failed: No such file or directory
+mount: mounting / on /kobo/external_root failed: No such file or directory
+mount: mounting /dev on /kobo/external_root/dev failed: No such file or directory
+mount: mounting /dev/pts on /kobo/external_root/dev/pts failed: No such file or directory
+mount: mounting /proc on /kobo/external_root/proc failed: No such file or directory
+mount: mounting /tmp on /kobo/external_root/tmp failed: No such file or directory
+mount: mounting /run on /kobo/external_root/run failed: No such file or directory
+mount: mounting /var on /kobo/external_root/var failed: No such file or directory
+mount: mounting /opt/isa on /kobo/external_root/opt/isa failed: No such file or directory
+mount: mounting /opt/root on /kobo/external_root/opt/root failed: No such file or directory
+mount: mounting /opt/update on /kobo/external_root/opt/update failed: No such file or directory
+mount: mounting /opt/storage on /kobo/external_root/opt/storage failed: No such file or directory
+mount: mounting /data/onboard on /kobo/external_root/data/onboard failed: No such file or directory
+mount: mounting /opt/bin/fbink/fbink on /kobo/external_root/opt/bin/fbink/fbink failed: No such file or directory
+mount: mounting /opt/inkbox_device on /kobo/opt/inkbox_device failed: No such file or directory
+mount: mounting /opt/inkbox_device on /kobo/external_root/opt/inkbox_device failed: No such file or directory
+mount: mounting /opt/X11/extensions_folders_list on /kobo/external_root/opt/X11/extensions_folders_list failed: No such file or directory
+mount: mounting /opt/X11/extensions_list on /kobo/external_root/opt/X11/extensions_list failed: No such file or directory
+mount: mounting /opt/X11/nographic_extensions_folders_list on /kobo/external_root/opt/X11/nographic_extensions_folders_list failed: No such file or directory
+mount: mounting /opt/X11/nographic_extensions_list on /kobo/external_root/opt/X11/nographic_extensions_list failed: No such file or directory
+mount: mounting /boot on /kobo/external_root/boot failed: No such file or directory
+mount: mounting /lib/modules on /kobo/external_root/lib/modules failed: No such file or directory
+touch: cannot touch '/kobo/tmp/resolv.conf': No such file or directory
+mount: mounting /etc/resolv.conf on /kobo/tmp/resolv.conf failed: No such file or directory
+/usr/bin/inkbox.sh: line 9: can't create /kobo/tmp/first_launch_since_boot: nonexistent directory
+ [ ok ]
+chroot: failed to run command ‘/mnt/onboard/.adds/inkbox/inkbox.sh’: No such file or directory
+ * Loading modules ... * Starting sshd ... [ ok ]
+ [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+
+Welcome to InkBox OS 1.9
+Kernel 4.1.15 on armv7l (/dev/ttymxc0)
+
+kobo login: 

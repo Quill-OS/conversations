@@ -1,0 +1,97 @@
+Glo HD touch-release:
+KoboKb: Attempting to capture input...
+device: "alyssum" 340 
+ screen: 1072 1448 dpi: 300
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A  (multi), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1448
+qt.qpa.input: evdevtouch: overwriting touch x max: 1448
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 1072
+qt.qpa.input: evdevtouch: overwriting touch y max: 1072
+qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: zForce-ir-touch
+qt.qpa.input: evdevtouch: Updating QInputDeviceManager device count: 1 touch devices, 0 pending handler(s)
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1389
+qt.qpa.input: EV_ABS MT_POS_Y 450
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(1,0)
+qt.qpa.input: Touchpoint raw position: QPointF(0,0)
+qt.qpa.input: Touchpoint normal position: QPointF(0.580224,0.959254)
+qt.qpa.input: Touchpoint raw position: QPointF(1389,450)
+qt.qpa.input: Screen rect: QRect(0,0 1072x1448)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(1067,-4 8x8) normalized QPointF(1,0) press 0 vel QVector2D(0, 0) state 1
+qt.qpa.input: Screen rect: QRect(0,0 1072x1448)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(620.92,1387.54 1x1) normalized QPointF(0.580224,0.959254) press 0.5 vel QVector2D(0, 0) state 1
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1392
+qt.qpa.input: EV_ABS MT_POS_Y 449
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.581157,0.961326)
+qt.qpa.input: Touchpoint raw position: QPointF(1392,449)
+qt.qpa.input: Touchpoint normal position: QPointF(1,0)
+qt.qpa.input: Touchpoint raw position: QPointF(0,0)
+qt.qpa.input: Screen rect: QRect(0,0 1072x1448)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(621.919,1390.54 1x1) normalized QPointF(0.581157,0.961326) press 0 vel QVector2D(0, 0) state 2
+qt.qpa.input: Screen rect: QRect(0,0 1072x1448)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(1067,-4 8x8) normalized QPointF(1,0) press 0 vel QVector2D(0, 0) state 8
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1392
+qt.qpa.input: EV_ABS MT_POS_Y 449
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.581157,0.961326)
+qt.qpa.input: Touchpoint raw position: QPointF(1392,449)
+qt.qpa.input: Erase contact since touchpoint released
+
+Aura SE touch-release:
+KoboKb: Attempting to capture input...
+device: "" 340 
+ screen: 758 1024 dpi: 260
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A  (multi), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1024
+qt.qpa.input: evdevtouch: overwriting touch x max: 1024
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 758
+qt.qpa.input: evdevtouch: overwriting touch y max: 758
+qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: elan-touch
+qt.qpa.input: evdevtouch: Updating QInputDeviceManager device count: 1 touch devices, 0 pending handler(s)
+qt.qpa.input: EV_ABS TRACKING_ID  0
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 983
+qt.qpa.input: EV_ABS MT_POS_Y 258
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.659631,0.959961)
+qt.qpa.input: Touchpoint raw position: QPointF(983,258)
+qt.qpa.input: Screen rect: QRect(0,0 758x1024)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(498.84,981.54 1x1) normalized QPointF(0.659631,0.959961) press 0 vel QVector2D(0, 0) state 1
+qt.qpa.input: EV_ABS TRACKING_ID  0
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 983
+qt.qpa.input: EV_ABS MT_POS_Y 258
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.659631,0.959961)
+qt.qpa.input: Touchpoint raw position: QPointF(983,258)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: Screen rect: QRect(0,0 758x1024)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(498.84,981.54 1x1) normalized QPointF(0.659631,0.959961) press 0.5 vel QVector2D(0, 0) state 8

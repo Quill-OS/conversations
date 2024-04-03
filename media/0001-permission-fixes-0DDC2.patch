@@ -1,0 +1,108 @@
+From 8112f1d86a1f51cd9fabbd1617b7ac3025044e52 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Tue, 13 Jun 2023 19:56:34 +0200
+Subject: [PATCH] permission fixes
+
+---
+ content/inkbox/inkbox.sh   | 20 ++++++++++----------
+ content/inkbox/oobe-inkbox |  4 +++-
+ release.sh                 | 14 ++++++++++++--
+ 3 files changed, 25 insertions(+), 13 deletions(-)
+
+diff --git a/content/inkbox/inkbox.sh b/content/inkbox/inkbox.sh
+index c61d6c8..1510dfe 100755
+--- a/content/inkbox/inkbox.sh
++++ b/content/inkbox/inkbox.sh
+@@ -90,39 +90,39 @@ if [ "${DPI}" != "false" ]; then
+ 		fi
+                 DPI=$(cat .config/09-dpi/config 2>/dev/null)
+         elif [ "${FIRST_BOOT}" == "true" ]; then
+-                QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:lib:" ./oobe-inkbox
++                QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:/lib" ./oobe-inkbox
+         else
+                 if [ "${1}" == "lockscreen" ]; then
+-                        QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:lib:" ./lockscreen
++                        QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:/lib" ./lockscreen
+                 else
+ 			if [ "${FIRST_LAUNCH_SINCE_BOOT}" == "true" ]; then
+ 				echo "false" > /tmp/first_launch_since_boot
+ 				if [ "${LOCKSCREEN}" == "true" ]; then
+-					INITIAL_LAUNCH=1 QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:lib:" ./lockscreen
++					INITIAL_LAUNCH=1 QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:/lib" ./lockscreen
+ 				else
+-					QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:lib:" DEBUG=${DEBUG} ./inkbox
++					QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:/lib" DEBUG=${DEBUG} ./inkbox
+ 				fi
+ 			else
+-				QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:lib:" DEBUG=${DEBUG} ./inkbox
++				QT_FONT_DPI=${DPI} LD_LIBRARY_PATH="${QTPATH}lib:/lib" DEBUG=${DEBUG} ./inkbox
+ 			fi
+ 		fi
+         fi
+ else
+         if [ "${FIRST_BOOT}" == "true" ]; then
+-                QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:lib:" ./oobe-inkbox
++                QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:/lib" ./oobe-inkbox
+         else
+                 if [ "${1}" == "lockscreen" ]; then
+-                        QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:lib:" ./lockscreen
++                        QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:/lib" ./lockscreen
+                 else
+ 			if [ "${FIRST_LAUNCH_SINCE_BOOT}" == "true" ]; then
+ 				echo "false" > /tmp/first_launch_since_boot
+ 				if [ "${LOCKSCREEN}" == "true" ]; then
+-					INITIAL_LAUNCH=1 QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:lib:" ./lockscreen
++					INITIAL_LAUNCH=1 QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:/lib" ./lockscreen
+ 				else
+-					QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:lib:" DEBUG=${DEBUG} ./inkbox
++					QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:/lib" DEBUG=${DEBUG} ./inkbox
+ 				fi
+ 			else
+-				QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:lib:" DEBUG=${DEBUG} ./inkbox
++				QT_FONT_DPI=0 LD_LIBRARY_PATH="${QTPATH}lib:/lib" DEBUG=${DEBUG} ./inkbox
+ 			fi
+                 fi
+         fi
+diff --git a/content/inkbox/oobe-inkbox b/content/inkbox/oobe-inkbox
+index 11db3ba..0c1128a 100755
+--- a/content/inkbox/oobe-inkbox
++++ b/content/inkbox/oobe-inkbox
+@@ -1,3 +1,5 @@
+ #!/bin/sh
+ 
+-LD_PRELOAD=/lib/invert_screen.so /mnt/onboard/.adds/inkbox/oobe-inkbox-bin
++ADDSPATH="/mnt/onboard/.adds/"
++QTPATH="${ADDSPATH}qt-linux-5.15.2-kobo/"
++LD_PRELOAD=/lib/invert_screen.so LD_LIBRARY_PATH="${QTPATH}lib:/lib" /mnt/onboard/.adds/inkbox/oobe-inkbox-bin
+diff --git a/release.sh b/release.sh
+index 308de94..73605ea 100755
+--- a/release.sh
++++ b/release.sh
+@@ -9,12 +9,22 @@ MKSQUASHFS_ARGS=('-b' '1048576' '-comp' 'xz' '-Xdict-size' '100%' '-always-use-f
+ 
+ cd "${GITDIR}"
+ 
++# Avoid "Permission denied" errors
++if [[ $(id -u) -eq 0 ]]; then
++    echo "Don't run as root, otherwise \"Permission denied\" errors could happen in InkBox" && exit 1
++fi
++# To be sure all files are good
++sudo chown -R "${USER}":"${USER}" *
++
+ # Copying compiled binaries
+-pushd "content/inkbox"
++cd "content/inkbox"
+ cp "${3}/build_inkbox/inkbox" "./inkbox-bin"
+ cp "${3}/build_oobe-inkbox/oobe-inkbox" "./oobe-inkbox-bin"
+ cp "${3}/build_lockscreen/lockscreen" "./lockscreen-bin"
+-popd
++chmod +x "./inkbox-bin"
++chmod +x "./oobe-inkbox-bin"
++chmod +x "./lockscreen-bin"
++cd "${GITDIR}"
+ 
+ # Squashing packages
+ rm -rf "out/"
+-- 
+2.41.0
+

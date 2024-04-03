@@ -1,0 +1,23 @@
+[root@storm ]# chromium-browser --no-sandbox
+[32567:32589:0213/170636.589121:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[32567:32614:0213/170637.538600:ERROR:bus.cc(394)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[32620:32620:0213/170638.849776:FATAL:page_allocator_internals_posix.h(179)] Check failed: !madvise(address, length, MADV_DONTNEED). 
+Received signal 6
+[end of stack trace]
+Calling _exit(1). Core file will not be generated.
+[32605:32605:0213/170639.880505:ERROR:gl_surface_glx.cc(455)] glxQueryVersion failed
+[32605:32605:0213/170639.883203:ERROR:gl_initializer_x11.cc(148)] GLSurfaceGLX::InitializeOneOff failed.
+[32605:32605:0213/170639.996891:ERROR:viz_main_impl.cc(167)] Exiting GPU process due to errors during initialization
+[32567:32640:0213/170640.007548:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[32567:32640:0213/170640.008540:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[32567:32640:0213/170640.009540:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[32567:32640:0213/170640.015962:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[32567:32640:0213/170640.016887:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[32652:32652:0213/170640.487245:FATAL:page_allocator_internals_posix.h(179)] Check failed: !madvise(address, length, MADV_DONTNEED). 
+Received signal 6
+[end of stack trace]
+Calling _exit(1). Core file will not be generated.
+[32651:32651:0213/170642.241353:ERROR:gl_implementation.cc(282)] Failed to load /usr/lib/chromium/swiftshader/libGLESv2.so: Error loading shared library /usr/lib/chromium/swiftshader/libGLESv2.so: No such file or directory
+[32651:32651:0213/170642.283355:ERROR:viz_main_impl.cc(167)] Exiting GPU process due to errors during initialization
+[32704:32704:0213/170643.676871:ERROR:gpu_channel_manager.cc(397)] ContextResult::kFatalFailure: Failed to create shared context for virtualization.
+

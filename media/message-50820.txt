@@ -1,0 +1,42 @@
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp: In static member function 'static void Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()':
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:262:39: error: 'MNT_NOWAIT' was not declared in this scope; did you mean 'WNOWAIT'?
+  262 |     int num_fs = getmntinfo(&mounted, MNT_NOWAIT);
+      |                                       ^~~~~~~~~~
+      |                                       WNOWAIT
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:262:18: error: 'getmntinfo' was not declared in this scope; did you mean 'getmntent'?
+  262 |     int num_fs = getmntinfo(&mounted, MNT_NOWAIT);
+      |                  ^~~~~~~~~~
+      |                  getmntent
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:268:51: error: invalid use of incomplete type 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  268 |         QString type = QFile::decodeName(mounted[i].f_fstypename);
+      |                                                   ^
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:259:12: note: forward declaration of 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  259 |     struct statfs *mounted;
+      |            ^~~~~~
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:268:51: error: invalid use of incomplete type 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  268 |         QString type = QFile::decodeName(mounted[i].f_fstypename);
+      |                                          ~~~~~~~~~^
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:259:12: note: forward declaration of 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  259 |     struct statfs *mounted;
+      |            ^~~~~~
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:271:63: error: invalid use of incomplete type 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  271 |             const QString device = QFile::decodeName(mounted[i].f_mntfromname);
+      |                                                               ^
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:259:12: note: forward declaration of 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  259 |     struct statfs *mounted;
+      |            ^~~~~~
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:271:63: error: invalid use of incomplete type 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  271 |             const QString device = QFile::decodeName(mounted[i].f_mntfromname);
+      |                                                      ~~~~~~~~~^
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:259:12: note: forward declaration of 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  259 |     struct statfs *mounted;
+      |            ^~~~~~
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:272:67: error: invalid use of incomplete type 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  272 |             const QString mountpoint = QFile::decodeName(mounted[i].f_mntonname);
+      |                                                                   ^
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:259:12: note: forward declaration of 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  259 |     struct statfs *mounted;
+      |            ^~~~~~
+/mnt/HDD/Project/Public/okulartry/solid/src/solid/devices/backends/fstab/fstabhandling.cpp:272:67: error: invalid use of incomplete type 'struct Solid::Backends::Fstab::FstabHandling::_k_updateMtabMountPointsCache()::statfs'
+  272 |             const QString mountpoint = QFile::decodeName(mounted[i].f_mntonname);
+      |                                                          ~~~~~~~~~^

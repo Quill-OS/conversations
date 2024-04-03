@@ -1,0 +1,1121 @@
+drivers/rtc/rtc-ricoh619.c: In function 'ricoh61x_rtc_hour_mode_get':
+drivers/rtc/rtc-ricoh619.c:198:46: warning: passing argument 4 of 'ricoh61x_read_regs' from incompatible pointer type
+  err = ricoh61x_read_regs(dev, rtc_ctrl1, 1, mode);
+                                              ^
+drivers/rtc/rtc-ricoh619.c:49:12: note: expected 'uint8_t *' but argument is of type 'int *'
+ static int ricoh61x_read_regs(struct device *dev, int reg, int len,
+            ^
+drivers/rtc/rtc-ricoh619.c: In function 'ricoh61x_rtc_alarm_is_enabled':
+drivers/rtc/rtc-ricoh619.c:319:3: warning: format '%lx' expects argument of type 'long unsigned int', but argument 3 has type 'int' [-Wformat=]
+   dev_err(dev->parent, "read rtc_ctrl1 error 0x%lx\n", err);
+   ^
+drivers/rtc/rtc-ricoh619.c:312:23: warning: unused variable 'rtc' [-Wunused-variable]
+  struct ricoh61x_rtc *rtc = dev_get_drvdata(dev);
+                       ^
+drivers/rtc/rtc-ricoh619.c: In function 'ricoh61x_rtc_alarm_enable':
+drivers/rtc/rtc-ricoh619.c:344:4: warning: format '%lx' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+    dev_err(dev->parent, "PMU: %s read rtc_ctrl1 error 0x%lx\n", __func__, err);
+    ^
+drivers/rtc/rtc-ricoh619.c:350:4: warning: format '%lx' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+    dev_err(dev->parent, "PMU: %s write rtc_ctrl1 error 0x%lx\n", __func__, err);
+    ^
+drivers/rtc/rtc-ricoh619.c:355:4: warning: format '%lx' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+    dev_err(dev->parent, "PMU: %s read rtc_ctrl1 error 0x%lx\n", __func__, err);
+    ^
+drivers/rtc/rtc-ricoh619.c:361:4: warning: format '%lx' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+    dev_err(dev->parent, "PMU: %s write rtc_ctrl1 error 0x%lx\n", __func__, err);
+    ^
+drivers/rtc/rtc-ricoh619.c: In function 'ricoh61x_rtc_read_alarm':
+drivers/rtc/rtc-ricoh619.c:401:3: warning: format '%lx' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+   dev_err(dev->parent, "RTC: %s *** read rtc_alarm timer error 0x%lx\n", __func__, err);
+   ^
+drivers/rtc/rtc-ricoh619.c:407:3: warning: format '%lx' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+   dev_err(dev->parent, "RTC: %s *** read rtc_enable flag error 0x%lx\n", __func__, err);
+   ^
+drivers/rtc/rtc-ricoh619.c: At top level:
+drivers/rtc/rtc-ricoh619.c:194:12: warning: 'ricoh61x_rtc_hour_mode_get' defined but not used [-Wunused-function]
+ static int ricoh61x_rtc_hour_mode_get(struct device *dev, int *mode)
+            ^
+  CC      drivers/video/backlight/lm3630a_bl_tables.o
+drivers/regulator/ricoh619-regulator.c: In function 'ricoh61x_regulator_suspend':
+drivers/regulator/ricoh619-regulator.c:766:43: warning: unused variable 'ricoh61x_pdata' [-Wunused-variable]
+  struct ricoh619_regulator_platform_data *ricoh61x_pdata = ((struct device*)(ri->dev))->platform_data;
+                                           ^
+drivers/regulator/ricoh619-regulator.c: In function 'ricoh61x_regulator_resume':
+drivers/regulator/ricoh619-regulator.c:897:43: warning: unused variable 'ricoh61x_pdata' [-Wunused-variable]
+  struct ricoh619_regulator_platform_data *ricoh61x_pdata = ((struct device*)(ri->dev))->platform_data;
+                                           ^
+drivers/regulator/ricoh619-regulator.c: At top level:
+drivers/regulator/ricoh619-regulator.c:538:12: warning: 'ricoh61x_regulator_preinit' defined but not used [-Wunused-function]
+ static int ricoh61x_regulator_preinit(struct device *parent,
+            ^
+  CC      drivers/video/backlight/ntx_bl.o
+drivers/video/backlight/lm3630a_bl_tables.c:17:0: warning: "ARRAY_SIZE" redefined
+ #define ARRAY_SIZE(a) (sizeof(a)/sizeof(a[0]))
+ ^
+In file included from drivers/video/backlight/lm3630a_bl_tables.c:1:0:
+include/linux/kernel.h:54:0: note: this is the location of the previous definition
+ #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]) + __must_be_array(arr))
+ ^
+drivers/video/backlight/lm3630a_bl_tables.c:48:19: warning: initialization discards 'const' qualifier from pointer target type
+  {2 /* TABLE0+ */,gbLm3630_FL_W_percent_dutyA,ARRAY_SIZE(gbLm3630_FL_W_percent_dutyA)},
+                   ^
+drivers/video/backlight/lm3630a_bl_tables.c:49:19: warning: initialization discards 'const' qualifier from pointer target type
+  {4 /* TABLE1+ */,gbLm3630_FL_percent_table1,ARRAY_SIZE(gbLm3630_FL_percent_table1)},
+                   ^
+  CC      drivers/video/backlight/pwm_bl.o
+drivers/video/backlight/lm3630a_bl.c: In function 'lm3630a_get_FL_current':
+drivers/video/backlight/lm3630a_bl.c:683:57: warning: passing argument 2 of 'lm3630a_get_FL_RGBW_RicohCurrTab' from incompatible pointer type
+   lm3630a_get_FL_RGBW_RicohCurrTab(&dwRGBW_CurrTabItems,&ptRGBW_CurrTab);
+                                                         ^
+In file included from drivers/video/backlight/lm3630a_bl.c:32:0:
+drivers/video/backlight/lm3630a_bl_tables.h:20:5: note: expected 'void **' but argument is of type 'struct NTX_FW_LM3630FL_RGBW_current_item **'
+ int lm3630a_get_FL_RGBW_RicohCurrTab(unsigned long *O_pdwRGBW_curr_items,void **O_pvLm3630fl_RGBW_curr_tab);
+     ^
+drivers/video/backlight/lm3630a_bl.c:990:4: warning: statement with no effect [-Wunused-value]
+    iRet;
+    ^
+  CC      drivers/usb/chipidea/ci_hdrc_usb2.o
+drivers/video/backlight/lm3630a_bl.c: In function 'fl_lm3630a_percentageEx':
+drivers/video/backlight/lm3630a_bl.c:1327:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+  CC      drivers/tty/tty_mutex.o
+  LD      drivers/rtc/rtc-core.o
+  CC      drivers/tty/tty_ldsem.o
+  LD      drivers/rtc/built-in.o
+  CC      drivers/scsi/scsi_lib.o
+  CC      drivers/tty/pty.o
+  CC      drivers/regulator/fp9928-regulator.o
+  CC      drivers/video/fbdev/core/fbmem.o
+drivers/video/backlight/ntx_bl.c: In function 'fw_show':
+drivers/video/backlight/ntx_bl.c:76:3: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   len = sprintf(buf+tot_len,"size=%d\n",gdwNTXFW_size);tot_len += len;
+   ^
+drivers/video/backlight/ntx_bl.c:84:35: warning: passing argument 1 of 'ntx_firmware_parse_fw_buf_ex' discards 'volatile' qualifier from pointer target type
+   if(ntx_firmware_parse_fw_buf_ex(gptNTXFW,gdwNTXFW_size,ntxfw_item_proc,(void *)&tNTXFW_Dump_Params)>=0) {
+                                   ^
+In file included from drivers/video/backlight/ntx_bl.c:16:0:
+drivers/video/backlight/../../../arch/arm/mach-imx/ntx_firmware_parser.h:13:5: note: expected 'struct NTX_FIRMWARE_HDR *' but argument is of type 'volatile struct NTX_FIRMWARE_HDR *'
+ int ntx_firmware_parse_fw_buf_ex(NTX_FIRMWARE_HDR *I_ptFWHDR,unsigned long I_dwFWSize,
+     ^
+drivers/video/backlight/ntx_bl.c:71:7: warning: unused variable 'i' [-Wunused-variable]
+   int i;
+       ^
+drivers/video/backlight/ntx_bl.c: In function 'ntx_bl_probe':
+drivers/video/backlight/ntx_bl.c:211:22: warning: unused variable 'np' [-Wunused-variable]
+  struct device_node *np = pdev->dev.of_node;
+                      ^
+  CC      drivers/usb/core/file.o
+  CC      drivers/usb/core/buffer.o
+  LD      drivers/tty/ipwireless/built-in.o
+  CC      drivers/virtio/virtio_ring.o
+  CC      drivers/video/backlight/tlc5947.o
+  CC      drivers/usb/host/ehci-mxc.o
+  CC      drivers/tty/vt/vt_ioctl.o
+  CC      drivers/tty/serial/serial_core.o
+drivers/video/backlight/lm3630a_bl.c: In function 'lm3630a_get_FL_current':
+drivers/video/backlight/lm3630a_bl.c:687:21: warning: 'iMiddle' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    int iFirst,iLast,iMiddle,iEnd,iTmp;
+                     ^
+  CC      drivers/usb/chipidea/ci_hdrc_msm.o
+  CC      drivers/tty/serial/imx.o
+drivers/video/backlight/tlc5947.c: In function 'tlc5947_get_FL_current':
+drivers/video/backlight/tlc5947.c:65:16: warning: unused variable 'dwCurrent' [-Wunused-variable]
+  unsigned long dwCurrent=0;
+                ^
+drivers/video/backlight/tlc5947.c: In function 'fl_tlc5947_percentage':
+drivers/video/backlight/tlc5947.c:144:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+   return ;
+   ^
+drivers/video/backlight/tlc5947.c:181:3: warning: multi-line comment [-Wcomment]
+   //printk(KERN_ERR"------CH%d:%d , CH%d:%d , CH%d:%d , CH%d:%d , BootLv:%d -----\n",\
+   ^
+drivers/video/backlight/tlc5947.c: In function 'out_gs_set':
+drivers/video/backlight/tlc5947.c:251:4: warning: array subscript has type 'char' [-Wchar-subscripts]
+    pchip->out[channel] = duty;
+    ^
+  CC      drivers/usb/core/sysfs.o
+  CC      drivers/usb/chipidea/ci_hdrc_zevio.o
+  CC      drivers/watchdog/watchdog_core.o
+  CC      drivers/regulator/tps6518x-regulator.o
+  LD      drivers/video/backlight/built-in.o
+  LD      drivers/usb/host/built-in.o
+  CC      drivers/regulator/sy7636-regulator.o
+  CC      drivers/usb/phy/phy.o
+  CC      drivers/usb/core/endpoint.o
+drivers/regulator/tps6518x-regulator.c: In function 'tps6518x_v3p3_enable':
+drivers/regulator/tps6518x-regulator.c:219:19: warning: unused variable 'tps6518x' [-Wunused-variable]
+  struct tps6518x *tps6518x = rdev_get_drvdata(reg);
+                   ^
+drivers/regulator/tps6518x-regulator.c: In function 'tps6518x_v3p3_disable':
+drivers/regulator/tps6518x-regulator.c:236:19: warning: unused variable 'tps6518x' [-Wunused-variable]
+  struct tps6518x *tps6518x = rdev_get_drvdata(reg);
+                   ^
+drivers/regulator/tps6518x-regulator.c: In function '_tps6518x_vcom_get_voltage':
+drivers/regulator/tps6518x-regulator.c:351:15: warning: unused variable 'cur_reg2_val' [-Wunused-variable]
+  unsigned int cur_reg2_val; /* current register value */
+               ^
+drivers/regulator/tps6518x-regulator.c: In function 'tps6518x_pmic_dt_parse_pdata':
+drivers/regulator/tps6518x-regulator.c:898:56: warning: unused variable 'tmp_np' [-Wunused-variable]
+  struct device_node *pmic_np, *regulators_np, *reg_np,*tmp_np;
+                                                        ^
+drivers/regulator/tps6518x-regulator.c: At top level:
+drivers/regulator/tps6518x-regulator.c:166:12: warning: 'vcom2_rs_to_uV' defined but not used [-Wunused-function]
+ static int vcom2_rs_to_uV(unsigned int reg_setting)
+            ^
+drivers/regulator/tps6518x-regulator.c:185:12: warning: 'vcom2_uV_to_rs' defined but not used [-Wunused-function]
+ static int vcom2_uV_to_rs(int uV)
+            ^
+  CC      drivers/usb/chipidea/usbmisc_imx.o
+drivers/regulator/sy7636-regulator.c: In function '_sy7636_vcom_set_voltage':
+drivers/regulator/sy7636-regulator.c:161:15: warning: unused variable 'new_reg_val' [-Wunused-variable]
+  unsigned int new_reg_val; /* new register value to write */
+               ^
+drivers/regulator/sy7636-regulator.c:160:15: warning: unused variable 'cur_reg_val' [-Wunused-variable]
+  unsigned int cur_reg_val; /* current register value to modify */
+               ^
+drivers/regulator/sy7636-regulator.c: In function 'sy7636_vcom_enable':
+drivers/regulator/sy7636-regulator.c:215:15: warning: unused variable 'cur_reg_val' [-Wunused-variable]
+  unsigned int cur_reg_val; /* current register value */
+               ^
+drivers/regulator/sy7636-regulator.c: In function '_sy7636_rals_onoff':
+drivers/regulator/sy7636-regulator.c:412:6: warning: unused variable 'iChk' [-Wunused-variable]
+  int iChk;
+      ^
+drivers/regulator/sy7636-regulator.c: In function 'sy7636_pmic_dt_parse_pdata':
+drivers/regulator/sy7636-regulator.c:834:46: warning: passing argument 3 of 'of_property_read_u32' from incompatible pointer type
+  if(of_property_read_u32(pmic_np,"on_delay1",&sy7636->on_delay1)) {
+                                              ^
+In file included from include/linux/i2c.h:33:0,
+                 from drivers/regulator/sy7636-regulator.c:23:
+include/linux/of.h:857:19: note: expected 'u32 *' but argument is of type 'unsigned char *'
+ static inline int of_property_read_u32(const struct device_node *np,
+                   ^
+drivers/regulator/sy7636-regulator.c:841:46: warning: passing argument 3 of 'of_property_read_u32' from incompatible pointer type
+  if(of_property_read_u32(pmic_np,"on_delay2",&sy7636->on_delay2)) {
+                                              ^
+In file included from include/linux/i2c.h:33:0,
+                 from drivers/regulator/sy7636-regulator.c:23:
+include/linux/of.h:857:19: note: expected 'u32 *' but argument is of type 'unsigned char *'
+ static inline int of_property_read_u32(const struct device_node *np,
+                   ^
+drivers/regulator/sy7636-regulator.c:848:46: warning: passing argument 3 of 'of_property_read_u32' from incompatible pointer type
+  if(of_property_read_u32(pmic_np,"on_delay3",&sy7636->on_delay3)) {
+                                              ^
+In file included from include/linux/i2c.h:33:0,
+                 from drivers/regulator/sy7636-regulator.c:23:
+include/linux/of.h:857:19: note: expected 'u32 *' but argument is of type 'unsigned char *'
+ static inline int of_property_read_u32(const struct device_node *np,
+                   ^
+drivers/regulator/sy7636-regulator.c:855:46: warning: passing argument 3 of 'of_property_read_u32' from incompatible pointer type
+  if(of_property_read_u32(pmic_np,"on_delay4",&sy7636->on_delay4)) {
+                                              ^
+In file included from include/linux/i2c.h:33:0,
+                 from drivers/regulator/sy7636-regulator.c:23:
+include/linux/of.h:857:19: note: expected 'u32 *' but argument is of type 'unsigned char *'
+ static inline int of_property_read_u32(const struct device_node *np,
+                   ^
+drivers/regulator/sy7636-regulator.c:877:3: warning: format '%d' expects argument of type 'int', but argument 3 has type 'unsigned int *' [-Wformat=]
+   dev_info(&pdev->dev, "turnoff_delay_ep3v3=%d\n", &sy7636->turnoff_delay_ep3v3);
+   ^
+drivers/regulator/sy7636-regulator.c:774:57: warning: unused variable 'VLDO_np' [-Wunused-variable]
+  struct device_node *pmic_np, *regulators_np, *reg_np, *VLDO_np;
+                                                         ^
+drivers/regulator/sy7636-regulator.c: At top level:
+drivers/regulator/sy7636-regulator.c:59:17: warning: 'getDiffuS' defined but not used [-Wunused-function]
+ static uint32_t getDiffuS(struct timeval *tvEnd,struct timeval *tvBegin) 
+                 ^
+drivers/regulator/sy7636-regulator.c:137:12: warning: 'vcom2_rs_to_uV' defined but not used [-Wunused-function]
+ static int vcom2_rs_to_uV(unsigned int reg_setting)
+            ^
+drivers/regulator/sy7636-regulator.c:146:12: warning: 'vcom2_uV_to_rs' defined but not used [-Wunused-function]
+ static int vcom2_uV_to_rs(int uV)
+            ^
+drivers/regulator/sy7636-regulator.c: In function 'sy7636_regs_init':
+drivers/regulator/sy7636-regulator.c:976:2: warning: 'iRet' is used uninitialized in this function [-Wuninitialized]
+  return iRet;
+  ^
+In file included from drivers/regulator/sy7636-regulator.c:31:0:
+drivers/regulator/sy7636-regulator.c: In function 'sy7636_display_is_enabled':
+include/linux/mfd/sy7636.h:54:50: warning: 'cur_reg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ #define BITFEXT(var, bit) ((var & BITFMASK(bit)) >> (bit ## _LSH))
+                                                  ^
+drivers/regulator/sy7636-regulator.c:576:15: note: 'cur_reg' was declared here
+  unsigned int cur_reg; /* current register value */
+               ^
+  CC      drivers/watchdog/watchdog_dev.o
+  LD      drivers/virtio/built-in.o
+  CC      drivers/usb/chipidea/ci_hdrc_imx.o
+  CC      drivers/usb/core/devio.o
+  CC      drivers/scsi/scsi_lib_dma.o
+  CC      drivers/tty/vt/vc_screen.o
+  CC      drivers/scsi/scsi_scan.o
+  CC      drivers/tty/vt/selection.o
+  CC      drivers/usb/core/notify.o
+  CC      drivers/watchdog/imx2_wdt.o
+  CC      drivers/video/fbdev/core/fbmon.o
+  LD      drivers/regulator/built-in.o
+drivers/usb/chipidea/ci_hdrc_imx.c: In function 'usb_busfreq_show':
+drivers/usb/chipidea/ci_hdrc_imx.c:448:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+  CC      drivers/tty/serial/fsl_lpuart.o
+  CC      drivers/usb/core/generic.o
+  CC      drivers/usb/core/quirks.o
+  CC      drivers/usb/phy/of.o
+  CC      drivers/usb/phy/phy-generic.o
+  CC      drivers/tty/vt/keyboard.o
+  CC      drivers/usb/core/devices.o
+  CC      drivers/tty/vt/consolemap.o
+  LD      drivers/watchdog/watchdog.o
+  LD      drivers/watchdog/built-in.o
+  CONMK   drivers/tty/vt/consolemap_deftbl.c
+  CC      drivers/tty/vt/vt.o
+  SHIPPED drivers/tty/vt/defkeymap.c
+  CC      drivers/tty/vt/consolemap_deftbl.o
+  CC      drivers/scsi/scsi_sysfs.o
+  LD      drivers/usb/chipidea/ci_hdrc.o
+  LD      drivers/usb/chipidea/built-in.o
+  CC      drivers/usb/storage/scsiglue.o
+  CC      drivers/video/fbdev/mxc/mxc_epdc_fb.o
+  LD      drivers/video/fbdev/omap2/displays-new/built-in.o
+  LD      drivers/video/fbdev/omap2/dss/built-in.o
+  LD      drivers/video/fbdev/omap2/built-in.o
+  CC      drivers/video/fbdev/mxc/mxc_epdc_v2_fb.o
+  CC      drivers/video/fbdev/mxc/mxc_epdc_eink_module.o
+  CC      drivers/usb/core/port.o
+  CC      drivers/usb/phy/phy-mxs-usb.o
+  CC      drivers/scsi/scsi_devinfo.o
+  CC      drivers/usb/storage/protocol.o
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:229:31: warning: initialization discards 'const' qualifier from pointer target type
+ static char *gpszDisplayReg = gszDisplayReg;
+                               ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:230:28: warning: initialization discards 'const' qualifier from pointer target type
+ static char *gpszVcomReg = gszVcomReg;
+                            ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:231:29: warning: initialization discards 'const' qualifier from pointer target type
+ static char *gpszVP3V3Reg = gszVP3V3Reg;
+                             ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:232:28: warning: initialization discards 'const' qualifier from pointer target type
+ static char *gpszTMSTReg = gszTMSTReg;
+                            ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:0:
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'dbg_write':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:478:11: warning: initialization discards 'const' qualifier from pointer target type
+  char *pc=buf;
+           ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:499:4: warning: too many arguments for format [-Wformat-extra-args]
+    dev_err(dev,"parameter length cannot > 256\n",buf);
+    ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'waveform_mode_read':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:652:9: warning: comparison of distinct pointer types lacks a cast
+  if(attr==&dev_attr_waveform_mode_du.attr) {
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:657:9: warning: comparison of distinct pointer types lacks a cast
+  if(attr==&dev_attr_waveform_mode_a2.attr) {
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:662:9: warning: comparison of distinct pointer types lacks a cast
+  if(attr==&dev_attr_waveform_mode_gc16.attr) {
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:667:9: warning: comparison of distinct pointer types lacks a cast
+  if(attr==&dev_attr_waveform_mode_gl16.attr) {
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:672:9: warning: comparison of distinct pointer types lacks a cast
+  if(attr==&dev_attr_waveform_mode_reagl.attr) {
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:677:9: warning: comparison of distinct pointer types lacks a cast
+  if(attr==&dev_attr_waveform_mode_reagld.attr) {
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'mxc_epdc_fb_check_update_complete':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:776:16: warning: unused variable 'flags' [-Wunused-variable]
+  unsigned long flags;
+                ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'k_set_partial':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:898:6: warning: unused variable 'temp' [-Wunused-variable]
+  u32 temp;
+      ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'k_set_temperature':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1053:6: warning: unused variable 'iRet' [-Wunused-variable]
+  int iRet;
+      ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'k_mx5_send_epd_update':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1516:4: warning: format '%d' expects argument of type 'int', but argument 6 has type 'long unsigned int' [-Wformat=]
+    ptUPD_DATA->update_region.width,ptUPD_DATA->update_region.height);
+    ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1516:4: warning: format '%d' expects argument of type 'int', but argument 7 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c: In function 'k_fake_s1d13522_init':
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1786:44: warning: passing argument 2 of 'tps6518x_int_callback_setup' from incompatible pointer type
+     tps6518x_int_callback_setup(g_tps6518x,ntx_epdc_pmic_exception);
+                                            ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:58:0:
+include/linux/mfd/tps6518x.h:410:5: note: expected 'void * (*)(int)' but argument is of type 'void (*)(int)'
+ int tps6518x_int_callback_setup(struct tps6518x *tps6518x,TPS65185_INTEVT_CB fnCB);
+     ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:0:
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1795:40: warning: passing argument 2 of 'sy7636_int_callback_setup' from incompatible pointer type
+     sy7636_int_callback_setup(g_sy7636,ntx_epdc_pmic_exception);
+                                        ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:29:0,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:
+include/linux/mfd/sy7636.h:271:5: note: expected 'void * (*)(int)' but argument is of type 'void (*)(int)'
+ int sy7636_int_callback_setup(struct sy7636 *sy7636,SY7636_INTEVT_CB fnCB);
+     ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:0:
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1822:9: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+         WARNING_MSG("%s(),sy7636 vcom set to %d uV fail !\n",
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1839:9: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long int' [-Wformat=]
+         WARNING_MSG("%s(),tps65185 vcom set to %d uV fail !\n",
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function '_epdc_qos_setup':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1324:18: warning: assignment makes pointer from integer without a cast
+     reg_qos_base = 0x02094000;
+                  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1334:18: warning: assignment makes pointer from integer without a cast
+     reg_qos_base = 0x02094000;
+                  ^
+In file included from include/linux/io.h:22:0,
+                 from include/linux/irq.h:24,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:34:
+./arch/arm/include/asm/io.h:335:45: warning: passing argument 1 of '__arm_ioremap' makes integer from pointer without a cast
+ #define ioremap(cookie,size)  __arm_ioremap((cookie), (size), MT_DEVICE)
+                                             ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1343:19: note: in expansion of macro 'ioremap'
+    reg_qos_base = ioremap(reg_qos_base,SZ_16K);
+                   ^
+./arch/arm/include/asm/io.h:151:22: note: expected 'phys_addr_t' but argument is of type 'unsigned char *'
+ extern void __iomem *__arm_ioremap(phys_addr_t, size_t, unsigned int);
+                      ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1319:18: warning: unused variable 'qosc_base' [-Wunused-variable]
+    void __iomem *qosc_base;
+                  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1401:3: warning: 'return' with a value, in function returning void
+   return ret;
+   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_set_temp':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1756:15: warning: unused variable 'ext_temp' [-Wunused-variable]
+  unsigned int ext_temp, ext_temp_index = temp;
+               ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1754:6: warning: unused variable 'ret' [-Wunused-variable]
+  int ret = 0;
+      ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_set_update_coord':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1794:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  u32 val = (y << EPDC_UPD_CORD_YCORD_OFFSET) | x;
+  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_set_update_dimensions':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1812:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  u32 val = (height << EPDC_UPD_SIZE_HEIGHT_OFFSET) | width;
+  ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:72:0:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_submit_update':
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:30:67: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_printf(pszTimeStampName,dwData,fmt,args...) 0
+                                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1877:2: note: in expansion of macro 'NTX_TimeStamp_printf'
+  NTX_TimeStamp_printf("epdc_submite_update",lut_num,"wfm=%hd,updm=%hd;",
+  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_powerup':
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:26:51: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_In(pszTimeStampName,dwData) 0
+                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:2595:2: note: in expansion of macro 'NTX_TimeStamp_In'
+  NTX_TimeStamp_In("epdc_pwrup",0);
+  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_powerdown':
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:26:51: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_In(pszTimeStampName,dwData) 0
+                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:2709:2: note: in expansion of macro 'NTX_TimeStamp_In'
+  NTX_TimeStamp_In("epdc_pwrdown",0);
+  ^
+In file included from include/asm-generic/bug.h:13:0,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/thread_info.h:11,
+                 from include/asm-generic/current.h:4,
+                 from arch/arm/include/generated/asm/current.h:1,
+                 from include/linux/mutex.h:13,
+                 from include/linux/notifier.h:13,
+                 from include/linux/busfreq-imx.h:12,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:27:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_firmware_work_func':
+include/linux/kernel.h:812:48: warning: initialization from incompatible pointer type
+  const typeof( ((type *)0)->member ) *__mptr = (ptr); \
+                                                ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4153:3: note: in expansion of macro 'container_of'
+   container_of(work, struct mxc_epdc_fb_data, epdc_firmware_work);
+   ^
+include/linux/kernel.h:812:48: warning: (near initialization for 'fb_data')
+  const typeof( ((type *)0)->member ) *__mptr = (ptr); \
+                                                ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4153:3: note: in expansion of macro 'container_of'
+   container_of(work, struct mxc_epdc_fb_data, epdc_firmware_work);
+   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: At top level:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4180:0: warning: "min" redefined
+ #define min(a,b) (((a)>(b))?b:a)
+ ^
+In file included from include/asm-generic/bug.h:13:0,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/thread_info.h:11,
+                 from include/asm-generic/current.h:4,
+                 from arch/arm/include/generated/asm/current.h:1,
+                 from include/linux/mutex.h:13,
+                 from include/linux/notifier.h:13,
+                 from include/linux/busfreq-imx.h:12,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:27:
+include/linux/kernel.h:720:0: note: this is the location of the previous definition
+ #define min(x, y) ({    \
+ ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4181:0: warning: "max" redefined
+ #define max(a,b) (((a)>(b))?a:b)
+ ^
+In file included from include/asm-generic/bug.h:13:0,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/thread_info.h:11,
+                 from include/asm-generic/current.h:4,
+                 from arch/arm/include/generated/asm/current.h:1,
+                 from include/linux/mutex.h:13,
+                 from include/linux/notifier.h:13,
+                 from include/linux/busfreq-imx.h:12,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:27:
+include/linux/kernel.h:726:0: note: this is the location of the previous definition
+ #define max(x, y) ({    \
+ ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_submit_work_func':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4508:5: warning: too many arguments for format [-Wformat-extra-args]
+     printk(KERN_ERR".",__FUNCTION__,__LINE__);
+     ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_send_single_update':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4890:5: warning: format '%p' expects argument of type 'void *', but argument 2 has type 'long unsigned int' [-Wformat=]
+     upd_data->alt_buffer_data.phys_addr);
+     ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4890:5: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'ssize_t' [-Wformat=]
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4890:5: warning: format '%p' expects argument of type 'void *', but argument 4 has type '__u32' [-Wformat=]
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:72:0:
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:30:67: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_printf(pszTimeStampName,dwData,fmt,args...) 0
+                                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:4970:2: note: in expansion of macro 'NTX_TimeStamp_printf'
+  NTX_TimeStamp_printf("epdc_new_update_queued",upd_desc->upd_data.update_marker,
+  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_ioctl':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:5480:36: warning: passing argument 1 of 'mxc_epdc_fb_set_waveform_modes' from incompatible pointer type
+     mxc_epdc_fb_set_waveform_modes(&modes_ntx, info);
+                                    ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:3370:13: note: expected 'struct mxcfb_waveform_modes_ntx *' but argument is of type 'struct mxcfb_waveform_modes *'
+ static void mxc_epdc_fb_set_waveform_modes(struct mxcfb_waveform_modes_ntx *modes,
+             ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_reupdate_work_func':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:5933:9: warning: missing braces around initializer [-Wmissing-braces]
+  struct mxcfb_update_data l_upd_data = {0,};
+         ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:5933:9: warning: (near initialization for 'l_upd_data.update_region') [-Wmissing-braces]
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:72:0:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'epdc_intr_work_func':
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:26:51: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_In(pszTimeStampName,dwData) 0
+                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:6237:3: note: in expansion of macro 'NTX_TimeStamp_In'
+   NTX_TimeStamp_In("epdc_collision occured !",epdc_collision);
+   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:6252:3: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'u64' [-Wformat=]
+   EPDC_VPRINT(fb_data,2,"luts_status=0x%x\n",epdc_luts_status(fb_data->rev));
+   ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:72:0:
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:26:51: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_In(pszTimeStampName,dwData) 0
+                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:6279:3: note: in expansion of macro 'NTX_TimeStamp_In'
+   NTX_TimeStamp_In("epdc_lut_completed",i);
+   ^
+drivers/video/fbdev/mxc/../../../../kernel/ntx/ntx_timestamp.h:30:67: warning: statement with no effect [-Wunused-value]
+ #define NTX_TimeStamp_printf(pszTimeStampName,dwData,fmt,args...) 0
+                                                                   ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:6524:4: note: in expansion of macro 'NTX_TimeStamp_printf'
+    NTX_TimeStamp_printf("epdc_collision_mask",0,"collision mask=0x%llx",fb_data->epdc_colliding_luts);
+    ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_fw_handler':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:7350:32: warning: assignment from incompatible pointer type
+  fb_data->waveform_buffer_virt = gpbWF_vaddr + wv_data_offs;
+                                ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:7351:32: warning: assignment makes integer from pointer without a cast
+  fb_data->waveform_buffer_phys = gpbWF_paddr + wv_data_offs;
+                                ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:6985:34: warning: unused variable 'upd_marker_data' [-Wunused-variable]
+  struct mxcfb_update_marker_data upd_marker_data;
+                                  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:6984:27: warning: unused variable 'update' [-Wunused-variable]
+  struct mxcfb_update_data update;
+                           ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_probe':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8259:18: warning: assignment discards 'const' qualifier from pointer target type
+   gpszDisplayReg = gszDisplayReg_sy7636;
+                  ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8260:15: warning: assignment discards 'const' qualifier from pointer target type
+   gpszVcomReg = gszVcomReg_sy7636;
+               ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8261:16: warning: assignment discards 'const' qualifier from pointer target type
+   gpszVP3V3Reg = gszVP3V3Reg_sy7636;
+                ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8262:15: warning: assignment discards 'const' qualifier from pointer target type
+   gpszTMSTReg = gszTMSTReg_sy7636;
+               ^
+In file included from include/linux/irqflags.h:14:0,
+                 from ./arch/arm/include/asm/bitops.h:27,
+                 from include/linux/bitops.h:36,
+                 from include/linux/kernel.h:10,
+                 from include/asm-generic/bug.h:13,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/thread_info.h:11,
+                 from include/asm-generic/current.h:4,
+                 from arch/arm/include/generated/asm/current.h:1,
+                 from include/linux/mutex.h:13,
+                 from include/linux/notifier.h:13,
+                 from include/linux/busfreq-imx.h:12,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:27:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_suspend':
+include/linux/typecheck.h:11:18: warning: comparison of distinct pointer types lacks a cast
+  (void)(&__dummy == &__dummy2); \
+                  ^
+include/linux/jiffies.h:102:3: note: in expansion of macro 'typecheck'
+  (typecheck(unsigned long, a) && \
+   ^
+include/linux/jiffies.h:105:26: note: in expansion of macro 'time_after'
+ #define time_before(a,b) time_after(b,a)
+                          ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8590:6: note: in expansion of macro 'time_before'
+   if(time_before(jiffies,data->dwJiffies_To_TurnOFF_EP3V3)) {
+      ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8597:1: warning: label 'out' defined but not used [-Wunused-label]
+ out:
+ ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_resume':
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8621:8: warning: extra tokens at end of #endif directive
+ #endif QOS_ENABLE//]
+        ^
+In file included from include/linux/irqflags.h:14:0,
+                 from ./arch/arm/include/asm/bitops.h:27,
+                 from include/linux/bitops.h:36,
+                 from include/linux/kernel.h:10,
+                 from include/asm-generic/bug.h:13,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/thread_info.h:11,
+                 from include/asm-generic/current.h:4,
+                 from arch/arm/include/generated/asm/current.h:1,
+                 from include/linux/mutex.h:13,
+                 from include/linux/notifier.h:13,
+                 from include/linux/busfreq-imx.h:12,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:27:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_shutdown':
+include/linux/typecheck.h:11:18: warning: comparison of distinct pointer types lacks a cast
+  (void)(&__dummy == &__dummy2); \
+                  ^
+include/linux/jiffies.h:102:3: note: in expansion of macro 'typecheck'
+  (typecheck(unsigned long, a) && \
+   ^
+include/linux/jiffies.h:105:26: note: in expansion of macro 'time_after'
+ #define time_before(a,b) time_after(b,a)
+                          ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8697:6: note: in expansion of macro 'time_before'
+   if(time_before(tickNow,fb_data->dwJiffies_To_TurnOFF_EP3V3)) {
+      ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: At top level:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8720:14: warning: initialization from incompatible pointer type
+  .shutdown = mxc_epdc_fb_shutdown,
+              ^
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:8720:14: warning: (near initialization for 'mxc_epdc_fb_driver.shutdown')
+  LD      drivers/tty/serial/built-in.o
+In file included from drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:29:0,
+                 from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:
+include/linux/mfd/sy7636.h:290:21: warning: 'sy7636_to_reg_val' defined but not used [-Wunused-function]
+ static unsigned int sy7636_to_reg_val(unsigned int cur_reg, unsigned int fld_mask,
+                     ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:30:0:
+include/linux/device.h:541:26: warning: 'dev_attr_fbsnapshot_path' defined but not used [-Wunused-variable]
+  struct device_attribute dev_attr_##_name = __ATTR(_name, _mode, _show, _store)
+                          ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:179:8: note: in expansion of macro 'DEVICE_ATTR'
+ static DEVICE_ATTR(fbsnapshot_path, S_IWUSR | S_IRUSR|S_IROTH|S_IRGRP, fbsnapshot_path_read, fbsnapshot_path_write);
+        ^
+include/linux/device.h:541:26: warning: 'dev_attr_fbsnapshot_enable' defined but not used [-Wunused-variable]
+  struct device_attribute dev_attr_##_name = __ATTR(_name, _mode, _show, _store)
+                          ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:180:8: note: in expansion of macro 'DEVICE_ATTR'
+ static DEVICE_ATTR(fbsnapshot_enable, S_IWUSR | S_IRUSR|S_IROTH|S_IRGRP, fbsnapshot_enable_read, fbsnapshot_enable_write);
+        ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:0:
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:465:13: warning: 'gcDbgStringA' defined but not used [-Wunused-variable]
+ static char gcDbgStringA[128];
+             ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:580:12: warning: 'dither_enable_state' defined but not used [-Wunused-function]
+ static int dither_enable_state(void)
+            ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:845:13: warning: 'k_fake_s1d13522_progress_start' defined but not used [-Wunused-function]
+ static void k_fake_s1d13522_progress_start(void)
+             ^
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:856:12: warning: 'k_fake_s1d13522_wait_inited' defined but not used [-Wunused-function]
+ static int k_fake_s1d13522_wait_inited(void)
+            ^
+  CC      drivers/usb/storage/transport.o
+  CC      drivers/video/fbdev/mxc/fake_s1d13522.o
+  CC      drivers/video/fbdev/core/fbcmap.o
+  CC      drivers/video/fbdev/mxc/epdfb_dc.o
+  CC      drivers/scsi/scsi_sysctl.o
+  LD      drivers/usb/core/usbcore.o
+  CC      drivers/tty/vt/defkeymap.o
+  LD      drivers/usb/core/built-in.o
+  LD      drivers/usb/phy/built-in.o
+In file included from drivers/video/fbdev/mxc/fake_s1d13522.c:21:0:
+include/linux/gallen_dbg.h:338:0: warning: "assert" redefined
+  #define assert(p) do {  \
+ ^
+In file included from drivers/video/fbdev/mxc/s1d13521fb.h:25:0,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:16:
+drivers/video/fbdev/mxc/s1d13521_debug.h:49:0: note: this is the location of the previous definition
+     #define assert(expr)
+ ^
+  CC      drivers/scsi/scsi_trace.o
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'waveform_p_setup':
+drivers/video/fbdev/mxc/fake_s1d13522.c:220:15: warning: assignment from incompatible pointer type
+   gpbWF_vaddr = (u32 *)_MemoryRequest((u32)gpbWF_paddr, gdwWF_size, "waveform_p");
+               ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'logo_setup':
+drivers/video/fbdev/mxc/fake_s1d13522.c:265:3: warning: too many arguments for format [-Wformat-extra-args]
+   printk("%s() bypass logo\n",__FUNCTION__,str);
+   ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'logo_p_setup':
+drivers/video/fbdev/mxc/fake_s1d13522.c:279:17: warning: assignment from incompatible pointer type
+   gpbLOGO_vaddr = (u32 *)_MemoryRequest((u32)gpbLOGO_paddr, gdwLOGO_size, "logo_p");
+                 ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'fake_s1d13522_write_file_ex2':
+drivers/video/fbdev/mxc/fake_s1d13522.c:434:5: warning: format '%d' expects argument of type 'int', but argument 3 has type 'loff_t' [-Wformat=]
+     __FUNCTION__,fsz_chk,fsz_temp);
+     ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:434:5: warning: format '%d' expects argument of type 'int', but argument 4 has type 'loff_t' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'Flash_File_Erase':
+drivers/video/fbdev/mxc/fake_s1d13522.c:474:16: warning: assignment makes pointer from integer without a cast
+   gFlashBuffer = __get_free_pages(GFP_KERNEL, 1);
+                ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'Flash_File_Write':
+drivers/video/fbdev/mxc/fake_s1d13522.c:487:16: warning: assignment makes pointer from integer without a cast
+   gFlashBuffer = __get_free_pages(GFP_KERNEL, 1);
+                ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'Flash_File_Read':
+drivers/video/fbdev/mxc/fake_s1d13522.c:509:16: warning: assignment makes pointer from integer without a cast
+   gFlashBuffer = __get_free_pages(GFP_KERNEL, 1);
+                ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'BusIssueFlashOperation':
+drivers/video/fbdev/mxc/fake_s1d13522.c:535:4: warning: format '%X' expects argument of type 'unsigned int', but argument 4 has type 'BYTE *' [-Wformat=]
+    printk ("[%s-%d] Flash_GetID (0x%08X);\n",__func__, __LINE__, pFlashControl->Buf); 
+    ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'fake_s1d13522_initEx3':
+drivers/video/fbdev/mxc/fake_s1d13522.c:640:2: warning: multi-line comment [-Wcomment]
+  //pDC = epdfbdc_create_ex2(wFBW,wFBH,gwScrW,gwScrH,bBitsPerPixel,pbDCBuf,\
+  ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'fake_s1d13522_display_img':
+drivers/video/fbdev/mxc/fake_s1d13522.c:747:5: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+     printk("EPD updating ... (t=%u,cnt=%lu)\n",jiffies,++uiCnt);
+     ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:747:5: warning: format '%lu' expects argument of type 'long unsigned int', but argument 3 has type 'unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:853:6: warning: passing argument 2 of 'memcpy' discards 'volatile' qualifier from pointer target type
+      pDC->pbDCbuf+dwDirtyOffsetStart, dwDirtyOffsetEnd-dwDirtyOffsetStart);
+      ^
+In file included from include/linux/string.h:17:0,
+                 from include/linux/dynamic_debug.h:111,
+                 from include/linux/printk.h:275,
+                 from include/linux/kernel.h:13,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:1:
+./arch/arm/include/asm/string.h:16:15: note: expected 'const void *' but argument is of type 'volatile unsigned char *'
+ extern void * memcpy(void *, const void *, __kernel_size_t);
+               ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:856:34: warning: passing argument 2 of 'epdfbdc_dcbuf_to_RGB565' discards 'volatile' qualifier from pointer target type
+      epdfbdc_dcbuf_to_RGB565(pDC,pbRealFB,(pDC->dwWidth*pDC->dwHeight)>>1);
+                                  ^
+In file included from drivers/video/fbdev/mxc/fake_s1d13522.c:23:0:
+drivers/video/fbdev/mxc/epdfb_dc.h:192:14: note: expected 'unsigned char *' but argument is of type 'volatile u8 *'
+ EPDFB_DC_RET epdfbdc_dcbuf_to_RGB565(EPDFB_DC *I_pEPD_dc,\
+              ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:877:34: warning: passing argument 2 of 'epdfbdc_dcbuf_to_RGB565' discards 'volatile' qualifier from pointer target type
+      epdfbdc_dcbuf_to_RGB565(pDC,pbRealFB,(pDC->dwWidth*pDC->dwHeight)>>1);
+                                  ^
+In file included from drivers/video/fbdev/mxc/fake_s1d13522.c:23:0:
+drivers/video/fbdev/mxc/epdfb_dc.h:192:14: note: expected 'unsigned char *' but argument is of type 'volatile u8 *'
+ EPDFB_DC_RET epdfbdc_dcbuf_to_RGB565(EPDFB_DC *I_pEPD_dc,\
+              ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:881:7: warning: passing argument 2 of 'memcpy' discards 'volatile' qualifier from pointer target type
+       pDC->pbDCbuf, pDC->dwDCSize);
+       ^
+In file included from include/linux/string.h:17:0,
+                 from include/linux/dynamic_debug.h:111,
+                 from include/linux/printk.h:275,
+                 from include/linux/kernel.h:13,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:1:
+./arch/arm/include/asm/string.h:16:15: note: expected 'const void *' but argument is of type 'volatile unsigned char *'
+ extern void * memcpy(void *, const void *, __kernel_size_t);
+               ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:883:6: warning: multi-line comment [-Wcomment]
+      //memcpy((void *)(volatile u32 *)((u8 *)pDC->pfnGetRealFrameBuf()),\
+      ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:718:6: warning: unused variable 'iIsFullScreen' [-Wunused-variable]
+  int iIsFullScreen = 0;
+      ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:716:6: warning: unused variable 'wTemp' [-Wunused-variable]
+  u16 wTemp ;
+      ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'PutImage_PVI2EPSON':
+drivers/video/fbdev/mxc/fake_s1d13522.c:1266:6: warning: unused variable 'data' [-Wunused-variable]
+ BYTE data;
+      ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1265:9: warning: unused variable 'pDest' [-Wunused-variable]
+ PUINT16 pDest;
+         ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1262:13: warning: unused variable 'cc' [-Wunused-variable]
+ int length, cc;
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'pvi_Init':
+drivers/video/fbdev/mxc/fake_s1d13522.c:1488:12: warning: assignment discards 'volatile' qualifier from pointer target type
+   ImagePVI = gpbLOGO_vaddr;
+            ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1485:12: warning: unused variable 'ret' [-Wunused-variable]
+   int temp,ret;
+            ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1485:7: warning: unused variable 'temp' [-Wunused-variable]
+   int temp,ret;
+       ^
+  CC      drivers/video/fbdev/core/fbsysfs.o
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'pvi_ioctl_ReadFromFlash':
+drivers/video/fbdev/mxc/fake_s1d13522.c:1930:1: warning: label '_pvi_ioctl_ReadFromFlashFail' defined but not used [-Wunused-label]
+ _pvi_ioctl_ReadFromFlashFail:
+ ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'Epson_LoadImageArea':
+drivers/video/fbdev/mxc/fake_s1d13522.c:2438:5: warning: multi-line comment [-Wcomment]
+     //fake_s1d13522_display_img(area->XStart,area->YStart+i,area->Width,1,\
+     ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2346:16: warning: unused variable 'dwAreaWidthBytes' [-Wunused-variable]
+  unsigned long dwAreaWidthBytes;
+                ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'fake_s1d13522_ioctl':
+drivers/video/fbdev/mxc/fake_s1d13522.c:2767:8: warning: assignment from incompatible pointer type
+     pt = ((unsigned char *)pt)+dwFBSize;
+        ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2757:8: warning: unused variable 'iBpp' [-Wunused-variable]
+    int iBpp = 4;
+        ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2834:35: warning: passing argument 2 of 'copy_from_user' makes pointer from integer without a cast
+    if (copy_from_user(&ioctl_hwc, arg, sizeof(ioctl_hwc))) {
+                                   ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:488:42: note: expected 'const void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_from_user(void *to, const void __user *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2850:35: warning: passing argument 2 of 'copy_from_user' makes pointer from integer without a cast
+    if (copy_from_user(&ioctl_hwc, arg, sizeof(ioctl_hwc))) {
+                                   ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:488:42: note: expected 'const void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_from_user(void *to, const void __user *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2856:21: warning: passing argument 1 of 'copy_to_user' makes pointer from integer without a cast
+    if (copy_to_user(arg,&ioctl_hwc,sizeof(ioctl_hwc))) {
+                     ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:497:42: note: expected 'void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_to_user(void __user *to, const void *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2885:36: warning: passing argument 2 of 'copy_from_user' makes pointer from integer without a cast
+    if (copy_from_user(pcmd_params, arg, sizeof(cmd_params))) {
+                                    ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:488:42: note: expected 'const void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_from_user(void *to, const void __user *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3013:18: warning: passing argument 1 of 'copy_to_user' makes pointer from integer without a cast
+     copy_to_user(arg,&iVCOM_get_val,sizeof(iVCOM_get_val));
+                  ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:497:42: note: expected 'void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_to_user(void __user *to, const void *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3027:36: warning: passing argument 2 of 'copy_from_user' makes pointer from integer without a cast
+     if (!copy_from_user(&upd_data, arg,sizeof(upd_data))) {
+                                    ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:488:42: note: expected 'const void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_from_user(void *to, const void __user *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3029:35: warning: passing argument 1 of 'copy_to_user' makes pointer from integer without a cast
+      if (ret == 0 && copy_to_user(arg, &upd_data,sizeof(upd_data))) {
+                                   ^
+In file included from include/linux/poll.h:11:0,
+                 from include/linux/ring_buffer.h:7,
+                 from include/linux/ftrace_event.h:5,
+                 from include/trace/syscall.h:6,
+                 from include/linux/syscalls.h:81,
+                 from drivers/video/fbdev/mxc/fake_s1d13522.c:4:
+./arch/arm/include/asm/uaccess.h:497:42: note: expected 'void *' but argument is of type 'long unsigned int'
+ static inline unsigned long __must_check copy_to_user(void __user *to, const void *from, unsigned long n)
+                                          ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'fb_capture_ex':
+drivers/video/fbdev/mxc/fake_s1d13522.c:3114:4: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+    _x,_y,_w,_h,cUpdModeBufA,L_pszExtraInfo,iBitsTo);
+    ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3114:4: warning: format '%u' expects argument of type 'unsigned int', but argument 5 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3114:4: warning: format '%d' expects argument of type 'int', but argument 7 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3114:4: warning: format '%d' expects argument of type 'int', but argument 8 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3114:4: warning: format '%d' expects argument of type 'int', but argument 9 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3114:4: warning: format '%d' expects argument of type 'int', but argument 10 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3117:4: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+    iCaptureIDX,dwCaptureTotals,cfnbufA,iBitsTo,ptDC_Capture->dwDCSize,_w,_h);
+    ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3117:4: warning: format '%u' expects argument of type 'unsigned int', but argument 6 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3117:4: warning: format '%u' expects argument of type 'unsigned int', but argument 7 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3117:4: warning: format '%u' expects argument of type 'unsigned int', but argument 8 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3119:24: warning: passing argument 2 of 'write_file_ex' discards 'volatile' qualifier from pointer target type
+  write_file_ex(cfnbufA,ptDC_Capture->pbDCbuf, ptDC_Capture->dwDCSize) ;
+                        ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:457:12: note: expected 'char *' but argument is of type 'volatile unsigned char *'
+ static int write_file_ex(char *filename, char *data,unsigned long dwSize)
+            ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3122:3: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+   printk("printf \"P5\\n%u %u\\n255\\n\"> %s.pgm \n",_w,_h,cfnbufA);
+   ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3122:3: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c:3126:3: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+   printk("rawtoppm %u %u %s > %s.ppm \n",_w,_h,cfnbufA,cfnbufA);
+   ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3126:3: warning: format '%u' expects argument of type 'unsigned int', but argument 3 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/fake_s1d13522.c: At top level:
+drivers/video/fbdev/mxc/fake_s1d13522.c:72:13: warning: 'resolve_conflict_step' defined but not used [-Wunused-variable]
+  static int resolve_conflict_step;
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:73:23: warning: 'gLastUpdParm0' defined but not used [-Wunused-variable]
+  static unsigned long gLastUpdParm0;
+                       ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:77:27: warning: 'conflict_resolution_timer' defined but not used [-Wunused-variable]
+  static struct timer_list conflict_resolution_timer; // KEG 20090825
+                           ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:2272:13: warning: 's1d13521fb_resolve_conflict' defined but not used [-Wunused-function]
+ static void s1d13521fb_resolve_conflict(unsigned long dummy)
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1205:13: warning: 'packed_bpp2_to_bbp3_dot3' defined but not used [-Wunused-variable]
+ static WORD packed_bpp2_to_bbp3_dot3[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1212:13: warning: 'packed_bpp2_to_bbp3_dot2' defined but not used [-Wunused-variable]
+ static WORD packed_bpp2_to_bbp3_dot2[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1219:13: warning: 'packed_bpp2_to_bbp3_dot1' defined but not used [-Wunused-variable]
+ static WORD packed_bpp2_to_bbp3_dot1[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1226:13: warning: 'packed_bpp2_to_bbp3_dot0' defined but not used [-Wunused-variable]
+ static WORD packed_bpp2_to_bbp3_dot0[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1233:13: warning: 'packed_bpp1_to_bbp3_dot3' defined but not used [-Wunused-variable]
+ static WORD packed_bpp1_to_bbp3_dot3[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1238:13: warning: 'packed_bpp1_to_bbp3_dot2' defined but not used [-Wunused-variable]
+ static WORD packed_bpp1_to_bbp3_dot2[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1243:13: warning: 'packed_bpp1_to_bbp3_dot1' defined but not used [-Wunused-variable]
+ static WORD packed_bpp1_to_bbp3_dot1[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1248:13: warning: 'packed_bpp1_to_bbp3_dot0' defined but not used [-Wunused-variable]
+ static WORD packed_bpp1_to_bbp3_dot0[] = {
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1460:13: warning: 'SPI_FlashWriteData' defined but not used [-Wunused-function]
+ static BOOL SPI_FlashWriteData(BYTE Data)
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:1465:13: warning: 'SPI_FlashWriteDummy' defined but not used [-Wunused-function]
+ static BOOL SPI_FlashWriteDummy(VOID)
+             ^
+drivers/video/fbdev/mxc/fake_s1d13522.c: In function 'fake_s1d13522_ioctl':
+drivers/video/fbdev/mxc/fake_s1d13522.c:2778:5: warning: ignoring return value of 'copy_from_user', declared with attribute warn_unused_result [-Wunused-result]
+     copy_from_user(pt,(ST_IMAGE_PGM *)arg,dwImgValidSize);
+     ^
+drivers/video/fbdev/mxc/fake_s1d13522.c:3013:5: warning: ignoring return value of 'copy_to_user', declared with attribute warn_unused_result [-Wunused-result]
+     copy_to_user(arg,&iVCOM_get_val,sizeof(iVCOM_get_val));
+     ^
+  CC      drivers/video/fbdev/core/modedb.o
+  CC      drivers/scsi/scsi_logging.o
+drivers/video/fbdev/mxc/epdfb_dc.c: In function '_epdfbdc_get_dcimg_ptr':
+drivers/video/fbdev/mxc/epdfb_dc.c:766:9: warning: assignment discards 'volatile' qualifier from pointer target type
+   pbRet = I_pEPD_imgdc->pbDCbuf + 
+         ^
+drivers/video/fbdev/mxc/epdfb_dc.c: In function '_epdfbdc_get_img_pixelvalue_from_ptr':
+drivers/video/fbdev/mxc/epdfb_dc.c:810:3: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'long unsigned int' [-Wformat=]
+   ERR_MSG("[Warning]*IO_ppbImg=%p>pbDCbuf=%p+dwDCSize=%u\n",(*IO_ppbImg),
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c: In function '_epdfbdc_set_pixel':
+drivers/video/fbdev/mxc/epdfb_dc.c:1179:12: warning: assignment from incompatible pointer type
+   pbDCDest = (unsigned short *)(pEPD_dc->pbDCbuf + \
+            ^
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_put_dcimg':
+drivers/video/fbdev/mxc/epdfb_dc.c:1227:21: warning: assignment discards 'volatile' qualifier from pointer target type
+  pEPD_img->pbImgBuf = pEPD_dcimg->pbDCbuf;
+                     ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1213:17: warning: unused variable 'pbDCRow' [-Wunused-variable]
+  unsigned char *pbDCRow;
+                 ^
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_dcbuf_to_RGB565':
+drivers/video/fbdev/mxc/epdfb_dc.c:1861:3: warning: passing argument 3 of '_fb_Gray4toRGB565' discards 'volatile' qualifier from pointer target type
+   I_pEPD_dc->pbDCbuf,I_pEPD_dc->dwDCSize,I_pEPD_dc->dwFlags&EPDFB_DC_FLAG_REVERSEINPDATA);
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c:180:13: note: expected 'unsigned char *' but argument is of type 'volatile unsigned char *'
+ static void _fb_Gray4toRGB565(
+             ^
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_set_width_height':
+drivers/video/fbdev/mxc/epdfb_dc.c:1905:3: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+   ERR_MSG("%s(%d): FBW(%d)<W(%d) !\n",__FUNCTION__,__LINE__,dwFBW,dwW);
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1905:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/epdfb_dc.c:1910:3: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+   ERR_MSG("%s(%d): FBH(%d)<H(%d) !\n",__FUNCTION__,__LINE__,dwFBH,dwH);
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1910:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/epdfb_dc.c:1926:3: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+   ERR_MSG("%s(%d): new DCSize(%d)>original DCSize(%d) !\n",__FUNCTION__,__LINE__,
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1926:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_set_fbxyoffset':
+drivers/video/fbdev/mxc/epdfb_dc.c:1957:3: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+   ERR_MSG("%s(%d): FBW(%d)<X(%d) !\n",__FUNCTION__,__LINE__,dwFBW,dwFBXOffset);
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1957:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/epdfb_dc.c:1962:3: warning: format '%d' expects argument of type 'int', but argument 4 has type 'long unsigned int' [-Wformat=]
+   ERR_MSG("%s(%d): FBH(%d)<Y(%d) !\n",__FUNCTION__,__LINE__,dwFBH,dwFBYOffset);
+   ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1962:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'long unsigned int' [-Wformat=]
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_rotate':
+drivers/video/fbdev/mxc/epdfb_dc.c:1999:23: warning: passing argument 2 of 'memcpy' discards 'volatile' qualifier from pointer target type
+   my_memcpy(pbWorkBuf,I_pEPD_dc->pbDCbuf,I_pEPD_dc->dwDCSize);
+                       ^
+drivers/video/fbdev/mxc/epdfb_dc.c:29:47: note: in definition of macro 'my_memcpy'
+  #define my_memcpy(dest,src,size) memcpy(dest,src,size)
+                                               ^
+In file included from include/linux/string.h:17:0,
+                 from include/linux/dynamic_debug.h:111,
+                 from include/linux/printk.h:275,
+                 from include/linux/kernel.h:13,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from drivers/video/fbdev/mxc/epdfb_dc.c:17:
+./arch/arm/include/asm/string.h:16:15: note: expected 'const void *' but argument is of type 'volatile unsigned char *'
+ extern void * memcpy(void *, const void *, __kernel_size_t);
+               ^
+  CC      drivers/scsi/scsi_pm.o
+  CC      drivers/usb/storage/usb.o
+  LD      drivers/scsi/arm/built-in.o
+  CC      drivers/scsi/sd.o
+  CC      drivers/usb/storage/initializers.o
+  CC      drivers/usb/storage/sierra_ms.o
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_fbimg_normallize':
+drivers/video/fbdev/mxc/epdfb_dc.c:253:5: warning: 'dwWr' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(++dwWr >=  I_dwGray4BufSize) {
+     ^
+drivers/video/fbdev/mxc/epdfb_dc.c:232:21: note: 'dwWr' was declared here
+  unsigned long dwRd,dwWr;
+                     ^
+drivers/video/fbdev/mxc/epdfb_dc.c:221:5: warning: 'dwWr' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(++dwWr>=I_dwRGB565BufSize) {
+     ^
+drivers/video/fbdev/mxc/epdfb_dc.c:212:21: note: 'dwWr' was declared here
+  unsigned long dwRd,dwWr;
+                     ^
+drivers/video/fbdev/mxc/epdfb_dc.c: In function '_epdfbdc_pixel_dither':
+drivers/video/fbdev/mxc/epdfb_dc.c:575:6: warning: 'dwPVal' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if((int)(dwPVal)>=pEPD_dc->dither8[I_dwSrcPxlY%16][I_dwSrcPxlX%16]) {
+      ^
+  CC      drivers/usb/storage/option_ms.o
+drivers/video/fbdev/mxc/epdfb_dc.c: In function 'epdfbdc_put_dcimg':
+drivers/video/fbdev/mxc/epdfb_dc.c:1167:16: warning: 'dwRetPixelVal' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   *pdwDCDest = (unsigned long)(L_dwPixelVal&0x00ffffff);
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:588:16: note: 'dwRetPixelVal' was declared here
+  unsigned long dwRetPixelVal;
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1167:16: warning: 'dwRetPixelVal' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   *pdwDCDest = (unsigned long)(L_dwPixelVal&0x00ffffff);
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:588:16: note: 'dwRetPixelVal' was declared here
+  unsigned long dwRetPixelVal;
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1167:16: warning: 'dwRetPixelVal' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   *pdwDCDest = (unsigned long)(L_dwPixelVal&0x00ffffff);
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:588:16: note: 'dwRetPixelVal' was declared here
+  unsigned long dwRetPixelVal;
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:1167:16: warning: 'dwRetPixelVal' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   *pdwDCDest = (unsigned long)(L_dwPixelVal&0x00ffffff);
+                ^
+drivers/video/fbdev/mxc/epdfb_dc.c:588:16: note: 'dwRetPixelVal' was declared here
+  unsigned long dwRetPixelVal;
+                ^
+  CC      drivers/video/fbdev/core/fbcvt.o
+  CC      drivers/usb/storage/usual-tables.o
+  CC      drivers/video/fbdev/core/cfbfillrect.o
+  LD      drivers/video/fbdev/mxc/mxc_epdc_eink.o
+  CC      drivers/video/fbdev/core/cfbcopyarea.o
+  CC      drivers/video/fbdev/core/cfbimgblt.o
+  CC      drivers/video/fbdev/core/fb_defio.o
+  CC      drivers/video/fbdev/mx3fb.o
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:76:0:
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c: In function 'mxc_epdc_fb_probe':
+include/linux/gallen_dbg.h:26:45: warning: 'iChk' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  #define GALLEN_WARNING_PRINT(fmt,args...)  printk(KERN_WARNING fmt,##args)
+                                             ^
+In file included from drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c:1308:0:
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c:1718:6: note: 'iChk' was declared here
+  int iChk;
+      ^
+  LD      drivers/scsi/scsi_mod.o
+  LD      drivers/video/fbdev/core/fb.o
+  LD      drivers/usb/storage/usb-storage.o
+  LD      drivers/usb/storage/built-in.o
+  LD      drivers/usb/built-in.o
+  LD      drivers/tty/vt/built-in.o
+  LD      drivers/tty/built-in.o
+  LD      drivers/video/fbdev/core/built-in.o
+  LD      drivers/scsi/sd_mod.o
+  LD      drivers/scsi/built-in.o
+  LD      drivers/video/fbdev/mxc/built-in.o
+  LD      drivers/video/fbdev/built-in.o
+  LD      drivers/video/built-in.o
+  LD      drivers/built-in.o
+---- There was an error during the build process, aborting... ----

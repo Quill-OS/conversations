@@ -1,0 +1,197 @@
+connected to /dev/ttyS0
+Escape character: Ctrl-\
+Type the escape character to get to the prompt.
+
+
+
+U-Boot 2009.08-00794-g5fa48ba-dirty-svn (10月 08 2015 - 12:40:07)
+
+
+
+CPU: Freescale i.MX6 family TO0.0 at 792 MHz
+
+Temperature:   30 C, calibration data 0x58550c5f
+
+mx6q pll1: 792MHz
+
+mx6q pll2: 528MHz
+
+mx6q pll3: 480MHz
+
+mx6q pll8: 50MHz
+
+ipg clock     : 66000000Hz
+
+ipg per clock : 66000000Hz
+
+uart clock    : 80000000Hz
+
+cspi clock    : 60000000Hz
+
+ahb clock     : 132000000Hz
+
+axi clock   : 198000000Hz
+
+emi_slow clock: 22000000Hz
+
+ddr clock     : 396000000Hz
+
+usdhc1 clock  : 198000000Hz
+
+usdhc2 clock  : 198000000Hz
+
+usdhc3 clock  : 198000000Hz
+
+usdhc4 clock  : 198000000Hz
+
+Board: MX6SoloLite-NTX:[ POR ]
+
+Boot Device: SD
+
+I2C:   ready
+
+DRAM:  512 MB
+
+MMC:   csd is 0x400e0032, 0x5b590000, 0x1d6f7f80, 0xa400000 
+
+scr addr is 0x875fef08, switch_status addr is 0x875fee98 
+
+mmc0 is current device
+
+
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+
+
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+
+HW switch boot from ESD
+
+FSL_USDHC: 0,FSL_USDHC: 1,FSL_USDHC: 2
+
+In:    serial
+
+Out:   serial
+
+Err:   serial
+
+ntx_hw_late_init()
+
+i2c: I2C2 SDA is low, start i2c recovery...
+
+I2C2 Recovery success
+
+hw_anadig_reg_core=7c3e1f
+
+Device: FSL_USDHC
+
+Manufacturer ID: 2
+
+OEM: 544d
+
+Name: SA04G 
+
+Tran Speed: 50000000
+
+Rd Block Len: 512
+
+SD version 3.0
+
+Clock: 50000000
+
+High Capacity: Yes
+
+Capacity: 3951034368 Bytes
+
+Bus Width: 4-bit 
+
+Boot Partition for boot: No boot partition available
+
+csd is 0x400e0032, 0x5b590000, 0x1d6f7f80, 0xa400000 
+
+scr addr is 0x875fef58, switch_status addr is 0x875feee8 
+
+ntx_config_fastboot_layout():8 binaries partition added
+
+ntx_config_fastboot_layout():3 mbr partition added
+
+Net:   No ethernet found.
+
+ 0 
+
+mmc0 is current device
+
+
+
+ hwcfgp=8783920c,pcb=46,customer=9
+
+
+
+RC5T619 [0xbd]=0x43
+
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=1
+
+ram p=80000000,size=536870912
+
+
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+
+
+
+MMC read: dev # 0, block # 14336, count 12883 ... 12883 blocks read: OK
+skip load "logo" because of overwrited 
+
+MMC read: dev # 0, block # 34815, count 1 ... 1 blocks read: OK
+no "logo" bin header
+Kernel RAM visiable size=505M->505M
+
+MMC read: dev # 0, block # 2047, count 1 ... 1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 0, block # 2048, count 8192 ... 8192 blocks read: OK
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+hwcfg rootfstype : 2
+hwcfg partition type : 2
+## Booting kernel from Legacy Image at 80800000 ...
+   Image Name:   c5c0d2_#4072 Dec 19 09:25:37
+   Created:      2016-12-19   1:25:40 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2333036 Bytes =  2.2 MB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... K
+OK
+
+Starting kernel ...
+
+rivers/misc/ntx-misc.c(msp430_i2c_probe): Can't allocate irq 395
+[zForce_ir_touch_recv_data-275] command BootComplete (0)...
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000150 seconds, 3.3MB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+cannot open /dev/null
+[PROGRESS_BAR-3065] No progess ...
+fsck.fat 4.1+git (2017-01-24)
+dev/mmcblk0p3: 2192 files, 223416/827438 clusters
+
+kobo login: NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+h: you need to specify whom to kill
+kdir: can't create directory '/dev/pts': File exists
+mount: mounting devpts on /dev/pts failed: Device or resource busy
+tcpsvd: bind: Address already in use
+tcpsvd: bind: Address already in use
+Invalid argument

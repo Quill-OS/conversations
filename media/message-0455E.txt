@@ -1,0 +1,74 @@
+Loaded FBInk version: v1.24.0-183-g9c1be63 for Kobo
+Starting named pipe server
+Creating /kobo/run/ipd
+Starting idle sleep
+Starting inotify monitoring for system configuration updates
+Input device name: zForce-ir-touch
+Input device bus 24 vendor: 0 product: 0
+Monitoring events
+Input device name: gpio-keys
+Input device bus 25 vendor: 1 product: 1
+26/07/2022 @ 00:14:47 | MainWindow: Opening Quit widget
+26/07/2022 @ 00:14:48 | quit: Suspending
+26/07/2022 @ 00:14:48 | quit: Emulating power button input event
+Input event received, type: EV_KEY codename: KEY_POWER value: 1
+monitorEvents: Received power button trigger, attempting device suspend
+Watchdog event received
+Launching 'prepare' thread because of 'Nothing' sleep job
+Launching prepareSleep
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+[FBInk] Detected a Kobo Glo HD (371 => Alyssum @ Mark 6)
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 300 dpi
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+FBInk was initialized successfully in screenshotFbink
+Screen dump done
+Sending message
+26/07/2022 @ 00:14:49 | sleepThread: Received from pipe: start
+26/07/2022 @ 00:14:49 | sleepThread: Emiting signal to show sleepDialog
+26/07/2022 @ 00:14:49 | sleepDialog: Launching sleep dialog
+In app vector: inkbox-bin
+In app vector: oobe-inkbox-bin
+In app vector: lockscreen-bin
+In app vector: calculator-bin
+In app vector: qreversi-bin
+In app vector: 2048-bin
+In app vector: scribble
+In app vector: lightmaps
+Found PID of inkbox-bin: 9724
+Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Something went wrong with custom screensaver option, displaying normal message
+FBInk: Full screen refresh
+Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Font `/etc/init.d/splash.d/fonts/resources/inter-b.ttf` loaded for style 'Regular'
+Wrote: "true" to: /tmp/sleep_standby
+Wrote: "true" to: /tmp/sleep_mode
+/sys/class/backlight/mxc_msp430_fl.0/brightness is: 15
+Wrote: "15" to: /tmp/savedBrightness
+/sys/class/backlight/mxc_msp430_fl.0/brightness is: 15
+/sys/class/net/wlan0/operstate is: up
+Wrote: "true" to: /run/was_connected_to_wifi
+killall: connect_to_network.sh: no process killed
+Found PID of wpa_supplicant: 9847
+Found PID of udhcpc: 9335

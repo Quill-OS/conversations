@@ -1,0 +1,72 @@
+Sat Jul 30 19:45:49 2022 | main: Debug mode is enabled
+Sat Jul 30 19:45:49 2022 | main: Saving logs to /var/log/ipd.log
+Sat Jul 30 19:45:49 2022 | functions: Reading system variables
+Sat Jul 30 19:45:49 2022 | functions: /opt/inkbox_device is: n905b
+Sat Jul 30 19:45:49 2022 | functions: Running on: n905b
+Sat Jul 30 19:45:49 2022 | functions: Couldn't read config file: /opt/config/12-lockscreen/config
+Sat Jul 30 19:45:49 2022 | functions: lockscreen is: none
+Sat Jul 30 19:45:49 2022 | functions: /opt/config/10-dark_mode/config is: false
+Sat Jul 30 19:45:49 2022 | functions: darkMode is: false
+Sat Jul 30 19:45:49 2022 | functions: USB networking system service is not running
+Sat Jul 30 19:45:49 2022 | functions: /data/config/20-sleep_daemon/1-cinematicBrightnessDelayMs is: 50
+Sat Jul 30 19:45:49 2022 | functions: /data/config/20-sleep_daemon/2-cpuGovernor is: ondemand
+Sat Jul 30 19:45:49 2022 | devices: Setting CPU frequency governor to ondemand
+Sat Jul 30 19:45:49 2022 | devices: Write status writing to 'scaling_governor' is: -1
+Sat Jul 30 19:45:49 2022 | functions: Path: /data/config/20-sleep_daemon/3-whenChargerSleep contains a true boolean
+Sat Jul 30 19:45:49 2022 | functions: Path: /data/config/20-sleep_daemon/4-chargerWakeUp contains a false boolean
+Sat Jul 30 19:45:49 2022 | functions: Path: /data/config/20-sleep_daemon/5-wifiReconnect contains a true boolean
+Sat Jul 30 19:45:49 2022 | functions: Path: /data/config/20-sleep_daemon/6-ledUsage contains a false boolean
+Sat Jul 30 19:45:49 2022 | functions: /data/config/20-sleep_daemon/7-idleSleep is: 0
+Sat Jul 30 19:45:49 2022 | functions: Path: /data/config/20-sleep_daemon/8-customCase contains a false boolean
+Sat Jul 30 19:45:49 2022 | pipeHandler: Starting named pipe server
+Sat Jul 30 19:45:49 2022 | pipeHandler: Creating /run/ipd
+Sat Jul 30 19:45:49 2022 | monitorEvents: Monitoring events
+Sat Jul 30 19:45:49 2022 | monitorEvents: Grabbed /dev/input/event0
+Sat Jul 30 19:45:49 2022 | monitorEvents: Input device name: mxckpd
+Sat Jul 30 19:45:49 2022 | monitorEvents: Input device bus: 25 vendor: 0 product: 0
+Sat Jul 30 19:45:49 2022 | idleSleep: Starting idleSleep
+Sat Jul 30 19:45:49 2022 | idleSleep: Waiting for inkbox-bin to start
+Sat Jul 30 19:45:49 2022 | configUpdate: Starting inotify monitoring for system configuration updates
+Sat Jul 30 19:45:49 2022 | appsFreeze: Found PID of inkbox-bin: 2717
+Sat Jul 30 19:45:50 2022 | idleSleep: inkbox-bin started. Waiting additional 30 seconds
+Sat Jul 30 19:45:56 2022 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Sat Jul 30 19:45:56 2022 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Sat Jul 30 19:45:56 2022 | watchdog: Watchdog event received
+Sat Jul 30 19:45:56 2022 | watchdog: Launching 'prepare' thread because of 'Nothing' sleep job
+Sat Jul 30 19:45:56 2022 | prepareSleep: Launching prepareSleep
+Sat Jul 30 19:45:56 2022 | pipeHandler: Sending message
+Sat Jul 30 19:45:56 2022 | configUpdate: inotify read up
+Sat Jul 30 19:45:56 2022 | configUpdate: inotify loop executed
+Sat Jul 30 19:45:56 2022 | configUpdate: inotify: Detected a modification event of name: fifo
+Sat Jul 30 19:45:56 2022 | configUpdate: All events read
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: inkbox-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: oobe-inkbox-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: lockscreen-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: calculator-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: qreversi-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: 2048-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: scribble
+Sat Jul 30 19:45:56 2022 | appsFreeze: In app vector: lightmaps
+Sat Jul 30 19:45:56 2022 | appsFreeze: Found PID of inkbox-bin: 2717
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of oobe-inkbox-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of lockscreen-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of calculator-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of qreversi-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of 2048-bin
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of scribble
+Sat Jul 30 19:45:56 2022 | appsFreeze: Couldn't find PID of lightmaps
+Sat Jul 30 19:45:57 2022 | functions: Wrote: "true" to: /tmp/sleep_standby
+Sat Jul 30 19:45:57 2022 | functions: Wrote: "true" to: /tmp/sleep_mode
+Sat Jul 30 19:45:57 2022 | functions: Wrote: "0" to: /tmp/savedBrightness
+Sat Jul 30 19:45:57 2022 | functions: Wrote: "false" to: /kobo/inkbox/remount
+Sat Jul 30 19:45:57 2022 | prepareSleep: Exiting prepareSleep
+Sat Jul 30 19:45:57 2022 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Sat Jul 30 19:45:57 2022 | watchdog: Launching watchdogNextStep request
+Sat Jul 30 19:45:57 2022 | watchdog: Launching goingSleep thread from request by watchdogNextStep
+Sat Jul 30 19:45:57 2022 | goingSleep: Started goSleep
+Sat Jul 30 19:45:58 2022 | goingSleep: Going to sleep now!
+Sat Jul 30 19:45:59 2022 | goingSleep: Trying suspend
+[  445.802694] Freezing user space processes ... freeze 1!!!!!!!!!!!!!!!!!!!!
+[  445.826364] (elapsed 0.01 seconds) done.
+[  445.830302] Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+[  445.848995] Suspending console(s) (use no_console_suspend to debug)

@@ -1,0 +1,195 @@
+{
+  "room_name": "Modos - General",
+  "room_creator": "alex-soto",
+  "topic": "",
+  "export_date": "3/6/2024",
+  "exported_by": "Szybet",
+  "messages": [
+    {
+      "content": {
+        "body": "Oh, Inkbox looks great! Thank you for sharing. I’m going to dig deeper and try it out. Will also share it out with Michael.\n\nYeah, we recently applied for a second NLnet grant to focus on software still waiting to hear back. ",
+        "format": "org.matrix.custom.html",
+        "formatted_body": "<p>Oh, Inkbox looks great! Thank you for sharing. I’m going to dig deeper and try it out. Will also share it out with Michael.</p>\n<p>Yeah, we recently applied for a second NLnet grant to focus on software still waiting to hear back.</p>",
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709749179276,
+      "sender": "@alex-a-soto:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 1265568
+      },
+      "event_id": "$YY3fs3b-ristn_hDvIgfMzxTlbtJX9R9-XUKlF52QYY",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "InkBox is not yet ready for a commercial product or anything like that, but after this summer it should be as I finish a new reader / change the UI a bit / rewrite some bad code / maybe redo the xorg implementation\n\nit has potential for sure and as I concluded we were looking to build an open source ereader but as it seems, it's too hard for only a few people to do",
+        "m.mentions": {},
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709749355647,
+      "sender": "@szybet:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 1089197,
+        "transaction_id": "m1709749355429.2"
+      },
+      "event_id": "$a4EaTaeo_rxYfLVbMWJClmYgWSfxrX6rOcQkm2ueFjM",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "That’s good to hear! Thank you for your hard work. Out of curiosity, is there any chance of Wayland support in the future? \n\nAlso, if we decide to work towards the tablet, there are some changes we would have to make to our controller that could then possibly be used for an open-source ereader in the future.",
+        "format": "org.matrix.custom.html",
+        "formatted_body": "<p>That’s good to hear! Thank you for your hard work. Out of curiosity, is there any chance of Wayland support in the future?</p>\n<p>Also, if we decide to work towards the tablet, there are some changes we would have to make to our controller that could then possibly be used for an open-source ereader in the future.</p>",
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709749687960,
+      "sender": "@alex-a-soto:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 756884
+      },
+      "event_id": "$rlCy6JfHgggNM3MpQmB0atKicRQU9prAMMnQvX8IY14",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "Well, maybe\n\nfirst we are limited by old kernels, so we would first need to split the OS into 2: Old and new GLIBC and then we can think of wayland. it is possible for sure\nsecondly, we mostly use Qt and a special platform plugin to output things to the screen ( That's what kobo ereaders do too, it's very efficient and needed on devices with 255 Mb of ram ). Xorg has some ghosting and many other problems so we avoid it, it's considered experimental. Maybe wayland would perform better\n\ncool!",
+        "m.mentions": {},
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709749856336,
+      "sender": "@szybet:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 588508,
+        "transaction_id": "m1709749856123.7"
+      },
+      "event_id": "$wDFulFGqfJe0Usr4ipgimNATnhkq6x9njgdTmUK5AQw",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "Oh you have experience with NLnet grants... Do you think inkbox has any chance?",
+        "m.mentions": {},
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709749903477,
+      "sender": "@szybet:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 541367,
+        "transaction_id": "m1709749903325.8"
+      },
+      "event_id": "$U_q3IWutyyOVG5WJspXFRDGnnALz3yBU68XrxD6sWAo",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "> <@szybet:matrix.org> Well, maybe\n> \n> first we are limited by old kernels, so we would first need to split the OS into 2: Old and new GLIBC and then we can think of wayland. it is possible for sure\n> secondly, we mostly use Qt and a special platform plugin to output things to the screen ( That's what kobo ereaders do too, it's very efficient and needed on devices with 255 Mb of ram ). Xorg has some ghosting and many other problems so we avoid it, it's considered experimental. Maybe wayland would perform better\n> \n> cool!\n\nI see. Thank you for the write-up. Yeah, the reason I ask is that in the future, I’d like to work with people at Sourcehut in the development of Wayland protocols that work with our display controller and create “native e-ink applications.” So, while we’re still far from due to capital restraints, I’m on the lookout for Wayland-based applications that could be a good fit to eink devices.",
+        "format": "org.matrix.custom.html",
+        "formatted_body": "<mx-reply><blockquote><a href=\"https://matrix.to/#/!XFGztBLcitZfotWttc%3Amatrix.org/%24wDFulFGqfJe0Usr4ipgimNATnhkq6x9njgdTmUK5AQw\">In reply to</a> <a href=\"https://matrix.to/#/@szybet:matrix.org\">@szybet:matrix.org</a><br>Well, maybe\n\nfirst we are limited by old kernels, so we would first need to split the OS into 2: Old and new GLIBC and then we can think of wayland. it is possible for sure\nsecondly, we mostly use Qt and a special platform plugin to output things to the screen ( That's what kobo ereaders do too, it's very efficient and needed on devices with 255 Mb of ram ). Xorg has some ghosting and many other problems so we avoid it, it's considered experimental. Maybe wayland would perform better\n\ncool!</blockquote></mx-reply>I see. Thank you for the write-up. Yeah, the reason I ask is that in the future, I’d like to work with people at Sourcehut in the development of Wayland protocols that work with our display controller and create “native e-ink applications.” So, while we’re still far from due to capital restraints, I’m on the lookout for Wayland-based applications that could be a good fit to eink devices.",
+        "m.relates_to": {
+          "m.in_reply_to": {
+            "event_id": "$wDFulFGqfJe0Usr4ipgimNATnhkq6x9njgdTmUK5AQw"
+          }
+        },
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709750117320,
+      "sender": "@alex-a-soto:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 327524
+      },
+      "event_id": "$Baxv7xx7-1fZW0QD6sIk3rEXEJGs22_xPp_21sHg6_o",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "this would work just as the platform plugin in some form, so it could work good, sounds great!",
+        "m.mentions": {},
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709750174577,
+      "sender": "@szybet:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 270267,
+        "transaction_id": "m1709750174484.9"
+      },
+      "event_id": "$unn57Au7Lv-Hn9-padmQu5JFtwdEdWFDbYEhxqZzBaU",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "> <@szybet:matrix.org> Oh you have experience with NLnet grants... Do you think inkbox has any chance?\n\nI have some experience with NLnet grant, happy to talk more about my experience and what the process looked like for us, alex@modos.tech",
+        "format": "org.matrix.custom.html",
+        "formatted_body": "<mx-reply><blockquote><a href=\"https://matrix.to/#/!XFGztBLcitZfotWttc%3Amatrix.org/%24U_q3IWutyyOVG5WJspXFRDGnnALz3yBU68XrxD6sWAo\">In reply to</a> <a href=\"https://matrix.to/#/@szybet:matrix.org\">@szybet:matrix.org</a><br>Oh you have experience with NLnet grants... Do you think inkbox has any chance?</blockquote></mx-reply>I have some experience with NLnet grant, happy to talk more about my experience and what the process looked like for us, alex@modos.tech",
+        "m.relates_to": {
+          "m.in_reply_to": {
+            "event_id": "$U_q3IWutyyOVG5WJspXFRDGnnALz3yBU68XrxD6sWAo"
+          }
+        },
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709750229883,
+      "sender": "@alex-a-soto:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 214961
+      },
+      "event_id": "$DUFMLmButZmo5Y4StBH0hMs6Sa5mMFMMovRJQ_Jzr1M",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "> <@alex-a-soto:matrix.org> I have some experience with NLnet grant, happy to talk more about my experience and what the process looked like for us, alex@modos.tech\n\nok cool, thanks. We will reach out some day",
+        "format": "org.matrix.custom.html",
+        "formatted_body": "<mx-reply><blockquote><a href=\"https://matrix.to/#/!XFGztBLcitZfotWttc:matrix.org/$DUFMLmButZmo5Y4StBH0hMs6Sa5mMFMMovRJQ_Jzr1M?via=matrix.org&via=alistair23.me&via=beater.town\">In reply to</a> <a href=\"https://matrix.to/#/@alex-a-soto:matrix.org\">@alex-a-soto:matrix.org</a><br>I have some experience with NLnet grant, happy to talk more about my experience and what the process looked like for us, alex@modos.tech</blockquote></mx-reply>ok cool, thanks. We will reach out some day",
+        "m.mentions": {
+          "user_ids": [
+            "@alex-a-soto:matrix.org"
+          ]
+        },
+        "m.relates_to": {
+          "m.in_reply_to": {
+            "event_id": "$DUFMLmButZmo5Y4StBH0hMs6Sa5mMFMMovRJQ_Jzr1M"
+          }
+        },
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709750257237,
+      "sender": "@szybet:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 187607,
+        "transaction_id": "m1709750257083.12"
+      },
+      "event_id": "$g6A6kHtEStdc7MSagz4VGAuMEL3rCOF6JqweT_XeUEg",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    },
+    {
+      "content": {
+        "body": "> <@szybet:matrix.org> ok cool, thanks. We will reach out some day\n\nYeah, please do would love to support in what I can. ",
+        "format": "org.matrix.custom.html",
+        "formatted_body": "<mx-reply><blockquote><a href=\"https://matrix.to/#/!XFGztBLcitZfotWttc%3Amatrix.org/%24g6A6kHtEStdc7MSagz4VGAuMEL3rCOF6JqweT_XeUEg\">In reply to</a> <a href=\"https://matrix.to/#/@szybet:matrix.org\">@szybet:matrix.org</a><br>ok cool, thanks. We will reach out some day</blockquote></mx-reply>Yeah, please do would love to support in what I can.",
+        "m.relates_to": {
+          "m.in_reply_to": {
+            "event_id": "$g6A6kHtEStdc7MSagz4VGAuMEL3rCOF6JqweT_XeUEg"
+          }
+        },
+        "msgtype": "m.text"
+      },
+      "origin_server_ts": 1709750292954,
+      "sender": "@alex-a-soto:matrix.org",
+      "type": "m.room.message",
+      "unsigned": {
+        "age": 151890
+      },
+      "event_id": "$s9-xTua_GY8VGUBHpsu7wLKcfehtXuP9Knf53aWT1Lc",
+      "room_id": "!XFGztBLcitZfotWttc:matrix.org"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$ pmbootstrap sideload linux-kobo-clara-mainline
+[22:13:23] Copying packages to dk-x86@172.16.42.1
+dk-x86@172.16.42.1's password: 
+[22:13:29] Installing packages at dk-x86@172.16.42.1
+dk-x86@172.16.42.1's password: 
+[sudo] password for dk-x86@kobo-nia: 
+fetch http://mirror.postmarketos.org/postmarketos/master/armv7/APKINDEX.tar.gz
+WARNING: updating http://mirror.postmarketos.org/postmarketos/master: temporary error (try again later)
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/armv7/APKINDEX.tar.gz
+WARNING: updating http://dl-cdn.alpinelinux.org/alpine/edge/main: temporary error (try again later)
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/community/armv7/APKINDEX.tar.gz
+WARNING: updating http://dl-cdn.alpinelinux.org/alpine/edge/community: temporary error (try again later)
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/testing/armv7/APKINDEX.tar.gz
+WARNING: updating http://dl-cdn.alpinelinux.org/alpine/edge/testing: temporary error (try again later)
+The following packages will be upgraded:
+  linux-kobo-clara-mainline
+After this operation, 1440 KiB of disk space will be freed.
+Do you want to continue [Y/n]? y
+(1/1) Upgrading linux-kobo-clara-mainline (6.3.0-r4 -> 6.3.0_p20230613221058-r0)
+Executing busybox-1.36.0-r9.trigger
+Executing postmarketos-mkinitfs-2.1.1-r0.trigger
+22:14:20.490904 Generating for kernel version: 6.3.0
+22:14:20.493832 Output directory: /boot
+22:14:20.495789 Unknown or no compression format set, using gzip
+22:14:20.497041 == Generating initramfs ==
+22:14:20.498331 - Using compression format gzip with level "default"
+22:14:20.498768 - Searching for directories specified in /usr/share/mkinitfs/dirs
+22:14:20.507077 -- Creating directories from: /usr/share/mkinitfs/dirs/00-initramfs-base.dirs
+22:14:20.517634 - Searching for directories specified in /etc/mkinitfs/dirs
+22:14:20.524888 - Searching for file lists from /usr/share/mkinitfs/files
+22:14:20.530194 -- Including files from: /usr/share/mkinitfs/files/00-initramfs-base.files
+22:14:20.621492 -- Including files from: /usr/share/mkinitfs/files/01-kobo-epdc-extractor.files
+22:14:20.634269 -- Including files from: /usr/share/mkinitfs/files/30-postmarketos-bootsplash.files
+22:14:20.687720 - Searching for file lists from /etc/mkinitfs/files
+22:14:20.696336 - Searching for hook scripts from /usr/share/mkinitfs/hooks
+22:14:20.705008 -- Including script: /usr/share/mkinitfs/hooks/80-start-epd.sh
+22:14:20.708244 - Searching for hook scripts from /etc/mkinitfs/hooks
+22:14:20.719840 - Searching for kernel modules from /usr/share/mkinitfs/modules
+22:14:20.730355 -- Including modules from: /usr/share/mkinitfs/modules/00-default.modules
+22:14:20.790679 - Searching for kernel modules from /etc/mkinitfs/modules
+22:14:20.811385 - Writing and verifying archive:  initramfs
+22:14:25.983103 initramfs completed in: 5.48s
+22:14:25.984337 Unknown or no compression format set, using gzip
+22:14:25.985968 == Generating initramfs-extra ==
+22:14:25.987400 - Using compression format gzip with level "default"
+22:14:25.988820 - Searching for file lists from /usr/share/mkinitfs/files-extra
+22:14:25.996451 -- Including files from: /usr/share/mkinitfs/files-extra/00-initramfs-extra-base.files
+22:14:26.198269 - Searching for file lists from /etc/mkinitfs/files-extra
+22:14:26.202475 - Searching for hook scripts from /usr/share/mkinitfs/hooks-extra
+22:14:26.206783 - Searching for hook scripts from /etc/mkinitfs/hooks-extra
+22:14:26.213233 - Searching for kernel modules from /usr/share/mkinitfs/modules-extra
+22:14:26.215701 -- Unable to find dir, skipping...
+22:14:26.220640 - Searching for kernel modules from /etc/mkinitfs/modules-extra
+22:14:26.222899 -- Unable to find dir, skipping...
+22:14:26.232233 - Writing and verifying archive:  initramfs-extra
+22:14:30.225896 initramfs-extra completed in: 4.24s
+22:14:30.227393 == Using boot-deploy to finalize/install files ==
+==> kernel: device-tree blob operations
+==> initramfs: creating uInitrd
+Image Name:   uInitrd
+Created:      Tue Jun 13 22:14:31 2023
+Image Type:   ARM Linux RAMDisk Image (uncompressed)
+Data Size:    2727650 Bytes = 2663.72 KiB = 2.60 MiB
+Load Address: 00000000
+Entry Point:  00000000
+==> kernel: creating uImage
+Image Name:   postmarketOS
+Created:      Tue Jun 13 22:14:32 2023
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    6105112 Bytes = 5962.02 KiB = 5.82 MiB
+Load Address: 80008000
+Entry Point:  80008000
+==> Checking free space at /boot
+... OK!
+==> Installing: /boot/initramfs
+==> Installing: /boot/initramfs-extra
+==> Installing: /boot/imx6ull-kobo-nia.dtb
+==> Installing: /boot/uImage
+==> Installing: /boot/uInitrd
+22:14:36.639868 boot-deploy completed in: 6.41s
+22:14:36.676601 mkinitfs completed in: 16.19s
+OK: 950 MiB in 628 packages
+Connection to 172.16.42.1 closed.
+[22:14:41] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[22:14:41] DONE!
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$ 
+

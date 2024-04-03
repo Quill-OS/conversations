@@ -1,0 +1,50 @@
+kobo:/tmp# DEBUG=true LD_LIBRARY_PATH=. ./inkbox-power-daemon 
+Debug mode is activated
+Reading variables
+Running on: n437
+couldn't read config file: /opt/config/12-lockscreen/config
+lockscreen is: none
+couldn't read config file: /opt/config/12-lockscreen/config
+Loaded FBInk version: v1.24.0-176-g5ecd240 for Kobo
+Starting monitoring events
+Input device name: gpio-keys
+Input device bus 25 vendor: 1 product: 1
+Input event received: EV_KEYKEY_POWER 1
+Sending message to sleep
+Watchdog event received
+Launching prepareSleep
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+[FBInk] Detected a Kobo Glo HD (371 => Alyssum @ Mark 6)
+Input event received: EV_SYNSYN_REPORT 0
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 300 dpi
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Inited fbink in screenshotFbink
+screenshot done
+Input event received: EV_KEYKEY_POWER 0
+Input event received: EV_SYNSYN_REPORT 0
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Font `/etc/init.d/splash.d/fonts/resources/inter-b.ttf` loaded for style 'Regular'
+Writed: "true" to: /tmp/sleep_standby
+Writed: "true" to: /tmp/sleep_mode
+Could not open file
+kobo:/tmp#

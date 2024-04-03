@@ -1,0 +1,205 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #3-postmarketOS Tue Apr 25 18:36:24 UTC 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Kobo Nia
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] cma: Reserved 64 MiB at 0x8a400000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: console=ttymxc0,115200 PMOS_NO_OUTPUT_REDIRECT
+[    0.000000] Unknown kernel command line parameters "PMOS_NO_OUTPUT_REDIRECT", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 178888K/262144K available (8192K kernel code, 1051K rwdata, 2220K rodata, 1024K init, 351K bss, 17720K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000002] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000039] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.002446] Console: colour dummy device 80x30
+[    0.002518] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.002553] pid_max: default: 32768 minimum: 301
+[    0.002906] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.002944] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.004136] CPU: Testing write buffer coherency: ok
+[    0.005879] Setting up static identity map for 0x80100000 - 0x80100060
+[    0.006977] devtmpfs: initialized
+[    0.019089] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.019530] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.019574] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.024019] pinctrl core: initialized pinctrl subsystem
+[    0.024778] regulator-dummy: no parameters, enabled
+[    0.027306] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.029076] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.031098] thermal_sys: Registered thermal governor 'step_wise'
+[    0.031161] cpuidle: using governor menu
+[    0.031260] CPU identified as i.MX6ULL, silicon rev 1.1
+[    0.043035] vdd3p0: 2625 <--> 3400 mV at 3000 mV, disabled
+[    0.043402] anatop_regulator 20c8000.anatop:regulator-3p0: Looking up vin-supply from device tree
+[    0.043435] anatop_regulator 20c8000.anatop:regulator-3p0: Looking up vin-supply property in node /soc/bus@2000000/anatop@20c8000/regulator-3p0 failed
+[    0.043487] vdd3p0: supplied by regulator-dummy
+[    0.044225] anatop_regulator 20c8000.anatop:regulator-vddcore: Looking up vin-supply from device tree
+[    0.044258] anatop_regulator 20c8000.anatop:regulator-vddcore: Looking up vin-supply property in node /soc/bus@2000000/anatop@20c8000/regulator-vddcore failed
+[    0.044310] cpu: supplied by regulator-dummy
+[    0.044329] regulator-dummy: could not add device link regulator.2: -ENOENT
+[    0.044479] cpu: 725 <--> 1450 mV at 1150 mV, enabled
+[    0.045414] anatop_regulator 20c8000.anatop:regulator-vddsoc: Looking up vin-supply from device tree
+[    0.045449] anatop_regulator 20c8000.anatop:regulator-vddsoc: Looking up vin-supply property in node /soc/bus@2000000/anatop@20c8000/regulator-vddsoc failed
+[    0.045502] vddsoc: supplied by regulator-dummy
+[    0.045522] regulator-dummy: could not add device link regulator.3: -ENOENT
+[    0.045676] vddsoc: 725 <--> 1450 mV at 1175 mV, enabled
+[    0.060774] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.060815] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.062348] imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+[    0.063019] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    0.092876] vref-3v3: 3300 mV, enabled
+[    0.093239] reg-fixed-voltage vref3v3-regulator: vref-3v3 supplying 3300000uV
+[    0.093683] SD1_SPWR: 3000 mV, disabled
+[    0.093992] reg-fixed-voltage wifi-regulator: SD1_SPWR supplying 3000000uV
+[    0.095139] usbcore: registered new interface driver usbfs
+[    0.095249] usbcore: registered new interface driver hub
+[    0.095355] usbcore: registered new device driver usb
+[    0.099166] i2c i2c-0: IMX I2C adapter registered
+[    0.101470] i2c i2c-3: IMX I2C adapter registered
+[    0.102005] pps_core: LinuxPPS API ver. 1 registered
+[    0.102022] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.102069] PTP clock support registered
+[    0.105893] clocksource: Switched to clocksource mxc_timer1
+[    0.106367] VFS: Disk quotas dquot_6.6.0
+[    0.106451] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.126932] NET: Registered PF_INET protocol family
+[    0.127459] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.129309] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.129383] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.129416] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.129487] TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.129573] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.129745] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.129799] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.130117] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.133078] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    0.136665] Trying to unpack rootfs image as initramfs...
+[    0.147271] Initialise system trusted keyrings
+[    0.147792] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    0.168715] fuse: init (API version 7.37)
+[    0.169683] Key type asymmetric registered
+[    0.169708] Asymmetric key parser 'x509' registered
+[    0.169932] io scheduler mq-deadline registered
+[    0.169950] io scheduler kyber registered
+[    0.189611] mxs-dma 1804000.dma-apbh: initialized
+[    0.199567] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+[    0.547442] Freeing initrd memory: 1472K
+[    0.560226] imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+[    0.560275] imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+[    0.804767] printk: console [ttymxc0] enabled
+[    0.810157] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+[    0.852400] imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+[    0.859114] random: crng init done
+[    0.889926] brd: module loaded
+[    0.900901] loop: module loaded
+[    0.905641] DCDC1: 1400 mV, enabled
+[    0.907710] DCDC2: at 3300 mV, enabled
+[    0.909656] DCDC3: at 3300 mV, enabled
+[    0.911636] DCDC4: 1200 mV, enabled
+[    0.913585] DCDC5: 1800 mV, enabled
+[    0.915507] LDO1: at 3300 mV, enabled
+[    0.916762] LDO2: at 3300 mV, enabled
+[    0.917971] LDO3: at 1200 mV, enabled
+[    0.919187] LDO4: at 1200 mV, enabled
+[    0.920412] LDO5: at 3300 mV, enabled
+[    0.921664] LDO6: 600 mV, enabled
+[    0.922931] LDO7: at 3300 mV, enabled
+[    0.924177] LDO8: 1800 mV, enabled
+[    0.926133] LDO9: at 1200 mV, enabled
+[    0.927354] LDO10: at 1400 mV, enabled
+[    0.928591] LDORTC1: at 3300 mV, enabled
+[    0.930388] LDORTC2: at 3300 mV, enabled
+[    0.939935] i2c_dev: i2c /dev entries driver
+[    0.948911] sdhci: Secure Digital Host Controller Interface driver
+[    0.953822] sdhci: Copyright(c) Pierre Ossman
+[    0.956956] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.964696] sdhci-esdhc-imx 2190000.mmc: Looking up vmmc-supply from device tree
+[    0.965077] sdhci-esdhc-imx 2190000.mmc: Looking up vqmmc-supply from device tree
+[    0.965117] sdhci-esdhc-imx 2190000.mmc: Looking up vqmmc-supply property in node /soc/bus@2100000/mmc@2190000 failed
+[    0.971184] sdhci-esdhc-imx 2194000.mmc: Looking up vmmc-supply from device tree
+[    0.971236] sdhci-esdhc-imx 2194000.mmc: Looking up vmmc-supply property in node /soc/bus@2100000/mmc@2194000 failed
+[    0.971326] sdhci-esdhc-imx 2194000.mmc: Looking up vqmmc-supply from device tree
+[    0.971353] sdhci-esdhc-imx 2194000.mmc: Looking up vqmmc-supply property in node /soc/bus@2100000/mmc@2194000 failed
+[    0.974828] usbcore: registered new interface driver usbhid
+[    0.979227] usbhid: USB HID core driver
+[    0.987800] NET: Registered PF_INET6 protocol family
+[    0.993527] Segment Routing with IPv6
+[    0.996286] In-situ OAM (IOAM) with IPv6
+[    0.999245] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.005222] NET: Registered PF_PACKET protocol family
+[    1.009209] mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+[    1.015020] mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+[    1.022258] cpu cpu0: Looking up arm-supply from device tree
+[    1.022622] cpu cpu0: Looking up pu-supply from device tree
+[    1.022661] cpu cpu0: Looking up pu-supply property in node /cpus/cpu@0 failed
+[    1.022739] cpu cpu0: Looking up soc-supply from device tree
+[    1.025105] Registering SWP/SWPB emulation handler
+[    1.030226] Loading compiled-in X.509 certificates
+[    1.051622] imx_usb 2184000.usb: No over current polarity defined
+[    1.056650] imx_usb 2184000.usb: Looking up vbus-supply from device tree
+[    1.056671] imx_usb 2184000.usb: Looking up vbus-supply property in node /soc/bus@2100000/usb@2184000 failed
+[    1.081956] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.096312] mmc0: new high speed SDHC card at address aaaa
+[    1.101645] mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+[    1.113338]  mmcblk0: p1 p2
+[    1.232621] imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+[    1.244367] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    1.255440] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    1.261242] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    1.274150] gpio-keys gpio-keys: Error applying setting, reverse things back
+[    1.281345] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.291708] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.297568] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.306654] Freeing unused kernel image (initmem) memory: 1024K
+[    1.311346] cfg80211: failed to load regulatory.db
+[    1.315115] Run /init as init process
+[    1.317513]   with arguments:
+[    1.317520]     /init
+[    1.317527]     PMOS_NO_OUTPUT_REDIRECT
+[    1.317532]   with environment:
+[    1.317538]     HOME=/
+[    1.317543]     TERM=linux
+[    1.916453] using random self ethernet address
+[    1.921263] using random host ethernet address
+[    1.953648] usb0: HOST MAC d2:92:15:23:cd:9b
+[    1.956701] usb0: MAC 22:af:98:4c:62:50
+[    2.398243] IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+[    2.432716] EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+[    6.748896] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+[    6.754994] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+[    7.227218] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+[    7.237963] EXT4-fs (mmcblk0p2): recovery complete
+[    7.246714] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: none.
+[    7.271720] EXT4-fs (mmcblk0p1): unmounting filesystem.
+[    7.535181] EXT4-fs (mmcblk0p1): warning: mounting unchecked fs, running e2fsck is recommended
+[    7.554437] EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+[   10.410860] udevd[713]: starting version 3.2.11
+[   10.553965] udevd[713]: starting eudev-3.2.11
+[   11.208330] lm3630a_bl 0-0036: LM3630A backlight register OK.
+[   11.248421] mc: Linux media interface: v0.10
+[   11.275519] rc5t619-rtc rc5t619-rtc: rc5t619 interrupt is disabled
+[   11.282013] videodev: Linux video capture interface: v2.00
+[   11.298693] rc5t619-rtc rc5t619-rtc: registered as rtc0
+[   11.307170] rc5t619-rtc rc5t619-rtc: setting system clock to 2023-04-25T19:41:13 UTC (1682451673)
+[   11.355392] rn5t618-adc rn5t618-adc: get virq failed
+[   11.355421] rn5t618-adc: probe of rn5t618-adc failed with error -22
+[   11.424931] pxp 21cc000.pxp: Device registered as /dev/video0
+[   13.460851] EXT4-fs (mmcblk0p2): re-mounted. Quota mode: none.
+[   21.609132] platform rn5t618-power: deferred probe pending

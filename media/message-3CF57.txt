@@ -1,0 +1,1024 @@
+ming
+[ 2609.381567] PMU2: Watchdog timeout triggered. ===============
+[ 2609.978476] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2611.978571] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2613.978572] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2615.978583] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2617.978563] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2618.695053] PMU : set_current_time2register : second is 1325553514, hour is 368209
+[ 2618.709452] PMU: cc_sum = 34: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2618.709496] PMU: cc_cap_offset= 41: 
+[ 2618.709535] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2618.709588] PMU:STATUS= 6: IBAT= -1: VSYS= 4307000: VBAT= 4083000: DSOC= 10000: RSOC= 9900: cc_delta=19: rrf= 1
+[ 2619.978577] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2621.978564] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2622.098950] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2623.978573] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2624.853863] PMU: cc_sum = 9: cc_cap_res= 3: cc_cap_mas = -1945723192
+[ 2624.853918] PMU: cc_cap_offset= 38: 
+[ 2624.856465] PMU : set_current_time2register : second is 1325553520, hour is 368209
+[ 2624.874037] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2624.874081] PMU: cc_cap_offset= 38: 
+[ 2624.874120] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2624.874174] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4091800: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2625.978571] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2627.978585] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2629.978566] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2631.978551] RTL871X: CurIGValue=73, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2632.068860] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[ 2632.068905] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[ 2633.978796] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[ 2633.978870] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[ 2635.978565] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2635.981234] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=70
+[ 2637.068803] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2637.096802] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2637.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2639.978558] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2640.735723] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2641.378970] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2641.379023] PMU2: Watchdog timeout triggered. ===============
+[ 2641.978577] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2643.978570] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2645.978571] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2647.978572] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2649.978599] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2651.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2653.933839] PMU: cc_sum = 39: cc_cap_res= 13: cc_cap_mas = -1945723192
+[ 2653.933893] PMU: cc_cap_offset= 25: 
+[ 2653.936426] PMU : set_current_time2register : second is 1325553549, hour is 368209
+[ 2653.952937] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2653.952982] PMU: cc_cap_offset= 25: 
+[ 2653.953020] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2653.953073] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4088800: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2653.978581] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 73
+[ 2655.978565] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2657.978565] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2659.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2661.420725] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2661.978561] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2663.978586] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2665.978561] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2667.978566] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 73
+[ 2669.978476] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2671.978567] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2673.376308] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2673.376361] PMU2: Watchdog timeout triggered. ===============
+[ 2673.978556] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2675.978578] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2677.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2679.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2681.978569] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 73
+[ 2682.105528] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2683.013787] PMU: cc_sum = 40: cc_cap_res= 13: cc_cap_mas = -1945723192
+[ 2683.013844] PMU: cc_cap_offset= 12: 
+[ 2683.016099] PMU : set_current_time2register : second is 1325553579, hour is 368209
+[ 2683.032085] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2683.032132] PMU: cc_cap_offset= 12: 
+[ 2683.032172] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2683.032225] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4090000: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2683.978583] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2685.978566] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2687.978579] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2689.978581] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2691.978570] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2692.068858] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[ 2692.068903] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[ 2692.239702] sy7636_get_temperature():temperature = 26,reg=0x1a
+[ 2693.978833] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[ 2693.978908] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[ 2695.978593] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2695.981292] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=71
+[ 2697.068789] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2697.097471] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2697.468901] RTL871X: recv eapol packet
+[ 2697.469938] RTL871X:  ~~~~set sta key:groupkey
+[ 2697.469980] RTL871X: ==> rtw_set_key algorithm(2),keyid(2),key_mask(0)
+[ 2697.470231] RTL871X: send eapol packet
+[ 2697.470859] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[ 2697.473150] RTL871X: set group key camid:5, addr:0c:54:15:1c:2c:8a, kid:2, type:TKIP
+[ 2697.479818] RTL871X: SetHwReg8188F, 6274, RCR= 700760ce
+[ 2697.978581] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2699.978552] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2700.947557] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2701.978565] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2703.978565] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2705.372757] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2705.372789] PMU2: Watchdog timeout triggered. ===============
+[ 2705.978565] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2707.978553] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2709.978575] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2711.978563] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2712.072160] PMU: cc_sum = 39: cc_cap_res= 13: cc_cap_mas = -1945723192
+[ 2712.072216] PMU: cc_cap_offset= -1: 
+[ 2712.074763] PMU : set_current_time2register : second is 1325553608, hour is 368209
+[ 2712.091959] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2712.092001] PMU: cc_cap_offset= -1: 
+[ 2712.092040] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2712.092094] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4090900: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2713.978568] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 74
+[ 2715.978564] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2717.978575] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2719.978567] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2721.632724] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2721.978563] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2723.978564] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2725.978538] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2727.978516] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2729.978474] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2731.978566] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2733.978554] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2735.978578] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2737.369943] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2737.369996] PMU2: Watchdog timeout triggered. ===============
+[ 2737.978570] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2739.978571] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2741.133880] PMU: cc_sum = 33: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2741.133933] PMU: cc_cap_offset= -12: 
+[ 2741.136489] PMU : set_current_time2register : second is 1325553637, hour is 368209
+[ 2741.154152] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2741.154196] PMU: cc_cap_offset= -12: 
+[ 2741.154235] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2741.154287] PMU:STATUS= 6: IBAT= 0: VSYS= 4304000: VBAT= 4083300: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2741.978571] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2742.317698] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2743.978581] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2745.978566] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2747.978577] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2749.978562] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2751.978571] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2752.068386] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[ 2752.068545] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[ 2753.978825] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[ 2753.978902] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[ 2755.978587] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2755.981344] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=70
+[ 2757.068762] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2757.098083] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2757.978567] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2759.978571] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2761.159614] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2761.978590] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2763.978567] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2765.978563] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2767.978554] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2769.367283] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2769.367335] PMU2: Watchdog timeout triggered. ===============
+[ 2769.978578] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2770.263899] PMU: cc_sum = 38: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2770.263953] PMU: cc_cap_offset= -24: 
+[ 2770.266498] PMU : set_current_time2register : second is 1325553666, hour is 368209
+[ 2770.284178] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2770.284221] PMU: cc_cap_offset= -24: 
+[ 2770.284260] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2770.284313] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4092425: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2771.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2773.978564] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2775.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2777.978583] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2779.978568] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2781.844552] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2781.978576] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2783.978564] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2785.978594] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2786.129724] sy7636_get_temperature():temperature = 26,reg=0x1a
+[ 2787.978566] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2789.978475] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2791.978565] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2793.978551] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2795.978564] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2797.978569] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2799.335001] PMU: cc_sum = 40: cc_cap_res= 13: cc_cap_mas = -1945723192
+[ 2799.335031] PMU: cc_cap_offset= -37: 
+[ 2799.337067] PMU : set_current_time2register : second is 1325553695, hour is 368209
+[ 2799.351189] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2799.351211] PMU: cc_cap_offset= -37: 
+[ 2799.351232] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2799.351260] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4089100: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2799.978564] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2801.364570] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2801.364623] PMU2: Watchdog timeout triggered. ===============
+[ 2801.978557] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2802.529648] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2803.978577] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2805.978564] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2807.978562] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2809.978569] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2811.978582] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2812.068606] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[ 2812.068653] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[ 2813.978833] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[ 2813.978909] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[ 2815.978460] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2815.980776] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=71
+[ 2817.068794] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2817.099352] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[ 2817.978563] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2819.978568] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2821.371415] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2821.978565] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2823.978567] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2825.978526] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2827.978518] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2828.375530] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2828.375551] PMU: cc_cap_offset= -48: 
+[ 2828.377225] PMU : set_current_time2register : second is 1325553724, hour is 368209
+[ 2828.388147] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2828.388166] PMU: cc_cap_offset= -48: 
+[ 2828.388178] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2828.388191] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4088800: DSOC= 10000: RSOC= 9800: cc_delta=19: rrf= 1
+[ 2829.978573] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2831.978568] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2832.398664] ntx_power_key_hook():state=1
+[ 2832.400476] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2832.400527] PMU2: PWRON triggered. ===============
+[ 2832.566331] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2832.566353] PMU2: PWRON triggered. ===============
+[ 2832.568481] ntx_power_key_hook():state=0
+[ 2833.361051] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2833.361083] PMU2: Watchdog timeout triggered. ===============
+[ 2833.978523] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 70
+[ 2835.978458] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2836.215626] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[ 2836.219411] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comming
+[ 2836.223383] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0xc4,when interrupt is comming
+[ 2836.226395] PMU:charger_usb_isr
+[ 2836.243423] usb unplugged
+[ 2837.978503] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2839.978571] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 72
+[ 2841.978566] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 73
+[ 2842.056489] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[ 2843.978565] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2845.978656] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 73
+[ 2847.978567] RTL871X: CurIGValue=71, EntryMinUndecoratedSmoothedPWDB = 71
+[ 2849.063844] PM: Syncing filesystems ... done.
+[ 2849.070885] PM: Preparing system for mem sleep
+[ 2849.076158] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[ 2849.077957] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 2849.079279] PM: Entering mem sleep
+[ 2849.080875] RTL871X:  suspend start
+[ 2849.080895] RTL871X: ==> rtw_suspend_common (wake_standby.sh:2779)
+[ 2849.080914] RTL871X: LeaveAllPowerSaveModeDirect.....
+[ 2849.083186] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[ 2849.083209] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[ 2849.084055] RTL871X: rtw_cmd_thread(eth0) stop_req:1, break
+[ 2849.084210] RTL871X: ==> rtw_suspend_wow(eth0) entry....
+[ 2849.084222] RTL871X: wowlan_mode: 1
+[ 2849.084230] RTL871X: wowlan_pno_enable: 0
+[ 2849.084708] RTL871X: rtw_hal_wow_enable, WOWLAN_ENABLE
+[ 2849.084873] RTL871X: rtw_hal_gate_bb: BB gated: 0x16, store TXPAUSE: 0f
+[ 2849.084883] RTL871X: Pause DMA
+[ 2849.085023] RTL871X: RX_DMA_IDLE is true
+[ 2849.085195] RTL871X: 0x0100: ff
+[ 2849.085312] RTL871X: rtw_hal_set_wow_rxff_boundary: wow mode, 0x0116: 0x3e7f
+[ 2849.085418] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[ 2849.085431] RTL871X:  ===> rtl8188f_FirmwareDownload fw: WoWLAN, size: 18768
+[ 2849.085445] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[ 2849.085454] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[ 2849.085462] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[ 2849.085729] RTL871X: _8051Reset8188: Finish
+[ 2849.236104] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0xc0040505
+[ 2849.236571] RTL871X: _8051Reset8188: Finish
+[ 2849.250063] RTL871X: _FWFreeToGo: Polling FW ready OK! (148, 20ms), REG_MCUFWDL:0xc00405c6
+[ 2849.250073] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[ 2849.250083] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 170ms
+[ 2849.250093] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[ 2849.250101] RTL871X: SetFwRelatedForWoWLAN8188f(): Re-Download Firmware Success !!
+[ 2849.250147] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)
+[ 2849.250445] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15
+[ 2849.250467] RTL871X: LocPsPoll: 2
+[ 2849.250478] RTL871X: LocNullData: 3
+[ 2849.250488] RTL871X: LocQosNull: 4
+[ 2849.250502] RTL871X: rtw_get_current_ip_address: 10.42.0.28 ==========
+[ 2849.250510] RTL871X: LocArpRsp: 5
+[ 2849.250528] RTL871X: rtw_get_sec_iv(): StaAddr: 0c 54 15 1c 2c 8a
+[ 2849.250542] RTL871X: rtw_get_sec_iv(): CurrentIV: 3f 00 00 20 00 00 00 00 
+[ 2849.250550] RTL871X: LocRemoteCtrlInfo: 6
+[ 2849.250559] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(7), pktlen(816)
+[ 2849.250723] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen(816), TotalPageNum(7)
+[ 2849.250738] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0
+[ 2849.250891] RTL871X: AOACRsvdPageLoc: RWC=6 ArpRsp=5 NbrAdv=0 GtkRsp=0 GtkInfo=0 ProbeReq=0 NetworkList=0
+[ 2849.251050] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1
+[ 2849.251244] RTL871X: rtw_hal_enable_cpwm2
+[ 2849.251378] RTL871X: Set WOWLan cmd
+[ 2849.251391] RTL871X: +rtw_hal_set_fw_wow_related_cmd()+: enable=1
+[ 2849.251401] RTL871X: rtw_hal_set_wowlan_ctrl_cmd(): enable=1 change_unit=0
+[ 2849.251523] RTL871X: rtw_hal_set_global_info_cmd(): group_alg=2 pairwise_alg=4
+[ 2849.251600] RTL871X: rtw_hal_set_disconnect_decision_cmd(): enable = 1
+[ 2849.251676] RTL871X: rtw_hal_set_keep_alive_cmd(): enable = 1
+[ 2849.251749] RTL871X: rtw_hal_set_remote_wake_ctrl_cmd(): enable=1
+[ 2849.251825] RTL871X: -rtw_hal_set_fw_wow_related_cmd()-
+[ 2849.251893] RTL871X: Loop index: 25 :0x20
+[ 2849.278485] RTL871X: Loop index: 24 :0x20
+[ 2849.308458] RTL871X: Loop index: 23 :0x20
+[ 2849.338456] RTL871X: Loop index: 22 :0x20
+[ 2849.368451] RTL871X: Loop index: 21 :0x20
+[ 2849.398452] RTL871X: Loop index: 20 :0x20
+[ 2849.428452] RTL871X: Loop index: 19 :0x20
+[ 2849.458449] RTL871X: Loop index: 18 :0x20
+[ 2849.488449] RTL871X: Loop index: 17 :0x20
+[ 2849.518450] RTL871X: Loop index: 16 :0x20
+[ 2849.548449] RTL871X: Loop index: 15 :0x26
+[ 2849.578419] RTL871X: rtw_hal_check_wow_ctrl check_type: 1 res: 1 trycnt: 11
+[ 2849.578465] RTL871X: wowlan_wake_reason: 0x00
+[ 2849.578565] RTL871X: rtw_hal_gate_bb: BB release: 0x17, recover TXPAUSE:0f
+[ 2849.578612] RTL871X: rtw_suspend_wow hotspotttssss(0c:54:15:1c:2c:8a), length:13 assoc_ssid.length:13
+[ 2849.578622] RTL871X: rtw_suspend_wow: wowmode suspending
+[ 2849.578635] RTL871X: rtw_suspend_wow(eth0) back to linked/linking union - ch:1, bw:0, offset:0
+[ 2849.581455] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WOWLAN
+[ 2849.581473] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=0
+[ 2849.581742] RTL871X: <== rtw_suspend_wow(eth0) exit....
+[ 2849.581753] RTL871X: rtw suspend success in 500 ms
+[ 2849.581763] RTL871X: <===  rtw_suspend_common return 0.............. in 500ms
+[ 2849.581773] RTL871X: cmd: mmc1:0001:1: suspend: PM flag = 0x0
+[ 2849.581781] RTL871X: mmc1:0001:1: cannot remain alive while host is suspended
+[ 2849.581806] dpm_run_callback(): pm_generic_suspend+0x0/0x30 returns -38
+[ 2849.588482] PM: Device mmc1:0001:1 failed to suspend: error -38
+[ 2849.594412] PM: Some devices failed to suspend, or early wake event detected
+[ 2849.601503] PM: resume of devices complete after 0.008 msecs
+[ 2849.603227] PM: resume devices took 0.000 seconds
+[ 2849.603244] PM: Finishing wakeup.
+[ 2849.603254] Restarting tasks ... done.
+[ 2849.689671] sy7636_get_temperature():temperature = 26,reg=0x1a
+[ 2851.218975] 
+[ 2851.218975] Bus freq set to 24000000 start...
+[ 2851.219247] 
+[ 2851.219247] Bus freq set to 24000000 done...
+[ 2851.594823] 
+[ 2851.594823] Bus freq set to 400000000 start...
+[ 2851.595095] 
+[ 2851.595095] Bus freq set to 400000000 done...
+[ 2853.499031] 
+[ 2853.499031] Bus freq set to 24000000 start...
+[ 2853.499298] 
+[ 2853.499298] Bus freq set to 24000000 done...
+[ 2853.585850] 
+[ 2853.585850] Bus freq set to 400000000 start...
+[ 2853.586154] 
+[ 2853.586154] Bus freq set to 400000000 done...
+[ 2854.539043] 
+[ 2854.539043] Bus freq set to 24000000 start...
+[ 2854.539313] 
+[ 2854.539313] Bus freq set to 24000000 done...
+[ 2854.608605] 
+[ 2854.608605] Bus freq set to 400000000 start...
+[ 2854.609122] 
+[ 2854.609122] Bus freq set to 400000000 done...
+[ 2856.019086] 
+[ 2856.019086] Bus freq set to 24000000 start...
+[ 2856.019365] 
+[ 2856.019365] Bus freq set to 24000000 done...
+[ 2856.035372] 
+[ 2856.035372] Bus freq set to 400000000 start...
+[ 2856.035636] 
+[ 2856.035636] Bus freq set to 400000000 done...
+[ 2857.509164] 
+[ 2857.509164] Bus freq set to 24000000 start...
+[ 2857.509429] 
+[ 2857.509429] Bus freq set to 24000000 done...
+[ 2857.595163] 
+[ 2857.595163] Bus freq set to 400000000 start...
+[ 2857.595426] 
+[ 2857.595426] Bus freq set to 400000000 done...
+[ 2857.624167] PMU : set_current_time2register : second is 1325553754, hour is 368209
+[ 2857.641623] PMU: cc_sum = 1489: cc_cap_res= 96: cc_cap_mas = -1945723192
+[ 2857.641635] PMU: cc_cap_offset= -44: 
+[ 2857.641646] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2857.641659] PMU:STATUS= 3: IBAT= -58: VSYS= 4147000: VBAT= 4139150: DSOC= 9975: RSOC= 9810: cc_delta=19: rrf= 1
+[ 2858.529042] 
+[ 2858.529042] Bus freq set to 24000000 start...
+[ 2858.529325] 
+[ 2858.529325] Bus freq set to 24000000 done...
+[ 2859.095323] 
+[ 2859.095323] Bus freq set to 400000000 start...
+[ 2859.095627] 
+[ 2859.095627] Bus freq set to 400000000 done...
+[ 2860.098961] 
+[ 2860.098961] Bus freq set to 24000000 start...
+[ 2860.099231] 
+[ 2860.099231] Bus freq set to 24000000 done...
+[ 2860.605225] 
+[ 2860.605225] Bus freq set to 400000000 start...
+[ 2860.605510] 
+[ 2860.605510] Bus freq set to 400000000 done...
+[ 2861.613793] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2861.613847] PMU2: Watchdog timeout triggered. ===============
+[ 2861.628986] 
+[ 2861.628986] Bus freq set to 24000000 start...
+[ 2861.629219] 
+[ 2861.629219] Bus freq set to 24000000 done...
+[ 2862.036786] 
+[ 2862.036786] Bus freq set to 400000000 start...
+[ 2862.037059] 
+[ 2862.037059] Bus freq set to 400000000 done...
+[ 2863.509163] 
+[ 2863.509163] Bus freq set to 24000000 start...
+[ 2863.509575] 
+[ 2863.509575] Bus freq set to 24000000 done...
+[ 2863.596480] 
+[ 2863.596480] Bus freq set to 400000000 start...
+[ 2863.596764] 
+[ 2863.596764] Bus freq set to 400000000 done...
+[ 2864.529044] 
+[ 2864.529044] Bus freq set to 24000000 start...
+[ 2864.529322] 
+[ 2864.529322] Bus freq set to 24000000 done...
+[ 2865.095273] 
+[ 2865.095273] Bus freq set to 400000000 start...
+[ 2865.095545] 
+[ 2865.095545] Bus freq set to 400000000 done...
+[ 2866.449145] 
+[ 2866.449145] Bus freq set to 24000000 start...
+[ 2866.449426] 
+[ 2866.449426] Bus freq set to 24000000 done...
+[ 2866.536063] 
+[ 2866.536063] Bus freq set to 400000000 start...
+[ 2866.536355] 
+[ 2866.536355] Bus freq set to 400000000 done...
+[ 2868.019082] 
+[ 2868.019082] Bus freq set to 24000000 start...
+[ 2868.019347] 
+[ 2868.019347] Bus freq set to 24000000 done...
+[ 2868.035090] 
+[ 2868.035090] Bus freq set to 400000000 start...
+[ 2868.035313] 
+[ 2868.035313] Bus freq set to 400000000 done...
+[ 2869.509034] 
+[ 2869.509034] Bus freq set to 24000000 start...
+[ 2869.509668] 
+[ 2869.509668] Bus freq set to 24000000 done...
+[ 2869.596502] 
+[ 2869.596502] Bus freq set to 400000000 start...
+[ 2869.596796] 
+[ 2869.596796] Bus freq set to 400000000 done...
+[ 2870.529034] 
+[ 2870.529034] Bus freq set to 24000000 start...
+[ 2870.529319] 
+[ 2870.529319] Bus freq set to 24000000 done...
+[ 2871.024648] 
+[ 2871.024648] Bus freq set to 400000000 start...
+[ 2871.024928] 
+[ 2871.024928] Bus freq set to 400000000 done...
+[ 2874.448939] 
+[ 2874.448939] Bus freq set to 24000000 start...
+[ 2874.449208] 
+[ 2874.449208] Bus freq set to 24000000 done...
+[ 2876.033217] 
+[ 2876.033217] Bus freq set to 400000000 start...
+[ 2876.033491] 
+[ 2876.033491] Bus freq set to 400000000 done...
+[ 2878.448958] 
+[ 2878.448958] Bus freq set to 24000000 start...
+[ 2878.449249] 
+[ 2878.449249] Bus freq set to 24000000 done...
+[ 2879.092599] 
+[ 2879.092599] Bus freq set to 400000000 start...
+[ 2879.092809] 
+[ 2879.092809] Bus freq set to 400000000 done...
+[ 2880.569104] 
+[ 2880.569104] Bus freq set to 24000000 start...
+[ 2880.569351] 
+[ 2880.569351] Bus freq set to 24000000 done...
+[ 2882.085424] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2882.086003] PMU2: Watchdog timeout triggered. ===============
+[ 2882.104059] 
+[ 2882.104059] Bus freq set to 400000000 start...
+[ 2882.104263] 
+[ 2882.104263] Bus freq set to 400000000 done...
+[ 2883.148971] 
+[ 2883.148971] Bus freq set to 24000000 start...
+[ 2883.149239] 
+[ 2883.149239] Bus freq set to 24000000 done...
+[ 2883.685189] 
+[ 2883.685189] Bus freq set to 400000000 start...
+[ 2883.685471] 
+[ 2883.685471] Bus freq set to 400000000 done...
+[ 2884.569008] 
+[ 2884.569008] Bus freq set to 24000000 start...
+[ 2884.569275] 
+[ 2884.569275] Bus freq set to 24000000 done...
+[ 2885.095246] 
+[ 2885.095246] Bus freq set to 400000000 start...
+[ 2885.095538] 
+[ 2885.095538] Bus freq set to 400000000 done...
+[ 2886.449143] 
+[ 2886.449143] Bus freq set to 24000000 start...
+[ 2886.449428] 
+[ 2886.449428] Bus freq set to 24000000 done...
+[ 2886.536101] 
+[ 2886.536101] Bus freq set to 400000000 start...
+[ 2886.536380] 
+[ 2886.536380] Bus freq set to 400000000 done...
+[ 2887.027212] PMU: cc_sum = 1649: cc_cap_res= 49: cc_cap_mas = -1945723284
+[ 2887.027239] PMU: cc_cap_offset= -93: 
+[ 2887.041228] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723172
+[ 2887.041246] PMU: cc_cap_offset= -93: 
+[ 2887.041268] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is 0, cc_delta_cap_now is 0, last_cc_delta_cap is 0
+[ 2887.041287] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is 0, cc_cap_mas 0
+[ 2887.041319] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 93, dsoc is 9975, capnow is 10000, capzero is 0, delta cc is 0, delta cc ori is 0
+[ 2887.041337] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is 0, offset_mas is -1, value is 0, final value is 0
+[ 2887.043239] PMU : set_current_time2register : second is 1325553801, hour is 368209
+[ 2887.047014] PMU:STATUS= 7: IBAT= -37: VSYS= 4150250: VBAT= 4159300: DSOC= 9975: RSOC= 9810: cc_delta=19: rrf= 1
+[ 2888.019093] 
+[ 2888.019093] Bus freq set to 24000000 start...
+[ 2888.019379] 
+[ 2888.019379] Bus freq set to 24000000 done...
+[ 2888.035353] 
+[ 2888.035353] Bus freq set to 400000000 start...
+[ 2888.035582] 
+[ 2888.035582] Bus freq set to 400000000 done...
+[ 2889.509066] 
+[ 2889.509066] Bus freq set to 24000000 start...
+[ 2889.509671] 
+[ 2889.509671] Bus freq set to 24000000 done...
+[ 2889.596667] 
+[ 2889.596667] Bus freq set to 400000000 start...
+[ 2889.596969] 
+[ 2889.596969] Bus freq set to 400000000 done...
+[ 2890.529028] 
+[ 2890.529028] Bus freq set to 24000000 start...
+[ 2890.529317] 
+[ 2890.529317] Bus freq set to 24000000 done...
+[ 2891.095241] 
+[ 2891.095241] Bus freq set to 400000000 start...
+[ 2891.095510] 
+[ 2891.095510] Bus freq set to 400000000 done...
+[ 2892.449134] 
+[ 2892.449134] Bus freq set to 24000000 start...
+[ 2892.449398] 
+[ 2892.449398] Bus freq set to 24000000 done...
+[ 2892.536125] 
+[ 2892.536125] Bus freq set to 400000000 start...
+[ 2892.536407] 
+[ 2892.536407] Bus freq set to 400000000 done...
+[ 2894.019108] 
+[ 2894.019108] Bus freq set to 24000000 start...
+[ 2894.019386] 
+[ 2894.019386] Bus freq set to 24000000 done...
+[ 2894.035199] 
+[ 2894.035199] Bus freq set to 400000000 start...
+[ 2894.035455] 
+[ 2894.035455] Bus freq set to 400000000 done...
+[ 2895.509043] 
+[ 2895.509043] Bus freq set to 24000000 start...
+[ 2895.509314] 
+[ 2895.509314] Bus freq set to 24000000 done...
+[ 2895.596332] 
+[ 2895.596332] Bus freq set to 400000000 start...
+[ 2895.596630] 
+[ 2895.596630] Bus freq set to 400000000 done...
+[ 2896.529047] 
+[ 2896.529047] Bus freq set to 24000000 start...
+[ 2896.529319] 
+[ 2896.529319] Bus freq set to 24000000 done...
+[ 2897.095109] 
+[ 2897.095109] Bus freq set to 400000000 start...
+[ 2897.095409] 
+[ 2897.095409] Bus freq set to 400000000 done...
+[ 2898.449156] 
+[ 2898.449156] Bus freq set to 24000000 start...
+[ 2898.449432] 
+[ 2898.449432] Bus freq set to 24000000 done...
+[ 2898.536086] 
+[ 2898.536086] Bus freq set to 400000000 start...
+[ 2898.536383] 
+[ 2898.536383] Bus freq set to 400000000 done...
+[ 2900.019110] 
+[ 2900.019110] Bus freq set to 24000000 start...
+[ 2900.019392] 
+[ 2900.019392] Bus freq set to 24000000 done...
+[ 2900.035024] 
+[ 2900.035024] Bus freq set to 400000000 start...
+[ 2900.035252] 
+[ 2900.035252] Bus freq set to 400000000 done...
+[ 2901.509033] 
+[ 2901.509033] Bus freq set to 24000000 start...
+[ 2901.509305] 
+[ 2901.509305] Bus freq set to 24000000 done...
+[ 2901.604052] 
+[ 2901.604052] Bus freq set to 400000000 start...
+[ 2901.604326] 
+[ 2901.604326] Bus freq set to 400000000 done...
+[ 2902.529037] 
+[ 2902.529037] Bus freq set to 24000000 start...
+[ 2902.529324] 
+[ 2902.529324] Bus freq set to 24000000 done...
+[ 2903.097950] 
+[ 2903.097950] Bus freq set to 400000000 start...
+[ 2903.098247] 
+[ 2903.098247] Bus freq set to 400000000 done...
+[ 2904.449008] 
+[ 2904.449008] Bus freq set to 24000000 start...
+[ 2904.449281] 
+[ 2904.449281] Bus freq set to 24000000 done...
+[ 2904.535456] 
+[ 2904.535456] Bus freq set to 400000000 start...
+[ 2904.535746] 
+[ 2904.535746] Bus freq set to 400000000 done...
+[ 2906.019108] 
+[ 2906.019108] Bus freq set to 24000000 start...
+[ 2906.019396] 
+[ 2906.019396] Bus freq set to 24000000 done...
+[ 2906.035355] 
+[ 2906.035355] Bus freq set to 400000000 start...
+[ 2906.035594] 
+[ 2906.035594] Bus freq set to 400000000 done...
+[ 2906.880563] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2906.880617] PMU2: Watchdog timeout triggered. ===============
+[ 2907.019075] 
+[ 2907.019075] Bus freq set to 24000000 start...
+[ 2907.019346] 
+[ 2907.019346] Bus freq set to 24000000 done...
+[ 2907.605852] 
+[ 2907.605852] Bus freq set to 400000000 start...
+[ 2907.606149] 
+[ 2907.606149] Bus freq set to 400000000 done...
+[ 2908.529043] 
+[ 2908.529043] Bus freq set to 24000000 start...
+[ 2908.529316] 
+[ 2908.529316] Bus freq set to 24000000 done...
+[ 2909.095241] 
+[ 2909.095241] Bus freq set to 400000000 start...
+[ 2909.095538] 
+[ 2909.095538] Bus freq set to 400000000 done...
+[ 2911.509038] 
+[ 2911.509038] Bus freq set to 24000000 start...
+[ 2911.509309] 
+[ 2911.509309] Bus freq set to 24000000 done...
+[ 2911.596559] 
+[ 2911.596559] Bus freq set to 400000000 start...
+[ 2911.596838] 
+[ 2911.596838] Bus freq set to 400000000 done...
+[ 2912.529043] 
+[ 2912.529043] Bus freq set to 24000000 start...
+[ 2912.529329] 
+[ 2912.529329] Bus freq set to 24000000 done...
+[ 2913.094538] 
+[ 2913.094538] Bus freq set to 400000000 start...
+[ 2913.094808] 
+[ 2913.094808] Bus freq set to 400000000 done...
+[ 2914.449159] 
+[ 2914.449159] Bus freq set to 24000000 start...
+[ 2914.449431] 
+[ 2914.449431] Bus freq set to 24000000 done...
+[ 2914.536053] 
+[ 2914.536053] Bus freq set to 400000000 start...
+[ 2914.536348] 
+[ 2914.536348] Bus freq set to 400000000 done...
+[ 2916.019084] 
+[ 2916.019084] Bus freq set to 24000000 start...
+[ 2916.019361] 
+[ 2916.019361] Bus freq set to 24000000 done...
+[ 2916.034959] 
+[ 2916.034959] Bus freq set to 400000000 start...
+[ 2916.035184] 
+[ 2916.035184] Bus freq set to 400000000 done...
+[ 2916.059381] PMU: cc_sum = 1539: cc_cap_res= 13: cc_cap_mas = -1945723172
+[ 2916.059409] PMU: cc_cap_offset= -6: 
+[ 2916.059436] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -5, cc_delta_cap_now is -5, last_cc_delta_cap is 0
+[ 2916.059461] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is 0, cc_cap_mas -1539
+[ 2916.059503] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 93, dsoc is 9971, capnow is 10000, capzero is 0, delta cc is -4, delta cc ori is -5
+[ 2916.059528] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -210, offset_mas is -210, value is -465, final value is -4
+[ 2916.061553] PMU : set_current_time2register : second is 1325553838, hour is 368209
+[ 2916.065568] PMU:STATUS= 7: IBAT= -39: VSYS= 4146750: VBAT= 4154400: DSOC= 9971: RSOC= 9810: cc_delta=19: rrf= 1
+[ 2917.509056] 
+[ 2917.509056] Bus freq set to 24000000 start...
+[ 2917.509453] 
+[ 2917.509453] Bus freq set to 24000000 done...
+[ 2917.604053] 
+[ 2917.604053] Bus freq set to 400000000 start...
+[ 2917.604325] 
+[ 2917.604325] Bus freq set to 400000000 done...
+[ 2918.529041] 
+[ 2918.529041] Bus freq set to 24000000 start...
+[ 2918.529315] 
+[ 2918.529315] Bus freq set to 24000000 done...
+[ 2919.095302] 
+[ 2919.095302] Bus freq set to 400000000 start...
+[ 2919.095576] 
+[ 2919.095576] Bus freq set to 400000000 done...
+[ 2920.449148] 
+[ 2920.449148] Bus freq set to 24000000 start...
+[ 2920.449421] 
+[ 2920.449421] Bus freq set to 24000000 done...
+[ 2920.536084] 
+[ 2920.536084] Bus freq set to 400000000 start...
+[ 2920.536387] 
+[ 2920.536387] Bus freq set to 400000000 done...
+[ 2922.019105] 
+[ 2922.019105] Bus freq set to 24000000 start...
+[ 2922.019372] 
+[ 2922.019372] Bus freq set to 24000000 done...
+[ 2922.035065] 
+[ 2922.035065] Bus freq set to 400000000 start...
+[ 2922.035296] 
+[ 2922.035296] Bus freq set to 400000000 done...
+[ 2923.509034] 
+[ 2923.509034] Bus freq set to 24000000 start...
+[ 2923.509306] 
+[ 2923.509306] Bus freq set to 24000000 done...
+[ 2923.596618] 
+[ 2923.596618] Bus freq set to 400000000 start...
+[ 2923.596891] 
+[ 2923.596891] Bus freq set to 400000000 done...
+[ 2924.529038] 
+[ 2924.529038] Bus freq set to 24000000 start...
+[ 2924.529303] 
+[ 2924.529303] Bus freq set to 24000000 done...
+[ 2925.095418] 
+[ 2925.095418] Bus freq set to 400000000 start...
+[ 2925.095700] 
+[ 2925.095700] Bus freq set to 400000000 done...
+[ 2926.449140] 
+[ 2926.449140] Bus freq set to 24000000 start...
+[ 2926.449401] 
+[ 2926.449401] Bus freq set to 24000000 done...
+[ 2926.536148] 
+[ 2926.536148] Bus freq set to 400000000 start...
+[ 2926.536437] 
+[ 2926.536437] Bus freq set to 400000000 done...
+[ 2928.019085] 
+[ 2928.019085] Bus freq set to 24000000 start...
+[ 2928.019356] 
+[ 2928.019356] Bus freq set to 24000000 done...
+[ 2928.034971] 
+[ 2928.034971] Bus freq set to 400000000 start...
+[ 2928.035193] 
+[ 2928.035193] Bus freq set to 400000000 done...
+[ 2929.509040] 
+[ 2929.509040] Bus freq set to 24000000 start...
+[ 2929.509310] 
+[ 2929.509310] Bus freq set to 24000000 done...
+[ 2929.596144] 
+[ 2929.596144] Bus freq set to 400000000 start...
+[ 2929.596440] 
+[ 2929.596440] Bus freq set to 400000000 done...
+[ 2930.529044] 
+[ 2930.529044] Bus freq set to 24000000 start...
+[ 2930.529319] 
+[ 2930.529319] Bus freq set to 24000000 done...
+[ 2930.842629] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2930.843202] PMU2: Watchdog timeout triggered. ===============
+[ 2931.105037] 
+[ 2931.105037] Bus freq set to 400000000 start...
+[ 2931.105321] 
+[ 2931.105321] Bus freq set to 400000000 done...
+[ 2934.448990] 
+[ 2934.448990] Bus freq set to 24000000 start...
+[ 2934.449261] 
+[ 2934.449261] Bus freq set to 24000000 done...
+[ 2936.295304] 
+[ 2936.295304] Bus freq set to 400000000 start...
+[ 2936.295588] 
+[ 2936.295588] Bus freq set to 400000000 done...
+[ 2938.448950] 
+[ 2938.448950] Bus freq set to 24000000 start...
+[ 2938.449225] 
+[ 2938.449225] Bus freq set to 24000000 done...
+[ 2942.085542] 
+[ 2942.085542] Bus freq set to 400000000 start...
+[ 2942.085845] 
+[ 2942.085845] Bus freq set to 400000000 done...
+[ 2942.229580] sy7636_get_temperature():temperature = 25,reg=0x19
+[ 2943.128990] 
+[ 2943.128990] Bus freq set to 24000000 start...
+[ 2943.129260] 
+[ 2943.129260] Bus freq set to 24000000 done...
+[ 2943.665336] 
+[ 2943.665336] Bus freq set to 400000000 start...
+[ 2943.665634] 
+[ 2943.665634] Bus freq set to 400000000 done...
+[ 2944.549059] 
+[ 2944.549059] Bus freq set to 24000000 start...
+[ 2944.549333] 
+[ 2944.549333] Bus freq set to 24000000 done...
+[ 2945.094143] 
+[ 2945.094143] Bus freq set to 400000000 start...
+[ 2945.094433] 
+[ 2945.094433] Bus freq set to 400000000 done...
+[ 2945.109999] PMU: cc_sum = 1642: cc_cap_res= 47: cc_cap_mas = -1945723172
+[ 2945.110017] PMU: cc_cap_offset= -53: 
+[ 2945.110032] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -5, cc_delta_cap_now is -5, last_cc_delta_cap is 0
+[ 2945.110045] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is -210, cc_cap_mas -1642
+[ 2945.110066] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 92, dsoc is 9967, capnow is 10000, capzero is 0, delta cc is -4, delta cc ori is -5
+[ 2945.110079] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -403, offset_mas is -193, value is -460, final value is -4
+[ 2945.111728] PMU : set_current_time2register : second is 1325553886, hour is 368209
+[ 2945.115010] PMU:STATUS= 7: IBAT= -41: VSYS= 4149500: VBAT= 4155025: DSOC= 9967: RSOC= 9810: cc_delta=19: rrf= 1
+[ 2947.509030] 
+[ 2947.509030] Bus freq set to 24000000 start...
+[ 2947.509305] 
+[ 2947.509305] Bus freq set to 24000000 done...
+[ 2947.605036] 
+[ 2947.605036] Bus freq set to 400000000 start...
+[ 2947.605316] 
+[ 2947.605316] Bus freq set to 400000000 done...
+[ 2947.637008] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2947.637027] PMU2: Watchdog timeout triggered. ===============
+[ 2948.529037] 
+[ 2948.529037] Bus freq set to 24000000 start...
+[ 2948.529326] 
+[ 2948.529326] Bus freq set to 24000000 done...
+[ 2949.095293] 
+[ 2949.095293] Bus freq set to 400000000 start...
+[ 2949.095569] 
+[ 2949.095569] Bus freq set to 400000000 done...
+[ 2950.449135] 
+[ 2950.449135] Bus freq set to 24000000 start...
+[ 2950.449419] 
+[ 2950.449419] Bus freq set to 24000000 done...
+[ 2950.536156] 
+[ 2950.536156] Bus freq set to 400000000 start...
+[ 2950.536445] 
+[ 2950.536445] Bus freq set to 400000000 done...
+[ 2952.019099] 
+[ 2952.019099] Bus freq set to 24000000 start...
+[ 2952.019372] 
+[ 2952.019372] Bus freq set to 24000000 done...
+[ 2952.035615] 
+[ 2952.035615] Bus freq set to 400000000 start...
+[ 2952.035877] 
+[ 2952.035877] Bus freq set to 400000000 done...
+[ 2953.509151] 
+[ 2953.509151] Bus freq set to 24000000 start...
+[ 2953.509411] 
+[ 2953.509411] Bus freq set to 24000000 done...
+[ 2953.604130] 
+[ 2953.604130] Bus freq set to 400000000 start...
+[ 2953.604403] 
+[ 2953.604403] Bus freq set to 400000000 done...
+[ 2954.529046] 
+[ 2954.529046] Bus freq set to 24000000 start...
+[ 2954.529330] 
+[ 2954.529330] Bus freq set to 24000000 done...
+[ 2955.095197] 
+[ 2955.095197] Bus freq set to 400000000 start...
+[ 2955.095494] 
+[ 2955.095494] Bus freq set to 400000000 done...
+[ 2956.449149] 
+[ 2956.449149] Bus freq set to 24000000 start...
+[ 2956.449426] 
+[ 2956.449426] Bus freq set to 24000000 done...
+[ 2956.536129] 
+[ 2956.536129] Bus freq set to 400000000 start...
+[ 2956.536430] 
+[ 2956.536430] Bus freq set to 400000000 done...
+[ 2958.019096] 
+[ 2958.019096] Bus freq set to 24000000 start...
+[ 2958.019370] 
+[ 2958.019370] Bus freq set to 24000000 done...
+[ 2958.035396] 
+[ 2958.035396] Bus freq set to 400000000 start...
+[ 2958.035638] 
+[ 2958.035638] Bus freq set to 400000000 done...
+[ 2959.509056] 
+[ 2959.509056] Bus freq set to 24000000 start...
+[ 2959.509344] 
+[ 2959.509344] Bus freq set to 24000000 done...
+[ 2959.596346] 
+[ 2959.596346] Bus freq set to 400000000 start...
+[ 2959.596641] 
+[ 2959.596641] Bus freq set to 400000000 done...
+[ 2960.529038] 
+[ 2960.529038] Bus freq set to 24000000 start...
+[ 2960.529318] 
+[ 2960.529318] Bus freq set to 24000000 done...
+[ 2961.095025] 
+[ 2961.095025] Bus freq set to 400000000 start...
+[ 2961.095318] 
+[ 2961.095318] Bus freq set to 400000000 done...
+[ 2962.449152] 
+[ 2962.449152] Bus freq set to 24000000 start...
+[ 2962.449416] 
+[ 2962.449416] Bus freq set to 24000000 done...
+[ 2962.536041] 
+[ 2962.536041] Bus freq set to 400000000 start...
+[ 2962.536344] 
+[ 2962.536344] Bus freq set to 400000000 done...
+[ 2964.019099] 
+[ 2964.019099] Bus freq set to 24000000 start...
+[ 2964.019386] 
+[ 2964.019386] Bus freq set to 24000000 done...
+[ 2964.035133] 
+[ 2964.035133] Bus freq set to 400000000 start...
+[ 2964.035349] 
+[ 2964.035349] Bus freq set to 400000000 done...
+[ 2965.509032] 
+[ 2965.509032] Bus freq set to 24000000 start...
+[ 2965.509306] 
+[ 2965.509306] Bus freq set to 24000000 done...
+[ 2965.596646] 
+[ 2965.596646] Bus freq set to 400000000 start...
+[ 2965.596939] 
+[ 2965.596939] Bus freq set to 400000000 done...
+[ 2967.019076] 
+[ 2967.019076] Bus freq set to 24000000 start...
+[ 2967.019355] 
+[ 2967.019355] Bus freq set to 24000000 done...
+[ 2967.227184] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2967.227802] PMU2: PWRON triggered. ===============
+[ 2967.235690] ntx_power_key_hook():state=1
+[ 2967.324503] 
+[ 2967.324503] Bus freq set to 400000000 start...
+[ 2967.324801] 
+[ 2967.324801] Bus freq set to 400000000 done...
+[ 2967.395535] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2967.395557] PMU2: PWRON triggered. ===============
+[ 2967.398580] ntx_power_key_hook():state=0
+[ 2968.019082] 
+[ 2968.019082] Bus freq set to 24000000 start...
+[ 2968.019349] 
+[ 2968.019349] Bus freq set to 24000000 done...
+[ 2968.042933] 
+[ 2968.042933] Bus freq set to 400000000 start...
+[ 2968.043208] 
+[ 2968.043208] Bus freq set to 400000000 done...
+[ 2973.509026] 
+[ 2973.509026] Bus freq set to 24000000 start...
+[ 2973.509305] 
+[ 2973.509305] Bus freq set to 24000000 done...
+[ 2973.831835] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2973.832414] PMU2: Watchdog timeout triggered. ===============
+[ 2974.034074] 
+[ 2974.034074] Bus freq set to 400000000 start...
+[ 2974.034344] 
+[ 2974.034344] Bus freq set to 400000000 done...
+[ 2975.028025] PMU: cc_sum = 1731: cc_cap_res= 77: cc_cap_mas = -1945723172
+[ 2975.028047] PMU: cc_cap_offset= -30: 
+[ 2975.028069] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -7, cc_delta_cap_now is -6, last_cc_delta_cap is 0
+[ 2975.028089] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is -1, after temp_cc_delta_cap_mas is -80, cc_cap_mas -1731
+[ 2975.028121] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 92, dsoc is 9961, capnow is 10000, capzero is 0, delta cc is -6, delta cc ori is -7
+[ 2975.028141] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -222, offset_mas is -142, value is -644, final value is -6
+[ 2975.030056] PMU : set_current_time2register : second is 1325553923, hour is 368209
+[ 2975.033837] PMU:STATUS= 7: IBAT= -49: VSYS= 4143500: VBAT= 4151075: DSOC= 9961: RSOC= 9810: cc_delta=19: rrf= 1
+[ 2976.448880] 
+[ 2976.448880] Bus freq set to 24000000 start...
+[ 2976.449121] 
+[ 2976.449121] Bus freq set to 24000000 done...
+[ 2981.628162] PM: Syncing filesystems ... 
+[ 2981.647048] 
+[ 2981.647048] Bus freq set to 400000000 start...
+[ 2981.647295] 
+[ 2981.647295] Bus freq set to 400000000 done...
+[ 2981.648877] done.
+[ 2981.648902] PM: Preparing system for mem sleep
+[ 2981.649666] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[ 2981.651459] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 2981.652786] PM: Entering mem sleep
+[ 2981.654398] RTL871X: rtw_sdio_suspend bInSuspend = 1
+[ 2981.654416] RTL871X: cmd: mmc1:0001:1: suspend: PM flag = 0x0
+[ 2981.654425] RTL871X: mmc1:0001:1: cannot remain alive while host is suspended
+[ 2981.654450] dpm_run_callback(): pm_generic_suspend+0x0/0x30 returns -38
+[ 2981.661240] PM: Device mmc1:0001:1 failed to suspend: error -38
+[ 2981.667176] PM: Some devices failed to suspend, or early wake event detected
+[ 2981.674318] PM: resume of devices complete after 0.007 msecs
+[ 2981.675949] PM: resume devices took 0.000 seconds
+[ 2981.675969] PM: Finishing wakeup.
+[ 2981.675979] Restarting tasks ... done.
+[ 2983.219242] 
+[ 2983.219242] Bus freq set to 24000000 start...
+[ 2983.219513] 
+[ 2983.219513] Bus freq set to 24000000 done...
+[ 2983.604872] 
+[ 2983.604872] Bus freq set to 400000000 start...
+[ 2983.605170] 
+[ 2983.605170] Bus freq set to 400000000 done...
+[ 2985.509043] 
+[ 2985.509043] Bus freq set to 24000000 start...
+[ 2985.509315] 
+[ 2985.509315] Bus freq set to 24000000 done...
+[ 2985.595392] 
+[ 2985.595392] Bus freq set to 400000000 start...
+[ 2985.595687] 
+[ 2985.595687] Bus freq set to 400000000 done...
+[ 2986.529038] 
+[ 2986.529038] Bus freq set to 24000000 start...
+[ 2986.529317] 
+[ 2986.529317] Bus freq set to 24000000 done...
+[ 2986.705647] 
+[ 2986.705647] Bus freq set to 400000000 start...
+[ 2986.705929] 
+[ 2986.705929] Bus freq set to 400000000 done...
+[ 2986.723361] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[ 2986.727102] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comming
+[ 2986.730951] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[ 2986.733862] PMU:charger_usb_isr
+[ 2987.059905] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2987.063665] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x4,when interrupt is comming
+[ 2987.068187] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2987.090295] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+[ 2987.097752] usb plugged 1
+[ 2987.112535] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+[ 2987.275047] g_ether gadget: high-speed config #1: CDC Ethernet (ECM)
+[ 2988.268903] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[ 2991.059577] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2991.059632] PMU2: Watchdog timeout triggered. ===============
+[ 3002.239634] sy7636_get_temperature():temperature = 25,reg=0x19
+[ 3004.083137] PMU: cc_sum = 1608: cc_cap_res= 36: cc_cap_mas = -1921442084
+[ 3004.083191] PMU: cc_cap_offset= 6: 
+[ 3004.083246] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is 4, cc_delta_cap_now is 4, last_cc_delta_cap is 0
+[ 3004.083295] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is -222, cc_cap_mas 1608
+[ 3004.112040] PMU : set_current_time2register : second is 1325553966, hour is 368209
+[ 3004.137781] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1921442104
+[ 3004.137825] PMU: cc_cap_offset= 6: 
+[ 3004.137865] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3004.137918] PMU:STATUS= 3: IBAT= 151: VSYS= 4308500: VBAT= 4110450: DSOC= 9961: RSOC= 9799: cc_delta=19: rrf= 1

@@ -1,0 +1,73 @@
+```
+kobo:/data/onboard# icon_width_divider=2 chroot /kobo /bin/sh -x /mnt/onboard/.adds/inkbox/explore_local_library.sh /mnt/onboard/onboard/Miecz\ przeznaczenia\ \(Saga\ o\ Wied
+źminie,\ 0.7\)\ by\ Andrzej\ Sapkowski\ \(z-lib.org\).epub
++ cat /opt/inkbox_device
++ DEVICE=n306
++ dirname /mnt/onboard/.adds/inkbox/explore_local_library.sh
++ cd /mnt/onboard/.adds/inkbox
++ EXTRACT_COVER=1 LD_LIBRARY_PATH=/lib:system/lib system/bin/epubtool /mnt/onboard/onboard/Miecz przeznaczenia (Saga o Wiedźminie, 0.7) by Andrzej Sapkowski (z-lib.org).epub
++ json={
+            "database":[
+            {
+            "BookID": "1",
+            "BookPath": "/mnt/onboard/onboard/Miecz przeznaczenia (Saga o Wiedźminie, 0.7) by Andrzej Sapkowski (z-lib.org).epub",
+            "CoverPath": "/mnt/onboard/onboard/.thumbnails/3193a972064b272fe8cc4544ee2a595370151204ed49ed0fcb3bc831059978e4",
+            "Author": "Andrzej Sapkowski",
+            "Title": "Miecz Przeznaczenia",
+            "PublicationDate": "2014-11-21"
+        }
++ [ n306 == kt ]
++ system/lib/ld-musl-armhf.so.1 /external_root/opt/bin/fbink/fbink -e
+[FBInk] Unidentified Kobo device code (40)!
++ eval FBINK_VERSION='v1.23.1-34-g3577ce7 for Kobo';viewWidth=758;viewHeight=1024;screenWidth=758;screenHeight=1024;viewHoriOrigin=0;viewVertOrigin=0;viewVertOffset=0;DPI=167;BPP=16;lineLength=1536;FONTW=16;FONTH=16;FONTSIZE_MULT=2;FONTNAME='IBM';glyphWidth=8;glyphHeight=8;MAXCOLS=47;MAXROWS=64;isPerfectFit=0;FBID='mxc_epdc_fb';USER_HZ=100;penFGColor=0;penBGColor=255;deviceName='Unknown!';deviceId=40;deviceCodename='';devicePlatform='';isKoboNonMT=0;ntxBootRota=2;ntxRotaQuirk=0;isNTX16bLandscape=0;currentRota=3;canRotate=0;
++ FBINK_VERSION=v1.23.1-34-g3577ce7 for Kobo
++ viewWidth=758
++ viewHeight=1024
++ screenWidth=758
++ screenHeight=1024
++ viewHoriOrigin=0
++ viewVertOrigin=0
++ viewVertOffset=0
++ DPI=167
++ BPP=16
++ lineLength=1536
++ FONTW=16
++ FONTH=16
++ FONTSIZE_MULT=2
++ FONTNAME=IBM
++ glyphWidth=8
++ glyphHeight=8
++ MAXCOLS=47
++ MAXROWS=64
++ isPerfectFit=0
++ FBID=mxc_epdc_fb
++ USER_HZ=100
++ penFGColor=0
++ penBGColor=255
++ deviceName=Unknown!
++ deviceId=40
++ deviceCodename=
++ devicePlatform=
++ isKoboNonMT=0
++ ntxBootRota=2
++ ntxRotaQuirk=0
++ isNTX16bLandscape=0
++ currentRota=3
++ canRotate=0
++ calculate 758/2
++ awk BEGIN { print 758/2 }
++ result=379
++ printf %.0f\n 379
++ calculate 1024/
++ awk BEGIN { print 1024/ }
+awk: cmd. line:1: Unexpected token
++ result=
++ printf %.0f\n
++ coverSize=379x0
++ cd /mnt/onboard/onboard/.thumbnails
++ [ 3193a972064b272fe8cc4544ee2a595370151204ed49ed0fcb3bc831059978e4.t != * ]
++ tail -c+ grep -q+ echo /mnt/onboard/onboard/.thumbnails/3193a972064b272fe8cc4544ee2a595370151204ed49ed0fcb3bc831059978e4.t
+ 3
+ .t
+/mnt/onboard/.adds/inkbox/explore_local_library.sh: line 1: Illegal number: -2
+```

@@ -1,0 +1,68 @@
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!                         
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!                         
+hwcfg rootfstype : 2                                                            
+hwcfg partition type : 2,bootmode=0                                             
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110t
+Kernel image @ 0x80800000 [ 0x000000 - 0x9fb470 ]                               
+## Flattened Device Tree blob at 83000000                                       
+   Booting using the fdt blob at 0x83000000                                     
+   Using Device Tree in place at 83000000, end 8300cd9a                         
+                                                                                
+Starting kernel ...                                                             
+                                                                                
+[    0.004774] /cpus/cpu@0 missing clock-frequency property                     
+[    0.254212] dt_get_rsens() RSENS dts property 21000000                       
+[    0.255709] bd71827-power bd71827-power: Power-on-reset off                  
+[    0.257075] bd71827-power bd71827-power: bd71827_init_hardware() battery thr0
+[    0.257844] bd71827-power bd71827-power: Temperature = 30                    
+[    0.260516] bd71827-power bd71827-power: Current second 1689539735           
+[    0.260548] bd71827-power bd71827-power: Last power off second 1689521636    
+[    0.260573] bd71827-power bd71827-power: Till HBNT over 15 dsys to relax chek
+[    0.262607] bd71827-power bd71827-power: bd71827_init_hardware() coulomb_cnt2
+[    0.766563] bd71827-power bd71827-power: VM_OCV_3 = 3765000                  
+[    0.767830] bd71827-power bd71827-power: bd71827_init_hardware() sorg = 47, 0
+[    0.770224] bd71827-power bd71827-power: bd71827_init_hardware() CC_CCNTD = 2
+[    0.770253] bd71827-power bd71827-power: bd71827_init_hardware() pwr->soc = 7
+[    0.770281] bd71827-power bd71827-power: bd71827_init_hardware() pwr->clamp_7
+[    1.005478] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!         
+[    1.005522] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!      
+[    3.777295] bd71827-power bd71827-power: bd71827_adjust_coulomb_count(): rel0
+[    3.778471] bd71827-power bd71827-power: soc 473[0.1%]                       
+[    3.781532] bd71827-power bd71827-power: Adjust Coulomb Counter at Relaxed Se
+[    3.781568] bd71827-power bd71827-power: CC_CCNTD = 51576832                 
+[    3.781598] bd71827-power bd71827-power: relaxed_ocv:3786000, bcap:787, soc:2
+[    3.989847] drivers/input/misc/usb_plug.c(56):skip usb_plug_handler() when m!
+[    6.733358] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off alreadyf
+Interface 'lo': flags set to 0001.                                              
+                                                                                
+Linux inkbox #1 SMP PREEMPT Sun Jul 16 18:52:09 CEST 2023 GNU/Linux             
+InkBox OS, kernel build R0ZDahgT, commit 5cdd75e                                
+                                                                                
+Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>              
+ * Checking filesystems ...                                                     
+                                                                                
+e2fsck 1.46.2 (28-Feb-2021)                                                     
+boot: clean, 14/3840 files, 2248/15360 blocks                                   
+e2fsck 1.46.2 (28-Feb-2021)                                                     
+recoveryfs: recovering journal                                                  
+Setting free inodes count to 128001 (was 128005)                                
+Setting free blocks count to 14727 (was 469314)                                 
+recoveryfs: clean, 15/128016 files, 497273/512000 blocks                        
+e2fsck 1.46.2 (28-Feb-2021)                                                     
+rootfs: recovering journal                                                      
+Setting free inodes count to 32753 (was 32757)                                  
+Setting free blocks count to 58678 (was 117189)                                 
+rootfs: clean, 15/32768 files, 72394/131072 blocks                              
+e2fsck 1.46.2 (28-Feb-2021)                                                     
+user: recovering journal                                                        
+Setting free inodes count to 192717 (was 192757)                                
+Setting free blocks count to 190240 (was 739146)                                
+user: clean, 51/192768 files, 579654/769894 blocks                              
+                                                                                
+0+1 records in                                                                  
+0+1 records out                                                                 
+256 bytes (256B) copied, 0.001155 seconds, 216.5KB/s                            
+0+1 records in                                                                  
+0+1 records out                                                                 
+1 bytes (1B) copied, 0.001048 seconds, 954B/s                                   
+(initrd) Hit ENTER to stop auto-boot ... 

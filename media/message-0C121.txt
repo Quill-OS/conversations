@@ -1,0 +1,52 @@
+[  507.358166] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+[  507.366281] pgd = 89dcc000
+[  507.368993] [00000000] *pgd=00000000
+[  507.372592] Internal error: Oops: 5 [#1] PREEMPT SMP ARM
+[  507.377908] Modules linked in: elan_touch_i2c [last unloaded: configfs]
+[  507.384575] CPU: 0 PID: 986 Comm: udevd Not tainted 4.1.15-inkbox-n306a #1
+[  507.391453] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+[  507.397638] task: 89d9c000 ti: 89b1a000 task.ti: 89b1a000
+[  507.403053] PC is at rb_erase+0x1f8/0x374
+[  507.407067] LR is at 0x0
+[  507.409608] pc : [<80213250>]    lr : [<00000000>]    psr: 60000193
+[  507.409608] sp : 89b1be74  ip : 80eefda9  fp : 8fbd03f8
+[  507.421088] r10: 8fbd0650  r9 : 00000001  r8 : 00000000
+[  507.426317] r7 : 8fbd03c0  r6 : 00000002  r5 : 8fbd0404  r4 : 00000000
+[  507.432849] r3 : 80eefda8  r2 : 00000000  r1 : 8fbd0404  r0 : 00000000
+[  507.439383] Flags: nZCv  IRQs off  FIQs on  Mode SVC_32  ISA ARM  Segment user
+[  507.446610] Control: 10c53c7d  Table: 89dcc06a  DAC: 00000015
+[  507.452361] Process udevd (pid: 986, stack limit = 0x89b1a210)
+[  507.458199] Stack: (0x89b1be74 to 0x89b1c000)
+[  507.462563] be60:                                              8fbd0650 8fbd0404 802158d0
+[  507.470749] be80: 00000000 8fbd0650 00000002 8007ff20 8fbd0650 8fbd03f8 8fbd03c0 00000000
+[  507.478934] bea0: 00000001 00000003 8fbd0460 80080098 206ad677 00000076 8fbd03c0 8fbd03c0
+[  507.487119] bec0: 00000000 8008080c 206ad677 00000076 ffffffff 7fffffff 8fbd0498 8fbd04d0
+[  507.495305] bee0: 206ad677 00000076 206ad677 00000076 206ad677 00000076 00000000 00000001
+[  507.503489] bf00: 8c004c60 00000000 00000000 00000010 8c004c00 80ee9a53 54b280f7 800209fc
+[  507.511675] bf20: 80eb8200 8007148c 646a7a51 00000000 8c004c00 8c004c60 80eb8200 00000000
+[  507.519860] bf40: 00000001 89b1bfb0 8c006000 80071584 8c004c00 8c004c60 80eba438 800740b4
+[  507.528045] bf60: 00000010 00000000 00000010 80070b2c 80eadbd4 80070de4 f4a0200c 80eb4768
+[  507.536230] bf80: 89b1bfb0 f4a02000 10c53c7d 00000018 00000001 8000944c 54b21832 80000030
+[  507.544415] bfa0: ffffffff 10c53c7d 10c53c7d 80013504 000003e8 00000000 000003e8 00000000
+[  507.552600] bfc0: 00000000 00000000 646a7a51 00000000 00000000 00000018 00000001 54b280f7
+[  507.560786] bfe0: 7e9a75d8 7e9a75b0 54b2170d 54b21832 80000030 ffffffff 75637554 0a6e616d
+[  507.568985] [<80213250>] (rb_erase) from [<802158d0>] (timerqueue_del+0x30/0x78)
+[  507.576395] [<802158d0>] (timerqueue_del) from [<8007ff20>] (__remove_hrtimer+0x38/0xcc)
+[  507.584498] [<8007ff20>] (__remove_hrtimer) from [<80080098>] (__run_hrtimer+0x30/0xd4)
+[  507.592512] [<80080098>] (__run_hrtimer) from [<8008080c>] (hrtimer_interrupt+0x124/0x294)
+[  507.600791] [<8008080c>] (hrtimer_interrupt) from [<800209fc>] (mxc_timer_interrupt+0x2c/0x34)
+[  507.609418] [<800209fc>] (mxc_timer_interrupt) from [<8007148c>] (handle_irq_event_percpu+0x78/0x134)
+[  507.618651] [<8007148c>] (handle_irq_event_percpu) from [<80071584>] (handle_irq_event+0x3c/0x5c)
+[  507.627535] [<80071584>] (handle_irq_event) from [<800740b4>] (handle_fasteoi_irq+0xe0/0x198)
+[  507.636073] [<800740b4>] (handle_fasteoi_irq) from [<80070b2c>] (generic_handle_irq+0x2c/0x3c)
+[  507.644696] [<80070b2c>] (generic_handle_irq) from [<80070de4>] (__handle_domain_irq+0x7c/0xec)
+[  507.653405] [<80070de4>] (__handle_domain_irq) from [<8000944c>] (gic_handle_irq+0x24/0x5c)
+[  507.661768] [<8000944c>] (gic_handle_irq) from [<80013504>] (__irq_usr+0x44/0x60)
+[  507.669254] Exception stack(0x89b1bfb0 to 0x89b1bff8)
+[  507.674312] bfa0:                                     000003e8 00000000 000003e8 00000000
+[  507.682498] bfc0: 00000000 00000000 646a7a51 00000000 00000000 00000018 00000001 54b280f7
+[  507.690682] bfe0: 7e9a75d8 7e9a75b0 54b2170d 54b21832 80000030 ffffffff
+[  507.697306] Code: e5932004 e1520000 1affffd6 e5932008 (e5920000) 
+[  507.703410] ---[ end trace 3c36147e1c161601 ]---
+[  507.708033] Kernel panic - not syncing: Fatal exception in interrupt
+[  507.714394] ---[ end Kernel panic - not syncing: Fatal exception in interrupt

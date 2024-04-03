@@ -1,0 +1,116 @@
+Starting kernel ...                                                                            
+                                                                                               
+[    0.004774] /cpus/cpu@0 missing clock-frequency property                                    
+[    0.423808] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!                        
+[    0.423851] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!                     
+[    5.564520] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021cf
+[    5.575666] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V9
+[    5.640858] ==== calc_soc_by_voltageMethod E60U22 ====                                      
+[    5.854917] Unable to handle kernel paging request at virtual address e344e700              
+[    5.862155] pgd = 80004000                                                                  
+[    5.864869] [e344e700] *pgd=00000000                                                        
+[    5.868471] Internal error: Oops: 5 [#1] PREEMPT SMP ARM                                    
+[    5.873791] Modules linked in:                                                              
+[    5.876871] CPU: 0 PID: 19 Comm: kworker/0:1 Tainted: G        W       4.1.15 #1            
+[    5.884272] Hardware name: Freescale i.MX6 Ultralite (Device Tree)                          
+[    5.890463] Workqueue: events epdc_firmware_work_func                                       
+[    5.895536] task: 8c15d7c0 ti: 8c192000 task.ti: 8c192000                                   
+[    5.900946] PC is at memcpy+0xc0/0x330                                                      
+[    5.904703] LR is at mxc_epdc_fb_fw_handler+0xa40/0xe2c                                     
+[    5.909939] pc : [<80208720>]    lr : [<8025accc>]    psr: 80000113                         
+[    5.909939] sp : 8c193e5c  ip : 00000000  fp : 8d151000                                     
+[    5.921422] r10: 91000aa2  r9 : 80efeccc  r8 : 000000a2                                     
+[    5.926655] r7 : 91000a00  r6 : 80efec98  r5 : 80efebe4  r4 : 8d150000                      
+[    5.933189] r3 : 5244dc5e  r2 : 80000000  r1 : e344e700  r0 : 00000000                      
+[    5.939725] Flags: Nzcv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment kernel             
+[    5.947042] Control: 10c53c7d  Table: 8000406a  DAC: 00000015                               
+[    5.952795] Process kworker/0:1 (pid: 19, stack limit = 0x8c192210)                         
+[    5.959070] Stack: (0x8c193e5c to 0x8c194000)                                               
+[    5.963436] 3e40:                                                                00000000   
+[    5.971625] 3e60: 8d150000 8025accc 80ef17b4 00000053 8c15d808 80eb0e68 00000070 0000006a   
+[    5.979813] 3e80: 5244dc5e 5244dc5e 8e55c806 6d600870 00000000 00000000 00000000 00000000   
+[    5.988001] 3ea0: 00000000 00000000 5244dc5e 93c6b074 8071962c 8c193ed4 8fbd2380 8d150598   
+[    5.996189] 3ec0: 8d150000 8d1505cc 8fbd5700 00000000 00000000 8c188480 8fbd2380 8025b168   
+[    6.004377] 3ee0: 8d150000 80e87e18 0008e381 91000a00 8c193f24 8056fa1c 8c188480 8d150598   
+[    6.012565] 3f00: 8fbd2380 8004c5c0 8c192000 8fbd2380 00000001 8fbd2380 8c188498 8fbd2394   
+[    6.020753] 3f20: 8c192000 00000008 80eaa5a1 8c188480 8fbd2380 8004c81c 80e74100 8c187ec0   
+[    6.028941] 3f40: 8c188480 00000000 8c187ec0 8c188480 8004c7d0 00000000 00000000 00000000   
+[    6.037128] 3f60: 00000000 800514b0 219c65fc 00000000 97495fc9 8c188480 00000000 00000000   
+[    6.045317] 3f80: 8c193f80 8c193f80 00000000 00000000 8c193f90 8c193f90 8c193fac 8c187ec0   
+[    6.053504] 3fa0: 800513d4 00000000 00000000 8000f4e8 00000000 00000000 00000000 00000000   
+[    6.061692] 3fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000   
+[    6.069880] 3fe0: 00000000 00000000 00000000 00000000 00000013 00000000 d07ad59f 37821ad7   
+[    6.078073] [<80208720>] (memcpy) from [<8025accc>] (mxc_epdc_fb_fw_handler+0xa40/0xe2c)    
+[    6.086179] [<8025accc>] (mxc_epdc_fb_fw_handler) from [<8025b168>] (epdc_firmware_work_fun)
+[    6.095586] [<8025b168>] (epdc_firmware_work_func) from [<8004c5c0>] (process_one_work+0x12)
+[    6.104644] [<8004c5c0>] (process_one_work) from [<8004c81c>] (worker_thread+0x4c/0x480)    
+[    6.112747] [<8004c81c>] (worker_thread) from [<800514b0>] (kthread+0xdc/0xf4)              
+[    6.119983] [<800514b0>] (kthread) from [<8000f4e8>] (ret_from_fork+0x14/0x2c)              
+[    6.127217] Code: e4808004 e480e004 e8bd01e0 e1b02f82 (14d13001)                            
+[    6.133321] ---[ end trace 915e1c71d7fccf85 ]---                                            
+[    6.138181] EPD QOS_WR 0x7, QOS_RD 0x7                                                      
+[    6.142050] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .              
+[    6.149334] fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfee9=>-279 10mV,-2790000 uV          
+[    6.156925] drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,Dis1
+[    6.166864] Unable to handle kernel paging request at virtual address ffffffec              
+[    6.174097] pgd = 80004000                                                                  
+[    6.176810] [ffffffec] *pgd=8fdfd821, *pte=00000000, *ppte=00000000                         
+[    6.183139] Internal error: Oops: 17 [#2] PREEMPT SMP ARM                                   
+[    6.188543] Modules linked in:                                                              
+[    6.191624] CPU: 0 PID: 19 Comm: kworker/0:1 Tainted: G      D W       4.1.15 #1            
+[    6.199024] Hardware name: Freescale i.MX6 Ultralite (Device Tree)                          
+[    6.205219] task: 8c15d7c0 ti: 8c192000 task.ti: 8c192000                                   
+[    6.210633] PC is at kthread_data+0x4/0xc                                                   
+[    6.214652] LR is at wq_worker_sleeping+0xc/0xd0                                            
+[    6.219279] pc : [<800519f0>]    lr : [<8004d384>]    psr: 00000193                         
+[    6.219279] sp : 8c193c30  ip : 00000001  fp : 8c193c6c                                     
+[    6.230761] r10: 00000001  r9 : 00000000  r8 : 8c15da6c                                     
+[    6.235993] r7 : 80e745f8  r6 : 8c15d7c0  r5 : 8fbd2800  r4 : 00000000                      
+[    6.242527] r3 : 00000000  r2 : 00000000  r1 : 00000000  r0 : 8c15d7c0                      
+[    6.249063] Flags: nzcv  IRQs off  FIQs on  Mode SVC_32  ISA ARM  Segment user              
+[    6.256292] Control: 10c53c7d  Table: 8000406a  DAC: 00000015                               
+[    6.262046] Process kworker/0:1 (pid: 19, stack limit = 0x8c192210)                         
+[    6.268320] Stack: (0x8c193c30 to 0x8c194000)                                               
+[    6.272688] 3c20:                                     80e70800 8fbd2800 8c15d7c0 8056fb7c   
+[    6.280875] 3c40: 8c193c54 8fbd2e00 8c15dc38 8fbd2e00 8c192000 8c193a44 00000001 8c04c000   
+[    6.289064] 3c60: 8c193c88 8c15d9e8 8c193c7c 8056fda4 8c15d7c0 8c193a44 80208722 8003ac3c   
+[    6.297251] 3c80: 806f28a8 8c193ca4 8c193c88 8c193c88 80e7793c 80ead29c 80e7793c 8c193e10   
+[    6.305439] 3ca0: 60000193 0000000b 80208724 00000001 80208722 80012b08 8c192210 0000000b   
+[    6.313627] 3cc0: 00000000 00000000 00000000 00000008 806e8630 806e8638 65000000 38303834   
+[    6.321815] 3ce0: 20343030 30383465 34303065 62386520 65313064 31652030 66323062 28203238   
+[    6.330003] 3d00: 31643431 31303033 80002029 8c193d2c 8d151000 e344e700 8c193e10 00000005   
+[    6.338191] 3d20: 80e81630 8c193e10 80efeccc 91000aa2 8d151000 8056c244 80e81630 8001c7cc   
+[    6.346380] 3d40: 80e85904 8006f964 00000a6c 0000071a 800078d0 80004000 e344e700 8001c848   
+[    6.354568] 3d60: 80e77bec 00000005 8001c7dc 80009288 00000000 8056c668 00000000 8c193d8c   
+[    6.362756] 3d80: 00000000 800394fc 806f28a8 d7fedff3 d7fccf84 915e1c71 00000a6c 800b3c50   
+[    6.370944] 3da0: 80eaa63e 00000014 80e74584 00000141 000000a2 800395c4 00000000 91000aa2   
+[    6.379132] 3dc0: 8d151000 800b3c50 00000033 00000001 00000000 8006edb8 00000000 8006f568   
+[    6.387321] 3de0: 00000000 00000000 00000000 00000000 80ef17b4 00000033 80208720 80000113   
+[    6.395509] 3e00: ffffffff 8c193e44 000000a2 800131d8 00000000 e344e700 80000000 5244dc5e   
+[    6.403698] 3e20: 8d150000 80efebe4 80efec98 91000a00 000000a2 80efeccc 91000aa2 8d151000   
+[    6.411886] 3e40: 00000000 8c193e5c 8025accc 80208720 80000113 ffffffff 8d151000 00000000   
+[    6.420074] 3e60: 8d150000 8025accc 80ef17b4 00000053 8c15d808 80eb0e68 00000070 0000006a   
+[    6.428262] 3e80: 5244dc5e 5244dc5e 8e55c806 6d600870 00000000 00000000 00000000 00000000   
+[    6.436450] 3ea0: 00000000 00000000 5244dc5e 93c6b074 8071962c 8c193ed4 8fbd2380 8d150598   
+[    6.444638] 3ec0: 8d150000 8d1505cc 8fbd5700 00000000 00000000 8c188480 8fbd2380 8025b168   
+[    6.452827] 3ee0: 8d150000 80e87e18 0008e381 91000a00 8c193f24 8056fa1c 8c188480 8d150598   
+[    6.461015] 3f00: 8fbd2380 8004c5c0 8c192000 8fbd2380 00000001 8fbd2380 8c188498 8fbd2394   
+[    6.469203] 3f20: 8c192000 00000008 80eaa5a1 8c188480 8fbd2380 8004c81c 80e74100 8c187ec0   
+[    6.477391] 3f40: 8c188480 00000000 8c187ec0 8c188480 8004c7d0 00000000 00000000 00000000   
+[    6.485579] 3f60: 00000000 800514b0 219c65fc 00000000 97495fc9 8c188480 00000000 00000000   
+[    6.493768] 3f80: 8c193f80 8c193f80 00000001 00010001 8c193f90 8c193f90 8c193fac 8c187ec0   
+[    6.501955] 3fa0: 800513d4 00000000 00000000 8000f4e8 00000000 00000000 00000000 00000000   
+[    6.510142] 3fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000   
+[    6.518329] 3fe0: 00000000 00000000 00000000 00000000 00000013 00000000 d07ad59f 37821ad7   
+[    6.526527] [<800519f0>] (kthread_data) from [<8004d384>] (wq_worker_sleeping+0xc/0xd0)     
+[    6.534548] [<8004d384>] (wq_worker_sleeping) from [<8056fb7c>] (__schedule+0x324/0x50c)    
+[    6.542655] [<8056fb7c>] (__schedule) from [<8056fda4>] (schedule+0x40/0x98)                
+[    6.549719] [<8056fda4>] (schedule) from [<8003ac3c>] (do_exit+0x60c/0x95c)                 
+[    6.556699] [<8003ac3c>] (do_exit) from [<80012b08>] (die+0x41c/0x428)                      
+[    6.563243] [<80012b08>] (die) from [<8056c244>] (__do_kernel_fault.part.0+0x64/0x74)       
+[    6.571087] [<8056c244>] (__do_kernel_fault.part.0) from [<8001c7cc>] (do_sect_fault+0x0/0x)
+[    6.579714] [<8001c7cc>] (do_sect_fault) from [<8006f964>] (vprintk_default+0x0/0x28)       
+[    6.587558] [<8006f964>] (vprintk_default) from [<80004000>] (0x80004000)                   
+[    6.594358] Code: e513001c e7e00150 e12fff1e e5903280 (e5130014)                            
+[    6.600462] ---[ end trace 915e1c71d7fccf86 ]---                                            
+[    6.605087] Fixing recursive fault but reboot is needed!

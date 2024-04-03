@@ -1,0 +1,41 @@
+t
+dk@dk-ThinkPad-E560:~$ git clone --recursive https://github.com/Kobo-InkBox/kernel
+Cloning into 'kernel'...
+remote: Enumerating objects: 333114, done.
+remote: Counting objects: 100% (333114/333114), done.
+remote: Compressing objects: 100% (159715/159715), done.
+remote: Total 333114 (delta 165971), reused 333043 (delta 165950), pack-reused 0
+Receiving objects: 100% (333114/333114), 1.04 GiB | 6.02 MiB/s, done.
+Resolving deltas: 100% (165971/165971), done.
+Updating files: 100% (741345/741345), done.
+Submodule 'inkbox-os-init' (https://github.com/Kobo-InkBox/inkbox-os-init) registered for path 'inkbox-os-init'
+Submodule 'kernel/modules/mxc_epdc_fb_damage' (git@github.com:/Kobo-InkBox/mxc_epdc_fb_damage) registered for path 'kernel/modules/mxc_epdc_fb_damage'
+Cloning into '/home/dk/kernel/inkbox-os-init'...
+remote: Enumerating objects: 144, done.        
+remote: Counting objects: 100% (144/144), done.        
+remote: Compressing objects: 100% (95/95), done.        
+remote: Total 144 (delta 81), reused 110 (delta 48), pack-reused 0        
+Receiving objects: 100% (144/144), 53.59 KiB | 1.31 MiB/s, done.
+Resolving deltas: 100% (81/81), done.
+Cloning into '/home/dk/kernel/kernel/modules/mxc_epdc_fb_damage'...
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'git@github.com:/Kobo-InkBox/mxc_epdc_fb_damage' into submodule path '/home/dk/kernel/kernel/modules/mxc_epdc_fb_damage' failed
+Failed to clone 'kernel/modules/mxc_epdc_fb_damage'. Retry scheduled
+Cloning into '/home/dk/kernel/kernel/modules/mxc_epdc_fb_damage'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+fatal: clone of 'git@github.com:/Kobo-InkBox/mxc_epdc_fb_damage' into submodule path '/home/dk/kernel/kernel/modules/mxc_epdc_fb_damage' failed
+Failed to clone 'kernel/modules/mxc_epdc_fb_damage' a second time, aborting
+dk@dk-ThinkPad-E560:~$

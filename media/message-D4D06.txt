@@ -1,0 +1,25 @@
+kobo:~# ls -l /data/onboard/.apps/feathernotes/feathernotes/etc/localtime -l
+-rw-r--r--    1 root     root             0 Jun 26  2022 /data/onboard/.apps/feathernotes/feathernotes/etc/localtime
+kobo:~# ls -l /data/onboard/.apps/feathernotes/feathernotes/usr/share/zoneinfo/
+total 0
+kobo:~# ls -l /data/onboard/.apps/feathernotes/feathernotes/usr/share/zoneinfo/ -a
+total 4
+drwxr-xr-x    1 root     root          4096 Jun 26  2022 .
+drwxr-xr-x    3 root     root            60 Apr 10 12:58 ..
+crwx------    1 root     root        0,   0 Jun 26  2022 .wh..opq
+-rwx------    1 root     root             0 Jun 26  2022 .wh..wh..opq
+kobo:~# ls /usr/share/zoneinfo/
+Africa        Australia     Cuba          Etc           GMT+0         Iceland       Kwajalein     NZ            Poland        UCT           Zulu
+America       Brazil        EET           Europe        GMT-0         Indian        Libya         NZ-CHAT       Portugal      US            iso3166.tab
+Antarctica    CET           EST           Factory       GMT0          Iran          MET           Navajo        ROC           UTC           posixrules
+Arctic        CST6CDT       EST5EDT       GB            Greenwich     Israel        MST           PRC           ROK           Universal     right
+Asia          Canada        Egypt         GB-Eire       HST           Jamaica       MST7MDT       PST8PDT       Singapore     W-SU          zone.tab
+Atlantic      Chile         Eire          GMT           Hongkong      Japan         Mexico        Pacific       Turkey        WET           zone1970.tab
+kobo:~# ls /kobo/usr/share/zoneinfo/
+Africa        Australia     Cuba          Etc           GMT+0         Iceland       Kwajalein     NZ            Poland        UCT           Zulu
+America       Brazil        EET           Europe        GMT-0         Indian        Libya         NZ-CHAT       Portugal      US            iso3166.tab
+Antarctica    CET           EST           Factory       GMT0          Iran          MET           Navajo        ROC           UTC           posixrules
+Arctic        CST6CDT       EST5EDT       GB            Greenwich     Israel        MST           PRC           ROK           Universal     right
+Asia          Canada        Egypt         GB-Eire       HST           Jamaica       MST7MDT       PST8PDT       Singapore     W-SU          zone.tab
+Atlantic      Chile         Eire          GMT           Hongkong      Japan         Mexico        Pacific       Turkey        WET           zone1970.tab
+kobo:~#

@@ -1,0 +1,34 @@
+strace: Process 7913 attached
+restart_syscall(<... resuming interrupted poll ...>) = 1
+ioctl(3, FIONREAD, [112])               = 0
+recvfrom(3, "\253\322\201\200\0\1\0\0\0\1\0\0\6github\3com\0\0\34\0\1\300\f\0\6"..., 2048, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("8.8.8.8")}, [28->16]) = 112
+gettimeofday({tv_sec=1615230293, tv_usec=58188}, NULL) = 0
+poll([{fd=3, events=POLLIN}], 1, 4826)  = 1 ([{fd=3, revents=POLLIN}])
+ioctl(3, FIONREAD, [44])                = 0
+brk(0x1b72000)                          = 0x1b72000
+recvfrom(3, "Y\310\201\200\0\1\0\1\0\0\0\0\6github\3com\0\0\1\0\1\300\f\0\1"..., 65536, 0, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("8.8.8.8")}, [28->16]) = 44
+close(3)                                = 0
+ioctl(0, TIOCGPGRP, [7913])             = 0
+getpgrp()                               = 7913
+write(2, "140.82.113.3", 12)            = 12
+ioctl(0, TIOCGPGRP, [7913])             = 0
+getpgrp()                               = 7913
+write(2, "\n", 1)                       = 1
+ioctl(0, TIOCGPGRP, [7913])             = 0
+getpgrp()                               = 7913
+write(2, "Connecting to github.com (github"..., 59) = 59
+socket(AF_INET, SOCK_STREAM, IPPROTO_IP) = 3
+connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("140.82.113.3")}, 16) = 0
+ioctl(0, TIOCGPGRP, [7913])             = 0
+getpgrp()                               = 7913
+write(2, "connected.\n", 11)            = 11
+clock_gettime(CLOCK_REALTIME, {tv_sec=1615230293, tv_nsec=344997537}) = 0
+getrandom("\xe7\x5f\xde\x56\x47\x5f\xb9\x1e\x8d\x06\xc1\xb7\xd0\xf8\xad\x36\xaa\x0d\x00\xec\xbc\x9b\x3a\xdd\xeb\xc3\x7f\x27\x56\x62\x57\xc0"..., 64, 0) = 64
+clock_gettime(CLOCK_REALTIME, {tv_sec=1615230293, tv_nsec=346943576}) = 0
+clock_gettime(CLOCK_REALTIME, {tv_sec=1615230293, tv_nsec=348113936}) = 0
+sendmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\26\3\1\2\0\1\0\1\374\3\3\275\244\265\355>\v\0217\361WX\313T\236\371\365I\301\n\317\276"..., iov_len=517}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 517
+recv(3, "\26\3\3\0{", 5, 0)             = 5
+recv(3, "\2\0\0w\3\3\232\327LT\236 p\266\344N\313\226\213Q\211mc\210\271\330\314\324p\300\223j"..., 123, 0) = 123
+sendmsg(3, {msg_name=NULL, msg_namelen=0, msg_iov=[{iov_base="\24\3\3\0\1\1", iov_len=6}], msg_iovlen=1, msg_controllen=0, msg_flags=0}, 0) = 6
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=NULL} ---
++++ killed by SIGSEGV +++

@@ -1,0 +1,20 @@
+```
+Using extern variables can potentially make the binary smaller compared to inlining them, depending on the specific circumstances. Here's a breakdown of the implications:
+
+    Inlining Variables:
+        When you inline variables, their values are directly substituted into the code wherever they are used. This can increase the size of the binary because every usage of the variable will have its value replicated in the code.
+        Inlining can result in code duplication, especially if the variable is used in multiple places or across multiple translation units.
+        Inlining variables can improve performance by avoiding memory access overhead and potentially enabling compiler optimizations.
+
+    extern Variables:
+        When you declare a variable as extern, you indicate to the compiler that the variable is defined externally in a different translation unit or library.
+        The compiler generates a reference to the external variable, and the actual value is resolved at link-time when the binary is linked with the appropriate object files or libraries.
+        By using extern variables, you reduce code duplication since the value is stored in a single place.
+        extern variables can reduce the binary size because the variable value is not duplicated in multiple places in the code.
+
+In general, using extern variables can help reduce binary size by eliminating code duplication. However, the impact on binary size will depend on various factors such as the size of the variables, the number of usages, and the optimizations performed by the compiler.
+
+It's worth noting that in some cases, compilers may automatically inline small and constant variables even if they are not explicitly marked as inline. This behavior can further complicate the comparison between inlining variables and using extern variables.
+
+Ultimately, the decision to inline variables or use extern variables should be based on factors such as code readability, performance requirements, and optimization goals. It's recommended to profile and benchmark your code to understand the specific impact on binary size and performance in your particular scenario.
+```

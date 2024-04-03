@@ -1,0 +1,99 @@
+U-Boot 2009.08-inkbox (Apr 19 2022 - 07:08:20)
+
+CPU: Freescale i.MX6 family TO0.0 at 792 MHz
+Temperature:   35 C, calibration data 0x5764ff5f
+mx6q pll1: 792MHz
+mx6q pll2: 528MHz
+mx6q pll3: 480MHz
+mx6q pll8: 50MHz
+ipg clock     : 66000000Hz
+ipg per clock : 24000000Hz
+uart clock    : 80000000Hz
+cspi clock    : 60000000Hz
+ahb clock     : 132000000Hz
+axi clock   : 198000000Hz
+emi_slow clock: 22000000Hz
+ddr clock     : 396000000Hz
+usdhc1 clock  : 198000000Hz
+usdhc2 clock  : 198000000Hz
+usdhc3 clock  : 198000000Hz
+usdhc4 clock  : 198000000Hz
+Board: MX6SoloLite-NTX:[ POR ]
+Boot Device: SD
+I2C:   ready
+DRAM:  256 MB
+MMC:   ram p=80000000,size=268435456
+csd is 0x400e0032, 0x5b590000, 0x1d8a7f80, 0xa404000 
+scr addr is 0x875fee80, switch_status addr is 0x875feeb8 
+mmc0 is current device
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+HW switch boot from ESD
+FSL_USDHC: 0,FSL_USDHC: 1,FSL_USDHC: 2
+i2c: I2C1 SDA is low, start i2c recovery...
+I2C1 Recovery success
+hw_anadig_reg_core=7c3e1f
+
+MMC read: dev # 0, block # 34815, count 1 ... 1 blocks read: OK
+binary magic @ sector no. 34816 not found !
+"logo" not exist !!
+
+MMC read: dev # 0, block # 18431, count 1 ... 1 blocks read: OK
+binary magic @ sector no. 18432 not found !
+"logo" not exist !!
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_late_init()
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN:"UxI4PZcGH2QRsR6i4t4NF1NR7eohXacVI9T4TwRVKMBdy9arzUw1DEEl89Qy1FJPyrCLD4JQmevKU9D07rC27YGy9cNubgWQlMqQ4lO79EIkmWSrcGDSTptuuRIClnqochUpffQRQ1sLCkzcy3QEnB0L69hGo0XCFAPRv0j4OIwA1VYCBnR2vxEKFHc2IC
+HJuUVFlMq9ZQeKWD8ZAC9qLsq7DWBU05SkDCfO48TloE3hsFYk0ifylf4vEei1D1
+"
+Device: FSL_USDHC
+Manufacturer ID: 3
+OEM: 5344
+Name: SU04G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+Clock: 50000000
+High Capacity: Yes
+Capacity: 3965190144 Bytes
+Bus Width: 4-bit 
+Boot Partition for boot: No boot partition available
+csd is 0x400e0032, 0x5b590000, 0x1d8a7f80, 0xa404000 
+scr addr is 0x875feef0, switch_status addr is 0x875fef28 
+ntx_config_fastboot_layout():9 binaries partition added
+ntx_config_fastboot_layout():3 mbr partition added
+Net:   No ethernet found.
+ 0 
+kobo => ext4load mmc 0:4 0x80800000 out.img
+Loading file "out.img" from mmc device 0:4 (xxa4)
+14362624 bytes read
+kobo => booti 0x80800000
+
+ hwcfgp=8ffffe00,pcb=59,customer=9
+
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 14336, count 2274 ... 2274 blocks read: OK
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+
+MMC read: dev # 0, block # 1030, count 2 ... 2 blocks read: OK
+Kernel RAM visiable size=254M->254M
+hwcfg rootfstype : 2
+hwcfg partition type : 2
+kernel   @ 80808000 (14360082)
+ramdisk  @ 81800000 (0)
+kernel cmdline: 
+        use uboot command line:
+        ... hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8fee3a00 waveform_sz=1164278 ntxfw_p=0x8fee3600 ntxfw_sz=782 mem=254M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet 
+
+Starting kernel ...

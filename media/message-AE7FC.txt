@@ -1,0 +1,417 @@
+U-Boot 2009.08-inkbox (Apr 19 2022 - 07:08:20)
+
+CPU: Freescale i.MX6 family TO0.0 at 792 MHz
+Temperature:   37 C, calibration data 0x5764ff5f
+mx6q pll1: 792MHz
+mx6q pll2: 528MHz
+mx6q pll3: 480MHz
+mx6q pll8: 50MHz
+ipg clock     : 66000000Hz
+ipg per clock : 24000000Hz
+uart clock    : 80000000Hz
+cspi clock    : 60000000Hz
+ahb clock     : 132000000Hz
+axi clock   : 198000000Hz
+emi_slow clock: 22000000Hz
+ddr clock     : 396000000Hz
+usdhc1 clock  : 198000000Hz
+usdhc2 clock  : 198000000Hz
+usdhc3 clock  : 198000000Hz
+usdhc4 clock  : 198000000Hz
+Board: MX6SoloLite-NTX:[ POR ]
+Boot Device: SD
+I2C:   ready
+DRAM:  256 MB
+MMC:   ram p=80000000,size=268435456
+csd is 0x400e0032, 0x5b590000, 0x1d8a7f80, 0xa404000 
+scr addr is 0x875fee80, switch_status addr is 0x875feeb8 
+mmc0 is current device
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+HW switch boot from ESD
+FSL_USDHC: 0,FSL_USDHC: 1,FSL_USDHC: 2
+hw_anadig_reg_core=7c3e1f
+
+MMC read: dev # 0, block # 34815, count 1 ... 1 blocks read: OK
+binary magic @ sector no. 34816 not found !
+"logo" not exist !!
+
+MMC read: dev # 0, block # 18431, count 1 ... 1 blocks read: OK
+binary magic @ sector no. 18432 not found !
+"logo" not exist !!
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_late_init()
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN:"UxI4PZcGH2QRsR6i4t4NF1NR7eohXacVI9T4TwRVKMBdy9arzUw1DEEl89Qy1FJPyrCLD4JQmevKU9D07rC27YGy9cNubgWQlMqQ4lO79EIkmWSrcGDSTptuuRIClnqochUpffQRQ1sLCkzcy3QEnB0L69hGo0XCFAPRv0j4OIwA1VYCBnR2vxEKFHc2I1
+"
+Device: FSL_USDHC
+Manufacturer ID: 3
+OEM: 5344
+Name: SU04G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+Clock: 50000000
+High Capacity: Yes
+Capacity: 3965190144 Bytes
+Bus Width: 4-bit 
+Boot Partition for boot: No boot partition available
+csd is 0x400e0032, 0x5b590000, 0x1d8a7f80, 0xa404000 
+scr addr is 0x875feef0, switch_status addr is 0x875fef28 
+ntx_config_fastboot_layout():9 binaries partition added
+ntx_config_fastboot_layout():3 mbr partition added
+Net:   No ethernet found.
+ 0 
+kobo => ext4load mmc 0:4 0x80800000 out.img
+Loading file "out.img" from mmc device 0:4 (xxa4)
+11804672 bytes read
+kobo => booti 0x80800000
+
+ hwcfgp=8ffffe00,pcb=59,customer=9
+
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 14336, count 2274 ... 2274 blocks read: OK
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+
+MMC read: dev # 0, block # 1030, count 2 ... 2 blocks read: OK
+Kernel RAM visiable size=254M->254M
+hwcfg rootfstype : 2
+hwcfg partition type : 2
+kernel   @ 80808000 (11801983)
+ramdisk  @ 81800000 (0)
+kernel cmdline: 
+        use uboot command line:
+        hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8fee3a00 waveform_sz=1164278 ntxfw_p=0x8fee3600 ntxfw_sz=782 mem=254M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet 
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 5.16.0 (nicolas@fedora) (armv7l-linux-musleabihf-gcc (GCC) 10.2.1 20210227, GNU ld (GNU Binutils) 2.36.1) #2 SMP Thu Apr 28 23:25:43 EDT 2022
+[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Kobo Aura 2
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 64 MiB at 0x8c000000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] percpu: Embedded 16 pages/cpu s36076 r8192 d21268 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 65024
+[    0.000000] Kernel command line: console=ttymxc0,115200 root=/dev/ram0 rdinit=/sbin/init rootfstype=ramfs
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 160292K/262144K available (9216K kernel code, 1510K rwdata, 3084K rodata, 8192K init, 6616K bss, 36316K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] trace event string verifier disabled
+[    0.000000] Running RCU self tests
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU event tracing is enabled.
+[    0.000000] rcu:     RCU lockdep checking is enabled.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] L2C-310 erratum 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 256 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76030001
+[    0.000000] random: get_random_bytes called from start_kernel+0x484/0x6b0 with crng_init=0
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000001] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000028] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.001580] Console: colour dummy device 80x30
+[    0.001640] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+[    0.001660] ... MAX_LOCKDEP_SUBCLASSES:  8
+[    0.001677] ... MAX_LOCK_DEPTH:          48
+[    0.001692] ... MAX_LOCKDEP_KEYS:        8192
+[    0.001708] ... CLASSHASH_SIZE:          4096
+[    0.001725] ... MAX_LOCKDEP_ENTRIES:     32768
+[    0.001740] ... MAX_LOCKDEP_CHAINS:      65536
+[    0.001756] ... CHAINHASH_SIZE:          32768
+[    0.001770]  memory used by lock dependency info: 4061 kB
+[    0.001788]  memory used for stack traces: 2112 kB
+[    0.001803]  per task-struct memory footprint: 1536 bytes
+[    0.001931] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.001970] pid_max: default: 32768 minimum: 301
+[    0.002260] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.002298] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.005998] CPU: Testing write buffer coherency: ok
+[    0.006171] CPU0: Spectre v2: using BPIALL workaround
+[    0.007183] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.010107] Setting up static identity map for 0x80100000 - 0x80100078
+[    0.011307] rcu: Hierarchical SRCU implementation.
+[    0.013038] smp: Bringing up secondary CPUs ...
+[    0.013076] smp: Brought up 1 node, 1 CPU
+[    0.013102] SMP: Total of 1 processors activated (48.00 BogoMIPS).
+[    0.013129] CPU: All CPU(s) started in SVC mode.
+[    0.015829] devtmpfs: initialized
+[    0.043118] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.044261] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.044344] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.048603] pinctrl core: initialized pinctrl subsystem
+[    0.054773] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.082941] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.088568] thermal_sys: Registered thermal governor 'step_wise'
+[    0.088833] cpuidle: using governor menu
+[    0.164949] No ATAGs?
+[    0.165324] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.165418] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.168290] debugfs: Directory 'dummy-iomuxc-gpr@20e0000' with parent 'regmap' already present!
+[    0.169796] imx6sl-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+[    0.250721] usbcore: registered new interface driver usbfs
+[    0.251016] usbcore: registered new interface driver hub
+[    0.251190] usbcore: registered new device driver usb
+[    0.251732] usb_phy_generic usbphynop1: supply vcc not found, using dummy regulator
+[    0.257448] i2c i2c-0: IMX I2C adapter registered
+[    0.259386] i2c i2c-1: IMX I2C adapter registered
+[    0.264576] i2c i2c-2: IMX I2C adapter registered
+[    0.267119] pps_core: LinuxPPS API ver. 1 registered
+[    0.267156] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.267231] PTP clock support registered
+[    0.276814] clocksource: Switched to clocksource mxc_timer1
+[    0.560808] VFS: Disk quotas dquot_6.6.0
+[    0.561041] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.620204] NET: Registered PF_INET protocol family
+[    0.621048] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.623672] tcp_listen_portaddr_hash hash table entries: 128 (order: 0, 5632 bytes, linear)
+[    0.623762] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.623858] TCP bind hash table entries: 2048 (order: 4, 81920 bytes, linear)
+[    0.624192] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.624738] UDP hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.624901] UDP-Lite hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.625404] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.639272] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.646041] Initialise system trusted keyrings
+[    0.657780] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    0.705045] fuse: init (API version 7.35)
+[    0.706265] Key type asymmetric registered
+[    0.706469] Asymmetric key parser 'x509' registered
+[    0.707376] io scheduler mq-deadline registered
+[    0.707422] io scheduler kyber registered
+[    0.792351] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 27, base_baud = 5000000) is a IMX
+[    2.157658] printk: console [ttymxc0] enabled
+[    2.166463] 2038000.serial: ttymxc3 at MMIO 0x2038000 (irq = 28, base_baud = 5000000) is a IMX
+[    2.237479] imx_rngc 21b4000.rngb: Freescale RNGB registered (HW revision 2.129)
+[    2.249290] random: fast init done
+[    2.253500] random: crng init done
+[    2.353428] brd: module loaded
+[    2.419597] loop: module loaded
+[    2.604504] libphy: Fixed MDIO Bus: probed
+[    2.618301] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.644174] i2c_dev: i2c /dev entries driver
+[    2.682176] sdhci: Secure Digital Host Controller Interface driver
+[    2.688556] sdhci: Copyright(c) Pierre Ossman
+[    2.692939] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.722019] mmc0 bounce up to 128 segments into one, max segment size 65536 bytes
+[    2.736139] sdhci-esdhc-imx 2198000.mmc: allocated mmc-pwrseq
+[    2.758604] mmc1 bounce up to 128 segments into one, max segment size 65536 bytes
+[    2.769449] usbcore: registered new interface driver usbhid
+[    2.775060] usbhid: USB HID core driver
+[    2.818415] NET: Registered PF_INET6 protocol family
+[    2.837077] mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using DMA
+[    2.848931] Segment Routing with IPv6
+[    2.853104] In-situ OAM (IOAM) with IPv6
+[    2.858115] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.871121] mmc1: SDHCI controller on 2198000.mmc [2198000.mmc] using DMA
+[    2.887481] sdhci-esdhc-imx 2198000.mmc: card claims to support voltages below defined range
+[    2.900347] NET: Registered PF_PACKET protocol family
+[    2.921734] Registering SWP/SWPB emulation handler
+[    2.938514] mmc0: host does not support reading read-only switch, assuming write-enable
+[    2.947514] Loading compiled-in X.509 certificates
+[    2.974010] mmc0: new ultra high speed DDR50 SDHC card at address aaaa
+[    2.982101] mmc1: new high speed SDIO card at address 0001
+[    3.005940] mmcblk0: mmc0:aaaa SU04G 3.69 GiB 
+[    3.057445]  mmcblk0: p1 p2 p3 p4
+[    3.258499] vddarm: bypassed regulator has no supply!
+[    3.265989] vddpu: bypassed regulator has no supply!
+[    3.289315] vddsoc: bypassed regulator has no supply!
+[    3.389248] imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+[    3.422063] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    3.437795] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.184200] imx-sdma 20ec000.sdma: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+[    4.193955] imx-sdma 20ec000.sdma: Falling back to sysfs fallback for: imx/sdma/sdma-imx6q.bin
+[    4.210913] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.225278] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    4.234147] platform regulatory.0: Falling back to sysfs fallback for: regulatory.db
+[    4.251996] Freeing unused kernel image (initmem) memory: 8192K
+[    4.277300] Run /sbin/init as init process
+[    8.486875] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+Linux inkbox 5.16.0 #2 SMP Thu Apr 28 23:25:43 EDT 2022 armv7l GNU/Linux
+InkBox OS, kernel build aHKdaS6g, commit e731347
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+
+Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+boot: clean, 21/3840 files, 13304/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 441648/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+rootfs: recovering journal
+rootfs: clean, 21/32768 files, 78484/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+user: clean, 169/198800 files, 523882/794240 blocks
+
+[    8.728470] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+(initrd) Hit any key to stop auto-boot ... 
+
+inkbox login: root
+login[121]: root login on 'ttymxc0'
+~ # cat /proc/version
+Linux version 5.16.0 (nicolas@fedora) (armv7l-linux-musleabihf-gcc (GCC) 10.2.1 20210227, GNU ld (GNU Binutils) 2.36.1) #2 SMP Thu Apr 28 23:25:43 EDT 2022
+~ # #YAY!
+~ # ls /dev -shal
+total 0      
+     0 drwxr-xr-x    3 root     0           2.6K Jan  1 00:00 .
+     0 drwxr-xr-x   16 root     0              0 Jan  1 00:00 ..
+     0 crw-r--r--    1 root     0          10, 235 Jan  1 00:00 autofs
+     0 crw-------    1 root     0           5,   1 Jan  1 00:00 console
+     0 crw-------    1 root     0          10, 127 Jan  1 00:00 cpu_dma_latency
+     0 crw-rw-rw-    1 root     0           1,   7 Jan  1 00:00 full
+     0 crw-------    1 root     0          10, 229 Jan  1 00:00 fuse
+     0 crw-------    1 root     0         254,   0 Jan  1 00:00 gpiochip0
+     0 crw-------    1 root     0         254,   1 Jan  1 00:00 gpiochip1
+     0 crw-------    1 root     0         254,   2 Jan  1 00:00 gpiochip2
+     0 crw-------    1 root     0         254,   3 Jan  1 00:00 gpiochip3
+     0 crw-------    1 root     0         254,   4 Jan  1 00:00 gpiochip4
+     0 crw-------    1 root     0          10, 183 Jan  1 00:00 hwrng
+     0 crw-------    1 root     0          89,   0 Jan  1 00:00 i2c-0
+     0 crw-------    1 root     0          89,   1 Jan  1 00:00 i2c-1
+     0 crw-------    1 root     0          89,   2 Jan  1 00:00 i2c-2
+     0 drwxr-xr-x    2 root     0             60 Jan  1 00:00 input
+     0 crw-r--r--    1 root     0           1,  11 Jan  1 00:00 kmsg
+     0 crw-------    1 root     0          10, 237 Jan  1 00:00 loop-control
+     0 brw-------    1 root     0           7,   0 Jan  1 00:00 loop0
+     0 brw-------    1 root     0           7,   1 Jan  1 00:00 loop1
+     0 brw-------    1 root     0           7,   2 Jan  1 00:00 loop2
+     0 brw-------    1 root     0           7,   3 Jan  1 00:00 loop3
+     0 brw-------    1 root     0           7,   4 Jan  1 00:00 loop4
+     0 brw-------    1 root     0           7,   5 Jan  1 00:00 loop5
+     0 brw-------    1 root     0           7,   6 Jan  1 00:00 loop6
+     0 brw-------    1 root     0           7,   7 Jan  1 00:00 loop7
+     0 crw-------    1 root     0           1,   1 Jan  1 00:00 mem
+     0 brw-------    1 root     0         179,   0 Jan  1 00:00 mmcblk0
+     0 brw-------    1 root     0         179,   1 Jan  1 00:00 mmcblk0p1
+     0 brw-------    1 root     0         179,   2 Jan  1 00:00 mmcblk0p2
+     0 brw-------    1 root     0         179,   3 Jan  1 00:00 mmcblk0p3
+     0 brw-------    1 root     0         179,   4 Jan  1 00:00 mmcblk0p4
+     0 crw-rw-rw-    1 root     0           1,   3 Jan  1 00:00 null
+     0 crw-rw-rw-    1 root     0           5,   2 Jan  1 00:00 ptmx
+     0 brw-------    1 root     0           1,   0 Jan  1 00:00 ram0
+     0 brw-------    1 root     0           1,   1 Jan  1 00:00 ram1
+     0 brw-------    1 root     0           1,  10 Jan  1 00:00 ram10
+     0 brw-------    1 root     0           1,  11 Jan  1 00:00 ram11
+     0 brw-------    1 root     0           1,  12 Jan  1 00:00 ram12
+     0 brw-------    1 root     0           1,  13 Jan  1 00:00 ram13
+     0 brw-------    1 root     0           1,  14 Jan  1 00:00 ram14
+     0 brw-------    1 root     0           1,  15 Jan  1 00:00 ram15
+     0 brw-------    1 root     0           1,   2 Jan  1 00:00 ram2
+     0 brw-------    1 root     0           1,   3 Jan  1 00:00 ram3
+     0 brw-------    1 root     0           1,   4 Jan  1 00:00 ram4
+     0 brw-------    1 root     0           1,   5 Jan  1 00:00 ram5
+     0 brw-------    1 root     0           1,   6 Jan  1 00:00 ram6
+     0 brw-------    1 root     0           1,   7 Jan  1 00:00 ram7
+     0 brw-------    1 root     0           1,   8 Jan  1 00:00 ram8
+     0 brw-------    1 root     0           1,   9 Jan  1 00:00 ram9
+     0 crw-rw-rw-    1 root     0           1,   8 Jan  1 00:00 random
+     0 crw-------    1 root     0          10, 242 Jan  1 00:00 rfkill
+     0 crw-rw-rw-    1 root     0           5,   0 Jan  1 00:00 tty
+     0 crw-------    1 root     0           4,   0 Jan  1 00:00 tty0
+     0 crw-------    1 root     0           4,   1 Jan  1 00:00 tty1
+     0 crw-------    1 root     0           4,  10 Jan  1 00:00 tty10
+     0 crw-------    1 root     0           4,  11 Jan  1 00:00 tty11
+     0 crw-------    1 root     0           4,  12 Jan  1 00:00 tty12
+     0 crw-------    1 root     0           4,  13 Jan  1 00:00 tty13
+     0 crw-------    1 root     0           4,  14 Jan  1 00:00 tty14
+     0 crw-------    1 root     0           4,  15 Jan  1 00:00 tty15
+     0 crw-------    1 root     0           4,  16 Jan  1 00:00 tty16
+     0 crw-------    1 root     0           4,  17 Jan  1 00:00 tty17
+     0 crw-------    1 root     0           4,  18 Jan  1 00:00 tty18
+     0 crw-------    1 root     0           4,  19 Jan  1 00:00 tty19
+     0 crw-------    1 root     0           4,   2 Jan  1 00:00 tty2
+     0 crw-------    1 root     0           4,  20 Jan  1 00:00 tty20
+     0 crw-------    1 root     0           4,  21 Jan  1 00:00 tty21
+     0 crw-------    1 root     0           4,  22 Jan  1 00:00 tty22
+     0 crw-------    1 root     0           4,  23 Jan  1 00:00 tty23
+     0 crw-------    1 root     0           4,  24 Jan  1 00:00 tty24
+     0 crw-------    1 root     0           4,  25 Jan  1 00:00 tty25
+     0 crw-------    1 root     0           4,  26 Jan  1 00:00 tty26
+     0 crw-------    1 root     0           4,  27 Jan  1 00:00 tty27
+     0 crw-------    1 root     0           4,  28 Jan  1 00:00 tty28
+     0 crw-------    1 root     0           4,  29 Jan  1 00:00 tty29
+     0 crw-------    1 root     0           4,   3 Jan  1 00:00 tty3
+     0 crw-------    1 root     0           4,  30 Jan  1 00:00 tty30
+     0 crw-------    1 root     0           4,  31 Jan  1 00:00 tty31
+     0 crw-------    1 root     0           4,  32 Jan  1 00:00 tty32
+     0 crw-------    1 root     0           4,  33 Jan  1 00:00 tty33
+     0 crw-------    1 root     0           4,  34 Jan  1 00:00 tty34
+     0 crw-------    1 root     0           4,  35 Jan  1 00:00 tty35
+     0 crw-------    1 root     0           4,  36 Jan  1 00:00 tty36
+     0 crw-------    1 root     0           4,  37 Jan  1 00:00 tty37
+     0 crw-------    1 root     0           4,  38 Jan  1 00:00 tty38
+     0 crw-------    1 root     0           4,  39 Jan  1 00:00 tty39
+     0 crw-------    1 root     0           4,   4 Jan  1 00:00 tty4
+     0 crw-------    1 root     0           4,  40 Jan  1 00:00 tty40
+     0 crw-------    1 root     0           4,  41 Jan  1 00:00 tty41
+     0 crw-------    1 root     0           4,  42 Jan  1 00:00 tty42
+     0 crw-------    1 root     0           4,  43 Jan  1 00:00 tty43
+     0 crw-------    1 root     0           4,  44 Jan  1 00:00 tty44
+     0 crw-------    1 root     0           4,  45 Jan  1 00:00 tty45
+     0 crw-------    1 root     0           4,  46 Jan  1 00:00 tty46
+     0 crw-------    1 root     0           4,  47 Jan  1 00:00 tty47
+     0 crw-------    1 root     0           4,  48 Jan  1 00:00 tty48
+     0 crw-------    1 root     0           4,  49 Jan  1 00:00 tty49
+     0 crw-------    1 root     0           4,   5 Jan  1 00:00 tty5
+     0 crw-------    1 root     0           4,  50 Jan  1 00:00 tty50
+     0 crw-------    1 root     0           4,  51 Jan  1 00:00 tty51
+     0 crw-------    1 root     0           4,  52 Jan  1 00:00 tty52
+     0 crw-------    1 root     0           4,  53 Jan  1 00:00 tty53
+     0 crw-------    1 root     0           4,  54 Jan  1 00:00 tty54
+     0 crw-------    1 root     0           4,  55 Jan  1 00:00 tty55
+     0 crw-------    1 root     0           4,  56 Jan  1 00:00 tty56
+     0 crw-------    1 root     0           4,  57 Jan  1 00:00 tty57
+     0 crw-------    1 root     0           4,  58 Jan  1 00:00 tty58
+     0 crw-------    1 root     0           4,  59 Jan  1 00:00 tty59
+     0 crw-------    1 root     0           4,   6 Jan  1 00:00 tty6
+     0 crw-------    1 root     0           4,  60 Jan  1 00:00 tty60
+     0 crw-------    1 root     0           4,  61 Jan  1 00:00 tty61
+     0 crw-------    1 root     0           4,  62 Jan  1 00:00 tty62
+     0 crw-------    1 root     0           4,  63 Jan  1 00:00 tty63
+     0 crw-------    1 root     0           4,   7 Jan  1 00:00 tty7
+     0 crw-------    1 root     0           4,   8 Jan  1 00:00 tty8
+     0 crw-------    1 root     0           4,   9 Jan  1 00:00 tty9
+     0 crw-------    1 root     0         207,  16 Jan  1 00:00 ttymxc0
+     0 crw-------    1 root     0         207,  19 Jan  1 00:00 ttymxc3
+     0 crw-rw-rw-    1 root     0           1,   9 Jan  1 00:00 urandom
+     0 crw-------    1 root     0           7,   0 Jan  1 00:00 vcs
+     0 crw-------    1 root     0           7,   1 Jan  1 00:00 vcs1
+     0 crw-------    1 root     0           7, 128 Jan  1 00:00 vcsa
+     0 crw-------    1 root     0           7, 129 Jan  1 00:00 vcsa1
+     0 crw-------    1 root     0           7,  64 Jan  1 00:00 vcsu
+     0 crw-------    1 root     0           7,  65 Jan  1 00:00 vcsu1
+     0 crw-------    1 root     0          10, 130 Jan  1 00:00 watchdog
+     0 crw-------    1 root     0         248,   0 Jan  1 00:00 watchdog0
+     0 crw-------    1 root     0         248,   1 Jan  1 00:00 watchdog1
+     0 crw-rw-rw-    1 root     0           1,   5 Jan  1 00:00 zero
+~ # [   34.408470] SD3_SPWR: disabling
+[   34.412211] LDO4: disabling
+[   34.417128] LDO9: disabling
+[   34.421073] LDO10: disabling

@@ -1,0 +1,232 @@
+~/code/linux-2.6.35.2$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j8 uImage
+make: arm-linux-gnueabihf-gcc: No such file or directory
+scripts/kconfig/conf -s arch/arm/Kconfig
+make: arm-linux-gnueabihf-gcc: No such file or directory
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+  CC      scripts/mod/empty.o
+/bin/sh: 1: arm-linux-gnueabihf-gcc: not found
+make[2]: *** [scripts/Makefile.build:231: scripts/mod/empty.o] Error 127
+make[1]: *** [scripts/Makefile.build:366: scripts/mod] Error 2
+make: *** [Makefile:477: scripts] Error 2
+nonasuomy@Marceline:~/code/linux-2.6.35.2$ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/nonasuomy/code/kernel/toolchain/gcc-4.8/bin"
+nonasuomy@Marceline:~/code/linux-2.6.35.2$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j8 uImage
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+  CC      scripts/mod/empty.o
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+make[1]: 'include/generated/mach-types.h' is up to date.
+  CC      kernel/bounds.s
+  GEN     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  GEN     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  CC      init/calibrate.o
+  CC      init/version.o
+In file included from include/linux/blkdev.h:12:0,
+                 from init/do_mounts.h:2,
+                 from init/do_mounts_initrd.c:11:
+include/linux/pagemap.h: In function ‘fault_in_pages_readable’:
+include/linux/pagemap.h:415:16: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+  volatile char c;
+                ^
+  CC      arch/arm/kernel/compat.o
+In file included from include/linux/nfs_fs.h:41:0,
+                 from init/do_mounts.c:20:
+include/linux/pagemap.h: In function ‘fault_in_pages_readable’:
+include/linux/pagemap.h:415:16: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+  volatile char c;
+                ^
+  CC      arch/arm/kernel/elf.o
+In file included from include/linux/mempolicy.h:70:0,
+                 from init/main.c:51:
+include/linux/pagemap.h: In function ‘fault_in_pages_readable’:
+include/linux/pagemap.h:415:16: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+  volatile char c;
+                ^
+  CC      arch/arm/mm/dma-mapping.o
+  CC      arch/arm/mm/extable.o
+  CC      arch/arm/common/clkdev.o
+  CC      arch/arm/mm/fault.o
+  AS      arch/arm/kernel/entry-armv.o
+  AS      arch/arm/kernel/entry-common.o
+  LD      init/mounts.o
+  CC      arch/arm/kernel/irq.o
+  CC      arch/arm/kernel/process.o
+  CC      arch/arm/kernel/ptrace.o
+  CC      arch/arm/kernel/return_address.o
+arch/arm/kernel/return_address.c:61:2: warning: #warning "TODO: return_address should use unwind tables" [-Wcpp]
+ #warning "TODO: return_address should use unwind tables"
+  ^
+  LD      init/built-in.o
+  LD      arch/arm/common/built-in.o
+arch/arm/kernel/return_address.c:61:2: warning: #warning "TODO: return_address should use unwind tables" [-Wcpp]
+ #warning "TODO: return_address should use unwind tables"
+  ^
+  CC      arch/arm/kernel/setup.o
+  CC      arch/arm/kernel/signal.o
+  CC      arch/arm/kernel/sys_arm.o
+  CC      arch/arm/mm/init.o
+  CC      arch/arm/mm/iomap.o
+  CC      arch/arm/mach-mx5/system.o
+arch/arm/mach-mx5/system.c:51:26: warning: ‘vpll’ defined but not used [-Wunused-variable]
+ static struct regulator *vpll;
+                          ^
+arch/arm/mach-mx5/system.c:56:12: warning: ‘dvfs_core_paused’ defined but not used [-Wunused-variable]
+ static int dvfs_core_paused;
+            ^
+  CC      arch/arm/kernel/stacktrace.o
+  CC      arch/arm/kernel/time.o
+  CC      arch/arm/mm/fault-armv.o
+  CC      arch/arm/mach-mx5/iomux.o
+  CC      arch/arm/kernel/traps.o
+  CC      arch/arm/kernel/armksyms.o
+  CC      arch/arm/kernel/module.o
+In file included from arch/arm/mm/fault-armv.c:18:0:
+include/linux/pagemap.h: In function ‘fault_in_pages_readable’:
+  CC      arch/arm/kernel/unwind.o
+include/linux/pagemap.h:415:16: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+  volatile char c;
+                ^
+  CC      arch/arm/mm/flush.o
+  CC      arch/arm/mach-mx5/cpu.o
+  CC      arch/arm/kernel/pmu.o
+In file included from arch/arm/mm/flush.c:12:0:
+include/linux/pagemap.h: In function ‘fault_in_pages_readable’:
+include/linux/pagemap.h:415:16: warning: variable ‘c’ set but not used [-Wunused-but-set-variable]
+  volatile char c;
+                ^
+  CC      arch/arm/kernel/io.o
+  AS      arch/arm/kernel/debug.o
+In file included from arch/arm/plat-mxc/include/mach/debug-macro.S:52:0,
+                 from arch/arm/kernel/debug.S:130:
+arch/arm/plat-mxc/include/mach/mx5x.h:23:2: error: #error "Do not include directly."
+ #error "Do not include directly."
+  ^
+make[1]: *** [scripts/Makefile.build:266: arch/arm/kernel/debug.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+  CC      arch/arm/mach-mx5/mm.o
+  CC      arch/arm/mach-mx5/devices.o
+  CC      arch/arm/mach-mx5/serial.o
+  CC      arch/arm/mm/ioremap.o
+  CC      arch/arm/mach-mx5/dma.o
+  CC      arch/arm/mm/mmap.o
+  CC      arch/arm/mach-mx5/lpmodes.o
+  CC      arch/arm/mach-mx5/pm.o
+make: *** [Makefile:884: arch/arm/kernel] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      arch/arm/mach-mx5/sdram_autogating.o
+  CC      arch/arm/mach-mx5/bus_freq.o
+arch/arm/mach-mx5/lpmodes.c: In function ‘enter_lp_audio_mode’:
+arch/arm/mach-mx5/lpmodes.c:64:14: warning: variable ‘p_clk’ set but not used [-Wunused-but-set-variable]
+  struct clk *p_clk;
+              ^
+arch/arm/mach-mx5/lpmodes.c: In function ‘exit_lp_audio_mode’:
+arch/arm/mach-mx5/lpmodes.c:147:14: warning: variable ‘p_clk’ set but not used [-Wunused-but-set-variable]
+  struct clk *p_clk;
+              ^
+  CC      arch/arm/mm/pgd.o
+  CC      arch/arm/mach-mx5/usb_dr.o
+  CC      arch/arm/mach-mx5/usb_h1.o
+  CC      arch/arm/mach-mx5/usb_h2.o
+  CC      arch/arm/mach-mx5/mx50_gpio.o
+  CC      arch/arm/mm/mmu.o
+  CC      arch/arm/mm/vmregion.o
+  CC      arch/arm/mach-mx5/clock_mx50.o
+  CC      arch/arm/mach-mx5/early_setup.o
+  CC      arch/arm/mach-mx5/dmaengine.o
+  CC      arch/arm/mach-mx5/dma-apbh.o
+arch/arm/mach-mx5/clock_mx50.c: In function ‘pfd_enable’:
+  CC      arch/arm/mach-mx5/mx50_freq.o
+arch/arm/mach-mx5/clock_mx50.c:397:6: warning: variable ‘index’ set but not used [-Wunused-but-set-variable]
+  int index;
+      ^
+arch/arm/mach-mx5/clock_mx50.c: In function ‘pfd_disable’:
+arch/arm/mach-mx5/clock_mx50.c:414:6: warning: variable ‘index’ set but not used [-Wunused-but-set-variable]
+  int index;
+      ^
+  CC      arch/arm/mm/proc-syms.o
+  CC      arch/arm/mach-mx5/mx50_arm2.o
+  CC      arch/arm/mm/alignment.o
+arch/arm/mach-mx5/clock_mx50.c: In function ‘cpu_clk_set_wp’:
+arch/arm/mach-mx5/clock_mx50.c:3636:17: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+  struct cpu_wp *p;
+                 ^
+arch/arm/mach-mx5/clock_mx50.c: At top level:
+arch/arm/mach-mx5/clock_mx50.c:1202:19: warning: ‘ahbmux1_clk’ defined but not used [-Wunused-variable]
+ static struct clk ahbmux1_clk = {
+                   ^
+arch/arm/mach-mx5/clock_mx50.c:1276:19: warning: ‘ipmux1_clk’ defined but not used [-Wunused-variable]
+ static struct clk ipmux1_clk = {
+                   ^
+arch/arm/mach-mx5/clock_mx50.c:1283:19: warning: ‘ipmux2_clk’ defined but not used [-Wunused-variable]
+ static struct clk ipmux2_clk = {
+                   ^
+arch/arm/mach-mx5/clock_mx50.c:1426:19: warning: ‘aips_tz1_clk’ defined but not used [-Wunused-variable]
+ static struct clk aips_tz1_clk = {
+                   ^
+arch/arm/mach-mx5/clock_mx50.c:2476:19: warning: ‘pgc_clk’ defined but not used [-Wunused-variable]
+ static struct clk pgc_clk = {
+                   ^
+arch/arm/mach-mx5/dmaengine.c: In function ‘mxs_dma_desc_append’:
+arch/arm/mach-mx5/dmaengine.c:455:25: warning: variable ‘pdma’ set but not used [-Wunused-but-set-variable]
+  struct mxs_dma_device *pdma;
+                         ^
+arch/arm/mach-mx5/dmaengine.c: In function ‘mxs_dma_desc_add_list’:
+arch/arm/mach-mx5/dmaengine.c:490:25: warning: variable ‘pdma’ set but not used [-Wunused-but-set-variable]
+  struct mxs_dma_device *pdma;
+                         ^
+  CC      arch/arm/mm/highmem.o
+In file included from arch/arm/mach-mx5/mx50_arm2.c:38:0:
+include/linux/mtd/map.h:128:2: warning: #warning "No CONFIG_MTD_MAP_BANK_WIDTH_xx selected. No NOR chip support can work" [-Wcpp]
+ #warning "No CONFIG_MTD_MAP_BANK_WIDTH_xx selected. No NOR chip support can work"
+  ^
+  AS      arch/arm/mm/cache-v7.o
+arch/arm/mm/alignment.c: In function ‘do_alignment’:
+arch/arm/mm/alignment.c:298:15: warning: ‘offset.un’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   offset.un = -offset.un;
+               ^
+arch/arm/mm/alignment.c:720:21: note: ‘offset.un’ was declared here
+  union offset_union offset;
+                     ^
+  CC      arch/arm/mm/copypage-v6.o
+arch/arm/mach-mx5/mx50_arm2.c:2515:13: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ static void check_power3_det()
+             ^
+arch/arm/mach-mx5/mx50_arm2.c: In function ‘check_power3_det’:
+arch/arm/mach-mx5/mx50_arm2.c:2518:19: warning: unused variable ‘pwr3_det_pwr2’ [-Wunused-variable]
+   struct pad_desc pwr3_det_pwr2 = MX50_PAD_UART4_RXD__GPIO_6_17_PWR2;
+                   ^
+arch/arm/mach-mx5/mx50_arm2.c:2517:7: warning: unused variable ‘det’ [-Wunused-variable]
+   int det;
+       ^
+arch/arm/mach-mx5/mx50_arm2.c: In function ‘sdhc4_power_init’:
+arch/arm/mach-mx5/mx50_arm2.c:3525:6: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+  int ret;
+      ^
+arch/arm/mach-mx5/mx50_arm2.c: In function ‘sdhc4_power_exit’:
+arch/arm/mach-mx5/mx50_arm2.c:3578:6: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+  int ret;
+      ^
+arch/arm/mach-mx5/mx50_arm2.c: At top level:
+arch/arm/mach-mx5/mx50_arm2.c:1961:12: warning: ‘mx50_arm2_control_phy_power’ defined but not used [-Wunused-function]
+ static int mx50_arm2_control_phy_power(struct device *dev, int on)
+            ^
+  CC      arch/arm/mm/context.o
+  AS      arch/arm/mm/tlb-v7.o
+  AS      arch/arm/mm/proc-v7.o
+  LD      arch/arm/mm/built-in.o
+In file included from arch/arm/mach-mx5/mx50_arm2.c:38:0:
+include/linux/mtd/map.h:128:2: warning: #warning "No CONFIG_MTD_MAP_BANK_WIDTH_xx selected. No NOR chip support can work" [-Wcpp]
+ #warning "No CONFIG_MTD_MAP_BANK_WIDTH_xx selected. No NOR chip support can work"
+  ^
+  LD      arch/arm/mach-mx5/built-in.o

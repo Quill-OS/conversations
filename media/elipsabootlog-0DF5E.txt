@@ -1,0 +1,272 @@
+[124]HELLO! BOOT0 is starting! (Jul  6 2020 09:53:20)
+[130]boot0 commit : 2beaf76b3937aa263b17a2c2379f926797d214fc
+ 
+[147]set pll start
+[157]rtc[0] value = 0x00000000
+[160]rtc[1] value = 0x00000000
+[163]rtc[2] value = 0x00000000
+[166]rtc[3] value = 0x00000000
+[169]rtc[4] value = 0x00000000
+[172]rtc[5] value = 0x00000000
+[175]DRAM BOOT DRIVE INFO: V0.81
+[178]DRAM_VCC set to 1100 mv
+[181]DRAM CLK =792 MHZ
+[183]DRAM Type =8 (3:DDR3,4:DDR4,7:LPDDR3,8:LPDDR4)
+[222]Training result is = 00000007
+[227]Actual DRAM SIZE =1024 M
+[230]DRAM SIZE =1024 M,para1 = 000030fa,para2 = 04000000
+[243]DRAM simple test OK.
+[246]dram size =1024
+[250]card no is 2
+[251]sdcard 2 line count 8
+[254][mmc]: mmc driver ver 2018-04-08 14:50
+[258][mmc]: mmc 2 bias 00000004
+[267][mmc]: ***Try MMC card 2***
+[282][mmc]: MMC 5.1
+[284][mmc]: HSDDR52/DDR50 8 bit
+[287][mmc]: 50000000 Hz
+[290][mmc]: 29856 MB
+[292][mmc]: ***SD/MMC 2 init OK!!!***
+[360]Loading boot-pkg Succeed(index=0).
+[364]ram p=40000000,size=1073741824
+[368]ntx_hwconfig exist !
+[370][NTX] Parsing boot_package.fex
+[374]Entry_name        = scp
+[384]Entry_name        = optee
+[390]Entry_name        = u-boot
+[399]Entry_name        = soc-cfg
+[403]Entry_name        = dtb
+[407]Entry_name        = logo
+[410]Entry_name        = shutdowncharge
+[414]Entry_name        = androidcharge
+[418]Ready to disable icache.
+[421]0xffffffff 0xffffffff
+[423]0xff16ffff 0xffffffff
+[426]0xff0c14ff 0xffffffff
+[429]0x1313ffff 0xffff0711
+[431]0x0d17ffff 0xffffff06
+[434]0x1414ffff 0xffffff12
+[436]Jump to secend Boot.
+MESSAGE: [0x0] TEE-CORE: OP-TEE version: 467fe7e5-dirty #3 Wed Nov 11 06:30:31 UTC 2020 arm
+MESSAGE: [0x0] TEE-CORE: arisc version: [d0b28d4-20211029T171507B1029_172035]
+
+
+U-Boot 2014.07 (Oct 26 2021 - 16:41:02) Allwinner Technology 
+
+uboot commit : 4f8341bc27dfb4cc4d668f2969fcf6bda230d1f1
+ 
+secure enable bit: 0
+normal mode: with secure monitor
+I2C:   ready
+[0.481]pmbus:   ready
+axp: get node[charger0] error
+axp_probe error
+[0.482]PMU: cpux 1008 Mhz,AXI=504 Mhz
+[0.484]PLL6=600 Mhz,AHB1=200 Mhz, APB1=100Mhz MBus=400Mhz
+DRAM:  1 GiB
+Relocation Offset is: 3564a000
+axp: get node[charger0] error
+gic: sec monitor mode
+[0.591]power on cpu1
+[0.601]power on cpu2
+workmode = 0,storage type = 2
+[0.602]MMC:	 2
+sdc2 signal voltage is 1.8V
+Set PC power mode bit to 1.8V
+SUNXI SD/MMC: 2
+Best spd md: 1-HSSDR52/SDR25, freq: 2-50000000
+Normal
+AW partition init ok
+[0.627]out of usb burn from boot: without usb
+[NTX] Read env.fex from 1286 
+*** Warning - bad CRC, using default environment
+
+boot mode: 0
+ntx_hw_early_init()
+ram p=40000000,size=1073741824
+mmc2(part 0) is current device
+mmc read 0x6e583068 0x3ff 0x1
+
+MMC read: dev # 2, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x7ffffe00 0x400 0x1
+
+MMC read: dev # 2, block # 1024, count 1 ... 1 blocks read: OK
+
+ hwcfgp=7ffffe00,pcb=94,customer=9
+
+ntx_hw_late_init()
+RC5T619_regulator_init : DC1(Core2_0V9_CPU) : 1162500uV, DC2(Core1_0V9_CPUSLDO) : 1000000uV
+RC5T619_watchdog(1,32)
+do not find fastboot status flag
+--------fastboot partitions--------
+-total partitions:3-
+-name-        -start-       -size-      
+rootfs      : 9400000       12c00000    
+recoveryfs  : 1c000000      12c00000    
+KOBOeReader : 2ec00000      1b3fbe00    
+---------------------------------
+boot_env    : 
+boot_package: 
+hwcfg       : 
+ntxfw       : 
+kernel      : 
+waveform    : 
+boot0       : 
+-----------------------------------
+Hit any key to stop autoboot: -1 
+[NTX] Read kernel : start_block :131072  , rblock:131072 
+[NTX][sunxi_flash_read_all] 4000000 read start:131072l====
+[NTX] compare ANDR_BOOT_MAGIC 
+ntx_prebootm : cmd=setenv snum  N604190017896
+hwcfg UIStyle=1,partype=2,rootfstype=2
+_detect_bootmode(1423)
+
+ hwcfgp=7ffffe00,pcb=94,customer=9
+
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=-1
+mmc read 0x6e5828e0 0x401f 0x1
+
+MMC read: dev # 2, block # 16415, count 1 ... 1 blocks read: OK
+mmc read 0x7fabaa00 0x4020 0x2a2a
+
+MMC read: dev # 2, block # 16416, count 10794 ... 10794 blocks read: OK
+mmc read 0x6e5828e0 0x405 0x1
+
+MMC read: dev # 2, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x7faba200 0x406 0x4
+
+MMC read: dev # 2, block # 1030, count 4 ... 4 blocks read: OK
+Kernel RAM visiable size=1018M->1018M
+bootmode=0
+RC5T619_charge_enable : CHGCTL1<=0x20 ok
+Android's image name: sun8i_arm
+Kernel load addr 0x40008000 size 17716 KiB
+RAM disk load addr 0x42000000 size 4906 KiB
+android.hardware = sun8iw15p1
+[2.426]
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.56 (gallen@gallen-ASUS-EXPERTCENTER-D900TA-D900TA) (gcc version 5.3.1 20160412 (Linaro GCC 5.3-2016.05) ) #258 SMP PREEMPT Wed Feb 23 11:45:20 CST 2022
+Kernel commit : 4fd1b320d7880544330dbb38e76c89be32d97ac9
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: sun8iw15
+bootconsole [earlycon0] enabled
+get ricoh619_temp_detect failed, -22
+PMIC1: cannot find config node(sy7636_slave)
+master pmic has not initial yet
+sunxi_suspend_init, 0x40020000, 0x0, 0x800
+uart uart0: get regulator failed
+uart uart1: get regulator failed
+[NAND]Failed to insmod nand!!!
+sunxi-wlan wlan: get gpio chip_en failed
+sunxi_ctp_startup: ctp_power_io is invalid.
+elan_ktf 0-0010: [elan] enter elants_i2c_probe..0823_1..
+sunxi_ctp_startup: ctp_power_io is invalid.
+wakeup gpio_request is failed
+sunxi_emr_startup: emr is not used
+sunxi_ctp_startup: ctp_power_io is invalid.
+wakeup gpio_request is failed
+sunxi_ctp_startup: ctp_power_io is invalid.
+wakeup gpio_request is failed
+[kx122_detect_3079] KX122 ID:ffffffba 
+kx122 0-001e: sensor not recognized
+[kx122_detect_3079] KX122 ID:1b 
+[kx122_probe_2821] irq1:27 , gpio1:355 
+[kx122_probe_2862] using irq1:27  
+[kx122_probe_2900] g_range:8 
+[kx122_probe_2933] using irq 
+[kx122-CNTL1]:1 
+[kx122-CNTL2]:3f 
+[kx122-CNTL3]:98 
+[KX122_TILT_ANGLE_LL]:11 
+[kx122_probe_2989] success 
+[kx122_detect_3079] KX122 ID:ffffffba 
+kx122 2-001e: sensor not recognized
+[P15USB30216C_probe_702] gpio:357 
+[P15USB30216C_probe_706] irq:29 
+[P15USB30216C_probe_715] _0a5_fault:37 
+[P15USB30216C_probe_719] 0a5_dfault irq:65 
+[P15USB30216C_probe_727] Set Reg: 0x46 
+VE: get debugfs_mpp_root is NULL, please check mpp
+
+VE: sunxi ve debug register driver failed!
+
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[B300] Ricoh Disable Temp Detect !!!
+[cpu_freq] ERR: Unable to get regulator
+[cpu_freq] DBG: freq: 1800000000
+[cpu_freq] DBG: num:0, volatge:1160, freq:1800000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 1608000000
+[cpu_freq] DBG: num:1, volatge:1160, freq:1608000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 1512000000
+[cpu_freq] DBG: num:2, volatge:1040, freq:1512000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 1416000000
+[cpu_freq] DBG: num:3, volatge:1000, freq:1416000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 1200000000
+[cpu_freq] DBG: num:4, volatge:940, freq:1200000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 1008000000
+[cpu_freq] DBG: num:5, volatge:880, freq:1008000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 816000000
+[cpu_freq] DBG: num:6, volatge:880, freq:816000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 720000000
+[cpu_freq] DBG: num:7, volatge:880, freq:720000000, axi_div:3 ,sunxi_cpufreq_set_vf
+[cpu_freq] DBG: freq: 480000000
+[cpu_freq] DBG: num:8, volatge:880, freq:480000000, axi_div:3 ,sunxi_cpufreq_set_vf
+lm3630a_bl 1-0038: Failed to request gpio 352 .
+print 0 panel info
+width=1872, height=1404, fresh_hz=85
+sdck=35, bit_num=5, data_len=16
+lsl=18, lbl=17, ldl=234, lel=7, gdck_sta=34, lgonl=192
+fsl=1, fbl=2, fdl=1404, fel=12
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+Netronix system partition type = TYPE3
+mount: mounting /dev/mmcblk0p2 on /boot-resource failed: Invalid argument
+[/init]: RootDevice is "/dev/mmcblk0p1"
+[/init]: Try to load EMMC ...
+mount "/dev/mmcblk0p1" as ext4 @ "/mnt"
+e2fsck 1.43.3 (04-Sep-2016)
+rootfs: recovering journal
+Setting free blocks count to 48889 (was 48897)
+rootfs: clean, 3465/76912 files, 258311/307200 blocks
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000585 seconds, 854.7KB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+cannot open /dev/null
+fsck.fat 4.1+git (2017-01-24)
+/dev/mmcblk0p3: 3663 files, 18526/1862001 clusters
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+
+kobo login: /usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+[B300] cfg_udc_pullup_command_3559 , Pullup:0 
+[B300] cfg_udc_pullup_command_3559 , Pullup:1 
+sh: you need to specify whom to kill
+mkdir: can't create directory '/dev/pts': File exists
+tcpsvd: bind: Address already in use
+tcpsvd: bind: Address already in use
+=== kx122_sysfs_set_tilt_angle_ll_1820  11====
+ntx_wifi_bt_power_init(): device node not found !!
+File:drivers/misc/sunxi-rf/sunxi-wlan.c Rows:53 Process=WLAN on_off=On Power
+[DEBUG] power_status:1 , iOldStatus:0 
+sunxi-mmc sdc1: smc 2 p1 err, cmd 52, RTO !!
+sunxi-mmc sdc1: smc 2 p1 err, cmd 52, RTO !!
+sunxi-mmc sdc1: smc 2 p1 err, cmd 8, RTO !!
+killall: wpa_supplicant: no process killed
+dhcpcd[1788]: version 6.6.6 starting
+dhcpcd[1788]: wlan0: using /sys hwaddr: 58:b0:d4:9b:cc:ac
+dhcpcd[1788]: wlan0: executing `/libexec/dhcpcd-run-hooks' PREINIT
+dhcpcd[1788]: wlan0: executing `/libexec/dhcpcd-run-hooks' NOCARRIER
+dhcpcd[1788]: no interfaces have a carrier
+dhcpcd[1788]: forking to background
+dhcpcd[1788]: forked to background, child pid 1800

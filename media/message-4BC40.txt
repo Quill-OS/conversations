@@ -1,0 +1,71 @@
+kobo-nia:~$ sudo apk add linux-kobo-clara-mainline-6.3.0-r5.apk 
+[sudo] password for dk-x86: 
+
+The following packages will be DOWNGRADED:
+  linux-kobo-clara-mainline
+After this operation, 1440 KiB of additional disk space will be used.
+Do you want to continue [Y/n]? (1/1) Downgrading linux-kobo-clara-mainline (6.3.0_p20230615234309-r0 -> 6.3.0-r5)
+Executing busybox-1.36.1-r1.trigger
+Executing postmarketos-mkinitfs-2.1.1-r0.trigger
+12:56:32.431125 Generating for kernel version: 6.3.0
+12:56:32.436548 Output directory: /boot
+12:56:32.438864 Unknown or no compression format set, using gzip
+12:56:32.441389 == Generating initramfs ==
+12:56:32.443441 - Using compression format gzip with level "default"
+12:56:32.445817 - Searching for directories specified in /usr/share/mkinitfs/dirs
+12:56:32.462940 -- Creating directories from: /usr/share/mkinitfs/dirs/00-initramfs-base.dirs
+12:56:32.470497 - Searching for directories specified in /etc/mkinitfs/dirs
+12:56:32.480850 - Searching for file lists from /usr/share/mkinitfs/files
+12:56:32.486887 -- Including files from: /usr/share/mkinitfs/files/00-initramfs-base.files
+12:56:32.629502 -- Including files from: /usr/share/mkinitfs/files/01-kobo-epdc-extractor.files
+12:56:32.655961 -- Including files from: /usr/share/mkinitfs/files/30-postmarketos-bootsplash.files
+12:56:32.708979 - Searching for file lists from /etc/mkinitfs/files
+12:56:32.718585 - Searching for hook scripts from /usr/share/mkinitfs/hooks
+12:56:32.723854 -- Including script: /usr/share/mkinitfs/hooks/80-start-epd.sh
+12:56:32.726574 - Searching for hook scripts from /etc/mkinitfs/hooks
+12:56:32.737662 - Searching for kernel modules from /usr/share/mkinitfs/modules
+12:56:32.746638 -- Including modules from: /usr/share/mkinitfs/modules/00-default.modules
+12:56:32.815675 - Searching for kernel modules from /etc/mkinitfs/modules
+12:56:32.848383 - Writing and verifying archive:  initramfs
+13:06:10.882210 initramfs completed in: 578.44s
+13:06:10.882327 Unknown or no compression format set, using gzip
+13:06:10.882428 == Generating initramfs-extra ==
+13:06:10.882503 - Using compression format gzip with level "default"
+13:06:10.882570 - Searching for file lists from /usr/share/mkinitfs/files-extra
+13:06:10.903218 -- Including files from: /usr/share/mkinitfs/files-extra/00-initramfs-extra-base.files
+13:06:11.385544 - Searching for file lists from /etc/mkinitfs/files-extra
+13:06:11.397670 - Searching for hook scripts from /usr/share/mkinitfs/hooks-extra
+13:06:11.399651 - Searching for hook scripts from /etc/mkinitfs/hooks-extra
+13:06:11.419042 - Searching for kernel modules from /usr/share/mkinitfs/modules-extra
+13:06:11.419254 -- Unable to find dir, skipping...
+13:06:11.420750 - Searching for kernel modules from /etc/mkinitfs/modules-extra
+13:06:11.420920 -- Unable to find dir, skipping...
+13:06:11.439437 - Writing and verifying archive:  initramfs-extra
+13:06:19.479227 initramfs-extra completed in: 8.60s
+13:06:19.480812 == Using boot-deploy to finalize/install files ==
+==> kernel: device-tree blob operations
+==> initramfs: creating uInitrd
+Image Name:   uInitrd
+Created:      Sat Jun 17 13:06:21 2023
+Image Type:   ARM Linux RAMDisk Image (uncompressed)
+Data Size:    2719128 Bytes = 2655.40 KiB = 2.59 MiB
+Load Address: 00000000
+Entry Point:  00000000
+==> kernel: creating uImage
+Image Name:   postmarketOS
+Created:      Sat Jun 17 13:06:21 2023
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    6105224 Bytes = 5962.13 KiB = 5.82 MiB
+Load Address: 80008000
+Entry Point:  80008000
+==> Checking free space at /boot
+... OK!
+==> Installing: /boot/initramfs
+==> Installing: /boot/initramfs-extra
+==> Installing: /boot/imx6ull-kobo-nia.dtb
+==> Installing: /boot/uImage
+==> Installing: /boot/uInitrd
+13:06:31.041470 boot-deploy completed in: 11.53s
+13:06:31.058405 mkinitfs completed in: 598.66s
+OK: 860 MiB in 622 packages
+kobo-nia:~$

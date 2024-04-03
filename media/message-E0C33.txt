@@ -1,0 +1,80 @@
+Tue Feb 17 14:05:55 1970 | configUpdate: inotify: Detected a modification event of name: sleepCall
+Tue Feb 17 14:05:55 1970 | configUpdate: sleepInotifyCall called, going to sleep (probably)
+Tue Feb 17 14:05:55 1970 | functions: /run/ipd/sleepCall is: sleep
+Tue Feb 17 14:05:55 1970 | configUpdate: Going to sleep, trigger: inotify call
+Tue Feb 17 14:05:55 1970 | configUpdate: All events read
+Tue Feb 17 14:05:55 1970 | watchdog: Watchdog event received
+Tue Feb 17 14:05:55 1970 | watchdog: Launching 'prepare' thread because of 'Nothing' sleep job
+Tue Feb 17 14:05:55 1970 | prepareSleep: Launching prepareSleep
+Tue Feb 17 14:05:55 1970 | fbinkFunctions: FBInk was initialized successfully in screenshotFbink
+Tue Feb 17 14:05:55 1970 | fbinkFunctions: Screen dump done
+Tue Feb 17 14:05:56 1970 | pipeHandler: Sending message
+Tue Feb 17 14:05:56 1970 | configUpdate: inotify read up
+Tue Feb 17 14:05:56 1970 | configUpdate: inotify loop executed
+Tue Feb 17 14:05:56 1970 | configUpdate: inotify: Detected a modification event of name: fifo
+Tue Feb 17 14:05:56 1970 | configUpdate: All events read
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: inkbox-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: oobe-inkbox-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: lockscreen-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: calculator-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: qreversi-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: 2048-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: scribble
+Tue Feb 17 14:05:56 1970 | appsFreeze: In app vector: lightmaps
+Tue Feb 17 14:05:56 1970 | appsFreeze: Found PID of inkbox-bin: 2500
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of oobe-inkbox-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of lockscreen-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of calculator-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of qreversi-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of 2048-bin
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of scribble
+Tue Feb 17 14:05:56 1970 | appsFreeze: Couldn't find PID of lightmaps
+Tue Feb 17 14:05:56 1970 | appsFreeze: Freezing process with PID 2500
+Tue Feb 17 14:05:56 1970 | appsFreeze: Killing process with PID 2500 with signal 19
+Tue Feb 17 14:05:57 1970 | prepareSleep: Custom screensaver not found or an error occured; displaying normal message
+Tue Feb 17 14:05:57 1970 | fbinkFunctions: FBInk: Full screen refresh
+Tue Feb 17 14:05:57 1970 | functions: Wrote: "true" to: /tmp/sleep_standby
+Tue Feb 17 14:05:57 1970 | functions: Wrote: "true" to: /tmp/sleep_mode
+Tue Feb 17 14:05:57 1970 | functions: Wrote: "0" to: /tmp/savedBrightness
+Tue Feb 17 14:05:57 1970 | wifi: connectToWifiPid is 0
+Tue Feb 17 14:05:57 1970 | wifi: No need to collect zombie process
+Tue Feb 17 14:05:57 1970 | wifi: Wi-Fi is turned off
+Tue Feb 17 14:05:57 1970 | functions: Wrote: "false" to: /kobo/inkbox/remount
+Tue Feb 17 14:05:57 1970 | functions: Posix spawning /sbin/hwclock
+Tue Feb 17 14:05:57 1970 | functions: Spawning without errors
+Tue Feb 17 14:05:57 1970 | functions: Spawned with PID: 2694
+Tue Feb 17 14:05:57 1970 | usbnet: Disabling USB networking
+Tue Feb 17 14:05:58 1970 | functions: Output of command: "modprobe -r g_ether" is: "  "
+Tue Feb 17 14:05:58 1970 | prepareSleep: Exiting prepareSleep
+Tue Feb 17 14:05:58 1970 | watchdog: Launching watchdogNextStep request
+Tue Feb 17 14:05:58 1970 | watchdog: Launching goingSleep thread from request by watchdogNextStep
+Tue Feb 17 14:05:58 1970 | goingSleep: Started goSleep
+Tue Feb 17 14:05:59 1970 | goingSleep: Going to sleep now!
+Tue Feb 17 14:06:00 1970 | goingSleep: Trying suspend
+Tue Feb 17 14:06:37 1970 | configUpdate: inotify read up
+Tue Feb 17 14:06:37 1970 | configUpdate: Failed to read from buffer
+Tue Feb 17 14:06:37 1970 | configUpdate: All events read
+Tue Feb 17 14:06:37 1970 | goingSleep: Got back from suspend
+Tue Feb 17 14:06:37 1970 | goingSleep: Stopping suspend attempts after 0 failed attempts
+Tue Feb 17 14:06:37 1970 | goingSleep: Exiting goSleep
+Tue Feb 17 14:06:37 1970 | watchdog: Launching watchdogNextStep request
+Tue Feb 17 14:06:37 1970 | watchdog: Launching afterSleep thread from request by watchdogNextStep
+Tue Feb 17 14:06:37 1970 | afterSleep: Launching afterSleep
+Tue Feb 17 14:06:37 1970 | afterSleep: Returning from deep sleep
+Tue Feb 17 14:06:37 1970 | functions: Wrote: "false" to: /tmp/sleep_mode
+Tue Feb 17 14:06:37 1970 | functions: Posix spawning /sbin/hwclock
+Tue Feb 17 14:06:37 1970 | functions: Spawning without errors
+Tue Feb 17 14:06:37 1970 | functions: Spawned with PID: 2701
+Tue Feb 17 14:06:37 1970 | appsFreeze: Unfreezing process with PID 2500
+Tue Feb 17 14:06:37 1970 | pipeHandler: Sending message
+Tue Feb 17 14:06:37 1970 | fbinkFunctions: FBInk: Full screen refresh
+Tue Feb 17 14:06:37 1970 | functions: /tmp/savedBrightness is: 0
+Tue Feb 17 14:06:37 1970 | afterSleep: Reconnecting to wifi because of option '5 - wifiReconnect'
+Tue Feb 17 14:06:37 1970 | usbnet: Restoring USB networking
+Tue Feb 17 14:06:37 1970 | configUpdate: inotify read up
+Tue Feb 17 14:06:37 1970 | configUpdate: inotify loop executed
+Tue Feb 17 14:06:37 1970 | configUpdate: inotify: Detected a modification event of name: fifo
+Tue Feb 17 14:06:37 1970 | configUpdate: All events read
+Tue Feb 17 14:06:40 1970 | functions: Output of command: "service usbnet start" is: "  * Starting USBNet ... [ ok ]
+ "
+Tue Feb 17 14:06:40 1970 | afterSleep: Exiting afterSleep

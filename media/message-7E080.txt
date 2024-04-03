@@ -1,0 +1,143 @@
+<pre>  339.923725] Unable to handle kernel paging request at virtual address ffffffec
+[  339.930976] pgd = 80004000
+[  339.933689] [ffffffec] *pgd=8fdfd821, *pte=00000000, *ppte=00000000
+[  339.940035] Internal error: Oops: 17 [#2] PREEMPT SMP ARM
+[  339.945437] Modules linked in: elan_touch_i2c(+) g_ether usb_f_rndis usb_f_ecm_subset usb_f_eem usb_f_ecm u_ether libcomposite configfs [last unloaded: elan_touch_i2c]
+[  339.960546] CPU: 0 PID: 1713 Comm: irq/32-elan-tou Tainted: G      D W       4.1.15-inkbox-n306a #1
+[  339.969594] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+[  339.975779] task: 89aed7c0 ti: 89cf2000 task.ti: 89cf2000
+[  339.981185] PC is at kthread_data+0x4/0xc
+[  339.985202] LR is at irq_thread_dtor+0x28/0xbc
+[  339.989653] pc : [&lt;80051f4c&gt;]    lr : [&lt;80072140&gt;]    psr: 20000113
+[  339.989653] sp : 89cf3d10  ip : 89cf3f84  fp : 7f043f14
+[  340.001133] r10: fffffffc  r9 : 7f043f0c  r8 : 89cf3d40
+[  340.006363] r7 : 89aed7c0  r6 : 80f13928  r5 : 00000000  r4 : 89aed7c0
+[  340.012893] r3 : 00000000  r2 : 0000001d  r1 : 89cf3f40  r0 : 89aed7c0
+[  340.019426] Flags: nzCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+[  340.026565] Control: 10c53c7d  Table: 89f4006a  DAC: 00000015
+[  340.032315] Process irq/32-elan-tou (pid: 1713, stack limit = 0x89cf2210)
+[  340.039107] Stack: (0x89cf3d10 to 0x89cf4000)
+[  340.043471] 3d00:                                     89aedbb8 00000000 80f13928 80050478
+[  340.051656] 3d20: 89aed7c0 00000000 00000001 0000000b 89cf3d40 8003a990 806b3fac 89cf3d5c
+[  340.059842] 3d40: 7f043f14 80edf998 0000000b 80f1029c 80ed793c 89cf3ee8 60000113 0000000b
+[  340.068028] 3d60: 7f043f0c fffffffc 7f043f14 80012b08 89cf2210 0000000b 00000000 00000000
+[  340.076213] 3d80: 00000000 00000008 806a9d40 806a9d48 62000000 50206461 61762043 0065756c
+[  340.084399] 3da0: 89cf3ee8 80000007 00000000 89aed7c0 7f043f1c 82383bc0 00000000 800700ec
+[  340.092584] 3dc0: 806fc47c 89cf3de4 00000000 7f043f1c 89cf3ee8 80000007 00000000 89aed7c0
+[  340.100770] 3de0: 7f043f1c 82383bc0 00000000 80531744 80000007 8001c594 00000000 80538254
+[  340.108956] 3e00: 89aea820 8035fba8 00000001 89aed7c0 ce44a85b 00000036 89aeda6c 89aea838
+[  340.117141] 3e20: cdedfb1e 80ed7e0c 00000007 8001c3b4 7f043f1c 89cf3ee8 80071fe0 82383bc0
+[  340.125327] 3e40: 00000000 80009338 89aea804 80358c00 00000001 89aed348 89aed350 80060a74
+[  340.133513] 3e60: 00000000 00000000 00000013 89aed7c0 8fbd2700 80ed44d4 80ed45fc 89aed300
+[  340.141699] 3e80: 8fbd2740 89aed348 80ed45fc 89aed300 88983700 89aed7c0 88983700 8001f1c4
+[  340.149884] 3ea0: 80f13d90 88983868 80ed45fc 8fbd2700 80ed45fc 80ed0700 8fbd27a8 00000031
+[  340.158070] 3ec0: ffffffff 89e02000 00000002 80052704 7f043f1c 60000113 ffffffff 89cf3f1c
+[  340.166256] 3ee0: 8c0ca900 80013358 00000020 7f046260 00000000 7f043f1c 82383bc0 8c0ca900
+[  340.174440] 3f00: 00000000 00000001 8c0ca900 80071fe0 82383bc0 00000000 00000000 89cf3f30
+[  340.182626] 3f20: 80071ffc 7f043f1c 60000113 ffffffff 89cf2000 82383be0 00000000 80072308
+[  340.190812] 3f40: 00000000 80072118 00000000 82383d00 82383bc0 800721d4 00000000 00000000
+[  340.198998] 3f60: 00000000 80051a0c 139a079b 00000000 0e980480 82383bc0 00000000 00000000
+[  340.207184] 3f80: 89cf3f80 89cf3f80 00000001 00010001 89cf3f90 89cf3f90 89cf3fac 82383d00
+[  340.215369] 3fa0: 80051930 00000000 00000000 8000f4e8 00000000 00000000 00000000 00000000
+[  340.223554] 3fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[  340.231740] 3fe0: 00000000 00000000 00000000 00000000 00000013 00000000 b6bf0842 dfd05942
+[  340.239932] [&lt;80051f4c&gt;] (kthread_data) from [&lt;80072140&gt;] (irq_thread_dtor+0x28/0xbc)
+[  340.247775] [&lt;80072140&gt;] (irq_thread_dtor) from [&lt;80050478&gt;] (task_work_run+0xac/0xe4)
+[  340.255706] [&lt;80050478&gt;] (task_work_run) from [&lt;8003a990&gt;] (do_exit+0x2ec/0x978)
+[  340.263115] [&lt;8003a990&gt;] (do_exit) from [&lt;80012b08&gt;] (die+0x41c/0x428)
+[  340.269660] [&lt;80012b08&gt;] (die) from [&lt;80531744&gt;] (__do_kernel_fault.part.0+0x64/0x74)
+[  340.277506] [&lt;80531744&gt;] (__do_kernel_fault.part.0) from [&lt;8001c594&gt;] (do_page_fault+0x1e0/0x390)
+[  340.286391] [&lt;8001c594&gt;] (do_page_fault) from [&lt;80009338&gt;] (do_PrefetchAbort+0x34/0x98)
+[  340.294403] [&lt;80009338&gt;] (do_PrefetchAbort) from [&lt;80013358&gt;] (__pabt_svc+0x38/0x60)
+[  340.302151] Exception stack(0x89cf3ee8 to 0x89cf3f30)
+[  340.307210] 3ee0:                   00000020 7f046260 00000000 7f043f1c 82383bc0 8c0ca900
+[  340.315395] 3f00: 00000000 00000001 8c0ca900 80071fe0 82383bc0 00000000 00000000 89cf3f30
+[  340.323577] 3f20: 80071ffc 7f043f1c 60000113 ffffffff
+[  340.328640] [&lt;80013358&gt;] (__pabt_svc) from [&lt;7f043f1c&gt;] (0x7f043f1c)
+[  340.335004] Code: e513001c e7e00150 e12fff1e e5903280 (e5130014) 
+[  340.341193] ---[ end trace dedb009d788448b4 ]---
+[  340.345819] Fixing recursive fault but reboot is needed!
+[  340.373709] [elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[  340.382386] [__elan_touch_init-362] firmware version 52 01 2C 31 (12C3)
+[  340.390334] [__elan_touch_init-369] firmware ID 52 F1 B5 01 (1B50)
+[  340.397822] [__elan_touch_init-402] boot code version  52 05 56 81
+[  340.405350] [__elan_touch_init-407] x resolution: 1436 
+[  340.411904] [__elan_touch_init-412] y resolution: 1920 
+[  340.421300] input: elan-touch as /devices/virtual/input/input2
+[  340.435364] Unable to handle kernel paging request at virtual address 7f0455c4
+[  340.442607] pgd = 89f40000
+[  340.445319] [7f0455c4] *pgd=89b64811, *pte=00000000, *ppte=00000000
+[  340.451638] Internal error: Oops: 7 [#3] PREEMPT SMP ARM
+[  340.456953] Modules linked in: elan_touch_i2c(+) g_ether usb_f_rndis usb_f_ecm_subset usb_f_eem usb_f_ecm u_ether libcomposite configfs [last unloaded: elan_touch_i2c]
+[  340.472069] CPU: 0 PID: 1756 Comm: insmod Tainted: G      D W       4.1.15-inkbox-n306a #1
+[  340.480337] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+[  340.486522] task: 89aef900 ti: 89dec000 task.ti: 89dec000
+[  340.491933] PC is at strnlen+0x8/0x5c
+[  340.495602] LR is at string+0x34/0x100
+[  340.499358] pc : [&lt;80214ef8&gt;]    lr : [&lt;80216210&gt;]    psr: a0000093
+[  340.499358] sp : 89dedc00  ip : ffffffff  fp : 89dedc30
+[  340.510841] r10: 8058a350  r9 : 89dedcf8  r8 : 00000002
+[  340.516069] r7 : 7f0455c4  r6 : 80f547f9  r5 : 80f54b94  r4 : 0000ffff
+[  340.522602] r3 : ff0a0004  r2 : 7f0455c4  r1 : ffffffff  r0 : 7f0455c4
+[  340.529135] Flags: NzCv  IRQs off  FIQs on  Mode SVC_32  ISA ARM  Segment user
+[  340.536362] Control: 10c53c7d  Table: 89f4006a  DAC: 00000015
+[  340.542113] Process insmod (pid: 1756, stack limit = 0x89dec210)
+[  340.548126] Stack: (0x89dedc00 to 0x89dee000)
+[  340.552492] dc00: 80f547f9 806b6b9d 80f54b94 806b6b9f 00000002 80217d40 80f54b94 ff0a0004
+[  340.560677] dc20: ffffffff ffff0008 000003e0 80f547b4 ff0a0004 ffffffff 89dedc4c 000003e0
+[  340.568862] dc40: 80edf980 80f53d68 ffffffff 00000000 00000000 00000000 00000000 802184b8
+[  340.577047] dc60: 00000000 8006fad4 00000031 00000000 60000013 8fc3e060 00000000 80ed3130
+[  340.585232] dc80: 89aeea0c 80f13e68 00000000 60000093 00000000 00000020 89aee600 800700cc
+[  340.593417] dca0: 82383dc0 00000020 fffffff0 8c0ca960 60000013 00000020 768acbdc 800700ec
+[  340.601602] dcc0: 806b6b68 89dedce4 768acbdc 80531b68 8c0ca960 89dedce4 8c0ca900 80072e38
+[  340.609788] dce0: 806b6b68 00000020 00002002 7f04e5c4 00002002 7f0455c4 768acbdc 800e545c
+[  340.617972] dd00: 7f04f250 82383dc0 00002002 8c0ca900 800715a4 7f04f260 7f04cf1c 80072fac
+[  340.626158] dd20: 7f04f250 8c15dc00 7f04e5c4 00000000 7f04f250 000000f1 00000001 7f04d01c
+[  340.634343] dd40: 7f04e5c4 7f04f260 00000000 7f04f004 7f04f250 7f04d750 00000000 00000000
+[  340.642528] dd60: 00000081 00001b50 71806352 01000053 0100f053 00006053 00006353 01000153
+[  340.650713] dd80: 8c15dc20 7f04e828 8c15dc20 8c15dc00 8c15dc04 7f04d214 89753440 803700f0
+[  340.658899] dda0: 80f64ad8 8c15dc20 7f04f054 00000000 00000004 802d1cec 8c15dc20 7f04f054
+[  340.667084] ddc0: 8c15dc54 80efe958 00000000 802d1efc 00000000 7f04f054 802d1e70 802d0248
+[  340.675269] dde0: 8c0acb5c 8c17b5b4 7f04f054 8d1b4780 00000000 802d1488 7f04efbc 80ed66a0
+[  340.683455] de00: 89ac4400 7f04f054 80ed66a0 89ac4400 7f052000 802d24fc 7f04f038 80ed66a0
+[  340.691640] de20: 89ac4400 80370b48 80ed66a0 80ed66a0 89ac4400 80009718 8fc25920 800e3d24
+[  340.699826] de40: 00000000 81749840 8040003e 800b2948 8fd35e80 8fbf7000 00000001 8040003e
+[  340.708011] de60: 00000001 8c001f00 89dede7c 80ed3130 8c001f00 80ed45fc 768acbdc 800e5360
+[  340.716196] de80: 7f04f0f4 7f04f0f4 7f04f0f4 7f04f0f4 89ac43c0 00000001 7f04f13c 80531d18
+[  340.724382] dea0: 00000001 7f04f13c 89dedf58 7f04f0f4 89753448 80097864 7f04f100 00007fff
+[  340.732568] dec0: 80094e68 87d8c180 7f04f13c 7f04f398 80ed44a0 00000000 000000fe 7f04f23c
+[  340.740753] dee0: 90fb4000 00007114 000003dd 00000000 00000011 00000000 00000000 00000000
+[  340.748938] df00: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[  340.757123] df20: 00000000 00000000 00000000 00000000 0000003a 00000000 00000003 54b28a22
+[  340.765309] df40: 0000017b 8000f5c4 89dec000 00000000 7e881d74 8009817c 90fb4000 00007114
+[  340.773495] df60: 90fbabec 90fbaa98 90fb8e34 00003398 00003ea8 00000000 00000000 00000000
+[  340.781680] df80: 0000001e 0000001f 00000018 00000015 00000013 00000000 00000000 00000000
+[  340.789865] dfa0: 0000017b 8000f440 00000000 00000000 00000003 54b28a22 00000000 76f2ecb0
+[  340.798051] dfc0: 00000000 00000000 0000017b 0000017b 54b3cd70 7e881e89 00000002 7e881d74
+[  340.806236] dfe0: 54b28a22 7e881c98 54b234db 76f91fce 40000030 00000003 87f0e8bd 00032372
+[  340.814433] [&lt;80214ef8&gt;] (strnlen) from [&lt;80216210&gt;] (string+0x34/0x100)
+[  340.821146] [&lt;80216210&gt;] (string) from [&lt;80217d40&gt;] (vsnprintf+0x148/0x37c)
+[  340.828120] [&lt;80217d40&gt;] (vsnprintf) from [&lt;802184b8&gt;] (vscnprintf+0xc/0x24)
+[  340.835183] [&lt;802184b8&gt;] (vscnprintf) from [&lt;8006fad4&gt;] (vprintk_emit+0xb0/0x57c)
+[  340.842679] [&lt;8006fad4&gt;] (vprintk_emit) from [&lt;800700ec&gt;] (vprintk_default+0x20/0x28)
+[  340.850525] [&lt;800700ec&gt;] (vprintk_default) from [&lt;80531b68&gt;] (printk+0x74/0x84)
+[  340.857850] [&lt;80531b68&gt;] (printk) from [&lt;80072e38&gt;] (__setup_irq+0x50c/0x534)
+[  340.864999] [&lt;80072e38&gt;] (__setup_irq) from [&lt;80072fac&gt;] (request_threaded_irq+0xc4/0x144)
+[  340.873287] [&lt;80072fac&gt;] (request_threaded_irq) from [&lt;7f04d01c&gt;] (elan_touch_register_interrupt+0x94/0x108 [elan_touch_i2c])
+[  340.884622] [&lt;7f04d01c&gt;] (elan_touch_register_interrupt [elan_touch_i2c]) from [&lt;7f04d750&gt;] (elan_touch_probe+0x53c/0x734 [elan_touch_i2c])
+[  340.897163] [&lt;7f04d750&gt;] (elan_touch_probe [elan_touch_i2c]) from [&lt;803700f0&gt;] (i2c_device_probe+0xf8/0x148)
+[  340.907005] [&lt;803700f0&gt;] (i2c_device_probe) from [&lt;802d1cec&gt;] (driver_probe_device+0x174/0x2b4)
+[  340.915715] [&lt;802d1cec&gt;] (driver_probe_device) from [&lt;802d1efc&gt;] (__driver_attach+0x8c/0x90)
+[  340.924164] [&lt;802d1efc&gt;] (__driver_attach) from [&lt;802d0248&gt;] (bus_for_each_dev+0x68/0x9c)
+[  340.932352] [&lt;802d0248&gt;] (bus_for_each_dev) from [&lt;802d1488&gt;] (bus_add_driver+0x148/0x1f0)
+[  340.940627] [&lt;802d1488&gt;] (bus_add_driver) from [&lt;802d24fc&gt;] (driver_register+0x78/0xf8)
+[  340.948640] [&lt;802d24fc&gt;] (driver_register) from [&lt;80370b48&gt;] (i2c_register_driver+0x30/0x7c)
+[  340.957090] [&lt;80370b48&gt;] (i2c_register_driver) from [&lt;80009718&gt;] (do_one_initcall+0x8c/0x1d4)
+[  340.965629] [&lt;80009718&gt;] (do_one_initcall) from [&lt;80531d18&gt;] (do_init_module+0x5c/0x1a8)
+[  340.973733] [&lt;80531d18&gt;] (do_init_module) from [&lt;80097864&gt;] (load_module+0x160c/0x1da0)
+[  340.981748] [&lt;80097864&gt;] (load_module) from [&lt;8009817c&gt;] (SyS_finit_module+0x64/0x74)
+[  340.989591] [&lt;8009817c&gt;] (SyS_finit_module) from [&lt;8000f440&gt;] (ret_fast_syscall+0x0/0x3c)
+[  340.997778] Code: e1a00002 e12fff1e e3510000 0a000010 (e5d03000) 
+[  341.003881] ---[ end trace dedb009d788448b5 ]---
+[  341.008505] note: insmod[1756] exited with preempt_count 2
+</pre>

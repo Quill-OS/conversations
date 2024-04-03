@@ -1,0 +1,55 @@
+From 03c84f7bce65e7326c6f631176404884c5e7489f Mon Sep 17 00:00:00 2001
+From: Andreas Kemnade <andreas@kemnade.info>
+Date: Sat, 27 Aug 2022 12:08:38 +0000
+Subject: [PATCH] rcS-root: fix things for kobo clara hd
+
+---
+ initrd/common/rcS-root | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/initrd/common/rcS-root b/initrd/common/rcS-root
+index 75d69cafb0..4c74b76f9f 100755
+--- a/initrd/common/rcS-root
++++ b/initrd/common/rcS-root
+@@ -60,7 +60,7 @@ launch_dfl() {
+ }
+ 
+ setup_usbnet() {
+-	if [ "${DEVICE}" != "kt" ]; then
++	if [ ! -e /lib/modules ]; then
+ 		mkdir -p /modules
+ 		mount /opt/modules.sqsh /modules
+ 	fi
+@@ -78,12 +78,12 @@ setup_usbnet() {
+ 		insmod "/modules/drivers/usb/gadget/function/usb_f_ecm_subset.ko"
+ 		insmod "/modules/drivers/usb/gadget/function/usb_f_rndis.ko"
+ 		insmod "/modules/drivers/usb/gadget/legacy/g_ether.ko"
+-	elif [ "${DEVICE}" == "kt" ]; then
+-		modprobe g_ether
+ 	elif [ "${DEVICE}" == "emu" ]; then
+ 		:
+ 	else
+-		insmod "/modules/g_ether.ko"
++		# default for normally installed kernels
++		modprobe g_ether
++		#insmod "/modules/g_ether.ko"
+ 	fi
+ 
+ 	ifconfig usb0 up
+@@ -121,6 +121,13 @@ mount -t sysfs sysfs /sys
+ sleep 1
+ mount -t devtmpfs devtmpfs /dev
+ mount -t tmpfs tmpfs -o size=16M /tmp
++if [ "${DEVICE}" == "n249" ]; then
++	unsquashfs -d /lib/modules /opt/modules.sqsh 
++	# no support for xz in unsquashfs
++	mkdir -p /lib/firmware/imx/epdc
++	mount /opt/firmware.sqsh /lib/firmware/imx/epdc
++	find /sys/devices -name modalias -type f -print0 | xargs -0 sort -u | while read mod ; do modprobe $mod ; done
++fi
+ 
+ # Framebuffer
+ if [ "${DEVICE}" == "kt" ]; then
+-- 
+2.30.2
+

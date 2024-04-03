@@ -1,0 +1,101 @@
+kobo:/tmp# cat /run/wifi_list_format 
+2E:04:0B:42:95:CB
+intranet
+true
+36
+%%==SPLIT==%%
+00:1C:F0:F5:FA:0E
+SentFromMyToaster-EXT
+true
+68
+%%==SPLIT==%%
+8C:C5:B4:F8:7D:E6
+Marc-Anthony
+true
+87
+%%==SPLIT==%%
+8E:C5:B4:F8:7E:E7
+BELL685-V
+true
+89
+%%==SPLIT==%%
+B8:EC:A3:D4:09:20
+SentFromMyToaster
+true
+82
+%%==SPLIT==%%
+kobo:/tmp# cat /run/wifi_list_full 
+eth0      Scan completed :
+          Cell 01 - Address: 2E:04:0B:42:95:CB
+                    ESSID:"intranet"
+                    Mode:Managed
+                    Frequency:2.417 GHz (Channel 2)
+                    Quality:5/5  Signal level:-36 dBm  Noise level:-92 dBm
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+          Cell 02 - Address: 00:1C:F0:F5:FA:0E
+                    ESSID:"SentFromMyToaster-EXT"
+                    Mode:Managed
+                    Frequency:2.417 GHz (Channel 2)
+                    Quality:3/5  Signal level:-68 dBm  Noise level:-92 dBm
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    IE: Unknown: DD790050F204104A0001101044000102103B0001031047001069952F9979093380B81564D8B56DBF151021000E442D4C696E6B2053797374656D73102300074449522D363135102400024232104200046E6F6E651054000800060050F204000110110011576972656C657373204E20526F75746572100800020004
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+          Cell 03 - Address: 8C:C5:B4:F8:7D:E6
+                    ESSID:"Marc-Anthony"
+                    Mode:Managed
+                    Frequency:2.437 GHz (Channel 6)
+                    Quality:1/5  Signal level:-87 dBm  Noise level:-92 dBm
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    IE: Unknown: DD310050F204104A000110104400010210470010D2255A3DCE88E9D40B31585F00008801103C0001031049000600372A000120
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 18 Mb/s
+                              24 Mb/s; 36 Mb/s; 54 Mb/s; 6 Mb/s; 9 Mb/s
+                              12 Mb/s; 48 Mb/s
+          Cell 04 - Address: 8E:C5:B4:F8:7E:E7
+                    ESSID:"BELL685-V"
+                    Mode:Managed
+                    Frequency:2.437 GHz (Channel 6)
+                    Quality:1/5  Signal level:-89 dBm  Noise level:-92 dBm
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 18 Mb/s
+                              24 Mb/s; 36 Mb/s; 54 Mb/s; 6 Mb/s; 9 Mb/s
+                              12 Mb/s; 48 Mb/s
+          Cell 05 - Address: B8:EC:A3:D4:09:20
+                    ESSID:"SentFromMyToaster"
+                    Mode:Managed
+                    Frequency:2.462 GHz (Channel 11)
+                    Quality:1/5  Signal level:-82 dBm  Noise level:-92 dBm
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    IE: Unknown: DDB50050F204104A0001101044000102103B00010310470010876543219ABCDEF01234B8ECA3D409201021001A5A7958454C20436F6D6D756E69636174696F6E7320436F72702E10230007454D47323932361024000C454D47323932362D513130411042000D533138304132353030323935301054000800060050F20400011011001F5A7958454C20454D473239323620322E34472041636365737320506F696E74100800022008103C0001031049000600372A000120
+                    Encryption key:on
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s
+                              9 Mb/s; 12 Mb/s; 18 Mb/s; 24 Mb/s; 36 Mb/s
+                              48 Mb/s; 54 Mb/s
+

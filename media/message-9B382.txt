@@ -1,0 +1,1630 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.15 (szybet@hyperbookszyb) (gcc version 4.9.4 (crosstool-NG 1.23.0.72-23ba174 - NiLuJe) ) #1 SMP PREEMPT Sun Jul 16 22:41:30 CEST 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Freescale i.MX6 ULL DDR3 NTX Board
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] On node 0 totalpages: 65280
+[    0.000000] free_area_init_node: node 0, pgdat 80f789c0, node_mem_map 8fbf7000
+[    0.000000]   Normal zone: 508 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 65024 pages, LIFO batch:15
+[    0.000000]   HighMem zone: 256 pages, LIFO batch:0
+[    0.000000] PERCPU: Embedded 12 pages/cpu @8fbd0000 s16652 r8192 d24308 u49152
+[    0.000000] pcpu-alloc: s16652 r8192 d24308 u49152 alloc=12*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772
+[    0.000000] Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ramfs roott
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242416K/261120K available (5767K kernel code, 254K rwdata, 2256K rodata, 7532K init, 390K bss, 18704K reserved, 0K cma-reserved, 1024K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff000000   (1776 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .text : 0x80008000 - 0x807de214   (8025 kB)
+[    0.000000]       .init : 0x807df000 - 0x80f3a000   (7532 kB)
+[    0.000000]       .data : 0x80f3a000 - 0x80f79aa0   ( 255 kB)
+[    0.000000]        .bss : 0x80f7c000 - 0x80fddb50   ( 391 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Additional per-CPU info printed with stalls.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] mxc_clocksource_init 24000000
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000053] clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.002845] Console: colour dummy device 80x30
+[    0.002891] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.002926] pid_max: default: 32768 minimum: 301
+[    0.003146] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.003175] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.004295] CPU: Testing write buffer coherency: ok
+[    0.004774] /cpus/cpu@0 missing clock-frequency property
+[    0.004817] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.004930] Setting up static identity map for 0x80008280 - 0x800082d8
+[    0.041179] Brought up 1 CPUs
+[    0.041217] SMP: Total of 1 processors activated (48.00 BogoMIPS).
+[    0.041235] CPU: All CPU(s) started in SVC mode.
+[    0.042298] devtmpfs: initialized
+[    0.058469] device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"
+[    0.066362] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.067278] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.068153] pinctrl core: initialized pinctrl subsystem
+[    0.071017] NET: Registered protocol family 16
+[    0.071993] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.100740] cpuidle: using governor ladder
+[    0.130809] cpuidle: using governor menu
+[    0.173408] ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=t
+[    0.173453] hwcfg_size_setup() hwcfg_szie=110
+[    0.173487] ***_MemoryRequest:49: request memory region! addr=8ffffe00, len=110***
+[    0.173544] hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51
+[    0.173570] boot_port_setup() boot_port=1
+[    0.173595] ntxfw_size_setup() ntxfw_size=1034
+[    0.173623] ***_MemoryRequest:49: request memory region! addr=8ff71400, len=1034***
+[    0.173671] ntxfw[0],"E60U22A0_2fl_hdr_200520",type=0x6,sz=16
+[    0.173695] lm3630fl dual color table : 1 temperatures ,c1_pwr=0x0,c2_pwr=0x0
+[    0.173726] ntxfw[1],"E60U22A0_2fl_tab_200520",type=0x7,sz=844
+[    0.173760] ntxfw_p_setup() ntxfw_p=8ff71400,vaddr=9007c400,size=1034,name="E60U22A1",ver=0.0.0.0,items=2
+[    0.174279] No ATAGs?
+[    0.174349] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.174372] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.178416] imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.179027] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    0.207917] mxs-dma 1804000.dma-apbh: initialized
+[    0.212317] PMU: ricoh61x_i2c_init:
+[    0.212850] PMU: rohmbd71828_i2c_init:
+[    0.213701] SCSI subsystem initialized
+[    0.214514] usbcore: registered new interface driver usbfs
+[    0.214691] usbcore: registered new interface driver hub
+[    0.214937] usbcore: registered new device driver usb
+[    0.219186] sy7636_probe calling
+[    0.219251] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78
+[    0.219288] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1
+[    0.221342] sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89
+[    0.221370] sy7636_detect calling
+[    0.228797] sy7636_detect():opmode=0x0
+[    0.228821] sy7636_detect success
+[    0.229474] sy7636 0-0062: PMIC SY7636 for eInk display
+[    0.229497] sy7636_probe success
+[    0.229560] i2c i2c-0: IMX I2C adapter registered
+[    0.229597] i2c i2c-0: can't use DMA
+[    0.231112] PMU: bd71828_i2c_probe begin 
+[    0.231159] bd71828 3-004b: bd71828_i2c_probe chip_type 6 
+[    0.231203] bd71828 irq gpio 129
+[    0.231247] bd71828 3-004b: PMIC ROHM_CHIP_TYPE_BD71828 IRQ ID :a2, trigger type 0
+[    0.232586] bd71828 3-004b: PMIC ROHM_CHIP_TYPE_BD71828 PMIC ID 0x00 :22
+[    0.234141] bd71828 3-004b: PMIC ROHM_CHIP_TYPE_BD71828 PMIC OTP ID 0x00 :eb
+[    0.255334] PMU: bd71828_i2c_probe end 
+[    0.255419] i2c i2c-3: IMX I2C adapter registered
+[    0.255460] i2c i2c-3: can't use DMA
+[    0.255781] pps_core: LinuxPPS API ver. 1 registered
+[    0.255804] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.255888] PTP clock support registered
+[    0.255993] PMU: bd71827_battery_init
+[    0.256265] PMU: bd71827_power_probe begin 
+[    0.256317] dt_get_rsens() RSENS dts property 21000000
+[    0.256336] RSENS prop found 21000000
+[    0.256356] Setting curr-factor to 476
+[    0.256383] bd71827-power bd71827-power: battery_cycle = 0
+[    0.256400] bd71827_set_battery_parameters: Battery 16 
+[    0.256422] PMU : bd71827_set_battery_parameters : new table
+[    0.256442] PMU : bd71827_set_battery_parameters : ocv_table 0 is 4200 mv
+[    0.256461] PMU : bd71827_set_battery_parameters : ocv_table 1 is 4171 mv
+[    0.256480] PMU : bd71827_set_battery_parameters : ocv_table 2 is 4117 mv
+[    0.256499] PMU : bd71827_set_battery_parameters : ocv_table 3 is 4074 mv
+[    0.256518] PMU : bd71827_set_battery_parameters : ocv_table 4 is 4015 mv
+[    0.256536] PMU : bd71827_set_battery_parameters : ocv_table 5 is 3976 mv
+[    0.256555] PMU : bd71827_set_battery_parameters : ocv_table 6 is 3944 mv
+[    0.256574] PMU : bd71827_set_battery_parameters : ocv_table 7 is 3910 mv
+[    0.256593] PMU : bd71827_set_battery_parameters : ocv_table 8 is 3867 mv
+[    0.256612] PMU : bd71827_set_battery_parameters : ocv_table 9 is 3830 mv
+[    0.256630] PMU : bd71827_set_battery_parameters : ocv_table 10 is 3805 mv
+[    0.257826] bd71827-power bd71827-power: Power-on-reset off
+[    0.259190] bd71827-power bd71827-power: bd71827_init_hardware() battery through_voltage = 3264000
+[    0.259949] bd71827-power bd71827-power: Temperature = 30
+[    0.262632] bd71827-power bd71827-power: Current second 1689540480
+[    0.262662] bd71827-power bd71827-power: Last power off second 1689540254
+[    0.262687] bd71827-power bd71827-power: Till HBNT over 15 dsys to relax check
+[    0.264649] bd71827-power bd71827-power: bd71827_init_hardware() coulomb_cnt = 51455306
+[    0.768598] bd71827-power bd71827-power: VM_OCV_3 = 3767000
+[    0.769866] bd71827-power bd71827-power: bd71827_init_hardware() sorg = 47, soc_cal = 31, voltage 3767000, soc 48, charge 2, dc 0
+[    0.772259] bd71827-power bd71827-power: bd71827_init_hardware() CC_CCNTD = 51455306
+[    0.772291] bd71827-power bd71827-power: bd71827_init_hardware() pwr->soc = 47
+[    0.772317] bd71827-power bd71827-power: bd71827_init_hardware() pwr->clamp_soc = 47
+[    0.775292] bd71827_power_probe modify the OTP config for battery temperature
+[    0.956689] PMU: bd71827_power_probe end 
+[    0.960442] MIPI CSI2 driver module loaded
+[    0.961111] Advanced Linux Sound Architecture Driver Initialized.
+[    0.964740] PMU: bd71828_regulator_init
+[    0.964990] PMU: bd71828_regulator_probe begin 
+[    1.003154] [bd71828_regulator_probe-MX6SLL]...turn-off none used
+[    1.005973] PMU: bd71828_regulator_probe end 
+[    1.006137] PMU: ricoh61x_regulator_init
+[    1.007088] sy7636-pmic sy7636-pmic: num_regulators 4
+[    1.007213] sy7636-pmic sy7636-pmic: on_delay1=0x2
+[    1.007243] sy7636-pmic sy7636-pmic: on_delay2=0x2
+[    1.007271] sy7636-pmic sy7636-pmic: on_delay3=0x2
+[    1.007298] sy7636-pmic sy7636-pmic: on_delay4=0x2
+[    1.007325] sy7636-pmic sy7636-pmic: failed to get vddh_ext property
+[    1.007350] sy7636-pmic sy7636-pmic: failed to get vpdd_len property
+[    1.007374] sy7636-pmic sy7636-pmic: failed to get vp_ext property
+[    1.007399] sy7636-pmic sy7636-pmic: failed to get vee_ext property
+[    1.007423] sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+[    1.007448] sy7636-pmic sy7636-pmic: failed to get VPDD property,default will be 0x2
+[    1.007476] sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944602516
+[    1.007547] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    1.007591] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    1.007640] sy7636_regulator_probe(1088): SY7636@8c17b800
+[    1.007661] sy7636_regulator_probe():initial vcom=-2500000uV
+[    1.007661]  _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    1.013891] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    1.015315] sy7636_get_temperature():temperature = 0,reg=0x0
+[    1.016154] sy7636_get_temperature():temperature = 0,reg=0x0
+[    1.016984] PMU: bd718x7_rtc_init
+[    1.017251] PMU: bd70528_probe begin 
+[    1.025194] bd70528-rtc bd71828-rtc: rtc core: registered bd70528 as rtc0
+[    1.037470] PMU: bd70528_probe end 
+[    1.039011] Switched to clocksource mxc_timer1
+[    1.064722] NET: Registered protocol family 2
+[    1.066186] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    1.066276] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+[    1.066367] TCP: Hash tables configured (established 2048 bind 2048)
+[    1.066498] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    1.066559] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    1.067000] NET: Registered protocol family 1
+[    3.794935] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3760000,vmin=3754000),vsys(v=3754000,vmin=3746000),curr=-187544(avg=-64260),cc=51448022,dcap=1648,fcap=1646
+[    3.795843] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=0,dcin=0
+[    3.795875] bd71827-power bd71827-power: changeToNoneMode
+[    3.795904] bd71827-power bd71827-power: setCurrentLimit() set current limit 50 mA
+[    3.796440] bd71827-power bd71827-power: setChargeCurrent() set charge current 100 mA
+[    3.999746] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=0
+[    3.999788] drivers/input/misc/usb_plug.c(56):skip usb_plug_handler() when mxc_usbplug not exist !
+[    5.980807] imx rpmsg driver is registered.
+[    5.983135] Bus freq driver module loaded
+[    5.985433] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    6.006760] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    6.007574] fuse init (API version 7.23)
+[    6.014473] bounce: pool size: 64 pages
+[    6.014526] io scheduler noop registered
+[    6.014563] io scheduler deadline registered
+[    6.014684] io scheduler cfq registered (default)
+[    6.015695] imx-weim 21b8000.weim: Driver registered.
+[    6.021192] lm3630a_bl_parse_dt pchip=8c1e5310,hwen_gpio 91
+[    6.021225] invalid gpio: -2
+[    6.021246] lm3630a_bl_parse_dt pchip=8c1e5310,pwr_on_gpio -2
+[    6.033380] lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+[    6.035971] imx-sdma 20ec000.sdma: no event needs to be remapped
+[    6.036186] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    6.044140] imx-sdma 20ec000.sdma: initialized
+[    6.203620] imx-uart 2020000.serial: could not get sleep state
+[    6.203786] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+[    6.326438] console [ttymxc0] enabled
+[    6.328407] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+[    6.366227] imx-rng 2284000.rngb: iMX RNG Registered.
+[    6.366911] imx sema4 driver is registered.
+[    6.367111] [drm] Initialized drm 1.1.0 20060810
+[    6.368423] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    6.394682] brd: module loaded
+[    6.408125] loop: module loaded
+[    6.411849] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    6.411893] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    6.412369] usbcore: registered new interface driver usb-storage
+[    6.414954] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    6.416702] 2184000.usb supply vbus not found, using dummy regulator
+[    6.424991] mousedev: PS/2 mouse device common for all mice
+[    6.427014] input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[    6.427623] [elan] elan_ktf_ts_init driver version 0x0005: Integrated 2, 5, and 10 fingers together and auto-mapping resolution
+[    6.680530] [elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[    6.682054] [__elan_touch_init-367] firmware version 52 01 2C 31 (12C3)
+[    6.683569] [__elan_touch_init-374] firmware ID 52 F1 B5 01 (1B50)
+[    6.685075] [__elan_touch_init-406] boot code version  52 05 56 81
+[    6.685095] [boot_code]:5568
+[    6.686580] [__elan_touch_init-418] x resolution: 1436 
+[    6.688065] [__elan_touch_init-423] y resolution: 1920 
+[    6.688658] input: elan-touch as /devices/virtual/input/input1
+[    6.690066] elan ts starts in interrupt mode.
+[    6.690257] elan_touch_init(1894)
+[    6.690578] cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+[    6.693640] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+[    6.693998] i2c /dev entries driver
+[    6.695301] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021db0 ntx_machine_poweroff
+[    6.705846] syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+[    6.706176] PMU: ricoh61x_battery_init
+[    6.706953] sy7636_sensor_probe starting
+[    6.707283] sy7636_sensor_probe success
+[    6.710860] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    6.711249] PMIC != RC5T619, need to feed watchdog
+[    6.711269] watchdog_feeder_init
+[    6.711783] watchdog device ready !!
+[    6.711811] watchdog feeding_interval = 57000 ms
+[    6.712685] sdhci: Secure Digital Host Controller Interface driver
+[    6.712709] sdhci: Copyright(c) Pierre Ossman
+[    6.712745] sdhci-pltfm: SDHCI platform and OF driver helper
+[    6.715525] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    6.715652] sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+[    6.717127] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    6.718945] led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+[    6.759256] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    6.760474] /soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+[    6.760828] sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+[    6.760861] sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+[    6.763801] led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+[    6.806795] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3761500,vmin=3756500),vsys(v=3756000,vmin=3749500),curr=-188496(avg=-64260),cc=51440278,dcap=1648,fcap=1646
+[    6.810169] mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+[    6.821259] led_classdev_register():led_cdev->name=GLED,name=GLED
+[    6.822286] usbcore: registered new interface driver usbhid
+[    6.822311] usbhid: USB HID core driver
+[    6.826516] usbcore: registered new interface driver snd-usb-audio
+[    6.844641] fsl-asrc 2034000.asrc: driver registered
+[    6.848214] NET: Registered protocol family 17
+[    6.848294] lib80211: common routines for IEEE802.11 drivers
+[    6.848316] lib80211_crypt: registered algorithm 'NULL'
+[    6.848353] lib80211_crypt: registered algorithm 'WEP'
+[    6.848388] lib80211_crypt: registered algorithm 'CCMP'
+[    6.848424] lib80211_crypt: registered algorithm 'TKIP'
+[    6.852318] ntx_wifi_bt_power_init() : done 
+[    6.852344] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[    6.852352] Wifi / BT power control 0
+[    6.852361] Wifi already off.
+[    6.852396] wifi 3v3 power off
+[    6.852408] _ntx_wifi_bt_power_ctrl() : done 
+[    6.871927] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(8243):EPD 1024x758 
+[    6.871963] imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+[    6.875070] imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+[    6.877194] mmc0: host does not support reading read-only switch, assuming write-enable
+[    6.890143] mmc0: new high speed SDHC card at address 0001
+[    6.899091] mmcblk0: mmc0:0001 SD 15.0 GiB 
+[    6.900500]  mmcblk0: p1 p2 p3 p4
+[    6.905420] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    6.905463] waveform_size_setup() wf_size=582529
+[    6.905479] ***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+[    6.905535] waveform_p_setup() wf_p=8ff71a00,vaddr=91000a00,size=582529
+[    6.905936] mxc_epdc_fb_init_hw(7960)
+[    6.905988] [epdc_firmware_work_func]:fw p=91000a00,size=582529,fb_data@8d1f2000,pdata=80f4fea0
+[    6.905999] mxc_epdc_fb_fw_handler(7404),fw=8c195ee8
+[    6.906008] mxc_epdc_fb_fw_handler(): fw p=91000a00,size=582529
+[    6.906031] advance waveform awv : 1 
+[    6.906073] imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+[    6.906087] imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R427_AD7E21_ED060XH7U4_VB3300-FOC_TC
+[    6.906100] imx_epdc_v2_fb 228c000.epdc: Waveform file does not support advanced algorithms
+[    6.906153] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[    6.909124] EPD QOS_WR 0x7, QOS_RD 0x7
+[    6.909161] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+[    6.909173] fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfeef=>-273 10mV,-2730000 uV
+[    6.909193] drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(2067):k_fake_s1d13522_init,DisplayResolution=1
+[    6.926931] Hall:do-not-wakeup-hibernation=0
+[    6.940196] _sy7636_vcom_get_voltage() : vcom=-2730000uV
+[    6.973365] input: bd71828-pwrkey as /devices/platform/soc/2100000.aips-bus/21f8000.i2c/i2c-3/3-004b/bd71828-pwrkey/input/input2
+[    6.975079] bd70528-rtc bd71828-rtc: setting system clock to 2023-07-16 20:48:06 UTC (1689540486)
+[    6.988398] TMST_SY7636: disabling
+[    6.999795] SD1_SPWR: disabling
+[    6.999815] vref-3v3: disabling
+[    7.000180] ALSA device list:
+[    7.000195]   No soundcards found.
+[    7.000290] sy7636_get_temperature():temperature = 29,reg=0x1d
+[    7.012208] Freeing unused kernel memory: 7532K (807df000 - 80f3a000)
+[    8.589634] imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+[    9.419495] 
+[    9.419495] Bus freq set to 24000000 start...
+[    9.419764] 
+[    9.419764] Bus freq set to 24000000 done...
+[    9.600917] 
+[    9.600917] Bus freq set to 400000000 start...
+[    9.601214] 
+[    9.601214] Bus freq set to 400000000 done...
+[    9.620792] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[    9.767830] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[    9.777874] random: tr urandom read with 57 bits of entropy available
+[    9.815840] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3765666,vmin=3751000),vsys(v=3761333,vmin=3743000),curr=-67592(avg=-64260),cc=51428838,dcap=1648,fcap=1646
+[   10.829552] 
+[   10.829552] Bus freq set to 24000000 start...
+[   10.829829] 
+[   10.829829] Bus freq set to 24000000 done...
+[   12.698354] usb unplugged
+[   12.843797] 
+[   12.843797] Bus freq set to 400000000 start...
+[   12.844078] 
+[   12.844078] Bus freq set to 400000000 done...
+[   12.864496] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3769000,vmin=3755750),vsys(v=3765500,vmin=3749000),curr=-29036(avg=-64260),cc=51423868,dcap=1648,fcap=1646
+[   13.549485] 
+[   13.549485] Bus freq set to 24000000 start...
+[   13.549758] 
+[   13.549758] Bus freq set to 24000000 done...
+[   15.934653] 
+[   15.934653] Bus freq set to 400000000 start...
+[   15.934941] 
+[   15.934941] Bus freq set to 400000000 done...
+[   15.939688] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3771000,vmin=3759000),vsys(v=3768000,vmin=3753000),curr=-28560(avg=-64260),cc=51419608,dcap=1648,fcap=1646
+[   15.948745] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   15.988456] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   18.159531] 
+[   18.159531] Bus freq set to 24000000 start...
+[   18.159826] 
+[   18.159826] Bus freq set to 24000000 done...
+[   19.013841] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3772166,vmin=3758000),vsys(v=3769666,vmin=3751500),curr=-30464(avg=-54740),cc=51411774,dcap=1648,fcap=1646
+[   19.018029] 
+[   19.018029] Bus freq set to 400000000 start...
+[   19.018176] 
+[   19.018176] Bus freq set to 400000000 done...
+[   20.829570] 
+[   20.829570] Bus freq set to 24000000 start...
+[   20.829855] 
+[   20.829855] Bus freq set to 24000000 done...
+[   21.306153] 
+[   21.306153] Bus freq set to 400000000 start...
+[   21.306437] 
+[   21.306437] Bus freq set to 400000000 done...
+[   21.458658] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[   22.025865] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3768571,vmin=3756428),vsys(v=3764714,vmin=3749142),curr=-226100(avg=-54740),cc=51403534,dcap=1648,fcap=1646
+[   25.034520] bd71827-power bd_work_callback():soc(c=47,v=48,clamp_soc=47),vbat(stat=(32,2),v=3765375,vmin=3753500),vsys(v=3760750,vmin=3745375),curr=-272748(avg=-54740),cc=51389900,dcap=1648,fcap=1646
+[   25.331978] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   25.366262] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: 
+[   25.960724] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   25.968236] squashfs: SQUASHFS error: unable to read xattr id index table
+[   28.043094] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3762666,vmin=3751000),vsys(v=3757333,vmin=3742444),curr=-333676(avg=-54740),cc=51376222,dcap=1648,fcap=1646
+[   29.303891] EXT4-fs (loop2): mounted filesystem with ordered data mode. Opts: (null)
+[   31.055989] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3761400,vmin=3749600),vsys(v=3755700,vmin=3741100),curr=-240380(avg=-54740),cc=51365472,dcap=1648,fcap=1646
+[   31.530825] random: nonblocking pool is initialized
+[   34.065056] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3759300,vmin=3748100),vsys(v=3753300,vmin=3739500),curr=-316064(avg=-54740),cc=51352546,dcap=1648,fcap=1646
+[   37.073305] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3757300,vmin=3746100),vsys(v=3750800,vmin=3737000),curr=-274652(avg=-54740),cc=51340000,dcap=1648,fcap=1646
+[   40.084877] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3753700,vmin=3745900),vsys(v=3746400,vmin=3736800),curr=-321776(avg=-54740),cc=51327934,dcap=1648,fcap=1646
+[   42.706504] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)
+[   43.099693] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3749700,vmin=3742600),vsys(v=3741600,vmin=3732800),curr=-289884(avg=-54740),cc=51315120,dcap=1648,fcap=1646
+[   46.114045] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3745700,vmin=3739300),vsys(v=3736800,vmin=3728900),curr=-311780(avg=-54740),cc=51303786,dcap=1648,fcap=1646
+[   49.126879] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3741600,vmin=3737700),vsys(v=3731700,vmin=3727200),curr=-323204(avg=-54740),cc=51290902,dcap=1648,fcap=1646
+[   52.134836] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3740600,vmin=3736700),vsys(v=3731000,vmin=3726400),curr=-319872(avg=-54740),cc=51277704,dcap=1648,fcap=1646
+[   55.146692] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3740000,vmin=3737000),vsys(v=3730500,vmin=3727200),curr=-323204(avg=-54740),cc=51264466,dcap=1648,fcap=1646
+[   58.154797] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3739600,vmin=3737500),vsys(v=3730300,vmin=3727900),curr=-317016(avg=-54740),cc=51251232,dcap=1648,fcap=1646
+[   61.164751] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3738300,vmin=3737300),vsys(v=3728900,vmin=3727600),curr=-322728(avg=-54740),cc=51238014,dcap=1648,fcap=1646
+[   64.174755] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3738000,vmin=3736900),vsys(v=3728600,vmin=3727200),curr=-318920(avg=-54740),cc=51224770,dcap=1648,fcap=1646
+[   67.184829] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737500,vmin=3736600),vsys(v=3728000,vmin=3727000),curr=-303688(avg=-54740),cc=51212068,dcap=1648,fcap=1646
+[   67.486723] EXT4-fs (loop9): mounted filesystem with ordered data mode. Opts: (null)
+[   67.650874] sy7636_get_temperature():temperature = 29,reg=0x1d
+[   68.076242] EXT4-fs (loop10): mounted filesystem with ordered data mode. Opts: (null)
+[   70.193133] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737600,vmin=3736500),vsys(v=3728300,vmin=3727000),curr=-283220(avg=-54740),cc=51201306,dcap=1648,fcap=1646
+[   73.214439] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3738200,vmin=3737100),vsys(v=3729100,vmin=3727800),curr=-249424(avg=-54740),cc=51191266,dcap=1648,fcap=1646
+[   76.224986] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3738100,vmin=3737000),vsys(v=3728900,vmin=3727600),curr=-300356(avg=-54740),cc=51180316,dcap=1648,fcap=1646
+[   79.236863] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737900,vmin=3736800),vsys(v=3728800,vmin=3727500),curr=-321300(avg=-276556),cc=51167186,dcap=1648,fcap=1646
+[   82.245068] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737700,vmin=3736500),vsys(v=3728500,vmin=3727100),curr=-320824(avg=-276556),cc=51153958,dcap=1648,fcap=1646
+[   85.253884] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737700,vmin=3736300),vsys(v=3728400,vmin=3726900),curr=-312256(avg=-276556),cc=51140800,dcap=1648,fcap=1646
+[   88.264856] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737500,vmin=3736200),vsys(v=3728300,vmin=3726800),curr=-318444(avg=-276556),cc=51128084,dcap=1648,fcap=1646
+[   91.274440] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737300,vmin=3736000),vsys(v=3728100,vmin=3726500),curr=-323204(avg=-276556),cc=51114716,dcap=1648,fcap=1646
+[   94.285502] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737100,vmin=3735800),vsys(v=3727800,vmin=3726200),curr=-325584(avg=-276556),cc=51101324,dcap=1648,fcap=1646
+[   96.218871] EXT4-fs (loop12): mounted filesystem with ordered data mode. Opts: (null)
+[   97.298415] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737500,vmin=3735600),vsys(v=3728500,vmin=3726100),curr=-233716(avg=-276556),cc=51089764,dcap=1648,fcap=1646
+[   99.442780] imx_epdc_v2_fb 228c000.epdc: blank = 1
+[  100.305272] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3737900,vmin=3736200),vsys(v=3728800,vmin=3726700),curr=-242760(avg=-276556),cc=51079676,dcap=1648,fcap=1646
+[  100.584478] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  100.584496] [_lm3630a_set_FL-1123] led A c=208,b=0, led B c=0,b=0
+[  100.589757] drivers/video/backlight/lm3630a_bl.c(1437) lm3630a_update_status(0)
+[  100.589763] _fl_lm3630a_percentage(1265) _fl_lm3630a_percentage(0)
+[  100.589770] [_lm3630a_set_FL-1123] led A c=0,b=0, led B c=0,b=0
+[  100.589773] _lm3630a_set_FL():FL PWR[OFF] 
+[  101.419521] 
+[  101.419521] Bus freq set to 24000000 start...
+[  101.419795] 
+[  101.419795] Bus freq set to 24000000 done...
+[  103.093292] 
+[  103.093292] Bus freq set to 400000000 start...
+[  103.093582] 
+[  103.093582] Bus freq set to 400000000 done...
+[  103.319810] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3740600,vmin=3736700),vsys(v=3732100,vmin=3727400),curr=-42840(avg=-276556),cc=51073324,dcap=1648,fcap=1646
+[  103.799495] 
+[  103.799495] Bus freq set to 24000000 start...
+[  103.799746] 
+[  103.799746] Bus freq set to 24000000 done...
+[  105.093939] 
+[  105.093939] Bus freq set to 400000000 start...
+[  105.094235] 
+[  105.094235] Bus freq set to 400000000 done...
+[  106.333016] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3742400,vmin=3738500),vsys(v=3734300,vmin=3729600),curr=-71400(avg=-276556),cc=51069792,dcap=1648,fcap=1646
+[  109.353987] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743600,vmin=3738500),vsys(v=3735600,vmin=3729500),curr=-245616(avg=-276556),cc=51059234,dcap=1648,fcap=1646
+[  112.377371] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3744700,vmin=3739700),vsys(v=3736900,vmin=3730900),curr=-247996(avg=-276556),cc=51049010,dcap=1648,fcap=1646
+[  115.399446] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3745500,vmin=3740800),vsys(v=3738000,vmin=3732100),curr=-249424(avg=-276556),cc=51038782,dcap=1648,fcap=1646
+[  118.162442] udevd[1212]: starting version 3.2.9
+[  118.413045] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3746500,vmin=3741800),vsys(v=3739100,vmin=3733300),curr=-241808(avg=-276556),cc=51028586,dcap=1648,fcap=1646
+[  118.703414] udevd[1213]: starting eudev-3.2.9
+[  121.444291] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3747400,vmin=3742500),vsys(v=3740200,vmin=3734100),curr=-253232(avg=-276556),cc=51017796,dcap=1648,fcap=1646
+[  124.454653] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748400,vmin=3743400),vsys(v=3741400,vmin=3735100),curr=-259896(avg=-276556),cc=51007272,dcap=1648,fcap=1646
+[  127.305439] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  127.470468] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748700,vmin=3743600),vsys(v=3741700,vmin=3735100),curr=-247520(avg=-276556),cc=50996486,dcap=1648,fcap=1646
+[  129.708221] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  130.483169] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748900,vmin=3743700),vsys(v=3742000,vmin=3735200),curr=-249900(avg=-276556),cc=50986186,dcap=1648,fcap=1646
+[  132.119722] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  133.503832] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3746100,vmin=3743200),vsys(v=3738900,vmin=3734600),curr=-243236(avg=-276556),cc=50975994,dcap=1648,fcap=1646
+[  134.524356] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  136.515471] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3745100,vmin=3742000),vsys(v=3737700,vmin=3733200),curr=-248472(avg=-226100),cc=50965854,dcap=1648,fcap=1646
+[  136.927194] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  139.330425] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  139.527974] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3745000,vmin=3743000),vsys(v=3737700,vmin=3734400),curr=-235144(avg=-226100),cc=50956132,dcap=1648,fcap=1646
+[  141.737389] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  142.533168] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3744700,vmin=3742600),vsys(v=3737400,vmin=3734200),curr=-256088(avg=-226100),cc=50946046,dcap=1648,fcap=1646
+[  144.140825] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  145.328945] udevd[1692]: starting version 3.2.9
+[  145.543389] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3744700,vmin=3742500),vsys(v=3737300,vmin=3734100),curr=-247044(avg=-226100),cc=50935746,dcap=1648,fcap=1646
+[  145.917564] udevd[1693]: starting eudev-3.2.9
+[  146.544639] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  146.790224] udevd[1703]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/enabled} for writing: Permission denied
+[  146.857334] udevd[1703]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/authorized} for writing: Permission denied
+[  148.059615] udevd[1711]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: Permission denied
+[  148.230728] udevd[1711]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: Permission denied
+[  148.578199] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743700,vmin=3741500),vsys(v=3736100,vmin=3733000),curr=-277508(avg=-226100),cc=50925132,dcap=1648,fcap=1646
+[  148.950147] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  151.353738] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  151.590631] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743700,vmin=3741600),vsys(v=3736100,vmin=3733200),curr=-247996(avg=-226100),cc=50914114,dcap=1648,fcap=1646
+[  153.755886] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  154.615281] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743700,vmin=3741700),vsys(v=3736100,vmin=3733400),curr=-251328(avg=-226100),cc=50903734,dcap=1648,fcap=1646
+[  156.159407] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  157.625372] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743500,vmin=3742400),vsys(v=3736000,vmin=3734400),curr=-251328(avg=-226100),cc=50893422,dcap=1648,fcap=1646
+[  158.562046] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  160.634020] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743500,vmin=3742400),vsys(v=3736100,vmin=3734500),curr=-244188(avg=-226100),cc=50883306,dcap=1648,fcap=1646
+[  160.964001] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  163.365946] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  163.656027] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743600,vmin=3742300),vsys(v=3735800,vmin=3734300),curr=-249424(avg=-226100),cc=50873118,dcap=1648,fcap=1646
+[  165.768020] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  166.663285] bd71827-power bd_work_callback():soc(c=47,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743300,vmin=3742200),vsys(v=3735600,vmin=3734200),curr=-247044(avg=-226100),cc=50863078,dcap=1648,fcap=1646
+[  168.171193] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  169.673250] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743100,vmin=3742000),vsys(v=3735300,vmin=3734000),curr=-246568(avg=-226100),cc=50849486,dcap=1648,fcap=1646
+[  170.576000] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  172.683036] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743100,vmin=3742100),vsys(v=3735400,vmin=3734000),curr=-247044(avg=-226100),cc=50839290,dcap=1648,fcap=1646
+[  172.978011] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  175.379976] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  175.693028] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3742900,vmin=3742000),vsys(v=3735200,vmin=3733900),curr=-247044(avg=-226100),cc=50829058,dcap=1648,fcap=1646
+[  177.781844] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  178.703110] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743700,vmin=3742800),vsys(v=3736200,vmin=3734800),curr=-245140(avg=-226100),cc=50818902,dcap=1648,fcap=1646
+[  180.183899] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  181.713154] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743600,vmin=3743000),vsys(v=3736200,vmin=3735000),curr=-248472(avg=-226100),cc=50808678,dcap=1648,fcap=1646
+[  182.585886] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  184.723111] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743500,vmin=3743000),vsys(v=3736100,vmin=3735000),curr=-248472(avg=-226100),cc=50798370,dcap=1648,fcap=1646
+[  184.987907] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  187.389864] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  187.733123] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743500,vmin=3743000),vsys(v=3736000,vmin=3735000),curr=-249424(avg=-226100),cc=50788078,dcap=1648,fcap=1646
+[  189.792953] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  190.752333] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3743300,vmin=3742900),vsys(v=3735700,vmin=3734900),curr=-251804(avg=-226100),cc=50777762,dcap=1648,fcap=1646
+[  191.307890] [_lm3630a_set_FL-1123] led A c=12,b=4, led B c=0,b=0
+[  191.307910] _lm3630a_set_FL():FL PWR[ON] 
+[  191.420021] [_lm3630a_set_FL-1123] led A c=31,b=3, led B c=0,b=0
+[  191.463867] [_lm3630a_set_FL-1123] led A c=31,b=11, led B c=0,b=0
+[  191.504945] [_lm3630a_set_FL-1123] led A c=31,b=14, led B c=0,b=0
+[  191.564257] [_lm3630a_set_FL-1123] led A c=31,b=16, led B c=0,b=0
+[  191.609872] [_lm3630a_set_FL-1123] led A c=31,b=18, led B c=0,b=0
+[  191.652847] [_lm3630a_set_FL-1123] led A c=31,b=20, led B c=0,b=0
+[  191.695965] [_lm3630a_set_FL-1123] led A c=31,b=25, led B c=0,b=0
+[  191.738935] [_lm3630a_set_FL-1123] led A c=31,b=30, led B c=0,b=0
+[  191.781987] [_lm3630a_set_FL-1123] led A c=31,b=36, led B c=0,b=0
+[  191.825082] [_lm3630a_set_FL-1123] led A c=31,b=39, led B c=0,b=0
+[  191.871682] [_lm3630a_set_FL-1123] led A c=31,b=43, led B c=0,b=0
+[  191.917160] [_lm3630a_set_FL-1123] led A c=31,b=47, led B c=0,b=0
+[  191.959453] [_lm3630a_set_FL-1123] led A c=31,b=50, led B c=0,b=0
+[  192.002327] [_lm3630a_set_FL-1123] led A c=31,b=53, led B c=0,b=0
+[  192.045453] [_lm3630a_set_FL-1123] led A c=31,b=59, led B c=0,b=0
+[  192.088573] [_lm3630a_set_FL-1123] led A c=31,b=64, led B c=0,b=0
+[  192.131607] [_lm3630a_set_FL-1123] led A c=31,b=71, led B c=0,b=0
+[  192.174714] [_lm3630a_set_FL-1123] led A c=31,b=79, led B c=0,b=0
+[  192.195006] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  192.217753] [_lm3630a_set_FL-1123] led A c=31,b=86, led B c=0,b=0
+[  192.260758] [_lm3630a_set_FL-1123] led A c=31,b=92, led B c=0,b=0
+[  192.303661] [_lm3630a_set_FL-1123] led A c=31,b=98, led B c=0,b=0
+[  192.356766] [_lm3630a_set_FL-1123] led A c=31,b=102, led B c=0,b=0
+[  192.401445] [_lm3630a_set_FL-1123] led A c=31,b=108, led B c=0,b=0
+[  192.445905] [_lm3630a_set_FL-1123] led A c=31,b=109, led B c=0,b=0
+[  192.489974] [_lm3630a_set_FL-1123] led A c=31,b=113, led B c=0,b=0
+[  192.532860] [_lm3630a_set_FL-1123] led A c=31,b=114, led B c=0,b=0
+[  192.577972] [_lm3630a_set_FL-1123] led A c=31,b=117, led B c=0,b=0
+[  192.620929] [_lm3630a_set_FL-1123] led A c=31,b=119, led B c=0,b=0
+[  192.663843] [_lm3630a_set_FL-1123] led A c=31,b=121, led B c=0,b=0
+[  192.706801] [_lm3630a_set_FL-1123] led A c=31,b=123, led B c=0,b=0
+[  192.749515] [_lm3630a_set_FL-1123] led A c=31,b=124, led B c=0,b=0
+[  192.792404] [_lm3630a_set_FL-1123] led A c=31,b=125, led B c=0,b=0
+[  192.835734] [_lm3630a_set_FL-1123] led A c=31,b=127, led B c=0,b=0
+[  192.878820] [_lm3630a_set_FL-1123] led A c=31,b=128, led B c=0,b=0
+[  192.925827] [_lm3630a_set_FL-1123] led A c=31,b=130, led B c=0,b=0
+[  192.971217] [_lm3630a_set_FL-1123] led A c=31,b=132, led B c=0,b=0
+[  193.014291] [_lm3630a_set_FL-1123] led A c=31,b=133, led B c=0,b=0
+[  193.057275] [_lm3630a_set_FL-1123] led A c=31,b=136, led B c=0,b=0
+[  193.100371] [_lm3630a_set_FL-1123] led A c=31,b=139, led B c=0,b=0
+[  193.143269] [_lm3630a_set_FL-1123] led A c=31,b=141, led B c=0,b=0
+[  193.186366] [_lm3630a_set_FL-1123] led A c=31,b=142, led B c=0,b=0
+[  193.229436] [_lm3630a_set_FL-1123] led A c=31,b=144, led B c=0,b=0
+[  193.272308] [_lm3630a_set_FL-1123] led A c=31,b=146, led B c=0,b=0
+[  193.315524] [_lm3630a_set_FL-1123] led A c=31,b=147, led B c=0,b=0
+[  193.363301] [_lm3630a_set_FL-1123] led A c=31,b=149, led B c=0,b=0
+[  193.412775] [_lm3630a_set_FL-1123] led A c=31,b=150, led B c=0,b=0
+[  193.459814] [_lm3630a_set_FL-1123] led A c=31,b=152, led B c=0,b=0
+[  193.503565] [_lm3630a_set_FL-1123] led A c=31,b=154, led B c=0,b=0
+[  193.546643] [_lm3630a_set_FL-1123] led A c=31,b=155, led B c=0,b=0
+[  193.763155] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3744700,vmin=3743000),vsys(v=3737500,vmin=3735000),curr=-128044(avg=-226100),cc=50771508,dcap=1648,fcap=1646
+[  194.597101] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  194.960298] sy7636_get_temperature():temperature = 29,reg=0x1d
+[  196.419557] 
+[  196.419557] Bus freq set to 24000000 start...
+[  196.419829] 
+[  196.419829] Bus freq set to 24000000 done...
+[  196.596759] 
+[  196.596759] Bus freq set to 400000000 start...
+[  196.597049] 
+[  196.597049] Bus freq set to 400000000 done...
+[  196.779522] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3747100,vmin=3742300),vsys(v=3740400,vmin=3734200),curr=-139944(avg=-226100),cc=50761816,dcap=1648,fcap=1646
+[  196.999541] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  197.259525] 
+[  197.259525] Bus freq set to 24000000 start...
+[  197.259777] 
+[  197.259777] Bus freq set to 24000000 done...
+[  197.346445] 
+[  197.346445] Bus freq set to 400000000 start...
+[  197.346749] 
+[  197.346749] Bus freq set to 400000000 done...
+[  197.878655] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  197.904344] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  198.869607] 
+[  198.869607] Bus freq set to 24000000 start...
+[  198.869886] 
+[  198.869886] Bus freq set to 24000000 done...
+[  199.065135] 
+[  199.065135] Bus freq set to 400000000 start...
+[  199.065433] 
+[  199.065433] Bus freq set to 400000000 done...
+[  199.407954] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  199.793006] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748700,vmin=3741500),vsys(v=3742400,vmin=3733200),curr=-127568(avg=-241332),cc=50753258,dcap=1648,fcap=1646
+[  200.119157] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  200.168380] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  201.349072] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  201.374701] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  201.810000] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  202.256949] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  202.809523] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748700,vmin=3740700),vsys(v=3742400,vmin=3732200),curr=-245140(avg=-241332),cc=50742814,dcap=1648,fcap=1646
+[  203.440043] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  203.465776] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  204.211864] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  205.828065] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748500,vmin=3739200),vsys(v=3742100,vmin=3730300),curr=-272748(avg=-241332),cc=50731472,dcap=1648,fcap=1646
+[  206.614319] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  208.840886] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748400,vmin=3738900),vsys(v=3741800,vmin=3729900),curr=-257516(avg=-241332),cc=50720362,dcap=1648,fcap=1646
+[  209.016326] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  211.418490] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  211.860489] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748300,vmin=3738600),vsys(v=3741700,vmin=3729600),curr=-265132(avg=-241332),cc=50709410,dcap=1648,fcap=1646
+[  213.823221] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  214.873153] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3748100,vmin=3738400),vsys(v=3741500,vmin=3729300),curr=-267988(avg=-241332),cc=50698510,dcap=1648,fcap=1646
+[  216.225291] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  217.882946] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3747900,vmin=3738200),vsys(v=3741200,vmin=3729000),curr=-262276(avg=-241332),cc=50687578,dcap=1648,fcap=1646
+[  218.627381] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  220.895005] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3747100,vmin=3737000),vsys(v=3740200,vmin=3727600),curr=-331772(avg=-241332),cc=50675722,dcap=1648,fcap=1646
+[  221.029594] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  223.432317] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  223.909237] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=47),vbat(stat=(32,2),v=3745100,vmin=3735400),vsys(v=3737800,vmin=3725700),curr=-271796(avg=-241332),cc=50663014,dcap=1648,fcap=1646
+[  223.941219] [_lm3630a_set_FL-1123] led A c=31,b=155, led B c=0,b=0
+[  224.435861] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  225.809523] 
+[  225.809523] Bus freq set to 24000000 start...
+[  225.809811] 
+[  225.809811] Bus freq set to 24000000 done...
+[  225.841978] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  226.105922] 
+[  226.105922] Bus freq set to 400000000 start...
+[  226.106208] 
+[  226.106208] Bus freq set to 400000000 done...
+[  226.928640] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3744200,vmin=3734700),vsys(v=3736700,vmin=3724800),curr=-64260(avg=-241332),cc=50654840,dcap=1648,fcap=1646
+[  228.247085] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  228.279564] 
+[  228.279564] Bus freq set to 24000000 start...
+[  228.279822] 
+[  228.279822] Bus freq set to 24000000 done...
+[  228.606119] 
+[  228.606119] Bus freq set to 400000000 start...
+[  228.606417] 
+[  228.606417] Bus freq set to 400000000 done...
+[  229.419603] 
+[  229.419603] Bus freq set to 24000000 start...
+[  229.419881] 
+[  229.419881] Bus freq set to 24000000 done...
+[  229.525847] 
+[  229.525847] Bus freq set to 400000000 start...
+[  229.526142] 
+[  229.526142] Bus freq set to 400000000 done...
+[  229.939704] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3744700,vmin=3736900),vsys(v=3737300,vmin=3727600),curr=-109004(avg=-241332),cc=50649240,dcap=1648,fcap=1646
+[  230.649600] 
+[  230.649600] Bus freq set to 24000000 start...
+[  230.649894] 
+[  230.649894] Bus freq set to 24000000 done...
+[  230.671697] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  230.878426] 
+[  230.878426] Bus freq set to 400000000 start...
+[  230.878724] 
+[  230.878724] Bus freq set to 400000000 done...
+[  231.520239] 
+[  231.520239] Bus freq set to 24000000 start...
+[  231.520518] 
+[  231.520518] Bus freq set to 24000000 done...
+[  231.606272] 
+[  231.606272] Bus freq set to 400000000 start...
+[  231.606567] 
+[  231.606567] Bus freq set to 400000000 done...
+[  232.519789] 
+[  232.519789] Bus freq set to 24000000 start...
+[  232.520070] 
+[  232.520070] Bus freq set to 24000000 done...
+[  233.092107] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  233.203857] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3747200,vmin=3739300),vsys(v=3740400,vmin=3730500),curr=-84728(avg=-241332),cc=50643058,dcap=1648,fcap=1646
+[  233.208538] 
+[  233.208538] Bus freq set to 400000000 start...
+[  233.208719] 
+[  233.208719] Bus freq set to 400000000 done...
+[  234.429610] 
+[  234.429610] Bus freq set to 24000000 start...
+[  234.429890] 
+[  234.429890] Bus freq set to 24000000 done...
+[  234.525776] 
+[  234.525776] Bus freq set to 400000000 start...
+[  234.526057] 
+[  234.526057] Bus freq set to 400000000 done...
+[  235.419597] 
+[  235.419597] Bus freq set to 24000000 start...
+[  235.419887] 
+[  235.419887] Bus freq set to 24000000 done...
+[  235.512192] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  235.596474] 
+[  235.596474] Bus freq set to 400000000 start...
+[  235.596771] 
+[  235.596771] Bus freq set to 400000000 done...
+[  236.219938] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3749300,vmin=3742500),vsys(v=3743000,vmin=3734500),curr=-90440(avg=-241332),cc=50638840,dcap=1648,fcap=1646
+[  236.519794] 
+[  236.519794] Bus freq set to 24000000 start...
+[  236.520084] 
+[  236.520084] Bus freq set to 24000000 done...
+[  237.005325] 
+[  237.005325] Bus freq set to 400000000 start...
+[  237.005606] 
+[  237.005606] Bus freq set to 400000000 done...
+[  237.926831] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  238.509599] 
+[  238.509599] Bus freq set to 24000000 start...
+[  238.509889] 
+[  238.509889] Bus freq set to 24000000 done...
+[  238.596087] 
+[  238.596087] Bus freq set to 400000000 start...
+[  238.596374] 
+[  238.596374] Bus freq set to 400000000 done...
+[  239.239990] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3751200,vmin=3744500),vsys(v=3745400,vmin=3736900),curr=-121856(avg=-241332),cc=50633574,dcap=1648,fcap=1646
+[  239.509553] 
+[  239.509553] Bus freq set to 24000000 start...
+[  239.509798] 
+[  239.509798] Bus freq set to 24000000 done...
+[  239.595802] 
+[  239.595802] Bus freq set to 400000000 start...
+[  239.596099] 
+[  239.596099] Bus freq set to 400000000 done...
+[  240.333986] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  241.639634] 
+[  241.639634] Bus freq set to 24000000 start...
+[  241.639922] 
+[  241.639922] Bus freq set to 24000000 done...
+[  242.107080] 
+[  242.107080] Bus freq set to 400000000 start...
+[  242.107378] 
+[  242.107378] Bus freq set to 400000000 done...
+[  242.259838] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3753900,vmin=3745700),vsys(v=3748600,vmin=3738300),curr=-59500(avg=-241332),cc=50626884,dcap=1648,fcap=1646
+[  242.739600] 
+[  242.739600] Bus freq set to 24000000 start...
+[  242.739884] 
+[  242.739884] Bus freq set to 24000000 done...
+[  242.755243] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  243.025725] 
+[  243.025725] Bus freq set to 400000000 start...
+[  243.026007] 
+[  243.026007] Bus freq set to 400000000 done...
+[  243.899612] 
+[  243.899612] Bus freq set to 24000000 start...
+[  243.899900] 
+[  243.899900] Bus freq set to 24000000 done...
+[  244.024898] 
+[  244.024898] Bus freq set to 400000000 start...
+[  244.025173] 
+[  244.025173] Bus freq set to 400000000 done...
+[  244.599584] 
+[  244.599584] Bus freq set to 24000000 start...
+[  244.599862] 
+[  244.599862] Bus freq set to 24000000 done...
+[  245.024843] 
+[  245.024843] Bus freq set to 400000000 start...
+[  245.025137] 
+[  245.025137] Bus freq set to 400000000 done...
+[  245.183995] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  245.275787] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3756700,vmin=3747700),vsys(v=3752100,vmin=3740800),curr=-49980(avg=-241332),cc=50621368,dcap=1648,fcap=1646
+[  246.099622] 
+[  246.099622] Bus freq set to 24000000 start...
+[  246.099914] 
+[  246.099914] Bus freq set to 24000000 done...
+[  246.105454] 
+[  246.105454] Bus freq set to 400000000 start...
+[  246.105633] 
+[  246.105633] Bus freq set to 400000000 done...
+[  247.429629] 
+[  247.429629] Bus freq set to 24000000 start...
+[  247.429924] 
+[  247.429924] Bus freq set to 24000000 done...
+[  247.588790] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  247.606821] 
+[  247.606821] Bus freq set to 400000000 start...
+[  247.607062] 
+[  247.607062] Bus freq set to 400000000 done...
+[  248.289848] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3758700,vmin=3749700),vsys(v=3754500,vmin=3743200),curr=-108052(avg=-241332),cc=50616988,dcap=1648,fcap=1646
+[  248.774176] [_lm3630a_set_FL-1123] led A c=31,b=155, led B c=0,b=0
+[  250.000013] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  250.411324] [_lm3630a_set_FL-1123] led A c=31,b=154, led B c=0,b=0
+[  250.748200] [_lm3630a_set_FL-1123] led A c=31,b=152, led B c=0,b=0
+[  250.902543] [_lm3630a_set_FL-1123] led A c=31,b=150, led B c=0,b=0
+[  251.061392] [_lm3630a_set_FL-1123] led A c=31,b=149, led B c=0,b=0
+[  251.235675] [_lm3630a_set_FL-1123] led A c=31,b=147, led B c=0,b=0
+[  251.315501] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3759700,vmin=3750400),vsys(v=3755800,vmin=3744000),curr=-210392(avg=-241332),cc=50604810,dcap=1648,fcap=1646
+[  251.377649] [_lm3630a_set_FL-1123] led A c=31,b=146, led B c=0,b=0
+[  251.382522] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  251.531021] [_lm3630a_set_FL-1123] led A c=31,b=144, led B c=0,b=0
+[  251.535483] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  251.834779] [_lm3630a_set_FL-1123] led A c=31,b=142, led B c=0,b=0
+[  251.842456] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  251.993415] [_lm3630a_set_FL-1123] led A c=31,b=141, led B c=0,b=0
+[  252.300828] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  252.402318] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  252.471380] [_lm3630a_set_FL-1123] led A c=31,b=139, led B c=0,b=0
+[  252.798357] [_lm3630a_set_FL-1123] led A c=31,b=136, led B c=0,b=0
+[  252.912008] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  253.601012] [_lm3630a_set_FL-1123] led A c=31,b=133, led B c=0,b=0
+[  253.748731] [_lm3630a_set_FL-1123] led A c=31,b=132, led B c=0,b=0
+[  253.910099] [_lm3630a_set_FL-1123] led A c=31,b=130, led B c=0,b=0
+[  254.150304] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  254.243546] [_lm3630a_set_FL-1123] led A c=31,b=128, led B c=0,b=0
+[  254.325478] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3760600,vmin=3752100),vsys(v=3756700,vmin=3746100),curr=-216104(avg=-184212),cc=50595192,dcap=1648,fcap=1646
+[  254.401132] [_lm3630a_set_FL-1123] led A c=31,b=127, led B c=0,b=0
+[  254.582324] [_lm3630a_set_FL-1123] led A c=31,b=125, led B c=0,b=0
+[  254.679351] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  254.714620] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  254.738736] [_lm3630a_set_FL-1123] led A c=31,b=124, led B c=0,b=0
+[  254.804731] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  254.879450] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  255.062702] [_lm3630a_set_FL-1123] led A c=31,b=123, led B c=0,b=0
+[  255.173483] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  256.063475] [_lm3630a_set_FL-1123] led A c=31,b=121, led B c=0,b=0
+[  256.170164] sy7636_get_temperature():temperature = 30,reg=0x1e
+[  256.197330] [_lm3630a_set_FL-1123] led A c=31,b=119, led B c=0,b=0
+[  256.358659] [_lm3630a_set_FL-1123] led A c=31,b=117, led B c=0,b=0
+[  256.530634] [_lm3630a_set_FL-1123] led A c=31,b=114, led B c=0,b=0
+[  256.621406] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  256.679092] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  256.705793] [_lm3630a_set_FL-1123] led A c=31,b=113, led B c=0,b=0
+[  256.832090] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  256.879566] [_lm3630a_set_FL-1123] led A c=31,b=109, led B c=0,b=0
+[  257.138164] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  257.207314] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  257.339705] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3759400,vmin=3753700),vsys(v=3755200,vmin=3748000),curr=-238952(avg=-184212),cc=50585770,dcap=1648,fcap=1646
+[  257.390984] [_lm3630a_set_FL-1123] led A c=31,b=108, led B c=0,b=0
+[  257.878192] [_lm3630a_set_FL-1123] led A c=31,b=102, led B c=0,b=0
+[  258.335204] [_lm3630a_set_FL-1123] led A c=31,b=98, led B c=0,b=0
+[  258.513964] [_lm3630a_set_FL-1123] led A c=31,b=92, led B c=0,b=0
+[  258.667554] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  259.610010] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  259.799620] 
+[  259.799620] Bus freq set to 24000000 start...
+[  259.799893] 
+[  259.799893] Bus freq set to 24000000 done...
+[  259.836275] 
+[  259.836275] Bus freq set to 400000000 start...
+[  259.836548] 
+[  259.836548] Bus freq set to 400000000 done...
+[  260.358385] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3759100,vmin=3752500),vsys(v=3754900,vmin=3746500),curr=-105672(avg=-184212),cc=50577972,dcap=1648,fcap=1646
+[  262.033250] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  262.669609] 
+[  262.669609] Bus freq set to 24000000 start...
+[  262.669893] 
+[  262.669893] Bus freq set to 24000000 done...
+[  263.106635] 
+[  263.106635] Bus freq set to 400000000 start...
+[  263.106918] 
+[  263.106918] Bus freq set to 400000000 done...
+[  263.369532] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3759100,vmin=3751200),vsys(v=3754900,vmin=3745100),curr=-59976(avg=-184212),cc=50572008,dcap=1648,fcap=1646
+[  264.437387] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  265.464668] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  266.384731] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3757000,vmin=3748800),vsys(v=3752300,vmin=3742000),curr=-279412(avg=-184212),cc=50561618,dcap=1648,fcap=1646
+[  266.839619] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  269.241846] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  269.395221] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3756400,vmin=3747800),vsys(v=3751500,vmin=3740900),curr=-164696(avg=-184212),cc=50554502,dcap=1648,fcap=1646
+[  271.643905] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  272.405539] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3754700,vmin=3747800),vsys(v=3749400,vmin=3740800),curr=-155176(avg=-184212),cc=50547422,dcap=1648,fcap=1646
+[  274.045912] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  275.416053] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3753000,vmin=3746800),vsys(v=3747200,vmin=3739600),curr=-170408(avg=-184212),cc=50540202,dcap=1648,fcap=1646
+[  276.448132] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  278.103428] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[  278.103449] Wifi / BT power control 1
+[  278.103455] wifi 3v3 power on
+[  278.159158] Wifi On
+[  278.160360] _ntx_wifi_bt_power_ctrl() : done 
+[  278.237855] sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined range
+[  278.271202] mmc1: new high speed SDIO card at address 0001
+[  278.424305] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3750900,vmin=3744000),vsys(v=3744800,vmin=3736200),curr=-278936(avg=-184212),cc=50529720,dcap=1648,fcap=1646
+[  278.456665] RTL871X: module init start
+[  278.456693] RTL871X: rtl8189fs v4.3.24.1_16872.20160217
+[  278.456702] RTL871X: build time: Jun 12 2022 22:07:39
+[  278.464744] RTL871X: CHIP TYPE: RTL8188F
+[  278.465618] RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1 
+[  278.465643] RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+[  278.465874] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  278.467821] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  278.467832] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  278.468142] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  278.468153] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  278.468250] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  278.468320] RTL871X: EEPROM type is E-FUSE
+[  278.468719] RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0
+[  278.520127] RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98
+[  278.520151] RTL871X: Efuse Realmap:
+[  278.520161] 29 81 03 CC 00 00 50 00 00 00 04 CC 0A 0C 00 00
+[  278.520208] 1B 1C 1C 1D 1E 1E 20 21 22 23 23 22 FF FF FF FF
+[  278.520252] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520297] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520343] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520387] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520432] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520477] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520521] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520566] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520611] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.520655] FF FF FF FF FF FF FF FF 20 23 19 00 00 00 00 FF
+[  278.520700] FF 11 00 10 00 FF 00 FF 00 00 FF FF FF FF FF FF
+[  278.520744] 3E 10 01 02 23 FF FF FF 20 04 4C 02 79 F1 21 02
+[  278.520789] 0C 00 22 04 00 08 00 32 FF 21 02 0C 00 22 2A 01
+[  278.520833] 01 00 00 00 00 00 00 00 00 00 00 00 02 00 FF FF
+[  278.520877] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+[  278.520921] 00 EB 00 6E 01 00 00 00 00 FF 58 B0 D4 C1 6D 6C
+[  278.520966] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521010] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521055] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521100] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521144] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521189] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521234] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521278] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521323] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521368] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521412] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521457] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521502] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521546] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF
+[  278.521666] RTL871X: hal_com_config_channel_plan chplan:0x20
+[  278.521678] RTL871X: Hal_DetectWoWMode
+[  278.522825] RTL871X: kfree flag:1
+[  278.522835] RTL871X: bb_gain:3
+[  278.525264] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+[  278.525275] RTL871X: SetHwReg8188F: hci_sus_state=3
+[  278.526046] RTL871X: SetHwReg8188F: hci_sus_state=0
+[  278.526057] RTL871X: rtw_hal_read_chip_info in 60 ms
+[  278.526266] RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13
+[  278.527848] RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1
+[  278.529340] RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.
+[  278.529387] RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1
+[  278.530154] RTL871X: default power by rate loaded
+[  278.531384] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531401] RTL871X: unsupported channel: 114 at 5G
+[  278.531413] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531421] RTL871X: unsupported channel: 114 at 5G
+[  278.531431] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531439] RTL871X: unsupported channel: 114 at 5G
+[  278.531521] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531529] RTL871X: unsupported channel: 114 at 5G
+[  278.531540] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531547] RTL871X: unsupported channel: 114 at 5G
+[  278.531557] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531565] RTL871X: unsupported channel: 114 at 5G
+[  278.531649] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531657] RTL871X: unsupported channel: 114 at 5G
+[  278.531667] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531675] RTL871X: unsupported channel: 114 at 5G
+[  278.531686] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit
+[  278.531693] RTL871X: unsupported channel: 114 at 5G
+[  278.531867] RTL871X: default power limit loaded
+[  278.532227] RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:c1:6d:6c
+[  278.532458] RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+[  278.532564] RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:c1:6d:6c
+[  278.542671] RTL871X: oob_irq ZERO!
+[  278.542836] RTL871X: module init ret=0
+[  278.850904] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  279.234149] RTL871X: LeaveAllPowerSaveMode(eth0): bup=0 Skip!
+[  279.234177] RTL871X: rtw_wx_set_scan: bDriverStopped=True, bup=0, hw_init_completed=0
+[  280.094541] RTL871X: LeaveAllPowerSaveMode(eth0): bup=0 Skip!
+[  280.094570] RTL871X: rtw_wx_set_scan: bDriverStopped=True, bup=0, hw_init_completed=0
+[  280.575481] RTL871X: +871x_drv - drv_open, bup=0
+[  280.575802] RTL871X: FW does not exist before power on!!
+[  280.576621] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  280.578584] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  280.578595] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  280.578911] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  280.578921] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  280.579125] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  280.579136] RTL871X: Power on ok!
+[  280.579398] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[  280.579412] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768
+[  280.579425] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[  280.579434] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[  280.579442] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[  280.785144] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00040105
+[  280.785666] RTL871X: _8051Reset8188: Finish
+[  280.799426] RTL871X: _FWFreeToGo: Polling FW ready OK! (40, 20ms), REG_MCUFWDL:0x000401c6
+[  280.799446] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[  280.799457] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 220ms
+[  280.799466] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[  280.799522] RTL871X: HalDetectPwrDownMode(): PDN=0
+[  280.799531] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+[  281.254515] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  281.359464] RTL871X: ADAPTIVITY_VERSION 9.0
+[  281.359491] RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+[  281.359503] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+[  281.359511] RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+[  281.359522] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+[  281.360310] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  281.360364] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  281.432428] bd71827-power bd_work_callback():soc(c=46,v=47,clamp_soc=46),vbat(stat=(32,2),v=3749700,vmin=3743500),vsys(v=3743100,vmin=3735400),curr=-350812(avg=-184212),cc=50516924,dcap=1648,fcap=1646
+[  282.063345] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  282.063490] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:3
+[  282.063882] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8e070
+[  282.064647] RTL871X: MAC Address = 58:b0:d4:c1:6d:6c
+[  282.065707] RTL871X: -871x_drv - drv_open, bup=1
+[  282.076374] RTL871X: start rtl8188fs_xmit_thread(eth0)
+[  283.656548] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  284.060773] RTL871X: HwRateToMRate(): Non supported Rate [ff]!!!
+[  284.063330] RTL871X: ==>rtw_ps_processor .fw_state(8)
+[  284.063345] RTL871X: ==>ips_enter cnts:1
+[  284.063353] RTL871X: nolinked power save enter
+[  284.063361] RTL871X: ===> rtw_ips_pwr_down...................
+[  284.063369] RTL871X: ====> rtw_ips_dev_unload...
+[  284.074028] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+[  284.074042] RTL871X: SetHwReg8188F: hci_sus_state=3
+[  284.074806] RTL871X: SetHwReg8188F: hci_sus_state=0
+[  284.074817] RTL871X: <=== rtw_ips_pwr_down..................... in 10ms
+[  284.444941] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3748300,vmin=3740800),vsys(v=3741500,vmin=3731700),curr=-314636(avg=-184212),cc=50500416,dcap=1648,fcap=1646
+[  286.058677] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  287.454729] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3748200,vmin=3740400),vsys(v=3741400,vmin=3731100),curr=-208964(avg=-184212),cc=50491596,dcap=1648,fcap=1646
+[  288.460747] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  290.464672] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3746800,vmin=3740600),vsys(v=3739700,vmin=3731300),curr=-205156(avg=-184212),cc=50483532,dcap=1648,fcap=1646
+[  290.862694] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  291.645585] RTL871X: _rtw_pwr_wakeup call ips_leave....
+[  291.645613] RTL871X: ==>ips_leave cnts:1
+[  291.645621] RTL871X: ===>  rtw_ips_pwr_up..............
+[  291.645645] RTL871X: ===> ips_netdrv_open.........
+[  291.646032] RTL871X: FW does not exist before power on!!
+[  291.646806] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  291.648715] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  291.648749] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  291.649351] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  291.649366] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  291.650542] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  291.650566] RTL871X: Power on ok!
+[  291.650858] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[  291.650873] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768
+[  291.650887] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[  291.650895] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[  291.650902] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[  291.822150] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00040505
+[  291.822659] RTL871X: _8051Reset8188: Finish
+[  291.839387] RTL871X: _FWFreeToGo: Polling FW ready OK! (86, 20ms), REG_MCUFWDL:0x000405c6
+[  291.839406] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[  291.839417] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 190ms
+[  291.839425] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[  291.839481] RTL871X: HalDetectPwrDownMode(): PDN=0
+[  291.839492] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+[  292.318938] RTL871X: ADAPTIVITY_VERSION 9.0
+[  292.318964] RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+[  292.319023] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+[  292.319032] RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+[  292.319042] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+[  292.319857] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  292.319913] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  293.023027] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  293.023178] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:3
+[  293.023575] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8e070
+[  293.024628] RTL871X: <===  rtw_ips_pwr_up.............. in 1380ms
+[  293.024638] RTL871X: nolinked power save leave
+[  293.024747] RTL871X: ==> ips_leave.....LED(0x01028282)...
+[  293.264804] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  293.481950] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743000,vmin=3738300),vsys(v=3734700,vmin=3728200),curr=-364616(avg=-184212),cc=50470434,dcap=1648,fcap=1646
+[  294.549477] RTL871X: survey done event(d) band:0 for eth0
+[  294.549545] RTL871X: rtw_indicate_scan_done(eth0)
+[  294.562578] RTL871X: HwRateToMRate(): Non supported Rate [ff]!!!
+[  294.573684] RTL871X: ==>rtw_ps_processor .fw_state(8)
+[  294.573719] RTL871X: ==>ips_enter cnts:2
+[  294.573736] RTL871X: nolinked power save enter
+[  294.573752] RTL871X: ===> rtw_ips_pwr_down...................
+[  294.573769] RTL871X: ====> rtw_ips_dev_unload...
+[  294.613471] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0
+[  294.613493] RTL871X: SetHwReg8188F: hci_sus_state=3
+[  294.614310] RTL871X: SetHwReg8188F: hci_sus_state=0
+[  294.614323] RTL871X: <=== rtw_ips_pwr_down..................... in 40ms
+[  295.667708] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  296.494800] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743700,vmin=3737600),vsys(v=3735800,vmin=3727500),curr=-239904(avg=-184212),cc=50458562,dcap=1648,fcap=1646
+[  298.070059] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  299.505694] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743400,vmin=3736200),vsys(v=3735500,vmin=3725600),curr=-204204(avg=-184212),cc=50449142,dcap=1648,fcap=1646
+[  300.471925] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  302.514974] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742900,vmin=3734500),vsys(v=3735000,vmin=3723800),curr=-189448(avg=-184212),cc=50440346,dcap=1648,fcap=1646
+[  302.874144] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  305.276092] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  305.525058] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742500,vmin=3733900),vsys(v=3734500,vmin=3723200),curr=-195160(avg=-184212),cc=50432382,dcap=1648,fcap=1646
+[  307.678292] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  308.532965] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743500,vmin=3733700),vsys(v=3735700,vmin=3723000),curr=-245616(avg=-184212),cc=50421092,dcap=1648,fcap=1646
+[  310.080891] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  311.544766] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743400,vmin=3733600),vsys(v=3735700,vmin=3723000),curr=-313208(avg=-184212),cc=50410084,dcap=1648,fcap=1646
+[  311.810760] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  312.483017] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  314.555830] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743800,vmin=3734700),vsys(v=3736200,vmin=3724600),curr=-299880(avg=-184212),cc=50397690,dcap=1648,fcap=1646
+[  314.885195] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  316.550577] sy7636_get_temperature():temperature = 30,reg=0x1e
+[  317.287184] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  317.567693] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743300,vmin=3734100),vsys(v=3735500,vmin=3724100),curr=-262276(avg=-236096),cc=50386618,dcap=1648,fcap=1646
+[  319.689710] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  320.575195] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742300,vmin=3733200),vsys(v=3734300,vmin=3722900),curr=-261324(avg=-236096),cc=50375834,dcap=1648,fcap=1646
+[  322.091954] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  323.585147] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743400,vmin=3734500),vsys(v=3735500,vmin=3724700),curr=-278460(avg=-236096),cc=50364784,dcap=1648,fcap=1646
+[  324.494056] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  326.594965] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742300,vmin=3735300),vsys(v=3733900,vmin=3725600),curr=-266560(avg=-236096),cc=50353980,dcap=1648,fcap=1646
+[  326.896179] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  329.298429] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  329.605838] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741100,vmin=3735500),vsys(v=3732600,vmin=3725900),curr=-262752(avg=-236096),cc=50343024,dcap=1648,fcap=1646
+[  331.701078] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  332.615724] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3740200,vmin=3735600),vsys(v=3731400,vmin=3725900),curr=-267988(avg=-236096),cc=50332028,dcap=1648,fcap=1646
+[  334.103159] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  335.625031] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3739000,vmin=3734700),vsys(v=3730100,vmin=3724800),curr=-253708(avg=-236096),cc=50321004,dcap=1648,fcap=1646
+[  336.505138] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  338.635747] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3738100,vmin=3735300),vsys(v=3729000,vmin=3725700),curr=-266560(avg=-236096),cc=50309912,dcap=1648,fcap=1646
+[  338.907297] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  341.309621] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  341.647748] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3738700,vmin=3735900),vsys(v=3729800,vmin=3726500),curr=-267988(avg=-236096),cc=50298828,dcap=1648,fcap=1646
+[  343.711693] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  344.654929] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3738700,vmin=3736800),vsys(v=3729900,vmin=3727700),curr=-259896(avg=-236096),cc=50287940,dcap=1648,fcap=1646
+[  346.114026] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  347.669480] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3739500,vmin=3736600),vsys(v=3731000,vmin=3727600),curr=-209440(avg=-236096),cc=50277664,dcap=1648,fcap=1646
+[  348.516188] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  350.683376] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3740300,vmin=3736200),vsys(v=3732100,vmin=3727300),curr=-186592(avg=-236096),cc=50268088,dcap=1648,fcap=1646
+[  350.918677] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  353.320654] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  353.695189] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741300,vmin=3737100),vsys(v=3733700,vmin=3728400),curr=-190400(avg=-236096),cc=50259960,dcap=1648,fcap=1646
+[  355.722673] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  356.709917] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742700,vmin=3736700),vsys(v=3735500,vmin=3727900),curr=-206584(avg=-236096),cc=50250186,dcap=1648,fcap=1646
+[  358.124743] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  359.725395] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741900,vmin=3736000),vsys(v=3734300,vmin=3727100),curr=-212772(avg=-236096),cc=50240352,dcap=1648,fcap=1646
+[  360.527081] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  362.735029] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743000,vmin=3736000),vsys(v=3735700,vmin=3726900),curr=-204680(avg=-236096),cc=50230276,dcap=1648,fcap=1646
+[  362.928944] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  365.330919] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  365.745551] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743100,vmin=3735900),vsys(v=3735700,vmin=3726800),curr=-260372(avg=-236096),cc=50220000,dcap=1648,fcap=1646
+[  367.732983] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  368.754832] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742200,vmin=3735400),vsys(v=3734800,vmin=3726300),curr=-208488(avg=-236096),cc=50210820,dcap=1648,fcap=1646
+[  370.135458] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  371.765147] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743500,vmin=3735200),vsys(v=3736500,vmin=3726100),curr=-200872(avg=-236096),cc=50201226,dcap=1648,fcap=1646
+[  372.537562] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  374.775228] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3744500,vmin=3734800),vsys(v=3737600,vmin=3725600),curr=-207060(avg=-236096),cc=50191444,dcap=1648,fcap=1646
+[  374.939729] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  377.090862] sy7636_get_temperature():temperature = 30,reg=0x1e
+[  377.341768] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  377.785823] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3743100,vmin=3734800),vsys(v=3735800,vmin=3725400),curr=-241808(avg=-236096),cc=50181240,dcap=1648,fcap=1646
+[  379.230785] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  379.246346] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  379.743771] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  380.795884] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741900,vmin=3734400),vsys(v=3733900,vmin=3724600),curr=-287980(avg=-236096),cc=50169504,dcap=1648,fcap=1646
+[  382.145966] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  383.805312] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3740400,vmin=3733300),vsys(v=3732200,vmin=3723100),curr=-252756(avg=-250852),cc=50158600,dcap=1648,fcap=1646
+[  384.548025] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  386.814999] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3740400,vmin=3732800),vsys(v=3732300,vmin=3722600),curr=-237524(avg=-250852),cc=50147570,dcap=1648,fcap=1646
+[  386.950087] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  389.352332] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  389.824878] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741600,vmin=3734000),vsys(v=3733900,vmin=3724200),curr=-186592(avg=-250852),cc=50139764,dcap=1648,fcap=1646
+[  391.754549] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  392.834615] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741300,vmin=3734800),vsys(v=3733500,vmin=3725400),curr=-181356(avg=-250852),cc=50131748,dcap=1648,fcap=1646
+[  394.156972] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  395.843524] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742600,vmin=3735700),vsys(v=3735100,vmin=3726400),curr=-203728(avg=-250852),cc=50123760,dcap=1648,fcap=1646
+[  396.559121] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  398.855161] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3744400,vmin=3736900),vsys(v=3737400,vmin=3727700),curr=-205632(avg=-250852),cc=50115568,dcap=1648,fcap=1646
+[  398.965304] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  401.371582] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  401.863047] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3742700,vmin=3736000),vsys(v=3735100,vmin=3726400),curr=-349860(avg=-250852),cc=50103588,dcap=1648,fcap=1646
+[  403.775353] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  404.780429] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[  404.780477] RTL871X: _rtw_pwr_wakeup call ips_leave....
+[  404.780491] RTL871X: ==>ips_leave cnts:2
+[  404.780499] RTL871X: ===>  rtw_ips_pwr_up..............
+[  404.780524] RTL871X: ===> ips_netdrv_open.........
+[  404.780840] RTL871X: FW does not exist before power on!!
+[  404.781686] RTL871X: SetHwReg8188F: hci_sus_state=1
+[  404.783700] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1
+[  404.783710] RTL871X: SetHwReg8188F: hci_sus_state=2
+[  404.784042] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f
+[  404.784052] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.
+[  404.784150] RTL871X: PowerOnCheck: 0x1B8 test Pass.
+[  404.784160] RTL871X: Power on ok!
+[  404.784470] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3
+[  404.784484] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768
+[  404.784497] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=10, Date=22, Hour=17, Minute=28
+[  404.784506] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!
+[  404.784514] RTL871X: rtl8188f_FirmwareDownload by IO write!
+[  404.874130] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3741800,vmin=3735600),vsys(v=3733800,vmin=3725900),curr=-267988(avg=-250852),cc=50091652,dcap=1648,fcap=1646
+[  405.045608] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x00040505
+[  405.046129] RTL871X: _8051Reset8188: Finish
+[  405.059670] RTL871X: _FWFreeToGo: Polling FW ready OK! (62, 20ms), REG_MCUFWDL:0x000405c6
+[  405.059689] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !
+[  405.059700] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 280ms
+[  405.059709] RTL871X:  <=== rtl8188f_FirmwareDownload()
+[  405.059763] RTL871X: HalDetectPwrDownMode(): PDN=0
+[  405.059773] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.
+[  405.538589] RTL871X: ADAPTIVITY_VERSION 9.0
+[  405.538615] RTL871X: RTW_ADAPTIVITY_EN_ENABLE
+[  405.538627] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL
+[  405.538637] RTL871X: RTW_ADAPTIVITY_DML_DISABLE
+[  405.538647] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2
+[  405.539546] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  405.539605] RTL871X: pDM_Odm TxPowerTrackControl = 1
+[  406.177157] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  406.243178] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  406.243319] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:3
+[  406.243714] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8e070
+[  406.245192] RTL871X: <===  rtw_ips_pwr_up.............. in 1460ms
+[  406.245205] RTL871X: nolinked power save leave
+[  406.245320] RTL871X: ==> ips_leave.....LED(0x01028282)...
+[  406.245424] RTL871X: set_mode = IW_MODE_INFRA
+[  406.245601] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  406.259151] RTL871X: set bssid:00:00:00:00:00:00
+[  406.259340] RTL871X: =>rtw_wx_set_essid
+[  406.259358] RTL871X: ssid=, len=32
+[  406.259435] RTL871X: set ssid [] fw_state=0x00000008
+[  406.259446] RTL871X: Set SSID under fw_state=0x00000008
+[  406.259466] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: hotspot(0c:54:15:1c:2c:8a, ch1) rssi:-82
+[  406.259482] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: dragonn(d4:ca:6d:d0:8d:0d, ch9) rssi:-57
+[  406.259496] RTL871X: rtw_select_and_join_from_scanned_queue: candidate: dragonn(d4:ca:6d:d0:8d:0d, ch:9)
+[  406.259510] RTL871X: link to new AP
+[  406.259533] RTL871X: [HT] HAL Support STBC = 0x01
+[  406.259545] RTL871X: [HT] Declare supporting RX STBC = 1
+[  406.259599] RTL871X: rtw_chk_start_clnt_join(eth0) req: 9,0,0
+[  406.259610] RTL871X: rtw_chk_start_clnt_join(eth0) union: 9,0,0
+[  406.263482] RTL871X: <=rtw_wx_set_essid, ret 0
+[  406.279530] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[  406.307836] RTL871X: OnBeacon: beacon keys ready
+[  406.307866] RTL871X: link to new AP
+[  406.307878] RTL871X: start auth
+[  406.307897] RTL871X: issue_auth
+[  406.311860] RTL871X: OnAuthClient
+[  406.311881] RTL871X: auth success, start assoc
+[  406.311910] RTL871X: network.SupportedRates[0]=82
+[  406.311918] RTL871X: network.SupportedRates[1]=84
+[  406.311926] RTL871X: network.SupportedRates[2]=8B
+[  406.311933] RTL871X: network.SupportedRates[3]=96
+[  406.311940] RTL871X: network.SupportedRates[4]=0C
+[  406.311948] RTL871X: network.SupportedRates[5]=12
+[  406.311956] RTL871X: network.SupportedRates[6]=18
+[  406.311963] RTL871X: network.SupportedRates[7]=24
+[  406.311971] RTL871X: network.SupportedRates[8]=30
+[  406.311979] RTL871X: network.SupportedRates[9]=48
+[  406.311986] RTL871X: network.SupportedRates[10]=60
+[  406.311994] RTL871X: network.SupportedRates[11]=6C
+[  406.312003] RTL871X: bssrate_len = 12
+[  406.316758] RTL871X: OnAssocRsp
+[  406.316800] RTL871X: report_join_res(8)
+[  406.316816] RTL871X: rtw_joinbss_update_network
+[  406.316831] RTL871X: +rtw_update_ht_cap()
+[  406.316860] RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:d4:ca:6d:d0:8d:0d macid:0
+[  406.316870] RTL871X: rtw_joinbss_update_stainfo
+[  406.316890] RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff
+[  406.316903] RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3
+[  406.316913] RTL871X: ### Set STA_(0) info ###
+[  406.316926] RTL871X: assoc success
+[  406.317158] RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f
+[  406.318644] RTL871X: WMM(0): 0, a42b
+[  406.318711] RTL871X: WMM(1): 0, a44f
+[  406.318765] RTL871X: WMM(2): 0, 5e4322
+[  406.318818] RTL871X: WMM(3): 0, 2f3222
+[  406.318829] RTL871X: wmm_para_seq(0): 0
+[  406.318837] RTL871X: wmm_para_seq(1): 1
+[  406.318844] RTL871X: wmm_para_seq(2): 2
+[  406.318851] RTL871X: wmm_para_seq(3): 3
+[  406.318860] RTL871X: HTOnAssocRsp
+[  406.318923] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitmap:0x000ff005
+[  406.318938] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+[  406.318938]   ==> rssi_level:0, rate_bitmap:0x000ff005
+[  406.318953] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005
+[  406.319680] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=0x13
+[  406.319835] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000000
+[  406.320559] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)
+[  406.321235] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15
+[  406.321256] RTL871X: LocPsPoll: 2
+[  406.321268] RTL871X: LocNullData: 3
+[  406.321278] RTL871X: LocQosNull: 4
+[  406.321289] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)
+[  406.321414] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen(578), TotalPageNum(5)
+[  406.321428] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0
+[  406.321989] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1
+[  406.330904] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+[  406.330953] RTL871X: phydm_rssi_report mac_id:0, mac:d4:ca:6d:d0:8d:0d, rssi:50
+[  406.330966] RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:True, Firstcont:True
+[  406.510241] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4
+[  407.854500] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_SLEEP] macid=0, org reg_0x4d4=0x00000000
+[  407.856495] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=1 len=8
+[  407.884995] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3740200,vmin=3734100),vsys(v=3731800,vmin=3724000),curr=-440776(avg=-250852),cc=50077276,dcap=1648,fcap=1646
+[  408.239285] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+[  408.581158] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  408.983527] RTL871X: Drop duplicate management frame with seq_num = 3742.
+[  409.412685] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000001
+[  409.414629] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=2 len=8
+[  409.414783] RTL871X: survey done event(18) band:0 for eth0
+[  409.414819] RTL871X: rtw_indicate_scan_done(eth0)
+[  409.818701] RTL871X: send eapol packet
+[  409.818859] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  409.821148] RTL871X: recv eapol packet
+[  409.972864] RTL871X: rtw_wx_set_mlme
+[  409.972893] RTL871X: rtw_wx_set_mlme, cmd=0, reason=3
+[  409.972957] RTL871X: indicate disassoc
+[  409.973039] RTL871X: set bssid:00:00:00:00:00:00
+[  409.973142] RTL871X: =>rtw_wx_set_essid
+[  409.973157] RTL871X: ssid=�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD�, len=32
+[  409.973173] RTL871X: set ssid [�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD���W�Dra��] fw_state=0x00000008
+[  409.973182] RTL871X: Set SSID under fw_state=0x00000008
+[  409.973194] RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+[  409.973216] RTL871X: <=rtw_wx_set_essid, ret 0
+[  409.976601] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=3 len=8
+[  409.977303] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+[  409.977355] RTL871X: ### Clean STA_(0) info ###
+[  409.977375] RTL871X: free disconnecting network
+[  410.010821] RTL871X: wpa_set_auth_algs, AUTH_ALG_OPEN_SYSTEM
+[  410.010862] RTL871X: set_mode = IW_MODE_INFRA
+[  410.011987] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####
+[  410.012630] RTL871X: 
+[  410.012630]  wpa_ie(length:22):
+[  410.012653] RTL871X: 0x30 0x14 0x01 0x00 0x00 0x0f 0xac 0x04 
+[  410.012665] RTL871X: 0x01 0x00 0x00 0x0f 0xac 0x04 0x01 0x00 
+[  410.012675] RTL871X: 0x00 0x0f 0xac 0x02 0x00 0x00 0x00 0x00 
+[  410.012913] RTL871X: SetHwReg8188F, 6281, RCR= 7000604a
+[  410.012966] RTL871X: rtw_wx_set_freq: set to channel 9
+[  410.027389] RTL871X: =>rtw_wx_set_essid
+[  410.027414] RTL871X: ssid=dragonn, len=7
+[  410.027486] RTL871X: set ssid [dragonn] fw_state=0x00000808
+[  410.027496] RTL871X: Set SSID under fw_state=0x00000808
+[  410.027507] RTL871X: <=rtw_wx_set_essid, ret 0
+[  410.027760] RTL871X: set bssid:d4:ca:6d:d0:8d:0d
+[  410.027776] RTL871X: Set BSSID under fw_state=0x00000808
+[  410.920862] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3739300,vmin=3731800),vsys(v=3731000,vmin=3721200),curr=-420308(avg=-250852),cc=50058380,dcap=1648,fcap=1646
+[  410.983811] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  411.504543] RTL871X: survey done event(18) band:0 for eth0
+[  411.504613] RTL871X: [by_bssid:1][assoc_ssid:][to_roam:0] new candidate: dragonn(d4:ca:6d:d0:8d:0d, ch9) rssi:-26
+[  411.504636] RTL871X: rtw_select_and_join_from_scanned_queue: candidate: dragonn(d4:ca:6d:d0:8d:0d, ch:9)
+[  411.504659] RTL871X: link to new AP
+[  411.504688] RTL871X: [HT] HAL Support STBC = 0x01
+[  411.504708] RTL871X: [HT] Declare supporting RX STBC = 1
+[  411.504735] RTL871X: rtw_indicate_scan_done(eth0)
+[  411.506514] RTL871X: rtw_chk_start_clnt_join(eth0) req: 9,0,0
+[  411.506543] RTL871X: rtw_chk_start_clnt_join(eth0) union: 9,0,0
+[  411.530489] RTL871X: OnBeacon: beacon keys ready
+[  411.530538] RTL871X: link to new AP
+[  411.530560] RTL871X: start auth
+[  411.530593] RTL871X: issue_auth
+[  411.533312] RTL871X: OnAuthClient
+[  411.533343] RTL871X: auth success, start assoc
+[  411.533390] RTL871X: network.SupportedRates[0]=82
+[  411.533408] RTL871X: network.SupportedRates[1]=84
+[  411.533424] RTL871X: network.SupportedRates[2]=8B
+[  411.533440] RTL871X: network.SupportedRates[3]=96
+[  411.533456] RTL871X: network.SupportedRates[4]=0C
+[  411.533472] RTL871X: network.SupportedRates[5]=12
+[  411.533488] RTL871X: network.SupportedRates[6]=18
+[  411.533504] RTL871X: network.SupportedRates[7]=24
+[  411.533520] RTL871X: network.SupportedRates[8]=30
+[  411.533536] RTL871X: network.SupportedRates[9]=48
+[  411.533553] RTL871X: network.SupportedRates[10]=60
+[  411.533568] RTL871X: network.SupportedRates[11]=6C
+[  411.533587] RTL871X: bssrate_len = 12
+[  411.538817] RTL871X: OnAssocRsp
+[  411.538887] RTL871X: report_join_res(8)
+[  411.538915] RTL871X: rtw_joinbss_update_network
+[  411.538941] RTL871X: +rtw_update_ht_cap()
+[  411.539089] RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:d4:ca:6d:d0:8d:0d macid:0
+[  411.539111] RTL871X: rtw_joinbss_update_stainfo
+[  411.539148] RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff
+[  411.539173] RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3
+[  411.539192] RTL871X: ### Set STA_(0) info ###
+[  411.539217] RTL871X: assoc success
+[  411.539635] RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f
+[  411.547144] RTL871X: WMM(0): 0, a42b
+[  411.547947] RTL871X: WMM(1): 0, a44f
+[  411.548693] RTL871X: WMM(2): 0, 5e4322
+[  411.549160] RTL871X: WMM(3): 0, 2f3222
+[  411.549187] RTL871X: wmm_para_seq(0): 0
+[  411.549204] RTL871X: wmm_para_seq(1): 1
+[  411.549219] RTL871X: wmm_para_seq(2): 2
+[  411.549236] RTL871X: wmm_para_seq(3): 3
+[  411.549254] RTL871X: HTOnAssocRsp
+[  411.549392] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitmap:0x000ff005
+[  411.549423] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+[  411.549423]   ==> rssi_level:0, rate_bitmap:0x000ff005
+[  411.549455] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005
+[  411.550528] RTL871X: recv eapol packet
+[  411.550954] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=0x13
+[  411.558518] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000000
+[  411.559438] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)
+[  411.560106] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15
+[  411.560145] RTL871X: LocPsPoll: 2
+[  411.560167] RTL871X: LocNullData: 3
+[  411.560187] RTL871X: LocQosNull: 4
+[  411.560210] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)
+[  411.560415] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen(578), TotalPageNum(5)
+[  411.560443] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0
+[  411.560786] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1
+[  411.582558] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+[  411.582641] RTL871X: phydm_rssi_report mac_id:0, mac:d4:ca:6d:d0:8d:0d, rssi:50
+[  411.582669] RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:True, Firstcont:True
+[  411.601496] RTL871X: send eapol packet
+[  411.601618] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  411.610370] RTL871X: recv eapol packet
+[  411.611146] RTL871X: send eapol packet
+[  411.611264] RTL871X:  ~~~~set sta key:unicastkey
+[  411.611379] RTL871X:  ~~~~set sta key:groupkey
+[  411.611397] RTL871X: ==> rtw_set_key algorithm(4),keyid(1),key_mask(0)
+[  411.611990] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  411.612079] RTL871X: set pairwise key camid:4, addr:d4:ca:6d:d0:8d:0d, kid:0, type:AES
+[  411.614810] RTL871X: set group key camid:5, addr:d4:ca:6d:d0:8d:0d, kid:1, type:AES
+[  411.619211] RTL871X: SetHwReg8188F, 6274, RCR= 700060ce
+[  412.239295] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+[  412.241269] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x02, WirelessMode:0x0b, rate_bitmap:0x000ff000
+[  412.241290] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff
+[  412.241290]   ==> rssi_level:2, rate_bitmap:0x000ff000
+[  412.241305] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff000
+[  412.241442] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff000 init_rate=0x13
+[  412.999548] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+[  413.015303] RTL871X: OnAction_back
+[  413.015331] RTL871X: OnAction_back, action=0
+[  413.015383] RTL871X: issue_addba_rsp(eth0) ra=d4:ca:6d:d0:8d:0d status=0, tid=0, size=16
+[  413.039600] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0800) rate=0x0
+[  413.389770] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  413.934118] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3737000,vmin=3728700),vsys(v=3728100,vmin=3717500),curr=-508844(avg=-250852),cc=50039912,dcap=1648,fcap=1646
+[  414.239415] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!
+[  414.511750] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x0806) rate=0x0
+[  414.702654] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=4 len=4
+[  415.792236] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  416.239159] RTL871X: do rtw_gw_addr_query()RTL871X: rtw_gw_addr_query Gateway Mac:   d4:ca:6d:d0:8d:09
+[  416.239386] RTL871X: rtw_gw_addr_query Gateway IP:   192.168.88.1
+[  416.945817] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3734800,vmin=3727000),vsys(v=3725300,vmin=3715300),curr=-380324(avg=-250852),cc=50021838,dcap=1648,fcap=1646
+[  418.194666] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  419.955241] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3733100,vmin=3725000),vsys(v=3723200,vmin=3712900),curr=-371280(avg=-250852),cc=50006996,dcap=1648,fcap=1646
+[  420.597055] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  422.690445] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=5 len=4
+[  422.792668] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=6 len=4
+[  422.964953] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3730900,vmin=3721700),vsys(v=3720600,vmin=3708800),curr=-348432(avg=-250852),cc=49990572,dcap=1648,fcap=1646
+[  422.999702] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  425.402584] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  425.990713] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=46),vbat(stat=(32,2),v=3728300,vmin=3719700),vsys(v=3717400,vmin=3706200),curr=-337960(avg=-250852),cc=49975664,dcap=1648,fcap=1646
+[  426.239383] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  426.240880] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  427.025236] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[  427.025266] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  427.804961] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  428.239301] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  428.239333] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  429.005220] bd71827-power bd_work_callback():soc(c=46,v=45,clamp_soc=45),vbat(stat=(32,2),v=3725900,vmin=3717000),vsys(v=3714200,vmin=3702900),curr=-378420(avg=-250852),cc=49961656,dcap=1648,fcap=1646
+[  430.207403] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  430.239125] RTL871X: CurIGValue=61, EntryMinUndecoratedSmoothedPWDB = 52
+[  430.241586] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=52
+[  430.949112] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_LEAVE
+[  430.949142] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  430.951478] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_SLEEP] macid=0, org reg_0x4d4=0x00000000
+[  430.953455] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=7 len=8
+[  432.037915] bd71827-power bd_work_callback():soc(c=46,v=45,clamp_soc=45),vbat(stat=(32,2),v=3724100,vmin=3715900),vsys(v=3712000,vmin=3701600),curr=-359380(avg=-250852),cc=49949390,dcap=1648,fcap=1646
+[  432.533661] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x00000001
+[  432.536573] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=8 len=8
+[  432.537019] RTL871X: survey done event(17) band:0 for eth0
+[  432.537116] RTL871X: rtw_indicate_scan_done(eth0)
+[  432.610302] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  434.242748] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  434.242780] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  435.012919] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  435.044744] bd71827-power bd_work_callback():soc(c=46,v=45,clamp_soc=45),vbat(stat=(32,2),v=3723100,vmin=3714200),vsys(v=3711300,vmin=3699500),curr=-439348(avg=-250852),cc=49932288,dcap=1648,fcap=1646
+[  436.239161] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  437.415789] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  438.060789] bd71827-power bd_work_callback():soc(c=46,v=45,clamp_soc=45),vbat(stat=(32,2),v=3726000,vmin=3715300),vsys(v=3715000,vmin=3700800),curr=-212772(avg=-250852),cc=49921738,dcap=1648,fcap=1646
+[  438.239256] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  438.564032] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  439.818261] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  440.239256] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  441.074966] bd71827-power bd_work_callback():soc(c=46,v=45,clamp_soc=45),vbat(stat=(32,2),v=3727600,vmin=3718500),vsys(v=3717100,vmin=3705200),curr=-204680(avg=-250852),cc=49913236,dcap=1648,fcap=1646
+[  442.220887] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  442.239254] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  444.089502] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3731100,vmin=3722400),vsys(v=3721400,vmin=3710100),curr=-208964(avg=-250852),cc=49904836,dcap=1648,fcap=1646
+[  444.239140] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  444.623352] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  446.239248] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  447.025850] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  447.104983] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3732500,vmin=3725000),vsys(v=3723200,vmin=3713500),curr=-194208(avg=-303212),cc=49896466,dcap=1648,fcap=1646
+[  448.239255] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  448.640271] sy7636_get_temperature():temperature = 30,reg=0x1e
+[  449.428276] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  449.520935] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  450.115798] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3734500,vmin=3726100),vsys(v=3725700,vmin=3714900),curr=-251804(avg=-303212),cc=49887470,dcap=1648,fcap=1646
+[  450.239108] RTL871X: CurIGValue=52, EntryMinUndecoratedSmoothedPWDB = 50
+[  451.268560] RTL871X: recv eapol packet
+[  451.294333] RTL871X:  ~~~~set sta key:groupkey
+[  451.294366] RTL871X: ==> rtw_set_key algorithm(4),keyid(2),key_mask(0)
+[  451.294766] RTL871X: send eapol packet
+[  451.294861] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0
+[  451.296790] RTL871X: set group key camid:6, addr:d4:ca:6d:d0:8d:0d, kid:2, type:AES
+[  451.296887] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_TX_TRAFFIC_LEAVE
+[  451.296905] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2
+[  451.299276] RTL871X: SetHwReg8188F, 6274, RCR= 700760ce
+[  451.830836] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  452.239429] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE
+[  452.239507] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2
+[  453.124950] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3736400,vmin=3727600),vsys(v=3728000,vmin=3716800),curr=-337960(avg=-303212),cc=49877430,dcap=1648,fcap=1646
+[  454.233195] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  454.239244] RTL871X: CurIGValue=59, EntryMinUndecoratedSmoothedPWDB = 49
+[  454.242253] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=49
+[  456.134998] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3738600,vmin=3729400),vsys(v=3730800,vmin=3719200),curr=-197540(avg=-303212),cc=49869502,dcap=1648,fcap=1646
+[  456.239114] RTL871X: CurIGValue=49, EntryMinUndecoratedSmoothedPWDB = 41
+[  456.241584] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=41
+[  456.635902] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  458.239164] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 39
+[  459.039244] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  459.145096] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3740200,vmin=3731900),vsys(v=3732800,vmin=3722300),curr=-188496(avg=-303212),cc=49861436,dcap=1648,fcap=1646
+[  460.239120] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 45
+[  460.887474] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  461.441598] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  462.158874] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3742100,vmin=3732700),vsys(v=3735300,vmin=3723400),curr=-329868(avg=-303212),cc=49848954,dcap=1648,fcap=1646
+[  462.239149] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 45
+[  463.844149] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  464.239065] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 48
+[  464.241376] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=48
+[  465.166473] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3744000,vmin=3735600),vsys(v=3737300,vmin=3727100),curr=-196112(avg=-303212),cc=49840448,dcap=1648,fcap=1646
+[  466.239178] RTL871X: CurIGValue=48, EntryMinUndecoratedSmoothedPWDB = 47
+[  466.246625] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  468.186412] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3744200,vmin=3737300),vsys(v=3737300,vmin=3729300),curr=-193732(avg=-303212),cc=49832648,dcap=1648,fcap=1646
+[  468.239110] RTL871X: CurIGValue=48, EntryMinUndecoratedSmoothedPWDB = 41
+[  468.241644] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=41
+[  468.650462] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  470.239132] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 36
+[  471.056985] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  471.194506] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3744000,vmin=3736000),vsys(v=3736800,vmin=3727700),curr=-347956(avg=-303212),cc=49820588,dcap=1648,fcap=1646
+[  472.151546] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  472.239115] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 38
+[  473.461490] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  474.211220] bd71827-power bd_work_callback():soc(c=46,v=46,clamp_soc=45),vbat(stat=(32,2),v=3743900,vmin=3734700),vsys(v=3736600,vmin=3726000),curr=-193256(avg=-303212),cc=49810388,dcap=1648,fcap=1646
+[  474.239170] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 41
+[  475.864045] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  476.239116] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 41
+[  477.229927] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3744300,vmin=3735500),vsys(v=3737100,vmin=3727000),curr=-199444(avg=-303212),cc=49802508,dcap=1648,fcap=1646
+[  478.239107] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 41
+[  478.266942] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  480.239122] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 39
+[  480.245987] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3744400,vmin=3736700),vsys(v=3737200,vmin=3728300),curr=-197064(avg=-303212),cc=49794894,dcap=1648,fcap=1646
+[  480.669521] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  482.239172] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 41
+[  483.073057] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  483.211397] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  483.258812] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3745500,vmin=3737900),vsys(v=3738600,vmin=3729500),curr=-141372(avg=-303212),cc=49786526,dcap=1648,fcap=1646
+[  484.239158] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 40
+[  485.476062] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  486.239155] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 41
+[  486.269499] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3746400,vmin=3739100),vsys(v=3739900,vmin=3731000),curr=-126616(avg=-303212),cc=49781232,dcap=1648,fcap=1646
+[  487.879243] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  488.239116] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 41
+[  489.289797] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3747800,vmin=3740300),vsys(v=3741600,vmin=3732500),curr=-127568(avg=-303212),cc=49775990,dcap=1648,fcap=1646
+[  490.239158] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 40
+[  490.282057] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  492.239215] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 44
+[  492.305682] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3749700,vmin=3742900),vsys(v=3744100,vmin=3736000),curr=-140896(avg=-303212),cc=49770600,dcap=1648,fcap=1646
+[  492.686150] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  494.239159] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 40
+[  494.577852] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  495.089726] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  495.319866] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3750300,vmin=3744000),vsys(v=3745100,vmin=3737200),curr=-123760(avg=-303212),cc=49765146,dcap=1648,fcap=1646
+[  496.239178] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 39
+[  497.492752] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  498.239161] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 44
+[  498.339914] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3751100,vmin=3744800),vsys(v=3746200,vmin=3738400),curr=-128996(avg=-303212),cc=49759828,dcap=1648,fcap=1646
+[  499.895660] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  500.239192] RTL871X: CurIGValue=41, EntryMinUndecoratedSmoothedPWDB = 47
+[  500.241949] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=47
+[  501.359711] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3753000,vmin=3747400),vsys(v=3748300,vmin=3741500),curr=-125188(avg=-303212),cc=49752812,dcap=1648,fcap=1646
+[  502.239173] RTL871X: CurIGValue=47, EntryMinUndecoratedSmoothedPWDB = 40
+[  502.241841] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=40
+[  502.298716] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  504.239195] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 43
+[  504.379482] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3754000,vmin=3749700),vsys(v=3749700,vmin=3744400),curr=-122808(avg=-303212),cc=49747284,dcap=1648,fcap=1646
+[  504.702220] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  505.534686] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  506.239168] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 45
+[  507.105220] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  507.401197] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755100,vmin=3750700),vsys(v=3750900,vmin=3745600),curr=-122808(avg=-303212),cc=49742122,dcap=1648,fcap=1646
+[  508.239113] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 43
+[  508.650282] sy7636_get_temperature():temperature = 30,reg=0x1e
+[  509.508152] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  510.239162] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  510.419871] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756000,vmin=3750500),vsys(v=3752100,vmin=3745500),curr=-122808(avg=-184212),cc=49735724,dcap=1648,fcap=1646
+[  511.911324] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  512.239255] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  513.440514] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756200,vmin=3752200),vsys(v=3752300,vmin=3747900),curr=-128044(avg=-184212),cc=49730526,dcap=1648,fcap=1646
+[  514.239103] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  514.315161] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  516.184348] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  516.239148] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 41
+[  516.459420] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756500,vmin=3752400),vsys(v=3752200,vmin=3748100),curr=-123760(avg=-184212),cc=49725376,dcap=1648,fcap=1646
+[  516.718183] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  518.239162] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  519.123212] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  519.482589] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756600,vmin=3752400),vsys(v=3752300,vmin=3748000),curr=-120904(avg=-184212),cc=49719946,dcap=1648,fcap=1646
+[  520.239158] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 39
+[  521.526258] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  522.239180] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  522.503002] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756900,vmin=3752700),vsys(v=3752400,vmin=3748200),curr=-143276(avg=-184212),cc=49714368,dcap=1648,fcap=1646
+[  523.929319] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  524.239172] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  525.533795] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3757300,vmin=3752700),vsys(v=3752500,vmin=3748400),curr=-140896(avg=-184212),cc=49708878,dcap=1648,fcap=1646
+[  526.239194] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  526.332294] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  526.936363] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  528.239161] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  528.544924] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3757300,vmin=3753000),vsys(v=3752800,vmin=3748500),curr=-122332(avg=-184212),cc=49703760,dcap=1648,fcap=1646
+[  528.735103] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  530.239178] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 40
+[  531.138088] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  531.560277] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756800,vmin=3753100),vsys(v=3752400,vmin=3748400),curr=-145656(avg=-184212),cc=49698270,dcap=1648,fcap=1646
+[  532.239172] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 40
+[  533.540938] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  534.239190] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 44
+[  534.575496] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756800,vmin=3753400),vsys(v=3752500,vmin=3748800),curr=-121380(avg=-184212),cc=49693088,dcap=1648,fcap=1646
+[  535.943978] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[  536.239205] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  537.591323] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756700,vmin=3753200),vsys(v=3752400,vmin=3748600),curr=-136612(avg=-184212),cc=49687538,dcap=1648,fcap=1646
+[  537.688246] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  538.239056] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 39
+[  540.239190] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 33
+[  540.241986] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=33
+[  540.605513] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756700,vmin=3754100),vsys(v=3752300,vmin=3749700),curr=-126140(avg=-184212),cc=49682076,dcap=1648,fcap=1646
+[  542.239105] RTL871X: CurIGValue=33, EntryMinUndecoratedSmoothedPWDB = 32
+[  543.615651] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756700,vmin=3754200),vsys(v=3752200,vmin=3749700),curr=-135660(avg=-184212),cc=49676762,dcap=1648,fcap=1646
+[  544.239186] RTL871X: CurIGValue=33, EntryMinUndecoratedSmoothedPWDB = 36
+[  546.239158] RTL871X: CurIGValue=33, EntryMinUndecoratedSmoothedPWDB = 36
+[  546.629844] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756600,vmin=3753900),vsys(v=3752400,vmin=3749200),curr=-129472(avg=-184212),cc=49671068,dcap=1648,fcap=1646
+[  548.239156] RTL871X: CurIGValue=33, EntryMinUndecoratedSmoothedPWDB = 37
+[  549.649469] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756500,vmin=3754000),vsys(v=3752500,vmin=3749300),curr=-126140(avg=-184212),cc=49665582,dcap=1648,fcap=1646
+[  549.771507] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  550.239159] RTL871X: CurIGValue=33, EntryMinUndecoratedSmoothedPWDB = 40
+[  550.241811] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=40
+[  552.239183] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  552.669741] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756500,vmin=3754000),vsys(v=3752600,vmin=3749300),curr=-146132(avg=-184212),cc=49660096,dcap=1648,fcap=1646
+[  554.239157] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 41
+[  555.689861] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756300,vmin=3754100),vsys(v=3752600,vmin=3749300),curr=-146608(avg=-184212),cc=49654658,dcap=1648,fcap=1646
+[  556.239175] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  558.239176] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 36
+[  558.709667] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3756500,vmin=3753800),vsys(v=3752600,vmin=3748900),curr=-138516(avg=-184212),cc=49649208,dcap=1648,fcap=1646
+[  560.239119] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 41
+[  560.625812] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  561.728995] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755300,vmin=3752500),vsys(v=3751200,vmin=3747300),curr=-276556(avg=-184212),cc=49641156,dcap=1648,fcap=1646
+[  562.239172] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 39
+[  564.239194] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 41
+[  564.749689] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755300,vmin=3752400),vsys(v=3751000,vmin=3747200),curr=-122332(avg=-184212),cc=49635244,dcap=1648,fcap=1646
+[  566.239160] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 43
+[  567.769667] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755400,vmin=3752800),vsys(v=3751000,vmin=3747400),curr=-123760(avg=-184212),cc=49630074,dcap=1648,fcap=1646
+[  568.239195] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 41
+[  568.660293] sy7636_get_temperature():temperature = 30,reg=0x1e
+[  570.239273] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  570.789659] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755100,vmin=3751800),vsys(v=3750700,vmin=3746200),curr=-135184(avg=-184212),cc=49623764,dcap=1648,fcap=1646
+[  571.071212] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  572.239254] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 41
+[  573.809820] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755100,vmin=3751800),vsys(v=3750900,vmin=3746200),curr=-127568(avg=-136136),cc=49618442,dcap=1648,fcap=1646
+[  574.239157] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  576.239106] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  576.829840] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3755200,vmin=3752200),vsys(v=3750900,vmin=3746800),curr=-123284(avg=-136136),cc=49613272,dcap=1648,fcap=1646
+[  578.239148] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  579.849213] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3753200,vmin=3749900),vsys(v=3748000,vmin=3743900),curr=-352716(avg=-136136),cc=49604478,dcap=1648,fcap=1646
+[  580.239159] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 38
+[  582.239161] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 39
+[  582.335192] RTL871X: adaptive_early_32k(): bcn_cnt = 101
+[  582.869643] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3753100,vmin=3748700),vsys(v=3747900,vmin=3742200),curr=-145180(avg=-136136),cc=49596148,dcap=1648,fcap=1646
+[  584.239174] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 42
+[  585.889845] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3753300,vmin=3749000),vsys(v=3747900,vmin=3742400),curr=-125188(avg=-136136),cc=49590818,dcap=1648,fcap=1646
+[  586.239169] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 37
+[  588.239162] RTL871X: CurIGValue=40, EntryMinUndecoratedSmoothedPWDB = 40
+[  588.909933] bd71827-power bd_work_callback():soc(c=45,v=46,clamp_soc=45),vbat(stat=(32,2),v=3752900,vmin=3749100),vsys(v=3747200,vmin=3742400),curr=-134232(avg=-136136),cc=49585492,dcap=1648,fcap=1646

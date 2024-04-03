@@ -1,0 +1,185 @@
+In file included from include/linux/kernel.h:11,
+                 from include/asm-generic/bug.h:13,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/page-flags.h:9,
+                 from kernel/bounds.c:9:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CHK     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+In file included from include/linux/kernel.h:11,
+                 from include/linux/sched.h:17,
+                 from arch/arm/kernel/asm-offsets.c:14:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/file2alias.o
+  CHK     include/generated/asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  HOSTLD  scripts/mod/modpost
+  CHK     include/generated/compile.h
+  CC      init/main.o
+  AS      usr/initramfs_data.o
+  CC      init/do_mounts.o
+  CC      arch/arm/vfp/vfpmodule.o
+  LD      usr/built-in.o
+  AS      arch/arm/vfp/entry.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from init/main.c:15:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from init/do_mounts.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/kobject.h:20,
+                 from include/linux/device.h:17,
+                 from include/linux/node.h:17,
+                 from include/linux/cpu.h:16,
+                 from arch/arm/vfp/vfpmodule.c:12:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  UPD     include/generated/compile.h
+  CC      arch/arm/kernel/elf.o
+  LDS     arch/arm/vdso/vdso.lds
+  CC      arch/arm/mm/dma-mapping.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/sched.h:17,
+                 from arch/arm/kernel/elf.c:2:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CC      arch/arm/vdso/vgettimeofday.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/preempt.h:10,
+                 from include/linux/spinlock.h:50,
+                 from include/linux/mmzone.h:7,
+                 from include/linux/bootmem.h:7,
+                 from arch/arm/mm/dma-mapping.c:12:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+In file included from include/linux/kernel.h:11,
+                 from include/linux/rbtree.h:32,
+                 from include/linux/hrtimer.h:18,
+                 from arch/arm/vdso/vgettimeofday.c:19:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/ccJOFIMG.s: Assembler messages:
+/tmp/ccJOFIMG.s:328: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccJOFIMG.s:565: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccJOFIMG.s:683: Error: selected processor does not support `isb ' in ARM mode
+make[1]: *** [scripts/Makefile.build:259: arch/arm/vfp/vfpmodule.o] Błąd 1
+make: *** [Makefile:947: arch/arm/vfp] Błąd 2
+make: *** Oczekiwanie na niezakończone zadania....
+  CC      arch/arm/mm/extable.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from arch/arm/mm/extable.c:4:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/ccLIDNKL.s: Assembler messages:
+/tmp/ccLIDNKL.s:65: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:79: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccLIDNKL.s:82: Error: selected processor does not support `mrrc p15,1,r4,r5,c14' in ARM mode
+/tmp/ccLIDNKL.s:98: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:113: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:207: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:217: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:236: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:248: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:314: Error: selected processor does not support `dmb ish' in ARM mode
+/tmp/ccLIDNKL.s:325: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccLIDNKL.s:328: Error: selected processor does not support `mrrc p15,1,r6,r7,c14' in ARM mode
+/tmp/ccLIDNKL.s:347: Error: selected processor does not support `dmb ish' in ARM mode
+make[1]: *** [scripts/Makefile.build:259: arch/arm/vdso/vgettimeofday.o] Błąd 1
+make: *** [Makefile:947: arch/arm/vdso] Błąd 2
+  CC      arch/arm/mm/fault.o
+  AS      arch/arm/kernel/entry-common.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from arch/arm/mm/fault.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CC      arch/arm/kernel/irq.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/smp.h:11,
+                 from include/linux/kernel_stat.h:4,
+                 from arch/arm/kernel/irq.c:24:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CC      arch/arm/kernel/opcodes.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from arch/arm/kernel/opcodes.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/cckOHflA.s: Assembler messages:
+/tmp/cckOHflA.s:984: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cckOHflA.s:1145: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/cckOHflA.s:1188: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cckOHflA.s:1428: Error: selected processor does not support `cpsie i' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: init/main.o] Błąd 1
+make[1]: *** Oczekiwanie na niezakończone zadania....
+  CC      arch/arm/kernel/process.o
+/tmp/ccikPiHN.s: Assembler messages:
+/tmp/ccikPiHN.s:328: Error: selected processor does not support `cpsid i' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: arch/arm/kernel/irq.o] Błąd 1
+make[1]: *** Oczekiwanie na niezakończone zadania....
+  CC      arch/arm/mm/init.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/sched.h:17,
+                 from arch/arm/kernel/process.c:14:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CC      arch/arm/mm/iomap.o
+In file included from include/linux/kernel.h:11,
+                 from arch/arm/mm/init.c:10:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from arch/arm/mm/iomap.c:7:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/cchihclc.s: Assembler messages:
+/tmp/cchihclc.s:408: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/cchihclc.s:828: Error: selected processor does not support `dsb ishst' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: arch/arm/mm/fault.o] Błąd 1
+make[1]: *** Oczekiwanie na niezakończone zadania....
+/tmp/ccDpOlhH.s: Assembler messages:
+/tmp/ccDpOlhH.s:143: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccDpOlhH.s:155: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccDpOlhH.s:181: Error: selected processor does not support `cpsie f' in ARM mode
+/tmp/ccDpOlhH.s:204: Error: selected processor does not support `dsb st' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: arch/arm/kernel/process.o] Błąd 1
+make: *** [Makefile:947: arch/arm/kernel] Błąd 2
+make: *** [Makefile:947: init] Błąd 2
+make: *** [Makefile:947: arch/arm/mm] Błąd 2

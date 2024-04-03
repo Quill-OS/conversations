@@ -1,0 +1,41 @@
+dk@dk-ThinkPad-E560:~/nia/linux$ make kobo_nia_defconfig
+***
+*** Can't find default configuration "arch/x86/configs/kobo_nia_defconfig"!
+***
+make[1]: *** [scripts/kconfig/Makefile:94: kobo_nia_defconfig] Error 1
+make: *** [Makefile:692: kobo_nia_defconfig] Error 2
+dk@dk-ThinkPad-E560:~/nia/linux$ source ../../pmbootstrap/helpers/envkernel.sh
+[sudo] password for dk: 
+pmbootstrap envkernel.sh activated successfully.
+ * kernel source:  /home/dk/nia/linux
+ * output folder:  /home/dk/nia/linux/.output
+ * architecture:   arm (kobo-nia is armv7)
+ * cross compile:  armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10)
+ * aliases: make, kernelroot, pmbootstrap, pmbroot, run-script (see 'type make' etc.)
+ * run 'deactivate' to revert all env changes
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$ make kobo_nia_defconfig
+*** pmbootstrap envkernel.sh active for /home/dk/nia/linux! ***
+make: Entering directory '/mnt/linux'
+  GEN     Makefile
+arch/arm/configs/kobo_nia_defconfig:1964⚠️ override: reassigning to symbol TOUCHSCREEN_EKTF2127
+#
+# No change to .config
+#
+make: Leaving directory '/mnt/linux'
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$ make
+*** pmbootstrap envkernel.sh active for /home/dk/nia/linux! ***
+make: Entering directory '/mnt/linux'
+  GEN     Makefile
+  CALL    ../scripts/checksyscalls.sh
+  Kernel: arch/arm/boot/Image is ready
+  Kernel: arch/arm/boot/zImage is ready
+  DTC     arch/arm/boot/dts/imx6ull-kobo-nia.dtb
+make: Leaving directory '/mnt/linux'
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$ pmbootstrap build --envkernel linux-kobo-clara-mainline
+[23:37:21] WARNING: package devicepkg-dev: aport version 0.14.3-r0 is lower than 0.14.3-r1 from the binary repository. 0.14.3-r1 will be used when installing devicepkg-dev. See also: <https://postmarketos.org/warning-repo2>
+[23:37:21] WARNING: package binutils-armv7: aport version 2.40-r5 is lower than 2.40-r11 from the binary repository. 2.40-r11 will be used when installing binutils-armv7. See also: <https://postmarketos.org/warning-repo2>
+[23:37:21] (native) install bash bc bison devicepkg-dev findutils flex gmp-dev lzop mpc1-dev mpfr-dev openssl-dev perl binutils-armv7
+[23:37:22] (native) build armv7/linux-kobo-clara-mainline-6.3.0_p20230615233719-r0.apk
+[23:37:24] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[23:37:24] DONE!
+[envkernel] dk@dk-ThinkPad-E560:~/nia/linux$

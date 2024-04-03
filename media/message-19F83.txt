@@ -1,0 +1,19 @@
+```
+fuse: mountpoint is not empty
+fuse: if you are sure this is safe, use the 'nonempty' mount option
+ * Failed to mount GUI user application archive '/data/onboard/.apps/koreader/koreader.isa' at '/data/onboard/.apps/koreader/koreader'                                                   [ !! ]
+mount: mounting tmpfs on /data/onboard/.apps/koreader/koreader/etc failed: No such file or directory
+ * Failed to mount temporary filesystem at '/data/onboard/.apps/koreader/koreader/etc'.                                                                                                  [ !! ]
+mount: mounting tmpfs on /data/onboard/.apps/koreader/koreader/app-temp failed: No such file or directory
+ * Failed to mount temporary filesystem at '/data/onboard/.apps/koreader/koreader/app-temp'.                                                                                             [ !! ]
+mount: mounting tmpfs on /data/onboard/.apps/koreader/koreader/system-bin failed: No such file or directory
+ * Failed to mount temporary filesystem at '/data/onboard/.apps/koreader/koreader/system-bin'.                                                                                           [ !! ]
+touch: cannot touch '/data/onboard/.apps/koreader/koreader/system-bin/busybox': No such file or directory
+ * Failed to bind-mount and/or set up temporary BusyBox binary at '/data/onboard/.apps/koreader/koreader/system-bin/busybox'.                                                            [ !! ]
+/lib/rc/sh/openrc-run.sh: line 130: can't create /data/onboard/.apps/koreader/koreader/etc/passwd: nonexistent directory
+ * Failed to set up restricted authentication profile at '/data/onboard/.apps/koreader/koreader/etc'.                                                                                    [ !! ]
+/lib/rc/sh/openrc-run.sh: line 168: can't create /data/onboard/.apps/koreader/koreader/etc/group: nonexistent directory
+ * Failed to add 'input' group at /data/onboard/.apps/koreader/koreader/etc/group                                                                                                        [ !! ]
+mount: mounting /data/onboard on /data/onboard/.apps/koreader/koreader/system-onboard failed: No such file or directory
+ * Failed to mount system onboard storage at '/data/onboard/.apps/koreader/koreader/system-onboard'
+```

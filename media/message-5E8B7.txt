@@ -1,0 +1,124 @@
+Starting kernel ...                                                                            
+                                                                                               
+[    0.004774] /cpus/cpu@0 missing clock-frequency property                                    
+[    0.423802] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!                        
+[    0.423845] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!                     
+[    5.564608] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021cf
+[    5.575744] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V9
+[    5.640262] ==== calc_soc_by_voltageMethod E60U22 ====                                      
+[    5.871231] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requests
+[    5.886658] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22                
+[    5.893822] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAs
+[    5.908154] gpio-keys gpio-keys: Error applying setting, reverse things back                
+Linux inkbox 4.1.15 #1 SMP PREEMPT Sat Mar 5 23:20:59 CET 2022 armv7l GNU/Linux                
+InkBox OS, kernel build ANcD7evI, commit 0fc7867                                               
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>                             
+                                                                                               
+Checking filesystems ...                                                                       
+                                                                                               
+e2fsck 1.46.2 (28-Feb-2021)                                                                    
+/dev/mmcblk0p1: clean, 12/3840 files, 2246/15360 blocks                                        
+e2fsck 1.46.2 (28-Feb-2021)                                                                    
+/dev/mmcblk0p2: clean, 613/128016 files, 50287/512000 blocks                                   
+e2fsck 1.46.2 (28-Feb-2021)                                                                    
+/dev/mmcblk0p3: clean, 22/32768 files, 91784/131072 blocks                                     
+e2fsck 1.46.2 (28-Feb-2021)                                                                    
+/dev/mmcblk0p4: clean, 152/930240 files, 770833/3715712 blocks                                 
+                                                                                               
+(initrd) Hit any key to stop auto-boot ...                                                     
+Security policy not enforced; root access permitted.                                           
+Verifying root filesystem's digital signature ...                                              
+Done.                                                                                          
+losetup: /opt/modules.sqsh: No such file or directory                                          
+[   26.433159] blk-mq: bad return on queue: -5                                                 
+[   26.437391] blk_update_request: I/O error, dev loop5, sector 2                              
+[   26.443639] EXT3-fs (loop5): error: unable to read superblock                               
+[   26.478936] blk-mq: bad return on queue: -5                                                 
+[   26.483155] blk_update_request: I/O error, dev loop5, sector 2                              
+[   26.489164] EXT2-fs (loop5): error: unable to read superblock                               
+[   26.518794] blk-mq: bad return on queue: -5                                                 
+[   26.523008] blk_update_request: I/O error, dev loop5, sector 2                              
+[   26.529260] EXT4-fs (loop5): unable to read superblock                                      
+[   26.558890] blk-mq: bad return on queue: -5                                                 
+[   26.563110] blk_update_request: I/O error, dev loop5, sector 0                              
+[   26.569135] SQUASHFS error: squashfs_read_data failed to read block 0x0                     
+[   26.575775] squashfs: SQUASHFS error: unable to read squashfs_super_block                   
+[   26.609067] blk-mq: bad return on queue: -5                                                 
+[   26.613283] blk_update_request: I/O error, dev loop5, sector 0                              
+[   26.619294] FAT-fs (loop5): unable to read boot sector                                      
+[   26.648793] blk-mq: bad return on queue: -5                                                 
+[   26.653006] blk_update_request: I/O error, dev loop5, sector 0                              
+[   26.658998] FAT-fs (loop5): unable to read boot sector                                      
+mount: mounting /dev/loop5 on /mnt/modules failed: Invalid argument                            
+                                                                                               
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)                               
+                                                                                               
+ * /proc is already mounted                                                                    
+ * Mounting /run ...                                                                           
+ * /run/openrc: creating directory                                                             
+ * /run/lock: creating directory                                                               
+ * /run/lock: correcting owner                                                                 
+ * Caching service dependencies ...                                                            
+ [ ok ]                                                                                        
+ * Clock skew detected with `(null)'                                                           
+ * Adjusting mtime of `/run/openrc/deptree' to Sat Feb 19 17:24:50 2022                        
+ * WARNING: clock skew detected!                                                               
+ * Mounting debug filesystem ...                                                               
+ [ ok ]                                                                                        
+ * Mounting fuse control filesystem ...                                                        
+ [ ok ]                                                                                        
+ * Remounting devtmpfs on /dev ...                                                             
+ [ ok ]                                                                                        
+ * Mounting /dev/pts ...                                                                       
+ [ ok ]                                                                                        
+ * Mounting /dev/shm ...                                                                       
+ [ ok ]                                                                                        
+ * Starting udev ...                                                                           
+ [ ok ]                                                                                        
+ * WARNING: clock skew detected!                                                               
+insmod: ERROR: could not load module /modules/arcotg_udc.ko: No such file or directory         
+ [ !! ]                                                                                        
+ * ERROR: modules_init failed to start                                                         
+ * Mounting onboard storage filesystem ...                                                     
+ [ ok ]                                                                                        
+ * Splash screen ...                                                                           
+ [ ok ]                                                                                        
+ * Starting USBNet ...                                                                         
+ * USB networking is disabled. Please set the USBNET_ENABLE flag and try again.                
+ [ ok ]                                                                                        
+ * WARNING: clock skew detected!                                                               
+insmod: ERROR: could not load module /modules/arcotg_udc.ko: No such file or directory         
+ [ !! ]                                                                                        
+ * ERROR: modules_init failed to start                                                         
+ * Starting battery watchdog ...                                                               
+ [ ok ]                                                                                        
+ * Starting evtest watch ...                                                                   
+ [ ok ]                                                                                        
+ * Setting hostname ...                                                                        
+ [ ok ]                                                                                        
+ * Starting InkBox Daemon (ibxd) ...                                                           
+ [ ok ]                                                                                        
+ * Starting sleep timeout timer ...                                                            
+ [ ok ]                                                                                        
+ * Sleep mode timeout configuration setting is set to 'Never'. Not starting timer.             
+Setting up watches.                                                                            
+Watches established.                                                                           
+ * Checking for available updates ...                                                          
+Update skipped or no update available, aborting ...                                            
+ [ ok ]                                                                                        
+ * Waiting for a power button event to put the device to sleep ...                             
+ [ ok ]                                                                                        
+ * WARNING: wake_standby is already stopped                                                    
+Setting up watches.                                                                            
+Watches established.                                                                           
+ * Starting InkBox GUI ...                                                                     
+ * WARNING: xorg is already stopped                                                            
+ * Starting InkBox Daemon (ibxd) ...                                                           
+ [ ok ]                                                                                        
+/usr/bin/inkbox.sh: line 32: can't create /sys/class/leds/pmic_ledsb/brightness: nonexistent dy
+ [ ok ]                                                                                        
+                                                                                               
+Welcome to InkBox OS 1.9                                                                       
+Kernel 4.1.15 on armv7l (/dev/ttymxc0)                                                         
+                                                                                               
+kobo login: 

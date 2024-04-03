@@ -1,0 +1,65 @@
+From 15958a0e4c04b6b2b4788f695ce63e846f905dbe Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Sat, 1 Oct 2022 23:35:43 +0200
+Subject: [PATCH] small fixes for lockscreen
+
+---
+ src/settings/settings.cpp                       | 7 ++++++-
+ src/widgets/dialogs/powerDaemon/sleepdialog.cpp | 6 +++++-
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+diff --git a/src/settings/settings.cpp b/src/settings/settings.cpp
+index 54603e1..5f4d673 100644
+--- a/src/settings/settings.cpp
++++ b/src/settings/settings.cpp
+@@ -305,7 +305,7 @@ settings::settings(QWidget *parent) :
+     if(QFile(backgroundPath).exists() == false) {
+         writeFile(backgroundPath, "blank");
+     }
+-    QStringList backgroundOptions = {readFile(backgroundPath)};
++    QStringList backgroundOptions = {readFile(backgroundPath).replace("\n", "")};
+     if(backgroundOptions.contains("blank") == false) {
+         backgroundOptions.append("blank");
+     }
+@@ -774,6 +774,8 @@ void settings::on_setPasscodeBtn_clicked()
+     else {
+         showToastNative("Enable lock screen first");
+     }
++    // Notify power daemon of configuration update
++    writeFile("/mnt/onboard/.adds/inkbox/.config/20-sleep_daemon/updateConfig", "true");
+ }
+ 
+ void settings::on_enableLockscreenCheckBox_toggled(bool checked)
+@@ -794,6 +796,8 @@ void settings::on_enableLockscreenCheckBox_toggled(bool checked)
+             logDisabled(settingString, className);
+             string_writeconfig(".config/12-lockscreen/config", "false");
+         }
++        // Notify power daemon of configuration update
++        writeFile("/mnt/onboard/.adds/inkbox/.config/20-sleep_daemon/updateConfig", "true");
+     }
+ }
+ 
+@@ -1215,4 +1219,5 @@ void settings::changePassword() {
+ void settings::on_LockBackComboBox_activated(const QString &arg1)
+ {
+     writeFile(".config/12-lockscreen/background", arg1);
++    writeFile("/mnt/onboard/.adds/inkbox/.config/20-sleep_daemon/updateConfig", "true");
+ }
+diff --git a/src/widgets/dialogs/powerDaemon/sleepdialog.cpp b/src/widgets/dialogs/powerDaemon/sleepdialog.cpp
+index 6b5e806..b5619fb 100644
+--- a/src/widgets/dialogs/powerDaemon/sleepdialog.cpp
++++ b/src/widgets/dialogs/powerDaemon/sleepdialog.cpp
+@@ -30,5 +30,9 @@ void sleepDialog::launchSleepDialog()
+ void sleepDialog::hideSleepDialog()
+ {
+     log("Hiding sleep dialog", className);
+-    this->hide();
++    if(this->isHidden() == false) {
++        this->hide();
++    }
++    // Repaint things
++    qApp->processEvents();
+ }
+-- 
+2.37.3
+

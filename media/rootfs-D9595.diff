@@ -1,0 +1,239 @@
+diff --git a/etc/init.d/inkbox_gui b/etc/init.d/inkbox_gui
+index 6df16da..034823b 100755
+--- a/etc/init.d/inkbox_gui
++++ b/etc/init.d/inkbox_gui
+@@ -69,6 +69,10 @@ start() {
+ 		mount --bind /opt/storage /kobo/external_root/opt/storage
+ 		[ ! -e "/kobo/opt/version" ] && touch /kobo/opt/version
+ 		[ ! -e "/kobo/bin/kobo_config.sh" ] && touch /kobo/bin/kobo_config.sh
++		[ ! -e "/kobo/usr/share/zoneinfo" ] && mkdir -p /kobo/usr/share/zoneinfo
++		[ ! -e "/kobo/etc/localtime" ] && touch /kobo/etc/localtime
++		mount --bind /usr/share/zoneinfo /kobo/usr/share/zoneinfo
++		mount --bind /data/config/19-timezone/config /kobo/etc/localtime
+ 		mount --bind /opt/version /kobo/opt/version
+ 		mount --bind /bin/kobo_config.sh /kobo/bin/kobo_config.sh
+ 		mount --bind /opt/inkbox_device /kobo/opt/inkbox_device
+diff --git a/etc/init.d/sleep_standby.sh b/etc/init.d/sleep_standby.sh
+index 7288fa0..7f07105 100755
+--- a/etc/init.d/sleep_standby.sh
++++ b/etc/init.d/sleep_standby.sh
+@@ -1,7 +1,7 @@
+ #!/bin/sh
+ 
+-LOCKSCREEN=`cat /opt/config/12-lockscreen/config 2>/dev/null`
+-DEVICE=`cat /opt/inkbox_device`
++LOCKSCREEN=$(cat /opt/config/12-lockscreen/config 2>/dev/null)
++DEVICE=$(cat /opt/inkbox_device)
+ 
+ rc-service wake_standby stop
+ > /tmp/power
+@@ -20,7 +20,7 @@ sleep 1
+ chroot /kobo /usr/bin/fbgrab "/external_root/tmp/dump.png"
+ echo "true" > /tmp/sleep_mode
+ 
+-if [ "$LOCKSCREEN" == "true" ]; then
++if [ "${LOCKSCREEN}" == "true" ]; then
+ 	killall inkbox-bin
+ 	killall oobe-inkbox-bin
+ 	killall lockscreen-bin
+@@ -28,28 +28,56 @@ if [ "$LOCKSCREEN" == "true" ]; then
+ 	killall scribble
+ 	killall lightmaps
+ else
+-	kill -STOP `pidof inkbox-bin`
+-	kill -STOP `pidof oobe-inkbox-bin`
+-	kill -9 `pidof lockscreen-bin`
+-	kill -STOP `pidof calculator-bin`
+-	kill -STOP `pidof scribble`
+-	kill -STOP `pidof lightmaps`
++	kill -STOP $(pidof inkbox-bin)
++	kill -STOP $(pidof oobe-inkbox-bin)
++	kill -9 $(pidof lockscreen-bin)
++	kill -STOP $(pidof calculator-bin)
++	kill -STOP $(pidof scribble)
++	kill -STOP $(pidof lightmaps)
+ fi
+ 
+ /opt/bin/fbink/fbink -k -f -q
+ /opt/bin/fbink/fbink -t regular=/etc/init.d/splash.d/fonts/resources/inter-b.ttf,size=20 "Sleeping" -m -M -q
+ 
+ sleep 1
+-if [ "$DEVICE" != "n613" ]; then
+-	CURRENT_BRIGHTNESS=`cat /kobo/var/run/brightness`
+-	echo "$CURRENT_BRIGHTNESS" > /tmp/savedBrightness
++if [ "${DEVICE}" != "n613" ]; then
++	CURRENT_BRIGHTNESS=$(cat /kobo/var/run/brightness)
++	echo "${CURRENT_BRIGHTNESS}" > /tmp/savedBrightness
+ 	/opt/bin/cinematic-brightness.sh 0 1
+ else
+-	CURRENT_BRIGHTNESS=`cat /opt/config/03-brightness/config`
+-	echo "$CURRENT_BRIGHTNESS" > /tmp/savedBrightness
++	CURRENT_BRIGHTNESS=$(cat /opt/config/03-brightness/config)
++	echo "${CURRENT_BRIGHTNESS}" > /tmp/savedBrightness
+ 	/opt/bin/cinematic-brightness.sh 0 1
+ fi
+ 
++if [ "${DEVICE}" == "n873" ] || [ "${DEVICE}" == "n236" ] || [ "${DEVICE}" == "n306" ]; then
++	WIFI_MODULE="/modules/wifi/8189fs.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/drivers/mmc/card/sdio_wifi_pwr.ko"
++	WIFI_DEV="eth0"
++elif [ "${DEVICE}" == "n705" ] || [ "${DEVICE}" == "n905b" ] || [ "${DEVICE}" == "n905c" ] || [ "${DEVICE}" == "n613" ]; then
++	WIFI_MODULE="/modules/dhd.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/sdio_wifi_pwr.ko"
++	WIFI_DEV="eth0"
++elif [ "${DEVICE}" == "n437" ]; then
++	WIFI_MODULE="/modules/wifi/bcmdhd.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/drivers/mmc/card/sdio_wifi_pwr.ko"
++	WIFI_DEV="wlan0"
++else
++	WIFI_MODULE="/modules/dhd.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/sdio_wifi_pwr.ko"
++	WIFI_DEV="eth0"
++fi
++if [ "$(cat /sys/class/net/${WIFI_DEV}/operstate)" == "up" ]; then
++	echo "true" > /run/was_connected_to_wifi
++	killall -q dhcpcd wpa_supplicant
++	ifconfig "${WIFI_DEV}" down 2>/dev/null
++	if [ "${DEVICE}" == "n705" ] || [ "${DEVICE}" == "n905b" ] || [ "${DEVICE}" == "n905c" ] || [ "${DEVICE}" == "n613" ] || [ "${DEVICE}" == "n437" ]; then
++		wlarm_le down
++	fi
++	rmmod "${WIFI_MODULE}" 2> /dev/null
++	rmmod "${SDIO_WIFI_PWR_MODULE}" 2> /dev/null
++fi
++
+ echo "false" > /kobo/inkbox/remount
+ > /tmp/power
+ 
+diff --git a/etc/init.d/wake_standby.sh b/etc/init.d/wake_standby.sh
+index ebe716d..bcbbf3b 100755
+--- a/etc/init.d/wake_standby.sh
++++ b/etc/init.d/wake_standby.sh
+@@ -1,8 +1,8 @@
+ #!/bin/sh
+ 
+-DARK_MODE=`cat /kobo/mnt/onboard/.adds/inkbox/.config/10-dark_mode/config`
+-LOCKSCREEN=`cat /kobo/mnt/onboard/.adds/inkbox/.config/12-lockscreen/config`
+-DEVICE=`cat /opt/inkbox_device`
++DARK_MODE=$(cat /kobo/mnt/onboard/.adds/inkbox/.config/10-dark_mode/config)
++LOCKSCREEN=$(cat /kobo/mnt/onboard/.adds/inkbox/.config/12-lockscreen/config)
++DEVICE=$(cat /opt/inkbox_device)
+ 
+ rc-service sleep_standby stop
+ # Race condition
+@@ -13,37 +13,70 @@ echo "false" > /tmp/sleep_mode
+ 
+ cinematic_brightness() {
+ 	sleep 0.5
+-	SAVED_BRIGHTNESS=`cat /tmp/savedBrightness`
+-	/opt/bin/cinematic-brightness.sh "$SAVED_BRIGHTNESS" 0
++	SAVED_BRIGHTNESS=$(cat /tmp/savedBrightness)
++	/opt/bin/cinematic-brightness.sh "${SAVED_BRIGHTNESS}" 0
+ }
+ 
+-if [ "$DARK_MODE" == "true" ]; then
+-	if [ "$LOCKSCREEN" == "true" ]; then
++if [ "${DARK_MODE}" == "true" ]; then
++	if [ "${LOCKSCREEN}" == "true" ]; then
+ 		chroot /kobo /mnt/onboard/.adds/inkbox/inkbox.sh lockscreen
+ 	else
+ 		/opt/bin/fbink/fbink -k -f -h
+ 		/opt/bin/fbink/fbink -g file=/tmp/dump.png -h
+-		kill -CONT `pidof inkbox-bin`
+-		kill -CONT `pidof oobe-inkbox-bin`
+-		kill -CONT `pidof calculator-bin`
+-		kill -CONT `pidof scribble`
+-		kill -CONT `pidof lightmaps`
++		kill -CONT $(pidof inkbox-bin)
++		kill -CONT $(pidof oobe-inkbox-bin)
++		kill -CONT $(pidof calculator-bin)
++		kill -CONT $(pidof scribble)
++		kill -CONT $(pidof lightmaps)
+ 		cinematic_brightness
+ 	fi
+ else
+-        if [ "$LOCKSCREEN" == "true" ]; then
++        if [ "${LOCKSCREEN}" == "true" ]; then
+                 chroot /kobo /mnt/onboard/.adds/inkbox/inkbox.sh lockscreen
+         else
+ 		/opt/bin/fbink/fbink -k -f
+ 		/opt/bin/fbink/fbink -g file=/tmp/dump.png
+-		kill -CONT `pidof inkbox-bin`
+-		kill -CONT `pidof oobe-inkbox-bin`
+-		kill -CONT `pidof calculator-bin`
+-		kill -CONT `pidof scribble`
+-		kill -CONT `pidof lightmaps`
++		kill -CONT $(pidof inkbox-bin)
++		kill -CONT $(pidof oobe-inkbox-bin)
++		kill -CONT $(pidof calculator-bin)
++		kill -CONT $(pidof scribble)
++		kill -CONT $(pidof lightmaps)
+ 		cinematic_brightness
+ 	fi
+ fi
+ 
++if [ "${DEVICE}" == "n873" ] || [ "${DEVICE}" == "n236" ] || [ "${DEVICE}" == "n306" ]; then
++	WIFI_MODULE="/modules/wifi/8189fs.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/drivers/mmc/card/sdio_wifi_pwr.ko"
++	WIFI_DEV="eth0"
++elif [ "${DEVICE}" == "n705" ] || [ "${DEVICE}" == "n905b" ] || [ "${DEVICE}" == "n905c" ] || [ "${DEVICE}" == "n613" ]; then
++	WIFI_MODULE="/modules/dhd.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/sdio_wifi_pwr.ko"
++	WIFI_DEV="eth0"
++elif [ "${DEVICE}" == "n437" ]; then
++	WIFI_MODULE="/modules/wifi/bcmdhd.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/drivers/mmc/card/sdio_wifi_pwr.ko"
++	WIFI_DEV="wlan0"
++else
++	WIFI_MODULE="/modules/dhd.ko"
++	SDIO_WIFI_PWR_MODULE="/modules/sdio_wifi_pwr.ko"
++	WIFI_DEV="eth0"
++fi
++
++if grep -q "true" /run/was_connected_to_wifi; then
++	insmod "${SDIO_WIFI_PWR_MODULE}"
++	insmod "${WIFI_MODULE}"
++	# Race condition
++	sleep 1.5
++	ifconfig "${WIFI_DEV}" up
++	if [ "${DEVICE}" == "n705" ] || [ "${DEVICE}" == "n905b" ] || [ "${DEVICE}" == "n905c" ] || [ "${DEVICE}" == "n613" ] || [ "${DEVICE}" == "n437" ]; then
++		wlarm_le up
++	fi
++	ESSID=$(cat /data/config/17-wifi_connection_information/essid)
++	PASSPHRASE=$(cat /data/config/17-wifi_connection_information/passphrase)
++	/usr/local/bin/wifi/connect_to_network.sh "${ESSID}" "${PASSPHRASE}"
++	rm -f /run/was_connected_to_wifi
++fi
++
+ sleep 1
+ rc-service sleep_standby start
+diff --git a/etc/localtime b/etc/localtime
+new file mode 120000
+index 0000000..6cf5116
+--- /dev/null
++++ b/etc/localtime
+@@ -0,0 +1 @@
++/data/config/19-timezone/config
+\ No newline at end of file
+diff --git a/etc/ntp.conf b/etc/ntp.conf
+new file mode 100644
+index 0000000..3fc51a6
+--- /dev/null
++++ b/etc/ntp.conf
+@@ -0,0 +1,5 @@
++server 0.pool.ntp.org
++server 1.pool.ntp.org
++server 2.pool.ntp.org
++server 3.pool.ntp.org 
++
+diff --git a/usr/local/bin/wifi/connect_to_network.sh b/usr/local/bin/wifi/connect_to_network.sh
+index cfee408..3a4c407 100755
+--- a/usr/local/bin/wifi/connect_to_network.sh
++++ b/usr/local/bin/wifi/connect_to_network.sh
+@@ -76,3 +76,7 @@ if [ ${?} != 0 ]; then
+ 	cleanup
+ 	exit 1
+ fi
++
++# Sync time
++ntpd -n -q
++hwclock --systohc

@@ -1,0 +1,27 @@
+```
+insmod: ERROR: could not insert module /modules/fs/configfs/configfs.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/libcomposite.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/u_ether.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_ecm.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_eem.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_ecm_subset.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_rndis.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/legacy/g_ether.ko: Invalid module format
+ifconfig: SIOCGIFFLAGS: No such device
+ifconfig: SIOCSIFADDR: No such device
+ [ !! ]
+ * ERROR: usbnet failed to start
+ * WARNING: clock skew detected!
+ * Starting USBNet ...
+insmod: ERROR: could not insert module /modules/fs/configfs/configfs.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/libcomposite.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/u_ether.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_ecm.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_eem.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_ecm_subset.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_rndis.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/legacy/g_ether.ko: Invalid module format
+ifconfig: SIOCGIFFLAGS: No such device
+ifconfig: SIOCSIFADDR: No such device
+
+``` how do i add new modules

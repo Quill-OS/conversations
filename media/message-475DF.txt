@@ -1,0 +1,192 @@
+~ # umount -l /dev
+~ # umount -f /sys /proc /dev
+umount: can't unmount /sys: Invalid argument
+umount: can't unmount /proc: Invalid argument
+umount: can't unmount /dev: Invalid argument
+~ # /tmp/strace /etc/init.d/init
+execve("/etc/init.d/init", ["/etc/init.d/init"], 0x7e859e80 /* 8 vars */) = 0
+set_tls(0x32d30)                        = 0
+set_tid_address(0x32cbc)                = 208
+access("/opt/device", F_OK)             = 0
+open("/opt/device", O_RDONLY|O_LARGEFILE) = 3
+brk(NULL)                               = 0xdb5000
+brk(0xdb7000)                           = 0xdb7000
+mmap2(0xdb5000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xdb5000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f79000
+_llseek(3, 0, [5], SEEK_END)            = 0
+_llseek(3, 0, [5], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f78000
+readv(3, [{iov_base="n306", iov_len=4}, {iov_base="\n", iov_len=1024}], 2) = 5
+close(3)                                = 0
+munmap(0x76f79000, 4096)                = 0
+mount("proc", "/proc", "proc", MS_NOSUID, "") = 0
+mount("sysfs", "/sys", "sysfs", 0, "")  = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0x7ec778c0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 209
+close(4)                                = 0
+read(3, "", 4)                          = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(209, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 209
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=209, si_uid=0, si_status=0, si_utime=0, si_stime=1 /* 0.01 s */} ---
+nanosleep({tv_sec=1, tv_nsec=0}, 0x7ec778c0) = 0
+mount("devtmpfs", "/dev", "devtmpfs", 0, "") = 0
+mount("tmpfs", "/tmp", "tmpfs", 0, "size=16M") = 0
+sethostname("inkbox", 6)                = 0
+socket(AF_INET, SOCK_DGRAM, IPPROTO_IP) = 3
+ioctl(3, SIOCSIFFLAGS, {ifr_name="lo", ifr_flags=IFF_UP}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=0, ws_col=0, ws_xpixel=0, ws_ypixel=0}) = 0
+writev(1, [{iov_base="Interface 'lo': flags set to 000"..., iov_len=33}, {iov_base=".\n", iov_len=2}], 2Interface 'lo': flags .
+) = 35
+close(3)                                = 0
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/flags", 0755)               = -1 EEXIST (File exists)
+access("/mnt/flags/DISPLAY_DEBUG", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/flags/USBNET_DEVICE_ADDRESS", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/flags/USBNET_HOST_ADDRESS", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/flags/USBNET_IP", F_OK)    = -1 ENOENT (No such file or directory)
+access("/mnt/flags/MOUNT_RW", F_OK)     = -1 ENOENT (No such file or directory)
+access("/mnt/flags/LOGIN_SHELL", F_OK)  = 0
+open("/mnt/flags/LOGIN_SHELL", O_RDONLY|O_LARGEFILE) = 3
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f79000
+_llseek(3, 0, [5], SEEK_END)            = 0
+_llseek(3, 0, [5], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+readv(3, [{iov_base="fish", iov_len=4}, {iov_base="\n", iov_len=1024}], 2) = 5
+close(3)                                = 0
+munmap(0x76f79000, 4096)                = 0
+access("/mnt/flags/X11_START", F_OK)    = 0
+open("/mnt/flags/X11_START", O_RDONLY|O_LARGEFILE) = 3
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f79000
+_llseek(3, 0, [6], SEEK_END)            = 0
+_llseek(3, 0, [6], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+readv(3, [{iov_base="false", iov_len=5}, {iov_base="\n", iov_len=1024}], 2) = 6
+close(3)                                = 0
+munmap(0x76f79000, 4096)                = 0
+uname({sysname="Linux", nodename="inkbox", ...}) = 0
+access("/opt/build_id", F_OK)           = 0
+open("/opt/build_id", O_RDONLY|O_LARGEFILE) = 3
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f79000
+_llseek(3, 0, [9], SEEK_END)            = 0
+_llseek(3, 0, [9], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+readv(3, [{iov_base="HwPtQHnA", iov_len=8}, {iov_base="\n", iov_len=1024}], 2) = 9
+close(3)                                = 0
+munmap(0x76f79000, 4096)                = 0
+access("/opt/commit", F_OK)             = 0
+open("/opt/commit", O_RDONLY|O_LARGEFILE) = 3
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f79000
+_llseek(3, 0, [8], SEEK_END)            = 0
+_llseek(3, 0, [8], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+readv(3, [{iov_base="f25a068", iov_len=7}, {iov_base="\n", iov_len=1024}], 2) = 8
+close(3)                                = 0
+munmap(0x76f79000, 4096)                = 0
+writev(1, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2
+) = 1
+writev(1, [{iov_base="Linux inkbox #1 SMP PREEMPT Tue "..., iov_len=57}, {iov_base=" GNU/Linux\n", iov_len=11}], 2Linux inkboxx
+) = 68
+writev(1, [{iov_base="InkBox OS, kernel build HwPtQHnA"..., iov_len=48}, {iov_base="\n\n", iov_len=2}], 2InkBox OS, kernel bui8
+
+) = 50
+writev(1, [{iov_base="Copyright (C) 2021-2023 Nicolas "..., iov_len=66}, {iov_base="\n", iov_len=1}], 2Copyright (C) 2021-2023>
+) = 67
+writev(1, [{iov_base="\33[1m\33[32m * \33[0mChecking filesys"..., iov_len=40}, {iov_base="\n", iov_len=1}], 2 * Checking files.
+) = 41
+umount2("/mnt", 0)                      = 0
+writev(1, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2
+) = 1
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0x7ec77880, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 238
+close(4)                                = 0
+read(3, "", 4)                          = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(238, e2fsck 1.46.2 (28-Feb-2021)
+boot: clean, 20/3840 files, 3337/15360 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 238
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=238, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0x7ec77880, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 239
+close(4)                                = 0
+read(3, "", 4)                          = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(239, e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 497273/512000 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 239
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=239, si_uid=0, si_status=0, si_utime=2 /* 0.02 s */, si_stime=0} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0x7ec77880, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 240
+close(4)                                = 0
+read(3, "", 4)                          = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(240, e2fsck 1.46.2 (28-Feb-2021)
+rootfs: clean, 15/32768 files, 72774/131072 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 240
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=240, si_uid=0, si_status=0, si_utime=1 /* 0.01 s */, si_stime=1 /* 0-
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0x7ec77880, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 241
+close(4)                                = 0
+read(3, "", 4)                          = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(241, e2fsck 1.46.2 (28-Feb-2021)
+user: clean, 51/192768 files, 580920/769894 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 241
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=241, si_uid=0, si_status=0, si_utime=1 /* 0.01 s */, si_stime=0} ---
+writev(1, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2
+) = 1
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0x7ec77880, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 244
+close(4)                                = 0
+read(3, "", 4)                          = 0
+close(3)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=244, si_uid=0, si_status=0, si_utime=1 /* 0.01 s */, si_stime=0} ---
+wait4(244, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 244
+access("/mnt/flags/DONT_BOOT", F_OK)    = -1 ENOENT (No such file or directory)
+access("/mnt/flags/ENCRYPT_LOCK", F_OK) = -1 ENOENT (No such file or directory)
+umount2("/mnt", 0)                      = 0
+writev(1, [{iov_base="(initrd) Hit ENTER to stop auto-"..., iov_len=41}, {iov_base=NULL, iov_len=0}], 2(initrd) Hit ENTER to s1
+poll([{fd=0, events=POLLIN}], 1, 3000)  = 0 (Timeout)
+writev(1, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2
+) = 1
+writev(1, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2
+) = 1
+open("/dev/mmcblk0", O_RDONLY|O_LARGEFILE) = 3
+_llseek(3, 40894464, [40894464], SEEK_SET) = 0
+read(3, "rooted", 6)                    = 6
+close(3)                                = 0
+access("/opt/root", F_OK)               = 0
+open("/opt/root", O_RDONLY|O_LARGEFILE) = 3
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f79000
+_llseek(3, 0, [7], SEEK_END)            = 0
+_llseek(3, 0, [7], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+readv(3, [{iov_base="rooted", iov_len=6}, {iov_base="\n", iov_len=1024}], 2) = 7
+close(3)                                = 0
+munmap(0x76f79000, 4096)                = 0
+writev(1, [{iov_base="\33[1m\33[33m * \33[0mDevice is rooted"..., iov_len=63}, {iov_base="\n", iov_len=1}], 2 * Device is rooty
+) = 64
+open(NULL, O_RDONLY|O_NONBLOCK|O_LARGEFILE) = -1 EFAULT (Bad address)
+writev(2, [{iov_base="", iov_len=0}, {iov_base="open", iov_len=4}], 2open) = 4
+writev(2, [{iov_base="", iov_len=0}, {iov_base=":", iov_len=1}], 2:) = 1
+writev(2, [{iov_base="", iov_len=0}, {iov_base=" ", iov_len=1}], 2 ) = 1
+writev(2, [{iov_base="", iov_len=0}, {iov_base="Bad address", iov_len=11}], 2Bad address) = 11
+writev(2, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2
+) = 1
+exit_group(1)                           = ?
++++ exited with 1 +++
+~ # 

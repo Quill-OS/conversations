@@ -1,0 +1,1338 @@
+€øð€@€?Àq‚À²ïˆ€ø8ˆ>´óà@ý@0"Át…€€ð @ø‚R6øàÀ €   @ ÿ ÿðàüÀ `Ä@ø€
+ÀÀÇ@ €ÿ€áðb€ €þ€ðà€0ðø€|âð@
+
+U-Boot 2016.03-00075-g4c12101031 (Apr 19 2022 - 17:27:17 +0800)
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+CPU:   Commercial temperature grade (0C to 95C) at 30C
+Reset cause: POR
+Board: MX6ULL NTX
+I2C:   ready
+DRAM:  256 MiB
+force_idle_bus: sda=1 scl=0 sda.gp=0x15 scl.gp=0x14
+MMC:   board_mmc_init() : isd=1 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=268435456
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x8ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x8ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_early_init() RC5T619 INIT
+RC5T619_watchdog(1,32)
+ntx_hw_late_init()
+mmc read 0x8ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout: get partition:vfat fail !!
+ntx_config_fastboot_layout():3 mbr partition added
+fuse bank 0 offset 3 is 0x5C310030
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+473 bytes read in 33 ms (13.7 KiB/s)
+## Executing script at 80800000
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+Loading kernel
+5764384 bytes read in 386 ms (14.2 MiB/s)
+Loading DTB
+30628 bytes read in 58 ms (515.6 KiB/s)
+Loading initrd
+1473377 bytes read in 148 ms (9.5 MiB/s)
+Booting kernel
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x57f520 ]
+## Loading init Ramdisk from Legacy Image at 85000000 ...
+   Image Name:   uInitrd
+   Created:      2023-04-25  19:10:52 UTC
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1473313 Bytes = 1.4 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Loading Ramdisk to 8e5de000, end 8e745b21 ... OK
+   Loading Device Tree to 8e5d3000, end 8e5dd7a3 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #3-postmarketOS Tue Apr 25 18:36:24 UTC 2023
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Kobo Nia
+Memory policy: Data cache writeback
+cma: Reserved 64 MiB at 0x8a400000
+Zone ranges:
+  Normal   [mem 0x0000000080000000-0x000000008fffffff]
+  HighMem  empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000080000000-0x000000008fffffff]
+Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 65024
+Kernel command line: console=ttymxc0,115200 PMOS_NO_OUTPUT_REDIRECT
+Unknown kernel command line parameters "PMOS_NO_OUTPUT_REDIRECT", will be passed to user space.
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 178920K/262144K available (8192K kernel code, 1051K rwdata, 2220K rodata, 1024K init, 351K bss, 17688K reserved, 65536K cma-reserved, 0K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80100000 - 0x80100060
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor menu
+CPU identified as i.MX6ULL, silicon rev 1.1
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-3: IMX I2C adapter registered
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Trying to unpack rootfs image as initramfs...
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+fuse: init (API version 7.37)
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+io scheduler kyber registered
+mxs-dma 1804000.dma-apbh: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+Freeing initrd memory: 1440K
+imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+printk: console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+random: crng init done
+brd: module loaded
+loop: module loaded
+i2c_dev: i2c /dev entries driver
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered PF_PACKET protocol family
+mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+Registering SWP/SWPB emulation handler
+Loading compiled-in X.509 certificates
+imx_usb 2184000.usb: No over current polarity defined
+imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+mmc0: host does not support reading read-only switch, assuming write-enable
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+Freeing unused kernel image (initmem) memory: 1024K
+platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Run /init as init process
+cfg80211: failed to load regulatory.db
+ mmcblk0: p1 p2
+### postmarketOS initramfs ###
+Configuring kernel firmware image search path
+NOTE: Skipping framebuffer setup (deviceinfo_no_framebuffer)
+NOTE: Skipping framebuffer splashscreen (deviceinfo_no_framebuffer)
+Running initramfs hook: /hooks/80-start-epd.sh
+modprobe: can't load module mxc_epdc_drm (kernel/drivers/gpu/drm/mxc-epdc/mxc_epdc_drm.ko): No such file or directory
+/hooks/80-start-epd.sh: line 4: can't create /sys/bus/platform/drivers/mxc_epdc/bind: nonexistent directory
+Setup usb network
+  /using random self ethernet address
+sys/class/android_usb does not exusing random host ethernet address
+ist, skipping android_usb
+  Setting up an USB gadget through configfs
+usb0: HOST MAC 8a:a0:c7:f8:62:f3
+usb0: MAC 2e:8a:a3:5b:21:cd
+Starting unudhcpd
+  Using interface usb0
+  Starting the DHCP daemon
+Trying to start server with parameters: Server IP addr: 172.16.42.1:67, client IP addr: 172.16.42.2, interface: usb0
+Trying to bind to interface: usb0
+Server started!
+Mount boot partition (/dev/mmcblk0p1) to /boot (read-only)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+Extract /boot/initramfs-extra
+cpio: lib/ld-musl-armhf.so.1 not created: newer or same age file exists
+cpio: lib/libc.musl-armv7.so.1 not created: newer or same age file exists
+cpio: lib/libdevmapper.so.1.02 not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.modinfo not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.order not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols.bin not created: newer or same age file exists
+8723 blocks
+/init: line 382: cryptsetup: not found
+Mount root partition (/dev/mmcblk0p2) to /sysroot (read-only)
+Detected ext4 filesystem
+EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: none.
+EXT4-fs (mmcblk0p1): unmounting filesystem.
+Mount boot partition (/dev/mmcblk0p1) to /sysroot/boot (read-write)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.47.1 is starting up Linux 6.1.12 (armv7l)
+
+/lib/rc/sh/init.sh: line 15: can't create /dev/null: Read-only file system
+ * md5sum is missing, which suggests /usr is not mounted
+ * If you have separate /usr, it must be mounted by initramfs
+ * If not, you should check coreutils is installed correctly
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... [ ok ]
+ * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+/lib/rc/sh/gendepends.sh: line 53: can't create /dev/null: Read-only file system
+zram swap: activating with size: 180 MB
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Tue Apr 25 21:10:12 2023
+
+ * WARNING: clock skew detected!
+ * Mounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting security filesystem ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Waiting for uevents to be processed ... [ ok ]
+ * WARNING: clock skew detected!
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... * fstabinfo: empty fstab
+ [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+sysctl: error: 'kernel.unprivileged_bpf_disabled' is an unknown key
+ [ ok ]
+ * Migrating /var/lock to /run/lock ... [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * /run/dbus: creating directory
+ * /run/dbus: correcting owner
+ * Starting System Message Bus ... [ ok ]
+ * Loading nftables rules and starting firewall ... [ ok ]
+ * Starting haveged ... [ ok ]
+ * Could not find a wireless interface
+ * /var/run/wpa_supplicant: creating directory
+ * Starting WPA Supplicant ... [ ok ]
+ * Starting networkmanager ... [ ok ]
+ * Starting chronyd ... [ ok ]
+21:17:28.082645 Generating for kernel version: 6.1.12
+21:17:28.083114 Output directory: /boot
+21:17:28.083159 Unknown or no compression format set, using gzip
+21:17:28.088677 == Generating initramfs ==
+21:17:28.088825 - Using compression format gzip with level "default"
+21:17:28.088971 - Searching for directories specified in /usr/share/mkinitfs/dirs
+21:17:28.090337 -- Creating directories from: /usr/share/mkinitfs/dirs/00-initramfs-base.dirs
+21:17:28.091703 - Searching for directories specified in /etc/mkinitfs/dirs
+21:17:28.093624 - Searching for file lists from /usr/share/mkinitfs/files
+21:17:28.094243 -- Including files from: /usr/share/mkinitfs/files/00-initramfs-base.files
+21:17:28.190151 -- Including files from: /usr/share/mkinitfs/files/01-kobo-epdc-extractor.files
+21:17:28.203694 -- Including files from: /usr/share/mkinitfs/files/30-postmarketos-bootsplash.files
+21:17:28.232385 - Searching for file lists from /etc/mkinitfs/files
+21:17:28.234379 - Searching for hook scripts from /usr/share/mkinitfs/hooks
+21:17:28.235991 -- Including script: /usr/share/mkinitfs/hooks/80-start-epd.sh
+21:17:28.236296 - Searching for hook scripts from /etc/mkinitfs/hooks
+21:17:28.246101 - Searching for kernel modules from /usr/share/mkinitfs/modules
+21:17:28.249961 -- Including modules from: /usr/share/mkinitfs/modules/00-default.modules
+21:17:28.333866 - Searching for kernel modules from /etc/mkinitfs/modules
+21:17:28.356536 - Writing and verifying archive:  initramfs
+21:17:32.795813 initramfs completed in: 4.71s
+21:17:32.795934 Unknown or no compression format set, using gzip
+21:17:32.796026 == Generating initramfs-extra ==
+21:17:32.796103 - Using compression format gzip with level "default"
+21:17:32.796172 - Searching for file lists from /usr/share/mkinitfs/files-extra
+21:17:32.799620 -- Including files from: /usr/share/mkinitfs/files-extra/00-initramfs-extra-base.files
+21:17:33.006204 - Searching for file lists from /etc/mkinitfs/files-extra
+21:17:33.007654 - Searching for hook scripts from /usr/share/mkinitfs/hooks-extra
+21:17:33.009022 - Searching for hook scripts from /etc/mkinitfs/hooks-extra
+21:17:33.011874 - Searching for kernel modules from /usr/share/mkinitfs/modules-extra
+21:17:33.012080 -- Unable to find dir, skipping...
+21:17:33.014472 - Searching for kernel modules from /etc/mkinitfs/modules-extra
+21:17:33.014679 -- Unable to find dir, skipping...
+21:17:33.020792 - Writing and verifying archive:  initramfs-extra
+21:17:36.698754 initramfs-extra completed in: 3.90s
+21:17:36.698954 == Using boot-deploy to finalize/install files ==
+==> kernel: device-tree blob operations
+==> initramfs: creating uInitrd
+Image Name:   uInitrd
+Created:      Tue Apr 25 21:17:37 2023
+Image Type:   ARM Linux RAMDisk Image (uncompressed)
+Data Size:    1505581 Bytes = 1470.29 KiB = 1.44 MiB
+Load Address: 00000000
+Entry Point:  00000000
+==> kernel: creating uImage
+Image Name:   postmarketOS
+Created:      Tue Apr 25 21:17:37 2023
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    5764384 Bytes = 5629.28 KiB = 5.50 MiB
+Load Address: 80008000
+Entry Point:  80008000
+==> u-boot: creating FIT images
+==> Checking free space at /boot
+... OK!
+==> Installing: /boot/initramfs
+==> Installing: /boot/initramfs-extra
+==> Installing: /boot/imx6ull-kobo-nia.dtb
+==> Installing: /boot/uImage
+==> Installing: /boot/uInitrd
+21:17:41.283995 boot-deploy completed in: 4.58s
+21:17:41.310017 mkinitfs completed in: 13.23s
+ [ ok ]
+ * Starting kill-pbsplash ...killall: pbsplash: no process killed
+ * start-stop-daemon: failed to start `/usr/bin/killall'
+ * Failed to start kill-pbsplash
+ [ !! ]
+ * ERROR: kill-pbsplash failed to start
+ * Restoring rfkill configuration ... [ ok ]
+ssh-keygen: generating new host keys: RSA 
+
+U-Boot 2016.03-00075-g4c12101031 (Apr 19 2022 - 17:27:17 +0800)
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+CPU:   Commercial temperature grade (0C to 95C) at 35C
+Reset cause: POR
+Board: MX6ULL NTX
+I2C:   ready
+DRAM:  256 MiB
+force_idle_bus: sda=1 scl=0 sda.gp=0x15 scl.gp=0x14
+MMC:   board_mmc_init() : isd=1 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=268435456
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x8ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x8ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_early_init() RC5T619 INIT
+RC5T619_watchdog(1,32)
+ntx_hw_late_init()
+mmc read 0x8ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout: get partition:vfat fail !!
+ntx_config_fastboot_layout():3 mbr partition added
+fuse bank 0 offset 3 is 0x5C310030
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+473 bytes read in 34 ms (12.7 KiB/s)
+## Executing script at 80800000
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+Loading kernel
+5764384 bytes read in 386 ms (14.2 MiB/s)
+Loading DTB
+30628 bytes read in 54 ms (553.7 KiB/s)
+Loading initrd
+1505645 bytes read in 128 ms (11.2 MiB/s)
+Booting kernel
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x57f520 ]
+## Loading init Ramdisk from Legacy Image at 85000000 ...
+   Image Name:   uInitrd
+   Created:      2023-04-25  19:17:37 UTC
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1505581 Bytes = 1.4 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Loading Ramdisk to 8e5d6000, end 8e74592d ... OK
+   Loading Device Tree to 8e5cb000, end 8e5d57a3 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #3-postmarketOS Tue Apr 25 18:36:24 UTC 2023
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Kobo Nia
+Memory policy: Data cache writeback
+cma: Reserved 64 MiB at 0x8a400000
+Zone ranges:
+  Normal   [mem 0x0000000080000000-0x000000008fffffff]
+  HighMem  empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000080000000-0x000000008fffffff]
+Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 65024
+Kernel command line: console=ttymxc0,115200 PMOS_NO_OUTPUT_REDIRECT
+Unknown kernel command line parameters "PMOS_NO_OUTPUT_REDIRECT", will be passed to user space.
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 178888K/262144K available (8192K kernel code, 1051K rwdata, 2220K rodata, 1024K init, 351K bss, 17720K reserved, 65536K cma-reserved, 0K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80100000 - 0x80100060
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor menu
+CPU identified as i.MX6ULL, silicon rev 1.1
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-3: IMX I2C adapter registered
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Trying to unpack rootfs image as initramfs...
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+fuse: init (API version 7.37)
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+io scheduler kyber registered
+mxs-dma 1804000.dma-apbh: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+Freeing initrd memory: 1472K
+imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+printk: console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+random: crng init done
+brd: module loaded
+loop: module loaded
+i2c_dev: i2c /dev entries driver
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered PF_PACKET protocol family
+mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+Registering SWP/SWPB emulation handler
+Loading compiled-in X.509 certificates
+imx_usb 2184000.usb: No over current polarity defined
+imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+mmc0: host does not support reading read-only switch, assuming write-enable
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+Freeing unused kernel image (initmem) memory: 1024K
+platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+cfg80211: failed to load regulatory.db
+ mmcblk0: p1 p2
+Run /init as init process
+### postmarketOS initramfs ###
+Configuring kernel firmware image search path
+NOTE: Skipping framebuffer setup (deviceinfo_no_framebuffer)
+NOTE: Skipping framebuffer splashscreen (deviceinfo_no_framebuffer)
+Running initramfs hook: /hooks/80-start-epd.sh
+modprobe: can't load module mxc_epdc_drm (kernel/drivers/gpu/drm/mxc-epdc/mxc_epdc_drm.ko): No such file or directory
+/hooks/80-start-epd.sh: line 4: can't create /sys/bus/platform/drivers/mxc_epdc/bind: nonexistent diusing random self ethernet address
+rectory
+Setup usb network
+  /syusing random host ethernet address
+s/class/android_usb does not exist, skipping android_usb
+  Setting up an USB gadget through configfs
+usb0: HOST MAC 32:a5:c9:85:8c:95
+usb0: MAC 0e:dd:46:98:50:84
+Starting unudhcpd
+  Using interface usb0
+  Starting the DHCP daemon
+Trying to start server with parameters: Server IP addr: 172.16.42.1:67, client IP addr: 172.16.42.2, interface: usb0
+Trying to bind to interface: usb0
+Server started!
+Mount boot partition (/dev/mmcblk0p1) to /boot (read-only)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+Extract /boot/initramfs-extra
+cpio: lib/ld-musl-armhf.so.1 not created: newer or same age file exists
+cpio: lib/libc.musl-armv7.so.1 not created: newer or same age file exists
+cpio: lib/libdevmapper.so.1.02 not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.modinfo not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.order not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols.bin not created: newer or same age file exists
+8723 blocks
+/init: line 382: cryptsetup: not found
+Mount root partition (/dev/mmcblk0p2) to /sysroot (read-only)
+Detected ext4 filesystem
+EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+EXT4-fs (mmcblk0p2): recovery complete
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: none.
+EXT4-fs (mmcblk0p1): unmounting filesystem.
+Mount boot partition (/dev/mmcblk0p1) to /sysroot/boot (read-write)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): warning: mounting unchecked fs, running e2fsck is recommended
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.47.1 is starting up Linux 6.1.12 (armv7l)
+
+/lib/rc/sh/init.sh: line 15: can't create /dev/null: Read-only file system
+ * md5sum is missing, which suggests /usr is not mounted
+ * If you have separate /usr, it must be mounted by initramfs
+ * If not, you should check coreutils is installed correctly
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... [ ok ]
+ * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+/lib/rc/sh/gendepends.sh: line 53: can't create /dev/null: Read-only file system
+zram swap: activating with size: 180 MB
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Tue Apr 25 21:10:12 2023
+
+ * WARNING: clock skew detected!
+ * Mounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting security filesystem ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... * fstabinfo: empty fstab
+ [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+sysctl: error: 'kernel.unprivileged_bpf_disabled' is an unknown key
+ [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * /run/dbus: creating directory
+ * /run/dbus: correcting owner
+ * Starting System Message Bus ... [ ok ]
+ * Loading nftables rules and starting firewall ... [ ok ]
+ * Starting haveged ... [ ok ]
+ * Could not find a wireless interface
+ * /var/run/wpa_supplicant: creating directory
+ * Starting WPA Supplicant ... [ ok ]
+ * Starting networkmanager ... [ ok ]
+ * Starting chronyd ... [ ok ]
+ * Starting kill-pbsplash ...killall: pbsplash: no process killed
+ * start-stop-daemon: failed to start `/usr/bin/killall'
+ * Failed to start kill-pbsplash
+ [ !! ]
+ * ERROR: kill-pbsplash failed to start
+ * Restoring rfkill configuration ... [ ok ]
+ssh-keygen: generating new host keys: RSA ECDSA ED25519 
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]
+ * Activating swap devices ... [ ok ]
+zram swap: activating with size: 180 MB
+ * Loading zram module...
+modprobe: module zram not found in modules.dep
+ [ !! ]
+ * Swap->zram0
+zram-init: 
+cannot create /dev/zram0: /sys/class/zram-control missing
+ [ !! ]
+ * Starting local ... [ ok ]
+
+Welcome to postmarketOS
+Kernel 6.1.12 on an armv7l (/dev/ttymxc0)
+kobo-nia login: 
+
+U-Boot 2016.03-00075-g4c12101031 (Apr 19 2022 - 17:27:17 +0800)
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+CPU:   Commercial temperature grade (0C to 95C) at 34C
+Reset cause: POR
+Board: MX6ULL NTX
+I2C:   ready
+DRAM:  256 MiB
+force_idle_bus: sda=1 scl=0 sda.gp=0x15 scl.gp=0x14
+MMC:   board_mmc_init() : isd=1 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=268435456
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x8ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x8ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_early_init() RC5T619 INIT
+RC5T619_watchdog(1,32)
+ntx_hw_late_init()
+mmc read 0x8ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout: get partition:vfat fail !!
+ntx_config_fastboot_layout():3 mbr partition added
+fuse bank 0 offset 3 is 0x5C310030
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+473 bytes read in 34 ms (12.7 KiB/s)
+## Executing script at 80800000
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+Loading kernel
+5764384 bytes read in 386 ms (14.2 MiB/s)
+Loading DTB
+30628 bytes read in 54 ms (553.7 KiB/s)
+Loading initrd
+1505645 bytes read in 128 ms (11.2 MiB/s)
+Booting kernel
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x57f520 ]
+## Loading init Ramdisk from Legacy Image at 85000000 ...
+   Image Name:   uInitrd
+   Created:      2023-04-25  19:17:37 UTC
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1505581 Bytes = 1.4 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Loading Ramdisk to 8e5d6000, end 8e74592d ... OK
+   Loading Device Tree to 8e5cb000, end 8e5d57a3 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #3-postmarketOS Tue Apr 25 18:36:24 UTC 2023
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Kobo Nia
+Memory policy: Data cache writeback
+cma: Reserved 64 MiB at 0x8a400000
+Zone ranges:
+  Normal   [mem 0x0000000080000000-0x000000008fffffff]
+  HighMem  empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000080000000-0x000000008fffffff]
+Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 65024
+Kernel command line: console=ttymxc0,115200 PMOS_NO_OUTPUT_REDIRECT
+Unknown kernel command line parameters "PMOS_NO_OUTPUT_REDIRECT", will be passed to user space.
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 178888K/262144K available (8192K kernel code, 1051K rwdata, 2220K rodata, 1024K init, 351K bss, 17720K reserved, 65536K cma-reserved, 0K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80100000 - 0x80100060
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor menu
+CPU identified as i.MX6ULL, silicon rev 1.1
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-3: IMX I2C adapter registered
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Trying to unpack rootfs image as initramfs...
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+fuse: init (API version 7.37)
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+io scheduler kyber registered
+mxs-dma 1804000.dma-apbh: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+Freeing initrd memory: 1472K
+imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+printk: console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+random: crng init done
+brd: module loaded
+loop: module loaded
+i2c_dev: i2c /dev entries driver
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered PF_PACKET protocol family
+mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+Registering SWP/SWPB emulation handler
+Loading compiled-in X.509 certificates
+imx_usb 2184000.usb: No over current polarity defined
+imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+mmc0: host does not support reading read-only switch, assuming write-enable
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+Freeing unused kernel image (initmem) memory: 1024K
+platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+cfg80211: failed to load regulatory.db
+ mmcblk0: p1 p2
+Run /init as init process
+### postmarketOS initramfs ###
+Configuring kernel firmware image search path
+NOTE: Skipping framebuffer setup (deviceinfo_no_framebuffer)
+NOTE: Skipping framebuffer splashscreen (deviceinfo_no_framebuffer)
+Running initramfs hook: /hooks/80-start-epd.sh
+modprobe: can't load module mxc_epdc_drm (kernel/drivers/gpu/drm/mxc-epdc/mxc_epdc_drm.ko): No such file or directory
+/hooks/80-start-epd.sh: line 4: can't create /sys/bus/platform/drivers/mxc_epdc/bind: nonexistent diusing random self ethernet address
+rectory
+Setup usb network
+  /syusing random host ethernet address
+s/class/android_usb does not exist, skipping android_usb
+  Setting up an USB gadget through configfs
+usb0: HOST MAC 1e:16:50:40:7b:56
+usb0: MAC ba:15:f8:c8:73:b6
+Starting unudhcpd
+  Using interface usb0
+  Starting the DHCP daemon
+Trying to start server with parameters: Server IP addr: 172.16.42.1:67, client IP addr: 172.16.42.2, interface: usb0
+Trying to bind to interface: usb0
+Server started!
+Mount boot partition (/dev/mmcblk0p1) to /boot (read-only)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+Extract /boot/initramfs-extra
+cpio: lib/ld-musl-armhf.so.1 not created: newer or same age file exists
+cpio: lib/libc.musl-armv7.so.1 not created: newer or same age file exists
+cpio: lib/libdevmapper.so.1.02 not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.modinfo not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.order not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols.bin not created: newer or same age file exists
+8723 blocks
+/init: line 382: cryptsetup: not found
+Mount root partition (/dev/mmcblk0p2) to /sysroot (read-only)
+Detected ext4 filesystem
+EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+EXT4-fs (mmcblk0p2): recovery complete
+EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Quota mode: none.
+EXT4-fs (mmcblk0p1): unmounting filesystem.
+Mount boot partition (/dev/mmcblk0p1) to /sysroot/boot (read-write)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): warning: mounting unchecked fs, running e2fsck is recommended
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+umount: can't unmount /dev: Invalid argument
+
+   OpenRC 0.47.1 is starting up Linux 6.1.12 (armv7l)
+
+/lib/rc/sh/init.sh: line 15: can't create /dev/null: Read-only file system
+ * md5sum is missing, which suggests /usr is not mounted
+ * If you have separate /usr, it must be mounted by initramfs
+ * If not, you should check coreutils is installed correctly
+ * Mounting /proc ... [ ok ]
+ * Mounting /run ... [ ok ]
+ * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+/lib/rc/sh/gendepends.sh: line 53: can't create /dev/null: Read-only file system
+zram swap: activating with size: 180 MB
+ * Caching service dependencies ... [ ok ]
+ * Clock skew detected with `/etc/init.d'
+ * Adjusting mtime of `/run/openrc/deptree' to Tue Apr 25 21:10:12 2023
+
+ * WARNING: clock skew detected!
+ * Mounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Mounting /sys ... [ ok ]
+ * Mounting security filesystem ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting config filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Starting udev ... [ ok ]
+ * Generating a rule to create a /dev/root symlink ... [ ok ]
+ * Populating /dev with existing devices through uevents ... [ ok ]
+ * Waiting for uevents to be processed ... [ ok ]
+ * WARNING: clock skew detected!
+ * Loading modules ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... * fstabinfo: empty fstab
+ [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Configuring kernel parameters ...sysctl: error: 'net.ipv4.tcp_syncookies' is an unknown key
+sysctl: error: 'kernel.unprivileged_bpf_disabled' is an unknown key
+ [ ok ]
+ * Creating user login records ... [ ok ]
+ * Wiping /tmp directory ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * WARNING: clock skew detected!
+ * /run/dbus: creating directory
+ * /run/dbus: correcting owner
+ * Starting System Message Bus ... [ ok ]
+ * Loading nftables rules and starting firewall ... [ ok ]
+ * Starting haveged ... [ ok ]
+ * Could not find a wireless interface
+ * /var/run/wpa_supplicant: creating directory
+ * Starting WPA Supplicant ... [ ok ]
+ * Starting networkmanager ... [ ok ]
+ * Starting chronyd ... [ ok ]
+ * Starting kill-pbsplash ...killall: pbsplash: no process killed
+ * start-stop-daemon: failed to start `/usr/bin/killall'
+ * Failed to start kill-pbsplash
+ [ !! ]
+ * ERROR: kill-pbsplash failed to start
+ * Restoring rfkill configuration ... [ ok ]
+ * Starting sshd ... [ ok ]
+ * Activating swap file ...Configured swap file size is 0, skipping creation.
+ [ ok ]
+ * Activating swap devices ... [ ok ]
+zram swap: activating with size: 180 MB
+ * Loading zram module...
+modprobe: module zram not found in modules.dep
+ [ !! ]
+ * Swap->zram0
+zram-init: 
+cannot create /dev/zram0: /sys/class/zram-control missing
+ [ !! ]
+ * Starting local ... [ ok ]
+
+Welcome to postmarketOS
+Kernel 6.1.12 on an armv7l (/dev/ttymxc0)
+kobo-nia login: 
+
+U-Boot 2016.03-00075-g4c12101031 (Apr 19 2022 - 17:27:17 +0800)
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+CPU:   Commercial temperature grade (0C to 95C) at 33C
+Reset cause: POR
+Board: MX6ULL NTX
+I2C:   ready
+DRAM:  256 MiB
+force_idle_bus: sda=1 scl=0 sda.gp=0x15 scl.gp=0x14
+MMC:   board_mmc_init() : isd=1 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=268435456
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x8ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x8ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_early_init() RC5T619 INIT
+RC5T619_watchdog(1,32)
+ntx_hw_late_init()
+mmc read 0x8ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout: get partition:vfat fail !!
+ntx_config_fastboot_layout():3 mbr partition added
+fuse bank 0 offset 3 is 0x5C310030
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Hit any key to stop autoboot:  1  0 
+473 bytes read in 34 ms (12.7 KiB/s)
+## Executing script at 80800000
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+Loading kernel
+5764384 bytes read in 386 ms (14.2 MiB/s)
+Loading DTB
+30628 bytes read in 54 ms (553.7 KiB/s)
+Loading initrd
+1505645 bytes read in 128 ms (11.2 MiB/s)
+Booting kernel
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x57f520 ]
+## Loading init Ramdisk from Legacy Image at 85000000 ...
+   Image Name:   uInitrd
+   Created:      2023-04-25  19:17:37 UTC
+   Image Type:   ARM Linux RAMDisk Image (uncompressed)
+   Data Size:    1505581 Bytes = 1.4 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Loading Ramdisk to 8e5d6000, end 8e74592d ... OK
+   Loading Device Tree to 8e5cb000, end 8e5d57a3 ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 6.1.12 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #3-postmarketOS Tue Apr 25 18:36:24 UTC 2023
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt: Machine model: Kobo Nia
+Memory policy: Data cache writeback
+cma: Reserved 64 MiB at 0x8a400000
+Zone ranges:
+  Normal   [mem 0x0000000080000000-0x000000008fffffff]
+  HighMem  empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000080000000-0x000000008fffffff]
+Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists, mobility grouping on.  Total pages: 65024
+Kernel command line: console=ttymxc0,115200 PMOS_NO_OUTPUT_REDIRECT
+Unknown kernel command line parameters "PMOS_NO_OUTPUT_REDIRECT", will be passed to user space.
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 178888K/262144K available (8192K kernel code, 1051K rwdata, 2220K rodata, 1024K init, 351K bss, 17720K reserved, 65536K cma-reserved, 0K highmem)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x80100000 - 0x80100060
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered PF_NETLINK/PF_ROUTE protocol family
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor menu
+CPU identified as i.MX6ULL, silicon rev 1.1
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-3: IMX I2C adapter registered
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+clocksource: Switched to clocksource mxc_timer1
+VFS: Disk quotas dquot_6.6.0
+VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+NET: Registered PF_INET protocol family
+IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+NET: Registered PF_UNIX/PF_LOCAL protocol family
+hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Trying to unpack rootfs image as initramfs...
+Initialise system trusted keyrings
+workingset: timestamp_bits=30 max_order=16 bucket_order=0
+fuse: init (API version 7.37)
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+io scheduler mq-deadline registered
+io scheduler kyber registered
+mxs-dma 1804000.dma-apbh: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+Freeing initrd memory: 1472K
+imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+printk: console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+random: crng init done
+brd: module loaded
+loop: module loaded
+i2c_dev: i2c /dev entries driver
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+NET: Registered PF_INET6 protocol family
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered PF_PACKET protocol family
+mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+Registering SWP/SWPB emulation handler
+Loading compiled-in X.509 certificates
+imx_usb 2184000.usb: No over current polarity defined
+imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+mmc0: host does not support reading read-only switch, assuming write-enable
+Freeing unused kernel image (initmem) memory: 1024K
+cfg80211: failed to load regulatory.db
+Run /init as init process
+mmc0: new high speed SDHC card at address aaaa
+mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+ mmcblk0: p1 p2
+### postmarketOS initramfs ###
+Configuring kernel firmware image search path
+NOTE: Skipping framebuffer setup (deviceinfo_no_framebuffer)
+NOTE: Skipping framebuffer splashscreen (deviceinfo_no_framebuffer)
+Running initramfs hook: /hooks/80-start-epd.sh
+modprobe: can't load module mxc_epdc_drm (kernel/drivers/gpu/drm/mxc-epdc/mxc_epdc_drm.ko): No such file or directory
+/hooks/80-start-epd.sh: line 4: can't create /sys/bus/platform/drivers/mxc_epdc/bind: nonexistent diusing random self ethernet address
+rectory
+Setup usb network
+  /syusing random host ethernet address
+s/class/android_usb does not exist, skipping android_usb
+  Setting up an USB gadget through configfs
+usb0: HOST MAC 22:e4:c5:7e:e0:67
+usb0: MAC e6:85:de:e5:b9:b8
+Starting unudhcpd
+  Using interface usb0
+  Starting the DHCP daemon
+Trying to start server with parameters: Server IP addr: 172.16.42.1:67, client IP addr: 172.16.42.2, interface: usb0
+Trying to bind to interface: usb0
+Server started!
+Mount boot partition (/dev/mmcblk0p1) to /boot (read-only)
+Detected ext filesystem
+EXT4-fs (mmcblk0p1): mounted filesystem without journal. Quota mode: none.
+Extract /boot/initramfs-extra
+cpio: lib/ld-musl-armhf.so.1 not created: newer or same age file exists
+cpio: lib/libc.musl-armv7.so.1 not created: newer or same age file exists
+cpio: lib/libdevmapper.so.1.02 not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.alias.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.builtin.modinfo not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.dep.bin not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.order not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols not created: newer or same age file exists
+cpio: lib/modules/6.1.12/modules.symbols.bin not created: newer or same age file exists
+8723 blocks
+/init: line 382: cryptsetup: not found

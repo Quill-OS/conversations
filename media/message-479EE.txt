@@ -1,0 +1,61 @@
+/code/02 # ls -l lib
+-rwxr-xr-x    1 0        0           157500 Jan  1  1970 ld-2.5.so
+lrwxrwxrwx    1 0        0                9 Jan  1  1970 ld-linux.so.3 -> ld-2.5.so
+-rwxr-xr-x    1 0        0             7397 Jan  1  1970 libBrokenLocale-2.5.so
+lrwxrwxrwx    1 0        0               22 Jan  1  1970 libBrokenLocale.so.1 -> libBrokenLocale-2.5.so
+-rwxr-xr-x    1 0        0            12336 Jan  1  1970 libSegFault.so
+-rwxr-xr-x    1 0        0            14023 Jan  1  1970 libanl-2.5.so
+lrwxrwxrwx    1 0        0               13 Jan  1  1970 libanl.so.1 -> libanl-2.5.so
+lrwxrwxrwx    1 0        0               15 Jan  1  1970 libblkid.so.1 -> libblkid.so.1.0
+-rwxr-xr-x    1 0        0           156486 Jan  1  1970 libblkid.so.1.0
+-rwxr-xr-x    1 0        0          1346605 Jan  1  1970 libc-2.5.so
+lrwxrwxrwx    1 0        0               11 Jan  1  1970 libc.so.6 -> libc-2.5.so
+lrwxrwxrwx    1 0        0               17 Jan  1  1970 libcom_err.so.2 -> libcom_err.so.2.1
+-rwxr-xr-x    1 0        0            27798 Jan  1  1970 libcom_err.so.2.1
+-rwxr-xr-x    1 0        0            26268 Jan  1  1970 libcrypt-2.5.so
+lrwxrwxrwx    1 0        0               15 Jan  1  1970 libcrypt.so.1 -> libcrypt-2.5.so
+-rwxr-xr-x    1 0        0            14085 Jan  1  1970 libdl-2.5.so
+lrwxrwxrwx    1 0        0               12 Jan  1  1970 libdl.so.2 -> libdl-2.5.so
+lrwxrwxrwx    1 0        0               13 Jan  1  1970 libe2p.so.2 -> libe2p.so.2.3
+-rwxr-xr-x    1 0        0            87892 Jan  1  1970 libe2p.so.2.3
+lrwxrwxrwx    1 0        0               16 Jan  1  1970 libext2fs.so.2 -> libext2fs.so.2.4
+-rwxr-xr-x    1 0        0           784046 Jan  1  1970 libext2fs.so.2.4
+-rwxr-xr-x    1 0        0            58792 Jan  1  1970 libgcc_s.so.1
+-rwxr-xr-x    1 0        0           492205 Jan  1  1970 libm-2.5.so
+lrwxrwxrwx    1 0        0               11 Jan  1  1970 libm.so.6 -> libm-2.5.so
+-rwxr-xr-x    1 0        0            22013 Jan  1  1970 libmemusage.so
+-rwxr-xr-x    1 0        0            91243 Jan  1  1970 libnsl-2.5.so
+lrwxrwxrwx    1 0        0               13 Jan  1  1970 libnsl.so.1 -> libnsl-2.5.so
+-rwxr-xr-x    1 0        0            33177 Jan  1  1970 libnss_compat-2.5.so
+lrwxrwxrwx    1 0        0               20 Jan  1  1970 libnss_compat.so.2 -> libnss_compat-2.5.so
+-rwxr-xr-x    1 0        0            17566 Jan  1  1970 libnss_dns-2.5.so
+lrwxrwxrwx    1 0        0               17 Jan  1  1970 libnss_dns.so.2 -> libnss_dns-2.5.so
+-rwxr-xr-x    1 0        0            48860 Jan  1  1970 libnss_files-2.5.so
+lrwxrwxrwx    1 0        0               19 Jan  1  1970 libnss_files.so.2 -> libnss_files-2.5.so
+-rwxr-xr-x    1 0        0            18427 Jan  1  1970 libnss_hesiod-2.5.so
+lrwxrwxrwx    1 0        0               20 Jan  1  1970 libnss_hesiod.so.2 -> libnss_hesiod-2.5.so
+-rwxr-xr-x    1 0        0            44080 Jan  1  1970 libnss_nis-2.5.so
+lrwxrwxrwx    1 0        0               17 Jan  1  1970 libnss_nis.so.2 -> libnss_nis-2.5.so
+-rwxr-xr-x    1 0        0            53212 Jan  1  1970 libnss_nisplus-2.5.so
+lrwxrwxrwx    1 0        0               21 Jan  1  1970 libnss_nisplus.so.2 -> libnss_nisplus-2.5.so
+-rwxr-xr-x    1 0        0             7601 Jan  1  1970 libpcprofile.so
+-rwxr-xr-x    1 0        0           118596 Jan  1  1970 libpthread-2.5.so
+lrwxrwxrwx    1 0        0               17 Jan  1  1970 libpthread.so.0 -> libpthread-2.5.so
+-rwxr-xr-x    1 0        0            75367 Jan  1  1970 libresolv-2.5.so
+lrwxrwxrwx    1 0        0               16 Jan  1  1970 libresolv.so.2 -> libresolv-2.5.so
+-rwxr-xr-x    1 0        0            37083 Jan  1  1970 librt-2.5.so
+lrwxrwxrwx    1 0        0               12 Jan  1  1970 librt.so.1 -> librt-2.5.so
+lrwxrwxrwx    1 0        0               12 Jan  1  1970 libss.so.2 -> libss.so.2.0
+-rwxr-xr-x    1 0        0            75133 Jan  1  1970 libss.so.2.0
+lrwxrwxrwx    1 0        0               18 Jan  1  1970 libstdc++.so.6 -> libstdc++.so.6.0.8
+-rwxr-xr-x    1 0        0          1138979 Jan  1  1970 libstdc++.so.6.0.8
+-rwxr-xr-x    1 0        0            36714 Jan  1  1970 libthread_db-1.0.so
+lrwxrwxrwx    1 0        0               19 Jan  1  1970 libthread_db.so.1 -> libthread_db-1.0.so
+-rwxr-xr-x    1 0        0            13048 Jan  1  1970 libutil-2.5.so
+lrwxrwxrwx    1 0        0               14 Jan  1  1970 libutil.so.1 -> libutil-2.5.so
+lrwxrwxrwx    1 0        0               14 Jan  1  1970 libuuid.so.1 -> libuuid.so.1.2
+-rwxr-xr-x    1 0        0            60888 Jan  1  1970 libuuid.so.1.2
+lrwxrwxrwx    1 0        0               22 Jan  1  1970 libvolume_id.so.0 -> libvolume_id.so.0.81.0
+-rwxr-xr-x    1 0        0           150856 Jan  1  1970 libvolume_id.so.0.81.0
+drwxr-xr-x    1 0        0               20 Jan  1  1970 modules
+drwxr-xr-x    1 0        0               84 Jan  1  1970 udev

@@ -1,0 +1,61 @@
+pmbootstrap log
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/menu.o
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTCC  scripts/kconfig/util.o
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+make: Leaving directory '/home/pmos/build/src/linux-a1cfcda0142222fcfad0901ac42b1dcd7bd3df1d'
+gcc: error: unrecognized argument in option '-mabi=aapcs-linux'
+gcc: note: valid arguments to '-mabi=' are: ilp32 lp64
+gcc: error: unrecognized command-line option '-mfpu=vfp'
+gcc: error: unrecognized command-line option '-mtp=cp15'
+gcc: error: unrecognized command-line option '-msoft-float'
+make[2]: *** [../scripts/Makefile.build:250: scripts/mod/empty.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [/home/pmos/build/src/linux-a1cfcda0142222fcfad0901ac42b1dcd7bd3df1d/Makefile:1281: prepare0] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:231: __sub-make] Error 2
+> ERROR: linux-kobo-clara-mainline: build failed
+> (238371) [21:09:51] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> (238371) [21:09:51] NOTE: The failed command's output is above the ^^^ line in the log file: /home/pi/.local/var/pmbootstrap/log.txt
+> (238371) [21:09:51] ERROR: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d
+> (238371) [21:09:51] See also: <https://postmarketos.org/troubleshooting>
+> (238371) [21:09:51] Traceback (most recent call last):
+>   File "/home/pi/pmbootstrap/pmb/__init__.py", line 52, in main
+>     getattr(frontend, args.action)(args)
+>   File "/home/pi/pmbootstrap/pmb/helpers/frontend.py", line 325, in install
+>     pmb.install.install(args)
+>   File "/home/pi/pmbootstrap/pmb/install/_install.py", line 1074, in install
+>     create_device_rootfs(args, step, steps)
+>   File "/home/pi/pmbootstrap/pmb/install/_install.py", line 1008, in create_device_rootfs
+>     pmb.build.package(args, pkgname, args.deviceinfo["arch"])
+>   File "/home/pi/pmbootstrap/pmb/build/_package.py", line 535, in package
+>     if not init_buildenv(args, apkbuild, arch, strict, force, cross, suffix,
+>   File "/home/pi/pmbootstrap/pmb/build/_package.py", line 207, in init_buildenv
+>     depends, built = build_depends(args, apkbuild, depends_arch, strict)
+>   File "/home/pi/pmbootstrap/pmb/build/_package.py", line 155, in build_depends
+>     if package(args, depend, arch, strict=strict):
+>   File "/home/pi/pmbootstrap/pmb/build/_package.py", line 540, in package
+>     (output, cmd, env) = run_abuild(args, apkbuild, arch, strict, force, cross,
+>   File "/home/pi/pmbootstrap/pmb/build/_package.py", line 467, in run_abuild
+>     pmb.chroot.user(args, cmd, suffix, "/home/pmos/build", env=env)
+>   File "/home/pi/pmbootstrap/pmb/chroot/user.py", line 26, in user
+>     return pmb.chroot.root(args, cmd, suffix, working_dir, output,
+>   File "/home/pi/pmbootstrap/pmb/chroot/root.py", line 83, in root
+>     return pmb.helpers.run_core.core(args, msg, cmd_sudo, None, output,
+>   File "/home/pi/pmbootstrap/pmb/helpers/run_core.py", line 351, in core
+>     check_return_code(args, code, log_message)
+>   File "/home/pi/pmbootstrap/pmb/helpers/run_core.py", line 221, in check_return_code
+>     raise RuntimeError(f"Command failed (exit code {str(code)}): " +
+> RuntimeError: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d
+> 
+> (249362) [21:16:41] % tail -n 60 -F /home/pi/.local/var/pmbootstrap/log.txt
+> (249362) [21:16:41] *** output passed to pmbootstrap stdout, not to this log ***

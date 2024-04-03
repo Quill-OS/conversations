@@ -1,0 +1,194 @@
+kobo:/tmp# env DEBUG=true LD_LIBRARY_PATH=. ./ipd
+Starting...
+Debug mode is activated
+Saving logs to /tmp/PowerDaemonLogs.txt
+Reading variables
+Running on: n437
+couldn't read config file: /opt/config/12-lockscreen/config
+lockscreen is: none
+Loaded FBInk version: v1.24.0-176-g5ecd240 for Kobo
+Starting monitoring events
+Input device name: gpio-keys
+Input device bus 25 vendor: 1 product: 1
+Input event received: EV_KEYKEY_POWER 1
+Sending message to sleep
+Watchdog event received
+Launching prepareSleep
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+Input event received: EV_SYNSYN_REPORT 0
+[FBInk] Detected a Kobo Glo HD (371 => Alyssum @ Mark 6)
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 300 dpi
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Inited fbink in screenshotFbink
+screenshot done
+Input event received: EV_KEYKEY_POWER 0
+Input event received: EV_SYNSYN_REPORT 0
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Font `/etc/init.d/splash.d/fonts/resources/inter-b.ttf` loaded for style 'Regular'
+Writed: "true" to: /tmp/sleep_standby
+Writed: "true" to: /tmp/sleep_mode
+appList.txt is: inkbox-bin
+oobe-inkbox-bin
+lockscreen-bin
+calculator-bin
+qreversi-bin
+2048-bin
+scribble
+lightmaps
+In app vector: inkbox-bin
+In app vector: oobe-inkbox-bin
+In app vector: lockscreen-bin
+In app vector: calculator-bin
+In app vector: qreversi-bin
+In app vector: 2048-bin
+In app vector: scribble
+In app vector: lightmaps
+Writed: "15" to: /tmp/savedBrightness
+Writed: "true" to: /run/was_connected_to_wifi
+Found pid of wpa_supplicant,its: 4633
+Found pid of udhcpc,its: 2857
+Writed: "false" to: /kobo/inkbox/remount
+Exiting prepareSleep
+Started goSleep
+Going to sleep now!
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4393.285250] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4393.285260] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4393.285266] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4396.965237] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4396.965246] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4396.965252] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4400.645243] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4400.645252] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4400.645258] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4404.325238] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4404.325247] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4404.325253] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4408.005238] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4408.005247] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4408.005253] PM: Some devices failed to suspend
+
+
+status: -1
+5 failed attemts at suspending, sleep a little longer...
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4418.695251] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4418.695259] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4418.695266] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4422.375252] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4422.375261] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4422.375266] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4426.055246] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4426.055255] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4426.055261] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+After sleep
+Failed to suspend, dmesg errors:
+<3>[ 4429.735236] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+<3>[ 4429.735246] PM: Device fsl-usb2-udc failed to suspend: error -16
+<3>[ 4429.735251] PM: Some devices failed to suspend
+
+
+status: -1
+Trying sleep
+Input event received: EV_KEYKEY_POWER 1
+Sending message to sleep
+Watchdog event received
+Input event received: EV_SYNSYN_REPORT 0
+Watchdog goes next with Goingsleep
+trying to join goingThread
+Input event received: EV_KEYKEY_POWER 0
+Input event received: EV_SYNSYN_REPORT 0
+After sleep
+Tryied going to sleep 9times
+Sleep finished, Exiting going to sleep
+Launching afterSleep thread from GoingSleep watchdog state
+Launching afterSleep
+Writed: "false" to: /tmp/sleep_mode
+[FBInk] Variable fb info: 1072x1448, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 2176 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Variable fb info: 1072x1448, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 2176 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 24x24 (IBM base glyph size: 8x8)
+[FBInk] Line length: 44 cols, Page size: 60 rows
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Can't restore the dump because of a bitdepth mismatch! dump: 8 vs. fb: 16!
+init
+init
+sh: /usr/bin/wlarm_le: not found
+Successfully initialized wpa_supplicant
+rfkill: Cannot get wiphy information
+udhcpc: started, v1.34.1
+udhcpc: broadcasting discover
+udhcpc: broadcasting discover
+udhcpc: broadcasting discover

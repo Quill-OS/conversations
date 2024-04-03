@@ -1,0 +1,83 @@
+U-Boot 2016.03-00075-g4c12101031 (Apr 19 2022 - 17:27:17 +0800)
+
+CPU:   Freescale i.MX6ULL rev1.1 at 396MHz
+CPU:   Commercial temperature grade (0C to 95C) at 40C
+Reset cause: POR
+Board: MX6ULL NTX
+I2C:   ready
+DRAM:  256 MiB
+force_idle_bus: sda=0 scl=0 sda.gp=0x15 scl.gp=0x14
+MMC:   board_mmc_init() : isd=1 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=268435456
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x8ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x8ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_early_init() BD71828 INIT
+BD71828_regulator_init
+BD71828 RESETSRC [0x3]=0x4
+BD71828 KEYSTATUS [0xe2]=0x80
+BD71828 BOOTSRC [0x2]=0x80
+COLD reset from SWRESET, do nothing
+Battery parameter not match 
+BD71828 read battery capacity 099, 1496,1
+ntx_hw_late_init()
+mmc read 0x8ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout():3 mbr partition added
+fuse bank 0 offset 3 is 0x5C310013
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+Booting from mmc ...
+mmc read 0x83000000 0x505 0x1
+
+MMC read: dev # 0, block # 1285, count 1 ... 1 blocks read: OK
+dtb size = 40347@83000000
+mmc read 0x83000000 0x506 0x55
+
+MMC read: dev # 0, block # 1286, count 85 ... 85 blocks read: OK
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+imx2_watchdog() : WCR=0x39

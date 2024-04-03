@@ -1,0 +1,1028 @@
+2020-04-25T22:29:18 /home/petteri/download: mount /mnt/sd
+2020-04-25T22:29:27 /home/petteri/download: unzip sdcard-rescue.zip 
+2020-04-25T22:29:35 /home/petteri/download: mv OS\ Firmware/ /mnt/sd
+2020-04-25T22:29:53 /home/petteri/download: umount /mnt/sd
+2020-04-25T22:45:25 /home/petteri/download: ls -l | grep PRS
+2020-04-25T22:45:27 /home/petteri/download: ls -l | grep prs
+2020-04-25T22:45:44 /home/petteri/download: unzip reader_prst1_1.0.07.zip 
+2020-04-25T22:46:28 /home/petteri/download: ls -lt *.zip | less
+2020-04-25T22:52:22 /home/petteri/download: ls -lt *.zip | less
+2020-04-25T22:52:24 /home/petteri/download: ls -l rupor*
+2020-04-25T22:52:29 /home/petteri/download: 7z x rupor-rescue.7z 
+2020-04-25T22:52:59 /home/petteri/download: mount /mnt/sd
+2020-04-25T22:53:04 /home/petteri/download: mkdir rupor
+2020-04-25T22:53:05 /home/petteri/download/rupor: cd rupor
+2020-04-25T22:53:06 /home/petteri/download/rupor: ls
+2020-04-25T22:53:13 /home/petteri/download/rupor: 7z x ../rupor-rescue.7z 
+2020-04-25T22:53:14 /home/petteri/download/rupor: ls
+2020-04-25T23:20:05 /home/petteri: fg
+2020-04-25T23:21:08 /home/petteri: umount /mnt/sd
+2020-04-25T23:25:14 /home/petteri: cd
+2020-04-25T23:25:15 /home/petteri/download: cd download/
+2020-04-25T23:25:19 /home/petteri/download: unzip PRS-T1_Updater_1.0.07.05070.exe 
+2020-04-25T23:25:47 /home/petteri/download: unzip PRS-T1_Updater_1.0.07.05070.exe 
+2020-04-25T23:25:59 /home/petteri/download: file PRS-T1\ Updater.package 
+2020-04-25T23:59:06 /home/petteri: cd
+2020-04-25T23:59:13 /home/petteri: less foo.txt
+2020-04-26T00:00:10 /home/petteri: cat foo.txt  | grep -v Start | grep -v Stop | less
+2020-04-26T00:11:42 /home/petteri: nano prst1.txt
+2020-04-26T00:25:17 /home/petteri: less prst1.txt 
+2020-04-26T00:34:27 /home/petteri/download/rupor-rescue: dmesg -ew
+2020-04-26T00:34:39 /home/petteri/download/rupor-rescue: top
+2020-04-26T08:41:14 /home/petteri/download: ls
+2020-04-26T08:41:17 /home/petteri/download: rm zlib-1.2.11.tar.gz 
+2020-04-26T08:41:25 /home/petteri/download: du -sm | sort -g
+2020-04-26T08:41:31 /home/petteri/download: du -sm ./* | sort -g
+2020-04-26T08:42:18 /home/petteri/download: rm -rf reader_prst1_1.0.07 QuartusProgrammer* arduino*.xz opencv*.gz en.x-cube*.zip
+2020-04-26T08:42:21 /home/petteri/download: df -h
+2020-04-26T08:42:31 /work: cd /work
+2020-04-26T08:42:32 /work: ls
+2020-04-26T08:42:36 /work/ereader_backup: cd ereader_backup/
+2020-04-26T08:42:37 /work/ereader_backup: ls
+2020-04-26T08:42:40 /work: cd ..
+2020-04-26T08:42:40 /work: ls
+2020-04-26T08:43:22 /home/petteri/download: cd download/
+2020-04-26T08:43:26 /home/petteri/download: ls reader_ps*
+2020-04-26T08:43:27 /home/petteri/download: ls reader_p*
+2020-04-26T08:43:30 /home/petteri/download: ls reader_p* -lh
+2020-04-26T08:43:36 /home/petteri/download: rm reader_prst1_1.0.05.zip 
+2020-04-26T09:05:45 /home/petteri: cd
+2020-04-26T09:05:47 /home/petteri/projects: cd projects
+2020-04-26T09:05:49 /home/petteri/projects: mkdir prs-t1
+2020-04-26T09:05:51 /home/petteri/projects/prs-t1: cd prs-t1/
+2020-04-26T09:05:52 /home/petteri/projects/prs-t1: l
+2020-04-26T09:05:52 /home/petteri/projects/prs-t1: ls
+2020-04-26T09:05:57 /home/petteri/projects/prs-t1: gedit uboot.py
+2020-04-26T09:07:46 /home/petteri/projects/prs-t1: nano uboot_help.txt
+2020-04-26T09:08:08 /home/petteri/projects/prs-t1: ls
+2020-04-26T09:10:10 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:12:25 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:12:26 /home/petteri/projects/prs-t1: ls
+2020-04-26T09:16:02 /home/petteri/projects/prs-t1: less uboot_help.txt 
+2020-04-26T09:17:06 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:20:18 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:21:05 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:22:23 /home/petteri/projects/prs-t1: ./tst.py
+2020-04-26T09:22:43 /home/petteri/projects/prs-t1: nano uboot_printenv.txt
+2020-04-26T09:22:50 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:24:09 /home/petteri: cd
+2020-04-26T09:24:16 /home/petteri: cd
+2020-04-26T09:24:56 /home/petteri/projects/prs-t1: mv  ~/download/reader_prst1_1.0.0* .
+2020-04-26T09:24:56 /home/petteri/projects/prs-t1: ls
+2020-04-26T09:24:59 /home/petteri/projects/prs-t1: ls -lh
+2020-04-26T09:25:16 /home/petteri/projects/prs-t1: unzip reader_prst1_1.0.05.zip 
+2020-04-26T09:25:19 /home/petteri/projects/prs-t1: du -sm reader_prst1_1.0.0
+2020-04-26T09:25:20 /home/petteri/projects/prs-t1: du -sm reader_prst1_1.0.05
+2020-04-26T09:25:22 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd reader_prst1_1.0.05/
+2020-04-26T09:25:23 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T09:25:26 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: file *
+2020-04-26T09:25:46 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls -lh
+2020-04-26T09:29:37 /home/petteri: sudo cfdisk /dev/mmcblk0 
+2020-04-26T09:30:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s1.bin bs=1M status=progress of=/dev/mmcblk0p1
+2020-04-26T09:30:07 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s2.bin bs=1M status=progress of=/dev/mmcblk0p2
+2020-04-26T09:30:11 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s3.bin bs=1M status=progress of=/dev/mmcblk0p3
+2020-04-26T09:31:52 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:32:17 /home/petteri/projects/prs-t1: ls
+2020-04-26T09:32:24 /home/petteri/projects/prs-t1: file reader_prst1_1.0.05/disk3s1.bin 
+2020-04-26T09:33:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s4.bin bs=1M status=progress of=/dev/mmcblk0p4
+2020-04-26T09:33:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s5.bin bs=1M status=progress of=/dev/mmcblk0p5
+2020-04-26T09:34:10 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s6.bin bs=1M status=progress of=/dev/mmcblk0p6
+2020-04-26T09:34:16 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s7.bin bs=1M status=progress of=/dev/mmcblk0p7
+2020-04-26T09:34:27 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s8.bin bs=1M status=progress of=/dev/mmcblk0p8
+2020-04-26T09:34:36 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s9.bin bs=1M status=progress of=/dev/mmcblk0p9
+2020-04-26T09:34:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo dd if=disk3s10.bin bs=1M status=progress of=/dev/mmcblk0p10
+2020-04-26T09:34:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sync
+2020-04-26T09:37:36 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:39:32 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:41:20 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:42:45 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:43:20 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:44:53 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:45:12 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:46:58 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:48:25 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:49:11 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T09:49:12 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: file *
+2020-04-26T09:49:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: mkdir tmp
+2020-04-26T09:50:05 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo mount -o loop disk3s1.bin tmp
+2020-04-26T09:50:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls tmp
+2020-04-26T09:50:08 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls tmp -l
+2020-04-26T09:50:11 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls tmp/bin -l
+2020-04-26T09:52:50 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: less tmp/linuxrc -l
+2020-04-26T09:52:58 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: mkdir p10
+2020-04-26T09:53:08 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: sudo mount -o loop disk3s10.bin p10
+2020-04-26T09:53:10 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: cd p10
+2020-04-26T09:53:10 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T09:53:17 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls bin
+2020-04-26T09:54:50 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T09:54:54 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd ..
+2020-04-26T09:54:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T09:55:13 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: grep 'Linux version' *.bin
+2020-04-26T09:55:25 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: strings disk3s9.bin | grep 'Linux version'
+2020-04-26T09:55:39 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T09:55:41 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T09:55:41 /home/petteri/projects/prs-t1: ls
+2020-04-26T09:55:58 /home/petteri/projects/prs-t1: unzip reader_prst1_1.0.07.zip 
+2020-04-26T09:56:00 /home/petteri/projects/prs-t1: cd reader_prst1_1.0.0
+2020-04-26T09:56:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T09:56:05 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: strings disk3s9.bin | grep 'Linux version'
+2020-04-26T09:56:09 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T09:56:20 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd reader_prst1_1.0.05/
+2020-04-26T09:56:20 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T09:57:03 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T09:57:50 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:01:54 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:02:25 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:03:33 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:04:35 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:04:51 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:05:09 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:06:56 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:07:04 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:08:42 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:09:20 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:10:57 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:11:31 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:13:02 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:13:59 /home/petteri/projects/prs-t1: mount /mnt/sd
+2020-04-26T10:14:01 /home/petteri/projects/prs-t1: ls /mnt/sd
+2020-04-26T10:14:05 /home/petteri/projects/prs-t1: ls /mnt/sd/OS\ Firmware/files/update.img  -lh
+2020-04-26T10:14:14 /home/petteri/projects/prs-t1: ls /mnt/sd/OS\ Firmware/files/update.img  -lh
+2020-04-26T10:14:19 /home/petteri/projects/prs-t1: umount /mnt/sd
+2020-04-26T10:21:50 /home/petteri/projects/prs-t1: ls
+2020-04-26T10:21:53 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd reader_prst1_1.0.05/
+2020-04-26T10:21:54 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T10:22:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: grep 'Normal Rootfs' *
+2020-04-26T10:22:06 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T10:22:17 /home/petteri/projects/prs-t1: cp ~/download/PRS-T1\ Updater.package .
+2020-04-26T10:22:18 /home/petteri/projects/prs-t1: ls
+2020-04-26T10:22:21 /home/petteri/projects/prs-t1: file PRS-T1\ Updater.package 
+2020-04-26T10:22:56 /home/petteri/projects/prs-t1: mount /mnt/sd
+2020-04-26T10:22:58 /home/petteri/projects/prs-t1: ls /mnt/sd
+2020-04-26T10:23:03 /home/petteri/projects/prs-t1: ls /mnt/sd/Sony_Reader/
+2020-04-26T10:23:05 /home/petteri/projects/prs-t1: ls /mnt/sd/Sony_Reader/database/
+2020-04-26T10:23:13 /home/petteri/projects/prs-t1: rm -rf /mnt/sd/*
+2020-04-26T10:23:17 /home/petteri/projects/prs-t1: cp PRS-T1\ Updater.package /mnt/sd
+2020-04-26T10:23:26 /home/petteri/projects/prs-t1: umount /mnt/sd
+2020-04-26T10:23:26 /home/petteri/projects/prs-t1: ls -lh
+2020-04-26T10:23:30 /home/petteri/projects/prs-t1: sync
+2020-04-26T10:33:38 /home/petteri/projects/prs-t1: ls
+2020-04-26T10:33:40 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T10:33:41 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T10:33:48 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T10:33:49 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls -lh
+2020-04-26T10:34:08 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T10:34:13 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls -lh
+2020-04-26T10:34:32 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo dd if=disk3s1.bin of=/dev/mmcblk0p1 status=progress bs=1M
+2020-04-26T10:34:39 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo dd if=disk3s2.bin of=/dev/mmcblk0p2 status=progress bs=1M
+2020-04-26T10:34:49 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sync
+2020-04-26T10:36:50 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T10:36:50 /home/petteri/projects/prs-t1: ls
+2020-04-26T10:40:32 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:41:13 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:44:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T10:44:55 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T10:44:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T10:44:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T10:45:09 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:46:22 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:46:59 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:50:31 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T10:51:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: hexedit disk3s1.bin 
+2020-04-26T10:51:09 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: hexedit disk3s1.bin 
+2020-04-26T10:51:58 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep 'Recovery Kernel' *
+2020-04-26T10:53:03 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T10:53:05 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T10:53:05 /home/petteri/projects/prs-t1: ls
+2020-04-26T10:53:11 /home/petteri/projects/prs-t1: file PRS-T1\ Updater.package 
+2020-04-26T10:53:29 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd reader_prst1_1.0.05/
+2020-04-26T10:53:29 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T10:53:30 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: cd p10
+2020-04-26T10:53:31 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T10:53:35 /home/petteri/download: cd download/
+2020-04-26T10:53:38 /home/petteri/download: ls enable-adb
+2020-04-26T10:53:39 /home/petteri/download/enable-adb: cd enable-adb/
+2020-04-26T10:53:40 /home/petteri/download/enable-adb: ls
+2020-04-26T10:53:46 /home/petteri/download/enable-adb: file 'PRS-T1 Updater.package' 
+2020-04-26T10:53:52 /home/petteri/download/enable-adb/sdcard: cd sdcard/
+2020-04-26T10:53:52 /home/petteri/download/enable-adb/sdcard: ls
+2020-04-26T10:53:54 /home/petteri/download/enable-adb/sdcard/tmp: cd tmp/
+2020-04-26T10:53:54 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T10:54:07 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T10:54:19 /home/petteri/download/enable-adb/sdcard/tmp: hexedit nboote.bin 
+2020-04-26T10:54:27 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T10:54:31 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T10:54:34 /home/petteri/download/enable-adb/sdcard/tmp: grep Kernel *
+2020-04-26T10:55:15 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T10:55:16 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T10:55:21 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T10:55:25 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T10:55:39 /home/petteri/download/enable-adb/sdcard/tmp: less checksums 
+2020-04-26T10:55:44 /home/petteri/download/enable-adb/sdcard/tmp: file rescue.updater 
+2020-04-26T10:58:17 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ld
+2020-04-26T10:58:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T10:58:26 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: grep -r 'Updater
+'
+2020-04-26T10:58:29 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: grep -r 'Updater'
+2020-04-26T10:58:37 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T10:59:13 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T10:59:17 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd ..
+2020-04-26T10:59:17 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T10:59:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: cd tmp
+2020-04-26T10:59:19 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: ls
+2020-04-26T10:59:22 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: grep -r 'Updater'
+2020-04-26T10:59:24 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: ls
+2020-04-26T10:59:38 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: less linuxrc 
+2020-04-26T10:59:39 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd ..
+2020-04-26T10:59:40 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T10:59:41 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: cd p10
+2020-04-26T10:59:41 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T10:59:49 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:00:47 /home/petteri/projects/prs-t1: mount /mnt/sd
+2020-04-26T11:00:48 /home/petteri/projects/prs-t1: ls
+2020-04-26T11:00:56 /home/petteri: sudo su
+2020-04-26T11:00:59 /home/petteri/download: cd download/
+2020-04-26T11:01:01 /home/petteri/download/rupor-rescue: cd rupor-rescue/
+2020-04-26T11:01:02 /home/petteri/download/rupor-rescue: ls
+2020-04-26T11:01:04 /home/petteri/download: cd ..
+2020-04-26T11:01:06 /home/petteri/download/rupor: cd rupor
+2020-04-26T11:01:06 /home/petteri/download/rupor: ls
+2020-04-26T11:01:07 /home/petteri/download/rupor/rupor-rescue: cd rupor-rescue/
+2020-04-26T11:01:08 /home/petteri/download/rupor/rupor-rescue: ls
+2020-04-26T11:01:10 /home/petteri/download/rupor/rupor-rescue/OS Firmware: cd OS\ Firmware/
+2020-04-26T11:01:10 /home/petteri/download/rupor/rupor-rescue/OS Firmware: ls
+2020-04-26T11:01:12 /home/petteri/download/rupor/rupor-rescue/OS Firmware/files: cd files/
+2020-04-26T11:01:12 /home/petteri/download/rupor/rupor-rescue/OS Firmware/files: ls
+2020-04-26T11:01:14 /home/petteri/download/rupor/rupor-rescue/OS Firmware: cd ..
+2020-04-26T11:01:15 /home/petteri/download/rupor/rupor-rescue: cd ..
+2020-04-26T11:01:18 /home/petteri/download/rupor/rupor-rescue: ls /mnt/sd
+2020-04-26T11:01:24 /home/petteri/download/rupor/rupor-rescue: rm -rf /mnt/sd/*
+2020-04-26T11:01:30 /home/petteri/download/rupor/rupor-rescue: cp -pr OS\ Firmware/ /mnt/sd/
+2020-04-26T11:01:35 /home/petteri/download/rupor/rupor-rescue: umount /mnt/sd
+2020-04-26T11:04:22 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:06:33 /home/petteri: less prst1.txt 
+2020-04-26T11:06:37 /home/petteri: sudo fdisk -l
+2020-04-26T11:06:41 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/p10: ls
+2020-04-26T11:06:43 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: cd ..
+2020-04-26T11:06:43 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls
+2020-04-26T11:06:44 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: file *
+2020-04-26T11:07:28 /home/petteri/projects/prs-t1: ls -lh ~/download/rupor/rupor-rescue/OS\ Firmware/files/update.img 
+2020-04-26T11:07:42 /home/petteri/projects/prs-t1/reader_prst1_1.0.05: ls -lh
+2020-04-26T11:11:40 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T11:12:53 /home/petteri/projects/prs-t1: screen /dev/ttyUSB0 115200
+2020-04-26T11:14:55 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:14:59 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: cd tmp
+2020-04-26T11:15:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: ls
+2020-04-26T11:15:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: less li
+2020-04-26T11:15:20 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: less linuxrc 
+2020-04-26T11:15:42 /home/petteri/projects/prs-t1: screen /dev/ttyUSB0 115200
+2020-04-26T11:18:15 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: ls /dev/tty*
+2020-04-26T11:21:28 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:21:32 /home/petteri/download/enable-adb/sdcard: cd ..
+2020-04-26T11:21:33 /home/petteri/download/enable-adb/sdcard: ls
+2020-04-26T11:21:35 /home/petteri/download/enable-adb/sdcard/tmp: cd tmp
+2020-04-26T11:21:35 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:22:49 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:22:54 /home/petteri/download/enable-adb/sdcard/tmp: hexedit rescue.updater 
+2020-04-26T11:23:00 /home/petteri/download/enable-adb/sdcard/tmp: hexedit nboote.bin 
+2020-04-26T11:23:37 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T11:24:22 /home/petteri/download/enable-adb/sdcard/tmp: hexedit nboote.bin 
+2020-04-26T11:25:09 /home/petteri/download/enable-adb/sdcard/tmp: sudo mount -o loop ramdisk-adb.uimg tmp
+2020-04-26T11:25:15 /home/petteri/download/enable-adb/sdcard/tmp: file ramdisk-adb.uimg 
+2020-04-26T11:25:49 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T11:26:04 /home/petteri/download/enable-adb/sdcard/tmp: hexedit ramdisk-adb.uimg 
+2020-04-26T11:26:07 /home/petteri/download/enable-adb/sdcard/tmp: hexdump ramdisk-adb.uimg 
+2020-04-26T11:26:07 /home/petteri/download/enable-adb/sdcard/tmp: hexdump ramdisk-adb.uimg 
+2020-04-26T11:26:09 /home/petteri/download/enable-adb/sdcard/tmp: hexdump ramdisk-adb.uimg  | head
+2020-04-26T11:26:36 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T11:37:14 /work: cd /work
+2020-04-26T11:37:14 /work: ls
+2020-04-26T11:39:24 /work: sudo dd if=/dev/sdb of=prs_t1_broken.img bs=1M status=progress
+2020-04-26T12:05:34 /home/petteri: cd
+2020-04-26T12:05:35 /home/petteri/download: cd download/
+2020-04-26T12:05:36 /home/petteri/download/enable-adb: cd enable-adb/
+2020-04-26T12:05:37 /home/petteri/download/enable-adb: ls
+2020-04-26T12:05:41 /home/petteri/download/enable-adb/sdcard: cd sdcard/
+2020-04-26T12:05:41 /home/petteri/download/enable-adb/sdcard: ls
+2020-04-26T12:05:44 /home/petteri/download/enable-adb/sdcard/tmp: cd tmp
+2020-04-26T12:05:44 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T12:06:12 /home/petteri/download/enable-adb/sdcard/tmp: less do_update.sh 
+2020-04-26T12:06:49 /home/petteri/download/enable-adb/sdcard/tmp: hexedit nboote.bin 
+2020-04-26T12:07:44 /home/petteri/download/enable-adb/sdcard/tmp: file ramdisk-adb.fs 
+2020-04-26T12:07:45 /home/petteri/download/enable-adb/sdcard/tmp: ls
+2020-04-26T12:07:54 /home/petteri/download/enable-adb/sdcard/tmp: cpio 
+2020-04-26T12:07:55 /home/petteri/download/enable-adb/sdcard/tmp: cpio --help
+2020-04-26T12:08:11 /home/petteri/download/enable-adb/sdcard/tmp: cpio -t < ramdisk-adb.fs
+2020-04-26T12:09:30 /home/petteri/download/enable-adb/sdcard: cd ..
+2020-04-26T12:09:31 /home/petteri/download/enable-adb: cd ..
+2020-04-26T12:09:31 /home/petteri/download: cd ..
+2020-04-26T12:09:33 /home/petteri/download: ls
+2020-04-26T12:09:35 /home/petteri: cd ~
+2020-04-26T12:09:38 /home/petteri/projects/prs-t1: cd projects/prs-t1/
+2020-04-26T12:09:38 /home/petteri/projects/prs-t1: ls
+2020-04-26T12:20:30 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 skip=16220160 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T12:21:28 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 skip=16220160 count=56 | hexdump
+2020-04-26T12:27:12 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | hexdump
+2020-04-26T12:27:21 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T12:27:23 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T12:27:24 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T12:32:48 /work: sudo dd if=/dev/sdb of=prs_t1_broken.img bs=1M status=progress conv=sync,noerror
+2020-04-26T12:33:18 /work: df -h
+2020-04-26T12:34:07 /work: sudo gparted /dev/sda
+2020-04-26T12:34:08 /work: df -h
+2020-04-26T12:36:28 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: screen /dev/ttyACM0 115200
+2020-04-26T12:36:35 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T12:36:35 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T12:36:35 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T12:37:10 /work: sudo dd if=/dev/sdb of=prs_t1_broken.img bs=1M status=progress seek=1100 conv=sync,noerror
+2020-04-26T12:37:15 /work: ls -lh
+2020-04-26T13:26:19 /home/petteri/projects/prs-t1: screen /dev/ttyUSB0 115200
+2020-04-26T13:26:19 /home/petteri/projects/prs-t1: screen /dev/ttyUSB0 115200
+2020-04-26T13:26:50 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T13:28:27 /work: sudo dd if=/dev/sdb of=prs_t1_broken.img bs=1M status=progress seek=1100 conv=sync,noerror
+2020-04-26T13:29:39 /home/petteri/download/rupor/rupor-rescue: sudo su
+2020-04-26T13:29:41 /home/petteri: cd
+2020-04-26T13:29:44 /home/petteri/projects/prs-t1: cd projects/prs-t1/
+2020-04-26T13:29:44 /home/petteri/projects/prs-t1: cd projects/prs-t1/
+2020-04-26T13:29:45 /home/petteri/projects/prs-t1: ls
+2020-04-26T13:29:47 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T13:29:47 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T13:29:53 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: mkdir tmp
+2020-04-26T13:30:03 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s7.bin tmp
+2020-04-26T13:30:04 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T13:30:04 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T13:30:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T13:30:07 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: umount tmp
+2020-04-26T13:30:10 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:30:17 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s4.bin tmp
+2020-04-26T13:30:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T13:30:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T13:30:20 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T13:30:22 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: umount tmp
+2020-04-26T13:30:24 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudoumount tmp
+2020-04-26T13:30:27 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:30:29 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:30:30 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls -lh
+2020-04-26T13:30:37 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s6.bin tmp
+2020-04-26T13:30:38 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls tmp
+2020-04-26T13:30:46 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:30:50 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s10.bin tmp
+2020-04-26T13:30:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T13:30:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T13:30:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr: cd usr/
+2020-04-26T13:30:58 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr: ls
+2020-04-26T13:30:59 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T13:31:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T13:31:04 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: umount tmp
+2020-04-26T13:31:07 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:31:07 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:31:09 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls -lh
+2020-04-26T13:31:22 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s9.bin tmp
+2020-04-26T13:31:23 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls tmp
+2020-04-26T13:31:32 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:31:36 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s8.bin tmp
+2020-04-26T13:31:37 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls tmp
+2020-04-26T13:31:42 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T13:31:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep functions-c *
+2020-04-26T13:31:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s2.bin tmp
+2020-04-26T13:31:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T13:31:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T13:31:59 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd usr/local/b
+2020-04-26T13:32:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local: cd usr/local/
+2020-04-26T13:32:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local: ls
+2020-04-26T13:32:03 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: cd sony/bin/
+2020-04-26T13:32:03 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: ls
+2020-04-26T13:32:12 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: less functions-p 
+2020-04-26T13:32:16 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: grep unpack_package_info *
+2020-04-26T13:32:55 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:32:56 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:32:56 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:32:56 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:33:09 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a > hdr
+2020-04-26T13:33:13 /home/petteri/projects/prs-t1: less hdr
+2020-04-26T13:33:35 /home/petteri/projects/prs-t1: hexdump -n 16 -v -C hdr | head -1 | awk '{ print $2$3$4$5$6$7$8$9$10$11$12$13$14$15$16$17 }'
+2020-04-26T13:35:01 /home/petteri/projects/prs-t1: echo $((((`hexdump -s 16 -n 4 -v -C hdr | head -1 | awk '{ print "0x"$2$3$4$5 }'` + 16) / 16) * 16))
+2020-04-26T13:36:55 /work: sudo dd if=/dev/sdc of=prs_t1_broken.img bs=1M status=progress seek=1100 conv=sync,noerror
+2020-04-26T13:36:55 /work: sudo dd if=/dev/sdc of=prs_t1_broken.img bs=1M status=progress seek=1100 conv=sync,noerror
+2020-04-26T13:42:21 /home/petteri/projects/prs-t1: hexdump hdr
+2020-04-26T13:43:45 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k 2c669cd6deaf78d1a94d6d55b3d4618a | hexdump
+2020-04-26T13:43:55 /home/petteri/projects/prs-t1: openssl help des
+2020-04-26T13:44:28 /home/petteri/projects/prs-t1: openssl des
+2020-04-26T13:45:51 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -k -p 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:46:01 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -p -k 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:46:20 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -p -K 2c669cd6deaf78d1a94d6d55b3d4618a
+2020-04-26T13:46:28 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -K 2c669cd6deaf78d1a94d6d55b3d4618a | hexdump
+2020-04-26T13:47:11 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -nosalt -k 2c669cd6deaf78d1a94d6d55b3d4618a | hexdump
+2020-04-26T13:47:17 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -nosalt -k 2c669cd6deaf78d1a94d6d55b3d4618a -p 
+2020-04-26T13:47:18 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -nosalt -k 2c669cd6deaf78d1a94d6d55b3d4618a -p 
+2020-04-26T13:48:22 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -nosalt -md md5 -k 2c669cd6deaf78d1a94d6d55b3d4618a -p 
+2020-04-26T13:48:23 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -nosalt -md md5 -k 2c669cd6deaf78d1a94d6d55b3d4618a -p 
+2020-04-26T13:48:52 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -md md5 -k 2c669cd6deaf78d1a94d6d55b3d4618a -p 
+2020-04-26T13:48:52 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -md md5 -k 2c669cd6deaf78d1a94d6d55b3d4618a -p 
+2020-04-26T13:49:10 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 count=56 | openssl des -d -md md5 -k 2c669cd6deaf78d1a94d6d55b3d4618a > hdr
+2020-04-26T13:49:18 /home/petteri/projects/prs-t1: hexdump -n 16 -v -C hdr | head -1 | awk '{ print $2$3$4$5$6$7$8$9$10$11$12$13$14$15$16$17 }'
+2020-04-26T13:49:52 /home/petteri/projects/prs-t1: echo $((((`hexdump -s 16 -n 4 -v -C hdr | head -1 | awk '{ print "0x"$2$3$4$5 }'` + 16) / 16) * 16))
+2020-04-26T13:51:44 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1 skip=64 count=1584 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e55e16e5a236ecba33ff5389ca5f7fe3 > info
+2020-04-26T13:51:47 /home/petteri/projects/prs-t1: less info
+2020-04-26T13:53:53 /home/petteri/projects/prs-t1: dd if="$1" of=${STDOUT} bs=1k skip=${OFFSET} count=${BLOCK} 2>/dev/null |                 head -c ${SIZE} | \
+2020-04-26T13:54:10 /home/petteri/projects/prs-t1: ls -lh
+2020-04-26T13:54:26 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: less functions-c 
+2020-04-26T13:54:32 /home/petteri/projects/prs-t1: cat info
+2020-04-26T13:57:58 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=0 count=331 2>/dev/null | head -c 337920 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > updater.tar
+2020-04-26T13:59:59 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: less functions-c 
+2020-04-26T14:00:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: grep updater *
+2020-04-26T14:00:13 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: less functions-p 
+2020-04-26T14:00:17 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: grep PACKAGE_HEADER_SIZE *
+2020-04-26T14:00:51 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=2 count=331 2>/dev/null | head -c 337920 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > updater.tar
+2020-04-26T14:01:01 /work: sudo dd if=/dev/sdc of=prs_t1_broken.img bs=1M status=progress seek=1100 skip=1100 conv=sync,noerror
+2020-04-26T14:07:40 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=2 count=331 | head -c 337920 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > updater.tar
+2020-04-26T14:07:45 /home/petteri/projects/prs-t1: file updater.tar 
+2020-04-26T14:07:54 /home/petteri/projects/prs-t1: tar t updater.tar
+2020-04-26T14:07:59 /home/petteri/projects/prs-t1: tar tf updater.tar
+2020-04-26T14:08:13 /home/petteri/projects/prs-t1: tar xf updater.tar 
+2020-04-26T14:08:13 /home/petteri/projects/prs-t1: ls
+2020-04-26T14:08:19 /home/petteri/projects/prs-t1: mkdir update
+2020-04-26T14:08:22 /home/petteri/projects/prs-t1/update: cd update
+2020-04-26T14:08:28 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T14:08:35 /home/petteri/projects/prs-t1: tar tf updater.tar | xargs mv --dest-dir=update
+2020-04-26T14:08:38 /home/petteri/projects/prs-t1: mv --help
+2020-04-26T14:08:44 /home/petteri/projects/prs-t1: tar tf updater.tar | xargs mv -t update
+2020-04-26T14:08:47 /home/petteri/projects/prs-t1/update: cd update
+2020-04-26T14:08:47 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T14:09:02 /home/petteri/projects/prs-t1/update: less fb_process.sh 
+2020-04-26T14:09:07 /home/petteri/projects/prs-t1/update: less transsize 
+2020-04-26T14:09:08 /home/petteri/projects/prs-t1/update: ls -lh
+2020-04-26T14:09:14 /home/petteri/projects/prs-t1/update: less ac-functions 
+2020-04-26T14:09:15 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T14:09:17 /home/petteri/projects/prs-t1/update: ls 1_nand/
+2020-04-26T14:09:46 /home/petteri/projects/prs-t1/update: less 1_nand/update.sh 
+2020-04-26T14:09:47 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T14:09:52 /home/petteri/projects/prs-t1/update: tar xzf UpdateImg.tgz 
+2020-04-26T14:09:53 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T14:10:59 /home/petteri/projects/prs-t1/update: less update.sh 
+2020-04-26T14:12:47 /home/petteri/projects/prs-t1/update: less update.sh 
+2020-04-26T14:12:56 /home/petteri/projects/prs-t1/update: less ../info 
+2020-04-26T14:12:59 /home/petteri/projects/prs-t1/update: grep Kernel *
+2020-04-26T14:13:10 /home/petteri/projects/prs-t1/update: less ../info 
+2020-04-26T14:13:11 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T14:13:12 /home/petteri/projects/prs-t1: ls
+2020-04-26T14:13:18 /home/petteri/projects/prs-t1: cat info
+2020-04-26T14:13:36 /work: sudo dd if=prs_t1_broken.img of=/dev/mmcblk0 bs=1M status=progress
+2020-04-26T14:14:37 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=333 count=2235 | head -c 2288128 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > kernel
+2020-04-26T14:15:44 /home/petteri/projects/prs-t1: ls -l
+2020-04-26T14:15:56 /home/petteri/projects/prs-t1: hexedit kernel 
+2020-04-26T14:17:03 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=2568 count=210 | head -c 214464 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > initrd
+2020-04-26T14:17:48 /home/petteri/projects/prs-t1: hexedit initrd 
+2020-04-26T14:19:31 /home/petteri/projects/prs-t1: grep bootcmd *
+2020-04-26T14:19:38 /home/petteri/projects/prs-t1: grep bootcmd -r update
+2020-04-26T14:19:45 /home/petteri/projects/prs-t1: less in
+2020-04-26T14:20:08 /home/petteri/projects/prs-t1: less info 
+2020-04-26T14:21:57 /home/petteri/projects/prs-t1: ls -lh
+2020-04-26T14:21:59 /home/petteri/projects/prs-t1: ls -l
+2020-04-26T14:22:16 /work: dd if=prs_t1_broken.img skip=1048576 bs=1 count=2288112 > kernel
+2020-04-26T14:22:19 /work: hexedit kernel
+2020-04-26T14:22:21 /work: md5sum kernel
+2020-04-26T14:22:23 /home/petteri/projects/prs-t1: md5sum kernel
+2020-04-26T14:23:04 /work: dd if=prs_t1_broken.img skip=5242880 bs=1 count=214448 > kernel
+2020-04-26T14:23:09 /work: dd if=prs_t1_broken.img skip=5242880 bs=1 count=214448 > initrd
+2020-04-26T14:23:15 /work: hexedit initrd 
+2020-04-26T14:23:18 /work: md5sum initrd 
+2020-04-26T14:23:20 /home/petteri/projects/prs-t1: md5sum initrd 
+2020-04-26T14:23:29 /work: hexedit initrd 
+2020-04-26T14:24:12 /home/petteri/projects/prs-t1: sudo dd if=initrd of=/dev/mmcblk0 bs=1 skip=5242880
+2020-04-26T14:24:27 /home/petteri/projects/prs-t1: sudo dd if=initrd of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T14:24:38 /home/petteri/projects/prs-t1: sync
+2020-04-26T14:29:27 /work: hexedit prs_t1_broken.img 
+2020-04-26T14:29:51 /work: dd if=prs_t1_broken.img bs=1 skip=15728640 count=1024 > uboot_normal
+2020-04-26T14:29:55 /work: hexedit uboot_normal 
+2020-04-26T14:29:56 /work: file uboot_normal 
+2020-04-26T14:30:11 /work: hexedit uboot_normal 
+2020-04-26T14:30:33 /work: fw_setenv
+2020-04-26T14:30:38 /work: fw_getenv
+2020-04-26T14:30:47 /work: fw_printenv 
+2020-04-26T14:30:49 /work: fw_printenv uboot_normal 
+2020-04-26T14:30:52 /work: fw_printenv --help
+2020-04-26T14:30:59 /work: fw_printenv -c uboot_normal 
+2020-04-26T14:31:06 /work: fw_setenv 
+2020-04-26T14:31:07 /work: fw_setenv --help
+2020-04-26T14:32:53 /work: nano fw_env.config
+2020-04-26T14:32:58 /work: fw_printenv -c fw_env.config 
+2020-04-26T14:33:06 /work: nano fw_env.config
+2020-04-26T14:33:07 /work: fw_printenv -c fw_env.config 
+2020-04-26T14:33:35 /work: dd if=prs_t1_broken.img bs=1 skip=15728640 count=131072 > uboot_normal
+2020-04-26T14:33:42 /work: nano fw_env.config
+2020-04-26T14:33:44 /work: fw_printenv -c fw_env.config 
+2020-04-26T14:33:51 /work: hexedit uboot_normal 
+2020-04-26T14:34:09 /work: fw_setenv -c fw_env.config 
+2020-04-26T14:34:11 /work: fw_setenv -c fw_env.config --help
+2020-04-26T14:34:48 /work: fw_setenv -c fw_env.config 'bootargs' 'console=ttymxc2,115200 init=/init bootdev=0 rawtable=0xF40000'
+2020-04-26T14:35:16 /work: fw_setenv -c fw_env.config 'bootcmd' 'mmc read 0 ${loadaddr} 0x800 0x1400;mmc read 0 ${loadaddr_ramdisk} 0x2800 0x258;bootm ${loadaddr} ${loadaddr_ramdisk}'
+2020-04-26T14:35:27 /work: fw_setenv -c fw_env.config 'bootdev' '0'
+2020-04-26T14:35:40 /work: fw_setenv -c fw_env.config 'bootdev' '0'
+2020-04-26T14:35:44 /work: fw_printenv -c fw_env.config 
+2020-04-26T14:36:08 /work: dd if=uboot_normal of=/dev/mmcblk0 bs=1 seek=15728640
+2020-04-26T14:36:14 /work: sudo dd if=uboot_normal of=/dev/mmcblk0 bs=1 seek=15728640
+2020-04-26T14:36:30 /home/petteri/projects/prs-t1: ls
+2020-04-26T14:36:36 /home/petteri: sudo su
+2020-04-26T14:36:39 /home/petteri/download/rupor-rescue: cd download/rupor-rescue/
+2020-04-26T14:36:39 /home/petteri/download/rupor-rescue: ls
+2020-04-26T14:36:41 /home/petteri/download/rupor-rescue/OS Firmware: cd OS\ Firmware/
+2020-04-26T14:36:42 /home/petteri/download/rupor-rescue/OS Firmware: ls
+2020-04-26T14:36:43 /home/petteri/download/rupor-rescue/OS Firmware/files: cd files/
+2020-04-26T14:36:43 /home/petteri/download/rupor-rescue/OS Firmware/files: ls
+2020-04-26T14:36:44 /home/petteri/download/rupor-rescue/OS Firmware/files: ls -lh
+2020-04-26T14:36:45 /home/petteri/download/rupor-rescue/OS Firmware/files: file update.img 
+2020-04-26T14:37:00 /home/petteri/download/rupor-rescue/OS Firmware/files: mkdir tmp
+2020-04-26T14:37:07 /home/petteri/download/rupor-rescue/OS Firmware/files: sudo mount -o loop update.img tmp
+2020-04-26T14:37:08 /home/petteri/download/rupor-rescue/OS Firmware/files: ls tmp
+2020-04-26T14:37:21 /home/petteri/download/rupor-rescue/OS Firmware/files: fdisk -l
+2020-04-26T14:37:26 /home/petteri/download/rupor-rescue/OS Firmware/files: sudo fdisk -l /dev/mmcblk0
+2020-04-26T14:37:31 /home/petteri/download/rupor-rescue/OS Firmware/files: mkdir tmp2
+2020-04-26T14:38:09 /home/petteri/download/rupor-rescue/OS Firmware/files: mkdir tmp2
+2020-04-26T14:38:17 /home/petteri/projects/prs-t1: cd reader_prst1_1.0.0
+2020-04-26T14:38:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T14:38:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T14:38:41 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo dd if=disk3s1.bin of=/dev/mmcblk0p1 bs=1M
+2020-04-26T14:38:47 /work: ls
+2020-04-26T14:40:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T14:40:07 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T14:40:07 /home/petteri/projects/prs-t1: ls
+2020-04-26T14:40:11 /home/petteri/projects/prs-t1/update: cd update/
+2020-04-26T14:40:11 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T14:40:17 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T14:40:18 /home/petteri/projects/prs-t1: ls
+2020-04-26T14:40:23 /work: ls
+2020-04-26T14:40:42 /work: sudo mount /dev/sdc4 /mnt/sd
+2020-04-26T14:40:45 /work: cp uboot_normal /mnt/sd
+2020-04-26T14:40:48 /work: sudo cp uboot_normal /mnt/sd
+2020-04-26T14:40:52 /work: umount /mnt/sd
+2020-04-26T14:40:58 /work: sudo umount /mnt/sd
+2020-04-26T14:40:59 /work: sync
+2020-04-26T14:43:02 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: screen /dev/ttyACM0 115200
+2020-04-26T14:43:21 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: mount
+2020-04-26T14:43:28 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: sync
+2020-04-26T14:45:57 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T14:47:45 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T14:48:33 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: less functions-c 
+2020-04-26T14:48:38 /mnt: cd /mnt
+2020-04-26T14:48:45 /mnt: sudo mount /dev/mmcblk0p4 tmp
+2020-04-26T14:48:46 /mnt/tmp: cd tmp
+2020-04-26T14:48:47 /mnt/tmp: ls
+2020-04-26T14:48:50 /mnt/tmp: rm PRS-T1\ Updater.package 
+2020-04-26T14:48:52 /mnt/tmp: sudo rm PRS-T1\ Updater.package 
+2020-04-26T14:48:58 /mnt: cd ..
+2020-04-26T14:48:59 /mnt: umount tmp
+2020-04-26T14:49:01 /mnt: sudo umount tmp
+2020-04-26T14:51:47 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T14:52:42 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T14:56:09 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: screen /dev/ttyACM0 115200
+2020-04-26T14:57:21 /work: fw_printenv -c fw_env.config 
+2020-04-26T14:59:43 /home/petteri/projects/prs-t1/reader_prst1_1.0.05/tmp: screen /dev/ttyACM0 115200
+2020-04-26T15:03:02 /home/petteri: ./tst.py
+2020-04-26T15:03:18 /home/petteri: ./tst.py
+2020-04-26T15:03:19 /home/petteri: ./tst.py
+2020-04-26T15:05:13 /home/petteri: sercat /dev/ttyUSB0 115200
+2020-04-26T15:08:33 /home/petteri: ./tst.py
+2020-04-26T15:08:34 /work: cd /work
+2020-04-26T15:08:34 /work: ls
+2020-04-26T15:08:41 /work: hexedit initrd 
+2020-04-26T15:08:44 /work: ls -l initrd 
+2020-04-26T15:09:38 /work: mkimage -l initrd 
+2020-04-26T15:09:43 /work: mkimage --help
+2020-04-26T15:11:08 /work: python
+2020-04-26T15:11:24 /work: dumpimage 
+2020-04-26T15:11:29 /work: dumpimage -l initrd 
+2020-04-26T15:12:00 /work: ls
+2020-04-26T15:12:05 /work: less info
+2020-04-26T15:12:22 /home/petteri/projects/prs-t1/update: cd projects/prs-t1/update/
+2020-04-26T15:12:22 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T15:12:27 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T15:12:28 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:12:33 /home/petteri/projects/prs-t1: md5sum initrd 
+2020-04-26T15:12:36 /work: md5sum initrd 
+2020-04-26T15:12:53 /home/petteri/projects/prs-t1: ./tst.py
+2020-04-26T15:12:54 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:13:49 /home/petteri/projects/prs-t1: dd if=initrd of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T15:13:54 /home/petteri/projects/prs-t1: sudo dd if=initrd of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T15:13:56 /home/petteri/projects/prs-t1: sync
+2020-04-26T15:17:08 /work: dpkg -S dumpimage
+2020-04-26T15:17:13 /work: dpkg -L u-boot-tools
+2020-04-26T15:17:36 /home/petteri/projects/prs-t1: gedit enckey_extract.txt 
+2020-04-26T15:17:36 /home/petteri/projects/prs-t1: bg
+2020-04-26T15:17:54 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=2568 count=210 | head -c 214464 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > initrd
+2020-04-26T15:18:22 /home/petteri/projects/prs-t1: less info 
+2020-04-26T15:18:31 /home/petteri/projects/prs-t1: less info 
+2020-04-26T15:18:53 /home/petteri/projects/prs-t1: less info 
+2020-04-26T15:19:35 /home/petteri/projects/prs-t1: ./tst.py
+2020-04-26T15:19:36 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:19:38 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T15:19:39 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T15:19:45 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T15:19:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep 'functions-c' *.bin
+2020-04-26T15:20:07 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s2.bin tmp
+2020-04-26T15:20:08 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T15:20:09 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T15:20:12 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local: cd usr/local/
+2020-04-26T15:20:12 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local: ls
+2020-04-26T15:20:13 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony: cd sony/
+2020-04-26T15:20:14 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony: ls
+2020-04-26T15:20:15 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: cd bin
+2020-04-26T15:20:16 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: ls
+2020-04-26T15:20:30 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: grep Root *
+2020-04-26T15:20:40 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony: cd ..
+2020-04-26T15:20:41 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local: cd ..
+2020-04-26T15:20:42 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr: cd ..
+2020-04-26T15:20:42 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T15:20:43 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T15:20:50 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep Rootfs *
+2020-04-26T15:20:53 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep Rootfs *
+2020-04-26T15:20:54 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: mkdir tmp2
+2020-04-26T15:21:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount -o loop disk3s1.bin tmp2
+2020-04-26T15:21:02 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp2: cd tmp2
+2020-04-26T15:21:02 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp2: ls
+2020-04-26T15:21:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp2: grep -r Rootfs
+2020-04-26T15:21:35 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp2: less linuxrc 
+2020-04-26T15:21:36 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp2: ls
+2020-04-26T15:21:40 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T15:21:47 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep Normal *
+2020-04-26T15:22:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: strings disk3s10.bin | grep Normal
+2020-04-26T15:22:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: strings disk3s10.bin | grep Normal
+2020-04-26T15:22:10 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: strings disk3s4.bin | grep Normal
+2020-04-26T15:22:28 /home/petteri/projects/prs-t1: less info 
+2020-04-26T15:22:29 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:22:31 /home/petteri/projects/prs-t1/update: cd update/
+2020-04-26T15:22:31 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T15:22:41 /home/petteri/projects/prs-t1/update: tar xvf UpdateImg.tgz 
+2020-04-26T15:22:46 /home/petteri/projects/prs-t1/update/1_nand: cd 1_nand/
+2020-04-26T15:22:46 /home/petteri/projects/prs-t1/update/1_nand: ls
+2020-04-26T15:24:25 /home/petteri/projects/prs-t1/update/1_nand: less update.sh 
+2020-04-26T15:24:28 /home/petteri/projects/prs-t1/update/1_nand: grep TRANS_SIZE *
+2020-04-26T15:24:44 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T15:24:45 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T15:24:45 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T15:24:49 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: cd usr/local/sony/bin/
+2020-04-26T15:24:50 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: ls
+2020-04-26T15:24:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony/bin: grep TRANS_SIZE *
+2020-04-26T15:24:53 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local/sony: cd ..
+2020-04-26T15:24:54 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr/local: cd ..
+2020-04-26T15:24:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/usr: cd ..
+2020-04-26T15:24:55 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T15:24:56 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T15:24:57 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T15:25:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep TRANS_SIZE *.bin
+2020-04-26T15:25:06 /home/petteri/projects/prs-t1/update/1_nand: cd .
+2020-04-26T15:25:10 /home/petteri/projects/prs-t1/update/1_nand: grep TRANS_SIZE ../*
+2020-04-26T15:25:13 /home/petteri/projects/prs-t1/update: cd ..
+2020-04-26T15:25:14 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T15:25:27 /home/petteri/projects/prs-t1/update: hexedit transsize 
+2020-04-26T15:25:29 /home/petteri/projects/prs-t1/update: file transsize 
+2020-04-26T15:26:01 /home/petteri/projects/prs-t1/update: qemu-system-arm transsize 
+2020-04-26T15:26:07 /home/petteri/projects/prs-t1/update: qemu-system-arm -machine help transsize 
+2020-04-26T15:26:51 /home/petteri/projects/prs-t1/update: qemu-system-arm -machine help transsize 
+2020-04-26T15:26:55 /home/petteri/projects/prs-t1/update: qemu-arm
+2020-04-26T15:27:16 /home/petteri/projects/prs-t1/update: sudo apt install qemu-user
+2020-04-26T15:27:20 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T15:28:52 /home/petteri/projects/prs-t1/update: less 1_nand/update.sh 
+2020-04-26T15:28:58 /home/petteri/projects/prs-t1/update: qemu-arm transsize 
+2020-04-26T15:29:28 /home/petteri/projects/prs-t1/update: qemu-arm transsize 
+2020-04-26T15:29:29 /home/petteri/projects/prs-t1/update: export QEMU_LD_PREFIX=/usr/arm-linux-gnueabihf
+2020-04-26T15:29:30 /home/petteri/projects/prs-t1/update: qemu-arm transsize 
+2020-04-26T15:30:06 /home/petteri/projects/prs-t1/update: file transsize 
+2020-04-26T15:30:38 /home/petteri: sercat /dev/ttyUSB0 115200
+2020-04-26T15:30:42 /home/petteri/projects/prs-t1: cd projects/prs-t1/
+2020-04-26T15:30:42 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:30:45 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T15:31:35 /home/petteri/projects/prs-t1: ./tst.py
+2020-04-26T15:33:02 /home/petteri/projects/prs-t1: sudo mount /dev/sdb4 /mnt/sd
+2020-04-26T15:33:21 /home/petteri/projects/prs-t1: sudo cp /home/petteri/download/PRS-T1\ Updater.package /mnt/sd/update
+2020-04-26T15:33:24 /home/petteri/projects/prs-t1: umount /mnt/sd
+2020-04-26T15:36:29 /home/petteri/projects/prs-t1: sudo umount /mnt/sd
+2020-04-26T15:36:50 /home/petteri/projects/prs-t1: sudo mount /dev/sdb4 /mnt/sd
+2020-04-26T15:36:56 /home/petteri/projects/prs-t1: sudo cp initrd /mnt/sd
+2020-04-26T15:36:59 /home/petteri/projects/prs-t1: umount /mnt/sd
+2020-04-26T15:37:04 /home/petteri/projects/prs-t1: sudo umount /mnt/sd
+2020-04-26T15:37:06 /home/petteri/projects/prs-t1: sync
+2020-04-26T15:38:09 /home/petteri/projects/prs-t1: sudo mount /dev/sdb4 /mnt/sd
+2020-04-26T15:38:15 /home/petteri/projects/prs-t1: cp /mnt/sd/initrd2 .
+2020-04-26T15:38:24 /home/petteri/projects/prs-t1: sudo umount /mnt/sd
+2020-04-26T15:38:24 /home/petteri/projects/prs-t1: sudo umount /mnt/sd
+2020-04-26T15:38:32 /home/petteri/projects/prs-t1: sync
+2020-04-26T15:38:37 /home/petteri/projects/prs-t1: sudo mount /dev/sdb4 /mnt/sd
+2020-04-26T15:38:43 /home/petteri/projects/prs-t1: ls /mnt/sd/initrd2
+2020-04-26T15:38:44 /home/petteri/projects/prs-t1: ls /mnt/sd/initrd
+2020-04-26T15:38:46 /home/petteri/projects/prs-t1: ls /mnt/sd/initrd -l
+2020-04-26T15:38:49 /home/petteri/projects/prs-t1: umount /mnt/sd
+2020-04-26T15:38:53 /home/petteri/projects/prs-t1: sudo umount /mnt/sd
+2020-04-26T15:43:17 /home/petteri/projects/prs-t1: less update/1_nand/update.sh 
+2020-04-26T15:43:38 /home/petteri/projects/prs-t1: less update/1_nand/update.sh 
+2020-04-26T15:43:40 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=333 count=2235 | head -c 2288144 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 | qemu-arm transsize > kernel
+2020-04-26T15:43:46 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=333 count=2235 | head -c 2288144 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > kernel
+2020-04-26T15:43:56 /home/petteri/projects/prs-t1: dd if=PRS-T1\ Updater.package bs=1k skip=2568 count=210 | head -c 214480 | openssl aes-128-cbc -d -K 2c669cd6deaf78d1a94d6d55b3d4618a -iv e0928df48e4f275051271c102bf8fc87 > initrd
+2020-04-26T15:45:09 /home/petteri/projects/prs-t1: sudo dd if=initrd of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T15:45:11 /home/petteri/projects/prs-t1: sync
+2020-04-26T15:45:41 /home/petteri/projects/prs-t1: screen /dev/ttyACM0 115200
+2020-04-26T15:56:10 /home/petteri/projects/prs-t1/update: ls
+2020-04-26T15:56:14 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T15:56:14 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:56:18 /home/petteri/projects/prs-t1: file initrd 
+2020-04-26T15:56:31 /home/petteri/projects/prs-t1: dd if=initrd of=initrd2 bs=1 skip=64
+2020-04-26T15:56:34 /home/petteri/projects/prs-t1: file initrd2
+2020-04-26T15:56:43 /home/petteri/projects/prs-t1: gunzip initrd2
+2020-04-26T15:56:49 /home/petteri/projects/prs-t1: dd if=initrd of=initrd2.gz bs=1 skip=64
+2020-04-26T15:56:51 /home/petteri/projects/prs-t1: rm initrd2
+2020-04-26T15:56:54 /home/petteri/projects/prs-t1: gunzip initrd2.gz
+2020-04-26T15:57:11 /home/petteri/projects/prs-t1: file initrd2 
+2020-04-26T15:57:17 /home/petteri/projects/prs-t1: mkdir initrd_ext
+2020-04-26T15:57:18 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext/
+2020-04-26T15:57:26 /home/petteri/projects/prs-t1/initrd_ext: cpio -x < ../initrd2
+2020-04-26T15:57:29 /home/petteri/projects/prs-t1/initrd_ext: cpio --help
+2020-04-26T15:57:40 /home/petteri/projects/prs-t1/initrd_ext: cpio -p . < ../initrd2
+2020-04-26T15:57:45 /home/petteri/projects/prs-t1/initrd_ext: cpio --help
+2020-04-26T15:58:00 /home/petteri/projects/prs-t1/initrd_ext: cpio -i --no-absolute-filenames < ../initrd2
+2020-04-26T15:58:01 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T15:58:04 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T15:58:08 /home/petteri/projects/prs-t1: mkdir initrd_ext2
+2020-04-26T15:58:09 /home/petteri/projects/prs-t1/initrd_ext2: cd initrd_ext2
+2020-04-26T15:58:36 /home/petteri/projects/prs-t1/initrd_ext2: cpio -i --no-absolute-filenames < ~/download/enable-adb/sdcard/tmp/ramdisk-adb.fs 
+2020-04-26T15:58:37 /home/petteri/projects/prs-t1/initrd_ext2: ls
+2020-04-26T15:58:39 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T15:58:40 /home/petteri/projects/prs-t1: ls
+2020-04-26T15:58:43 /home/petteri/projects/prs-t1: tree initrd_ext
+2020-04-26T15:58:46 /home/petteri/projects/prs-t1: tree initrd_ext2
+2020-04-26T15:59:11 /home/petteri/projects/prs-t1/initrd_ext2: cd initrd_ext2
+2020-04-26T15:59:13 /home/petteri/projects/prs-t1/initrd_ext2/sbin: cd sbin/
+2020-04-26T15:59:13 /home/petteri/projects/prs-t1/initrd_ext2/sbin: ls
+2020-04-26T15:59:21 /home/petteri/projects/prs-t1/initrd_ext2/sbin: less dropbear.sh 
+2020-04-26T16:06:36 /work: sudo fdisk -l
+2020-04-26T16:07:59 /work: sudo mount /dev/sdc10 /mnt/sd
+2020-04-26T16:08:01 /work: ls /mnt/sd
+2020-04-26T16:08:07 /work: ls /mnt/sd/bin
+2020-04-26T18:00:06 /home/petteri/projects/prs-t1/initrd_ext2: cd ..
+2020-04-26T18:00:06 /home/petteri/projects/prs-t1/initrd_ext2: ls
+2020-04-26T18:00:09 /home/petteri/projects/prs-t1/initrd_ext2: grep adb *
+2020-04-26T18:03:55 /home/petteri/projects/prs-t1/initrd_ext2: less init.rc 
+2020-04-26T18:04:23 /home/petteri/projects/prs-t1/initrd_ext2: less ../initrd_ext/init.rc 
+2020-04-26T18:04:31 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:04:33 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:04:35 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:04:41 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:04:43 /home/petteri/projects/prs-t1/initrd_ext: ls sbin
+2020-04-26T18:04:52 /home/petteri/projects/prs-t1/initrd_ext: cp ../initrd_ext2/sbin/adbd sbin/
+2020-04-26T18:04:55 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:04:57 /home/petteri/projects/prs-t1: find initrd_ext
+2020-04-26T18:05:01 /home/petteri/projects/prs-t1: tree initrd_ext
+2020-04-26T18:05:03 /home/petteri/projects/prs-t1: tree initrd_ext2
+2020-04-26T18:05:08 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:05:09 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:05:13 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:05:14 /home/petteri/projects/prs-t1/initrd_ext: grep adb *
+2020-04-26T18:05:30 /home/petteri/projects/prs-t1/initrd_ext: nano default.prop 
+2020-04-26T18:05:55 /home/petteri/projects/prs-t1/initrd_ext: nano init.rc 
+2020-04-26T18:06:17 /home/petteri/projects/prs-t1/initrd_ext: less ../initrd_ext2/init.rc 
+2020-04-26T18:06:25 /home/petteri/projects/prs-t1/initrd_ext: diff ../initrd_ext2/init.rc init.rc 
+2020-04-26T18:06:28 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:06:31 /home/petteri/projects/prs-t1/initrd_ext: ls ebook
+2020-04-26T18:06:33 /home/petteri/projects/prs-t1/initrd_ext: ls data
+2020-04-26T18:06:36 /home/petteri/projects/prs-t1/initrd_ext: ls sys
+2020-04-26T18:06:38 /home/petteri/projects/prs-t1/initrd_ext: ls system
+2020-04-26T18:06:39 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:06:41 /home/petteri/projects/prs-t1/initrd_ext: ls lib
+2020-04-26T18:06:43 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:06:44 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:06:52 /home/petteri/projects/prs-t1: cpio --help
+2020-04-26T18:07:02 /home/petteri/projects/prs-t1: cpio -t < initrd2
+2020-04-26T18:07:06 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:07:09 /home/petteri/projects/prs-t1/initrd_ext: cpio --help
+2020-04-26T18:07:47 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -o > ../initrd_new
+2020-04-26T18:07:48 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:07:49 /home/petteri/projects/prs-t1: ls -lh
+2020-04-26T18:08:01 /home/petteri/projects/prs-t1: cpio -t < initrd2
+2020-04-26T18:08:03 /home/petteri/projects/prs-t1: cpio -t < initrd_new
+2020-04-26T18:08:07 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:08:11 /home/petteri/projects/prs-t1: gzip initrd_new 
+2020-04-26T18:08:11 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:08:18 /home/petteri/projects/prs-t1: file initrd
+2020-04-26T18:08:28 /home/petteri/projects/prs-t1: mkimage
+2020-04-26T18:15:48 /home/petteri/projects/prs-t1: mkimage -A ARM -o Linux -T list
+2020-04-26T18:15:53 /home/petteri/projects/prs-t1: mkimage -T list
+2020-04-26T18:17:17 /home/petteri/projects/prs-t1: mkimage -A ARM -o Linux -T ramdisk -a 0x70308000 -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T18:17:26 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T18:17:30 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:17:34 /home/petteri/projects/prs-t1: file initrd_new
+2020-04-26T18:17:35 /home/petteri/projects/prs-t1: file initrd
+2020-04-26T18:17:57 /home/petteri/projects/prs-t1: mkimage -C list
+2020-04-26T18:18:11 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -C none -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T18:18:14 /home/petteri/projects/prs-t1: file initrd_new
+2020-04-26T18:18:16 /home/petteri/projects/prs-t1: file initrd
+2020-04-26T18:19:01 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T18:19:46 /home/petteri/projects/prs-t1: sudo fdisk -l /dev/mmcblk0
+2020-04-26T18:19:51 /home/petteri/projects/prs-t1: sync
+2020-04-26T18:25:45 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T18:27:08 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:27:11 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:27:11 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:27:17 /home/petteri/projects/prs-t1/initrd_ext: less init
+2020-04-26T18:33:52 /home/petteri/projects/prs-t1/initrd_ext: less init.rc 
+2020-04-26T18:34:00 /home/petteri/projects/prs-t1/initrd_ext: find lib/modules/2.6.35.3/kernel/drivers/usb/
+2020-04-26T18:34:51 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T18:34:52 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:34:53 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:34:57 /home/petteri/projects/prs-t1: file initrd_new.gz 
+2020-04-26T18:35:04 /home/petteri/projects/prs-t1: file initrd_new
+2020-04-26T18:35:18 /home/petteri/projects/prs-t1: gunzip -c < initrd_new.gz > initrd_new.cpio
+2020-04-26T18:35:21 /home/petteri/projects/prs-t1: file initrd_new.cpio 
+2020-04-26T18:35:24 /home/petteri/projects/prs-t1: file initrd2 
+2020-04-26T18:35:36 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:37:23 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -H newc -o > ../initrd_new
+2020-04-26T18:37:26 /home/petteri/projects/prs-t1/initrd_ext: file ../initrd_new
+2020-04-26T18:37:28 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:37:35 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:37:44 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -C none -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T18:38:05 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T18:38:06 /home/petteri/projects/prs-t1: sync
+2020-04-26T18:38:26 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T18:40:15 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:40:34 /home/petteri/projects/prs-t1: gzip -c < initrd_new.cpio > initrd_new.gz 
+2020-04-26T18:40:38 /home/petteri/projects/prs-t1: file initrd_new.gz 
+2020-04-26T18:40:42 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -C none -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T18:41:00 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T18:41:01 /home/petteri/projects/prs-t1: sync
+2020-04-26T18:41:13 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T18:42:33 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:42:53 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:42:58 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:43:03 /home/petteri/projects/prs-t1: which mkinitramfs
+2020-04-26T18:44:05 /home/petteri/projects/prs-t1: less /usr/sbin/mkinitramfs 
+2020-04-26T18:44:09 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:44:18 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -H newc -R 0:0 -o > ../initrd_new
+2020-04-26T18:44:46 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:44:46 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:44:51 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T18:44:53 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -H newc -R 0:0 -o > ../initrd_new.cpio
+2020-04-26T18:44:54 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T18:45:01 /home/petteri/projects/prs-t1: gzip -c < initrd_new.cpio > initrd_new.gz 
+2020-04-26T18:45:06 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -C none -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T18:45:10 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T18:45:32 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T18:45:33 /home/petteri/projects/prs-t1: sync
+2020-04-26T18:45:47 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T18:46:46 /home/petteri/projects/prs-t1: ls
+2020-04-26T18:46:47 /home/petteri/projects/prs-t1: ls -l
+2020-04-26T18:47:17 /home/petteri/projects/prs-t1: file initrd_new
+2020-04-26T18:47:46 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -C none -n 'Normal Rootfs2' -d initrd_new.gz initrd_new
+2020-04-26T18:47:48 /home/petteri/projects/prs-t1: file initrd_new
+2020-04-26T18:48:09 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T18:48:10 /home/petteri/projects/prs-t1: sync
+2020-04-26T18:48:24 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T18:48:54 /home/petteri/projects/prs-t1: mount
+2020-04-26T18:52:21 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T18:52:24 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T19:08:38 /home/petteri/projects/prs-t1: ls
+2020-04-26T19:08:41 /home/petteri/projects/prs-t1: file initrd_new
+2020-04-26T19:09:35 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T19:09:37 /home/petteri/projects/prs-t1: sync
+2020-04-26T19:10:04 /home/petteri/projects/prs-t1: hexedit /dev/mmcblk0
+2020-04-26T19:10:06 /home/petteri/projects/prs-t1: sync
+2020-04-26T19:11:48 /home/petteri/projects/prs-t1: hexedit /dev/mmcblk0
+2020-04-26T19:11:53 /home/petteri/projects/prs-t1: ls -l /dev/mmcblk0 
+2020-04-26T19:11:58 /home/petteri/projects/prs-t1: sudo rm /dev/mmcblk0 
+2020-04-26T19:12:14 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T19:12:16 /home/petteri/projects/prs-t1: sync
+2020-04-26T19:12:29 /home/petteri/projects/prs-t1: python uboot.py 
+2020-04-26T19:14:08 /home/petteri/projects/prs-t1: adb --help
+2020-04-26T19:14:24 /home/petteri/projects/prs-t1: adb shell
+2020-04-26T19:14:33 /home/petteri/projects/prs-t1: adb shell
+2020-04-26T19:14:35 /home/petteri/projects/prs-t1: ps -A|grep adb
+2020-04-26T19:14:39 /home/petteri/projects/prs-t1: kill 14346
+2020-04-26T19:14:40 /home/petteri/projects/prs-t1: kill 14346
+2020-04-26T19:15:07 /home/petteri/projects/prs-t1: sudo adb shell
+2020-04-26T19:15:08 /home/petteri/projects/prs-t1: sudo adb shell
+2020-04-26T19:15:09 /home/petteri/projects/prs-t1: ls
+2020-04-26T19:18:34 /home/petteri/projects/prs-t1: sudo adb shell
+2020-04-26T19:20:41 /home/petteri/projects/prs-t1: sudo adb shell
+2020-04-26T19:21:09 /home/petteri/projects/prs-t1: sudo adb pull /system/build.prop
+2020-04-26T19:21:24 /home/petteri/projects/prs-t1: nano build.prop 
+2020-04-26T19:21:42 /home/petteri/projects/prs-t1: sudo nano build.prop 
+2020-04-26T19:21:53 /home/petteri/projects/prs-t1: sudo adb push build.prop /system/build.prop
+2020-04-26T19:22:16 /home/petteri/projects/prs-t1: sudo adb shell
+2020-04-26T19:22:17 /home/petteri/projects/prs-t1: sudo adb push build.prop /system/build.prop
+2020-04-26T19:22:30 /home/petteri/projects/prs-t1: sudo adb shell
+2020-04-26T20:19:47 /home/petteri/projects/prs-t1: ls
+2020-04-26T20:20:31 /home/petteri/projects/prs-t1: ls
+2020-04-26T20:20:33 /home/petteri/projects/prs-t1: ls /dev/mmc*
+2020-04-26T20:23:28 /home/petteri/projects/prs-t1: sudo dd if=/dev/mmcblk0 bs=1M count=4096 of=image.bin status=progress
+2020-04-26T20:23:42 /home/petteri/projects/prs-t1: gparted image.bin 
+2020-04-26T20:24:26 /home/petteri/projects/prs-t1: sudo dd if=image.bin of=/dev/mmcblk0 bs=1M status=progress
+2020-04-26T20:24:35 /home/petteri/projects/prs-t1: ls /dev/mmcblk0 
+2020-04-26T20:25:16 /home/petteri/projects/prs-t1: sudo gparted /dev/mmcblk0 
+2020-04-26T20:25:18 /home/petteri/projects/prs-t1: sync
+2020-04-26T20:25:27 /home/petteri/projects/prs-t1: sync
+2020-04-26T20:25:40 /home/petteri/projects/prs-t1: ls -l /dev/mmcblk0 
+2020-04-26T20:25:45 /home/petteri/projects/prs-t1: sudo rm /dev/mmcblk0 
+2020-04-26T20:25:51 /home/petteri/projects/prs-t1: sudo rmmod rtsx_usb_sdmmc
+2020-04-26T20:25:54 /home/petteri/projects/prs-t1: sudo modprobe rtsx_usb_sdmmc
+2020-04-26T20:32:23 /home/petteri/projects/prs-t1: sudo dd if=image.bin of=/dev/mmcblk0 bs=1M status=progress
+2020-04-26T20:32:23 /home/petteri/projects/prs-t1: sudo dd if=image.bin of=/dev/mmcblk0 bs=1M status=progress
+2020-04-26T20:33:11 /home/petteri/projects/prs-t1: sudo gparted /dev/mmcblk0
+2020-04-26T20:33:15 /home/petteri/projects/prs-t1: sudo gparted /dev/mmcblk0
+2020-04-26T20:42:14 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: makepasswd
+2020-04-26T20:49:11 /home/petteri/projects/prs-t1: man cpio
+2020-04-26T21:06:18 /home/petteri/projects/prs-t1: cd projects/prs-t1/
+2020-04-26T21:06:18 /home/petteri/projects/prs-t1: ls
+2020-04-26T21:06:21 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T21:06:22 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T21:06:27 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep fstab *
+2020-04-26T21:07:52 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T21:07:52 /home/petteri/projects/prs-t1: ls
+2020-04-26T21:07:54 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T21:07:55 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T21:07:58 /home/petteri/projects/prs-t1/initrd_ext: grep -r mmcblk
+2020-04-26T21:08:55 /home/petteri/projects/prs-t1/initrd_ext: nano init.rc 
+2020-04-26T21:09:55 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T21:10:06 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T21:10:46 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T21:10:48 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T21:11:23 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -H newc -R 0:0 -o 
+2020-04-26T21:11:26 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -H newc -R 0:0 -o 
+2020-04-26T21:11:40 /home/petteri/projects/prs-t1/initrd_ext: find | cpio -H newc -R 0:0 -o > ../initrd_new.cpio
+2020-04-26T21:11:43 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T21:12:58 /home/petteri/projects/prs-t1: gzip -c < initrd_new.cpio > initrd_new.gz
+2020-04-26T21:13:04 /home/petteri/projects/prs-t1: mkimage -A ARM -O Linux -T ramdisk -a 0x70308000 -C none -n 'Normal Rootfs' -d initrd_new.gz initrd_new
+2020-04-26T21:13:12 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T21:16:55 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T21:17:44 /home/petteri/projects/prs-t1: less initrd_ext/init.rc 
+2020-04-26T21:17:57 /home/petteri/projects/prs-t1: grep -r mmcblk
+2020-04-26T21:18:20 /home/petteri/projects/prs-t1: ls
+2020-04-26T21:18:26 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd reader_prst1_1.0.07/
+2020-04-26T21:18:27 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T21:18:34 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep mmcblk2p4 *.bin
+2020-04-26T21:18:43 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T21:19:13 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T21:19:16 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T21:19:16 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T21:19:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag: cd diag
+2020-04-26T21:19:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag: ls
+2020-04-26T21:19:20 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag/bin: cd bin
+2020-04-26T21:19:20 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag/bin: ls
+2020-04-26T21:19:38 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag/bin: less storage_functions 
+2020-04-26T21:19:43 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag/bin: ls
+2020-04-26T21:19:44 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/diag: cd ..
+2020-04-26T21:19:45 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T21:19:46 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T21:19:47 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T21:19:48 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: mount
+2020-04-26T21:19:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T21:19:58 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep mmcblk2p4 *.bin
+2020-04-26T21:20:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T21:20:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T21:20:15 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls bin
+2020-04-26T21:20:16 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T21:20:18 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls system
+2020-04-26T21:20:19 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T21:20:21 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: cd etc
+2020-04-26T21:20:21 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: ls
+2020-04-26T21:20:33 /home/petteri/projects/prs-t1/initrd_ext: cd initrd_ext
+2020-04-26T21:20:34 /home/petteri/projects/prs-t1/initrd_ext: ls
+2020-04-26T21:20:39 /home/petteri/projects/prs-t1/initrd_ext: less init
+2020-04-26T21:22:54 /home/petteri/projects/prs-t1/initrd_ext: less init.rc 
+2020-04-26T21:22:56 /home/petteri/projects/prs-t1/initrd_ext: grep -r data
+2020-04-26T21:24:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T21:24:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T21:24:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T21:24:02 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: file *
+2020-04-26T21:26:50 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T21:26:51 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T21:26:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: cd etc
+2020-04-26T21:26:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: ls
+2020-04-26T21:27:04 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T21:27:04 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T21:27:06 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls tmp2
+2020-04-26T21:27:19 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: find | grep fstab
+2020-04-26T21:27:29 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: less tmp/etc/fstab 
+2020-04-26T21:27:36 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: less tmp/etc/fstab 
+2020-04-26T21:27:40 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: ls
+2020-04-26T21:27:45 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: grep vold *.bin
+2020-04-26T21:27:48 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: mount
+2020-04-26T21:27:52 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo umount tmp
+2020-04-26T21:27:59 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: sudo mount disk3s10.bin tmp
+2020-04-26T21:28:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd tmp
+2020-04-26T21:28:01 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: ls
+2020-04-26T21:28:02 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: cd etc
+2020-04-26T21:28:02 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: ls
+2020-04-26T21:28:35 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp/etc: nano vold.fstab 
+2020-04-26T21:50:59 /home/petteri/projects/prs-t1/reader_prst1_1.0.07/tmp: cd ..
+2020-04-26T21:51:00 /home/petteri/projects/prs-t1/reader_prst1_1.0.07: cd ..
+2020-04-26T21:51:00 /home/petteri/projects/prs-t1: cd ..
+2020-04-26T21:51:15 /home/petteri/projects/prs-t1: sudo dd if=initrd_new of=/dev/mmcblk0 bs=1 seek=5242880
+2020-04-26T21:51:40 /home/petteri/projects/prs-t1: ls
+2020-04-26T21:55:05 /home/petteri/projects/prs-t1: sudo dd if=/dev/mmcblk0 of=image.bin bs=1M status=progress
+2020-04-26T21:59:48 /home/petteri/projects/prs-t1: ls
+2020-04-26T22:00:07 /home/petteri/projects/prs-t1: mv image.bin sd_card_PRS-T1_1.0.07_adb_enabled.bin
+2020-04-26T22:00:19 /home/petteri/projects/prs-t1: gzip sd_card_PRS-T1_1.0.07_adb_enabled.bin 
+2020-04-26T22:00:20 /home/petteri/projects/prs-t1: l
+2020-04-26T22:05:27 /home/petteri/projects/prs-t1: ./tst.py
+2020-04-26T22:09:32 /home/petteri/projects/prs-t1: xz sd_card_PRS-T1_1.0.07_adb_enabled.bin 
+2020-04-26T22:09:39 /home/petteri/projects/prs-t1: ls
+2020-04-26T22:09:41 /home/petteri/projects/prs-t1: ls -lh
+2020-04-26T22:11:52 /home/petteri/projects/prs-t1/initrd_ext: man xz
+2020-04-26T22:20:39 /home/petteri/projects/prs-t1: toother sd_card_PRS-T1_1.0.07_adb_enabled.bin.xz 

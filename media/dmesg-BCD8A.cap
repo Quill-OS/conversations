@@ -1,0 +1,353 @@
+[root@kobo ~]# dmesg
+Linux version 2.6.35.3-850-gbc67621+ (gallen@gallen-M51AC) (gcc version 4.4.4 (4.4.4_09.06.2010) ) #3032 PREEMPT Mon Jan 9 13:37:40 CST 2017
+CPU: ARMv7 Processor [412fc085] revision 5 (ARMv7), cr=10c53c7f
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Machine: Freescale MX50 Reference Design Platform
+Memory policy: ECC disabled, Data cache writeback
+On node 0 totalpages: 129280
+free_area_init_node: node 0, pgdat 803c7d20, node_mem_map 803eb000
+  DMA zone: 192 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 24384 pages, LIFO batch:3
+  Normal zone: 818 pages used for memmap
+  Normal zone: 103886 pages, LIFO batch:31
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 128270
+Kernel command line: console=ttymxc0,115200 rootwait rw quiet lpj=4997120 root=/dev/mmcblk0p1 rootfstype=ext4 hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8f989800 waveform_sz=6776288 mem=505M boot_port=2 mx50_1GHz
+PID hash table entries: 2048 (order: 1, 8192 bytes)
+Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+Memory: 505MB = 505MB total
+Memory: 508624k/508624k available, 8496k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xf9e00000 - 0xffe00000   (  96 MB)
+    vmalloc : 0xa0000000 - 0xf4000000   (1344 MB)
+    lowmem  : 0x80000000 - 0x9f900000   ( 505 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .init : 0x80008000 - 0x80025000   ( 116 kB)
+      .text : 0x80025000 - 0x80379000   (3408 kB)
+      .data : 0x8038e000 - 0x803c8a80   ( 235 kB)
+SLUB: Genslabs=11, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Hierarchical RCU implementation.
+	RCU-based detection of stalled CPUs is disabled.
+	Verbose stalled-CPUs detection is disabled.
+NR_IRQS:368
+MXC GPIO hardware
+MXC IRQ initialized
+MXC_Early serial console at MMIO 0x53fc0000 (options '115200')
+bootconsole [ttymxc0] enabled
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped) preset value.. 999.42 BogoMIPS (lpj=4997120)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+regulator: core version 0.5
+NET: Registered protocol family 16
+i.MX IRAM pool: 128 KB@0xa0040000
+hwcfg_size_setup() hwcfg_szie=110
+***_MemoryRequest:2826: request memory region! addr=0x8ffffe00, len=110***
+hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=a006ee00,size=110
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too new !! Please update hardware config tool !!
+hwcfg_p_setup() pcba="(null)" !!
+NtxHwCfg_GetCfgFldVal:[WARNING]Config version too new !! Please update hardware config tool !!
+root_path_setup() rootdev=0,rootpart=1
+boot_port_setup() boot_port=2
+CPU is i.MX50 Revision 1.1
+[check_hardware_name-615] PCBA ID is 41
+[mxc_board_init-3180] register esdhc3 as mmcblk0
+Using SDMA I.API
+MXC DMA API initialized
+IMX usb wakeup probe
+the wakeup pdata is 0x8039b540
+IMX usb wakeup probe
+the wakeup pdata is 0x8039b5f4
+bio: create slab <bio-0> at 0
+regulator: DCDC_3V15: 3150 mV 
+SCSI subsystem initialized
+CSPI: mxc_spi-2 probed
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PMIC Light driver loading...
+mc13892 Rev 0.0 FinVer 0 detected
+Initializing regulators for mx50 rdp.
+regulator: SW1: 600 <--> 1375 mV at 600 mV 
+PMIC ADC start probe
+PMIC Light successfully loaded
+Device spi3.0 probed
+Switching to clocksource mxc_timer1
+NET: Registered protocol family 2
+IP route cache hash table entries: 4096 (order: 2, 16384 bytes)
+TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+TCP bind hash table entries: 16384 (order: 4, 65536 bytes)
+TCP: Hash tables configured (established 16384 bind 16384)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+LPMode driver module loaded
+Static Power Management for Freescale i.MX5
+PM driver module loaded
+sdram autogating driver module loaded
+busfreq_probe: failed to get lp regulator
+Bus freq driver module loaded
+Set ISD/eMMC drive strength Medium, ESD Low
+mxc_dvfs_core_probe
+DVFS driver module loaded
+i.MXC CPU frequency driver
+DVFS PER driver module loaded
+msgmni has been set to 993
+alg: No test for stdrng (krng)
+cryptodev: driver loaded.
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+drivers/video/mxc/mxc_epdc_fb.c(5897):EPD 1440x1080 
+waveform_size_setup() wf_size=6776288
+***_MemoryRequest:171: request memory region! addr=0x8f989800, len=6776288***
+waveform_p_setup() wf_p=8f989800,vaddr=a0800800,size=6776288
+Console: switching to colour frame buffer device 180x67
+[epdc_firmware_func]:fw p=a0800800,size=6776288
+drivers/video/mxc/mxc_epdc_fb.c(5363):EPD 1440x1080 
+mxc_epdc_fb mxc_epdc_fb:  --- Extra Waveform Data length: 29 bytes---
+mxc_epdc_fb mxc_epdc_fb:      Extra Waveform Data: 320_G123_AB3601_ED068TG1H2_TC
+WAVEFORM P5N
+fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+client0@i2c2 ,addr=0x68,name=tps65185-1
+drivers/video/mxc/lk_tps65185.c(1059): EP_3V3 ON/OFF control enabled !
+TPS65185 versions : major=0x1,minor=0x2,version=0x5,RevID=0x65
+[tps65185_init-1112] gpio_to_irq ()
+Serial: MXC Internal UART driver
+mxcintuart.0: ttymxc0 at MMIO 0x53fc0000 (irq = 32) is a Freescale i.MX
+console [ttymxc0] enabled, bootconsole disabled
+mxcintuart.1: ttymxc1 at MMIO 0x53fbc000 (irq = 31) is a Freescale i.MX
+mxcintuart.2: ttymxc2 at MMIO 0x5000c000 (irq = 33) is a Freescale i.MX
+loop: module loaded
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[arch/arm/plat-mxc/usb_common.c-343] usbh1_set_utmi_xcvr() 
+fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 1
+fsl-ehci fsl-ehci.1: irq 14, io base 0x53f80200
+fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+input: mxckpd as /devices/platform/mxckpd/input/input0
+MXC keypad loaded
+[__zForce_ir_touch_init-134] zForce controller with v2 command sets.
+[zForce_ir_touch_probe-782] Set touch resolution 1440x1080
+input: zForce-ir-touch as /devices/virtual/input/input1
+add mma7660 i2c driver
+mc13892 rtc probe start
+pmic_rtc pmic_rtc.1: rtc core: registered pmic_rtc as rtc0
+mc13892 rtc probe succeed
+i2c /dev entries driver
+[zForce_ir_touch_recv_data-257] command BootComplete (0)...
+APM Battery Driver
+MXC WatchDog Driver 2.0
+[msp430_probe-588] MSP430 firmware version C851
+[drivers/mxc/pmic/mc13892/pmic_battery.c-1003] pmic_battery_probe...
+[ntx_get_battery_vol-1890] 53,bat=943
+[ntx_get_battery_vol-1890] 53,bat=943
+mxsdhci: MXC Secure Digital Host Controller Interface driver
+mxsdhci: MXC SDHCI Controller Driver. 
+mmc0: SDHCI detect irq 0 irq 3 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver. 
+mmc1: SDHCI detect irq 0 irq 2 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver. 
+mmc2: SDHCI detect irq 273 irq 1 INTERNAL DMA
+Registered led device: pmic_ledsr
+Registered led device: pmic_ledsg
+Registered led device: pmic_ledsb
+TCP cubic registered
+NET: Registered protocol family 17
+VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 2
+pmic_rtc pmic_rtc.1: setting system clock to 2024-02-15 23:11:08 UTC (1708038668)
+[zForce_ir_touch_recv_data-311] firmware version 0005 0002 0000 0001 
+[zForce_ir_touch_recv_data-313] Interface protocol: major=0x05, minor=0x02
+[ntx_get_battery_vol-1890] 53,bat=943
+[ntx_get_battery_vol-1890] 53,bat=943
+Waiting for root device /dev/mmcblk0p1...
+mmc0: new high speed SDHC card at address 0001
+mmcblk0: mmc0:0001 SD8GB 7.32 GiB 
+ mmcblk0: p1 p2 p3
+EXT4-fs (mmcblk0p1): warning: maximal mount count reached, running e2fsck is recommended
+EXT4-fs (mmcblk0p1): recovery complete
+EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:1.
+Freeing init memory: 116K
+EXT4-fs (mmcblk0p1): re-mounted. Opts: (null)
+[PROGRESS_BAR-3009] No progess ...
+ehci_fsl_bus_suspend, Host 1
+usb unplugged
+[ntx_get_battery_vol-1890] 50,bat=938
+read_alarm: 0 70/0/1 0:0:0
+lowmem: module license 'MIT' taints kernel.
+Disabling lock debugging due to kernel taint
+[ntx_get_battery_vol-1890] 50,bat=938
+[ntx_get_battery_vol-1890] 50,bat=938
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+TPS65185 temprature data = 0x18,24
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+lit_ctl
+command exec successfully!
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+[zForce_ir_touch_recv_data-277] Set touch size limits Response
+set touch size limits succeed
+[drivers/input/touchscreen/zforce_i2c.c-671] zforce_i2c_open()
+[zForce_ir_touch_recv_data-225] command Activate (0) ...
+[zForce_ir_touch_recv_data-234] command Resolution (0) ...
+[zForce_ir_touch_recv_data-268] command Frequency (0) ...
+[zForce_ir_touch_recv_data-243] command Configuration ...
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+DVFS is started
+Wifi / BT power control 1 rst 142
+cd_status=0 inserted
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x3
+DVFS is stopped
+cd_status=0 inserted
+cd_status=0 inserted
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (8 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (5 bytes)
+mmc1: queuing unknown CIS tuple 0x80 (5 bytes)
+mmc1: new high speed SDIO card at address 0001
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mxc_epdc_fb mxc_epdc_fb: hist_stat = 0x8, new waveform = 0x2
+[ntx_get_battery_vol-1890] 33,bat=910
+
+set front light level : 1
+Set front light Frequency : 20000
+Set front light duty : 18
+si_doattach: CHIPID(sih->chip)=a962, sih->chiprev=1
+
+set front light level : 3
+Set front light duty : 30
+
+set front light level : 4
+Set front light duty : 41
+
+set front light level : 5
+Set front light duty : 49
+
+set front light level : 6
+Set front light duty : 62
+
+set front light level : 7
+Set front light duty : 71
+
+Dongle Host Driver, version 5.90.113.2
+
+set front light level : 8
+Set front light duty : 82
+
+set front light level : 9
+Set front light duty : 93
+
+set front light level : 10
+Set front light duty : 110
+
+set front light level : 11
+Set front light duty : 132
+
+set front light level : 17
+Set front light duty : 252
+
+set front light level : 18
+Set front light duty : 266
+
+set front light level : 19
+Set front light duty : 280
+
+set front light level : 20
+Set front light duty : 30
+
+set front light level : 21
+Set front light duty : 32
+
+set front light level : 22
+Set front light duty : 33
+
+set front light level : 23
+Set front light duty : 35
+
+set front light level : 24
+Set front light duty : 37
+
+set front light level : 25
+Set front light duty : 39
+
+set front light level : 26
+Set front light duty : 41
+
+set front light level : 27
+Set front light duty : 43
+
+set front light level : 28
+Set front light duty : 45
+
+set front light level : 29
+Set front light duty : 47
+
+set front light level : 30
+Set front light duty : 49
+[ntx_get_battery_vol-1890] 33,bat=910
+[ntx_get_battery_vol-1890] 33,bat=910
