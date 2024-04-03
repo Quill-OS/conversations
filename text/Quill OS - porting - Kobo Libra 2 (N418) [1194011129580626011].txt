@@ -1,0 +1,2721 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Libra 2 (N418)
+==============================================================
+
+[1/8/2024 9:13 PM] tux_linux
+Hi there
+
+
+[1/8/2024 9:14 PM] tux_linux
+Mine should arrive this week I think
+
+
+[1/9/2024 6:45 PM] tux_linux
+hasn't even shipped yet
+
+
+[1/9/2024 6:46 PM] tux_linux
+whatever
+
+
+[1/10/2024 6:34 PM] tux_linux
+has arrived
+quite unexpectedly early
+
+
+[1/10/2024 7:37 PM] tux_linux
+So let's hack this thing
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20240110_1837048912-45117.jpg
+
+
+[1/10/2024 7:38 PM] tux_linux
+still the same 4.1.15 kernel
+```
+[root@kobo ~]# cat /proc/version
+Linux version 4.1.15-00866-g3a75628c73c (gallen@gallen-ASUS-EXPERTCENTER-D900TA-D900TA) (gcc version 5.3.0 (GCC) ) #96 SMP PREEMPT Thu Nov 17 14:25:47 CST 2022
+[root@kobo ~]#
+```
+
+
+[1/10/2024 7:40 PM] tux_linux
+maybe we should have an unblock it game
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20240110_184036007-54848.jpg
+
+
+[1/10/2024 7:54 PM] tux_linux
+https://www.mobileread.com/forums/showthread.php?t=343122
+ouch
+
+{Embed}
+https://www.mobileread.com/forums/showthread.php?t=343122
+Libra 2 I still disassembled the KOBO Libra2 - MobileRead Forums
+Libra 2 I still disassembled the KOBO Libra2 Kobo Reader
+
+
+[1/10/2024 8:12 PM] tux_linux
+pcb
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20240110_141206-55A58.jpg
+
+
+[1/10/2024 8:26 PM] szybet
+soldered battery
+
+
+[1/10/2024 8:26 PM] szybet
+those cheap monkeys at kobo...
+
+
+[1/10/2024 8:27 PM] tux_linux
+Serial port doesn't seem to work
+
+
+[1/10/2024 8:27 PM] tux_linux
+Great
+
+
+[1/10/2024 8:27 PM] tux_linux
+Even though it does output 3.3v on a multimeter
+
+
+[1/10/2024 8:28 PM] szybet
+even uboot?
+
+
+[1/10/2024 8:28 PM] tux_linux
+Nothing
+
+
+[1/10/2024 8:28 PM] tux_linux
+I will try with the device plugged in
+
+
+[1/10/2024 8:28 PM] szybet
+diffrent baud rate?
+
+
+[1/10/2024 8:28 PM] tux_linux
+Would be extremely surprising
+
+
+[1/10/2024 8:28 PM] szybet
+maybe you switched the cables?
+
+
+[1/10/2024 8:28 PM] tux_linux
+No
+
+
+[1/10/2024 8:28 PM] szybet
+groudn not connected?
+
+
+[1/10/2024 8:28 PM] tux_linux
+Connected
+
+
+[1/10/2024 8:28 PM] szybet
+you havent soldered
+
+
+[1/10/2024 8:28 PM] szybet
+did you
+
+
+[1/10/2024 8:28 PM] szybet
+hah
+
+
+[1/10/2024 8:28 PM] tux_linux
+I have so many devices soldering wires would be too much of a hassle
+
+
+[1/10/2024 8:29 PM] tux_linux
+Because I switch so often
+
+
+[1/10/2024 8:29 PM] szybet
+well anyway
+you can force some output via ssh you know
+
+
+[1/10/2024 8:29 PM] szybet
+gold pins
+
+
+[1/10/2024 8:29 PM] tux_linux
+Yes, I will try
+
+
+[1/10/2024 8:29 PM] tux_linux
+?
+
+
+[1/10/2024 8:29 PM] szybet
+i use gold pins
+
+
+[1/10/2024 8:29 PM] tux_linux
+Also, my soldering flux is crap
+
+
+[1/10/2024 8:29 PM] tux_linux
+No lead
+
+
+[1/10/2024 8:30 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/shopping-36DB9.png
+
+
+[1/10/2024 8:30 PM] tux_linux
+Hmm
+
+
+[1/10/2024 8:30 PM] szybet
+¯\_(ツ)_/¯
+
+
+[1/10/2024 8:30 PM] tux_linux
+Interesting
+
+
+[1/10/2024 8:30 PM] szybet
+you wont be able to close the lid tho
+
+
+[1/10/2024 8:30 PM] szybet
+propably
+
+
+[1/10/2024 8:30 PM] tux_linux
+But at this point you can just use RPI style gpio connectors
+
+
+[1/10/2024 8:30 PM] tux_linux
+And no solder
+
+
+[1/10/2024 8:30 PM] szybet
+mine are rotated and i have a custom case so
+
+
+[1/10/2024 8:30 PM] szybet
+¯\_(ツ)_/¯
+
+
+[1/10/2024 8:31 PM] tux_linux
+I have the habit of working with serial with the device's screen invisible
+
+
+[1/10/2024 8:33 PM] szybet
+connect via serial and try to output manually
+
+
+[1/10/2024 8:33 PM] szybet
+via ssh i mean
+
+
+[1/10/2024 8:34 PM] tux_linux
+Yes
+
+
+[1/10/2024 8:44 PM] tux_linux
+kinda works
+
+
+[1/10/2024 8:45 PM] tux_linux
+i think part of the connectors were coated
+
+
+[1/10/2024 8:45 PM] tux_linux
+and some other part wasnt
+
+
+[1/10/2024 8:45 PM] tux_linux
+ridiculous
+
+
+[1/10/2024 8:46 PM] tux_linux
+boot log
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-D82C8.txt
+
+
+[1/10/2024 9:03 PM] tux_linux
+it's almost the same u-boot as the libra 1
+
+
+[1/10/2024 9:10 PM] tux_linux
+i think i will have to write a custom env to the mmc for it to allow me to enter u-boot console
+
+
+[1/10/2024 9:14 PM] tux_linux
+also, during boot, it seems to export itself extremely briefly as a serial gadget over usb
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-7356F.png
+
+
+[1/10/2024 9:14 PM] tux_linux
+@andi you might be interested in following this thread
+
+
+[1/10/2024 10:16 PM] andi15701
+well, try the gadget...
+
+
+[1/10/2024 10:16 PM] tux_linux
+It disappears
+
+
+[1/10/2024 10:16 PM] tux_linux
+It's there for 0.5secs
+
+
+[1/10/2024 10:16 PM] andi15701
+well, that is enough
+
+
+[1/10/2024 10:17 PM] tux_linux
+Ok
+Any command to try
+
+
+[1/10/2024 10:17 PM] andi15701
+poll for existence, write a single letter and newline
+
+
+[1/10/2024 10:17 PM] andi15701
+ouch
+
+
+[1/10/2024 10:17 PM] tux_linux
+Ok
+What result should I expect
+
+
+[1/10/2024 10:17 PM] andi15701
+that is not uboot
+
+
+[1/10/2024 10:18 PM] tux_linux
+Yea, it's in kernel
+
+
+[1/10/2024 10:18 PM] andi15701
+it has the kernel version number in it
+
+
+[1/10/2024 10:18 PM] tux_linux
+But I got my serial port working
+
+
+[1/10/2024 10:18 PM] andi15701
+though it was u-boot
+
+
+[1/10/2024 10:18 PM] tux_linux
+Uboot seems to need some env change to access the cli
+
+
+[1/10/2024 10:19 PM] tux_linux
+Or maybe even be recompiled
+
+
+[1/10/2024 10:19 PM] tux_linux
+Maybe there is a download mode on this thing
+
+
+[1/10/2024 10:19 PM] andi15701
+which ram chip is there?
+
+
+[1/10/2024 10:19 PM] andi15701
+same as libra 1?
+
+
+[1/10/2024 10:19 PM] tux_linux
+Look on PCB pic
+
+
+[1/10/2024 10:19 PM] tux_linux
+.
+
+
+[1/10/2024 10:20 PM] tux_linux
+I can compare
+
+
+[1/10/2024 10:20 PM] tux_linux
+Hang on
+
+
+[1/10/2024 10:22 PM] tux_linux
+i think its covered by a sticker
+
+
+[1/10/2024 10:22 PM] tux_linux
+is there a way to check it via linux cli?
+
+
+[1/10/2024 10:23 PM] andi15701
+no
+
+
+[1/10/2024 10:23 PM] andi15701
+well, you might compare dcd section of u-boot
+
+
+[1/10/2024 10:24 PM] tux_linux
+do you want that i send you the unpartitioned space
+
+
+[1/10/2024 10:24 PM] tux_linux
+of both
+
+
+[1/10/2024 10:25 PM] andi15701
+I have the libra
+
+
+[1/10/2024 10:25 PM] andi15701
+so only the libra2 might be interesting
+
+
+[1/10/2024 10:25 PM] tux_linux
+ok
+
+
+[1/10/2024 10:26 PM] tux_linux
+the strange serial device also seems to appear in the split second i connect usb to my mac
+
+
+[1/10/2024 10:26 PM] tux_linux
+then vanishes
+
+
+[1/10/2024 10:26 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/sd-3C1B9.sqsh
+
+
+[1/10/2024 10:27 PM] tux_linux
+unsquashfs -d sd sd.sqsh
+
+
+[1/10/2024 10:45 PM] tux_linux
+Tell me if you find something interesting
+
+
+[1/10/2024 11:09 PM] tux_linux
+idk if the dtb would be similar enough so that it could load the same kernel
+
+
+[1/11/2024 12:55 PM] tux_linux
+the qr code over the ram chip says `70K14F013AA002464`
+idk if that can be useful
+
+
+[1/11/2024 1:00 PM] tux_linux
+i am peeling off the sticker
+
+
+[1/11/2024 1:17 PM] tux_linux
+ram chip says
+
+```
+nanya 2321
+NT6TL128M32BQ-(unreadable)
+229618VOEV
+```
+
+
+[1/11/2024 1:18 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20240111_121818267-C6C89.jpg
+
+
+[1/11/2024 1:20 PM] tux_linux
+probably the same as libra 1
+
+
+[1/13/2024 12:17 PM] andi15701
+what is the other 70K14 number on the board?
+
+
+[1/13/2024 12:17 PM] andi15701
+board revision?
+
+
+[1/13/2024 12:23 PM] andi15701
+ls imx6sll-e70k*.dtb
+imx6sll-e70k02.dtb     imx6sll-e70k14b00.dtb
+imx6sll-e70k14a10.dtb  imx6sll-e70k14.dtb
+
+
+[1/13/2024 12:23 PM] andi15701
+k02 = libra 1
+
+
+[1/13/2024 12:23 PM] andi15701
+apparently no a, b or c there
+
+
+[1/13/2024 12:23 PM] andi15701
+but k14 = libra2
+
+
+[1/13/2024 12:23 PM] andi15701
+apparently
+
+
+[1/13/2024 12:24 PM] andi15701
+what a mess
+
+
+[1/13/2024 12:25 PM] andi15701
+$ ls imx6sll-e70k*.dtb
+imx6sll-e70k02.dtb            imx6sll-e70k14b00.dtb  imx6sll-e70k14e00.dtb
+imx6sll-e70k02-nightmode.dtb  imx6sll-e70k14c00.dtb
+imx6sll-e70k14a10.dtb         imx6sll-e70k14.dtb
+
+
+[1/13/2024 12:26 PM] andi15701
+in clara2e sources
+
+
+[1/13/2024 12:26 PM] andi15701
+even more libra2 files
+
+
+[1/13/2024 12:26 PM] andi15701
+mess++
+
+
+[1/13/2024 12:26 PM] andi15701
+what about giving a new hardware a new name ?!?!?!?
+
+
+[1/13/2024 12:31 PM] andi15701
+and the devicetree seems to equal none of them
+
+
+[1/13/2024 12:32 PM] andi15701
+So i need to look for newer sources
+
+
+[1/13/2024 12:32 PM] andi15701
+maybe we have an f revision out there
+
+
+[1/13/2024 2:33 PM] tux_linux
+Aren't Kobo sources always like that?
+
+
+[1/13/2024 2:34 PM] tux_linux
+Sometimes you just load one and it boots anyway
+
+
+[1/13/2024 2:34 PM] tux_linux
+They put the Libra 2 sources on gh though?
+
+
+[1/13/2024 2:36 PM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw%2Fimx6sll-libra2
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw%2Fimx6sll-libra2
+Kobo-Reader/hw/imx6sll-libra2 at master · kobolabs/Kobo-Reader
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/Kobo-Reader-2792F
+
+
+[1/13/2024 2:40 PM] andi15701
+well, on other cases, the difference in devicetree is quite small, here they are bigger, so things need to be analyzed. I often found exactly the same devicetree
+
+
+[1/13/2024 2:41 PM] tux_linux
+If you want i can list you all the e70 numbers i see around the board
+
+
+[1/13/2024 2:41 PM] andi15701
+so the compiled devicetree of kobo sources matches the shipped one
+
+
+[1/13/2024 2:41 PM] tux_linux
+yes
+
+
+[1/13/2024 2:41 PM] tux_linux
+but isnt there a way to decompile the existing one
+
+
+[1/13/2024 2:41 PM] tux_linux
+i did that in the past
+
+
+[1/13/2024 2:41 PM] andi15701
+yes, it is
+
+
+[1/13/2024 2:42 PM] andi15701
+and I compare it to the source
+
+
+[1/13/2024 2:42 PM] tux_linux
+at worst we can add it
+
+
+[1/13/2024 2:42 PM] andi15701
+I need some program to dump the bd27... regulator
+
+
+[1/13/2024 2:43 PM] tux_linux
+wdym
+
+
+[1/13/2024 2:43 PM] andi15701
+bd71828-i2c@4b {
+                    reg = <0x0000004b>;
+                    compatible = "rohm,bd71828";
+                    gpio_int = <0x00000008 0x00000013 0x00000001>;
+                    gpio_wdogb = <0x0000003a 0x00000018 0x00000001>;
+                    rohm,charger-sense-resistor-ohms = <0x019bfcc0>;
+                    #address-cells = <0x00000001>;
+                    #size-cells = <0x00000000>;
+                    pmic@4b {
+                        compatible = "rohm,bd71828";
+                        reg = <0x0000004b>;
+
+
+[1/13/2024 2:43 PM] andi15701
+that is one layer too much in the tree
+
+
+[1/13/2024 2:43 PM] andi15701
+so
+
+
+[1/13/2024 2:44 PM] andi15701
+the regulators do not get probed
+
+
+[1/13/2024 2:44 PM] tux_linux
+do you want that i test something here
+
+
+[1/13/2024 2:44 PM] andi15701
+at all
+
+
+[1/13/2024 2:44 PM] tux_linux
+isnt that problematic
+
+
+[1/13/2024 2:44 PM] andi15701
+i2c dump of the ppmic
+
+
+[1/13/2024 2:44 PM] tux_linux
+ok
+
+
+[1/13/2024 2:44 PM] andi15701
+well, it is
+
+
+[1/13/2024 2:44 PM] tux_linux
+do you have some busybox commands
+
+
+[1/13/2024 2:44 PM] andi15701
+so ntx did a horrible hack
+
+
+[1/13/2024 2:44 PM] tux_linux
+not surprised
+
+
+[1/13/2024 2:45 PM] tux_linux
+i think @NiLuJe will agree on that point
+
+
+[1/13/2024 2:45 PM] tux_linux
+he's been saying the current kobo lineup behaves like sh*t
+
+
+[1/13/2024 2:45 PM] andi15701
+and added code to the regulator driver to just do some register writes at probe / shutdown/ resume
+
+
+[1/13/2024 2:46 PM] tux_linux
+so it never initializes it?
+or it initializes it every time?
+
+
+[1/13/2024 2:46 PM] andi15701
+it gets initialized
+
+
+[1/13/2024 2:46 PM] andi15701
+but if there is a version with rewired regulators like the clara a/b issue
+
+
+[1/13/2024 2:46 PM] andi15701
+if will be undetected by looking at the device tree
+
+
+[1/13/2024 2:46 PM] tux_linux
+mine has a 2A2 number on the board
+
+
+[1/13/2024 2:47 PM] tux_linux
+i bought it from kobo in canada
+
+
+[1/13/2024 2:47 PM] tux_linux
+so hopefully the latest model that exists
+
+
+[1/13/2024 2:50 PM] tux_linux
+Feel free to ask
+
+
+[1/13/2024 3:54 PM] tux_linux
+main board: 37NB-E70K1M+6F0
+power button board: 37NB-E70K0S+2A2
+battery: E70K14
+ram chip: 70K14F013AA002464
+these are all the ones I can see
+
+
+[1/13/2024 8:29 PM] andi15701
+37NB-E70K1M+6F0, I think the "F" here is important...
+
+
+[1/13/2024 8:29 PM] andi15701
+so probably a rev f
+
+
+[1/13/2024 8:39 PM] tux_linux
+Ouch
+
+
+[1/13/2024 8:39 PM] tux_linux
+5 other revs before??
+
+
+[1/13/2024 8:40 PM] tux_linux
+Maybe look up other Libra 2 PCBs on the internet
+
+
+[1/13/2024 8:40 PM] andi15701
+yes, the question is which came into public
+
+
+[1/13/2024 8:41 PM] andi15701
+and the difference in hardware is quite big between these versions
+
+
+[1/13/2024 8:41 PM] tux_linux
+You know it?
+
+
+[1/13/2024 8:43 PM] andi15701
+what epd pmic does it have, the devicetree specifies three
+
+
+[1/13/2024 8:43 PM] tux_linux
+Ok
+So different ones between revisions?
+
+
+[1/13/2024 8:44 PM] andi15701
+I compared devicetrees a bit
+
+
+[1/13/2024 8:44 PM] andi15701
+so I could see
+
+
+[1/13/2024 8:45 PM] andi15701
+the decompiled devicetree contains three epd pmics
+
+
+[1/13/2024 8:45 PM] andi15701
+probably some weird logic in kernel
+
+
+[1/13/2024 8:45 PM] andi15701
+used to select one
+
+
+[1/13/2024 8:46 PM] andi15701
+and for one of these pmics there is no driver in the libra2 kernel
+
+
+[1/13/2024 8:46 PM] tux_linux
+Ok, thats great
+
+
+[1/13/2024 8:46 PM] andi15701
+so, can you look up what is in there
+
+
+[1/13/2024 8:46 PM] andi15701
+?
+
+
+[1/13/2024 8:46 PM] tux_linux
+I bought mine new this week
+And last kernel release was 6mo ago
+
+
+[1/13/2024 8:47 PM] tux_linux
+Yes, do you have i2c commands or something?
+
+
+[1/13/2024 8:47 PM] andi15701
+i2cdump
+
+
+[1/13/2024 8:47 PM] andi15701
+or i2c probe
+
+
+[1/13/2024 8:47 PM] tux_linux
+Yes
+Which registers
+
+
+[1/13/2024 8:47 PM] andi15701
+or simply look at the board
+
+
+[1/13/2024 8:47 PM] tux_linux
+Or just run it like that
+
+
+[1/13/2024 8:47 PM] andi15701
+first: busses
+
+
+[1/13/2024 8:48 PM] tux_linux
+You didn't see my picture of it?
+
+
+[1/13/2024 8:48 PM] tux_linux
+.
+
+
+[1/13/2024 8:48 PM] tux_linux
+I can also send you dmesg as well
+
+
+[1/13/2024 8:48 PM] andi15701
+it is low resolution
+
+
+[1/13/2024 8:48 PM] tux_linux
+Ok
+
+
+[1/13/2024 8:48 PM] andi15701
+i2cdetect -r -y 1
+
+
+[1/13/2024 8:49 PM] tux_linux
+Will do that
+
+
+[1/13/2024 8:49 PM] andi15701
+2
+
+
+[1/13/2024 8:49 PM] tux_linux
+-y 1
+-y 2
+?
+
+
+[1/13/2024 8:49 PM] andi15701
+jd9930 1-0018: no epdc pmic xon ctrl pin available
+
+
+[1/13/2024 8:49 PM] andi15701
+one for every bus
+
+
+[1/13/2024 8:51 PM] andi15701
+I do not find a driver for that chip in the libra2 sources
+
+
+[1/13/2024 8:51 PM] andi15701
+but in the clara2e sources
+
+
+[1/13/2024 8:53 PM] tux_linux
+Hopping on a bus (literally) and sending you that
+
+
+[1/13/2024 8:53 PM] tux_linux
+How do you know how much there are
+
+
+[1/13/2024 8:54 PM] andi15701
+i2cdetect -l
+
+
+[1/13/2024 8:54 PM] andi15701
+there is also something in u-boot
+
+
+[1/13/2024 8:54 PM] tux_linux
+👍
+
+
+[1/13/2024 8:54 PM] andi15701
+libra1 2020.10 u-boot
+
+
+[1/13/2024 8:54 PM] andi15701
+should work
+
+
+[1/13/2024 8:55 PM] andi15701
+but do not flash that without a lot of testing
+
+
+[1/13/2024 8:55 PM] andi15701
+i2c probe if I remember correctly
+
+
+[1/13/2024 8:56 PM] tux_linux
+Ok
+Well is it dangerous to boot it in download mode
+If there is one
+
+
+[1/13/2024 8:59 PM] andi15701
+the will be one
+
+
+[1/13/2024 9:00 PM] andi15701
+not dangerous
+
+
+[1/13/2024 9:00 PM] andi15701
+2020.10 near mainline u-boot does not touch many things
+
+
+[1/13/2024 9:01 PM] andi15701
+well, you can remove the sd card
+
+
+[1/13/2024 9:01 PM] andi15701
+if possible
+
+
+[1/13/2024 9:09 PM] tux_linux
+Ok
+
+
+[1/13/2024 9:09 PM] tux_linux
+I doubt it 🥴
+
+
+[1/13/2024 9:10 PM] tux_linux
+Do you think there is an mw sequence to enter in uboot for download mode
+
+
+[1/13/2024 9:10 PM] tux_linux
+Will get you i2c tests in next hour
+
+
+[1/13/2024 9:22 PM] andi15701 (pinned)
+eBR-1A # mw 20d8040 30
+eBR-1A # mw 20d8044 10000000
+reset
+
+{Reactions}
+👍 
+
+[1/13/2024 9:22 PM] andi15701
+the usual
+
+
+[1/13/2024 9:22 PM] andi15701
+in u-boot
+
+
+[1/13/2024 9:35 PM] tux_linux
+```[root@kobo ~]# ./busybox i2cdetect -l
+i2c-0   i2c             21a0000.i2c                             I2C adapter
+i2c-1   i2c             21a4000.i2c                             I2C adapter
+i2c-2   i2c             21a8000.i2c                             I2C adapter
+[root@kobo ~]#```
+
+
+[1/13/2024 9:35 PM] tux_linux
+```
+[root@kobo ~]# ./busybox i2cdetect -r -y 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- UU -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- UU -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+[root@kobo ~]# ./busybox i2cdetect -r -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: UU -- -- -- -- -- -- -- UU -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- UU -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- 77                         
+[root@kobo ~]# ./busybox i2cdetect -r -y 2
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- UU -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- UU -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+```
+
+
+[1/13/2024 9:35 PM] tux_linux
+stops at 2
+
+
+[1/13/2024 9:35 PM] andi15701
+and 0
+
+
+[1/13/2024 9:36 PM] tux_linux
+edited
+
+
+[1/13/2024 9:36 PM] tux_linux
+Pinned a message.
+
+
+[1/13/2024 9:37 PM] tux_linux
+i dont know how to invoke i2cdump though
+
+
+[1/13/2024 9:46 PM] andi15701
+i2cdump -f -y 2 0x4b
+
+
+[1/13/2024 9:46 PM] tux_linux
+```
+[root@kobo ~]# ./busybox i2cdump -f -y 2 0x4b
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 22 11 82 04 00 00 00 09 0e 00 06 70 40 7c 00 00    "???...??.?p@|..
+10: 00 00 0a 00 06 80 6a 7c 00 00 00 00 0e 00 0c 0e    ..?.??j|....?.??
+20: 00 0a 0e 00 10 00 00 06 40 40 40 00 00 00 00 00    .??.?..?@@@.....
+30: 00 06 30 10 40 00 00 00 00 00 14 00 08 00 32 00    .?0?@.....?.?.2.
+40: 14 0a 32 32 00 0e 32 00 02 00 10 00 36 46 a0 06    ??22.?2.?.?.6F??
+50: 13 01 24 11 51 94 04 11 01 24 00 00 12 00 01 01    ??$?Q????$..?.??
+60: 00 00 00 00 00 00 00 30 00 03 00 00 00 00 00 01    .......0.?.....?
+70: c0 36 04 37 2f 2e 10 1d 64 a2 44 09 94 30 30 30    ?6?7/.??d?D??000
+80: 00 14 42 03 0f e1 0f 18 0f 18 0f 14 0f e8 0f e8    .?B?????????????
+90: 10 6f 00 00 0f d7 0f e3 0f e2 11 2d 00 01 7f 08    ?o..???????-.???
+a0: 76 0a c6 08 c1 00 8c 28 c8 28 00 d4 6a 0f 00 00    v????.?(?(.?j?..
+b0: 81 70 80 de 00 06 f3 6d 36 00 00 00 00 00 00 00    ?p??.??m6.......
+c0: 00 02 e7 01 40 7f 64 71 8c 5e a5 0a 03 61 00 3f    .???@?dq?^???a.?
+d0: 00 1f 00 00 03 3c 00 0a 00 00 03 00 00 ff 01 10    .?..?<.?..?...??
+e0: 00 00 00 00 30 00 00 00 00 00 00 00 00 00 00 00    ....0...........
+f0: c0 f5 3a 00 47 24 a2 03 10 01 24 00 00 00 00 00    ??:.G$????$.....
+[root@kobo ~]#
+```
+
+
+[1/13/2024 9:47 PM] andi15701
+do you have another device with the bd7 something?
+
+
+[1/13/2024 9:47 PM] tux_linux
+name a few that could have it?
+
+
+[1/13/2024 9:47 PM] andi15701
+clara2e
+
+
+[1/13/2024 9:47 PM] tux_linux
+no
+
+
+[1/13/2024 9:47 PM] andi15701
+nia c
+
+
+[1/13/2024 9:47 PM] tux_linux
+no
+
+
+[1/13/2024 9:47 PM] andi15701
+clara 1 c
+
+
+[1/13/2024 9:47 PM] tux_linux
+no
+
+
+[1/13/2024 9:47 PM] tux_linux
+you can ask @Szybet for nia c
+
+
+[1/13/2024 9:48 PM] andi15701
+I would compare the dump
+
+
+[1/13/2024 9:48 PM] andi15701
+I will check clara2e
+
+
+[1/13/2024 9:49 PM] andi15701
+if nothing is different
+
+
+[1/13/2024 9:49 PM] tux_linux
+ok
+
+
+[1/13/2024 9:50 PM] andi15701
+the risik we should rule out is that the newer, unpublished kernel does something in another way with the regulators
+
+
+[1/13/2024 9:50 PM] andi15701
+for the f revision
+
+
+[1/13/2024 9:50 PM] tux_linux
+if that is the case we can ask kobo for source
+
+
+[1/13/2024 9:50 PM] tux_linux
+they will reply in 6 months
+
+
+[1/13/2024 9:50 PM] andi15701
+at least we will avoid magic smoke
+
+
+[1/13/2024 9:50 PM] tux_linux
+yes
+
+
+[1/13/2024 9:51 PM] andi15701
+as in this case  the information about regulators in the dtb is worth nothing
+
+{Reactions}
+👍 
+
+[1/13/2024 9:51 PM] andi15701
+clara2e sources are better
+
+
+[1/13/2024 9:51 PM] andi15701
+than the official libra2 sources
+
+
+[1/13/2024 9:51 PM] andi15701
+for your libra2
+
+
+[1/13/2024 9:51 PM] andi15701
+the drivers are there...
+
+
+[1/13/2024 9:52 PM] tux_linux
+hm,nice
+
+
+[1/13/2024 9:54 PM] tux_linux
+well, keep me posted and tell me if there are other commands i should enter
+
+
+[1/13/2024 9:54 PM] tux_linux
+thanks
+
+
+[1/14/2024 1:10 AM] ninuje
+What does `ntx_hwconfig -s /dev/mmcblk0 2>/dev/null` say about the PCB_LEVEL ?
+
+
+[1/14/2024 1:10 AM] tux_linux
+hangon
+
+
+[1/14/2024 1:10 AM] ninuje
+(I have a Clara 2E on hand if you need more data, @andi)
+
+
+[1/14/2024 1:11 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-40724.txt
+
+
+[1/14/2024 1:12 AM] ninuje
+`PCB_LVL='F'` F indeed -_-"
+
+
+[1/14/2024 1:12 AM] ninuje
+The aptly named ;p
+
+
+[1/14/2024 1:12 AM] tux_linux
+are you aware of other revisions?
+
+
+[1/14/2024 1:13 AM] ninuje
+I know there's a couple of 'them in the wild, but not how many of them. The PMIC varies for sure, though.
+
+
+[1/14/2024 1:13 AM] tux_linux
+great
+
+
+[1/14/2024 1:15 AM] ninuje
+`E` is a thing, so's `A`: https://github.com/koreader/koreader/issues/9218#issuecomment-1156891105
+
+{Embed}
+https://github.com/koreader/koreader/issues/9218
+Kobo Libra 2, nonfunctioning warmth adjustment, physical buttons, w...
+KOReader version:2022.05.1 Device: Kobo Libra 2 Issue Battery state is stuck at 0% and charging. LED charge light remains on even if charge light is disabled, until KOreader is restarted. Warmth ad...
+/mnt/data/projects/git/conversations/media/9218-377AD
+
+
+[1/14/2024 1:15 AM] ninuje
+FL PWM controller change, too
+
+
+[1/14/2024 1:16 AM] tux_linux
+what a mess
+
+
+[1/14/2024 1:16 AM] ninuje
+They came out during The Great Semiconductor Plague, so there's at least a sensible reason for the huge variance ;p
+
+{Reactions}
+👍 
+
+[1/14/2024 1:20 PM] andi15701
+so I think we really should collect board ids which are working
+
+
+[1/14/2024 1:21 PM] andi15701
+With the 2020.10 u-boot, a lot can be ironed out
+
+
+[1/15/2024 8:15 PM] tux_linux
+Well, I can try compiling the 2020.10 u-boot
+
+
+[1/15/2024 8:16 PM] tux_linux
+and test it on the libra2
+
+
+[1/15/2024 8:17 PM] tux_linux
+did you get the time to compare it?
+
+
+[1/15/2024 8:41 PM] andi15701
+not yet
+
+{Reactions}
+👍 
+
+[1/15/2024 10:09 PM] andi15701
+``` # ./i2cdump -f -y  2 0x4b
+No size specified (using byte-data access)
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 22 11 02 00 00 00 00 09 0e 00 06 70 40 7c 00 00    "??....??.?p@|..
+10: 00 00 0a 00 06 80 6a 7c 00 00 00 00 0e 00 0c 0e    ..?.??j|....?.??
+20: 00 0a 0e 00 10 00 00 06 40 40 40 00 00 00 00 00    .??.?..?@@@.....
+30: 00 06 30 10 40 00 00 00 00 00 14 00 08 00 32 00    .?0?@.....?.?.2.
+40: 06 0a 32 32 00 0e 32 00 02 00 10 00 10 57 a0 01    ??22.?2.?.?.?W??
+50: 15 01 24 42 32 96 03 06 09 23 00 00 12 00 01 01    ??$B2????#..?.??
+60: 00 00 00 00 00 03 02 30 01 03 00 5f 00 09 00 01    .....??0??._.?.?
+70: c9 36 04 37 2f 2e 10 1d 64 a2 54 09 94 30 30 30    ?6?7/.??d?T??000
+80: 00 14 42 03 10 5f 0f 15 0f 17 0f 12 10 66 1f ff    .?B??_???????f?.
+90: 10 8a 00 00 10 99 10 b3 1f ff 11 35 03 ac 7f 08    ??..?????.?5????
+a0: 35 0a ae 08 94 00 8c 28 c8 28 00 de 6a 0f 00 00    5????.?(?(.?j?..
+b0: 05 99 05 91 00 06 10 f6 50 00 00 00 00 00 00 00    ????.???P.......
+c0: 00 02 09 01 40 7f 64 71 8c 5e a5 0a 03 61 00 3f    .???@?dq?^???a.?
+d0: 00 1f 00 00 03 3c 00 0a 00 00 03 00 00 ff 01 10    .?..?<.?..?...??
+e0: 00 00 00 00 b0 00 00 00 00 00 00 00 00 00 00 00    ....?...........
+f0: d8 f1 3a 00 54 31 96 03 06 09 23 00 00 00 00 00    ??:.T1????#.....
+[root@kobo ~]# 
+```
+
+
+[1/15/2024 10:09 PM] andi15701
+on the clara2e
+
+
+[1/15/2024 10:12 PM] andi15701
+or more precise  37NB-E60K2M+4B0
+
+
+[1/15/2024 10:18 PM] tux_linux
+so it is different
+
+
+[1/15/2024 10:22 PM] szybet
+all this work when making a better eink device is just a rpi zero, 3d printer and the eink panel
+
+
+[1/15/2024 10:23 PM] szybet
+https://tenor.com/view/pokemon-pikachu-upset-sad-anime-gif-22961752
+
+{Embed}
+https://tenor.com/view/pokemon-pikachu-upset-sad-anime-gif-22961752
+/mnt/data/projects/git/conversations/media/pokemon-pikachu-6EB06.png
+
+
+[1/15/2024 10:39 PM] andi15701
+of course it is different
+
+
+[1/15/2024 10:39 PM] andi15701
+did you expect the same values?
+
+
+[1/15/2024 10:39 PM] tux_linux
+well, since you wanted to compare them, I thought they could possibly have been similar
+
+
+[1/15/2024 10:40 PM] tux_linux
+so what to do now?
+
+
+[1/15/2024 10:48 PM] andi15701
+well, we have rtc and battery status in there too
+
+
+[1/15/2024 10:48 PM] tux_linux
+in the i2c dump?
+
+
+[1/15/2024 10:54 PM] andi15701
+yes
+
+
+[1/15/2024 10:54 PM] andi15701
+40: [-06-] {+14+} 0a 32 32 00 0e 32 00 02 00 10 00 [-10 57-] {+36 46+} a0 [-01    ??22.?2.?.?.?W??-] {+06    ??22.?2.?.?.6F??+}
+
+
+[1/15/2024 10:55 PM] tux_linux
+i have difficulty figuring out what this means but i believe you
+
+
+[1/15/2024 10:55 PM] andi15701
+#define BD71828_REG_LDO4_VOLT           0x40
+
+
+[1/15/2024 10:55 PM] andi15701
+wdiff output
+
+
+[1/15/2024 10:55 PM] andi15701
+so different voltage for ldo4
+
+
+[1/15/2024 10:55 PM] tux_linux
+hm
+
+
+[1/15/2024 10:59 PM] tux_linux
+do you think it changes between libra 2 revisions?
+
+
+[1/15/2024 11:42 PM] andi15701
+I would not rule it out, I do not find any code out there setting the register to 0x14
+
+
+[1/15/2024 11:43 PM] andi15701
+the libra 2 sources do not have the driver for that pmic
+
+
+[1/15/2024 11:43 PM] andi15701
+the public ones...
+
+
+[1/15/2024 11:45 PM] ninuje
+FWIW: ```
+┌─(ROOT@goldfinch:pts/0)───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────(~)─┐
+└─(1.07:18%:23:44:52%:#)── i2cdump -f -y 2 0x4b                                                                                                                                                                                                                                                                                                        ──(Mon, Jan 15)─┘
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f    0123456789abcdef
+00: 22 11 80 04 00 00 00 09 0e 00 06 70 40 7c 00 00    "???...??.?p@|..
+10: 00 00 0a 00 06 80 6a 7c 00 00 00 00 0e 00 0c 0e    ..?.??j|....?.??
+20: 00 0a 0e 00 10 00 00 06 40 40 40 00 00 00 00 00    .??.?..?@@@.....
+30: 00 06 30 10 40 00 00 00 00 00 14 00 08 00 32 0e    .?0?@.....?.?.2?
+40: 06 0a 32 32 00 0e 32 00 02 00 10 00 39 44 a2 01    ??22.?2.?.?.9D??
+50: 15 01 24 25 42 a2 01 29 01 24 00 00 12 00 01 01    ??$%B??)?$..?.??
+60: 00 07 00 00 00 00 00 30 00 03 01 00 00 00 00 01    .?.....0.??....?
+70: c0 36 04 37 2f 2e 10 1d 64 a2 44 09 94 30 30 30    ?6?7/.??d?D??000
+80: 00 14 42 03 0e be 0f 1d 0f 1d 0f 1d 0e d8 0e d6    .?B?????????????
+90: 10 8f 00 00 0e c6 0e d0 0e cd 11 35 00 04 80 09    ??..???????5.???
+a0: 22 0b 06 08 c6 00 8c 28 c8 28 00 de 6a 0f 00 00    "????.?(?(.?j?..
+b0: 81 bc 80 b8 00 03 67 03 d8 00 00 00 00 00 00 00    ????.?g??.......
+c0: 00 01 7f 01 40 7f 64 71 8c 5e a5 0a 03 61 00 3f    .???@?dq?^???a.?
+d0: 00 1f 00 00 03 3c 00 0a 00 00 03 00 00 ff 01 00    .?..?<.?..?...?.
+e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00    ................
+f0: 48 09 3b 00 25 54 97 06 28 10 23 00 00 00 00 00    H?;.%T??(?#.....
+```
+
+
+[1/15/2024 11:45 PM] ninuje
+It's a `[42] PCB_LVL='B'` too
+
+
+[1/15/2024 11:46 PM] andi15701
+clara 2e?
+
+
+[1/15/2024 11:46 PM] ninuje
+Yup
+
+
+[1/15/2024 11:47 PM] andi15701
+at least there seems to be no sign that clara2e sources might set the voltage too high on the libra 2 f
+
+{Reactions}
+👍 
+
+[1/15/2024 11:47 PM] andi15701
+maybe too low
+
+
+[1/16/2024 12:01 AM] andi15701
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_early_init() BD71828 INIT
+BD71828_regulator_init
+BD71828 RESETSRC [0x3]=0x4
+BD71828 KEYSTATUS [0xe2]=0x80
+BD71828 BOOTSRC [0x2]=0x82
+COLD reset from SWRESET, do nothing
+BD71828 read battery capacity 099, 1680,1545
+ntx_hw_late_init()
+mmc read 0x9ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1
+
+
+[1/16/2024 12:01 AM] andi15701
+that is scary
+
+
+[1/16/2024 12:01 AM] andi15701
+so there is something done in u-boot with regulators now ?!?
+
+
+[1/16/2024 12:01 AM] tux_linux
+oh no
+
+
+[1/16/2024 12:01 AM] andi15701
+this device is a nightmare
+
+
+[1/16/2024 12:02 AM] tux_linux
+idk if mine does this too
+
+
+[1/16/2024 12:02 AM] andi15701
+is is yours
+
+
+[1/16/2024 12:02 AM] tux_linux
+yea
+
+
+[1/16/2024 12:02 AM] tux_linux
+oh
+
+
+[1/16/2024 12:02 AM] tux_linux
+i thought it was the clara2e
+
+
+[1/16/2024 12:03 AM] andi15701
+head->scratch()
+
+
+[1/16/2024 12:03 AM] tux_linux
+yea
+
+
+[1/16/2024 12:03 AM] tux_linux
+i will check the uboot source
+
+
+[1/16/2024 12:04 AM] tux_linux
+oh no
+
+
+[1/16/2024 12:04 AM] tux_linux
+dont tell me this is ghost code
+
+
+[1/16/2024 12:04 AM] tux_linux
+```
+build@inkbox ~/D/boot> rg regulator_init
+board/freescale/common/ntx_hw.c
+1981:void RC5T619_regulator_init(void)
+2013:void RC5T619_regulator_init(void){}
+2390:   RC5T619_regulator_init();
+build@inkbox ~/D/boot>
+```
+
+
+[1/16/2024 12:05 AM] tux_linux
+wasnt that thing the libra 1 pmic?
+
+
+[1/16/2024 12:05 AM] andi15701
+rc5t619 = libra 1 /clara 1a / glo hd / shine2/3 pmic
+
+
+[1/16/2024 12:06 AM] tux_linux
+did they fake a u-boot release and just took the same tarball
+
+
+[1/16/2024 12:07 AM] tux_linux
+well, libra2/librah2o checksums differ
+
+
+[1/16/2024 12:08 AM] andi15701
+clara2e does something there
+
+
+[1/16/2024 12:08 AM] tux_linux
+but why is this not in the u-boot code
+
+
+[1/16/2024 12:08 AM] andi15701
+because they did not update the published source...
+
+
+[1/16/2024 12:09 AM] andi15701
+in the clara2e source it is
+
+
+[1/16/2024 12:09 AM] tux_linux
+there is literally no mention of bd71828 anywhere
+
+
+[1/16/2024 12:09 AM] tux_linux
+i will file an issue now
+
+
+[1/16/2024 12:09 AM] tux_linux
+this is a serious problem
+
+
+[1/16/2024 12:09 AM] andi15701
+ndi@aktux:~/kobo/clara2e/b$ grep -R BD71828_regulator_init *
+boot/board/freescale/mx6sll_ntx/ntx_hw.c:void BD71828_regulator_init(void)
+
+
+[1/16/2024 12:10 AM] tux_linux
+yes, in libra2 source nothing
+
+
+[1/16/2024 12:10 AM] tux_linux
+but good if we can figure out something from what is there
+
+
+[1/16/2024 12:23 AM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/issues/103#issuecomment-1892866558
+I filed an issue
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/issues/103
+Up-to-date kernel sources · Issue #103 · kobolabs/Kobo-Reader
+Hi, So it's very nice to have the kernel sources for the factory firmwares that came with the devices, but sometimes it's silently updated and re-built with a newer version, or a change in ...
+/mnt/data/projects/git/conversations/media/103-2C176
+
+
+[1/17/2024 4:47 AM] tux_linux
+Well, you got it right
+
+
+[1/18/2024 5:02 PM] tux_linux
+@NiLuJe @pgaskin do you think that writing to kobo support about this would be worth it? Or are they just going to ignore it? Thanks
+
+
+[1/18/2024 5:09 PM] szybet
+Once i contacted them via messenger and you via... email? and it worked
+
+
+[1/18/2024 5:09 PM] tux_linux
+welp
+
+
+[1/18/2024 5:09 PM] tux_linux
+i dont remember that
+
+
+[1/18/2024 5:10 PM] tux_linux
+but encouraging i guess
+
+
+[1/18/2024 5:11 PM] szybet
+for the nia c i think
+
+
+[1/18/2024 5:12 PM] tux_linux
+I will try messenger
+
+
+[1/18/2024 5:21 PM] ninuje
+Yeah, can't hurt. IIRC, it helped w/ the Clara 2E, too.
+
+{Reactions}
+👍 
+
+[1/18/2024 5:32 PM] tux_linux
+ok, thanks, writing to them now
+
+
+[1/18/2024 5:35 PM] tux_linux
+to whom did you write?
+
+
+[1/18/2024 5:35 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-AF4D6.png
+
+
+[1/18/2024 5:35 PM] tux_linux
+the japanese one?
+
+
+[1/18/2024 5:37 PM] szybet
+209803832591
+
+
+[1/18/2024 5:37 PM] tux_linux
+what
+
+
+[1/18/2024 5:38 PM] tux_linux
+oh the user id?
+
+
+[1/18/2024 5:38 PM] tux_linux
+ok, really strange it wasn't showing up in my search results
+thanks
+
+
+[1/18/2024 5:38 PM] szybet
+yep
+
+
+[1/18/2024 5:38 PM] szybet
+https://www.facebook.com/Kobo/
+
+{Embed}
+https://www.facebook.com/Kobo/
+Kobo | Toronto ON
+Kobo, Toronto, Ontario. 373,076 likes · 414 talking about this. A life well read, is a life well lived. We make reading lives better. #thekobolife
+/mnt/data/projects/git/conversations/media/340761366_177438388447838_1582584826627806-D7BA4.jpg
+
+
+[1/18/2024 5:38 PM] szybet
+and their profile
+
+
+[1/18/2024 5:47 PM] tux_linux
+done
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-2004B.png
+
+
+[1/18/2024 5:47 PM] tux_linux
+i hope i wasn't too abrupt
+
+
+[1/18/2024 5:53 PM] szybet
+my god
+
+
+[1/18/2024 5:53 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-3F379.png
+
+
+[1/18/2024 5:54 PM] szybet
+you have done 5x of the text in the same message
+
+
+[1/18/2024 5:54 PM] szybet
+well leave it
+
+
+[1/18/2024 5:54 PM] szybet
+but for the future
+
+
+[1/18/2024 5:54 PM] szybet
+on this support line is propably a low paid employer in an outsourced company or AI
+
+
+[1/18/2024 5:54 PM] szybet
+please don't scare them away ;p
+
+
+[1/18/2024 5:58 PM] tux_linux
+Well, yes, yours is more concise
+
+
+[1/18/2024 5:58 PM] tux_linux
+When i write to people i usually write a lot
+Discord is a strange exception
+
+
+[1/18/2024 6:12 PM] tux_linux
+Hm ok
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20240118-1212002-EC9A4.png
+
+
+[1/18/2024 6:28 PM] szybet
+Huh
+
+
+[1/19/2024 2:25 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Gmail_-_Rakuten_Kobo_Re_Conversation_with_-95C20.pdf
+
+
+[1/19/2024 2:25 PM] tux_linux
+bunch of nonsense
+
+
+[1/19/2024 2:26 PM] tux_linux
+i don't think they are on gh very often
+or at least, not on this instance of gh
+
+
+[1/19/2024 5:03 PM] tux_linux
+It just keeps getting worse
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20240119-110302-267E6.png
+
+
+[1/19/2024 5:35 PM] szybet
+🥴
+
+
+[1/19/2024 5:36 PM] tux_linux
+I don't even know what to reply to this
+
+
+[1/19/2024 5:36 PM] tux_linux
+It's literally breaking canadian law
+
+
+[1/19/2024 5:44 PM] szybet
+tell them that after a week you will be mad or smth
+
+
+[1/19/2024 5:45 PM] tux_linux
+yea, it will work 100%
+
+
+[1/19/2024 5:49 PM] tux_linux
+Hi, I understand that the team has already been informed about this issue, but this means that Kobo is currently violating the licenses the source code of the kernel and bootloader were released in, and possibly, to a certain extent, Canadian law. I would greatly appreciate if you could ask the members of this team to give us a clear deadline for these sources to be made available online, and not simply say "you may just check on it from time to time". I hope that you will understand the importance of this request and forward it to the people in charge as soon as it is possible for you. Thanks a lot
+
+Is that fine enough? Should I change something?
+
+
+[1/19/2024 5:52 PM] szybet
+its good
+
+
+[1/19/2024 6:46 PM] tux_linux
+Ok, thanks
+
+
+[1/19/2024 8:19 PM] tux_linux
+@NiLuJe do you think this is too much or is it relatively ok? Thanks
+
+
+[1/19/2024 8:21 PM] ninuje
+Eh, ought to be fine.
+
+
+[1/19/2024 8:22 PM] tux_linux
+Thanks
+
+
+[1/19/2024 10:36 PM] tux_linux
+They should already have been emailed by GitHub
+
+
+[1/23/2024 9:09 PM] pgaskin
+it isn't breaking canadian law
+
+
+[1/23/2024 9:09 PM] pgaskin
+licenses are binding, but it isn't a crime to break them
+
+
+[1/23/2024 9:09 PM] pgaskin
+it's a civil matter
+
+
+[1/23/2024 9:09 PM] tux_linux
+well, at least I said 'possibly'
+
+
+[1/23/2024 9:10 PM] pgaskin
+do note that the kobo devices team isn't the same as last year
+
+
+[1/23/2024 9:10 PM] pgaskin
+quite a few people left after many years
+
+
+[1/23/2024 9:10 PM] tux_linux
+then what could be done
+
+
+[1/23/2024 9:10 PM] tux_linux
+yea
+
+
+[1/23/2024 9:11 PM] pgaskin
+you can ask, you can write to the sfc to get them to contact kobo, you can wait
+
+
+[1/23/2024 9:12 PM] pgaskin
+https://sfconservancy.org/copyleft-compliance/enforcement-strategy.html
+
+{Embed}
+https://sfconservancy.org/copyleft-compliance/enforcement-strategy.html
+Copyleft Compliance Projects - Software Freedom Conservancy
+The Software Freedom Conservancy provides a non-profit home and services to Free, Libre and Open Source Software (FLOSS) projects.
+
+
+[1/23/2024 9:12 PM] pgaskin
+the ones I'm aware of no longer work at kobo
+
+
+[1/23/2024 9:13 PM] pgaskin
+kobo development seems to have died down a bit in the last year (both official and custom)
+
+
+[1/23/2024 10:34 PM] andi15701
+well, I would like to see a real kobo kernel repo
+
+
+[1/23/2024 10:35 PM] andi15701
+I am a bit planing now what to do with this mess in u-boot and friends
+
+
+[1/23/2024 10:36 PM] tux_linux
+Uniform u-boot
+That would be so great
+
+
+[1/23/2024 10:37 PM] andi15701
+one u-boot per user-visible device
+
+
+[1/23/2024 10:37 PM] andi15701
+you can also load the blobs with the 2020.10 u-boot as files
+
+
+[1/23/2024 10:37 PM] andi15701
+so you can have one directory per revision
+
+
+[1/23/2024 10:37 PM] tux_linux
+Yes
+
+
+[1/23/2024 10:37 PM] andi15701
+ore something like that
+
+
+[1/23/2024 10:39 PM] andi15701
+was a bit too busy with other non-computer things the last days, so I have not produced anything yet
+
+{Reactions}
+👍 
+
+[1/24/2024 12:10 AM] andi15701
+we have the kobohiddenread command
+
+
+[1/24/2024 12:11 AM] tux_linux
+i think
+
+
+[1/24/2024 12:11 AM] andi15701
+so everything which can be done with that command can instead be read from files
+
+
+[1/24/2024 12:12 AM] tux_linux
+yes
+
+
+[1/24/2024 12:12 AM] andi15701
+https://github.com/akemnade/u-boot-fslc/wiki
+
+{Embed}
+https://github.com/akemnade/u-boot-fslc/wiki
+Home
+U-Boot tree to host pending fixes and improvements - akemnade/u-boot-fslc
+/mnt/data/projects/git/conversations/media/u-boot-fslc-D5BF1
+
+
+[1/24/2024 12:13 AM] andi15701
+```kobohiddenread 0 9bfffe00 400 hwcfg_sz
+kobohiddenread 0 9bd70000 3800 waveform_sz
+kobohiddenread 0 9bd6da00 406 ntxfw_sz
+kobohiddenread 0 ${fdt_addr} 506
+mmc read ${loadaddr} 800 2400
+setenv bootargs console=${console},${baudrate} rootwait rw no_console_suspend hwcfg_p=0x9bfffe00 hwcfg_sz=${hwcfg_sz} waveform_p=0x9bd70000 waveform_sz=${waveform_sz} ntxfw_p=0x9bd6da00 ntxfw_sz=${ntxfw_sz} mem=445M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+bootz ${loadaddr} - ${fdt_addr}```
+
+
+[1/24/2024 12:14 AM] tux_linux
+you want that i run that?
+
+
+[1/24/2024 12:14 AM] andi15701
+no
+
+
+[1/24/2024 12:14 AM] andi15701
+that is just a starting point
+
+
+[1/24/2024 12:14 AM] tux_linux
+ok
+
+
+[1/24/2024 12:14 AM] andi15701
+I will implement some clara a/b rev check first
+
+
+[1/24/2024 12:14 AM] tux_linux
+good
+
+
+[1/24/2024 12:15 AM] andi15701
+and some nia a/c
+
+{Reactions}
+👍 
+
+[1/24/2024 12:15 AM] tux_linux
+i hope there arent 6 revs of libra 2
+
+
+[2/3/2024 8:57 PM] tux_linux
+Long term work in progress
+
+
+[2/12/2024 1:24 PM] szybet
+so the current problem are no kernel sources?
+
+
+[2/12/2024 1:26 PM] tux_linux
+yes
+
+
+[2/12/2024 1:29 PM] szybet
+have you tried bothering them more?
+
+
+[2/12/2024 1:31 PM] tux_linux
+i think i have done enough
+maybe i can ping donald wong on github
+
+
+[2/12/2024 1:32 PM] tux_linux
+done
+
+
+[2/12/2024 1:37 PM] szybet
+I asked once more on messenger
+
+
+[2/12/2024 1:37 PM] szybet
+let them suffer
+
+
+[2/12/2024 1:37 PM] szybet
+until they release them
+
+
+[2/12/2024 1:37 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/7ozal346p6kz-6875B.png
+
+
+[2/12/2024 1:38 PM] tux_linux
+ok
+
+
+[2/12/2024 1:38 PM] tux_linux
+good
+
+
+[2/12/2024 3:03 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-EBD5C.png
+
+
+[2/12/2024 3:05 PM] tux_linux
+i hate this linux font
+
+
+[2/12/2024 3:06 PM] tux_linux
+it's always offset to the top
+
+
+[2/12/2024 3:06 PM] tux_linux
+so nothing ever looks centered
+
+
+[2/12/2024 3:06 PM] tux_linux
+i think it's nimbus sans
+
+
+[2/12/2024 3:07 PM] szybet
+XD
+
+
+[2/14/2024 8:16 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-90B2D.png
+
+
+[2/14/2024 8:16 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-6D14F.png
+
+
+[2/14/2024 8:16 PM] szybet
+HAHAHA
+
+
+[2/14/2024 8:18 PM] tux_linux
+?
+
+
+[2/14/2024 8:18 PM] szybet
+their support account is suspended on twitter
+
+
+[2/14/2024 8:18 PM] szybet
+anyway I will start bothering them there
+
+
+[2/14/2024 8:23 PM] szybet
+https://x.com/wuarju/status/1757847825361121383?s=20
+
+{Embed}
+https://twitter.com/wuarju/status/1757847825361121383?s=20
+wuarju (@wuarju) on X
+@kobo I have tried getting this resolved with support for a month now. When will the linux kernel sources be released for the various revisions of the Kobo Libra 2. This is a violation of the GNU General Public License.
+Twitter
+
+
+[2/14/2024 10:23 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-4175A.png
+
+
+[2/14/2024 10:23 PM] szybet
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx6sll-clara2e
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx6sll-clara2e
+Kobo-Reader/hw/imx6sll-clara2e at master · kobolabs/Kobo-Reader
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/Kobo-Reader-77D0D
+
+
+[2/14/2024 10:23 PM] szybet
+have you guys looked there?
+
+
+[2/14/2024 10:25 PM] tux_linux
+they are not making our life easy
+
+
+[2/14/2024 10:25 PM] tux_linux
+does it have bd71828 power regulator
+
+
+[2/14/2024 10:26 PM] szybet
+show me a picture of it
+
+
+[2/14/2024 10:26 PM] tux_linux
+just rg the code
+
+
+[2/14/2024 10:28 PM] szybet
+https://github.com/Kobo-InkBox/inkbox/issues/47
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/issues/47
+Kobo Nia: diagnostics mode on installation  · Issue #47 · Kobo-InkB...
+Hi 👋🏻 I've flashed the storage of my Kobo Nia, everything worked smoothly. When turning the device on for the first time and since then, I always end up in inkbox Diagnostics and Recovery - it ...
+/mnt/data/projects/git/conversations/media/47-3B022
+
+
+[2/14/2024 10:29 PM] szybet
+maybe the kobo nia model c is similar
+
+
+[2/14/2024 10:32 PM] szybet
+the kobo nia C PMIC is D17879
+
+
+[2/14/2024 10:32 PM] szybet
+the one you asked is BD7815
+
+
+[2/14/2024 10:32 PM] szybet
+those are the same
+
+
+[2/14/2024 10:33 PM] szybet
+so all kernel sources are just the clara 2E?
+
+
+[2/14/2024 10:33 PM] szybet
+please check @tux-linux @andi if thats true and we have the kernel sources. I want to close the support ticket
+
+
+[2/14/2024 10:34 PM] tux_linux
+bd71828
+
+
+[2/14/2024 10:34 PM] szybet
+so its the same
+
+
+[2/14/2024 10:34 PM] tux_linux
+its like asking hints for a riddle game
+
+
+[2/14/2024 10:34 PM] szybet
+hehe
+
+
+[2/14/2024 10:34 PM] szybet
+in theory
+
+
+[2/14/2024 10:34 PM] tux_linux
+well, will it boot
+
+
+[2/14/2024 10:34 PM] tux_linux
+or burn the device down
+
+
+[2/14/2024 10:35 PM] szybet
+you could tranfer device tree and waveform from your device to the kobo nia model C image
+
+
+[2/14/2024 10:35 PM] szybet
+and it should boot
+
+
+[2/14/2024 10:41 PM] andi15701
+well, last time I checked the clara2e it did not contain any references to the rev f
+
+
+[2/14/2024 10:41 PM] andi15701
+of the libra2
+
+
+[2/14/2024 10:41 PM] andi15701
+in theory yes,
+
+
+[2/14/2024 10:41 PM] andi15701
+*BUT*
+
+
+[2/14/2024 10:41 PM] szybet
+maybe the rev f didn't needed any software changes
+
+
+[2/14/2024 10:41 PM] andi15701
+it seems to have a different device tree
+
+
+[2/14/2024 10:42 PM] andi15701
+than anything else
+
+
+[2/14/2024 10:42 PM] andi15701
+what really worries me are the if (device == X) in the bd78... regulator code
+
+
+[2/14/2024 10:43 PM] andi15701
+introduced by ntx
+
+
+[2/14/2024 10:43 PM] szybet
+https://tenor.com/view/ah-shocked-monkey-gif-10273142
+
+{Embed}
+https://tenor.com/view/ah-shocked-monkey-gif-10273142
+/mnt/data/projects/git/conversations/media/ah-shocked-8E47F.png
+
+
+[2/14/2024 10:43 PM] andi15701
+any regulator information in devicetree about the bd78 is worthless
+
+
+[2/14/2024 10:43 PM] szybet
+are they insane
+
+
+[2/14/2024 10:43 PM] andi15701
+well, no
+
+
+[2/14/2024 10:43 PM] andi15701
+just in a hurry
+
+
+[2/14/2024 10:44 PM] szybet
+kobo, in hurry for 20 years
+
+
+[2/14/2024 10:44 PM] andi15701
+bd71828-i2c@4b {
+                    reg = <0x0000004b>;
+                    compatible = "rohm,bd71828";
+                    gpio_int = <0x00000008 0x00000013 0x00000001>;
+                    gpio_wdogb = <0x0000003a 0x00000018 0x00000001>;
+                    rohm,charger-sense-resistor-ohms = <0x019bfcc0>;
+                    #address-cells = <0x00000001>;
+                    #size-cells = <0x00000000>;
+                    pmic@4b {
+                        compatible = "rohm,bd71828";
+                        reg = <0x0000004b>;
+                        #interrupt-parent = <0x00000044>;
+                        #interrupts = <0x0000001d 0x00000008>;
+
+
+[2/14/2024 10:44 PM] andi15701
+that is the basic issue
+
+
+[2/14/2024 10:44 PM] andi15701
+regulator code does not see the pmic@4b subnode
+
+
+[2/14/2024 10:45 PM] andi15701
+so instead of understanding the problem
+
+
+[2/14/2024 10:45 PM] andi15701
+and fixing the devicetree
+
+
+[2/14/2024 10:45 PM] andi15701
+they raped the regulator driver
+
+
+[2/14/2024 10:45 PM] szybet
+😞
+
+
+[2/14/2024 10:45 PM] szybet
+well anyway, what can we do
+
+
+[2/14/2024 10:46 PM] szybet
+@tux-linux, so a few dd commands and you can try it
+
+
+[2/14/2024 10:46 PM] andi15701
+dumping regulator state from a running system
+
+
+[2/14/2024 10:46 PM] andi15701
+by dumping i2c registers
+
+
+[2/14/2024 10:47 PM] andi15701
+and checking if there is anything odd not explainable with currently available kernel
+
+
+[2/14/2024 10:49 PM] tux_linux
+classic kobo
+
+
+[2/14/2024 10:50 PM] szybet
+being in hurry makes them better than kindle
+
+
+[2/14/2024 11:03 PM] andi15701
+and somehow I have the impression, that the main kernel developer is not a primary linux user
+
+{Reactions}
+🥴 
+
+[2/14/2024 11:03 PM] andi15701
+with the hungarian notation used there, which is more typical for windows
+
+
+[2/28/2024 8:09 AM] ansraer
+Hey 👋 
+I was wondering what the current state of this is. Decided to buy a libra 2 yesterday and would like to know if there is any way I can help test things.
+No pressure or anything, but if there is any way to help please let me know.
+
+
+[2/28/2024 8:52 AM] szybet
+Basically read this chat from the moment nicolas got his libra 2
+
+
+[2/28/2024 8:59 AM] ansraer
+As far as I can tell the latest news was that the clara2e **might** work, but so far that hasn't been confirmed.
+
+
+[2/28/2024 9:03 AM] szybet
+Yep
+
+
+[2/28/2024 9:03 AM] szybet
+Pretty much
+
+
+[3/1/2024 7:18 AM] ansraer
+I plan to test the libra 2 after work today. Is there anything special I have to do or can I just grab the latest clara2e image and flash it onto my sd card?
+
+
+[3/1/2024 7:39 AM] szybet
+You will burn your device down
+
+
+[3/1/2024 7:39 AM] szybet
+Dont
+
+
+[3/1/2024 7:43 AM] szybet
+First, the kobo nia model c kernel you need, it uses the kobo clara 2e kernel
+
+
+[3/1/2024 7:43 AM] szybet
+Then you need to transfer waveform and dbs? Dts? Idk something like that that manages power management for your specific device
+
+
+[3/1/2024 7:43 AM] szybet
+There is no kobo clara 2e image too
+
+
+[3/1/2024 7:43 AM] szybet
+If i were you i wojld first compare the revisions
+
+
+[3/1/2024 7:43 AM] szybet
+With what nicolas has
+
+
+[3/1/2024 7:43 AM] szybet
+If its the same, try to compile and overwirte the stock os kernel with what you compiled - then we will know in a more safe way if thats the one
+
+
+[3/1/2024 7:44 AM] szybet
+if its a different revision i would look through kernel sources to find a matching kernel
+
+
+[3/1/2024 7:44 AM] szybet
+Did i mention booting the wrong kernel with the wrong waveform & dts can burn your device down? Now you know
+
+But unlikely
+
+
+[3/1/2024 7:45 AM] szybet
+If not burn it, damage the eink screen ( waveform is calibration dsta for your exact screen )
+
+
+[3/1/2024 7:46 AM] szybet
+You obviously need to take a backup of your stock os
+
+
+[3/1/2024 7:46 AM] szybet
+And just post it here for us to extract at least 2 files
+
+
+[3/1/2024 7:46 AM] szybet
+Version file and kernel config file
+
+
+[3/1/2024 7:55 AM] ansraer
+Thanks, I will look into that.
+
+
+[3/1/2024 7:56 AM] ansraer
+Though I am somewhat surprised that eink screens are that sensitive.  I would have assumed them to be standardized enough to avoid burning themselves out with a wrong config.
+
+
+[3/1/2024 8:26 AM] szybet
+We provide waveforms, and they are fine
+
+
+[3/1/2024 8:26 AM] szybet
+But if its for another screen and it gets validated and it passes, it can be bad
+
+
+[3/1/2024 8:26 AM] szybet
+Nicolas has one ereader that greys are really bad
+
+
+[3/1/2024 8:26 AM] szybet
+Because of it
+
+
+[3/1/2024 8:27 AM] szybet
+Einks are really complicated
+
+
+[3/1/2024 8:27 AM] szybet
+There is a thread in chat exploring them
+
+
+[3/1/2024 8:28 AM] szybet
+But tldr: different types of color, screen refreshes use different voltages up to 40V
+
+
+[3/1/2024 10:06 PM] ansraer
+Finally managed to get the sd card our of the reader, here are images of the rootfs and recovery partition:
+https://filetransfer.io/data-package/yOsJkd7M#link
+
+
+[3/1/2024 10:07 PM] ansraer
+Tell me if you need anything else.
+
+
+[3/1/2024 10:11 PM] szybet
+the whole image
+
+
+[3/1/2024 10:11 PM] szybet
+4 pt too
+
+
+[3/1/2024 10:12 PM] szybet
+whole because we will probably need to help you extract things
+
+
+[3/1/2024 10:12 PM] szybet
+p4 for the version file
+
+
+[3/1/2024 10:25 PM] ansraer
+There are only three partitions? recovery, rootfs and a fat32 "KOBOeReader" partition
+
+
+[3/1/2024 10:27 PM] szybet
+yep that one
+
+
+[3/1/2024 10:27 PM] szybet
+the waveform and dts and kernel and uboot are in unpartitioned space
+
+
+[3/1/2024 10:27 PM] szybet
+so whole image pleace
+
+
+[3/1/2024 10:28 PM] szybet
+also what revision do ytou have
+
+
+[3/1/2024 10:29 PM] ansraer
+Gotcha. Give me a moment, need to figure out how to best transfer a 32GB image.
+
+
+[3/1/2024 10:29 PM] szybet
+compress it... its mostly empty
+
+
+[3/1/2024 10:30 PM] ansraer
+There probably is a way to compress it, but I am not sure what the most efficient way to do so is.
+
+
+[3/1/2024 10:30 PM] szybet
+xz
+
+
+[3/1/2024 10:30 PM] szybet
+dd + xz
+
+
+[3/1/2024 10:30 PM] szybet
+or gnome disk directly can compress it?
+
+
+[3/1/2024 10:39 PM] ansraer
+I was hoping there was a way to compress it while creating the image. Compressing an already existing image takes ages on my laptop.
+
+
+[3/1/2024 10:41 PM] szybet
+the methods i described do that
+
+
+[3/1/2024 10:44 PM] ansraer
+Oh, do you want me to directly pipe the output from dd into xz?
+
+
+[3/1/2024 10:45 PM] szybet
+dd if=/dev/mmcblk0 bs=512 count=49151 | xz > u_space.xz
+
+
+[3/1/2024 10:45 PM] szybet
+smth like that
+
+
+[3/1/2024 10:45 PM] szybet
+adjust things
+
+
+[3/1/2024 10:47 PM] ansraer
+Nah, that won't be any faster than what I am doing right now. I was hoping that dd might have a built in compression tool that would be faster due to having additional information.
+Just piping the output of dd into xy shouldn't be any faster than letting xz read the image from disk.
+
+
+[3/1/2024 10:47 PM] szybet
+this is faster
+
+
+[3/1/2024 10:47 PM] szybet
+its not writing 2 files only one
+
+
+[3/1/2024 10:47 PM] ansraer
+I already have the full image file on my disk
+
+
+[3/1/2024 10:47 PM] szybet
+¯\_(ツ)_/¯
+
+
+[3/1/2024 10:47 PM] ansraer
+Wanted to have a complete backup in case I messed things up.
+
+
+[3/1/2024 10:48 PM] szybet
+very important
+
+
+[3/1/2024 10:48 PM] szybet
+yea
+
+
+[3/1/2024 10:48 PM] ansraer
+And given that my laptop's disk is pretty much entirely empty I was too lazy to bother thinking about compression. Which is now coming back to haunt me when I have to upload the image file.
+
+
+[3/1/2024 10:56 PM] tux_linux
+yes, a dd with xz is better
+
+
+[3/1/2024 10:56 PM] tux_linux
+but i have it as well
+
+
+[3/1/2024 10:57 PM] tux_linux
+so do what you want
+probably that it will be helpful for szybet though
+
+
+[3/1/2024 10:57 PM] tux_linux
+also to see if we have the same revision (i hope)
+
+
+[3/1/2024 10:59 PM] ansraer
+https://filetransfer.io/data-package/v7csyY4H#link
+
+{Embed}
+https://filetransfer.io/data-package/v7csyY4H
+Download Data package from March 1st.
+Size of the data package: 1.27 GB. Free transfer of up to 6 GB of photos, videos and documents. Send large files via email or a link to share. No registration, no ads, just simple file sharing!
+/mnt/data/projects/git/conversations/media/filetransfer-social-en.389488efe49681ac059-27321.png
+
+
+[3/1/2024 10:59 PM] ansraer
+How do I check rev?
+
+
+[3/1/2024 11:00 PM] tux_linux
+do you have a picture of your pcb
+
+
+[3/1/2024 11:00 PM] ansraer
+If I can find my phone...
+
+
+[3/1/2024 11:02 PM] ansraer
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_fce0d66d-27f1-4ec-4B846.jpg
+
+
+[3/1/2024 11:03 PM] szybet
+thats nicolas:
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20240110_141206-016B1.png
+
+
+[3/1/2024 11:03 PM] szybet
+your
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-92249.png
+
+
+[3/1/2024 11:04 PM] szybet
+nicolas:
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-60373.png
+
+
+[3/1/2024 11:05 PM] szybet
+what a lucky buy
+
+
+[3/1/2024 11:06 PM] tux_linux
+Yay
+
+
+[3/1/2024 11:08 PM] szybet
+@tux-linux did we concluded the kobo clara 2e kernel is good?
+
+
+[3/1/2024 11:08 PM] szybet
+for this device
+
+
+[3/1/2024 11:14 PM] tux_linux
+No
+
+
+[3/1/2024 11:14 PM] tux_linux
+We don't know
+
+
+[3/1/2024 11:14 PM] tux_linux
+It might be
+
+
+[3/1/2024 11:15 PM] tux_linux
+Since you got the info from messenger, not sure it's that reliable
+
+
+[3/1/2024 11:15 PM] szybet
+it was once
+
+
+[3/1/2024 11:15 PM] szybet
+maybe now too
+
+
+[3/1/2024 11:15 PM] szybet
+lets extract the config and compare to the ones that are in kernel sources @Ansraer
+
+
+[3/1/2024 11:15 PM] szybet
+the config is extractable maybe only when the device is booted?
+
+
+[3/13/2024 8:42 AM] szybet
+I hope you didnt gived up
+
+
+[3/14/2024 5:10 PM] ansraer
+Sorry, I was busy with work lately. Will probably have time to look into my ereader more next weekend.
+
+
+[3/14/2024 5:11 PM] szybet
+No worries, I just hope you don't leave us as many others🫡
+
+
+[3/14/2024 5:12 PM] ansraer
+Nah, but I habe a big deadline at work right now and am also moving into a new apartment.
+
+{Reactions}
+👍 
+
+[4/2/2024 10:08 AM] real.username.was.taken
+does the libra 2 port work?
+
+
+[4/2/2024 10:50 AM] szybet
+No
+
+
+[4/2/2024 10:50 AM] szybet
+You need to port it
+
+
+==============================================================
+Exported 589 message(s)
+==============================================================

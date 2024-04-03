@@ -1,0 +1,930 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Glo HD (N437)
+==============================================================
+
+[1/28/2022 11:58 PM] tux_linux
+Glo HD porting thread. Mine will arrive soon, hopefully...
+
+
+[1/29/2022 12:02 AM] tux_linux
+Changed the channel name: Kobo Glo HD (N437)
+
+
+[1/29/2022 12:03 AM] tux_linux
+PCB pictures of my broken one
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220128_230149231-F082D.jpg
+/mnt/data/projects/git/conversations/media/PXL_20220128_230123678-70161.jpg
+
+
+[1/29/2022 12:06 AM] andi15701
+how many buttons?
+
+
+[1/29/2022 12:06 AM] tux_linux
+Reset and power
+
+
+[1/29/2022 12:06 AM] tux_linux
+There's probably a hall sensor and other things but I can't really check evtest now
+
+
+[1/29/2022 12:07 AM] andi15701
+i have already the fcc internal photos pdf here
+
+{Reactions}
+👍 
+
+[1/29/2022 12:09 AM] andi15701
+so, 1 button, probably 1 hall sensor, 1 led?
+
+
+[1/29/2022 12:09 AM] tux_linux
+yes
+
+
+[1/29/2022 12:10 AM] andi15701
+everything else looks the same as for the Shine 2 HD
+
+
+[1/29/2022 12:10 AM] tux_linux
+Well, with the device tree provided for that device, we should have some basic things already working
+
+
+[1/29/2022 12:15 AM] andi15701
+I would expect no missing drivers
+
+
+[1/29/2022 12:15 AM] andi15701
+in my branches for it
+
+
+[1/29/2022 12:15 AM] andi15701
+so just the devicetree
+
+
+[1/29/2022 12:15 AM] andi15701
+and that's it
+
+{Reactions}
+👍 
+
+[1/29/2022 12:16 AM] tux_linux
+nice
+
+
+[1/29/2022 12:16 AM] andi15701
+well, what is in there: the rc5t619 (RTC, Battery stuff, regulators) -> good friend
+
+{Reactions}
+👍 
+
+[1/29/2022 12:17 AM] tux_linux
+Do you know if porting a newer U-Boot would be doable?
+
+
+[1/29/2022 12:17 AM] andi15701
+definitively
+
+{Reactions}
+👍 
+
+[1/29/2022 12:17 AM] andi15701
+I would expect that suspend is not working
+
+
+[1/29/2022 12:17 AM] andi15701
+with the old one
+
+
+[1/29/2022 12:17 AM] andi15701
+and near-mainline-kernel
+
+
+[1/29/2022 12:17 AM] tux_linux
+suspend of what?
+
+
+[1/29/2022 12:18 AM] andi15701
+echo mem >/sys/power/state
+
+
+[1/29/2022 12:18 AM] tux_linux
+oh
+
+
+[1/29/2022 12:18 AM] tux_linux
+You would expect that suspend would not be possible with near-mainline kernel?
+
+
+[1/29/2022 12:19 AM] andi15701
+stone-age u-boot + near-mainline kernel
+
+
+[1/29/2022 12:19 AM] tux_linux
+But is U-Boot not overwritten in RAM after loading and starting the kernel?
+
+
+[1/29/2022 12:19 AM] tux_linux
+What would it have to do with this?
+
+
+[1/29/2022 12:20 AM] andi15701
+I do not fully understand that yet, I guess there are different expectation about who sets up self-refresh of the RAM  and how
+
+
+[1/29/2022 12:21 AM] tux_linux
+Probably that there are differences between the way it is handled on sunxi and imx
+
+
+[1/29/2022 12:23 AM] andi15701
+basically the u-boot also sets up hardware stuff for its own purposes
+
+
+[1/29/2022 12:23 AM] andi15701
+and sometimes the kernel expects a certain state
+
+
+[1/29/2022 12:23 AM] tux_linux
+oh
+
+
+[1/29/2022 12:23 AM] andi15701
+which is not good
+
+
+[1/29/2022 12:23 AM] tux_linux
+yeah
+
+
+[1/29/2022 12:24 AM] andi15701
+but I think just use the new u-boot and that's it
+
+
+[1/29/2022 12:24 AM] tux_linux
+hmm
+
+
+[1/29/2022 12:24 AM] andi15701
+but for first testing, we do not need suspend
+
+
+[1/29/2022 12:24 AM] tux_linux
+no, it's fine
+
+
+[1/29/2022 12:25 AM] andi15701
+and when you set /sys/power/mem_sleep to something other than deep
+
+
+[1/29/2022 12:25 AM] andi15701
+it also works
+
+{Reactions}
+👍 
+
+[1/29/2022 12:25 AM] tux_linux
+I did not know about that sysfs node
+
+
+[1/29/2022 12:26 AM] tux_linux
+only knew `state` and `state-extended`
+
+
+[1/29/2022 12:26 AM] andi15701
+state-extended is kobo-specific
+
+
+[1/29/2022 12:26 AM] tux_linux
+hmm
+
+
+[1/29/2022 12:26 AM] tux_linux
+They do some pretty agressive sleep when the UI is idle in Nickel that's for sure
+
+
+[1/29/2022 12:27 AM] tux_linux
+not always fun to be locked out of serial console
+
+
+[1/29/2022 12:28 AM] andi15701
+well, really, really time to sleep here...
+
+{Reactions}
+👍 
+
+[1/29/2022 12:30 AM] tux_linux
+good night, see you
+
+
+[1/29/2022 12:30 AM] daboone72
+Likewise andi I'm in UK so time to say good night
+
+{Reactions}
+👋 
+
+[2/1/2022 11:45 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220201_224326568-FD330.jpg
+
+
+[2/1/2022 11:45 PM] tux_linux
+It arrived today!
+@andi , would you want the first unpartitioned space of the MMC?
+
+
+[2/2/2022 10:42 PM] andi15701
+yes
+
+
+[2/3/2022 12:18 AM] tux_linux
+Here you go
+I might have gotten a bit too far, the first partition actually starts at sector 30720, I thought it would be 49152 as it was for the N236, but apparently not
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/glohd-n437-bootmmc.bin-CA0E7.xz
+
+
+[2/3/2022 12:18 AM] tux_linux
+```
+nicolas@gentoo-ryzen /tmp> md5sum glohd-n437-bootmmc.bin.xz 
+0ec7b8a463fbce9872336fc41ef6a254  glohd-n437-bootmmc.bin.xz
+nicolas@gentoo-ryzen /tmp>
+```
+
+
+[2/3/2022 6:35 PM] andi15701
+thanks, got it
+
+{Reactions}
+👍 
+
+[2/6/2022 5:05 AM] tux_linux
+Boot log
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-03D68.txt
+
+
+[2/6/2022 5:09 AM] tux_linux
+U-Boot commands list
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-8BBA1.txt
+
+
+[2/6/2022 6:07 AM] tux_linux
+`download_mode` command makes device show up as this in kernel ring buffer:
+```
+[358794.538431] usb 3-3.2: new high-speed USB device number 9 using xhci_hcd
+[358794.630740] usb 3-3.2: New USB device found, idVendor=15a2, idProduct=0063, bcdDevice= 0.01
+[358794.630745] usb 3-3.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[358794.630747] usb 3-3.2: Product: SE Blank MEGREZ
+[358794.630749] usb 3-3.2: Manufacturer: Freescale SemiConductor Inc 
+[358794.685610] hid-generic 0003:15A2:0063.0008: hiddev97,hidraw4: USB HID v1.10 Device [Freescale SemiConductor Inc  SE Blank MEGREZ] on usb-0000:08:00.3-3.2/input0
+```
+
+
+[2/8/2022 3:28 AM] tux_linux
+Ahh, the joys of `dhd.ko`...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-FDDFA.txt
+
+
+[2/8/2022 3:39 AM] tux_linux
+Ok, actually my fault on this one. It wasn't the real `/lib/firmware`, I just ran it from the rootfs chroot
+
+
+[2/8/2022 3:40 AM] tux_linux
+But that is still ugly...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-87AF2.txt
+
+
+[2/8/2022 3:41 AM] tux_linux
+andi1, if you have any pointers about this since you got it working on a newer kernel, it'd be nice...
+dhd is truly, truly, truly a nightmare
+
+
+[2/8/2022 3:43 AM] tux_linux
+Meanwhile, I'll try with other nvram configs and firmwares...
+
+
+[2/8/2022 4:10 AM] tux_linux
+Also, I'm sad. Kernel randomly faults and prints a trace at random times after touching the screen while the QPA is running.
+Not sure what to do, if it's the QPA's problem, the kernel's or both.
+But anyways, that's a whole different issue
+
+
+[2/8/2022 4:38 AM] tux_linux
+Ok, hopeful fact is that the kernel traces/panics are practically nonexistent when X11 is started at boot, UI is super stable and never crashes, to the best of what I've observed.
+Current behavior is that it only happens when getting out of an X11 app, thus restarting Qt and InkBox UI. Sometimes it is "non-blocking", meaning it doesn't panic, but hangs when trying to reboot/poweroff the device (can also render device unstable by triggering nonsensical I/O errors at random places, probably by overwriting memory areas that it should not), or "blocking", where it completely panics or keeps outputting trace information on the serial console.
+
+
+[2/8/2022 4:44 AM] tux_linux
+Current evtest log for simple touch-release event looks like this with patched kernel:
+```
+Event: time 47.582038, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 0
+Event: time 47.582149, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 1
+Event: time 47.582151, type 3 (EV_ABS), code 50 (ABS_MT_WIDTH_MAJOR), value 1
+Event: time 47.582159, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 787
+Event: time 47.582162, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 161
+Event: time 47.582166, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 47.582175, type 3 (EV_ABS), code 24 (ABS_PRESSURE), value 1024
+Event: time 47.582189, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 1
+Event: time 47.582195, -------------- SYN_REPORT ------------
+Event: time 47.620797, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 0
+Event: time 47.620810, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 0
+Event: time 47.620823, type 3 (EV_ABS), code 50 (ABS_MT_WIDTH_MAJOR), value 0
+Event: time 47.620844, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 787
+Event: time 47.620857, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 161
+Event: time 47.620860, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 47.620863, type 3 (EV_ABS), code 24 (ABS_PRESSURE), value 0
+Event: time 47.620870, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 0
+Event: time 47.620884, -------------- SYN_REPORT ------------
+```
+
+
+[2/9/2022 5:43 AM] tux_linux
+Ok, progress on the Wi-Fi. Not fully working, but it's better.
+I had to take the `rtecdc.bin.WC121A2` firmware instead. I wonder if this could make it work on the imx507s too.
+NVRAM file is `nvram-E60Q90.txt`.
+Now it complains about not being able to scan anything.
+And it really can't, since the `iwlist` command used for scanning doesn't work either.
+
+
+[2/9/2022 5:44 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C5462.txt
+
+
+[2/11/2022 1:19 AM] tux_linux
+Ok, actually it's able to scan, but doesn't support the required ioctl for it.
+e.g. `wlarm_le escanresults` works
+
+
+[2/11/2022 1:20 AM] tux_linux
+```
+kobo:/# wlarm_le escanresults
+SSID: "intranet"
+Mode: Managed   RSSI: -19 dBm   SNR: 0 dB       noise: -92 dBm  Flags: RSSI on-channel  Channel: 1
+BSSID: 4C:34:88:B0:8D:4E        Capability: ESS WEP ShortSlot 
+Supported Rates: [ 1(b) 2(b) 5.5(b) 11(b) 6 9 12 18 24 36 48 54 ]
+RSN:
+        multicast cipher: AES-CCMP
+        unicast ciphers(1): AES-CCMP 
+        AKM Suites(4): WPA-PSK Unknown-RSN(#6)  Unknown-RSN(#8)  Unknown-RSN(#9)  
+        Capabilities(0x000c): No Pre-Auth, Pairwise, 16 PTK Replay Ctrs1 GTK Replay Ctr
+802.11N Capable:
+        Chanspec: 2.4GHz channel 1 20MHz (0x2b01)
+        Control channel: 1
+        802.11N Capabilities: SGI20 SGI40 
+        Supported MCS : [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 82 83 85 88 96 ]
+
+SSID: "SentFromMyToaster-EXT"
+Mode: Managed   RSSI: -70 dBm   SNR: 0 dB       noise: -92 dBm  Flags: RSSI on-channel  Channel: 2
+BSSID: 00:1C:F0:F5:FA:0E        Capability: ESS WEP ShortPre ShortSlot 
+Supported Rates: [ 1(b) 2(b) 5.5(b) 11(b) 6 9 12 18 24 36 48 54 ]
+WPA:
+        multicast cipher: TKIP
+        unicast ciphers(2): TKIP AES-CCMP 
+        AKM Suites(1): WPA-PSK 
+        No WPA Capabilities advertised
+RSN:
+        multicast cipher: TKIP
+        unicast ciphers(2): TKIP AES-CCMP 
+        AKM Suites(1): WPA-PSK 
+        Capabilities(0x0000): No Pre-Auth, Pairwise, 1 PTK Replay Ctr1 GTK Replay Ctr
+802.11N Capable:
+        Chanspec: 2.4GHz channel 2 20MHz (0x2b02)
+        Control channel: 2
+        802.11N Capabilities: SGI40 
+        Supported MCS : [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ]
+
+kobo:/#
+```
+
+
+[2/11/2022 2:25 AM] tux_linux
+YES!
+
+
+[2/11/2022 2:28 AM] tux_linux
+```
+kobo:/# insmod /modules/wifi/bcmdhd.ko
+kobo:/# dmesg
+[abridged]
+[  191.000633] wl_iw_attach thr:a15 started
+[  191.000737] wl_iw_bt_init thr:a16 started
+[  191.000846] dhd_attach thr:a17 started
+[  191.000936] dhd_attach thr:a18 started
+[  191.001028] dhd_attach thr:a19 started
+[  191.002427] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+[  191.094017] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[  191.335016] [bcmsdh_register_oob_intr-634] IRQ=383 Type=414 
+[  191.335040] add wake up source irq 105
+[  191.336525] Firmware up: op_mode=1, Broadcom Dongle Host Driver mac=78:45:61:50:d0:5e
+[  191.702540] Firmware version = wl0: Apr 11 2014 17:50:29 version 5.90.195.89.23 FWID 01-83cee08a
+[  191.708748] 
+[  191.708758] Dongle Host Driver, version 5.90.125.120.1
+[  191.708766] Compiled in drivers/net/wireless/bcmdhd on Feb 10 2022 at 19:59:23
+kobo:/# wlarm_le up
+kobo:/# wpa_passphrase intranet xxxx > /run/wpa_supplicant.conf
+kobo:/# wpa_supplicant -D wext -i wlan0 -c /run/wpa_supplicant.conf -O /run/wpa_supplicant -B
+Successfully initialized wpa_supplicant
+rfkill: Cannot get wiphy information
+kobo:/# udhcpc -i wlan0
+udhcpc: started, v1.33.0
+udhcpc: sending discover
+udhcpc: sending discover
+udhcpc: sending select for 10.42.0.194
+udhcpc: lease of 10.42.0.194 obtained, lease time 3600
+kobo:/# ping google.com
+PING google.com (172.217.13.206): 56 data bytes
+64 bytes from 172.217.13.206: seq=0 ttl=118 time=14.675 ms
+64 bytes from 172.217.13.206: seq=0 ttl=118 time=14.675 ms
+64 bytes from 172.217.13.206: seq=0 ttl=118 time=14.675 ms
+^C
+--- google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 14.675/19.659/22.329 ms
+kobo:/# uname -a
+Linux kobo 3.0.35-inkbox #1 PREEMPT Thu Feb 10 20:01:25 EST 2022 armv7l GNU/Linux
+kobo:/#
+```
+
+{Reactions}
+😎 
+
+[2/11/2022 2:30 AM] tux_linux
+Only thing that doesn't work is scanning, but I can probably sniff `wlarm_le` output instead of `iwlist` to get available SSIDs
+
+
+[2/11/2022 2:34 AM] tux_linux
+Online catalog works!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220211_013346925-53A8C.jpg
+
+
+[2/11/2022 2:35 AM] tux_linux
+Don't rely on the Wi-Fi icon 😉
+
+
+[2/11/2022 2:37 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220211_013636347-50929.jpg
+
+
+[2/11/2022 2:37 AM] tux_linux
+300ppi is beautiful BTW
+
+
+[2/11/2022 4:24 AM] the.mightydill
+woooo
+
+{Reactions}
+👍 
+
+[2/13/2022 4:27 PM] tux_linux
+A newer platform plugin apparently fixes the kernel panics/traces bug. Which is awesome.
+
+
+[5/17/2022 5:32 AM] tux_linux
+@OfficerAction  + @NiLuJe : I've got this strange bug sometimes (not only) when waking up from sleep mode on the Glo HD.
+The two small rectangles at the top are updated at the same time if there is an event that does it, but the big viewport is frozen.
+The only fix I know about is to relaunch the binary (i.e., platform plugin).
+Any ideas why it does that?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220517_023531244-DCF1B.jpg
+
+
+[5/17/2022 12:37 PM] ninuje
+That's a bitdepth switch
+
+
+[5/17/2022 12:37 PM] ninuje
+Possibly to 16bpp
+
+
+[5/17/2022 12:38 PM] ninuje
+I've never seen it happen on its own on resume (or... Anytime, really), FWIW
+
+
+[5/17/2022 3:11 PM] tux_linux
+Well, it does ;)
+So I have to use fbdepth at every wake-up?
+
+
+[5/17/2022 4:02 PM] ninuje
+Check what happens first, might be X screwing the pooch
+
+
+[5/17/2022 4:07 PM] tux_linux
+I'll try disabling it
+
+
+[5/21/2022 4:53 PM] tux_linux
+https://github.com/apreiml/linux/blob/kobo/glo-hd/arch/arm/boot/dts/imx6sl-kobo-glo-hd.dts
+@andi : something useful for the Glo HD if you happen to want a dts
+it's actually forked from your repo; do you know about it?
+
+{Embed}
+https://github.com/apreiml/linux/blob/kobo/glo-hd/arch/arm/boot/dts/imx6sl-kobo-glo-hd.dts
+linux/imx6sl-kobo-glo-hd.dts at kobo/glo-hd · apreiml/linux
+Linux kernel source tree. Contribute to apreiml/linux development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/linux-02D2F
+
+
+[5/21/2022 5:18 PM] andi15701
+I talked with the author
+
+{Reactions}
+👍 
+
+[5/21/2022 5:19 PM] andi15701
+i am diffing with the shine2,
+
+
+[5/21/2022 5:20 PM] andi15701
+someone reported to have graphics running when doing a tolino shine2 install via pmOS
+
+
+[5/21/2022 5:23 PM] andi15701
+on a Kobo Glo HD
+
+
+[5/21/2022 5:23 PM] andi15701
+tolino shine2 also uses my 5.16-kernel
+
+
+[5/21/2022 5:24 PM] andi15701
+and my uboot
+
+
+[8/2/2022 6:07 AM] tux_linux
+https://photos.app.goo.gl/7g3rUfBNcUWfFavM6
+
+{Embed}
+https://photos.app.goo.gl/7g3rUfBNcUWfFavM6
+New video by Nicolas Mailloux
+/mnt/data/projects/git/conversations/media/Yoi6Biz4sVBB1rQhgHum_tBj-PqS24MUq_yqFdZewN-D3683
+
+
+[8/2/2022 6:07 AM] tux_linux
+In here, the LED, when the `ioctl(light, CM_nLED, 1);` ioctl is performed on it, behaves like that
+Is there a way to make it light up still?
+
+
+[8/2/2022 6:08 AM] tux_linux
+(@andi, sorry for bothering you, but I could use some help 🙂 
+also, it could be useful for improving a future device tree source)
+
+
+[8/2/2022 12:59 PM] ninuje
+By not using the ioctl and using the lit sysfs node manually instead? :o)
+
+
+[8/2/2022 1:07 PM] ninuje
+`CM_nLED` doesn't touch the right LED channel (it touches the "green" one while you apparently you want the "red" channel (ignore the color name, it's fairly meaningless) for a "connected" hint), but try sending a `CM_LED_BLINK` 0 first anyway?
+
+
+[8/2/2022 1:07 PM] ninuje
+TL;DR: There's a reason Nickel doesn't use those 😉
+
+
+[8/2/2022 1:29 PM] szybet
+a 2 color diode? glo hd is the best ereader then
+
+
+[8/2/2022 1:30 PM] ninuje
+It's a historical quirk of the ntx led driver
+
+
+[8/2/2022 1:30 PM] ninuje
+each channel is named after a color
+
+
+[8/2/2022 1:30 PM] ninuje
+doesn't necessarily reflects reality
+
+
+[8/2/2022 3:39 PM] tux_linux
+There isn't
+
+
+[8/2/2022 3:41 PM] tux_linux
+CM_LED_BLINK does exactly what it says on the tin
+Even if put before/after the other ioctl call
+
+
+[8/2/2022 3:41 PM] tux_linux
+Touch has a 4-color LED
+
+
+[8/2/2022 3:45 PM] tux_linux
+```
+kobo:/sys# find /sys | grep led
+/sys/devices/platform/gpio-keys/disabled_keys
+/sys/devices/platform/gpio-keys/disabled_switches
+/sys/devices/platform/gpio-keys/input/input0/capabilities/led
+/sys/devices/virtual/input/input1/capabilities/led
+/sys/module/usbhid/parameters/ignoreled
+kobo:/sys# find /sys | grep LED
+kobo:/sys#
+```
+
+
+[8/2/2022 4:00 PM] tux_linux
+There is a light node though, but it doesn't do anything
+
+
+[8/2/2022 4:01 PM] tux_linux
+`pmic_light.1`
+
+
+[8/2/2022 4:35 PM] szybet
+even cooler
+
+
+[8/2/2022 4:35 PM] szybet
+i want an rgb led on a ereader
+
+
+[8/2/2022 4:39 PM] tux_linux
+it is rgb
+
+
+[8/2/2022 4:39 PM] tux_linux
+plus white when you combine all 3
+
+
+[8/2/2022 4:39 PM] szybet
+https://tenor.com/view/vsauce-vsauce-pog-poggers-vsauce-poggers-pog-gif-18430372
+
+{Embed}
+https://tenor.com/view/vsauce-vsauce-pog-poggers-vsauce-poggers-pog-gif-18430372
+/mnt/data/projects/git/conversations/media/vsauce-vsauce-pog-36DEA.png
+
+
+[8/2/2022 4:40 PM] tux_linux
+https://www.youtube.com/watch?v=VUW5ISx8_Vg
+
+{Embed}
+内藤竜治
+https://www.youtube.com/watch?v=VUW5ISx8_Vg
+Kobo LED JTAG hack
+KoboのLEDをJTAGバウンダリスキャンを使ってチカチカさせてみた。
+http://nahitafu.cocolog-nifty.com/nahitafu/2012/08/kobojtag-5cd0.html
+/mnt/data/projects/git/conversations/media/maxresdefault-15A19.jpg
+
+
+[8/2/2022 4:41 PM] tux_linux
+admittedly, he could have used an easier method than JTAG...
+
+
+[8/2/2022 4:42 PM] szybet
+sooo cool
+
+
+[8/2/2022 8:25 PM] ninuje
+It's *really* called `lit`, that wasn't a typo on my part 😉
+
+
+[8/2/2022 8:25 PM] tux_linux
+Yes, I know, it doesn't work
+
+
+[8/2/2022 8:25 PM] ninuje
+`static DEVICE_ATTR(lit, 0644, lit_info, lit_ctl);` @ `drivers/misc/ntx_misc_light.c`
+
+
+[8/2/2022 8:25 PM] tux_linux
+it's in `pmic_light.1`
+
+
+[8/2/2022 8:25 PM] ninuje
+Syntax is clunky as fuck, though
+
+
+[8/2/2022 8:26 PM] tux_linux
+you can't just write 1 or 0 to it?
+
+
+[8/2/2022 8:26 PM] ninuje
+No
+
+
+[8/2/2022 8:26 PM] tux_linux
+oh
+
+
+[8/2/2022 8:26 PM] ninuje
+https://github.com/koreader/koreader/blob/ad7cfa2c4b4535dc3546636c3bd5943b891a793f/frontend/device/kobo/device.lua#L1113-L1177
+
+{Embed}
+https://github.com/koreader/koreader/blob/ad7cfa2c4b4535dc3546636c3bd5943b891a793f/frontend/device/kobo/device.lua
+koreader/device.lua at ad7cfa2c4b4535dc3546636c3bd5943b891a793f · k...
+An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices - koreader/device.lua at ad7cfa2c4b4535dc354663...
+/mnt/data/projects/git/conversations/media/koreader-CD99B
+
+
+[8/2/2022 8:28 PM] tux_linux
+it doesn't work, or I made a typo while sending commands
+
+
+[8/2/2022 8:29 PM] tux_linux
+are we talking about the same thing?
+```
+kobo:/sys/devices/platform/pmic_light.1# ls
+driver     lit        modalias   power      subsystem  uevent
+kobo:/sys/devices/platform/pmic_light.1#
+```
+
+
+[8/2/2022 8:30 PM] ninuje
+I'd strace a nickel startup, like the comments say, that's a Mk.7+ command stream
+
+
+[8/2/2022 8:30 PM] ninuje
+It's quite possible the Glo requires tweaking a different channel
+
+
+[8/2/2022 8:30 PM] tux_linux
+nickel just turns off the light at start up
+
+
+[8/2/2022 8:31 PM] tux_linux
+we can already do that
+
+
+[8/2/2022 8:31 PM] ninuje
+That's enough to tell you which channels to fiddle
+
+
+[8/2/2022 8:31 PM] tux_linux
+`CM_LIGHT_BLINK`
+
+
+[8/2/2022 8:31 PM] tux_linux
+but ok
+
+
+[8/2/2022 8:31 PM] ninuje
+(I've never seen it use the ioctl on my devices, FWIW)
+
+
+[8/2/2022 8:31 PM] tux_linux
+it behaves a bit strange but it turns the led off
+
+
+[8/2/2022 8:31 PM] tux_linux
+so I guess it's fine
+
+
+[8/2/2022 9:07 PM] tux_linux
+To turn it off
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-5226A.txt
+
+
+[8/2/2022 9:08 PM] tux_linux
+it's the same as yours it seems
+but it turns off the led
+I want to turn it on
+
+
+[8/2/2022 10:37 PM] tux_linux
+```
+/sys/devices/platform/pmic_light.1 # echo "ch 4" > lit
+/sys/devices/platform/pmic_light.1 # echo "cur 1" > lit
+/sys/devices/platform/pmic_light.1 # echo "dc 63" > lit
+```
+Ok, when using this, the light briefly turns on and then shuts off
+
+
+[8/3/2022 12:02 AM] ninuje
+That's... interesting 😄
+
+
+[8/3/2022 12:03 AM] ninuje
+I do remember a host of weird little issues on older devices, and, AFAICT, that option is gone from Nickel on said wonky devices
+
+
+[8/3/2022 12:03 AM] tux_linux
+Is there any way to keep it still on? I can modify kernel code
+
+
+[8/3/2022 12:03 AM] tux_linux
+U-Boot at least manages to do it without a problem
+
+
+[8/3/2022 12:04 AM] ninuje
+`arch/arm/mach-mx6/mx6sl_ntx_io.c` & `drivers/misc/ntx_misc_light.c`
+
+
+[8/3/2022 12:06 AM] tux_linux
+ntx_io is probably a lost cause
+
+
+[8/3/2022 12:14 AM] ninuje
+it's where some of the led backend lives on older kernels, though
+
+
+[8/3/2022 12:14 AM] ninuje
+which doesn't excuse the mess ;p
+
+
+[8/3/2022 12:14 AM] tux_linux
+it works on the Aura SE fine
+
+
+[8/3/2022 12:14 AM] tux_linux
+which is just a few months older than the Glo HD
+
+
+[8/3/2022 12:16 AM] ninuje
+Never looked at an Aura SE kernel, and apparently I don't even have it on hand, so I can't even diff it ;p
+
+
+[8/3/2022 12:17 AM] tux_linux
+you can go look in the inkbox kernel repo
+
+
+[8/3/2022 12:17 AM] tux_linux
+https://github.com/Kobo-InkBox/kernel/tree/master/kernel/linux-3.0.35-n236
+
+
+[8/24/2022 10:30 PM] andi15701
+hmm, did you try tolino shine2hd kernel and backlight?
+
+
+[8/24/2022 10:30 PM] tux_linux
+No, you're talking about the mainline one?
+
+
+[8/24/2022 10:31 PM] andi15701
+yes
+
+
+[8/24/2022 10:31 PM] andi15701
+I heard that people have just booted the Tolino Shine2HD stuff from pmOS on the Glo HD
+
+
+[8/24/2022 10:31 PM] andi15701
+i will check the comparision
+
+
+[8/24/2022 10:31 PM] tux_linux
+cool
+
+
+[8/24/2022 10:31 PM] tux_linux
+basically it just can't light up still
+
+
+[8/24/2022 10:39 PM] andi15701
+I think I will have more time for ebookreader stuff again, after vacation I was just happy to get things forwards with proper waveform extraction early at boot in pmOS.
+
+
+[8/24/2022 10:39 PM] andi15701
+do you mean the backlight or some led?
+
+
+[8/24/2022 10:40 PM] andi15701
+btw: how many LEDs/buttons does the Kobo Glo HD have?
+
+
+[8/24/2022 11:21 PM] tux_linux
+one led and one button
+
+
+[8/24/2022 11:21 PM] tux_linux
+the main led
+
+
+[8/24/2022 11:21 PM] tux_linux
+(the only led)
+
+
+[8/24/2022 11:22 PM] andi15701
+I guess, then I just have to disable stuff in the Tolino Shine2 HD kernel/uboot
+
+{Reactions}
+👍 
+
+==============================================================
+Exported 170 message(s)
+==============================================================

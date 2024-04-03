@@ -1,0 +1,605 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Aura HD (N204B)
+==============================================================
+
+[2/12/2022 7:41 PM] tux_linux
+Porting thread for Kobo Aura HD
+
+
+[2/12/2022 7:46 PM] tux_linux
+@dr. maybe you could start by downloading the kernel sources
+
+
+[2/12/2022 7:46 PM] dr7271
+Sure
+
+
+[2/12/2022 7:46 PM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aurahd
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aurahd
+Kobo-Reader/hw/imx507-aurahd at master · kobolabs/Kobo-Reader
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/Kobo-Reader-2C3E7
+
+
+[2/12/2022 7:46 PM] tux_linux
+Download bootloader and kernel
+
+
+[2/12/2022 7:46 PM] dr7271
+I have
+
+
+[2/12/2022 7:46 PM] dr7271
+already
+
+
+[2/12/2022 7:47 PM] dr7271
+I am also unable to stop uboot autobooting
+
+
+[2/12/2022 7:47 PM] tux_linux
+that is solvable
+
+
+[2/12/2022 7:47 PM] dr7271
+thanks
+
+
+[2/12/2022 7:47 PM] tux_linux
+can you input on the console at least?
+
+
+[2/12/2022 7:47 PM] dr7271
+I cannot it skips that part
+
+
+[2/12/2022 7:48 PM] dr7271
+my hardware is fine, the usb to uart converter
+
+
+[2/12/2022 7:48 PM] dr7271
+hit any key to stop autoboot doesn't work
+
+
+[2/12/2022 7:48 PM] dr7271
+I am continuously pressing the keys
+
+
+[2/12/2022 7:49 PM] tux_linux
+Ok so `bootdelay` is probably set to `0`
+
+
+[2/12/2022 7:49 PM] dr7271
+yeah
+
+
+[2/12/2022 7:49 PM] dr7271
+I think so
+
+
+[2/12/2022 7:49 PM] tux_linux
+`dd if=/dev/zero of=/dev/mmcblk0 bs=512 seek=2048 count=1`
+
+
+[2/12/2022 7:49 PM] tux_linux
+Might help to get a prompt
+
+
+[2/12/2022 7:49 PM] tux_linux
+It will overwrite the uImage with zeros
+
+
+[2/12/2022 7:49 PM] dr7271
+where to past this?
+
+
+[2/12/2022 7:49 PM] tux_linux
+So U-Boot will complain and get you to a prompt
+
+
+[2/12/2022 7:49 PM] dr7271
+thanks
+
+
+[2/12/2022 7:50 PM] tux_linux
+In a Linux install
+
+
+[2/12/2022 7:50 PM] dr7271
+which one?
+
+
+[2/12/2022 7:50 PM] tux_linux
+mmcblk0 is the SD card's device node
+
+
+[2/12/2022 7:50 PM] tux_linux
+on PC/laptop/etc
+
+
+[2/12/2022 7:50 PM] dr7271
+can you please guide me ?
+
+
+[2/12/2022 7:50 PM] tux_linux
+install ubuntu
+
+
+[2/12/2022 7:50 PM] dr7271
+shall i paste it in sd card?
+
+
+[2/12/2022 7:50 PM] dr7271
+okay I did
+
+
+[2/12/2022 7:50 PM] tux_linux
+Well you run that command in a shell
+
+
+[2/12/2022 7:51 PM] dr7271
+ohh okayy
+
+
+[2/12/2022 7:51 PM] dr7271
+I'll do that
+
+
+[2/12/2022 7:51 PM] tux_linux
+dd will write 512 zeros at sector 2048 of the sd card
+
+
+[2/12/2022 7:51 PM] tux_linux
+thus overwriting start of uImage
+
+
+[2/12/2022 7:51 PM] tux_linux
+(kernel)
+
+
+[2/12/2022 7:52 PM] dr7271
+Ohh okayyyy
+
+
+[2/12/2022 7:52 PM] dr7271
+So i connect the sd card and do it
+
+
+[2/12/2022 7:52 PM] tux_linux
+yes
+
+
+[2/12/2022 7:52 PM] dr7271
+Got it man
+
+
+[2/12/2022 7:53 PM] dr7271
+Dd is basically a program
+
+
+[2/12/2022 7:53 PM] tux_linux
+yes
+
+
+[2/12/2022 7:53 PM] dr7271
+Got itt
+
+
+[2/12/2022 8:07 PM] dr7271
+no the delay is still the same
+
+
+[2/12/2022 8:08 PM] tux_linux
+What's the boot log?
+
+
+[2/12/2022 8:09 PM] dr7271
+MMC read: dev # 2, block # 14336, count 2229 partition # 0 ... 
+2229 blocks read: OK
+Kernel RAM visiable size=510M->510M
+init TPS65185 power ...
+Relock PLL1 to 1GHz ...
+mx50 pll1: 1000MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 200000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Hit any key to stop autoboot:  0 
+
+MMC read: dev # 2, block # 2047, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 2, block # 2048, count 8192 partition # 0 ... 
+8192 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   r6427_#1027 Mar 28 15:02:51
+   Created:      2013-03-28   7:02:55 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1934696 Bytes =  1.8 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+
+
+[2/12/2022 8:15 PM] tux_linux
+Then do `dd if=/dev/zero of=/dev/mmcblk0 bs=512 seek=2048 count=8192`
+
+
+[2/12/2022 8:15 PM] dr7271
+okay wait
+
+
+[2/12/2022 8:31 PM] dr7271
+esdhc4 clock  : 80000000Hz
+Hit any key to stop autoboot:  0 
+
+MMC read: dev # 2, block # 2047, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 2, block # 2048, count 8192 partition # 0 ... 
+8192 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   r6427_#1027 Mar 28 15:02:51
+   Created:      2013-03-28   7:02:55 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1934696 Bytes =  1.8 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+
+
+[2/12/2022 8:31 PM] dr7271
+the same
+
+
+[2/12/2022 8:32 PM] tux_linux
+Are you really writing to the right device node?
+
+
+[2/12/2022 8:32 PM] tux_linux
+Does your SD card really show up as mmcblk0?
+
+
+[2/12/2022 8:32 PM] dr7271
+umm haven't checked it
+
+
+[2/12/2022 8:32 PM] dr7271
+how to check it ?
+
+
+[2/12/2022 8:33 PM] tux_linux
+`sudo fdisk -l`
+
+
+[2/12/2022 8:33 PM] dr7271
+thanks
+
+
+[2/12/2022 8:35 PM] dr7271
+Disk /dev/sdc: 3.69 GiB, 3965190144 bytes, 7744512 sectors
+Disk model: Storage Device  
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00000000
+
+
+[2/12/2022 8:35 PM] dr7271
+is it /dev/sdc?
+
+
+[2/12/2022 8:36 PM] tux_linux
+it seems to be
+
+
+[2/12/2022 8:36 PM] dr7271
+thanks
+
+
+[2/12/2022 8:36 PM] tux_linux
+your sd card is 4gb?
+
+
+[2/12/2022 8:36 PM] dr7271
+yeah it is
+
+
+[2/12/2022 8:36 PM] tux_linux
+then it should be that
+
+
+[2/12/2022 8:37 PM] dr7271
+thanks
+
+
+[2/12/2022 8:37 PM] dr7271
+got into it man
+
+
+[2/12/2022 8:37 PM] dr7271
+it worked
+
+
+[2/12/2022 8:37 PM] tux_linux
+nice
+
+
+[2/12/2022 8:37 PM] dr7271
+MMC read: dev # 2, block # 2048, count 8192 partition # 0 ... 
+8192 blocks read: OK
+Wrong Image Format for bootm command
+ERROR: can't get kernel image!
+eBR-1A #
+
+
+[2/12/2022 8:38 PM] dr7271
+is it the right one?
+
+
+[2/12/2022 8:38 PM] tux_linux
+You can use triple backticks for code blocks
+
+
+[2/12/2022 8:38 PM] tux_linux
+yes
+
+
+[2/12/2022 8:38 PM] tux_linux
+U-Boot prompt
+
+
+[2/12/2022 8:38 PM] dr7271
+umm how to do that?
+
+
+[2/12/2022 8:38 PM] tux_linux
+\`\`\`Hello\`\`\`
+
+
+[2/12/2022 8:38 PM] tux_linux
+```Hello```
+
+
+[2/12/2022 8:38 PM] dr7271
+okayy got it
+
+
+[2/12/2022 8:39 PM] dr7271
+thanks man
+
+{Reactions}
+👍 
+
+[2/12/2022 8:39 PM] dr7271
+now what shall I do
+
+
+[2/12/2022 8:39 PM] tux_linux
+You can try recompiling a kernel for your device to see if the device can boot
+
+
+[2/12/2022 8:39 PM] dr7271
+okayy
+
+
+[2/12/2022 8:39 PM] dr7271
+and how do I do it, I have already downloaded it
+
+
+[2/12/2022 8:40 PM] dr7271
+just make it?
+
+
+[2/12/2022 8:40 PM] tux_linux
+grab a toolchain
+
+
+[2/12/2022 8:40 PM] dr7271
+what's that?
+
+
+[2/12/2022 8:40 PM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/blob/master/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux.tar.bz2?raw=true
+
+
+[2/12/2022 8:40 PM] dr7271
+okayy
+
+
+[2/12/2022 8:40 PM] dr7271
+done
+
+
+[2/12/2022 8:41 PM] tux_linux
+`export PATH="${PATH}:/toolchain/dir/bin"`
+
+
+[2/12/2022 8:41 PM] dr7271
+okay
+
+
+[2/12/2022 8:41 PM] dr7271
+done
+
+
+[2/12/2022 8:41 PM] tux_linux
+`make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage -j16`
+
+
+[2/12/2022 8:42 PM] tux_linux
+Can you start `arm-linux-gnueabihf-gcc --version`?
+
+
+[2/12/2022 8:43 PM] dr7271
+no I'll need to install it
+
+
+[2/12/2022 8:43 PM] tux_linux
+That's what you just downloaded
+
+
+[2/12/2022 8:45 PM] dr7271
+started
+
+
+[2/12/2022 8:45 PM] tux_linux
+output?
+
+
+[2/12/2022 8:45 PM] dr7271
+arm-linux-gnueabihf-gcc --version
+arm-linux-gnueabihf-gcc (Ubuntu 10.3.0-1ubuntu1) 10.3.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+
+
+[2/12/2022 8:45 PM] tux_linux
+Not the right one
+
+
+[2/12/2022 8:45 PM] dr7271
+is it normal that device shuts down after few seconds in uboot
+
+
+[2/12/2022 8:45 PM] dr7271
+okay
+
+
+[2/12/2022 8:45 PM] tux_linux
+Did you do that?
+
+
+[2/12/2022 8:46 PM] dr7271
+yeah i did
+
+
+[2/12/2022 8:46 PM] tux_linux
+Did you change `/toolchain/dir/bin` to the dir where you actually unpacked the toolchain?
+
+
+[2/12/2022 8:47 PM] dr7271
+umm I didn't
+
+
+[2/12/2022 8:47 PM] dr7271
+Listen it's 1:30 pm here gotta sleep
+
+{Reactions}
+👍 
+
+[2/12/2022 8:47 PM] dr7271
+Thanks for your help man
+
+{Reactions}
+👍 
+
+[2/12/2022 8:47 PM] dr7271
+let me get my basics clear tomorrow
+
+{Reactions}
+👍 
+
+[2/13/2022 11:23 AM] dr7271
+Awesome!
+To you both, you can also try flashing this kernel after uncompressing the tarball to the MMC by running:
+dd if=uImage of=/dev/mmcblk0 bs=512 seek=2048
+If the power light gets flashing, it's a good sign, even better if it can boot. But we'll still need a serial console for sure to set up the InkBox kernel.
+uImage.tar.gz
+
+
+[2/13/2022 11:23 AM] dr7271
+This worked man
+
+
+[2/13/2022 11:24 AM] dr7271
+but still not booting up this was your github comment on issue
+
+
+[2/13/2022 11:24 AM] dr7271
+https://github.com/Kobo-InkBox/inkbox/issues/2 this issue
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/issues/2
+Aura HD? · Issue #2 · Kobo-InkBox/inkbox
+Hello, Sorry if this is obvious, but any chance for the Aura HD? Love the software, it looks really good. I think there are a lot of these Kobos that could be repurposed with what you&#39;ve wr...
+/mnt/data/projects/git/conversations/media/2-7ECE8
+
+
+[2/13/2022 11:26 AM] dr7271
+MMC read: dev # 2, block # 2048, count 8192 partition # 0 ... 
+8192 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   r?_#2 Nov 26 20:04:11
+   Created:      2021-11-27   1:04:14 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1909900 Bytes =  1.8 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+
+
+[2/13/2022 4:46 PM] dr7271
+can you send me a complied linux for it?
+
+
+[6/28/2023 5:17 AM] voltaireodactyl
+Hey sorry to revive an old thread, but I just started trying to figure out how to get inkbox on my N204B Aura HD -- looks like this is the farthest anyone has gotten. I'm planning to follow these steps on my own linux machine/kobo -- just wanted to check if by any chance this was solved elsewhere? Happy to keep pressing forward if needed, but would also love it to already be working 🙂
+
+
+[6/28/2023 5:22 AM] tux_linux
+Welcome. Do you have some Linux cli experience?
+
+
+[6/28/2023 5:23 AM] tux_linux
+@Szybet can guide you probably in 3-4h if I go to sleep
+
+
+[6/28/2023 6:11 AM] voltaireodactyl
+Hey thanks for responding -- I do have linux cli experience and I believe I have everything mentioned in the thread that I'm gonna need. However, this evening got busier than I expected so my plan is to come back and take a crack at it in the morning, probably 12-14 hours from now when I can actually focus. Very motivated to make this happen, I hate how my Aura has languished despite the excellent hardware.
+
+
+[6/28/2023 6:29 AM] szybet
+Cool, we wait then
+
+
+[7/5/2023 1:48 PM] szybet
+@voltaireodactyl and?
+
+
+==============================================================
+Exported 121 message(s)
+==============================================================

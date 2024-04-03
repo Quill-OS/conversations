@@ -1,0 +1,164 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / dev / rewriting ini
+==============================================================
+
+[2/14/2024 7:26 PM] szybet
+hey.
+
+
+[2/14/2024 7:28 PM] szybet
+```
+    MOUNT("proc", "/proc", "proc", MS_NOSUID, "");
+    MOUNT("sysfs", "/sys", "sysfs", 0, "");
+    // Prevent unpriviledged users to read and write to sysfs by default
+    REAP("/bin/sh", "-c", "find /sys -type f -print0 | xargs -0 chmod 700");
+    sleep(1);
+    MOUNT("devtmpfs", "/dev", "devtmpfs", 0, "");
+    MOUNT("tmpfs", "/tmp", "tmpfs", 0, "size=16M");
+```
+why is this even needed in init
+
+
+[2/14/2024 7:29 PM] szybet
+```
+    // Setting loopack interface UP
+    set_if_up("lo");
+```
+why is this needed
+
+
+[2/14/2024 7:31 PM] szybet
+```
+    // P1
+    REAP("/usr/bin/fsck.ext4", "-y", "/dev/mmcblk0p1");
+    // P2
+    if(MATCH(device, "n873")) {
+        REAP("/usr/bin/fsck.ext4", "-y", "/dev/mmcblk0p5");
+    }
+    else {
+        REAP("/usr/bin/fsck.ext4", "-y", "/dev/mmcblk0p2");
+    }
+    // P3
+    REAP("/usr/bin/fsck.ext4", "-y", "/dev/mmcblk0p3");
+    // P4
+    REAP("/usr/bin/fsck.ext4", "-y", "/dev/mmcblk0p4");
+```
+I think you can detect if that's needed
+
+
+[2/14/2024 7:40 PM] szybet
+root.sqsh doesnt make sense
+
+
+[2/14/2024 8:00 PM] tux_linux
+why do you want to rewrite init
+
+
+[2/14/2024 8:01 PM] szybet
+i want to rewrite many things
+
+
+[2/14/2024 8:01 PM] szybet
+this is the first one
+
+
+[2/14/2024 8:01 PM] tux_linux
+but its fine in c
+
+
+[2/14/2024 8:01 PM] szybet
+make boot faster and better
+
+
+[2/14/2024 8:01 PM] szybet
+no it's not
+
+
+[2/14/2024 8:01 PM] szybet
+it's not maintanable
+
+
+[2/14/2024 8:02 PM] tux_linux
+why
+
+
+[2/14/2024 8:02 PM] tux_linux
+if you write it in rust i wont be able to understand anything
+
+
+[2/14/2024 8:02 PM] tux_linux
+because nothing else does it
+
+
+[2/14/2024 8:03 PM] tux_linux
+because nothing else does it
+
+
+[2/14/2024 8:03 PM] tux_linux
+because nothing else does it
+
+
+[2/14/2024 8:03 PM] szybet
+nope, you were able to maintain epubtool and others
+
+
+[2/14/2024 8:03 PM] tux_linux
+it was a 30 line program
+
+
+[2/14/2024 8:03 PM] tux_linux
+i was craving stackoverflow for my life
+
+
+[2/14/2024 8:03 PM] tux_linux
+i was basically doing regex with the code
+
+
+[2/14/2024 8:04 PM] szybet
+make it secure memory safe and faster
+
+
+[2/14/2024 8:05 PM] tux_linux
+i think niluje has made it memory safe enough
+
+
+[2/14/2024 8:05 PM] szybet
+Still
+
+
+[2/14/2024 8:06 PM] szybet
+it's the init rootfs, it doesn't need those? maybe sysfs for fbink
+
+
+[2/14/2024 8:06 PM] szybet
+and dev
+
+
+[2/14/2024 8:06 PM] szybet
+but proc, not really
+
+
+[2/14/2024 8:07 PM] szybet
+why must it be up?
+
+
+[2/14/2024 8:07 PM] szybet
+that was not my question
+
+
+[2/14/2024 9:17 PM] tux_linux
+You can't ssh to local user from iterm if it's not up
+
+
+[2/14/2024 9:17 PM] szybet
+then it should be up only on root kernel
+
+
+[2/14/2024 9:17 PM] szybet
+well anyway, okay
+
+
+==============================================================
+Exported 32 message(s)
+==============================================================

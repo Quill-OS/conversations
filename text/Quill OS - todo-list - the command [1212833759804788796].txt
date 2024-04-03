@@ -1,0 +1,25 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / todo-list / the command
+==============================================================
+
+[3/1/2024 4:19 PM] marwit
+
+
+
+[3/1/2024 4:19 PM] marwit
+wouldn't reverse lex sort be enough?
+`$ LC_ALL=C findmnt -l -o TARGET | grep .apps | sort -r | xargs unmount {}`
+
+
+[3/1/2024 5:02 PM] szybet
+i had issues with it
+
+
+[3/1/2024 5:02 PM] szybet
+the issue is there are so many that unmount is called so many times instead of just the ioctl, probably
+
+
+==============================================================
+Exported 4 message(s)
+==============================================================

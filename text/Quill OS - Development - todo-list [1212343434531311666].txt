@@ -1,0 +1,37 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / todo-list
+==============================================================
+
+[2/29/2024 7:48 PM] szybet
+the command
+```
+findmnt -l -o TARGET | grep .apps | awk '{ print length, $0 }' | sort -r | sort -n | tac | cut -d " " -f2- | xargs umount {} 2>/dev/null
+```
+could be replaced with a simple rust program and such be faster
+
+
+[3/1/2024 4:19 PM] marwit
+Started a thread.
+
+
+[3/6/2024 1:41 PM] trololol_20401
+rust sucks
+
+
+[3/6/2024 1:42 PM] trololol_20401
+"a simple rust program" is like "a simple wasm program"
+
+
+[3/6/2024 2:22 PM] szybet
+Your nickname is very precise🥴
+
+
+[3/6/2024 2:23 PM] szybet
+Well what can i say
+talk is cheap, send patches😉
+
+
+==============================================================
+Exported 6 message(s)
+==============================================================

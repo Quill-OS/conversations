@@ -1,0 +1,3658 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kindle Touch (KT)
+==============================================================
+
+[5/4/2022 11:30 PM] tux_linux
+Arrived today, we'll see how this goes...
+
+
+[5/4/2022 11:30 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220504_212949317-7CFE7.jpg
+
+{Reactions}
+👀 👍 
+
+[5/5/2022 3:10 AM] tux_linux
+This one has a built-in audio jack, I think I will support it in InkBox OS
+
+
+[5/5/2022 3:12 AM] tux_linux
+there's even (bad) speakers
+i'm impressed
+and this thing is from 2011
+
+
+[5/5/2022 11:47 PM] nonasuomy
+What kernel does it run ?
+
+
+[5/5/2022 11:48 PM] tux_linux
+2.6.31
+
+
+[5/6/2022 4:35 AM] tux_linux
+Boot log (at last, setting up the serial console was a PITA)
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-5CDBA.txt
+
+
+[5/6/2022 4:37 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220506_023647368-8581B.jpg
+
+
+[5/6/2022 4:37 AM] tux_linux
+DIY level shifter 3.3V->1.8V
+
+
+[5/6/2022 4:37 AM] tux_linux
+https://www.mobileread.com/forums/showpost.php?p=1897643&postcount=1
+
+
+[5/6/2022 4:39 AM] tux_linux
+Standard U-Boot
+```
+U-Boot 2009.08-lab126 (Apr 04 2012 - 20:06:50)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 50000000Hz
+ipg per clock : 50000000Hz
+uart clock    : 24000000Hz
+ahb clock     : 100000000Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 800000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+MMC:  FSL_ESDHC: 0, FSL_ESDHC: 1
+Board: Whitney WFO
+Boot Reason: [POR]
+Boot Device: MMC
+Board Id: 00614011214201A0
+S/N: B01114082142063E
+DRAM:  256 MB
+Using default environment
+
+In:    serial
+Out:   logbuff
+Err:   logbuff
+Quick Memory Test 0x70000000, 0xfffe000
+POST done in 13 ms
+Hit any key to stop autoboot:  0 
+uboot > help
+?       - alias for 'help'
+bist    - start Built In Self Test
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+go      - start application at address 'addr'
+help    - print online help
+idme    - idme    - Set nv ram variables
+
+
+log     - manipulate logbuffer
+printenv- print environment variables
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+setenv  - set environment variables
+version - print monitor version
+uboot >
+```
+
+
+[5/6/2022 4:40 AM] tux_linux
+Built-In Self-Test (bist) U-Boot
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-7E542.txt
+
+
+[5/6/2022 4:41 AM] tux_linux
+Standard U-Boot env
+```
+uboot > printenv
+bootdelay=1
+baudrate=115200
+loadaddr=0x70800000
+bootcmd=bootm 0x41000
+failbootcmd=panic
+loglevel=5
+bootargs_diags=setenv bootargs consoleblank=0 rootwait ro ip=off root=/dev/mmcblk0p2 quiet eink=fslepdc
+bootcmd_diags=run bootargs_diags ; bootm 0xE41000
+bootcmd_factory=bist halt
+bootcmd_fastboot=bist fastboot
+stdin=serial
+stdout=logbuff
+stderr=logbuff
+post_hotkeys=0
+bootargs=
+
+Environment size: 378/1020 bytes
+Environment size: 378/1020 bytes
+uboot >
+```
+
+
+[5/6/2022 4:41 AM] tux_linux
+BIST U-Boot env
+```
+bist > help
+?       - alias for 'help'
+autoscr - DEPRECATED - use "source" command instead
+base    - print or set address offset
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+check   - perform MMC CRC32 check
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+diag    - perform board diagnostics
+echo    - echo args to console
+fail    - fail blink fail pattern on LED
+fastboot- Fastboot
+fstor   - File Storage
+go      - start application at address 'addr'
+halt    - halt board
+help    - print online help
+i2c     - I2C sub-system
+idme    - idme    - Set nv ram variables
+
+iminfo  - print header information for application image
+itest   - return true/false on integer compare
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+loopw   - infinite write loop on address range
+md      - memory display
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - mmcinfo <dev num>-- display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+ocotp   - OCOTP sub system
+panic   - panic halt
+pass    - pass blink pass pattern on LED
+pmic    - pmic    - PMIC utility commands
+
+printenv- print environment variables
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+setenv  - set environment variables
+sleep   - delay execution for some time
+source  - run script from memory
+sspi    - SPI utility commands
+version - print monitor version
+bist > 
+```
+
+
+[5/6/2022 7:35 AM] tux_linux
+Yay, kernel boots... when compiled with a 13 years old toolchain!
+```
+Linux version 2.6.31-rt11-lab126 (build@inkbox) (gcc version 4.4.1 (Sourcery G++ Lite 2009q3-67) ) #1 Fri May 6 01:32:37 EDT 2022
+```
+
+
+[5/6/2022 7:36 AM] nonasuomy
+Do you know the meaning of lab126?
+
+
+[5/6/2022 7:38 AM] nonasuomy
+AmaZon's name means they do everything from A to Z. A = 1st letter of the alphabet 26 = Z last letter of the alphabet ie LabAtoZ
+
+
+[5/6/2022 7:41 AM] nonasuomy
+Some useless information... 😄
+
+
+[5/6/2022 7:48 AM] tux_linux
+I vaguely recall that, yeah... 😂
+
+
+[5/6/2022 7:55 PM] nonasuomy
+Can you paste the compiling make line you used here?
+
+
+[5/6/2022 10:38 PM] tux_linux
+Well, the same as you
+
+
+[5/6/2022 10:38 PM] tux_linux
+With a different toolchain
+
+
+[5/6/2022 11:58 PM] tux_linux
+Whoa, incredible
+Test InkBox kernel booted first try
+
+
+[5/6/2022 11:58 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C9715.txt
+
+
+[5/7/2022 12:26 AM] nonasuomy
+That's interesting we never see that 3rd line
+```
+MXC WatchDog Driver 2.0
+MXC Watchdog # 0 Timer: initial timeout 127 sec
+MXC Watchdog: Started 10000 millisecond watchdog refresh
+```
+
+
+[5/7/2022 3:35 AM] tux_linux
+The timeout is really long in the Kindle
+
+
+[5/7/2022 3:43 AM] tux_linux
+But maybe we can sniff the Kindle sources and get something from there
+
+
+[5/7/2022 3:49 AM] tux_linux
+https://kindle.s3.amazonaws.com/Kindle_src_5.3.7.3_2715280002.tar.gz
+Here's the GPL release tarball
+
+
+[5/7/2022 4:16 AM] tux_linux
+the watchdog is actually useful for one thing: printing the last kernel ring buffer before reboot
+
+
+[5/7/2022 4:16 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-01F19.txt
+
+
+[5/7/2022 5:03 AM] tux_linux
+I don't know if I should have done this, but the glibc chroots in the Kindle don't work because of the slightly older 2.6.31 kernel (`FATAL: Kernel too old` error)
+So I changed the version number in `Makefile` to `2.6.35` and poof, magic! it works
+
+
+[5/7/2022 5:03 AM] tux_linux
+I kinda feel guilty but anyway
+
+{Reactions}
+😅 
+
+[5/7/2022 5:34 AM] tux_linux
+@andi , Amazon actually included a complete waveform in the kernel source. surprising
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-02AE3.txt
+
+
+[5/7/2022 6:08 AM] tux_linux
+😃😃😃😃
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220507_040816933-FCD95.jpg
+
+{Reactions}
+🥳 
+
+[5/7/2022 6:10 AM] tux_linux
+@NiLuJe , do you know why the logo is printed in a distorted way? Maybe because it's using the default waveform from `eink_fb_waveform` module? `fbink -s -f` didn't help
+
+
+[5/7/2022 6:11 AM] tux_linux
+Sample FBInk log:
+```
+/ # /opt/fbink/fbink Hello there
+[FBInk] Detected a Kindle Touch (0x11 => Whitney on Yoshi)
+[FBInk] Enabled Kindle with Pearl screen quirks
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 167 dpi
+[FBInk] Variable fb info: 600x800, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 2179072 bytes & line length: 608 bytes
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 37 cols, Page size: 50 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Printing string 'Hello' @ column 0 + 0px, row 0 + 0px (overlay: N, no BG: N, no FG: N, inverted: N, flashing: N, centered: N, halfway: N, left padded: N, right padded: N, clear screen: N, waveform: AUTO, dithering: PASSTHROUGH, nightmode: N, skip refresh: N, font: 0, font scaling: x0)
+Next line should start @ row 1
+Printing string 'there' @ column 0 + 0px, row 1 + 0px (overlay: N, no BG: N, no FG: N, inverted: N, flashing: N, centered: N, halfway: N, left padded: N, right padded: N, clear screen: N, waveform: AUTO, dithering: PASSTHROUGH, nightmode: N, skip refresh: N, font: 0, font scaling: x0)
+Next line should start @ row 2
+```
+
+
+[5/7/2022 7:09 AM] tux_linux
+Those lines from modprobe might be interesting:
+```
+~ # modprobe mxc_epdc_fb
+mxc_epdc_fb: Unknown symbol einkwf_panel_flash_present
+mxc_epdc_fb: Unknown symbol einkwf_panel_set_update_modes
+mxc_epdc_fb: Unknown symbol einkwf_panel_get_waveform_mode
+mxc_epdc_fb: Unknown symbol einkwf_panel_get_waveform
+mxc_epdc_fb: Unknown symbol einkwf_panel_get_vcom
+mxc_epdc_fb: Unknown symbol einkwf_panel_waveform_free
+mxc_epdc_fb: Unknown symbol einkwf_panel_get_waveform_version_string
+Using 25C-only waveform!
+mxc_epdc_fb_init_hw: 03_00_0000_3c_0b0000_00_01_000001bc_00_01.wbf
+```
+
+
+[5/7/2022 1:24 PM] ninuje
+Distorted how?
+
+
+[5/7/2022 3:25 PM] tux_linux
+Look at the picture
+
+
+[5/7/2022 3:25 PM] tux_linux
+There
+
+
+[5/7/2022 3:25 PM] tux_linux
+If you zoom in, you can see it's not smooth
+
+
+[5/7/2022 4:01 PM] nonasuomy
+Why is it upside down as well?
+
+
+[5/7/2022 5:03 PM] tux_linux
+Another example
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220507_150238692.MP-91629.jpg
+
+
+[5/7/2022 5:58 PM] ninuje
+Unclear with b&w images, but if the wf indexes are different (or the wf for the wrong vcom), quite likely
+
+
+[5/7/2022 7:01 PM] szybet
+wow!
+
+
+[5/7/2022 7:04 PM] szybet
+YES! support audio
+
+
+[5/7/2022 7:04 PM] szybet
+include some drivers for usb sound cards
+
+
+[5/7/2022 7:04 PM] szybet
+and it will be perfect
+
+
+[5/7/2022 10:01 PM] nonasuomy
+Can you time how long it takes from power on till the busybox prompt? Is it close to 30 seconds
+
+
+[5/7/2022 10:11 PM] tux_linux
+Well, I test my kernel with kexec, it's about 20secs
+
+
+[5/7/2022 10:12 PM] tux_linux
+I meant, support audio on this device
+
+
+[5/7/2022 10:12 PM] tux_linux
+Since it already has a sound card
+
+
+[5/7/2022 10:12 PM] nonasuomy
+would that include u-boot time though?
+
+
+[5/7/2022 10:12 PM] tux_linux
+No
+
+
+[5/7/2022 10:13 PM] tux_linux
+U-Boot time is maybe 8s
+
+
+[5/7/2022 10:13 PM] nonasuomy
+so what you are saying is yes about 30 seconds.
+
+
+[5/7/2022 10:14 PM] nonasuomy
+I think if we find the disable the on the wm8321 we will see that busybox prompt.
+
+
+[5/7/2022 10:15 PM] szybet
+i mean in inkbox, adding a force to enable audio on this device button is only a question of time ;p
+
+
+[5/8/2022 4:45 AM] tux_linux
+can someone please explain this to me? what is this nonsense
+```
+[   43.182268] ar6003 Driver returning from ar6000_init_module
+[  103.169781] Failed to get /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration
+~ # ls /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration -l
+lrwxrwxrwx    1 1000     1000            81 May  8  2022 /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration -> /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/AR6103_CCK16dbm_QCA_08032011.bin
+```
+
+
+[5/8/2022 5:03 AM] nonasuomy
+In the Sony source there is a calibration sdk for wifi with the source code maybe has something to do with that
+
+
+[5/8/2022 5:04 AM] tux_linux
+But like, the @#$! file is there, why on earth doesn't it want to load it? I even tried to copy the symlink target in place of the symlink, no luck there either
+
+
+[5/8/2022 5:05 AM] nonasuomy
+https://oss.sony.net/Products/Linux/Audio/PRS-T1JP_20140702.html
+
+{Embed}
+https://oss.sony.net/Products/Linux/Audio/PRS-T1JP_20140702.html
+Sony Global - Source Code Distribution Service
+Source code download
+
+
+[5/8/2022 5:05 AM] nonasuomy
+First package on the list there
+
+
+[5/8/2022 5:06 AM] nonasuomy
+Look in prstux stuff as well he talks about a binary for it
+
+
+[5/8/2022 5:07 AM] nonasuomy
+https://gitlab.com/phreakuencies/prstux/-/tree/master/rootfs/bin/wmiconfig
+
+{Embed}
+https://gitlab.com/phreakuencies/prstux/-/tree/master/rootfs/bin/wmiconfig
+rootfs/bin/wmiconfig · master · Matias N. / prstux · GitLab
+PRS-TUX: Linux system for Sony PRS-T* ebook readers
+/mnt/data/projects/git/conversations/media/logo-DE17F.png
+
+
+[5/8/2022 5:08 AM] tux_linux
+interesting
+
+
+[5/8/2022 5:14 AM] tux_linux
+wmiconfig doesn't work
+
+
+[5/8/2022 5:15 AM] tux_linux
+```
+/mnt # busybox chroot . wmiconfig -i eth0 --wlan disable
+wmiconfig: eth0: No such device
+```
+It is in the Kindle original rootfs
+
+
+[5/8/2022 5:51 PM] tux_linux
+Found the fix: you need to specify the `waveform_to_use` kernel parameter with the location of a wbf file. I found mine in `/var/local/eink` (actually p3) in the stock Kindle system.
+According to our recent discussion of how the wrong waveform could harm a Kindle, I'll just tell the initrd to load the module with `[p1]/waveform/waveform.wbf` if it exists, otherwise I'll just continue with the built-in waveform from the kernel.
+
+{Reactions}
+👍 
+
+[5/9/2022 4:59 AM] tux_linux
+PSA: **Never** fiddle with idme variables (nvram variables) without knowing what could happen if something went wrong.
+I almost hardware-bricked this one trying to set a bootmode with dd and freaked out my life for 2.5hours trying to understand what happened and how to solve it. Download mode didn't work at first, no serial output at all, I was really scared.
+Finally somehow I got serial debug from U-Boot saying this:
+```
+Invalid board id!  Can't determine system type for RAM init.. bailing!
+```
+This meant that the `pcbsn` variable had been reset in the nvram and U-Boot wasn't able to initialize the DRAM. I had to insert arbitrary `idme_update_var` calls in the U-Boot source before what triggered this error and finally breathe of relief when I rebooted and saw the familiar `Hit any key to stop autoboot` prompt, meaning that the variables were successfully flashed in the NVRAM.
+Phew... that was a stressful evening
+
+{Reactions}
+😅 
+
+[5/10/2022 2:47 AM] tux_linux
+Progress on reverse-engineering `idme` binary...
+It works now, no more fail to init DRAM...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/kindle-idme-1812C.txt
+
+{Reactions}
+🥳 
+
+[5/10/2022 2:47 AM] tux_linux
+I don't mind sharing serial numbers or anything, the device is more than 10 years old so...
+
+
+[5/10/2022 3:01 AM] nonasuomy
+How did you figure it out?
+
+
+[5/10/2022 3:02 AM] tux_linux
+running `idme` to change variables
+doing a hexdump of the whole mmc and trying to find sectors numbers after that
+
+
+[5/10/2022 3:03 AM] tux_linux
+it writes to the eMMC but the variables aren't sourced from the eMMC
+they're only there so that U-Boot can, on reset, see if the "Update magic" is present and then updates variables in the NVRAM from those sectors in the eMMC
+
+
+[5/10/2022 3:04 AM] tux_linux
+also, every time you change a variable, you need to write the other ones back too or they are erased (which is what caused my (recovered) board brick yesterday)
+
+
+[5/10/2022 3:09 AM] tux_linux
+So now it can boot the Basic Diagnostics Kernel
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220508_214913176-4A54C.jpg
+
+
+[5/10/2022 3:10 AM] tux_linux
+https://inkbox.ddns.net/wiki/index.php?title=Basic_diagnostics_kernel
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=Basic_diagnostics_kernel
+Basic diagnostics kernel
+
+
+[5/10/2022 3:11 AM] tux_linux
+Actually it is possible to start it on your Touch too
+
+
+[5/10/2022 3:12 AM] the.mightydill
+:D
+
+{Reactions}
+👍 
+
+[5/10/2022 4:44 AM] tux_linux
+Wrote a little script which does all of this dd work for me: https://github.com/Kobo-InkBox/rootfs/blob/master/sbin/idme
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/master/sbin/idme
+rootfs/idme at master · Kobo-InkBox/rootfs
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-0E6B6
+
+{Reactions}
+🤩 
+
+[5/10/2022 5:36 AM] nonasuomy
+Is the Kindle Touch the only ereader with an speaker?
+
+
+[5/10/2022 5:36 AM] tux_linux
+no, a number of other ones from 2007-2015 period exist
+
+
+[5/10/2022 5:36 AM] tux_linux
+some even today iirc
+
+
+[5/12/2022 5:14 AM] tux_linux
+```
+~ # busybox chroot /overlaymount-rootfs /bin/fuse-overlayfs -d -o 'ro,lowerdir=/
+mnt/rootfs/read,upperdir=/mnt/rootfs/write,workdir=/mnt/rootfs/work' /mnt/rootfs
+/overlay
+uid=unchanged
+gid=unchanged
+upperdir=/mnt/rootfs/write
+workdir=/mnt/rootfs/work
+lowerdir=/mnt/rootfs/read
+mountpoint=/mnt/rootfs/overlay
+plugins=<none>
+fsync=enabled
+FUSE library version: 3.10.3
+unique: 1, opcode: INIT (26), nodeid: 0, insize: 56, pid: 0
+INIT: 7.12
+flags=0x0000007b
+max_readahead=0x00020000
+fuse: error: filesystem requested capabilities 0x380 that are not supported by kernel, aborting.
+   unique: 1, error: -71 (Protocol error), outsize: 16
+```
+wheee, first kernel problems
+
+
+[5/12/2022 5:15 AM] tux_linux
+will try to backport newer fuse driver
+
+
+[5/14/2022 6:21 PM] tux_linux
+Seems that using unionfs instead of fuse-overlayfs can do the same thing and it works
+
+
+[5/14/2022 6:57 PM] ninuje
+Also, no fuse, so, like, 742% less potential for weird and shitty bugs ;p
+
+
+[5/14/2022 6:58 PM] tux_linux
+No...
+unionfs-fuse ;)
+
+
+[5/14/2022 6:59 PM] tux_linux
+Anyway kernel is too old for any implementation of that
+
+
+[5/14/2022 6:59 PM] ninuje
+*wilhelm scream*
+
+
+[5/14/2022 6:59 PM] tux_linux
+Good that it has fuse at least
+
+
+[5/14/2022 6:59 PM] tux_linux
+Honestly, I don't find it that buggy
+
+
+[5/14/2022 6:59 PM] ninuje
+The native userstore is a fuse proxy on the stock system
+
+
+[5/14/2022 6:59 PM] ninuje
+So you're guaranteed fuse support in the vendor kernel
+
+
+[5/14/2022 6:59 PM] tux_linux
+Yeah, I saw that
+Why not just bind mount
+
+
+[5/14/2022 7:00 PM] ninuje
+It's an old, old, old design decision to possibly make USBMS slightly less painful
+
+
+[5/14/2022 7:00 PM] ninuje
+It made... a lot of other things *very* weird and complex in return ;p
+
+
+[5/14/2022 7:00 PM] tux_linux
+Oh
+Yep...
+
+
+[5/14/2022 7:01 PM] tux_linux
+I use fuse for mounting squashfs in InkBox OS since the built-in driver does not support xz compression
+Haven't had a bug with squashfuse at all
+
+
+[5/14/2022 7:01 PM] ninuje
+I try to avoid it unless absolutely necessary, it doesn't really have a great track record
+
+
+[5/14/2022 7:02 PM] ninuje
+(performance sucks, too)
+
+
+[5/14/2022 7:02 PM] ninuje
+But it is very practical, granted
+
+
+[5/14/2022 7:03 PM] tux_linux
+Yeah, well it was
+1. Backport the entire kernel with something usable
+2. Just use fuse
+
+
+[5/14/2022 7:03 PM] tux_linux
+Option 1 would probably have done more brain damage than expected ;p
+
+
+[5/14/2022 9:12 PM] szybet
+Im suprised that inkbox works so fast with all those squases
+
+
+[5/14/2022 9:12 PM] szybet
+But it could be faster
+
+
+[5/14/2022 9:12 PM] tux_linux
+at the expense of disk space
+
+
+[5/14/2022 9:12 PM] szybet
+¯\\_(ツ)\_/¯
+
+
+[5/14/2022 9:13 PM] szybet
+Nickel manages to do this without it
+
+
+[5/14/2022 9:13 PM] szybet
+Also SD cards are cheap
+
+
+[5/14/2022 9:13 PM] tux_linux
+yes but nickel is also way more subject to corruption
+
+
+[5/14/2022 9:13 PM] tux_linux
+unsafe/unsecure
+
+
+[5/14/2022 9:14 PM] szybet
+I know
+
+
+[5/14/2022 9:14 PM] nonasuomy
+make two builds one super secure the other blistering fast with a caution about being not secure haha
+
+
+[5/14/2022 9:14 PM] szybet
+Inkbox is fast, so i won't fight for removing squashes
+
+{Reactions}
+👍 
+
+[5/14/2022 9:14 PM] szybet
+Just saying it could be faster
+
+
+[5/14/2022 9:15 PM] tux_linux
+it's way more complicated than just doing two different builds...
+
+
+[5/14/2022 9:15 PM] tux_linux
+would need partial/complete rewrite of a huge number of scripts
+
+
+[5/14/2022 9:15 PM] szybet
+He can do this right? :D
+
+
+[5/14/2022 9:15 PM] nonasuomy
+I believe in you.
+
+
+[5/14/2022 9:16 PM] tux_linux
+One place where I didn't put SquashFS is X11 root filesystem base
+It was just too slow, so it is just a simple disk image with no compression at all
+
+
+[5/14/2022 9:16 PM] szybet
+No, we believe in you
+
+
+[5/14/2022 9:16 PM] tux_linux
+Sorry, won't do that
+
+
+[5/14/2022 9:17 PM] tux_linux
+1. Violates core InkBox security principles
+2. Will need a lot more space
+3. Will hang new features implementation for weeks
+
+
+[5/14/2022 9:17 PM] szybet
+But could't it be just be done by modyfing squashfs compression level?
+
+
+[5/14/2022 9:17 PM] tux_linux
+to some extent, yes
+
+
+[5/14/2022 9:17 PM] tux_linux
+but the difference isn't that big
+
+
+[5/14/2022 9:18 PM] tux_linux
+if you take a rootfs with gzip vs xz, maybe node will launch in 20s instead of 30
+
+
+[5/14/2022 9:18 PM] szybet
+I know, just an idea
+
+
+[5/14/2022 9:18 PM] tux_linux
+but there isn't really an impact on performance of the GUI
+
+
+[5/14/2022 9:18 PM] szybet
+So @NonaSuomy you can do this eassly
+
+{Reactions}
+😅 
+
+[5/14/2022 9:18 PM] tux_linux
+maybe zstd or lzo could be better
+
+
+[5/14/2022 9:18 PM] tux_linux
+but the squashfuse build on inkbox doesn't support those
+
+
+[5/14/2022 9:19 PM] szybet
+Kernel things?
+
+
+[5/14/2022 9:19 PM] tux_linux
+No, binary
+
+
+[5/14/2022 9:19 PM] szybet
+3. Why
+
+
+[5/14/2022 9:20 PM] tux_linux
+FWIW, a rootfs compressed with GZIP is currently 112M
+with XZ, it's 87M
+
+
+[5/14/2022 9:20 PM] tux_linux
+because... it will take time?
+
+
+[5/14/2022 9:20 PM] nonasuomy
+This Sony port says differently.
+
+
+[5/14/2022 9:20 PM] tux_linux
+Mind you, it will be 100x easier
+But still not 'easy'
+
+
+[5/14/2022 9:20 PM] szybet
+But done once it will remain
+
+
+[5/14/2022 9:21 PM] szybet
+Kerne l things are next level wizard things
+
+{Reactions}
+😂 
+
+[5/14/2022 9:21 PM] tux_linux
+This is just not what I want
+Then I will have people complain about not enough space on the rootfs partition, or not enough space for books
+
+
+[5/14/2022 9:21 PM] szybet
+And we are not wizards, we are almost all students
+
+
+[5/14/2022 9:22 PM] szybet
+But 2 options? One for faster one normal?
+
+
+[5/14/2022 9:22 PM] tux_linux
+It would also take twice the storage space on the server
+
+
+[5/14/2022 9:22 PM] tux_linux
+maybe even more
+
+
+[5/14/2022 9:23 PM] szybet
+No?
+
+
+[5/14/2022 9:23 PM] nonasuomy
+why wouldn't you just lock those zones out and just have an extra partition for larger card
+
+
+[5/14/2022 9:23 PM] tux_linux
+why no
+
+
+[5/14/2022 9:23 PM] nonasuomy
+to toss books on
+
+
+[5/14/2022 9:23 PM] tux_linux
+because of mbr limit
+
+
+[5/14/2022 9:23 PM] tux_linux
+4 parts max
+
+
+[5/14/2022 9:23 PM] tux_linux
+otherwise you have extended partitions
+
+
+[5/14/2022 9:23 PM] szybet
+Its stll the same thing only not compressed, if you compress it it will be almost the same?
+
+
+[5/14/2022 9:23 PM] nonasuomy
+why is 4 max yet this sony has 10?
+
+
+[5/14/2022 9:23 PM] tux_linux
+but that will require rewrite of almost the entire system (lots of part numbers hardcoded in scripts)
+
+
+[5/14/2022 9:23 PM] szybet
+You can do this for books storage on inkbox
+
+
+[5/14/2022 9:24 PM] tux_linux
+?
+
+
+[5/14/2022 9:24 PM] szybet
+Im talkig about squashfs 0 compression
+
+
+[5/14/2022 9:24 PM] tux_linux
+Well, you forget the two builds for each device
+
+
+[5/14/2022 9:24 PM] szybet
+Increase size of the squash
+
+
+[5/14/2022 9:24 PM] tux_linux
+plus the double updates
+
+
+[5/14/2022 9:24 PM] tux_linux
+it's not a squashfs
+
+
+[5/14/2022 9:24 PM] tux_linux
+it's just a disk image
+
+
+[5/14/2022 9:24 PM] szybet
+Yes thats tru xD
+
+
+[5/14/2022 9:24 PM] szybet
+Well then the disk image
+
+
+[5/14/2022 9:25 PM] tux_linux
+solution to your problems: rootfs via NFS
+
+
+[5/14/2022 9:26 PM] tux_linux
+that way non-hacky people won't complain about the speed of the gui or rootfs (hopefully) and people like us will find a way to launch things faster
+
+
+[5/15/2022 12:33 AM] tux_linux
+```
+ppoll([{fd=15, events=POLLIN}, {fd=9, events=POLLIN}], 2, {tv_sec=0, tv_nsec=107000000}, NULL, 8) = -1 ENOSYS (Function not implemented)
+write(2, "qt_safe_poll: Function not imple"..., 39) = 39
+```
+shit.
+
+
+[5/15/2022 12:37 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-B604F.png
+
+
+[5/15/2022 12:47 AM] tux_linux
+Strange, `ppoll` syscall seems to have been introduced in 2006
+
+
+[5/15/2022 12:48 AM] tux_linux
+Linux 2.6.31 was released mid-2009
+
+
+[5/15/2022 12:48 AM] ninuje
+musl?
+
+
+[5/15/2022 12:48 AM] ninuje
+`The ppoll() system call was added to Linux in kernel 2.6.16.  The ppoll() library call was added in glibc 2.4.`
+
+
+[5/15/2022 12:48 AM] ninuje
+It's not POSIX
+
+
+[5/15/2022 12:48 AM] tux_linux
+Why would it work on other devices and not this one?
+
+
+[5/15/2022 12:49 AM] tux_linux
+Also, the chroot is actually glibc
+
+
+[5/15/2022 12:49 AM] ninuje
+~~Other platforms not build against a TC that claims to support it while this one does?~~
+
+
+[5/15/2022 12:49 AM] ninuje
+Other platforms built against a TC that does NOT claim to support ppoll while this one does
+
+
+[5/15/2022 12:50 AM] ninuje
+(which would make Qt forego ppoll support)
+
+
+[5/15/2022 12:50 AM] tux_linux
+Other devices have a 2.6.35.3 kernel
+The Kindle Touch uses 2.6.31
+Everything else is the same
+I can only think of that
+
+
+[5/15/2022 12:51 AM] ninuje
+I wouldn't think there'd be asm involved, which is the only thing I can think of that would explain the manpage "lying" (as in, it tends to quote the release date of kernel features on *x86*)
+
+
+[5/15/2022 12:51 AM] tux_linux
+hmm
+
+
+[5/15/2022 12:52 AM] tux_linux
+let me regrep on a tree that supports it (Touch B, 2.6.35.3) and the Kindle tree
+
+
+[5/15/2022 12:52 AM] ninuje
+Which FW source dumps are you using?
+
+
+[5/15/2022 12:52 AM] tux_linux
+Latest available
+
+
+[5/15/2022 12:52 AM] tux_linux
+5.3.7.3
+
+
+[5/15/2022 12:53 AM] tux_linux
+The guy from fread.ink did port a newer 2.6.35.3 kernel but although it compiles fine, it does not boot at all
+
+
+[5/15/2022 12:53 AM] tux_linux
+In accordance with the readme, sadly...
+
+
+[5/15/2022 12:53 AM] ninuje
+I don't have that one on disk, so i'll check a K4, it's essentially the same device
+
+{Reactions}
+👍 
+
+[5/15/2022 12:53 AM] tux_linux
+ok thanks
+
+
+[5/15/2022 12:53 AM] ninuje
+Yup, arm lagging behind
+
+
+[5/15/2022 12:54 AM] ninuje
+```
+/home/niluje/Kindle/SourceCode_Packages/4.1.4/linux-2.6.31/arch/arm/kernel/calls.S
+348:            CALL(sys_ni_syscall)            /* eventually ppoll */
+```
+
+{Reactions}
+🥶 
+
+[5/15/2022 12:54 AM] ninuje
+That's the *N*ot *I*mplemented stub
+
+
+[5/15/2022 12:54 AM] tux_linux
+Is it easy to backport it?
+
+
+[5/15/2022 12:55 AM] ninuje
+No idea, you'd have to check the commit that implements it ^^
+
+{Reactions}
+👍 
+
+[5/15/2022 12:55 AM] tux_linux
+same thing for the KT source tree
+
+
+[5/15/2022 12:55 AM] ninuje
+Makes sense, it's basically the same board
+
+
+[5/15/2022 12:57 AM] tux_linux
+some hints in there https://bugs.launchpad.net/ubuntu/+source/linux/+bug/319729
+
+{Embed}
+https://bugs.launchpad.net/ubuntu/+source/linux/+bug/319729
+Bug #319729 “ARM architecture lacks support for pselect() and pp......
+The ARM architecture in the upstream kernel lacks support for the pselect() and ppoll() system calls.
+
+pselect is defined in POSIX.1g, and in POSIX.1-2001, while ppoll is Linux specific but matches the intent of pselect.
+
+The difference between select() and pselect() & poll() and ppoll() is that the latter system calls accept an additional sigma...
+/mnt/data/projects/git/conversations/media/launchpad-5AA97.png
+
+
+[5/15/2022 12:57 AM] tux_linux
+369842658a36bcea28ecb643ba4bdb53919330dd
+
+
+[5/15/2022 12:58 AM] tux_linux
+https://github.com/torvalds/linux/commit/369842658a36bcea28ecb643ba4bdb53919330dd
+found it
+
+{Embed}
+https://github.com/torvalds/linux/commit/369842658a36bcea28ecb643ba4bdb53919330dd
+ARM: 5677/1: ARM support for TIF_RESTORE_SIGMASK/pselect6/ppoll/epo...
+…_pwait
+
+This patch adds support for TIF_RESTORE_SIGMASK to ARM&#39;s
+signal handling, which allows to hook up the pselect6, ppoll,
+and epoll_pwait syscalls on ARM.
+
+Tested here with eabi users...
+/mnt/data/projects/git/conversations/media/369842658a36bcea28ecb643ba4bdb53919330dd-98824
+
+
+[5/15/2022 12:58 AM] tux_linux
+now on to see if it can actually work...
+
+
+[5/15/2022 1:07 AM] tux_linux
+```
+build@inkbox ~/i/k/k/linux-2.6.31-kt (master)> git apply ~/Development/linux/0001-ARM-5677-1-ARM-support-for-TIF_RESTORE_SIGMASK-psele.patch 
+error: patch failed: arch/arm/kernel/signal.c:47
+error: arch/arm/kernel/signal.c: patch does not apply
+build@inkbox ~/i/k/k/linux-2.6.31-kt (master) [1]> 
+```
+How nice
+
+
+[5/15/2022 1:07 AM] tux_linux
+welp, let's do this manually
+
+
+[5/15/2022 1:29 AM] tux_linux
+it \*seems\* to have worked
+
+
+[5/15/2022 1:29 AM] tux_linux
+(well, it compiles)
+
+
+[5/15/2022 1:32 AM] tux_linux
+it works!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-4D04C.png
+
+{Reactions}
+🥳 
+
+[5/15/2022 1:32 AM] tux_linux
+(well, *works* is some word)
+
+
+[5/15/2022 1:32 AM] nonasuomy
+"works"
+
+
+[5/15/2022 1:33 AM] nonasuomy
+https://tenor.com/view/anchorman-60-60percent-60percent-of-the-time-it-works-every-time-gif-20673938
+
+{Embed}
+https://tenor.com/view/anchorman-60-60percent-60percent-of-the-time-it-works-every-time-gif-20673938
+/mnt/data/projects/git/conversations/media/anchorman-60-C91E5.png
+
+
+[5/15/2022 1:38 AM] tux_linux
+https://github.com/Kobo-InkBox/kernel/commit/11d55cb8dfa976c7460c91cc21ada66d20f261d2
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/commit/11d55cb8dfa976c7460c91cc21ada66d20f261d2
+KT: Implement ppoll syscall; initrd fixes · Kobo-InkBox/kernel@11d5...
+The former was done following this commit: https://github.com/torvalds/linux/commit/369842658a36bcea28ecb643ba4bdb53919330dd
+/mnt/data/projects/git/conversations/media/11d55cb8dfa976c7460c91cc21ada66d20f261d2-29695
+
+
+[5/15/2022 2:23 AM] tux_linux
+We are getting somewhere
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/kindle-inkbox-3E6DF.mp4
+
+
+[5/15/2022 7:03 AM] tux_linux
+Yay
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220515_050200384-BE9CF.jpg
+
+
+[5/15/2022 7:04 AM] tux_linux
+FBInk works fine with this platform plugin @NiLuJe , even with the following log (it's also been compiled with the `KINDLE=1` option)
+```
+[FBInk] Rotation quirks are only handled on Kobo!
+[FBInk] [fbink_set_fb_info] Unsupported rotation value: 38!
+Failed to set rotation and bpp: -22
+[FBInk] Rotation quirks are only handled on Kobo!
+kobofb: Finished initialization.
+```
+Now... on to touchscreen support
+
+
+[5/15/2022 7:15 AM] tux_linux
+It... works, I changed the input device to event2, it sees something but it isn't mapped correctly on the screen
+I got to trigger some action on a button at the wrong place but that's about it
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C7C2A.txt
+
+
+[5/15/2022 11:42 AM] szybet
+nice
+
+{Reactions}
+👍 
+
+[5/15/2022 5:14 PM] ninuje
+Uncaught ENOSYS in the return value of `fbink_rota_canonical_to_native` being passed directly to `fbink_set_fb_info` 😉
+
+
+[5/15/2022 5:16 PM] ninuje
+I don't quite remember the native panel orientation on the Touch
+
+
+[5/15/2022 5:16 PM] ninuje
+Might be CW or CCW
+
+
+[5/15/2022 6:46 PM] tux_linux
+It's `echo 1 > /sys/class/graphics/fb0/rotate` (for UR)
+
+
+[5/16/2022 3:28 AM] tux_linux
+Well, no touch input working...
+I don't really know what to do, the platform plugin code is a bit cryptic to me
+ABS_X and ABS_Y both have 4095 as their maximum value
+
+
+[5/16/2022 3:29 AM] tux_linux
+this seems to be the interesting bit
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-E9F71.png
+
+
+[5/16/2022 3:29 AM] tux_linux
+`qevedevtouchhandler.cpp`, ~L335
+
+
+[5/16/2022 3:44 AM] ninuje
+That's just overriding the max values so that swapxy & invertx/inverty can behave
+
+
+[5/16/2022 3:44 AM] ninuje
+Which should be irrelevant, as you shouldn't need those on Kindle once you've got the rotation down
+
+
+[5/16/2022 3:46 AM] ninuje
+Oh, wait, it's sneakier than that.
+
+
+[5/16/2022 3:46 AM] ninuje
+The Touch doesn't do resolution rescaling in the kernel
+
+
+[5/16/2022 3:48 AM] ninuje
+https://github.com/koreader/koreader/blob/118e063ae29eb86b35ffb331ac368137f67102c1/frontend/device/kindle/device.lua#L565-L566
+
+{Embed}
+https://github.com/koreader/koreader/blob/118e063ae29eb86b35ffb331ac368137f67102c1/frontend/device/kindle/device.lua
+koreader/device.lua at 118e063ae29eb86b35ffb331ac368137f67102c1 · k...
+An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices - koreader/device.lua at 118e063ae29eb86b35ffb3...
+/mnt/data/projects/git/conversations/media/koreader-E3301
+
+
+[5/16/2022 3:48 AM] tux_linux
+that's vaguely what I thought too
+
+
+[5/16/2022 3:48 AM] ninuje
+https://github.com/koreader/koreader/blob/118e063ae29eb86b35ffb331ac368137f67102c1/frontend/device/input.lua#L317-L326
+
+{Embed}
+https://github.com/koreader/koreader/blob/118e063ae29eb86b35ffb331ac368137f67102c1/frontend/device/input.lua
+koreader/input.lua at 118e063ae29eb86b35ffb331ac368137f67102c1 · ko...
+An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices - koreader/input.lua at 118e063ae29eb86b35ffb33...
+/mnt/data/projects/git/conversations/media/koreader-E3301
+
+
+[5/16/2022 3:48 AM] ninuje
+That doesn't invalidate the fact that you don't need any invert & swaps if you're in the right orientation, though 😉
+
+
+[5/16/2022 3:49 AM] tux_linux
+I didn't tell it to do anything, it's just doing that for Kobo by default I guess
+
+
+[5/16/2022 3:50 AM] ninuje
+Then find where it enforces those and kill it with fire 😉
+
+{Reactions}
+🔥 
+
+[5/16/2022 3:50 AM] ninuje
+Fun fact: the Kindle Touch appears to be the sole device that doesn't do scaling in kernel
+
+
+[5/16/2022 3:50 AM] ninuje
+So you might want to just fix it in kernel?
+
+
+[5/16/2022 3:51 AM] tux_linux
+maybe too
+I'm pondering the options
+
+
+[5/16/2022 3:51 AM] tux_linux
+though, the newer platform plugin on the Kobo Touch doesn't work with touch input
+only the older one (march 2021) works
+
+
+[5/16/2022 3:52 AM] tux_linux
+So I'm not sure it would do anything great actually 😄
+
+
+[5/16/2022 8:05 AM] szybet
+Hm as I swe this port is almost done
+
+
+[5/16/2022 8:05 AM] szybet
+How bad would it be to port inkbox to kindle paperwhite 6?
+
+
+[5/16/2022 8:07 AM] szybet
+Idk about the storage there
+
+
+[5/16/2022 1:55 PM] tux_linux
+No?
+
+
+[5/16/2022 1:56 PM] szybet
+you booted a kernel
+
+
+[5/16/2022 1:56 PM] szybet
+then its almost done
+
+
+[5/16/2022 1:56 PM] szybet
+;p
+
+
+[5/16/2022 2:04 PM] tux_linux
+I still need to port all the backend stuff
+There isn't any touch input, no way to check the battery status in sysfs nor is USB is plugged in
+
+
+[5/16/2022 2:05 PM] szybet
+yes yes i know
+
+
+[5/16/2022 2:05 PM] szybet
+just joking
+
+
+[5/16/2022 2:05 PM] szybet
+?
+
+
+[5/16/2022 2:05 PM] tux_linux
+There's secure boot
+
+
+[5/16/2022 2:05 PM] tux_linux
+So, unless we figure out how to disable it, no
+
+
+[5/16/2022 2:06 PM] szybet
+☹️
+
+
+[5/16/2022 11:29 PM] nonasuomy
+But that would make it less secure!
+
+
+[5/16/2022 11:32 PM] nonasuomy
+Replace the eMMC
+
+
+[5/17/2022 12:27 AM] tux_linux
+I think it's in some kind of rom
+
+
+[5/17/2022 12:35 AM] szybet
+Really? Then we can read it
+
+
+[5/17/2022 12:35 AM] szybet
+*most propably*
+
+
+[5/17/2022 1:02 AM] tux_linux
+but not replace it that is
+
+
+[5/17/2022 1:02 AM] tux_linux
+it is not practical
+
+
+[5/17/2022 1:02 AM] tux_linux
+nobody will want to do that
+
+
+[5/17/2022 7:06 AM] szybet
+I want To do this
+
+
+[5/18/2022 4:39 AM] tux_linux
+First you have to buy one
+
+{Reactions}
+😆 
+
+[5/22/2022 4:10 AM] tux_linux
+Yay
+https://photos.app.goo.gl/zFjFp3sz9SyawfAbA
+
+{Embed}
+https://photos.app.goo.gl/zFjFp3sz9SyawfAbA
+New video by Nicolas Mailloux
+/mnt/data/projects/git/conversations/media/igXPYVLKtMSd-MkzjoPsloVl8Ulk12g7Q7eP2-ZwER-4B7B3
+
+
+[5/22/2022 4:10 AM] tux_linux
+Thanks @NiLuJe
+
+
+[5/22/2022 4:12 AM] tux_linux
+```
+diff --git a/kernel/linux-2.6.31-kt/drivers/input/touchscreen/zforce.c b/kernel/linux-2.6.31-kt/drivers/input/touchscreen/zforce.c
+index f48ff677b2..37ed2e3c82 100644
+--- a/kernel/linux-2.6.31-kt/drivers/input/touchscreen/zforce.c
++++ b/kernel/linux-2.6.31-kt/drivers/input/touchscreen/zforce.c
+@@ -848,17 +848,8 @@ static void sendTouchUpdate(TouchData *tData)
+       // Specify ID of touch the update applies to
+       input_report_abs(tdev, ABS_MT_TRACKING_ID, coord->id - 1);
+ 
+-      if(mx50_board_is(BOARD_ID_YOSHI))
+-      {
+-        // Flip the coordinates on Yoshi
+-        input_report_abs(tdev, ABS_MT_POSITION_X, X_RESOLUTION - coord->X);
+-        input_report_abs(tdev, ABS_MT_POSITION_Y, Y_RESOLUTION - coord->Y);
+-      }
+-      else
+-      {
+-        input_report_abs(tdev, ABS_MT_POSITION_X, coord->X);
+-        input_report_abs(tdev, ABS_MT_POSITION_Y, coord->Y);
+-      }
++      input_report_abs(tdev, ABS_MT_POSITION_X, (int)(coord->X * 600 / 4095));
++      input_report_abs(tdev, ABS_MT_POSITION_Y, (int)(800 - (coord->Y * 800 / 4095)));
+       contacts_left++;
+     }
+     else if (tState == TOUCH_UP)
+```
+
+
+[5/22/2022 6:07 AM] tux_linux
+Wheeeeee
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220522_040636635-708FB.jpg
+
+{Reactions}
+🥳 (2) 
+
+[5/22/2022 9:49 AM] szybet
+Niceee
+
+{Reactions}
+👍 
+
+[5/22/2022 7:01 PM] the.mightydill
+:D
+
+{Reactions}
+👍 
+
+[5/22/2022 11:19 PM] tux_linux
+@NiLuJe is there a non-lipc way to check if the battery is charging/USB is plugged in?
+
+
+[5/22/2022 11:20 PM] szybet
++ did you asked him about detecting if its only charging / if pd for usbms?
+
+
+[5/22/2022 11:21 PM] tux_linux
+?pd
+
+
+[5/22/2022 11:21 PM] szybet
+PC
+
+
+[5/22/2022 11:21 PM] szybet
+kobo manages that, somehow
+
+
+[5/22/2022 11:21 PM] tux_linux
+no
+
+
+[5/22/2022 11:21 PM] tux_linux
+idk how
+
+
+[5/22/2022 11:21 PM] szybet
+i think its kernel hacking, detecting is some usb handshakes are going
+
+
+[5/23/2022 12:41 AM] ninuje
+There's a sysfs entry on newer devices
+
+
+[5/23/2022 12:41 AM] ninuje
+There might be an uevent feed on earlier ones
+
+
+[5/23/2022 12:42 AM] tux_linux
+but not here...
+I found some way to get the status... hang on
+
+
+[5/23/2022 12:42 AM] ninuje
+The Touch doesn't qualify ^^
+
+
+[5/23/2022 12:42 AM] ninuje
+That was Wario and up, IIRC
+
+
+[5/23/2022 12:43 AM] szybet
+You mean the detection for usbms?
+
+
+[5/23/2022 12:43 AM] ninuje
+Not even that, just power delivery
+
+
+[5/23/2022 12:43 AM] ninuje
+https://github.com/koreader/koreader/commit/86c35ad066c72a6e52a5a935ab2fc4a133d829d6#diff-bc1f1d3fd8a1f49053e6f1cdde7fde96c9c790b85c5379ff4852739bcd05b7b7
+
+{Embed}
+https://github.com/koreader/koreader/commit/86c35ad066c72a6e52a5a935ab2fc4a133d829d6
+A host of low power states related tweaks (#9036) · koreader/koread...
+* Disable all non power management related input during suspend. (This prevents wonky touch events from being tripped when closing a sleep cover on an already-in-suspend device, among other things)...
+/mnt/data/projects/git/conversations/media/86c35ad066c72a6e52a5a935ab2fc4a133d829d6-0F517
+
+
+[5/23/2022 12:43 AM] tux_linux
+```
+diff --git a/kernel/linux-2.6.31-kt/drivers/power/yoshi_battery.c b/kernel/linux-2.6.31-kt/drivers/power/yoshi_battery.c
+index 43b5f973ea..fa96588217 100644
+--- a/kernel/linux-2.6.31-kt/drivers/power/yoshi_battery.c
++++ b/kernel/linux-2.6.31-kt/drivers/power/yoshi_battery.c
+@@ -19,6 +19,7 @@
+ #include <mach/boardid.h>
+ #include <mach/mwan.h>
+ #include <battery_id.h>
++#include <linux/pmic_external.h>
+ 
+ /*
+  * I2C registers that need to be read
+@@ -237,6 +238,20 @@ battery_capacity_show(struct sys_device *dev, struct sysdev_attribute *attr, cha
+ }
+ static SYSDEV_ATTR(battery_capacity, 0644, battery_capacity_show, NULL);
+ 
++static ssize_t
++battery_status_show(struct sys_device * dev, struct sysdev_attribute * attr, char * buf) {
++        int sense_0 = 0;
++        int ret = 0; /* Default: no charger */
++
++        pmic_read_reg(REG_INT_SENSE0, &sense_0, 0xffffff);
++        if (sense_0 & 0x40) {
++                ret = 1;
++       }
++       return sprintf(buf, "%d\n", ret);
++}
++
++static SYSDEV_ATTR(battery_status, 0644, battery_status_show, NULL);
++
+ static ssize_t
+ battery_mAH_show(struct sys_device *dev, struct sysdev_attribute *attr, char *buf)
+ {
+@@ -533,6 +548,7 @@ static int yoshi_battery_sysdev_ctrl_init(void)
+                sysdev_create_file(&yoshi_battery_device, &attr_battery_temp_errthresh);
+                sysdev_create_file(&yoshi_battery_device, &attr_battery_send_uevent);
+                sysdev_create_file(&yoshi_battery_device, &attr_battery_overheat);
++               sysdev_create_file(&yoshi_battery_device, &attr_battery_status);
+ #ifdef CONFIG_MACH_MX50_YOSHIME
+```
+(truncated)
+This creates a `battery_status` sysfs entry that actually works
+
+
+[5/23/2022 12:44 AM] ninuje
+Yup, makes sense
+
+{Reactions}
+👍 
+
+[5/23/2022 12:44 AM] tux_linux
+I don't know why lab126 didn't take the time to do it
+
+
+[5/23/2022 12:44 AM] tux_linux
+It was fairly simple to figure out
+
+
+[5/23/2022 12:49 AM] ninuje
+I never actually looked into what gasgauge-info does on those
+
+
+[5/23/2022 12:49 AM] ninuje
+Might be poking something over I²C
+
+{Reactions}
+👍 
+
+[5/23/2022 11:23 AM] szybet
+how will the process installing inkbox on this device look like?
+
+
+[5/23/2022 2:41 PM] tux_linux
+I'm still trying to figure it out
+
+
+[5/23/2022 2:42 PM] szybet
+its kindle touch 3 right?
+
+
+[5/23/2022 2:42 PM] tux_linux
+No
+
+
+[5/23/2022 2:42 PM] tux_linux
+Kindle Touch 1 from 2011
+
+
+[5/23/2022 2:42 PM] szybet
+okay
+
+
+[5/23/2022 2:42 PM] szybet
+for next kindle touch devices give them a number
+
+
+[5/23/2022 3:38 PM] tux_linux
+@NiLuJe here's another `MXCFB_SEND_UPDATE` (v1, this time) error happening on the Kindle with X11 launched (bitdepth is also wrong, X11 has somehow set it to 32, using fbdepth to set it back to 8 doesn't help)
+
+
+[5/23/2022 3:38 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-792BE.txt
+
+
+[5/23/2022 3:39 PM] ninuje
+Something's holding the fb lock
+
+
+[5/23/2022 3:39 PM] ninuje
+(X11?)
+
+
+[5/23/2022 3:40 PM] tux_linux
+let me try to kill it with fire
+
+
+[5/23/2022 3:40 PM] tux_linux
+a relaunch of the platform plugin doesn't even work like it did on Kobo
+
+
+[5/23/2022 3:41 PM] ninuje
+Hmm, the FBIOGET ioctls did go through, so my lock theory may not hold water...
+
+
+[5/23/2022 3:41 PM] tux_linux
+Same thing
+
+
+[5/23/2022 3:42 PM] tux_linux
+X11 is killed, qt is running, relaunched, but still operation not permitted
+
+
+[5/23/2022 3:42 PM] tux_linux
+only fix might be to put it to sleep
+
+
+[5/23/2022 3:42 PM] tux_linux
+then wake it up
+
+
+[5/23/2022 3:43 PM] tux_linux
+Even that doesn't work
+
+
+[5/23/2022 3:45 PM] tux_linux
+```
+[  142.926959] mxc_epdc_fb mxc_epdc_fb: EPDC not active.Update request abort.
+```
+
+
+[5/23/2022 3:45 PM] ninuje
+Check dmesg
+
+
+[5/23/2022 3:45 PM] ninuje
+😄
+
+
+[5/23/2022 3:45 PM] tux_linux
+we thought the same thing
+
+
+[5/23/2022 3:45 PM] tux_linux
+woo
+
+
+[5/23/2022 3:45 PM] ninuje
+```
+2>-------/*
+2>------- * If we are waiting to go into suspend, or the FB is blanked,
+2>------- * we do not accept new updates
+2>------- */
+2>-------mutex_lock(&fb_data->power_mutex);
+2>-------if ((fb_data->waiting_for_idle) ||
+->------->-------(fb_data->blank != FB_BLANK_UNBLANK)) {
+4>------->-------dev_err(fb_data->dev, "EPDC not active."
+->------->------->-------"Update request abort.\n");
+4>------->-------mutex_unlock(&fb_data->power_mutex);
+4>------->-------mutex_unlock(&fb_data->queue_mutex);
+4>------->-------return -EPERM;
+2>-------}
+2>-------mutex_unlock(&fb_data->power_mutex);
+```
+
+
+[5/23/2022 3:46 PM] ninuje
+X *might* be screwing w/ the blanking
+
+
+[5/23/2022 3:46 PM] tux_linux
+It is, because when it is disabled, I don't ever encounter problems like that
+
+
+[5/23/2022 3:47 PM] tux_linux
+```
+CONFIG_FB_MXC_EINK_AUTO_UPDATE_MODE=y
+```
+The stock kernel has this enabled by default
+
+
+[5/23/2022 3:48 PM] tux_linux
+So I can hack the kernel to make it work?
+
+
+[5/23/2022 3:48 PM] ninuje
+No, that's a terrible idea.
+
+
+[5/23/2022 3:48 PM] tux_linux
+Hmm, then, any suggestions?
+
+
+[5/23/2022 3:49 PM] ninuje
+Send a `FBIOBLANK` ioctl w/ `VESA_NO_BLANKING`
+
+
+[5/23/2022 3:50 PM] tux_linux
+Have some C code to compile? It's really not my best language 😁
+
+
+[5/23/2022 3:53 PM] ninuje
+```
+#include <fcntl.h>
+#include <sys/ioctl.h>
+#include <linux/fb.h>
+#include <unistd.h>
+
+void main(void) {
+  int fd = open("/dev/fb0", O_RDONLY | O_CLOEXEC | O_NONBLOCK);
+  unsigned long arg = VESA_NO_BLANKING;
+  ioctl(fd, FBIOBLANK, arg);
+  close(fd);
+}
+```
+
+
+[5/23/2022 3:53 PM] tux_linux
+thanks
+
+
+[5/23/2022 3:55 PM] tux_linux
+```
+[nicolas@fedora Documents]$ armv7l-linux-musleabihf-gcc blank.c -o blank
+blank.c:4:10: error: initializer element is not constant
+    4 | int fd = open("/dev/fb0", O_RDONLY | O_CLOEXEC | O_NONBLOCK);
+      |          ^~~~
+blank.c:6:21: error: expected ‘)’ before ‘&’ token
+    6 | ioctl(fd, FBIOBLANK, &arg);
+      |                     ^~
+      |                     )
+blank.c:7:1: warning: data definition has no type or storage class
+    7 | close(fd);
+      | ^~~~~
+blank.c:7:1: warning: type defaults to ‘int’ in declaration of ‘close’ [-Wimplicit-int]
+blank.c:7:1: warning: parameter names (without types) in function declaration
+```
+
+
+[5/23/2022 3:58 PM] ninuje
+Works better with an entry point ;p
+
+
+[5/23/2022 3:58 PM] ninuje
+edit'ed
+
+
+[5/23/2022 3:58 PM] ninuje
+musl might not like a void main, can't remember
+
+
+[5/23/2022 3:58 PM] ninuje
+fix the sig to the standard one if it complains
+
+
+[5/23/2022 3:59 PM] tux_linux
+oh, you're right.. I didn't even see it
+
+
+[5/23/2022 4:01 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C996B.txt
+
+
+[5/23/2022 4:02 PM] szybet
+Why🥴
+
+
+[5/23/2022 4:32 PM] ninuje
+Oops, FBIOBLANK doesn't take a pointer
+
+
+[5/23/2022 4:33 PM] ninuje
+edit'ed
+
+
+[5/23/2022 4:35 PM] tux_linux
+magic, it works
+
+
+[5/23/2022 4:35 PM] tux_linux
+thanks
+is there a way to prevent this issue other than fixing it by running this binary?
+
+
+[5/23/2022 4:36 PM] szybet
+xorg fbink error?
+
+
+[5/23/2022 4:36 PM] tux_linux
+Also, will a fbdepth compiled for Kindle work for Kobos too?
+
+
+[5/23/2022 4:36 PM] ninuje
+Find out what in X11 is fucking with the blanking
+
+
+[5/23/2022 4:36 PM] tux_linux
+Only on this device, can't say for other ones
+
+
+[5/23/2022 4:36 PM] ninuje
+Might be an X setting
+
+
+[5/23/2022 4:36 PM] ninuje
+Nope, device detection is ifdef'ed
+
+
+[5/23/2022 4:37 PM] szybet
+give me the binary, i will test it
+
+
+[5/23/2022 4:37 PM] szybet
+so no :( ?
+
+
+[5/23/2022 4:37 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/blank-FFCB7
+
+
+[5/23/2022 4:37 PM] szybet
+its still going through a vnc, so how
+
+
+[5/23/2022 4:37 PM] tux_linux
+it's also still working with fbdev
+
+
+[5/23/2022 4:38 PM] tux_linux
+VNC is only used for touch input
+
+
+[5/23/2022 4:38 PM] tux_linux
+Graphics are handled with fbink_xdamage
+Auto-update mode is not very good compared to it
+
+
+[5/23/2022 4:39 PM] szybet
+really, so its only needed to write a vnc client with fbink support?
+
+
+[5/23/2022 4:39 PM] szybet
+i finally understand the problem🥴
+
+
+[5/23/2022 4:40 PM] ninuje
+(rip)grep the fbdev/fbdevhw and/or Xorg sources for that ioctl and go from there
+
+
+[5/23/2022 4:41 PM] tux_linux
+On the Glo HD, I can't use fbink_xdamage because of a weird eink bpp bug. Might try to fix it with what we discussed today. That device uses the `vnc` binary in the `/opt/X11/vnc-touch` rootfs (https://github.com/KDE/krdc/tree/master/vnc/qtonly)
+On normal devices, `vnc-nographic` is used, which is the same program with all the print to screen calls removed. fbink_xdamage can handle the graphics part
+
+
+[5/23/2022 4:41 PM] ninuje
+The NTX mxcfb driver has the same condition, FWIW
+
+
+[5/23/2022 4:42 PM] tux_linux
+Try it @Szybet !!
+
+
+[5/23/2022 4:42 PM] ninuje
+... except that the fb_blank handler doesn't honor FB_BLANK_UNBLANK 😄
+
+
+[5/23/2022 4:43 PM] szybet
+okay actually i dont understand
+
+
+[5/23/2022 4:43 PM] szybet
+the binary blank?
+
+
+[5/23/2022 4:43 PM] tux_linux
+yes
+
+
+[5/23/2022 4:44 PM] tux_linux
+Basically, the Glo HD supports KoBox but the graphics look distorted because it's displaying them over VNC rather than native xdamage events
+
+
+[5/23/2022 4:44 PM] ninuje
+Oh, that's because it starts with setting blank outside the switch, nevermind
+
+
+[5/23/2022 4:45 PM] szybet
+sad
+
+
+[5/23/2022 4:45 PM] szybet
+nia really needs a newer kernel, the stock one
+
+
+[5/23/2022 4:45 PM] szybet
+it drops drastically even when it sleaps
+
+
+[5/23/2022 4:46 PM] szybet
+are other devices kernels outdated, and nickel has a newer one?
+
+
+[5/23/2022 4:47 PM] tux_linux
+nickel uses the stock one
+
+
+[5/23/2022 4:47 PM] szybet
+i mean
+
+
+[5/23/2022 4:48 PM] szybet
+the kernel from the source and shipped with nickel is diffrent in many ways
+
+
+[5/23/2022 4:53 PM] tux_linux
+?
+
+
+[5/23/2022 4:54 PM] ninuje
+The public sources are behind by a few builds, yeah
+
+
+[5/23/2022 4:54 PM] ninuje
+Poking George on GH sometimes help
+
+
+[5/23/2022 4:55 PM] tux_linux
+*sometimes*
+
+
+[5/23/2022 4:55 PM] ninuje
+^^
+
+
+[5/23/2022 4:55 PM] szybet
+he isin't alive... i tryied with the kobo dark mode, nothing
+
+
+[5/23/2022 4:56 PM] szybet
+a polite email do kobo maybe? :)
+
+
+[5/23/2022 4:56 PM] ninuje
+That's because this isn't supported
+
+
+[5/23/2022 4:56 PM] ninuje
+and is a terrible, terrible ugly hack
+
+
+[5/23/2022 4:56 PM] ninuje
+Shipping their GPL sources is another matter entirely
+
+
+[5/23/2022 4:56 PM] szybet
+"this isin't supported, leave me alone" would be a enough response
+
+
+[5/23/2022 4:56 PM] szybet
+okay, i will create a github issue on kobo labs
+
+
+[5/23/2022 4:57 PM] ninuje
+It's a fork, that's implied
+
+
+[5/23/2022 4:57 PM] tux_linux
+What are we talking about?
+
+
+[5/23/2022 4:57 PM] szybet
+dark mode^
+
+
+[5/23/2022 4:57 PM] tux_linux
+ah ok
+
+
+[5/23/2022 4:57 PM] tux_linux
+missed that line
+
+
+[5/23/2022 4:57 PM] ninuje
+the LD_PRELOAD heresy
+
+{Reactions}
+😆 (2) 
+
+[5/23/2022 4:58 PM] tux_linux
+it does work really well on some devices, though...
+
+
+[5/23/2022 4:59 PM] szybet
+https://github.com/kobolabs/Kobo-Reader/issues/117
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/issues/117
+Nia kernel sources are outdated · Issue #117 · kobolabs/Kobo-Reader
+The kernel shipped with nickel is different in many ways ( battery consumption, touchscreen wake up calls ). Could we get an updated version in the repo, Please?
+
+
+[5/23/2022 4:59 PM] szybet
+¯\_(ツ)_/¯
+
+
+[5/23/2022 5:02 PM] szybet
+watch ps in kterm should trigger the bug?
+
+
+[5/23/2022 5:02 PM] tux_linux
+probably
+
+
+[5/23/2022 5:02 PM] tux_linux
+`watch -n 0.1 ps`
+
+
+[5/23/2022 5:03 PM] szybet
+it stresses out the e-ink ;/
+
+
+[5/23/2022 5:03 PM] szybet
+how much life expectancy is in  e-inks?
+
+
+[5/23/2022 5:03 PM] tux_linux
+a lot
+
+
+[5/23/2022 5:04 PM] tux_linux
+my mini probably has had 100 times the amount of refreshes it would usually get and it's still great
+
+
+[5/23/2022 5:04 PM] szybet
+we will see for the nia
+
+
+[5/23/2022 5:05 PM] szybet
+wtf
+```
+watch -n 0.1 ps 
+invalid number
+watch -n 0,1 ps
+invalid number
+```
+it works fine for ssh
+
+
+[5/23/2022 5:05 PM] szybet
+¯\_(ツ)_/¯
+
+
+[5/23/2022 5:06 PM] tux_linux
+oh, too old busybox
+
+
+[5/23/2022 5:06 PM] szybet
+kterm is on an older busybox?
+
+
+[5/23/2022 5:06 PM] szybet
+w h a t
+
+
+[5/23/2022 5:06 PM] tux_linux
+maybe?
+
+
+[5/23/2022 5:06 PM] tux_linux
+it's a chroot, what do you expect
+
+
+[5/23/2022 5:06 PM] szybet
+o k
+
+
+[5/23/2022 5:07 PM] szybet
+are there any ereaders for 20$~ that would be easy ( possible to ) to port to inkbox?
+
+
+[5/23/2022 5:07 PM] tux_linux
+what is that question out of nowhere?
+
+
+[5/23/2022 5:07 PM] tux_linux
+well, maybe
+
+
+[5/23/2022 5:07 PM] tux_linux
+don't expect it to be easy ¯\_(ツ)_/¯
+
+
+[5/23/2022 5:07 PM] szybet
+not on the level of sony
+
+{Reactions}
+😅 
+
+[5/23/2022 5:08 PM] szybet
+i could convince my family to buy one, to monitor solar energy
+
+
+[5/23/2022 5:08 PM] szybet
+but i would need 100% that it is possible to port
+
+
+[5/23/2022 5:08 PM] szybet
+if yes it would be a win win situation
+
+
+[5/23/2022 5:10 PM] tux_linux
+I guess you can try a Kobo Touch A
+But we would need a way to flash it correctly
+
+
+[5/23/2022 5:10 PM] tux_linux
+(because eMMC)
+
+
+[5/23/2022 5:10 PM] szybet
+no emmc
+
+
+[5/23/2022 5:10 PM] szybet
+nooo
+
+
+[5/23/2022 5:10 PM] tux_linux
+then, I don't know
+
+
+[5/23/2022 5:10 PM] tux_linux
+other ones are not cheap
+
+
+[5/23/2022 5:10 PM] szybet
+one wrong dd and everything is gone
+
+
+[5/23/2022 5:11 PM] tux_linux
+true, unless we figure out how to trigger download mode
+
+
+[5/23/2022 5:11 PM] tux_linux
+KT has a download mode, has saved me more times than I would like to admit 😉
+
+
+[5/23/2022 5:12 PM] szybet
+nice
+
+
+[5/23/2022 5:46 PM] szybet
+i got the error
+
+
+[5/23/2022 5:46 PM] szybet
+scp the blank file
+
+
+[5/23/2022 5:46 PM] szybet
+didn't run it
+
+
+[5/23/2022 5:46 PM] szybet
+and the error dissapered
+
+
+[5/23/2022 5:46 PM] szybet
+thats a magic file
+
+
+[5/23/2022 5:51 PM] tux_linux
+ha - ha - ha
+
+
+[5/23/2022 6:00 PM] szybet
+it works
+
+
+[5/23/2022 6:00 PM] szybet
+the binary
+
+
+[5/23/2022 6:00 PM] szybet
+🥳
+
+
+[5/23/2022 6:01 PM] tux_linux
+nice
+
+
+[5/23/2022 6:01 PM] szybet
+now we need to get stdout of inkbox_gui
+
+
+[5/23/2022 6:01 PM] szybet
+and simply run the script based on the output
+
+
+[5/23/2022 6:01 PM] tux_linux
+can't we find... a better way?
+
+
+[5/23/2022 6:02 PM] ninuje
+Or that.
+
+
+[5/23/2022 6:02 PM] szybet
+write a pixel to 0x0. it isin't seen anyway
+
+
+[5/23/2022 6:02 PM] ninuje
+That'll crash on some epdcs
+
+
+[5/23/2022 6:03 PM] szybet
+im a simple man with simple solutions
+
+
+[5/23/2022 6:03 PM] szybet
+what...
+
+
+[5/23/2022 6:03 PM] tux_linux
+also, it will fork a new process
+
+
+[5/23/2022 6:03 PM] tux_linux
+**yes**
+
+
+[5/23/2022 6:03 PM] szybet
+just a service
+
+
+[5/23/2022 6:03 PM] szybet
+that will check if kobox app is running
+
+
+[5/23/2022 6:03 PM] szybet
+and then try every 2s
+
+
+[5/23/2022 6:03 PM] szybet
+idk, i would do that
+
+
+[5/23/2022 6:03 PM] tux_linux
+well, ok, given that X11 rootfs is not upgradable without an image reflash...
+
+
+[5/23/2022 6:04 PM] tux_linux
+might be a way to do that directly from the platform plugin
+
+
+[5/23/2022 6:04 PM] szybet
+maybe
+
+
+[5/23/2022 6:04 PM] szybet
+if you look into the platform plugin, you could also check the possibility for darkmode
+
+
+[5/23/2022 6:05 PM] szybet
+will this binary fix it for good / for the next reboot?...
+
+
+[5/23/2022 6:06 PM] tux_linux
+no?
+
+
+[5/23/2022 6:06 PM] tux_linux
+oh, maybe?
+
+
+[5/23/2022 6:06 PM] szybet
+idk, it doesnt happen and im trying
+
+
+[5/23/2022 6:07 PM] tux_linux
+@NiLuJe ?
+
+
+[5/23/2022 6:07 PM] szybet
+i also noticed that with 2 watch'es writing to fbink it happens more often
+
+
+[5/23/2022 6:07 PM] tux_linux
+if it is the case then yay
+but I'm not sure it makes sense
+
+
+[5/23/2022 6:07 PM] szybet
+what makes sense anyway?
+
+{Reactions}
+😆 
+
+[5/23/2022 6:31 PM] ninuje
+No, chances are X will screw it up again (hence: find out what in X is doing that)
+
+
+[5/23/2022 6:52 PM] tux_linux
+My question is: why does this happen on only some devices/kernels?
+On Kobo, it's on >4.1.15 kernels, and the Kindle one is right from 2.6.31
+On Kobo 2.6.35.3 for example, never had that problem.
+
+
+[5/23/2022 6:53 PM] szybet
+im still trying, for an hour
+
+
+[5/23/2022 6:53 PM] szybet
+and nothing
+
+
+[5/23/2022 6:53 PM] szybet
+¯\_(ツ)_/¯
+
+
+[5/23/2022 7:37 PM] szybet
+happened again
+
+
+[5/23/2022 7:37 PM] szybet
+blank worked again
+
+
+[5/23/2022 7:37 PM] szybet
+😁
+
+
+[5/23/2022 7:56 PM] tux_linux
+nice
+
+
+[5/23/2022 11:23 PM] tux_linux
+@Szybet what's the most reliable way to freeze the FB?
+
+
+[5/23/2022 11:24 PM] szybet
+launch kterm, watch -n 1 ps
+
+
+[5/23/2022 11:24 PM] tux_linux
+if i don't have x available?
+
+
+[5/23/2022 11:24 PM] szybet
+and in ssh launch watch -n 2 fbink -c
+
+
+[5/23/2022 11:24 PM] szybet
+it will not happen?...
+
+
+[5/23/2022 11:24 PM] tux_linux
+no, if fbink-xdamage can't launch
+
+
+[5/23/2022 11:24 PM] tux_linux
+x is running
+
+
+[5/23/2022 11:25 PM] szybet
+idk, just launch 2 watch fbink -c
+
+
+[5/23/2022 11:25 PM] szybet
+one white one black
+
+
+[5/23/2022 11:25 PM] szybet
+you can also go and write to #dev  that the issue is fixed, then it will happen propably
+
+
+[5/23/2022 11:26 PM] szybet
+waiting 10 minutes for the error and then going out of the room for 5 minutes also works, *propably*
+
+
+[5/23/2022 11:26 PM] szybet
+¯\_(ツ)_/¯
+
+
+[5/23/2022 11:28 PM] tux_linux
+I made this but I want to see if it works
+```
+diff --git a/src/kobofbscreen.cpp b/src/kobofbscreen.cpp
+index 6ca3539..65e10ac 100644
+--- a/src/kobofbscreen.cpp
++++ b/src/kobofbscreen.cpp
+@@ -294,10 +294,20 @@ void KoboFbScreen::doManualRefresh(const QRect &region)
+ 
+     fbink_cfg.is_flashing = isFullRefresh;
+ 
+-    fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+-
+-    if (waitForRefresh && koboDevice->hasReliableMxcWaitFor)
+-        fbink_wait_for_complete(mFbFd, LAST_MARKER);
++    while(true) {
++        if(fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg) != 0) {
++            int fd = open("/dev/fb0", O_RDONLY | O_CLOEXEC | O_NONBLOCK);
++            unsigned long arg = VESA_NO_BLANKING;
++            ioctl(fd, FBIOBLANK, arg);
++            close(fd);
++        }
++        else {
++            if (waitForRefresh && koboDevice->hasReliableMxcWaitFor) {
++                fbink_wait_for_complete(mFbFd, LAST_MARKER);
++            }
++            break;
++        }
++    }
+ }
+ 
+ QRegion KoboFbScreen::doRedraw()
+diff --git a/src/kobofbscreen.h b/src/kobofbscreen.h
+index 87cb925..f7d9f6a 100644
+--- a/src/kobofbscreen.h
++++ b/src/kobofbscreen.h
+@@ -3,6 +3,9 @@
+ 
+ #include <QtFbSupport/private/qfbscreen_p.h>
+ #include <sys/ioctl.h>
++#include <fcntl.h>
++#include <linux/fb.h>
++#include <unistd.h>
+ 
+ #include <cstring>
+```
+
+
+[5/23/2022 11:41 PM] szybet
+you can prepare a binary or smth... and i will test it tommorow
+
+
+[5/24/2022 12:04 AM] tux_linux
+YAY
+```
+01/01/1970 @ 02:51:12 | main: Running on device kt
+01/01/1970 @ 02:51:13 | main: Device has Wi-Fi capabilities
+[FBInk] Rotation quirks are only handled on Kobo!
+[FBInk] [fbink_set_fb_info] Unsupported rotation value: 38!
+Failed to set rotation and bpp: -22
+[FBInk] Rotation quirks are only handled on Kobo!
+kobofb: Finished initialization.
+01/01/1970 @ 02:51:33 | MainWindow: Checking for available updates
+01/01/1970 @ 02:51:33 | MainWindow: checkForUpdate: No update available.
+[FBInk] [refresh_kindle] MXCFB_SEND_UPDATE: Operation not permitted!
+[FBInk] [fbink_refresh] Failed to refresh the screen!
+Framebuffer: Detected HW freeze
+01/01/1970 @ 02:51:34 | MainWindow: Showing USB Mass Storage dialog
+```
+
+
+[5/24/2022 12:04 AM] tux_linux
+(after that, the screen refreshes properly)
+
+
+[5/24/2022 12:04 AM] szybet
+nice
+
+
+[5/24/2022 12:09 AM] tux_linux
+https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/commit/27456654dc4fe58b071fcdd217c0c0344864c811
+
+{Embed}
+https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/commit/27456654dc4fe58b071fcdd217c0c0344864c811
+kobofbscreen: Prevent framebuffer freeze if X11 is running · Kobo-I...
+Thanks to @NiLuJe and @Szybet for providing help and testing.
+/mnt/data/projects/git/conversations/media/27456654dc4fe58b071fcdd217c0c0344864c811-BA316
+
+
+[5/24/2022 1:08 AM] tux_linux
+ok, it's only working for kindle currently. we need to upgrade the Nia to the newer platform plugin
+
+
+[5/24/2022 6:57 PM] szybet
+simply compile to the newest version?
+
+
+[5/24/2022 7:26 PM] tux_linux
+I'm not sure touch input will work
+You can try
+
+
+[5/24/2022 8:43 PM] szybet
+im a bit busy last days
+
+
+[5/24/2022 8:43 PM] szybet
+if you compile it and send the file i could try it
+
+
+[5/24/2022 8:43 PM] szybet
+if not, propably in 3 days
+
+
+[5/24/2022 9:23 PM] tux_linux
+Ok
+
+
+[5/24/2022 9:23 PM] tux_linux
+I'll try
+
+
+[5/24/2022 9:23 PM] tux_linux
+I'm a bit busy too
+
+
+[5/24/2022 10:42 PM] ninuje
+The while loop is a terrible idea.
+
+
+[5/24/2022 10:42 PM] ninuje
+(Besides the design choice of not actually looking into why this is happening in the first place).
+
+
+[5/24/2022 10:42 PM] ninuje
+Just check errno for EPERM and do it once.
+
+
+[5/24/2022 10:43 PM] ninuje
+Otherwise you've just made it increadibly easy to shoot yourself in the foot and softlock the device 😉
+
+
+[5/24/2022 10:46 PM] tux_linux
+It's because we can't really patch x11
+
+
+[5/24/2022 10:46 PM] tux_linux
+That did happen on the Libra
+And
+On the KT when launching an x11 app
+But not with Qt
+Not sure why
+
+Maybe I can put a usleep call to delay it a bit it it fails?
+
+
+[5/24/2022 10:48 PM] tux_linux
+What if it happens again?
+
+
+[5/24/2022 10:52 PM] tux_linux
+Or, if we ever find what's that doing in X11 source code, write some small lib to intercept the call and interpose it with ld preload?
+
+
+[5/24/2022 11:00 PM] ninuje
+Then it'll happen again? You only need a single refresh -> ioctl -> refresh chain to avoiud losing your original refresh
+
+
+[5/24/2022 11:01 PM] ninuje
+refresh -> ioctl on EPERM -> refresh on success
+
+
+[5/24/2022 11:24 PM] szybet
+there is no one actively developing xorg
+
+
+[5/24/2022 11:24 PM] szybet
+there is no chance someone will help us
+
+
+[5/24/2022 11:24 PM] szybet
+as for looking into C code... no
+
+
+[5/24/2022 11:25 PM] szybet
+it is, without a sleep... it will drain cpu performance
+
+
+[5/24/2022 11:25 PM] szybet
+softlock how
+
+
+[5/24/2022 11:39 PM] ninuje
+Pass a wrong region and watch it burn.
+
+
+[5/24/2022 11:39 PM] ninuje
+Or rotate the fb and watch it burn because the regions will be wrong ;p
+
+
+[5/24/2022 11:40 PM] szybet
+:|
+
+
+[5/24/2022 11:53 PM] szybet
+After thinking... ioctl outputs errors if they are there ( thats my experience with plato ) its better to capture that directly in the platform plugin than writing additional pixels
+
+
+[5/24/2022 11:53 PM] szybet
+And then just launch the binary
+
+
+[5/25/2022 12:05 AM] tux_linux
+No
+
+
+[5/25/2022 12:05 AM] tux_linux
+There is a break called
+
+
+[5/25/2022 12:06 AM] szybet
+This is better
+
+
+[5/25/2022 12:07 AM] tux_linux
+What do you mean?
+
+
+[5/25/2022 12:19 AM] szybet
+A better solution
+
+
+[5/25/2022 12:54 AM] tux_linux
+Oh ok, I understand now...
+How to check the errno from FBInk call?
+Will it be the function exit code or do we have to look elsewhere?
+
+
+[5/25/2022 2:01 AM] tux_linux
+Is that enough (or is that even what it should be)?
+Or does the while loop really need to be removed?
+```
+    while(true) {
+        if(fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg) == -1) {
+            qDebug() << "QPA: Detected framebuffer freeze, attempting to fix ...";
+            int fd = open("/dev/fb0", O_RDONLY | O_CLOEXEC | O_NONBLOCK);
+            unsigned long arg = VESA_NO_BLANKING;
+            ioctl(fd, FBIOBLANK, arg);
+            close(fd);
+        }
+        else {
+            if (waitForRefresh && koboDevice->hasReliableMxcWaitFor) {
+                fbink_wait_for_complete(mFbFd, LAST_MARKER);
+            }
+            break;
+        }
+    }
+```
+
+
+[5/25/2022 2:01 AM] tux_linux
+(error code was -1, according to strace)
+
+
+[5/25/2022 6:29 AM] tux_linux
+actually, it doesn't work, so probably not... 🥴
+
+
+[5/26/2022 2:20 PM] ninuje
+```
+int rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+if (rv != EXIT_SUCCESS && errno == EPERM) {
+    qDebug() << "QPA: Detected framebuffer freeze, attempting to fix ...";
+    unsigned long arg = VESA_NO_BLANKING;
+    if (ioctl(mFbFd, FBIOBLANK, arg) == EXIT_SUCCESS) {
+        rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+    }
+}
+if (rv == EXIT_SUCCESS) {
+    if (waitForRefresh && koboDevice->hasReliableMxcWaitFor) {
+        fbink_wait_for_complete(mFbFd, LAST_MARKER);
+    }
+}
+```
+
+
+[5/26/2022 2:21 PM] szybet
+why not this?...
+
+
+[5/26/2022 2:22 PM] ninuje
+I don't quite grok what you're thinking of
+
+
+[5/26/2022 2:22 PM] tux_linux
+Many thanks, but where is errno defined? In the header?
+
+
+[5/26/2022 2:23 PM] tux_linux
+Me neither
+
+
+[5/26/2022 2:23 PM] ninuje
+`<errno.h>`
+
+
+[5/26/2022 2:23 PM] tux_linux
+Oh ok thanks
+
+
+[5/26/2022 2:23 PM] ninuje
+which should pretty much already be included by stuff
+
+{Reactions}
+👍 
+
+[5/26/2022 2:24 PM] ninuje
+```
+int rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+if (rv != EXIT_SUCCESS && errno == EPERM) {
+    qDebug() << "QPA: Detected framebuffer freeze, attempting to fix ...";
+    unsigned long arg = VESA_NO_BLANKING;
+    if (ioctl(mFbFd, FBIOBLANK, arg) == EXIT_SUCCESS) {
+        rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+    }
+}
+if (rv == EXIT_SUCCESS && waitForRefresh) {
+    if (koboDevice->hasReliableMxcWaitFor) {
+        fbink_wait_for_complete(mFbFd, LAST_MARKER);
+    } else {
+        usleep(1000);
+    }
+}
+```
+
+
+[5/26/2022 2:24 PM] ninuje
+Implements `!hasReliableMxcWaitFor` while we're here
+
+{Reactions}
+👍 
+
+[5/26/2022 2:24 PM] ninuje
+Because Libras exist :/
+
+
+[5/26/2022 2:25 PM] szybet
+check if there is the error, not try to invoke it
+
+
+[5/26/2022 2:25 PM] szybet
+capture it
+
+
+[5/26/2022 2:25 PM] ninuje
+That's errno
+
+
+[5/26/2022 2:25 PM] szybet
+?
+
+
+[5/26/2022 2:25 PM] ninuje
+You can't catch an ioctl errror without actually running the ioctl
+
+
+[5/26/2022 2:26 PM] ninuje
+So fbink_refresh's returning non-zero with errno sets to EPERM *is* how you know it failed in that specific manner
+
+
+[5/26/2022 2:26 PM] szybet
+but what is the plugin doing? its writing the the eink
+
+
+[5/26/2022 2:26 PM] ninuje
+nope
+
+
+[5/26/2022 2:26 PM] ninuje
+it's sending an ioctl to ask for a screen refresh
+
+
+[5/26/2022 2:26 PM] tux_linux
+FBInk is
+
+
+[5/26/2022 2:27 PM] ninuje
+it's not drawing anything
+
+
+[5/26/2022 2:27 PM] tux_linux
+Oh yeah, actually that
+
+
+[5/26/2022 2:27 PM] ninuje
+not in this call
+
+
+[5/26/2022 2:27 PM] szybet
+what ._ . its sending an ioctl... it will error right?
+
+
+[5/26/2022 2:27 PM] ninuje
+Drawing is just poking at an mmap'ed array, you can't tell anything about that
+
+
+[5/26/2022 2:28 PM] tux_linux
+Strangely the KT had auto update mode enabled but nothing was refreshing the screen in X11/fbdev
+So I needed to use FBInk xdamage at 32bpp for some reason and switch to 8 when running Qt
+
+
+[5/26/2022 2:28 PM] ninuje
+Yes, which is why we check the return code and errno
+
+
+[5/26/2022 2:28 PM] ninuje
+`man ioctl`
+
+
+[5/26/2022 2:29 PM] ninuje
+(TL;DR: returns -1 on error and sets errno to discriminate failure paths)
+
+
+[5/26/2022 2:31 PM] szybet
+so it returns it right?.................
+
+
+[5/26/2022 2:31 PM] szybet
+the error
+
+
+[5/26/2022 2:32 PM] ninuje
+the error code, yes, in errno
+
+
+[5/26/2022 2:32 PM] ninuje
+The fact that the kernel happens to print something to dmesg by doing itw own error checking is completely orthogonal, if that's what you were talking about
+
+
+[5/26/2022 2:34 PM] szybet
+so we dont need to invoke a screen refresh, we can just capture this error?
+
+
+[5/26/2022 2:34 PM] tux_linux
+Yes we need to
+
+
+[5/26/2022 2:34 PM] tux_linux
+Otherwise how would we know that the error would occur
+
+
+[5/26/2022 2:34 PM] szybet
+becouse
+
+
+[5/26/2022 2:34 PM] tux_linux
+It's completely random
+
+
+[5/26/2022 2:34 PM] ninuje
+do thing -> thing fails -> react to thing failing
+
+
+[5/26/2022 2:34 PM] ninuje
+there's no crytsla ball to skip the first step
+
+
+[5/26/2022 2:35 PM] szybet
+and the do thing can be captured from another do thing, we dont need to create it
+
+
+[5/26/2022 2:35 PM] ninuje
+(well, in this case, yes, there is: find out why X11 does that ;p)
+
+
+[5/26/2022 2:35 PM] szybet
+if this accours we get this error?
+
+
+[5/26/2022 2:35 PM] ninuje
+That's the only place that actually does such a thing
+
+
+[5/26/2022 2:35 PM] ninuje
+(outside of xdamage)
+
+
+[5/26/2022 2:36 PM] tux_linux
+xdamage isn't running when it qt GUI
+
+
+[5/26/2022 2:36 PM] ninuje
+So that's the only place where this specific ioctl is sent
+
+
+[5/26/2022 2:36 PM] ninuje
+^
+
+
+[5/26/2022 2:37 PM] szybet
+1 qt platform plugin writes to screen
+2 we capture error if it accours
+
+
+[5/26/2022 2:37 PM] szybet
+3 we fix it
+
+
+[5/26/2022 2:37 PM] ninuje
+You're asking us to check if there's a roadblock on street B without having anyone taken street B
+
+
+[5/26/2022 2:37 PM] ninuje
+That's impossible
+
+
+[5/26/2022 2:38 PM] ninuje
+Drawing to screen is distinct from refreshing the screen on eInk
+
+
+[5/26/2022 2:38 PM] ninuje
+writing is a memcpy
+
+
+[5/26/2022 2:38 PM] ninuje
+or a write primitive
+
+
+[5/26/2022 2:38 PM] ninuje
+you can't tell anything about it
+
+
+[5/26/2022 2:38 PM] szybet
+what is refreshing the screen then? in normal use
+
+
+[5/26/2022 2:38 PM] ninuje
+That very ioctl
+
+
+[5/26/2022 2:38 PM] szybet
+what program?
+
+
+[5/26/2022 2:38 PM] szybet
+is invoking it
+
+
+[5/26/2022 2:38 PM] ninuje
+:?
+
+
+[5/26/2022 2:38 PM] ninuje
+Nickel, the QPA, fbink?
+
+
+[5/26/2022 2:39 PM] szybet
+so in QPA it should be possible to capture this error right?
+
+
+[5/26/2022 2:39 PM] ninuje
+That is *exactly* what we've done.
+
+
+[5/26/2022 2:39 PM] szybet
+no
+
+
+[5/26/2022 2:39 PM] ninuje
+Yes.
+
+
+[5/26/2022 2:40 PM] szybet
+you added an additional code to invoke the eink?
+
+
+[5/26/2022 2:40 PM] ninuje
+No
+
+
+[5/26/2022 2:40 PM] ninuje
+It's replacing the existing block
+
+
+[5/26/2022 2:40 PM] ninuje
+(Not a diff, so unclear)
+
+
+[5/26/2022 2:40 PM] szybet
+so we are talking about the same thing for 15 minutes
+
+
+[5/26/2022 2:40 PM] szybet
+i hate language barriers
+
+
+[5/26/2022 2:41 PM] ninuje
+There's only a single call site, it was implied
+
+
+[5/26/2022 2:41 PM] ninuje
+Without context, it made no sense for it to be standalone added *somewhere*
+
+
+[5/26/2022 2:41 PM] szybet
+exactly
+
+
+[5/26/2022 2:42 PM] ninuje
+Which is why it's pretty much implied that it's just an updated version of the existing code block
+
+
+[5/26/2022 2:42 PM] ninuje
+Otherwise we'd have been talking about where/when doing that :o)
+
+
+[5/26/2022 2:43 PM] szybet
+okay, thanks for explaining
+
+{Reactions}
+👍 
+
+[5/30/2022 4:04 AM] tux_linux
+astoundingly dumb...
+```
+Jan  1 00:29:08 kindle user.warn kernel: [  159.953527] Loading Atheros ar6003 driver
+Jan  1 00:29:08 kindle user.info kernel: [  159.978672] SDIO: Enabling device mmc0:0001:1...
+Jan  1 00:29:08 kindle user.info kernel: [  159.987909] SDIO: Enabled device mmc0:0001:1
+Jan  1 00:29:08 kindle user.info kernel: [  160.015111] kernel: I perf:wifi:wifi_driver_loaded=158.83 seconds:
+Jan  1 00:29:08 kindle user.warn kernel: [  160.021323] ar6003 Driver returning from ar6000_init_module
+Jan  1 00:29:08 kindle user.info kernel: [  160.029866] ar6k_wlan mmc0:0001:1: firmware: requesting /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration
+Jan  1 00:29:08 kindle user.alert kernel: [  160.047709] Failed to get /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration
+```
+then we do this
+```
+~ # ls /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration -l
+lrwxrwxrwx    1 1000     1000            81 May  8  2022 /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/active_calibration -> /mnt/lib/firmware/ar6k/target/AR6003/hw2.1.1/bin/AR6103_CCK16dbm_QCA_08032011.bin
+~ #
+```
+Please, someone, find a non-nonsense explanation for this mess... 😂
+
+
+[5/31/2022 12:32 AM] the.mightydill
+symlink?
+
+
+[5/31/2022 12:55 AM] tux_linux
+nope, tried without
+
+
+[5/31/2022 12:57 AM] the.mightydill
+weird.
+
+
+[6/1/2022 5:47 AM] tux_linux
+@NiLuJe the fix for the qpa you provided works but only on restart of the application. It doesn't fix the issue if it happens when running and the screen freezes completely.
+I'll try to reproduce that to get some logs in the next days, meanwhile if you think you've forgotten something in the patch, help would be appreciated :)
+
+
+[6/1/2022 8:36 AM] ninuje
+I may have been overly optimistic in hoping nothing would stomp on `errno`
+
+
+[6/1/2022 8:37 AM] ninuje
+Try logging the `errno` value on error; if it turns out it's reset or changed (possibly by FBInk's logging :?), I'll tweak FBInk to preserve it one way or another.
+
+{Reactions}
+👍 
+
+[6/1/2022 2:47 PM] tux_linux
+This is what happens *normally*
+```
+kobofb: Finished initialization.
+02/01/1970 @ 23:52:19 | MainWindow: Checking for available updates
+02/01/1970 @ 23:52:19 | MainWindow: checkForUpdate: No update available.
+[FBInk] [refresh_kindle] MXCFB_SEND_UPDATE: Operation not permitted!
+[FBInk] [fbink_refresh] Failed to refresh the screen!
+QPA: Detected framebuffer freeze, attempting to fix ...
+```
+(after that it works)
+I'll try to get it to reproduce a live-freeze and log the errno
+
+
+[6/3/2022 2:48 PM] tux_linux
+no... no... no... not that bug again when things only work when I launch them from SSH...
+```
+kindle:~# iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+04/01/1970 @ 15:14:29 | main: Running on device kt
+04/01/1970 @ 15:14:30 | main: Device has Wi-Fi capabilities
+[FBInk] Rotation quirks are only handled on Kobo!
+[FBInk] [fbink_set_fb_info] Unsupported rotation value: 38!
+Failed to set rotation and bpp: -22
+[FBInk] Rotation quirks are only handled on Kobo!
+kobofb: Finished initialization.
+04/01/1970 @ 15:14:50 | MainWindow: Checking for available updates
+04/01/1970 @ 15:14:50 | MainWindow: checkForUpdate: No update available.
+04/01/1970 @ 15:14:53 | MainWindow: Showing USB Mass Storage dialog
+[FBInk] [refresh_kindle] MXCFB_SEND_UPDATE: Operation not permitted!
+[FBInk] [fbink_refresh] Failed to refresh the screen!
+QPA: Detected framebuffer freeze, attempting to fix ...
+04/01/1970 @ 23:54:33 | generalDialog: Cancel button clicked
+```
+It's the first launch, and it un-freezed the framebuffer alright
+This is nonsense, why doesn't it do it when \*not\* launched from SSH :?
+
+
+[6/9/2022 1:20 PM] tux_linux
+@NiLuJe to fix this problem once and for all, why not do the blank ioctl from the kernel when it errors out? Is it possible?
+
+
+[6/9/2022 1:28 PM] ninuje
+That's more work than fixing it once in the qpa ;). Dealing with the fb lock might also be tricky, can't remember how the code flows.
+
+{Reactions}
+👍 
+
+[6/9/2022 1:31 PM] tux_linux
+Then how do you explain this?
+
+
+[6/9/2022 1:32 PM] ninuje
+I don't see anything wrong, it took
+
+
+[6/9/2022 1:32 PM] tux_linux
+But it only does it when I start the service (openrc) from ssh
+
+
+[6/10/2022 1:37 PM] ninuje
+I still haven't seen logs of the failures in that case
+
+
+[6/10/2022 1:37 PM] tux_linux
+I'll try to get them
+
+
+[6/10/2022 1:38 PM] tux_linux
+Log errno value?
+
+
+[6/10/2022 2:04 PM] ninuje
+Yep!
+
+
+[6/10/2022 2:25 PM] tux_linux
+```
+    int rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+    int err = errno;
+
+    QString filename = "/tmp/fb_err";
+    QFile file(filename);
+    if (file.open(QIODevice::ReadWrite)) {
+        QTextStream stream(&file);
+        stream << "errno:" << err << Qt::endl;
+    }
+    file.close()
+
+    if (rv != EXIT_SUCCESS && err == EPERM) {
+        qDebug() << "QPA: Detected framebuffer freeze, attempting to fix ...";
+        unsigned long arg = VESA_NO_BLANKING;
+        if (ioctl(mFbFd, FBIOBLANK, arg) == EXIT_SUCCESS) {
+            rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+        }
+    }
+    if (rv == EXIT_SUCCESS && waitForRefresh) {
+        if (koboDevice->hasReliableMxcWaitFor) {
+            fbink_wait_for_complete(mFbFd, LAST_MARKER);
+        } else {
+            usleep(1000);
+        }
+    }
+```
+Should that do? As I won't be able to see stdout if it's not on USB
+
+
+[6/10/2022 2:29 PM] tux_linux
+Seems to work for now at least
+```
+kindle:/kobo/tmp# cat fb_err 
+errno:0
+kindle:/kobo/tmp# 
+```
+
+
+[6/10/2022 2:44 PM] tux_linux
+Got it to trigger the bug (logs errno but doesn't fix it)
+```
+kindle:/kobo/tmp# cat fb_err 
+errno:5
+kindle:/kobo/tmp#
+```
+
+
+[6/10/2022 2:50 PM] tux_linux
+```
+[FBInk] [refresh_kindle] MXCFB_SEND_UPDATE: Operation not permitted!
+[FBInk] [fbink_cls] Failed to refresh the screen
+```
+
+
+[6/10/2022 3:36 PM] szybet
+so it goes to the if but it isin't applied?
+
+
+[6/10/2022 6:33 PM] ninuje
+Qt is eating the errno with that
+
+
+[6/10/2022 6:33 PM] ninuje
+Nevermind
+
+
+[6/10/2022 6:34 PM] ninuje
+On mobile, screen too tiny ;p
+
+
+[6/10/2022 6:35 PM] ninuje
+That may not be the same codepath, unfamiliar with the qpa
+
+
+[6/10/2022 6:35 PM] ninuje
+But it appears to be an fbink_cls call failing, not that fbink_refresh
+
+
+[6/10/2022 7:18 PM] tux_linux
+Keep in mind that it works after relaunching the qpa
+
+
+[6/10/2022 7:26 PM] szybet
+what
+
+
+[6/10/2022 11:39 PM] ninuje
+Doesn't change the fact that it's https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/blob/212fccb7fc19c32169178f41f087269da9a34a6b/src/kobofbscreen.cpp#L250 that's failing
+
+{Embed}
+https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/blob/212fccb7fc19c32169178f41f087269da9a34a6b/src/kobofbscreen.cpp
+qt5-kobo-platform-plugin/kobofbscreen.cpp at 212fccb7fc19c32169178f...
+A Qt5 platform backend plugin for Kobo and Kindle E-Ink devices. - qt5-kobo-platform-plugin/kobofbscreen.cpp at 212fccb7fc19c32169178f41f087269da9a34a6b · Kobo-InkBox/qt5-kobo-platform-plugin
+/mnt/data/projects/git/conversations/media/qt5-kobo-platform-plugin-F2397
+
+
+[6/10/2022 11:39 PM] ninuje
+Not https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/blob/212fccb7fc19c32169178f41f087269da9a34a6b/src/kobofbscreen.cpp#L297
+
+{Embed}
+https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/blob/212fccb7fc19c32169178f41f087269da9a34a6b/src/kobofbscreen.cpp
+qt5-kobo-platform-plugin/kobofbscreen.cpp at 212fccb7fc19c32169178f...
+A Qt5 platform backend plugin for Kobo and Kindle E-Ink devices. - qt5-kobo-platform-plugin/kobofbscreen.cpp at 212fccb7fc19c32169178f41f087269da9a34a6b · Kobo-InkBox/qt5-kobo-platform-plugin
+/mnt/data/projects/git/conversations/media/qt5-kobo-platform-plugin-F2397
+
+
+[6/10/2022 11:39 PM] ninuje
+(Both need the same trickery)
+
+
+[6/10/2022 11:46 PM] tux_linux
+Hmm okay
+
+
+[6/10/2022 11:47 PM] tux_linux
+So I replace it with the same trick but I change fbink_refresh for fbink_cls?
+
+
+[6/11/2022 7:57 PM] ninuje
+```
+diff --git a/src/kobofbscreen.cpp b/src/kobofbscreen.cpp
+index 8c4d141..7acf13c 100644
+--- a/src/kobofbscreen.cpp
++++ b/src/kobofbscreen.cpp
+@@ -247,10 +247,21 @@ void KoboFbScreen::clearScreen(bool waitForCompleted)
+ {
+     FBInkRect r = {0, 0, static_cast<unsigned short>(mGeometry.width()),
+                    static_cast<unsigned short>(mGeometry.height())};
+-    fbink_cls(mFbFd, &fbink_cfg, &r, true);
+-
+-    if (waitForCompleted && koboDevice->hasReliableMxcWaitFor)
+-        fbink_wait_for_complete(mFbFd, LAST_MARKER);
++    int rv = fbink_cls(mFbFd, &fbink_cfg, &r, true);
++    if (rv != EXIT_SUCCESS && errno == EPERM) {
++        qDebug() << "QPA: Detected framebuffer freeze, attempting to fix ...";
++        unsigned long arg = VESA_NO_BLANKING;
++        if (ioctl(mFbFd, FBIOBLANK, arg) == EXIT_SUCCESS) {
++            rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
++        }
++    }
++    if (rv == EXIT_SUCCESS && waitForCompleted) {
++        if (koboDevice->hasReliableMxcWaitFor) {
++            fbink_wait_for_complete(mFbFd, LAST_MARKER);
++        } else {
++            usleep(1000);
++        }
++    }
+ }
+ 
+ void KoboFbScreen::enableDithering(bool softwareDithering, bool hardwareDithering)
+```
+
+
+[6/11/2022 8:36 PM] tux_linux
+Thanks very much
+
+
+[6/11/2022 8:36 PM] tux_linux
+Will try it out
+
+
+[6/14/2022 2:51 PM] tux_linux
+```
+rv = fbink_refresh(mFbFd, region.top(), region.left(), region.width(), region.height(), &fbink_cfg);
+```
+that line does not compile
+
+
+[6/14/2022 2:52 PM] tux_linux
+probably mixed up the other function and this one?
+
+
+[6/14/2022 3:24 PM] ninuje
+Duh', c/p snafu
+
+
+[6/14/2022 3:24 PM] ninuje
+ought to be `rv = fbink_cls(mFbFd, &fbink_cfg, &r, true);`
+
+{Reactions}
+👍 
+
+[6/14/2022 11:22 PM] tux_linux
+Changed the channel name: Kindle Touch (KT)
+
+
+[6/15/2022 1:56 PM] tux_linux
+It strangely doesn't seem to work
+I will test it more thoroughly today
+
+
+[6/18/2022 2:49 PM] tux_linux
+Now it's spamming this
+```
+Framebuffer: Detected HW freeze
+[FBInk] Discarding bogus empty region (23x1) to avoid a softlock!
+[FBInk] [fbink_refresh] Failed to refresh the screen!
+```
+
+
+[6/20/2022 11:43 PM] tux_linux
+@NiLuJe any idea why InkVT segfaults on the Kindle when OSK is enabled? I have changed the input device to `/dev/input/event2` in any part I could, but no dice...
+It works fine without OSK
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-2B3F1.txt
+
+
+[6/21/2022 12:30 AM] ninuje
+Never been tested on a Kindle
+
+
+[6/21/2022 12:30 AM] ninuje
+I'm guessing it's an OOB write in the OSK
+
+
+[6/21/2022 12:30 AM] ninuje
+(screen too small)
+
+
+[6/21/2022 12:31 AM] ninuje
+IIRC, it crashes on small kobo screens, too
+
+
+[6/21/2022 12:32 AM] ninuje
+Get a gdb backtrace to confirm
+
+
+[6/21/2022 12:32 AM] tux_linux
+But it works on Kobo Touch
+
+
+[6/21/2022 12:32 AM] tux_linux
+ok
+
+
+[6/21/2022 12:40 AM] tux_linux
+compiling gdb, will be back in... some time™️
+
+
+[6/21/2022 12:54 AM] the.mightydill
+compiling >:(
+
+
+[6/21/2022 12:55 AM] the.mightydill
+whenever i hear that word...
+
+
+[6/21/2022 12:55 AM] the.mightydill
+i am traumatized
+
+
+[6/21/2022 3:51 AM] tux_linux
+```
+(gdb) run -c /bin/sh --osk
+Starting program: /tmp/inkvt.armhf -c /bin/sh --osk
+opened `/dev/input/event2`
+[FBInk] Detected a Kindle Touch (0x11 => Whitney on Yoshi)
+[FBInk] Enabled Kindle with Pearl screen quirks
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 167 dpi
+[FBInk] Variable fb info: 600x800, 8bpp @ rotation: 1 (Clockwise, 90°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 2179072 bytes & line length: 608 bytes
+[FBInk] Fontsize set to 16x32 (Terminus base glyph size: 8x16)
+[FBInk] Line length: 37 cols, Page size: 25 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00016114 in osk_setup(unsigned int, unsigned int) ()
+(gdb)
+```
+
+
+[6/21/2022 3:56 AM] tux_linux
+Any fix possible?
+
+
+[6/21/2022 4:02 AM] tux_linux
+Everything is working except that
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220621_020153539-47F67.jpg
+
+
+[6/21/2022 4:51 AM] tux_linux
+Hm ok
+doesn't work on Kobo Touch either
+I don't know where I took that memory
+
+
+[6/21/2022 12:46 PM] ninuje
+`bt full`
+
+{Reactions}
+👍 
+
+[6/21/2022 12:46 PM] ninuje
+But IIRC it's just a space constraint issue
+
+
+[6/21/2022 1:53 PM] szybet
+You mean htop?
+
+
+[6/21/2022 2:04 PM] tux_linux
+No, the Kindle itself with inkvt
+
+
+[6/21/2022 2:04 PM] tux_linux
+The keyboard doesn't work
+
+
+[6/21/2022 2:06 PM] szybet
+Weird
+
+
+[6/21/2022 8:57 PM] tux_linux
+@NiLuJe here's everything
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-7414B.txt
+
+
+[6/21/2022 9:08 PM] ninuje
+`x = 2147483645`
+
+
+[6/21/2022 9:08 PM] ninuje
+Yup, overflow
+
+
+[6/21/2022 9:09 PM] tux_linux
+Thanks
+Any fix/ideas?
+
+
+[6/21/2022 9:09 PM] ninuje
+Smaller blocks, can't recall the code
+
+
+[6/21/2022 9:10 PM] tux_linux
+In there? https://github.com/NiLuJe/inkvt/blob/master/src/kblayout.py
+
+
+[6/21/2022 9:15 PM] ninuje
+nope
+
+
+[6/21/2022 9:15 PM] ninuje
+OSK_W / OSK_H in _kblayout.hpp
+
+
+[6/21/2022 9:15 PM] ninuje
+width / height in rounded_rect.hpp
+
+{Reactions}
+👍 
+
+[6/21/2022 9:20 PM] tux_linux
+But it will segfault if I change the number of keys right?
+
+
+[6/21/2022 9:20 PM] tux_linux
+(OSK_W/OSK_H)
+
+
+[6/21/2022 9:20 PM] ninuje
+No idea, I didn't write that, and i'm wholly unfamiliar with it
+
+
+[6/21/2022 9:21 PM] tux_linux
+Because
+```
+diff --git a/src/rounded_rect.hpp b/src/rounded_rect.hpp
+index 6ef728f..d8e3bb5 100644
+--- a/src/rounded_rect.hpp
++++ b/src/rounded_rect.hpp
+@@ -22,8 +22,8 @@ class RoundedRect {
+ public:
+     uint8_t * dst = nullptr;
+     uint8_t bpp = 1u; // BPP: Y YA RGB RGBA
+-    unsigned int width = 30u;
+-    unsigned int height = 30u;
++    unsigned int width = 20u;
++    unsigned int height = 20u;
+     float radius = 6.f;
+     float spacing = 10.f;
+     uint8_t color = 0xCCu;
+```
+And I still get a segfault
+Well, ok, thanks for helping still
+
+
+==============================================================
+Exported 686 message(s)
+==============================================================

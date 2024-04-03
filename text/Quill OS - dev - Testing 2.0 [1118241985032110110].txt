@@ -1,0 +1,4051 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / dev / Testing 2.0
+==============================================================
+
+[6/13/2023 8:14 PM] tux_linux
+Hello
+
+
+[6/13/2023 8:14 PM] szybet
+usb added books dont appear
+
+
+[6/13/2023 8:14 PM] szybet
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+
+{Embed}
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+/mnt/data/projects/git/conversations/media/crying-emoji-dies-70A6D.png
+
+
+[6/13/2023 8:15 PM] tux_linux
+Wdym
+
+
+[6/13/2023 8:15 PM] tux_linux
+Sometimes it is epubtool's fault
+
+
+[6/13/2023 8:16 PM] tux_linux
+Does it say "no books found on your device"?
+
+
+[6/13/2023 8:16 PM] szybet
+```
+% ls
+ls: cannot access 'learn': Input/output error
+ls: cannot access 'fun-fun': Input/output error
+ls: cannot access 'screensaver': Input/output error
+Bismarck.70943.epub  fun-fun  learn  screensaver
+20:16 szybet@hyperbookszyb /run/media/szybet/InkBox
+% rm -rf fun-fun learn screensaver
+rm: cannot remove 'fun-fun': Read-only file system
+rm: cannot remove 'learn': Read-only file system
+rm: cannot remove 'screensaver': Read-only file system
+20:16 szybet@hyperbookszyb /run/media/szybet/InkBox
+% sudo rm -rf fun-fun learn screensaver
+[sudo] password for szybet: 
+rm: cannot remove 'fun-fun': Read-only file system
+rm: cannot remove 'learn': Read-only file system
+rm: cannot remove 'screensaver': Read-only file system
+20:16 szybet@hyperbookszyb /run/media/szybet/InkBox
+% 
+
+
+```
+
+
+[6/13/2023 8:16 PM] szybet
+i mounted it one more time
+
+
+[6/13/2023 8:16 PM] szybet
+oh no
+
+
+[6/13/2023 8:16 PM] tux_linux
+what did you do
+
+
+[6/13/2023 8:17 PM] szybet
+upload them
+
+
+[6/13/2023 8:17 PM] tux_linux
+start usb mass storage while ssh was in /data/onboard?
+
+
+[6/13/2023 8:17 PM] szybet
+no
+
+
+[6/13/2023 8:17 PM] szybet
+wifi off
+
+
+[6/13/2023 8:17 PM] szybet
+i unmounted them in dolphin
+
+
+[6/13/2023 8:17 PM] szybet
+maybe it wasn't enough
+
+
+[6/13/2023 8:17 PM] tux_linux
+ok..
+
+
+[6/13/2023 8:17 PM] tux_linux
+`eject /dev/sdx`?
+
+
+[6/13/2023 8:17 PM] tux_linux
+`sync`?
+
+
+[6/13/2023 8:18 PM] szybet
+well how do i repair this now
+
+
+[6/13/2023 8:18 PM] tux_linux
+i/o error?
+
+
+[6/13/2023 8:18 PM] szybet
+its read only
+
+
+[6/13/2023 8:18 PM] szybet
+i dont see those books in shell via serial
+
+
+[6/13/2023 8:18 PM] tux_linux
+mkfs.vfat /dev/sdx
+
+
+[6/13/2023 8:18 PM] tux_linux
+shouldn't be too harmful
+
+
+[6/13/2023 8:19 PM] szybet
+oh ok
+
+
+[6/13/2023 8:19 PM] szybet
+makes sense
+
+
+[6/13/2023 8:21 PM] szybet
+well sleeping while its connected is bad
+
+
+[6/13/2023 8:21 PM] szybet
+another thing
+
+
+[6/13/2023 8:21 PM] tux_linux
+??
+
+
+[6/13/2023 8:22 PM] szybet
+idle sleep
+
+
+[6/13/2023 8:22 PM] tux_linux
+isn't it supposed to disconnect automatically?
+
+
+[6/13/2023 8:22 PM] szybet
+IPD sleeping
+
+
+[6/13/2023 8:22 PM] szybet
+while its connected via usb
+
+
+[6/13/2023 8:22 PM] tux_linux
+oh
+
+
+[6/13/2023 8:22 PM] tux_linux
+ouch
+
+
+[6/13/2023 8:22 PM] szybet
+i can fix that
+
+
+[6/13/2023 8:23 PM] tux_linux
+which way
+
+
+[6/13/2023 8:23 PM] szybet
+any easy way for me to detect if its connected?
+
+
+[6/13/2023 8:23 PM] szybet
+?????????????? disable sleeping while its connected?
+
+
+[6/13/2023 8:23 PM] tux_linux
+well yes, but how do you know when it's in usbms and it's connected
+
+
+[6/13/2023 8:23 PM] szybet
+i'm asking you that
+
+
+[6/13/2023 8:23 PM] tux_linux
+ok
+
+
+[6/13/2023 8:24 PM] tux_linux
+well
+
+
+[6/13/2023 8:24 PM] szybet
+i will maybe just create a file
+
+
+[6/13/2023 8:24 PM] tux_linux
+just look up the loaded modules list
+
+
+[6/13/2023 8:24 PM] tux_linux
+no
+
+
+[6/13/2023 8:24 PM] szybet
+arent they loaded all the time?
+
+
+[6/13/2023 8:24 PM] tux_linux
+if you find g_mass_storage it's in usbms
+
+
+[6/13/2023 8:24 PM] tux_linux
+no
+
+
+[6/13/2023 8:24 PM] tux_linux
+can't coexist with usbnet
+
+
+[6/13/2023 8:26 PM] szybet
+after i formated it & recconected, the old gutenberg book appeared
+
+
+[6/13/2023 8:26 PM] szybet
+interesting
+
+
+[6/13/2023 8:26 PM] tux_linux
+it happens
+
+
+[6/13/2023 8:26 PM] szybet
+how
+
+
+[6/13/2023 8:26 PM] tux_linux
+it just happens, idk??
+
+
+[6/13/2023 8:26 PM] szybet
+cool
+
+
+[6/13/2023 8:26 PM] tux_linux
+i'm not even surprised
+
+
+[6/13/2023 8:26 PM] szybet
+ghost books
+
+
+[6/13/2023 8:26 PM] tux_linux
+yes
+
+
+[6/13/2023 8:26 PM] szybet
+its a feature, not a bug
+
+
+[6/13/2023 8:27 PM] tux_linux
+yes
+
+
+[6/13/2023 8:27 PM] szybet
+i'm not able to upload books via usb at all
+
+
+[6/13/2023 8:28 PM] tux_linux
+what's the problem
+
+
+[6/13/2023 8:28 PM] szybet
+books don't appear in onboard
+
+
+[6/13/2023 8:28 PM] szybet
+at all
+
+
+[6/13/2023 8:28 PM] szybet
+i unmounted, tryied sync a few times, nothing
+
+
+[6/13/2023 8:28 PM] tux_linux
+did you have an ssh session in /data/onboard
+
+
+[6/13/2023 8:30 PM] szybet
+same io error as before
+
+
+[6/13/2023 8:30 PM] szybet
+no
+
+
+[6/13/2023 8:30 PM] tux_linux
+delete onboard in /data/storage and recreate it
+
+
+[6/13/2023 8:30 PM] tux_linux
+```
+dd if=/dev/zero of=/data/storage/onboard bs=1M count=128
+mkfs.vfat /data/storage/onboard
+```
+
+
+[6/13/2023 8:30 PM] tux_linux
+this will create a 128m onboard storage space
+
+
+[6/13/2023 8:31 PM] szybet
+i will try it via PC, otherwise we need an option in settings to restore this
+
+
+[6/13/2023 8:31 PM] tux_linux
+it already exists
+
+
+[6/13/2023 8:31 PM] tux_linux
+settings->reset
+
+
+[6/13/2023 8:31 PM] tux_linux
+calls soft-reset.sh script from recoveryfs
+
+
+[6/13/2023 8:31 PM] szybet
+it does that?
+
+
+[6/13/2023 8:31 PM] szybet
+okay
+
+
+[6/13/2023 8:31 PM] tux_linux
+it should
+
+
+[6/13/2023 8:32 PM] tux_linux
+https://github.com/Kobo-InkBox/recoveryfs/blob/master/opt/recovery/scripts/soft-reset.sh
+
+{Embed}
+https://github.com/Kobo-InkBox/recoveryfs/blob/master/opt/recovery/scripts/soft-reset.sh
+recoveryfs/opt/recovery/scripts/soft-reset.sh at master · Kobo-InkB...
+InkBox OS recovery filesystem base. Contribute to Kobo-InkBox/recoveryfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/recoveryfs-186F0
+
+
+[6/13/2023 8:33 PM] tux_linux
+https://github.com/Kobo-InkBox/inkbox/blob/20b6f7231a2432234fd5b8c785d0c693b48d3fea/src/widgets/dialogs/generaldialog.cpp#L299-L310
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/blob/20b6f7231a2432234fd5b8c785d0c693b48d3fea/src/widgets/dialogs/generaldialog.cpp
+inkbox/src/widgets/dialogs/generaldialog.cpp at 20b6f7231a2432234fd...
+An open-source, Qt-based eBook reader for Kobos (and other devices). - inkbox/src/widgets/dialogs/generaldialog.cpp at 20b6f7231a2432234fd5b8c785d0c693b48d3fea · Kobo-InkBox/inkbox
+/mnt/data/projects/git/conversations/media/inkbox-AA2A2
+
+
+[6/13/2023 8:33 PM] szybet
+recoveryfs was never launched on the nia
+
+
+[6/13/2023 8:33 PM] szybet
+;D
+
+
+[6/13/2023 8:33 PM] tux_linux
+well
+
+
+[6/13/2023 8:33 PM] tux_linux
+try it
+
+
+[6/13/2023 8:34 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230613_203422-6E568.jpg
+
+
+[6/13/2023 8:34 PM] szybet
+you requested
+
+
+[6/13/2023 8:34 PM] tux_linux
+well it looks ok
+
+
+[6/13/2023 8:35 PM] szybet
+cursed scroll bar
+
+
+[6/13/2023 8:35 PM] tux_linux
+on touch n905b it initially said "Width: - Width: 450 +"
+
+
+[6/13/2023 8:35 PM] szybet
+doesnt make sense
+
+
+[6/13/2023 8:36 PM] tux_linux
+yea
+
+
+[6/13/2023 8:36 PM] szybet
+anyway, widgetwrap is something you look for
+
+
+[6/13/2023 8:36 PM] tux_linux
+?
+
+
+[6/13/2023 8:37 PM] szybet
+```
+ * Device is rooted; not enforcing security policy
+ * Boot mode: Diagnostics
+Verifying recovery filesystem's digital signature ...
+Done.
+ * Mounted base recovery filesystem
+ * Mounted essential filesystems
+[   36.500765] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   36.508275] squashfs: SQUASHFS error: unable to read xattr id index table
+ * Mounted SquashFS archives
+Coming from factory firmware; not showing diagnostics splash
+[   37.661960] EXT3-fs (mmcblk0p4): error: couldn't mount because of unsupported optional featu
+res (2c0)
+[   37.678836] EXT2-fs (mmcblk0p4): error: couldn't mount because of unsupported optional featu
+res (2c0)
+[   68.778307] EXT3-fs (mmcblk0p4): error: couldn't mount because of unsupported optional featu
+res (2c0)
+[   68.789797] EXT2-fs (mmcblk0p4): error: couldn't mount because of unsupported optional featu
+res (2c0)
+[   69.453154] EXT3-fs (mmcblk0p3): error: couldn't mount because of unsupported optional featu
+res (2c0)
+[   69.464026] EXT2-fs (mmcblk0p3): error: couldn't mount because of unsupported optional featu
+res (2c0)
+```
+
+
+[6/13/2023 8:37 PM] szybet
+qt option
+
+
+[6/13/2023 8:37 PM] szybet
+qt option
+
+
+[6/13/2023 8:38 PM] tux_linux
+it works
+
+
+[6/13/2023 8:38 PM] tux_linux
+it's just saying it can't mount fs as ext2 or ext3 because it has ext4 features
+
+
+[6/13/2023 8:38 PM] szybet
+screen is blank and nothing more happens?
+
+
+[6/13/2023 8:38 PM] tux_linux
+oh
+
+
+[6/13/2023 8:38 PM] szybet
+XD
+
+
+[6/13/2023 8:38 PM] tux_linux
+you have to wait a bit more?
+
+
+[6/13/2023 8:38 PM] tux_linux
+usually 45s?
+
+
+[6/13/2023 8:38 PM] szybet
+serial shell appeared
+
+
+[6/13/2023 8:38 PM] szybet
+i can log in
+
+
+[6/13/2023 8:38 PM] tux_linux
+look at the screen
+
+
+[6/13/2023 8:38 PM] szybet
+blank
+
+
+[6/13/2023 8:38 PM] tux_linux
+top -d 0.5
+
+
+[6/13/2023 8:39 PM] tux_linux
+or ps
+
+
+[6/13/2023 8:39 PM] tux_linux
+now
+
+
+[6/13/2023 8:39 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-FE3EA.txt
+
+
+[6/13/2023 8:40 PM] tux_linux
+did you click 'reset' button?
+
+
+[6/13/2023 8:40 PM] szybet
+yes?
+
+
+[6/13/2023 8:40 PM] szybet
+what otherwise
+
+
+[6/13/2023 8:40 PM] tux_linux
+ok will try on mine
+
+
+[6/13/2023 8:40 PM] szybet
+dont rush with 2.0, as you see
+
+
+[6/13/2023 8:41 PM] szybet
+we need to test almost a year of work
+
+
+[6/13/2023 8:41 PM] szybet
+and dont be frustrated and pesymistic
+
+
+[6/13/2023 8:41 PM] tux_linux
+ok starting
+
+
+[6/13/2023 8:43 PM] tux_linux
+is your power led still flashing
+
+
+[6/13/2023 8:44 PM] szybet
+yep
+
+
+[6/13/2023 8:44 PM] tux_linux
+ok
+
+
+[6/13/2023 8:44 PM] tux_linux
+it still theoretically writes 512m to flash
+
+
+[6/13/2023 8:44 PM] tux_linux
+so might take some time?
+
+
+[6/13/2023 8:44 PM] szybet
+ok then
+
+
+[6/13/2023 8:44 PM] szybet
+i'm taking a pause
+
+
+[6/13/2023 8:44 PM] szybet
+will be back in 30 minutes
+
+
+[6/13/2023 8:44 PM] tux_linux
+ok
+
+
+[6/13/2023 8:44 PM] tux_linux
+np
+
+
+[6/13/2023 8:45 PM] szybet
+maybe you will be faster giving me permissions to gui bundle than me changing remote url :D
+
+
+[6/13/2023 8:45 PM] tux_linux
+you should have submitted a patch
+
+
+[6/13/2023 8:45 PM] tux_linux
+it would already have been applied
+
+
+[6/13/2023 8:45 PM] tux_linux
+also i think you already have permissions
+
+
+[6/13/2023 8:46 PM] szybet
+noo to lazy
+
+
+[6/13/2023 8:46 PM] tux_linux
+change remote url to gitlab one
+
+
+[6/13/2023 8:46 PM] szybet
+github.
+
+
+[6/13/2023 8:46 PM] tux_linux
+no because github doesn't mirror itself
+
+
+[6/13/2023 8:46 PM] tux_linux
+i need to do it manually otherwise
+
+
+[6/13/2023 8:50 PM] tux_linux
+it's doing nothing
+
+
+[6/13/2023 8:51 PM] tux_linux
+will try to fix it
+
+
+[6/13/2023 8:51 PM] tux_linux
+meanwhile try to see if you can actually boot in diags in your device by clicking the power button multiple times at boot once the kernel has started
+
+
+[6/13/2023 9:21 PM] szybet
+OKay
+
+
+[6/13/2023 9:22 PM] szybet
+the diode is still blinking after 30 minutes, nothing happened
+
+
+[6/13/2023 9:22 PM] tux_linux
+yea
+
+
+[6/13/2023 9:22 PM] tux_linux
+idk
+
+
+[6/13/2023 9:23 PM] szybet
+not really, i cant
+
+
+[6/13/2023 9:23 PM] tux_linux
+wdym
+
+
+[6/13/2023 9:24 PM] szybet
+nothing happens
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C290D.txt
+
+
+[6/13/2023 9:25 PM] tux_linux
+it doesn't detect power button?
+
+
+[6/13/2023 9:25 PM] szybet
+nothing happens
+
+
+[6/13/2023 9:25 PM] szybet
+so it doesnt
+
+
+[6/13/2023 9:25 PM] tux_linux
+did you keep hitting it for at least 10s?
+
+
+[6/13/2023 9:26 PM] szybet
+yep
+
+
+[6/13/2023 9:26 PM] szybet
+how can i exit oob without setting any option
+
+
+[6/13/2023 9:26 PM] tux_linux
+you can't
+
+
+[6/13/2023 9:26 PM] szybet
+i just did
+
+
+[6/13/2023 9:26 PM] tux_linux
+it sets options anyway
+
+
+[6/13/2023 9:26 PM] tux_linux
+even if you don't click on anything
+
+
+[6/13/2023 9:26 PM] szybet
+okay
+
+
+[6/13/2023 9:27 PM] szybet
+nevermind thwen
+
+
+[6/13/2023 9:31 PM] szybet
+usb upload now worked
+
+
+[6/13/2023 9:31 PM] szybet
+after the reset
+
+
+[6/13/2023 9:31 PM] szybet
+but reset didn't worked
+
+
+[6/13/2023 9:31 PM] szybet
+hm hm hm
+
+
+[6/13/2023 9:31 PM] szybet
+anyway
+
+
+[6/13/2023 9:31 PM] tux_linux
+it's a tie
+
+
+[6/13/2023 9:31 PM] szybet
+dolphin unmount is fucking stupid and doesnt work
+
+
+[6/13/2023 9:31 PM] szybet
+i did now from the terminal
+
+
+[6/13/2023 9:32 PM] szybet
+https://tenor.com/view/dripdog-gif-21901721
+
+{Embed}
+https://tenor.com/view/dripdog-gif-21901721
+/mnt/data/projects/git/conversations/media/dripdog-F580E.png
+
+
+[6/13/2023 9:32 PM] szybet
+tie what
+
+
+[6/13/2023 9:34 PM] tux_linux
+expression
+
+
+[6/13/2023 9:42 PM] szybet
+```
+kobo:~# [  932.004462] Out of memory: Kill process 2909 (inkbox-bin) score 138 or sacrifice chi
+ld
+[  932.012401] Killed process 3023 (sh) total-vm:2304kB, anon-rss:64kB, file-rss:4kB
+[  932.031358] Out of memory: Kill process 2909 (inkbox-bin) score 138 or sacrifice child
+[  932.039575] Killed process 3017 (sh) total-vm:2304kB, anon-rss:24kB, file-rss:0kB
+[  932.061397] Out of memory: Kill process 2909 (inkbox-bin) score 138 or sacrifice child
+[  932.069624] Killed process 2909 (inkbox-bin) total-vm:119428kB, anon-rss:35584kB, file-rss:0
+kB
+```
+
+
+[6/13/2023 9:42 PM] szybet
+welp, my rust programming books dont work
+
+
+[6/13/2023 9:44 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Rust_By_Example-54297.epub
+
+
+[6/13/2023 9:44 PM] szybet
+small book
+
+
+[6/13/2023 9:45 PM] tux_linux
+oom?
+
+
+[6/13/2023 9:45 PM] szybet
+```
+[ 1123.641993] Out of memory: Kill process 3571 (mutool) score 413 or sacrifice child
+[ 1123.677774] Killed process 3571 (mutool) total-vm:142132kB, anon-rss:106484kB, file-rss:4kB
+```
+
+
+[6/13/2023 9:45 PM] szybet
+weird
+
+
+[6/13/2023 9:45 PM] szybet
+i dont run out of memory
+
+
+[6/13/2023 9:46 PM] szybet
+any ideas?
+
+
+[6/13/2023 9:46 PM] tux_linux
+no
+
+
+[6/13/2023 9:54 PM] szybet
+`/kobo/inkbox/book/split/` is empty
+
+
+[6/13/2023 9:54 PM] szybet
+whatever i wont debug this anymore
+
+
+[6/13/2023 9:54 PM] tux_linux
+why
+
+
+[6/13/2023 9:54 PM] szybet
+i will write one myself
+
+
+[6/13/2023 9:55 PM] tux_linux
+yes but not now
+
+
+[6/13/2023 9:55 PM] tux_linux
+then it's probably mutool's fault
+something it doesn't like in the book
+
+
+[6/13/2023 10:02 PM] szybet
+```
+kobo:/mnt/onboard/onboard/learn/programowanie# mutool convert -o /inkbox/book/sp
+lit/page_%04d.html Rust\ By\ Example.epub
+error: cannot fwrite: No space left on device
+error: cannot fwrite: No space left on device
+error: aborting process from uncaught error!
+kobo:/mnt/onboard/onboard/learn/programowanie# 
+```
+
+
+[6/13/2023 10:02 PM] szybet
+how
+
+
+[6/13/2023 10:03 PM] szybet
+the book is 400 Kb
+
+
+[6/13/2023 10:04 PM] szybet
+i did the same on pc - mutool is broken on inkbox
+
+
+[6/13/2023 10:17 PM] szybet
+epub - txt - pdf work as normal
+
+
+[6/13/2023 10:36 PM] tux_linux
+`watch -n 0.1 ls -shal /inkbox/book/split`
+
+
+[6/13/2023 10:36 PM] szybet
+on pc the command worked on inkbox it did not
+
+
+[6/13/2023 10:36 PM] szybet
+it overflows
+
+
+[6/13/2023 10:36 PM] szybet
+we need to update mutool for 2.1, thats it
+
+
+[6/13/2023 10:37 PM] tux_linux
+we can update it now
+
+
+[6/13/2023 10:37 PM] tux_linux
+no guarantee it will solve the problem
+
+
+[6/13/2023 10:37 PM] tux_linux
+it will probably create new ones
+
+
+[6/13/2023 10:37 PM] szybet
+leave it
+
+
+[6/13/2023 10:37 PM] szybet
+we fix things but not such big ones
+
+
+[6/13/2023 10:37 PM] tux_linux
+ok
+
+
+[6/13/2023 10:37 PM] szybet
+also its only for the rust books
+
+
+[6/13/2023 10:38 PM] szybet
+i will fix ipd not responding to clicks - happened to me too
+
+
+[6/13/2023 10:38 PM] tux_linux
+good
+
+
+[6/13/2023 10:38 PM] tux_linux
+what was the cause of the problem
+
+
+[6/13/2023 10:42 PM] szybet
+https://tenor.com/view/i-have-no-idea-tf2-medic-confused-gif-20537508
+
+{Embed}
+https://tenor.com/view/i-have-no-idea-tf2-medic-confused-gif-20537508
+/mnt/data/projects/git/conversations/media/i-have-no-idea-tf2-8A7E4.png
+
+
+[6/13/2023 10:42 PM] tux_linux
+well what was the fix
+
+
+[6/13/2023 10:42 PM] szybet
+*i will*
+
+
+[6/13/2023 10:43 PM] tux_linux
+ok
+
+
+[6/13/2023 10:45 PM] tux_linux
+if you do `echo true > /boot/flags/DIAGS_BOOT` and reboot, does it boot in diags?
+
+
+[6/13/2023 10:46 PM] szybet
+trying it
+
+
+[6/13/2023 10:47 PM] szybet
+#bot
+
+
+[6/13/2023 10:48 PM] szybet
+diags booted
+
+
+[6/13/2023 10:48 PM] tux_linux
+ok
+
+
+[6/13/2023 10:49 PM] szybet
+diags is available only in rooted kernel?
+
+
+[6/13/2023 10:49 PM] szybet
+also what diffrence is hard soft reset
+
+
+[6/13/2023 10:50 PM] tux_linux
+no
+
+
+[6/13/2023 10:50 PM] szybet
+and its diffrent than on the nia c
+
+
+[6/13/2023 10:50 PM] szybet
+there is an option to root the device
+
+
+[6/13/2023 10:50 PM] tux_linux
+hard restores entire system
+original f/w version
+
+
+[6/13/2023 10:50 PM] tux_linux
+for devices that shipped with 1.5 it restores 1.5 even if they were on 1.9
+
+
+[6/13/2023 10:50 PM] tux_linux
+?
+
+
+[6/13/2023 10:51 PM] szybet
+allow root access
+
+
+[6/13/2023 10:52 PM] tux_linux
+there is an option to root the device
+*if you reset it*
+
+
+[6/13/2023 10:53 PM] tux_linux
+it wipes everything, restores original fw and roots the device
+
+
+[6/13/2023 10:53 PM] szybet
+um okay
+
+
+[6/13/2023 10:53 PM] szybet
+from where does it get a rooted kernel
+
+
+[6/13/2023 10:53 PM] tux_linux
+from `/opt/recovery/restore`
+
+
+[6/13/2023 10:53 PM] tux_linux
+factory kernels are stored there
+
+
+[6/13/2023 10:53 PM] tux_linux
+matching original fw
+
+
+[6/13/2023 10:53 PM] szybet
+okay so... cool
+
+
+[6/13/2023 10:54 PM] szybet
+how many times did i needed to explain people how to root
+
+
+[6/13/2023 10:54 PM] szybet
+and there is an option for that
+
+
+[6/13/2023 10:54 PM] szybet
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+
+{Embed}
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+/mnt/data/projects/git/conversations/media/crying-emoji-dies-70A6D.png
+
+
+[6/13/2023 10:54 PM] tux_linux
+well i'm not sure writing 3.6G to the SD twice is a good idea either
+
+
+[6/13/2023 10:54 PM] szybet
+nah :D
+
+
+[6/13/2023 10:54 PM] szybet
+but what
+
+
+[6/13/2023 10:54 PM] szybet
+how
+
+
+[6/13/2023 10:54 PM] tux_linux
+?
+
+
+[6/13/2023 10:55 PM] szybet
+recompiling kernel
+
+
+[6/13/2023 10:55 PM] szybet
+not this
+
+
+[6/13/2023 10:55 PM] tux_linux
+yes, the recovery process makes the device write the whole original f/w to rootfs, user and boot partitions
+
+
+[6/13/2023 10:55 PM] tux_linux
+from tar.xz or squashfs archives stored in recoveryfs
+
+
+[6/13/2023 10:55 PM] tux_linux
+recoveryfs stays intact
+
+
+[6/13/2023 10:56 PM] tux_linux
+they can grab the root kernel from update packages if they are on a fixed release
+
+
+[6/13/2023 10:56 PM] szybet
+oh okay
+
+
+[6/13/2023 10:56 PM] szybet
+cool
+
+
+[6/13/2023 11:00 PM] tux_linux
+```
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 3.0.35-inkbox (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Setting up eInk screen blanking recovery system ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+ [ ok ]
+ * Starting USBNet ... [ ok ]
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Starting InkBox Power Daemon (ipd) ... [ ok ]
+ * Starting battery watchdog ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Checking for available updates ...Update skipped or no update available, aborting ...
+ [ ok ]
+ * Starting InkBox GUI ... * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * WARNING: you are stopping a sysinit service
+ * Stopping udev ... [ ok ]
+ * Starting udev ... [ ok ]
+[  124.384082] udevd[2848]: error opening ATTR{/sys/devices/platform/gpio-keys/input/input0/event0/enabled} for writing: No such file or directory
+[  124.442823] udevd[2848]: error opening ATTR{/sys/devices/platform/gpio-keys/input/input0/event0/authorized} for writing: No such file or directory
+[  124.975000] udevd[2851]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: No such file or directory
+[  125.050218] udevd[2851]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: No such file or directory
+ * Setting up GUI user applications
+ [ ok ]
+ [ ok ]
+```
+This just came from nowhere??
+
+
+[6/13/2023 11:01 PM] szybet
+what
+
+
+[6/13/2023 11:01 PM] szybet
+udev?
+
+
+[6/13/2023 11:01 PM] tux_linux
+yes
+
+
+[6/13/2023 11:01 PM] szybet
+its normal
+
+
+[6/13/2023 11:01 PM] tux_linux
+ok
+
+
+[6/13/2023 11:01 PM] szybet
+we blocked access to these devices
+
+
+[6/13/2023 11:01 PM] tux_linux
+for which reason
+
+
+[6/13/2023 11:02 PM] szybet
+event0 - ipd manages
+even1 - we use evdev handler which worked good and no reason to change it
+
+
+[6/13/2023 11:02 PM] szybet
+evdev != udev
+
+
+[6/13/2023 11:02 PM] tux_linux
+ok
+
+
+[6/13/2023 11:02 PM] tux_linux
+i will trust you
+
+
+[6/13/2023 11:03 PM] szybet
+i use feathernotes at school with usb & touch for the past 3 months
+
+{Reactions}
+👍 
+
+[6/13/2023 11:03 PM] szybet
+it works ***good***
+
+
+[6/13/2023 11:03 PM] tux_linux
+you don't have a video for it yet?
+
+
+[6/13/2023 11:03 PM] tux_linux
+yt awaits
+
+
+[6/13/2023 11:03 PM] szybet
+i have
+
+
+[6/13/2023 11:04 PM] szybet
+I can record a new one
+
+
+[6/13/2023 11:04 PM] szybet
+hardware changed / software a bit
+
+{Reactions}
+👍 
+
+[6/13/2023 11:04 PM] szybet
+remind me when we will be at this stage of 2.0
+
+{Reactions}
+👍 
+
+[6/13/2023 11:46 PM] tux_linux
+ok so there's diags
+and the restore thing
+
+
+[6/13/2023 11:52 PM] szybet
+ipd was: lockscreen, sometimes not working, something more?
+
+
+[6/13/2023 11:52 PM] tux_linux
+yes
+
+
+[6/13/2023 11:52 PM] szybet
+oh usb mass storage
+
+
+[6/13/2023 11:52 PM] szybet
+okay
+
+
+[6/13/2023 11:52 PM] tux_linux
+yes
+
+
+[6/13/2023 11:52 PM] szybet
+i need a programming duck
+
+
+[6/13/2023 11:52 PM] tux_linux
+yes
+
+{Reactions}
+😄 
+
+[6/13/2023 11:53 PM] tux_linux
+*crab
+
+
+[6/13/2023 11:53 PM] szybet
+HMMMMMMMMM
+
+
+[6/13/2023 11:53 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rust_programming_crab_sea-451C4.png
+
+
+[6/13/2023 11:53 PM] szybet
+there is no to buy...
+
+
+[6/13/2023 11:53 PM] szybet
+i will print one
+
+{Reactions}
+👍 
+
+[6/13/2023 11:54 PM] tux_linux
+https://www.etsy.com/ca/listing/1278192093/rust-orange-crab-mascot-ferris-crocheted
+
+{Embed}
+https://www.etsy.com/ca/listing/1278192093/rust-orange-crab-mascot-ferris-crocheted
+Rust Orange Crab Mascot Ferris Crocheted Cotton-made Plush - Etsy C...
+Cute orange crab amigurumi plush handmade crocheted with 100% quality cotton yarns  Inspired by Ferris the crab mascot of the RUST computer programming software  Open source universe, software, computer, geek  Ideal gift for computer scientists, students, geeks etc  Decorative plush not considered a
+
+
+[6/13/2023 11:54 PM] szybet
+nice
+
+
+[6/13/2023 11:55 PM] tux_linux
+https://www.cgtrader.com/free-3d-print-models/art/other/ferris-the-crab
+
+{Embed}
+https://www.cgtrader.com/free-3d-print-models/art/other/ferris-the-crab
+Ferris the crab | 3D Print Model
+Model available for download in OBJ format. Visit CGTrader and browse more than 1 million 3D models, including 3D print and real-time assets
+/mnt/data/projects/git/conversations/media/ferris-the-crab-3d-model-obj-stl-gltf-84482.jpg
+
+
+[6/13/2023 11:55 PM] tux_linux
+https://www.printables.com/en/model/378220-ferris-the-rust-mascot#preview
+
+{Embed}
+https://www.printables.com/en/model/378220-ferris-the-rust-mascot
+Ferris the Rust mascot by svenstaro | Download free STL model | Pri...
+Ferris the cute crustacean | Download free 3D printable STL models
+/mnt/data/projects/git/conversations/media/pxl_20230210_021721886night-A09D9.jpg
+
+
+[6/13/2023 11:56 PM] szybet
+yeee i see
+
+
+[6/14/2023 12:26 AM] szybet
+lockscreen works
+
+
+[6/14/2023 12:26 AM] szybet
+usbms and ipd work
+
+
+[6/14/2023 12:27 AM] tux_linux
+good
+
+
+[6/14/2023 12:57 AM] szybet
+the last issue i found: sometimes thumnails get a .t extension and they cant be found - after deleting .t at the end it starts to work
+
+
+[6/14/2023 12:57 AM] szybet
+what...
+
+
+[6/14/2023 1:13 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230614_131141-7B452.jpg
+
+
+[6/14/2023 1:14 PM] szybet
+can you change the limit for n306 to be 3 characters less?
+
+
+[6/14/2023 1:16 PM] szybet
+some pdf / epubs have some weird formating for special characters - dont care, works 90% of the time
+
+
+[6/14/2023 2:08 PM] tux_linux
+Well I could
+But this is bound to happen
+Sometimes you will get another book to fill it up even with this number of characters
+
+
+[6/14/2023 2:09 PM] szybet
+well the solution is to change it to text browser, it has better "wrapping" capabilities
+
+
+[6/14/2023 2:10 PM] tux_linux
+There is an option to wrap text for qlabel
+Maybe try it?
+
+
+[6/14/2023 2:10 PM] tux_linux
+There's probably a reason why it wasn't enabled
+
+
+[6/14/2023 2:10 PM] szybet
+actually
+
+
+[6/14/2023 2:10 PM] szybet
+qlabel is fine
+
+
+[6/14/2023 2:10 PM] tux_linux
+Probably makes buttons too big
+
+
+[6/14/2023 2:10 PM] szybet
+i remembered wrong, sanki uses qlbalels
+
+
+[6/14/2023 2:12 PM] szybet
+actually no
+
+
+[6/14/2023 2:12 PM] szybet
+XD
+
+
+[6/14/2023 2:12 PM] szybet
+```cpp
+ui->textBrowser->setText(stats);
+    QApplication::processEvents();
+    // To make it fit...
+    qDebug() << "ui->textBrowser->height()" << ui->textBrowser->height();
+    qDebug() << "ui->textBrowser->document()->size().height()" << ui->textBrowser->document()->size().height();
+    if(ui->textBrowser->height() < ui->textBrowser->document()->size().height()) {
+        ui->textBrowser->setFixedHeight(ui->textBrowser->document()->size().height() + 20);
+    }
+```
+
+
+[6/14/2023 2:12 PM] szybet
+sanki uses this everywhere
+
+
+[6/14/2023 2:13 PM] szybet
+and its a qtextedit with no interactions enabled
+
+
+[6/14/2023 2:13 PM] tux_linux
+Idk
+I think one more line would make buttons overflow the screen
+
+
+[6/14/2023 2:13 PM] tux_linux
+Vertically
+
+
+[6/14/2023 2:13 PM] szybet
+not really, there is a lot of space
+
+
+[6/14/2023 2:13 PM] szybet
+also, scroll bars
+
+
+[6/14/2023 2:14 PM] tux_linux
+On mini?
+
+
+[6/14/2023 2:14 PM] szybet
+well thats the solution, i will add it for the next todo
+
+
+[6/14/2023 2:14 PM] szybet
+on nia ;p
+
+
+[6/14/2023 2:14 PM] tux_linux
+Scrollbars don't make sense
+
+
+[6/14/2023 2:14 PM] tux_linux
+Not there
+
+
+[6/14/2023 2:14 PM] szybet
+they make.
+
+
+[6/14/2023 2:14 PM] tux_linux
+We already have a page list
+
+
+[6/14/2023 2:14 PM] szybet
+shown only if needed
+
+
+[6/14/2023 2:14 PM] szybet
+if the name is too long
+
+
+[6/14/2023 2:14 PM] tux_linux
+They will always show, you know qt
+
+
+[6/14/2023 2:15 PM] szybet
+whatever, we can propably detect if the qapp size increased
+
+
+[6/14/2023 2:15 PM] szybet
+i will add it to todo, lets think about it later
+
+{Reactions}
+👍 
+
+[6/14/2023 2:16 PM] tux_linux
+I think I fixed the restore issue
+
+
+[6/14/2023 2:16 PM] tux_linux
+It wasn't rebooting because of new init
+
+
+[6/14/2023 2:17 PM] tux_linux
+Needed to add -f
+
+
+[6/14/2023 2:17 PM] szybet
+you can create another nia image
+
+
+[6/14/2023 2:18 PM] tux_linux
+You can just unsquash recoveryfs and add reboot -f in soft-reset.sh, then pack it again
+
+
+[6/14/2023 2:18 PM] szybet
+nah, create a new one and i will continue testing
+
+
+[6/14/2023 2:18 PM] szybet
+i want to test the final one
+
+
+[6/14/2023 2:18 PM] szybet
+remember to update epubtoo
+
+
+[6/14/2023 11:50 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230614_234946-86D91.jpg
+
+
+[6/14/2023 11:51 PM] szybet
+idle sleep with oobe
+
+
+[6/14/2023 11:51 PM] szybet
+is it using old platform plugin?
+
+
+[6/14/2023 11:51 PM] szybet
+this doesnt happen with other apps - at all
+
+
+[6/14/2023 11:51 PM] tux_linux
+fbdepth
+
+
+[6/14/2023 11:52 PM] szybet
++ as you can see no option in font is selected, so what now
+
+
+[6/14/2023 11:52 PM] tux_linux
+no
+
+
+[6/14/2023 11:52 PM] szybet
+and?
+
+
+[6/14/2023 11:52 PM] szybet
+what do i do
+
+
+[6/14/2023 11:52 PM] tux_linux
+idk
+
+
+[6/14/2023 11:52 PM] tux_linux
+it can just be left like that
+
+
+[6/14/2023 11:52 PM] tux_linux
+the os sets defaults if there aren't
+
+
+[6/14/2023 11:53 PM] szybet
+fbdepth repaired itself after launching inkbox
+
+
+[6/14/2023 11:53 PM] szybet
+no reboot - nothing
+
+
+[6/14/2023 11:53 PM] szybet
+any idea?
+
+
+[6/14/2023 11:53 PM] tux_linux
+it depends on each device
+
+
+[6/14/2023 11:53 PM] tux_linux
+it's because it went to sleep
+
+
+[6/14/2023 11:53 PM] tux_linux
+will try on glo hd
+
+
+[6/14/2023 11:53 PM] szybet
+but why only with oobe
+
+
+[6/14/2023 11:54 PM] tux_linux
+go figure
+
+
+[6/14/2023 11:54 PM] tux_linux
+what if you restart it and you put it to sleep yourself instead?
+
+
+[6/14/2023 11:55 PM] szybet
+ok it happens every time with this new image
+
+
+[6/14/2023 11:55 PM] szybet
+IPD breaks fbdepth
+
+
+[6/14/2023 11:55 PM] tux_linux
+nice
+
+
+[6/14/2023 11:55 PM] szybet
+did you build it for n306?...
+
+
+[6/14/2023 11:55 PM] tux_linux
+even on inkbox?
+
+
+[6/14/2023 11:55 PM] szybet
+yep
+
+
+[6/14/2023 11:55 PM] tux_linux
+wdym
+
+
+[6/14/2023 11:56 PM] szybet
+why did it happen basically
+
+
+[6/14/2023 11:56 PM] szybet
+if i fix it now, will you be able to create an image?
+
+
+[6/14/2023 11:56 PM] tux_linux
+just update your rootfs
+
+
+[6/14/2023 11:56 PM] tux_linux
+it will be enough
+
+
+[6/14/2023 11:57 PM] tux_linux
+of course i could but it wouldn't be worth it
+
+
+[6/14/2023 11:59 PM] szybet
+I want to test the final imageeee okay then
+
+
+[6/14/2023 11:59 PM] szybet
+Maybe you update radio buttons in oob?
+
+
+[6/14/2023 11:59 PM] szybet
+For 2.0
+
+
+[6/14/2023 11:59 PM] tux_linux
+show me sanki code
+
+
+[6/14/2023 11:59 PM] szybet
+Should be easy
+
+
+[6/14/2023 11:59 PM] tux_linux
+i have four stylesheets to update
+
+
+[6/14/2023 11:59 PM] szybet
+Code? Its only stylesheet and qrc file
+
+
+[6/14/2023 11:59 PM] szybet
+My god
+
+
+[6/14/2023 11:59 PM] szybet
+XD
+
+
+[6/15/2023 12:00 AM] tux_linux
+it broke down on glo hd as well
+
+
+[6/15/2023 12:00 AM] tux_linux
+cool
+
+
+[6/15/2023 12:00 AM] tux_linux
+ipd fault?
+
+
+[6/15/2023 12:00 AM] szybet
+Yep
+
+
+[6/15/2023 12:00 AM] szybet
+Did i broke something?
+
+
+[6/15/2023 12:00 AM] tux_linux
+idk
+
+
+[6/15/2023 12:00 AM] szybet
+I testes it...
+
+
+[6/15/2023 12:00 AM] tux_linux
+maybe i did
+
+
+[6/15/2023 12:01 AM] tux_linux
+at least we have the same problem
+
+
+[6/15/2023 12:03 AM] szybet
+https://github.com/Szybet/sanki/blob/89b2ddf2d9f4f3d0e6045cfb90635cd3360da702/Resources/eink.qss#L162-L178
+
+{Embed}
+https://github.com/Szybet/sanki/blob/89b2ddf2d9f4f3d0e6045cfb90635cd3360da702/Resources/eink.qss
+sanki/Resources/eink.qss at 89b2ddf2d9f4f3d0e6045cfb90635cd3360da70...
+small anki app rewritten for e-readers, with focus on InkBox support - sanki/Resources/eink.qss at 89b2ddf2d9f4f3d0e6045cfb90635cd3360da702 · Szybet/sanki
+/mnt/data/projects/git/conversations/media/sanki-F6BA6
+
+{Reactions}
+👍 
+
+[6/15/2023 12:06 AM] szybet
+where? i dont see anything
+
+
+[6/15/2023 12:06 AM] tux_linux
+idk
+
+
+[6/15/2023 12:07 AM] tux_linux
+maybe this doesn't run?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-CEF41.png
+
+
+[6/15/2023 12:09 AM] szybet
+it does
+
+
+[6/15/2023 12:09 AM] szybet
+add a log in restore Fb depth if you dont believe me
+
+
+[6/15/2023 12:09 AM] szybet
+diagnostics mode works
+
+
+[6/15/2023 12:10 AM] szybet
+i will try to root the device via gui
+
+
+[6/15/2023 12:11 AM] tux_linux
+it will take you 20m
+
+
+[6/15/2023 12:11 AM] tux_linux
+are you sure
+
+
+[6/15/2023 12:11 AM] tux_linux
+and eat your sd
+
+
+[6/15/2023 12:11 AM] szybet
+i was sure 2 minutes ago
+
+
+[6/15/2023 12:11 AM] tux_linux
+welp
+
+
+[6/15/2023 12:11 AM] szybet
+https://tenor.com/view/oh-no-oh-no-anyway-gif-18887547
+
+{Embed}
+https://tenor.com/view/oh-no-oh-no-anyway-gif-18887547
+/mnt/data/projects/git/conversations/media/oh-no-DD821.png
+
+
+[6/15/2023 12:11 AM] tux_linux
+then... wait
+
+
+[6/15/2023 12:13 AM] szybet
+auto cameras use sd cards
+
+
+[6/15/2023 12:13 AM] szybet
+they dont die that much often
+
+
+[6/15/2023 12:13 AM] szybet
+so stop worrying about inkbox
+
+
+[6/15/2023 12:14 AM] tux_linux
+did you enable xorg
+
+
+[6/15/2023 12:14 AM] szybet
+where
+
+
+[6/15/2023 12:14 AM] szybet
+what
+
+
+[6/15/2023 12:14 AM] tux_linux
+before
+
+
+[6/15/2023 12:14 AM] szybet
+i didn't disabled it in oob, i wasn't able to
+
+
+[6/15/2023 12:14 AM] tux_linux
+it is the problem
+
+
+[6/15/2023 12:14 AM] tux_linux
+hang on
+
+
+[6/15/2023 12:14 AM] szybet
+because
+
+
+[6/15/2023 12:15 AM] tux_linux
+xorg is xorg
+
+
+[6/15/2023 12:15 AM] tux_linux
+likes to mess up with fb
+
+
+[6/15/2023 12:15 AM] tux_linux
+just like when it freezes it
+
+
+[6/15/2023 12:15 AM] szybet
+when inkbox first boots it is on
+
+
+[6/15/2023 12:16 AM] tux_linux
+yes
+
+
+[6/15/2023 12:16 AM] szybet
+if i disable it, it is disabled only on reboot
+
+
+[6/15/2023 12:16 AM] tux_linux
+yes
+
+
+[6/15/2023 12:16 AM] szybet
+so what's your point
+
+
+[6/15/2023 12:16 AM] tux_linux
+well
+
+
+[6/15/2023 12:16 AM] szybet
+🥴
+
+
+[6/15/2023 12:16 AM] tux_linux
+ok nvm
+
+
+[6/15/2023 12:16 AM] tux_linux
+still does it without xorg
+
+
+[6/15/2023 12:16 AM] tux_linux
+great
+
+
+[6/15/2023 12:16 AM] szybet
+while i wait for root you can try to debug it
+
+
+[6/15/2023 12:17 AM] szybet
+try some logs
+
+
+[6/15/2023 12:17 AM] szybet
+or simply recompile ipd..
+
+
+[6/15/2023 12:19 AM] szybet
+```
+void restoreFbDepth() {
+  // fbdepth.c is a pretty complicated file so
+  if (model == "n437" or model == "kt") {
+    if (fileExists("/kobo/tmp/inkbox_running") == true) {
+      system("/opt/bin/fbink/fbdepth -d 8");
+    } else {
+      // X11 is running, elsewise there is something wrong ...
+      if (model == "kt") {
+        system("/opt/bin/fbink/fbdepth -d 32");
+      } else {
+        system("/opt/bin/fbink/fbdepth -d 16");
+      }
+    }
+  }
+```
+
+
+[6/15/2023 12:19 AM] tux_linux
+oh no
+
+
+[6/15/2023 12:19 AM] tux_linux
+it works with normal binary
+
+
+[6/15/2023 12:19 AM] tux_linux
+when was the last time you pulled the repo
+
+
+[6/15/2023 12:19 AM] szybet
+you can change it to use the built in program launcher with blocking option, it will have logs
+
+
+[6/15/2023 12:19 AM] szybet
+?
+
+
+[6/15/2023 12:19 AM] szybet
+what
+
+
+[6/15/2023 12:20 AM] szybet
+what, i pushed my changes and nothing else?
+
+
+[6/15/2023 12:20 AM] tux_linux
+did you just change this?
+
+
+[6/15/2023 12:20 AM] szybet
+no
+
+
+[6/15/2023 12:20 AM] szybet
+github
+
+
+[6/15/2023 12:20 AM] szybet
+code
+
+
+[6/15/2023 12:20 AM] tux_linux
+?!?!
+
+
+[6/15/2023 12:20 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-FD0A6.png
+
+
+[6/15/2023 12:20 AM] szybet
+the fu
+
+
+[6/15/2023 12:20 AM] tux_linux
+are you on the right repo
+
+
+[6/15/2023 12:21 AM] szybet
+oh wait
+
+
+[6/15/2023 12:21 AM] szybet
+im dumb yes
+
+
+[6/15/2023 12:21 AM] tux_linux
+i will try this code
+
+
+[6/15/2023 12:21 AM] tux_linux
+because it worked before we switched to ipd
+
+
+[6/15/2023 12:21 AM] tux_linux
+in the shell scripts
+
+
+[6/15/2023 12:22 AM] tux_linux
+i am doubtful about fbink_set_fb_info
+
+
+[6/15/2023 12:22 AM] szybet
+but this freeaking worked
+
+
+[6/15/2023 12:22 AM] szybet
+i tested it
+
+
+[6/15/2023 12:22 AM] szybet
+actually what are you doing here
+
+
+[6/15/2023 12:22 AM] tux_linux
+when did it break
+
+
+[6/15/2023 12:23 AM] szybet
+if inkbox then 8?
+
+
+[6/15/2023 12:23 AM] tux_linux
+it's complicated
+
+
+[6/15/2023 12:23 AM] szybet
+explain
+
+
+[6/15/2023 12:23 AM] tux_linux
+i can't
+
+
+[6/15/2023 12:23 AM] tux_linux
+it just needs to be this way
+
+
+[6/15/2023 12:23 AM] tux_linux
+*needed
+
+
+[6/15/2023 12:24 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-563B2.png
+
+
+[6/15/2023 12:25 AM] szybet
+you arent setting anything if its not kt or n437
+
+
+[6/15/2023 12:25 AM] szybet
+you know?
+
+
+[6/15/2023 12:25 AM] tux_linux
+yes
+
+
+[6/15/2023 12:25 AM] szybet
+look at brackets and colors
+
+
+[6/15/2023 12:25 AM] szybet
+so?
+
+
+[6/15/2023 12:25 AM] tux_linux
+then it doesn't make sense
+
+
+[6/15/2023 12:25 AM] tux_linux
+when was the last time it worked
+
+
+[6/15/2023 12:25 AM] szybet
+with the previous image?
+
+
+[6/15/2023 12:25 AM] szybet
+with my latest commit?
+
+
+[6/15/2023 12:25 AM] tux_linux
+what changed
+
+
+[6/15/2023 12:25 AM] szybet
+yestrarday
+
+
+[6/15/2023 12:25 AM] szybet
+otghin
+
+
+[6/15/2023 12:25 AM] szybet
+nothign
+
+
+[6/15/2023 12:29 AM] tux_linux
+glo hd boots at 16 bpp
+
+
+[6/15/2023 12:30 AM] tux_linux
+wakes at 16 bpp (and displays badly)
+
+
+[6/15/2023 12:30 AM] tux_linux
+what is this nonsense
+
+
+[6/15/2023 12:33 AM] szybet
+init something broke?
+
+
+[6/15/2023 12:33 AM] tux_linux
+i will try a stock boot without oob
+
+
+[6/15/2023 12:34 AM] szybet
+lololol i knew
+
+
+[6/15/2023 12:34 AM] szybet
+i recompiled the binary
+
+
+[6/15/2023 12:34 AM] szybet
+and its repaired
+
+
+[6/15/2023 12:34 AM] tux_linux
+i recompiled the binary
+
+
+[6/15/2023 12:34 AM] szybet
+how do you compile IPD
+
+
+[6/15/2023 12:34 AM] tux_linux
+and it's broken
+
+
+[6/15/2023 12:34 AM] szybet
+you env is broken hehe
+
+
+[6/15/2023 12:35 AM] tux_linux
+```
+cd build
+make clean
+make -j16
+```
+
+
+[6/15/2023 12:35 AM] tux_linux
+do you strip it or not?
+
+
+[6/15/2023 12:35 AM] szybet
+nope
+
+
+[6/15/2023 12:35 AM] tux_linux
+do that
+
+
+[6/15/2023 12:35 AM] szybet
+what about cmake?
+
+
+[6/15/2023 12:35 AM] tux_linux
+it's already done
+
+
+[6/15/2023 12:35 AM] szybet
+oh this doesnt work with musl
+
+
+[6/15/2023 12:35 AM] szybet
+funny right?
+
+
+[6/15/2023 12:35 AM] szybet
+compile with deploy.sh
+
+
+[6/15/2023 12:36 AM] tux_linux
+it's that
+```
+nicolas@debian-code ~/D/i/i/build (main)> cmake ../ -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_TOOLCHAIN_FILE=../kobo.cmake
+-- The C compiler identification is GNU 10.2.1
+-- The CXX compiler identification is GNU 10.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/nicolas/Documents/inkbox-git/armv7l-linux-musleabihf-cross/bin/armv7l-linux-musleabihf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/nicolas/Documents/inkbox-git/armv7l-linux-musleabihf-cross/bin/armv7l-linux-musleabihf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nicolas/Documents/inkbox-git/inkbox-power-daemon/build
+nicolas@debian-code ~/D/i/i/build (main)> 
+```
+
+
+[6/15/2023 12:36 AM] szybet
+it cleans build
+
+
+[6/15/2023 12:36 AM] szybet
+run
+
+
+[6/15/2023 12:36 AM] szybet
+reploy.sh
+
+
+[6/15/2023 12:36 AM] szybet
+do it
+
+
+[6/15/2023 12:36 AM] tux_linux
+wake up with stock boot, no oobe, works
+
+
+[6/15/2023 12:37 AM] szybet
+how is oobe run
+
+
+[6/15/2023 12:37 AM] szybet
+please, i developed ipd listen to me
+
+
+[6/15/2023 12:38 AM] tux_linux
+i changed kobo.cmake to this
+```
+# https://github.com/Szybet/kobo-nia-audio/blob/main/apps-on-kobo/kobo.cmake
+
+# Example toolchain file for kobo
+# Use with "-DCMAKE_TOOLCHAIN_FILE=../kobo.cmake" for anything that uses cmake, it should work
+# https://stackoverflow.com/questions/5098360/cmake-specifying-build-toolchain
+# the name of the target operating system
+set(CMAKE_SYSTEM_NAME Linux)
+
+# which compilers to use for C and C++
+set(CMAKE_C_COMPILER   arm-kobo-linux-gnueabihf-gcc)
+set(CMAKE_CXX_COMPILER arm-kobo-linux-gnueabihf-g++)
+
+# where is the target environment located
+set(CMAKE_FIND_ROOT_PATH /home/build/inkbox/kernel/toolchain/arm-kobo-linux-gnueabihf/)
+
+# adjust the default behavior of the FIND_XXX() commands:
+# search programs in the host environment
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+
+# search headers and libraries in the target environment
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+
+set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY") 
+# https://stackoverflow.com/questions/53633705/cmake-the-c-compiler-is-not-able-to-compile-a-simple-test-program
+```
+
+
+[6/15/2023 12:39 AM] tux_linux
+no im wrong
+
+
+[6/15/2023 12:39 AM] szybet
+it should be rust"?
+
+
+[6/15/2023 12:39 AM] szybet
+musl
+
+
+[6/15/2023 12:39 AM] szybet
+musl
+
+
+[6/15/2023 12:39 AM] tux_linux
+?
+
+
+[6/15/2023 12:39 AM] tux_linux
+you said it didn't work with musl
+
+
+[6/15/2023 12:39 AM] szybet
+that you need to clear build every time
+
+
+[6/15/2023 12:40 AM] szybet
+JUST RUN DEOPLY.SH AND STOP CHANGING TOOLCHAINS OF IPD RIGHT BEFORE 2.0 MY GOD
+
+
+[6/15/2023 12:40 AM] szybet
+https://tenor.com/view/sheldon-bbt-hyperventilation-cant-breathe-gif-8676969
+
+{Embed}
+https://tenor.com/view/sheldon-bbt-hyperventilation-cant-breathe-gif-8676969
+/mnt/data/projects/git/conversations/media/sheldon-bbt-339C0.png
+
+
+[6/15/2023 12:40 AM] tux_linux
+well, i restored kobo.cmake and deleted build folder, then ran make again
+
+
+[6/15/2023 12:41 AM] szybet
+MAYBE cmake --build . is needed
+
+
+[6/15/2023 12:41 AM] szybet
+can you stop
+
+
+[6/15/2023 12:41 AM] szybet
+making problems
+
+
+[6/15/2023 12:41 AM] tux_linux
+ok will try that
+
+
+[6/15/2023 12:41 AM] szybet
+with software that i have written
+
+
+[6/15/2023 12:42 AM] szybet
+run commands from deploy, without changing
+
+
+[6/15/2023 12:42 AM] szybet
+anything
+
+
+[6/15/2023 12:42 AM] szybet
+or i will not help to resolve this issue
+
+
+[6/15/2023 12:42 AM] szybet
+how do i trigger oobe?
+
+
+[6/15/2023 12:42 AM] tux_linux
+https://stackoverflow.com/a/71723587
+
+{Embed}
+https://stackoverflow.com/a/71723587
+cmake --build vs make, what the difference?
+After
+cd build
+cmake -B . -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake -S ..
+
+Looks like
+cmake --build .
+
+and
+make
+
+do the same here on macOS.
+So, when should I use one or the ot...
+/mnt/data/projects/git/conversations/media/apple-touch-icon%402-C50E4.png
+
+
+[6/15/2023 12:42 AM] szybet
+without clearing rootfs write cache
+
+
+[6/15/2023 12:42 AM] tux_linux
+`echo true > /boot/flags/FIRST_BOOT`
+
+
+[6/15/2023 12:43 AM] szybet
+i dont care
+
+
+[6/15/2023 12:43 AM] tux_linux
+well, now you know it shouldn't make a difference
+
+
+[6/15/2023 12:43 AM] szybet
+i dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont carei dont care
+
+
+[6/15/2023 12:44 AM] tux_linux
+it finished restoring?
+
+
+[6/15/2023 12:44 AM] szybet
+half an hour ago
+
+
+[6/15/2023 12:44 AM] szybet
+.
+
+
+[6/15/2023 12:45 AM] tux_linux
+you didn't strip it
+
+
+[6/15/2023 12:46 AM] tux_linux
+i get the same problem
+
+
+[6/15/2023 12:46 AM] szybet
+trying it now
+
+
+[6/15/2023 12:49 AM] szybet
+works
+
+
+[6/15/2023 12:49 AM] szybet
+i will try oobe now
+
+
+[6/15/2023 12:50 AM] szybet
+works with strip
+
+
+[6/15/2023 12:50 AM] tux_linux
+reboot before
+
+
+[6/15/2023 12:50 AM] szybet
+yes i need to
+
+
+[6/15/2023 12:51 AM] tux_linux
+it still doesn't work here with stripped and unstripped binary
+
+
+[6/15/2023 12:51 AM] tux_linux
+both with removed build folder before build
+
+
+[6/15/2023 12:51 AM] tux_linux
+if your stripped binary works send it
+
+
+[6/15/2023 12:52 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/ipd-8B96A
+
+
+[6/15/2023 12:53 AM] tux_linux
+so it works?
+
+
+[6/15/2023 12:53 AM] szybet
+wait
+
+
+[6/15/2023 12:55 AM] szybet
+works with oobe
+
+
+[6/15/2023 12:56 AM] tux_linux
+with sleep?
+
+
+[6/15/2023 12:57 AM] szybet
+yep
+
+
+[6/15/2023 12:57 AM] tux_linux
+trying here
+
+
+[6/15/2023 1:00 AM] tux_linux
+it doesn't work
+
+
+[6/15/2023 1:00 AM] tux_linux
+#$%#$@%^@#!%@$^#
+
+
+[6/15/2023 1:00 AM] szybet
+how do you update ipd
+
+
+[6/15/2023 1:00 AM] szybet
+do you reboot after updating it
+
+
+[6/15/2023 1:02 AM] tux_linux
+Yes
+
+
+[6/15/2023 1:02 AM] szybet
+.
+
+
+[6/15/2023 1:03 AM] tux_linux
+`ifsctl mnt rootfs rw`
+`cp /tmp/ipd /sbin/ipd`
+`ifsctl mnt rootfs ro`
+`reboot`
+
+
+[6/15/2023 1:03 AM] szybet
+do you have xorg enabled
+
+
+[6/15/2023 1:03 AM] tux_linux
+no
+
+
+[6/15/2023 1:03 AM] szybet
+i also hadn't
+
+
+[6/15/2023 1:03 AM] szybet
+make a md5sum of your ipd
+
+
+[6/15/2023 1:03 AM] szybet
+in /sbin/ipd
+
+
+[6/15/2023 1:03 AM] szybet
+now
+
+
+[6/15/2023 1:04 AM] tux_linux
+I KNOW
+
+
+[6/15/2023 1:04 AM] szybet
+5eba2770a28a4f71fd5764abb4870b8d
+
+
+[6/15/2023 1:04 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-D2E93.png
+
+
+[6/15/2023 1:04 AM] tux_linux
+`inkbox_running` only exists when inkbox (not oobe) is running
+
+
+[6/15/2023 1:05 AM] tux_linux
+do you think there's a way to check it via proc or an existing function?
+
+
+[6/15/2023 1:05 AM] tux_linux
+glo hd likes 8bpp on wakeup
+
+
+[6/15/2023 1:05 AM] szybet
+bro
+
+
+[6/15/2023 1:05 AM] tux_linux
+well i thought inkbox_running also included oobe
+
+
+[6/15/2023 1:05 AM] tux_linux
+it seems it doesn't
+
+
+[6/15/2023 1:05 AM] szybet
+one sec
+
+
+[6/15/2023 1:06 AM] tux_linux
+it didn't work on your device either and now it works
+
+
+[6/15/2023 1:06 AM] tux_linux
+it's very worrying
+
+
+[6/15/2023 1:07 AM] szybet
+deploy.sh or die
+
+
+[6/15/2023 1:08 AM] szybet
+```
+  if(lockscreen == true) {
+    // Overall lockscreen - this will catch those 2 scripts and one binary - they should be killed anyway
+    if(getPidByName("lockscreen") == -1) {
+      launchLockscreen();
+    }
+  }
+```
+
+
+[6/15/2023 1:08 AM] szybet
+look
+
+
+[6/15/2023 1:08 AM] tux_linux
+?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-06081.png
+
+
+[6/15/2023 1:09 AM] tux_linux
+ok
+
+
+[6/15/2023 1:09 AM] tux_linux
+well it applies for any qt app
+
+
+[6/15/2023 1:09 AM] szybet
+```
+void restoreFbDepth() {
+  // Not tested
+  // https://github.com/NiLuJe/FBInk/blob/9c1be635137ee5d8db9f8d5516aad1c818abc31d/fbink.h#L1287
+  const FBInkConfig fbink_cfg = {0};
+  if (model == "n437" or model == "kt") {
+    if (fileExists("/kobo/tmp/inkbox_running") == true) {
+      // Set bitdepth to 8 BPP
+      if(fbink_set_fb_info(fbfd, KEEP_CURRENT_ROTATE, 8, KEEP_CURRENT_GRAYSCALE, &fbink_cfg) < 0) {
+        log("FBInk: Something went wrong when trying to change screen bitdepth to 8 bpp", emitter);
+      }
+    } else {
+      // X11 is running, elsewise there is something wrong ...
+      if (model == "kt") {
+        // Set bitdepth to 32 BPP
+        if(fbink_set_fb_info(fbfd, KEEP_CURRENT_ROTATE, 32, KEEP_CURRENT_GRAYSCALE, &fbink_cfg) < 0) {
+          log("FBInk: Something went wrong when trying to change screen bitdepth to 32 bpp", emitter);
+          }
+      } else {
+        // Set bitdepth to 16 BPP
+        if(fbink_set_fb_info(fbfd, KEEP_CURRENT_ROTATE, 16, KEEP_CURRENT_GRAYSCALE, &fbink_cfg) < 0) {
+          log("FBInk: Something went wrong when trying to change screen bitdepth to 16 bpp", emitter);
+        }
+      }
+    }
+  }
+}
+```
+
+
+[6/15/2023 1:09 AM] tux_linux
+even userapp
+
+
+[6/15/2023 1:09 AM] szybet
+it was shifted to the left
+
+
+[6/15/2023 1:09 AM] szybet
+wait then
+
+
+[6/15/2023 1:09 AM] tux_linux
+so what do we do
+
+
+[6/15/2023 1:09 AM] szybet
+sec
+
+
+[6/15/2023 1:09 AM] tux_linux
+ok
+
+
+[6/15/2023 1:10 AM] szybet
+look up freezeApps
+
+
+[6/15/2023 1:11 AM] szybet
+replicate the code so if there is any pid, in appsPids it does the thingy
+
+
+[6/15/2023 1:11 AM] szybet
+put the code in apps freeze
+
+
+[6/15/2023 1:11 AM] szybet
+and use the function in fbink thing and replace the code that is duplicated now in freezeApps function
+
+
+[6/15/2023 1:12 AM] szybet
+dont break things, i'm going to sleep, its 1:12 here
+
+{Reactions}
+👍 
+
+[6/15/2023 1:12 AM] tux_linux
+ok thanks
+
+
+[6/15/2023 1:12 AM] szybet
+so you create 2 functions, one generic that returns the vector and the other that uses it just as freeze apps
+
+
+[6/15/2023 1:13 AM] szybet
+also you can update the built in apps list
+
+
+[6/15/2023 1:13 AM] szybet
+at some paths omewhere
+
+
+[6/15/2023 1:13 AM] szybet
+and remove from inkbox the write to /tmp/is_inkbox runnming if its itisnt used anywhere else it possibly isisn't
+
+
+[6/15/2023 1:13 AM] szybet
+gn
+
+{Reactions}
+👍 
+
+[6/15/2023 1:14 AM] tux_linux
+i will leave it, don't want to break other things
+
+
+[6/15/2023 1:14 AM] tux_linux
+it should be harmless
+
+
+[6/15/2023 1:17 AM] szybet
+Its trash, we have enoufh of it
+
+
+[6/15/2023 1:17 AM] szybet
+Grab all inkbox repos and grep -R to look for that filr
+
+
+[6/15/2023 1:17 AM] tux_linux
+actually I think I will just check if x11 is running and do the opposite
+
+
+[6/15/2023 1:17 AM] tux_linux
+should be simpler
+
+
+[6/15/2023 1:18 AM] szybet
+Idk how it works, your devission
+
+{Reactions}
+👍 
+
+[6/15/2023 4:09 AM] tux_linux
+I think you broke highlight widget when integrating mouse support
+
+
+[6/15/2023 4:25 AM] tux_linux
+it's not supposed to be in the left-hand corner
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/highlight-B14EF.png
+
+
+[6/15/2023 4:25 AM] tux_linux
+instead, it should be right where the user left its finger before releasing for selection
+
+
+[6/15/2023 5:41 AM] tux_linux
+https://github.com/Kobo-InkBox/inkbox/commit/cc6715f0a2daad86faaffe88a89e1fe2822c4923
+I found a workaround
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/commit/cc6715f0a2daad86faaffe88a89e1fe2822c4923
+`reader.cpp`: Fix highlight button popup not displaying at selectio...
+/mnt/data/projects/git/conversations/media/cc6715f0a2daad86faaffe88a89e1fe2822c4923-76820
+
+
+[6/15/2023 7:59 AM] szybet
+Nope, if moise is not enabled it doesnt do anythinh
+
+
+[6/15/2023 10:20 AM] szybet
+What are ui->line
+
+
+[6/15/2023 10:20 AM] szybet
+🤨
+
+
+[6/15/2023 12:47 PM] tux_linux
+Small things
+
+
+[6/15/2023 12:48 PM] tux_linux
+Anyways it's fixed
+
+
+[6/15/2023 12:56 PM] tux_linux
+It's the brightness button separator
+
+
+[6/15/2023 1:40 PM] szybet
+um okay
+
+
+[6/15/2023 1:52 PM] szybet
+check mini usb updating ;p
+
+
+[6/15/2023 1:53 PM] tux_linux
+This is from 2021
+
+
+[6/15/2023 1:54 PM] szybet
+was it fixed?
+
+
+[6/15/2023 1:55 PM] tux_linux
+Probably
+Usb redesign happened in 1.7
+
+
+[6/15/2023 1:55 PM] szybet
+cool okay
+
+
+[6/15/2023 2:19 PM] tux_linux
+Did you try ipd?
+
+
+[6/15/2023 2:20 PM] szybet
+im doing now
+
+{Reactions}
+👍 
+
+[6/15/2023 2:21 PM] szybet
+https://github.com/Kobo-InkBox/gui-bundle/pull/3
+
+{Embed}
+https://github.com/Kobo-InkBox/gui-bundle/pull/3
+permission fixes by Szybet · Pull Request #3 · Kobo-InkBox/gui-bund...
+/mnt/data/projects/git/conversations/media/3-47991
+
+
+[6/15/2023 2:21 PM] szybet
+?
+
+
+[6/15/2023 2:22 PM] tux_linux
+True I forgot it
+
+
+[6/15/2023 2:22 PM] tux_linux
+Most of it should not be important
+Except /lib things
+
+
+[6/15/2023 2:23 PM] tux_linux
+-all-root in mksquashfs works here
+
+
+[6/15/2023 2:23 PM] tux_linux
+It's the same option when compressing rootfs
+
+
+[6/15/2023 2:23 PM] szybet
+then modify it & close the request
+
+
+[6/15/2023 2:24 PM] tux_linux
+Yes
+
+
+[6/15/2023 2:31 PM] szybet
+i have X enabled
+
+
+[6/15/2023 2:31 PM] szybet
+maybe because of that?
+
+
+[6/15/2023 2:31 PM] szybet
+there is this issue
+
+
+[6/15/2023 2:35 PM] szybet
+fix doesnt work
+
+
+[6/15/2023 2:36 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-C6651.png
+
+
+[6/15/2023 2:39 PM] tux_linux
+`n360`
+
+
+[6/15/2023 2:40 PM] tux_linux
+seriously?
+
+
+[6/15/2023 2:40 PM] szybet
+OH
+
+
+[6/15/2023 2:40 PM] szybet
+https://tenor.com/view/yes-penguin-gif-26365947
+
+{Embed}
+https://tenor.com/view/yes-penguin-gif-26365947
+/mnt/data/projects/git/conversations/media/yes-penguin-ED80A.png
+
+
+[6/15/2023 2:45 PM] tux_linux
+ok gui-bundle done
+
+
+[6/15/2023 2:45 PM] szybet
+QT_FONT_DPI=0?
+
+
+[6/15/2023 2:45 PM] tux_linux
+that's when there's no ui scaling
+
+
+[6/15/2023 2:46 PM] tux_linux
+just qt
+
+
+[6/15/2023 2:46 PM] tux_linux
+it's not good
+
+
+[6/15/2023 2:46 PM] tux_linux
+shouldn't be there anymore
+
+
+[6/15/2023 2:46 PM] tux_linux
+to remove for 2.1
+
+
+[6/15/2023 2:46 PM] tux_linux
+now it works so we don't touch it
+
+
+[6/15/2023 2:46 PM] szybet
+there is QT_SCALE something that works great, i use it for rss
+
+
+[6/15/2023 2:46 PM] tux_linux
+well we can worry about that for 2.1
+
+
+[6/15/2023 2:47 PM] szybet
+ipd should start working...
+
+
+[6/15/2023 2:47 PM] tux_linux
+reboot?
+
+
+[6/15/2023 2:49 PM] szybet
+works
+
+
+[6/15/2023 2:49 PM] szybet
+i wil ltry withoit xorg
+
+
+[6/15/2023 2:50 PM] szybet
+it worked yesterday too..
+
+
+[6/15/2023 2:50 PM] szybet
+oh i remember
+
+
+[6/15/2023 2:50 PM] szybet
+oobe and radio buttons
+
+
+[6/15/2023 2:50 PM] szybet
+i sended you the sanki code
+
+
+[6/15/2023 2:51 PM] tux_linux
+I have a 3h exam today
+
+
+[6/15/2023 2:51 PM] tux_linux
+Idk if I will fix radio buttons
+
+
+[6/15/2023 2:53 PM] szybet
+no hurry
+
+
+[6/15/2023 2:53 PM] szybet
+pass this exam and tommorow
+
+
+[6/15/2023 2:54 PM] szybet
+i never had one that long
+
+
+[6/15/2023 2:54 PM] szybet
+in a year i will have one 2.5h, and this one is for going into university
+
+
+[6/15/2023 2:54 PM] szybet
+l;ol
+
+
+[6/15/2023 2:56 PM] tux_linux
+French writing exam sometimes is 4h
+
+
+[6/15/2023 2:56 PM] szybet
+https://tenor.com/view/elmo-hellmo-french-baguette-chaos-gif-24577820
+
+{Embed}
+https://tenor.com/view/elmo-hellmo-french-baguette-chaos-gif-24577820
+/mnt/data/projects/git/conversations/media/elmo-hellmo-BD104.png
+
+
+[6/15/2023 2:56 PM] szybet
+i see
+
+
+[6/15/2023 2:57 PM] tux_linux
+Please look in /etc/init.d/xorg.sh
+
+
+[6/15/2023 2:57 PM] tux_linux
+There may be a fbdepth tweak relevant for nia if you experience issues when walking from sleep when you are in x11
+
+
+[6/15/2023 2:58 PM] szybet
+in x11, not only turned on?
+
+
+[6/15/2023 2:58 PM] tux_linux
+Yes
+
+
+[6/15/2023 2:58 PM] tux_linux
+Try to launch an x11 app
+Then quit, go back to Gui,
+Launch it again
+Go back to Gui
+Sleep
+Wake
+Launch it again
+
+
+[6/15/2023 2:58 PM] tux_linux
+If you pass all of these tests you don't need the fixes
+
+
+[6/15/2023 2:59 PM] tux_linux
+You probably will need them
+
+
+[6/15/2023 2:59 PM] szybet
+will it actually work?
+
+
+[6/15/2023 2:59 PM] tux_linux
+Maybe
+
+
+[6/15/2023 2:59 PM] tux_linux
+Otherwise
+
+
+[6/15/2023 2:59 PM] tux_linux
+We don't care
+
+
+[6/15/2023 2:59 PM] tux_linux
+It has basic functionality
+
+
+[6/15/2023 3:01 PM] tux_linux
+Also try to sleep/wake when running x11 app
+
+
+[6/15/2023 3:02 PM] szybet
+um
+
+
+[6/15/2023 3:02 PM] szybet
+where is the user app of the terminal
+
+
+[6/15/2023 3:09 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-3F761.png
+
+
+[6/15/2023 3:09 PM] szybet
+why is this running
+
+
+[6/15/2023 3:14 PM] szybet
+you forgot that re-launching xorg apps dont work on the nia
+
+
+[6/15/2023 3:14 PM] szybet
+apart from that
+
+
+[6/15/2023 3:15 PM] szybet
+sleeping with kterm launched works, but the app is not put to sleep - ipd doesnt tryies to? 
+you can add xorg app names to /data/config/20-sleep_daemon/appsList
+
+
+[6/15/2023 3:25 PM] szybet
+apart from that, everything is fine
+
+
+[6/15/2023 3:27 PM] tux_linux
+Wdym
+
+
+[6/15/2023 3:27 PM] szybet
+we talked about this
+
+
+[6/15/2023 3:27 PM] tux_linux
+Yeah it's not great
+
+
+[6/15/2023 3:28 PM] szybet
+i launch an app xorg one eveyrtthing good - exit and launc again - the screen is buggy as hell
+
+
+[6/15/2023 3:28 PM] tux_linux
+You can check running x program in /tmp/X_program probably
+
+
+[6/15/2023 3:28 PM] szybet
+what
+
+
+[6/15/2023 3:28 PM] tux_linux
+It shows command line of the program
+
+
+[6/15/2023 3:28 PM] tux_linux
+Is it there on your device?
+
+
+[6/15/2023 3:29 PM] tux_linux
+If you launch some app
+
+
+[6/15/2023 3:29 PM] tux_linux
+Otherwise it may be deleted by the script
+I think you could remove the delete calls if there are
+
+
+[6/15/2023 3:29 PM] szybet
+okay
+
+
+[6/15/2023 3:29 PM] szybet
+how could this help
+
+
+[6/15/2023 3:29 PM] szybet
+its eink fault
+
+
+[6/15/2023 3:30 PM] tux_linux
+No I'm talking about freezing app
+
+
+[6/15/2023 3:30 PM] szybet
+oh
+
+
+[6/15/2023 8:40 PM] szybet
+add a warning on models where xorg is half working that its experimental
+
+
+[6/15/2023 8:40 PM] szybet
++ dont enable it at first boot
+
+
+[6/15/2023 8:40 PM] tux_linux
+Because of the freeze issue?
+
+
+[6/15/2023 8:41 PM] szybet
+it launches only once on the nia
+
+
+[6/15/2023 8:41 PM] szybet
+idk about others
+
+
+[6/15/2023 8:42 PM] tux_linux
+What does it do when you launch it the second time
+
+
+[6/15/2023 8:43 PM] szybet
+also blank is running for some reasdon i posted it before
+
+
+[6/15/2023 8:44 PM] tux_linux
+Isn't that normal?
+
+
+[6/15/2023 8:44 PM] szybet
+it should now run only in ipd?
+
+
+[6/15/2023 8:44 PM] szybet
+god damn
+
+
+[6/15/2023 8:44 PM] tux_linux
+Oh
+
+
+[6/15/2023 8:44 PM] tux_linux
+Oops
+
+
+[6/15/2023 8:44 PM] szybet
+can you make a todo list somewhere that we both can edit?
+
+
+[6/15/2023 8:44 PM] tux_linux (pinned)
+I think I forgot to remove it
+
+
+[6/15/2023 8:44 PM] szybet
+discord will get us lost
+
+
+[6/15/2023 8:45 PM] tux_linux
+Pinned a message.
+
+
+[6/15/2023 8:45 PM] szybet
+even stupid google sheets
+
+
+[6/15/2023 8:45 PM] tux_linux
+Pin
+
+
+[6/15/2023 8:45 PM] szybet
+no
+
+
+[6/15/2023 8:45 PM] tux_linux
+Well create one if you want
+
+
+[6/15/2023 8:45 PM] szybet
+because removing is too much clicking
+
+
+[6/15/2023 8:45 PM] szybet
+will you use it?
+
+
+[6/15/2023 8:45 PM] tux_linux
+Or just edit your to-do list in discussion
+
+
+[6/15/2023 8:45 PM] szybet
+no, we need to be able to both edit it
+
+
+[6/15/2023 8:45 PM] tux_linux
+I can edit it too
+
+
+[6/15/2023 8:45 PM] szybet
+also github is slow
+
+
+[6/15/2023 8:45 PM] szybet
+google sheets
+
+
+[6/15/2023 8:45 PM] tux_linux
+??
+
+
+[6/15/2023 8:45 PM] szybet
+or i will use a open source alternative
+
+
+[6/15/2023 8:46 PM] szybet
+edit file loads 3 seconds
+
+
+[6/15/2023 8:46 PM] tux_linux
+Discussion?
+
+
+[6/15/2023 8:46 PM] tux_linux
+https://github.com/Kobo-InkBox/inkbox/discussions/36#discussioncomment-3494184
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/discussions/36
+To-Do list for 2.0 release · Kobo-InkBox inkbox · Discussion #36
+X11 freeze fix + onboard Rewrite init Recompile platform plugin with fixes for user apps in rootfs Folders in localLibraryWidget (@Szybet) Reader: fit to screen size better (@Szybet's work for ...
+/mnt/data/projects/git/conversations/media/36-17616
+
+
+[6/15/2023 8:46 PM] szybet
+yep, editing in there
+
+
+[6/15/2023 8:52 PM] szybet
+@tux-linux quick answer what should I also freeze to avoid turning the screen grey when an xorg app is running and i freeze this app
+
+
+[6/15/2023 9:03 PM] tux_linux
+what?
+
+
+[6/15/2023 10:27 PM] tux_linux
+ipd seems to work on my side
+
+
+[6/15/2023 10:37 PM] szybet
+i tested reading before
+
+
+[6/15/2023 10:37 PM] szybet
+hihligting maybe dont
+
+
+[6/15/2023 10:37 PM] tux_linux
+i tested highlight yesterday
+
+
+[6/15/2023 10:37 PM] szybet
+goods then
+
+{Reactions}
+👍 
+
+[6/15/2023 10:39 PM] szybet
+> i don't think we're on final yet
+well what more
+
+
+[6/15/2023 10:39 PM] tux_linux
+user app testing?
+
+
+[6/15/2023 10:39 PM] tux_linux
+works?
+
+
+[6/15/2023 10:41 PM] szybet
+i will test now / upload them for tommorow for more testing
+
+{Reactions}
+👍 
+
+[6/15/2023 10:41 PM] szybet
+where is terminal user app
+
+
+[6/15/2023 10:41 PM] szybet
+i asked before
+
+
+[6/15/2023 10:41 PM] tux_linux
+hm
+
+
+[6/15/2023 10:41 PM] tux_linux
+lost?
+
+
+[6/15/2023 10:41 PM] szybet
+hm? because?
+
+
+[6/15/2023 10:42 PM] szybet
+the copy on pkgs inkbox didn't worked anyway
+
+
+[6/15/2023 10:42 PM] tux_linux
+it's somewhere on my local machine
+
+
+[6/15/2023 10:42 PM] tux_linux
+it works for 5% of devices
+
+
+[6/15/2023 10:42 PM] tux_linux
+touch isn't great
+
+
+[6/15/2023 10:42 PM] tux_linux
+kterm is better
+
+
+[6/15/2023 10:42 PM] szybet
+its that bad?
+
+
+[6/15/2023 10:42 PM] tux_linux
+https://github.com/Kobo-InkBox/sff
+remember when we found this?
+
+{Embed}
+https://github.com/Kobo-InkBox/sff
+GitHub - Kobo-InkBox/sff: A terminal, using libvterm and Qt, with c...
+A terminal, using libvterm and Qt, with cross-compilation support for InkBox OS - GitHub - Kobo-InkBox/sff: A terminal, using libvterm and Qt, with cross-compilation support for InkBox OS
+/mnt/data/projects/git/conversations/media/sff-06D07
+
+
+[6/15/2023 10:42 PM] tux_linux
+depending on the device, yes
+
+
+[6/15/2023 10:43 PM] tux_linux
+it works but not keyboard
+
+
+[6/15/2023 10:43 PM] szybet
+oh no reason then to upload it
+
+
+[6/15/2023 10:43 PM] tux_linux
+and had a really hard time figuring out how to display anything else than the console
+
+
+[6/15/2023 10:43 PM] tux_linux
+no, that one's qt
+
+
+[6/15/2023 10:43 PM] tux_linux
+the other working one with keyboard was fbink + smth else
+
+
+[6/15/2023 10:44 PM] szybet
+im confused
+
+
+[6/15/2023 10:44 PM] szybet
+so what
+
+
+[6/15/2023 10:44 PM] tux_linux
+if we could have got a keyboard working in sff, it would have outclassed every other terminal app for ereaders
+
+
+[6/15/2023 10:44 PM] tux_linux
+probably
+
+
+[6/15/2023 10:45 PM] szybet
+2.1 then
+
+
+[6/15/2023 10:45 PM] szybet
+remind me
+
+{Reactions}
+👍 
+
+[6/15/2023 10:49 PM] tux_linux
+did you add nia to if clauses in xorg.sh?
+
+
+[6/15/2023 10:49 PM] szybet
+not yet
+
+
+[6/15/2023 10:50 PM] tux_linux
+ok so i will start filming
+
+
+[6/15/2023 10:50 PM] szybet
+stop
+
+
+[6/15/2023 10:50 PM] tux_linux
+?
+
+
+[6/15/2023 10:51 PM] szybet
+i cant upload user apps via usb
+
+
+[6/15/2023 10:51 PM] szybet
+files dont stay...
+
+
+[6/15/2023 10:51 PM] tux_linux
+wait i will try
+
+
+[6/15/2023 10:51 PM] tux_linux
+usbms is sometimes a bunch of crap
+
+
+[6/15/2023 10:53 PM] szybet
+it doesnt work at all
+
+
+[6/15/2023 10:53 PM] tux_linux
+you're right
+
+
+[6/15/2023 10:53 PM] tux_linux
+but i'm on mac
+
+
+[6/15/2023 10:54 PM] tux_linux
+why does this need to happen
+
+
+[6/15/2023 10:55 PM] szybet
+im on arch
+
+
+[6/15/2023 10:55 PM] szybet
+doesnt work at alll
+
+
+[6/15/2023 10:55 PM] szybet
+i tryied formating
+
+
+[6/15/2023 10:55 PM] szybet
+nope
+
+
+[6/15/2023 10:55 PM] szybet
+well you do that...
+
+
+[6/15/2023 10:55 PM] tux_linux
+$%#!@^%$#&%^
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-18543.png
+
+
+[6/15/2023 10:56 PM] tux_linux
+i will try passthrough to linux via usb
+
+
+[6/15/2023 11:00 PM] szybet
+do i need to reboot after editing xorg.sh?
+
+
+[6/15/2023 11:00 PM] tux_linux
+normally no
+
+
+[6/15/2023 11:00 PM] tux_linux
+but it is better
+
+
+[6/15/2023 11:00 PM] tux_linux
+actually yes
+
+
+[6/15/2023 11:01 PM] tux_linux
+well, file copy on linux works
+
+
+[6/15/2023 11:01 PM] szybet
+not for me
+
+
+[6/15/2023 11:02 PM] tux_linux
+but it corrupts the drive
+
+
+[6/15/2023 11:02 PM] szybet
+okay!
+
+
+[6/15/2023 11:02 PM] szybet
+X'D...
+
+
+[6/15/2023 11:02 PM] tux_linux
+😭
+
+
+[6/15/2023 11:02 PM] tux_linux
+I Hate This
+
+
+[6/15/2023 11:02 PM] tux_linux
+we need to change filesystems
+
+
+[6/15/2023 11:02 PM] tux_linux
+switch to ntfs,idk?
+
+
+[6/15/2023 11:02 PM] szybet
+whoa no
+
+
+[6/15/2023 11:03 PM] szybet
+fat? 32? ex?
+
+
+[6/15/2023 11:03 PM] tux_linux
+then what
+
+
+[6/15/2023 11:03 PM] szybet
+what what
+
+
+[6/15/2023 11:03 PM] szybet
+idk?
+
+
+[6/15/2023 11:03 PM] tux_linux
+idk
+
+
+[6/15/2023 11:04 PM] tux_linux
+nvm ntfs
+
+
+[6/15/2023 11:04 PM] tux_linux
+2.6.35.3 won't support it
+
+
+[6/15/2023 11:04 PM] tux_linux
+i guess
+
+
+[6/15/2023 11:04 PM] szybet
+fat32
+
+
+[6/15/2023 11:04 PM] szybet
+what is currently used
+
+
+[6/15/2023 11:04 PM] szybet
+what is the problem
+
+
+[6/15/2023 11:04 PM] szybet
+anything
+
+
+[6/15/2023 11:04 PM] tux_linux
+IT'S ALREADY FAT32
+
+
+[6/15/2023 11:04 PM] tux_linux
+sorry
+
+
+[6/15/2023 11:04 PM] szybet
+WHAT IS THE PROBLEM
+
+
+[6/15/2023 11:04 PM] tux_linux
+it corrupts everytime i write to it
+
+
+[6/15/2023 11:04 PM] tux_linux
+via usbms
+
+
+[6/15/2023 11:04 PM] szybet
+CAPSLOCK no worry
+
+
+[6/15/2023 11:05 PM] szybet
+um context? anything?
+
+
+[6/15/2023 11:05 PM] tux_linux
+hm nvm
+
+
+[6/15/2023 11:05 PM] tux_linux
+the book is corrupt
+
+
+[6/15/2023 11:05 PM] tux_linux
+not the fs
+
+
+[6/15/2023 11:05 PM] tux_linux
+$@#%$#
+
+
+[6/15/2023 11:05 PM] szybet
+which device do i need to imit to n306 in xorg.sh
+
+
+[6/15/2023 11:05 PM] szybet
+codename
+
+
+[6/15/2023 11:05 PM] tux_linux
+n437
+
+
+[6/15/2023 11:05 PM] tux_linux
+add n306 everytime you see n437
+
+
+[6/15/2023 11:05 PM] tux_linux
+where you see fbdepth
+
+
+[6/15/2023 11:05 PM] tux_linux
+in that area
+
+
+[6/15/2023 11:06 PM] tux_linux
+n437 is glo hd
+
+
+[6/15/2023 11:06 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-1878C.png
+
+
+[6/15/2023 11:06 PM] szybet
+yea
+
+
+[6/15/2023 11:06 PM] szybet
+nia is 16 bit, not 32
+
+
+[6/15/2023 11:06 PM] tux_linux
+yes right there
+
+
+[6/15/2023 11:06 PM] tux_linux
+glo hd can do 8,16,32
+
+
+[6/15/2023 11:12 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-D2CF2.png
+
+
+[6/15/2023 11:12 PM] szybet
+now they are there - half corrupted
+
+
+[6/15/2023 11:12 PM] szybet
+no idea
+
+
+[6/15/2023 11:12 PM] tux_linux
+usr is normal
+
+
+[6/15/2023 11:13 PM] tux_linux
+but not wrong signatures
+
+
+[6/15/2023 11:13 PM] szybet
+frotz
+
+
+[6/15/2023 11:34 PM] szybet
+```
+[ 1431.281706] FAT-fs (loop0): error, fat_free_clusters: deleting FAT entry beyond EOF
+[ 1431.290985] FAT-fs (loop0): Filesystem has been set read-only
+```
+some my logs
+
+
+[6/15/2023 11:34 PM] tux_linux
+i will try adding files on rpi
+
+
+[6/15/2023 11:35 PM] tux_linux
+certified linux computer
+
+
+[6/15/2023 11:38 PM] tux_linux
+it doesn't sync
+
+
+[6/15/2023 11:38 PM] tux_linux
+it seems
+
+
+[6/15/2023 11:39 PM] tux_linux
+also i can't understand why we don't have fsck.fat in rootfs
+
+
+[6/15/2023 11:39 PM] tux_linux
+compiling it now
+
+
+[6/15/2023 11:40 PM] szybet
+its not a solution, its a backup
+
+
+[6/15/2023 11:40 PM] tux_linux
+yes but still
+
+
+[6/15/2023 11:44 PM] tux_linux
+well, if you transplant them manually, do user apps work
+
+
+[6/15/2023 11:45 PM] szybet
+idk, didn't tested
+
+
+[6/15/2023 11:46 PM] szybet
+im going to sleep
+
+
+[6/15/2023 11:46 PM] tux_linux
+ok
+
+
+[6/15/2023 11:46 PM] szybet
+i have school in... 8 hours
+
+
+[6/15/2023 11:46 PM] tux_linux
+good night
+
+
+[6/15/2023 11:46 PM] szybet
+🥴
+
+
+[6/15/2023 11:46 PM] szybet
+gn
+
+
+[6/16/2023 4:45 AM] tux_linux
+i found the problem
+
+
+[6/16/2023 4:45 AM] tux_linux
+`/data/onboard` is somehow not unmounted before usbms session
+
+
+[6/16/2023 4:45 AM] tux_linux
+will try to fix it
+
+
+[6/16/2023 5:27 AM] tux_linux
+done
+
+
+[6/16/2023 6:50 AM] szybet
+It... Works?
+
+
+[6/16/2023 6:51 AM] tux_linux
+it seems
+
+
+[6/16/2023 6:57 AM] szybet
+You can run fsck after disconnecting to be sure
+
+
+[6/16/2023 6:57 AM] szybet
+Ir isint currouptet
+
+
+[6/16/2023 6:58 AM] tux_linux
+it puts log files in the partition
+
+
+[6/16/2023 6:58 AM] tux_linux
+but maybe
+
+
+[6/16/2023 7:02 AM] szybet
+Today is a lucky day
+
+
+[6/16/2023 7:02 AM] szybet
+Ipd build from yestarday works
+
+
+[6/16/2023 7:02 AM] szybet
+🥳
+
+
+[6/16/2023 7:02 AM] tux_linux
+yay?
+
+
+[6/16/2023 7:03 AM] szybet
+Yay😆
+
+
+[6/16/2023 7:09 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20230616_050847653-1C9EC.jpg
+
+
+[6/16/2023 7:09 AM] tux_linux
+today (tonight) is math day (night)
+
+
+[6/16/2023 7:13 AM] szybet
+I maybe had this math lesson already
+
+
+[6/16/2023 7:13 AM] szybet
+Good luck then
+
+{Reactions}
+👍 
+
+[6/16/2023 7:14 AM] tux_linux
+Probably
+
+
+[6/16/2023 8:06 AM] tux_linux (pinned)
+fix small padding issue with brightness button in reader (todo)
+
+
+[6/16/2023 8:06 AM] tux_linux
+Pinned a message.
+
+
+[6/16/2023 8:46 AM] szybet
+Where brightness
+
+
+[6/16/2023 8:46 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230616_084509-060A8.jpg
+
+
+[6/16/2023 11:37 AM] szybet
+Toro: fix brihhtbes ipd
+
+
+[6/16/2023 1:18 PM] tux_linux
+Oh no
+
+
+[6/16/2023 1:19 PM] tux_linux
+Did you compile latest gui?
+
+
+[6/16/2023 1:23 PM] szybet
+No, your image
+
+
+[6/16/2023 1:24 PM] tux_linux
+Well compile latest gui and test it
+
+
+[6/16/2023 1:24 PM] tux_linux
+Please
+
+
+[6/16/2023 4:12 PM] szybet
+i readed today 300 pages of a book
+
+
+[6/16/2023 4:12 PM] szybet
+apart from brightness problems? i dont see anything
+
+
+[6/16/2023 4:12 PM] szybet
+so reading is good
+
+
+[6/16/2023 6:25 PM] tux_linux
+good
+
+
+[6/16/2023 6:25 PM] tux_linux
+did you update gui
+
+
+[6/16/2023 6:35 PM] szybet
+Not yet
+
+
+[6/16/2023 6:36 PM] szybet
+But you can record the video - there will be no massive changes
+
+
+[6/16/2023 6:41 PM] tux_linux
+ok
+
+
+==============================================================
+Exported 901 message(s)
+==============================================================

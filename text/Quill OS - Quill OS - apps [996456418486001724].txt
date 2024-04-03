@@ -1,0 +1,3712 @@
+==============================================================
+Guild: Quill OS
+Channel: Quill OS / apps
+Topic: Put your user applications ideas here :)
+==============================================================
+
+[8/21/2022 3:31 AM] tux_linux
+This, as an userapp without the KOReader stuff, would be awesome
+https://github.com/koreader/koreader/pull/8636
+@NiLuJe is it possible to run only this plugin with its deps and not the whole KOReader framework?
+
+{Embed}
+https://github.com/koreader/koreader/pull/8636
+Terminal emulator by zwim · Pull Request #8636 · koreader/koreader
+The terminal emulator works in KOReader emulator, Android (>api 21), Kobo Sage. It is disabled on Android <=4.4.x.
+Not tested on Cervantes.
+This needs koreader/koreader-base#1443 I will do th...
+/mnt/data/projects/git/conversations/media/8636-BD81B
+
+
+[8/21/2022 4:08 AM] ninuje
+You'd need a minimal custom UIManager main loop with at least Device properly instanciated
+
+
+[8/21/2022 4:08 AM] ninuje
+And the right dep tree for that
+
+
+[8/21/2022 4:08 AM] ninuje
+It's not impossible, but it requires some thinking, and almost the full tree anyway
+
+
+[8/21/2022 4:09 AM] ninuje
+Plus, I might have broken the headless indirections that would make this somewhat easier ;p.
+
+
+[8/21/2022 4:23 AM] tux_linux
+Hm, nice
+
+
+[8/21/2022 4:26 AM] tux_linux
+What size estimate?
+
+
+[8/21/2022 2:05 PM] tux_linux
+https://github.com/ohwgiles/quilte
+@Szybet this one is similar to sff but seems to be more flexible in implementing widgets (it already has tabs, adding keyboard keys should not be that hard). I got libvterm compilation issues but it should be fixable as we did compile it successfully for sff. There are also older functions that need to get migrated but I think it's fixable
+The other option is to use KOReader's terminal, but I don't know how I feel putting the whole KOReader in an userapp
+
+{Embed}
+https://github.com/ohwgiles/quilte
+GitHub - ohwgiles/quilte: Lightweight Qt Terminal Emulator
+Lightweight Qt Terminal Emulator. Contribute to ohwgiles/quilte development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/quilte-94702
+
+
+[8/21/2022 2:06 PM] szybet
+when i finish wifi, local library and reader then sure i can look into it
+
+{Reactions}
+👍 
+
+[9/9/2022 12:25 PM] szybet
+https://github.com/accumulator/Quickddit
+
+{Embed}
+https://github.com/accumulator/Quickddit
+GitHub - accumulator/Quickddit: Reddit client for Jolla's SailfishO...
+Reddit client for Jolla's SailfishOS, Ubuntu Touch and Nokia N9 - GitHub - accumulator/Quickddit: Reddit client for Jolla's SailfishOS, Ubuntu Touch and Nokia N9
+/mnt/data/projects/git/conversations/media/Quickddit-61E1B
+
+
+[9/9/2022 12:30 PM] szybet
+:(
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-74586.txt
+
+
+[9/9/2022 12:40 PM] szybet
+https://github.com/rinigus/pure-maps
+
+{Embed}
+https://github.com/rinigus/pure-maps
+GitHub - rinigus/pure-maps: Maps and navigation
+Maps and navigation. Contribute to rinigus/pure-maps development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/pure-maps-4AE53
+
+
+[9/9/2022 12:42 PM] szybet
+https://code.google.com/archive/p/monav/
+
+
+[9/9/2022 12:42 PM] szybet
+qt navigation
+
+
+[9/9/2022 12:42 PM] szybet
+apps
+
+
+[9/9/2022 12:42 PM] szybet
+if someone wants, its possible to run them, propably
+
+
+[9/9/2022 12:42 PM] szybet
+i dont have a need to do this right now
+
+
+[9/9/2022 12:57 PM] szybet
+https://gitlab.com/dark-eye/ursses
+
+{Embed}
+https://gitlab.com/dark-eye/ursses
+Eran / uRsses · GitLab
+Just another rss reader but now for UT devices!
+/mnt/data/projects/git/conversations/media/twitter_card-570ddb06edf56a2312253c5872489-60AF3.jpg
+
+
+[9/9/2022 12:57 PM] szybet
+this launches, but:
+
+
+[9/9/2022 12:57 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-16555.txt
+
+
+[9/9/2022 1:18 PM] szybet
+https://github.com/bhdouglass/habitica-ubuntu-touch
+
+{Embed}
+https://github.com/bhdouglass/habitica-ubuntu-touch
+GitHub - bhdouglass/habitica-ubuntu-touch: Moved to GitLab
+Moved to GitLab. Contribute to bhdouglass/habitica-ubuntu-touch development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/habitica-ubuntu-touch-23CE4
+
+
+[9/9/2022 1:18 PM] szybet
+i want this :(((((((((((((((
+
+
+[9/9/2022 1:18 PM] szybet
+web wiev... :(
+
+
+[9/9/2022 1:48 PM] szybet
+https://gitlab.com/spectral-im/spectral @tux-linux matrix client for us
+
+{Embed}
+https://gitlab.com/spectral-im/spectral
+Spectral / Spectral · GitLab
+A glossy cross-platform Matrix client. https://spectral.im
+/mnt/data/projects/git/conversations/media/spectral.svg-28AC4.png
+
+
+[9/9/2022 1:49 PM] szybet
+but i think there is no space support / and the project is dead
+
+
+[9/9/2022 1:50 PM] tux_linux
+Try neochat
+
+
+[9/9/2022 1:50 PM] szybet
+all kde apps require qt 5.9
+
+
+[9/9/2022 1:50 PM] szybet
+its a standard
+
+
+[9/9/2022 1:50 PM] szybet
+so no chance for us
+
+
+[9/9/2022 1:50 PM] tux_linux
+We have 5.15
+
+
+[9/9/2022 1:52 PM] szybet
+```
+CMake Error in /mnt/HDD/Project/compiling-hell/neochat/build/CMakeFiles/CMakeTmp/CMakeLists.txt:
+  Target "cmTC_e2502" requires the language dialect "CXX20" (with compiler
+  extensions).  But the current compiler "GNU" does not support this, or
+  CMake does not know the flags to enable it.
+```
+
+
+[9/9/2022 1:52 PM] szybet
+IDK, still every kde app i try complains about unkown functions in qt
+
+
+[9/9/2022 1:54 PM] szybet
+https://github.com/M4rtinK/modrana
+
+{Embed}
+https://github.com/M4rtinK/modrana
+GitHub - M4rtinK/modrana: ModRana is a flexible GPS navigation syst...
+ModRana is a flexible GPS navigation system for mobile devices. This is the main upstream modRana source code repository - waiting for your pull requests &amp; patches! :) - GitHub - M4rtinK/mo...
+/mnt/data/projects/git/conversations/media/modrana-7071A
+
+
+[9/9/2022 1:54 PM] szybet
+another qt gps
+
+
+[9/9/2022 2:00 PM] szybet
+@tux-linux https://github.com/viniciusbenite/qt-calculator
+
+{Embed}
+https://github.com/viniciusbenite/qt-calculator
+GitHub - viniciusbenite/qt-calculator: Qt C++ Introduction
+Qt C++ Introduction. Contribute to viniciusbenite/qt-calculator development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/qt-calculator-514A8
+
+
+[9/9/2022 2:00 PM] szybet
+will you accept this calculator?
+
+
+[9/9/2022 2:01 PM] tux_linux
+I said I was currently cross compiling qalculate
+
+
+[9/9/2022 2:01 PM] szybet
+it will not work good
+
+
+[9/9/2022 2:01 PM] tux_linux
+Yes it will
+
+
+[9/9/2022 2:01 PM] tux_linux
+And the one you shared is really ugly IMO
+
+
+[9/9/2022 2:01 PM] szybet
+also i doubt you will be able to compile it
+
+
+[9/9/2022 2:02 PM] tux_linux
+I cross compiled all the libs, only python is missing, after that I will have libqalculate which I can use for the qt interface afterwards
+
+
+[9/9/2022 2:02 PM] szybet
+https://github.com/linuxdeepin/deepin-calculator ?
+
+{Embed}
+https://github.com/linuxdeepin/deepin-calculator
+GitHub - linuxdeepin/deepin-calculator: Calculator for DDE
+Calculator for DDE. Contribute to linuxdeepin/deepin-calculator development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/deepin-calculator-FBB63
+
+
+[9/9/2022 2:03 PM] szybet
+qualculate-qt Qt (>= 5.6)
+
+
+[9/9/2022 2:03 PM] tux_linux
+I would audit the code before compiling anything like that
+
+
+[9/9/2022 2:03 PM] szybet
+isint the version higher?
+
+
+[9/9/2022 2:03 PM] szybet
+why...
+
+
+[9/9/2022 2:03 PM] szybet
+its a trusted open source project
+
+
+[9/9/2022 2:04 PM] tux_linux
+Not really
+
+
+[9/9/2022 2:05 PM] szybet
+because?
+
+
+[9/9/2022 2:05 PM] szybet
+its a calculator without any dependiencies
+
+
+[9/9/2022 2:05 PM] szybet
+from a big open source organisation
+
+
+[9/9/2022 2:05 PM] szybet
+what could go wrong?...............
+
+
+[9/9/2022 2:07 PM] tux_linux
+https://www.deepin.org/en/agreement/privacy/
+
+{Embed}
+aida
+https://www.deepin.org/en/agreement/privacy/
+deepin Privacy Policy
+
+
+[9/9/2022 2:12 PM] szybet
+oh
+
+
+[9/9/2022 2:12 PM] szybet
+okay
+
+
+[9/9/2022 2:12 PM] szybet
+WTF
+
+
+[9/9/2022 2:12 PM] szybet
+i didn't knew that
+
+
+[9/9/2022 2:12 PM] szybet
+still, its a calculator...
+
+
+[9/12/2022 3:12 PM] tux_linux
+Reminder for me: make a to-do list app
+
+
+[9/12/2022 3:15 PM] szybet
+you need to implement many apps that i prepared, and there is only terminal left i think
+
+
+[9/12/2022 10:24 PM] tux_linux
+What is many apps?
+
+
+[9/12/2022 10:25 PM] szybet
+inkbox maps, skribble
+
+
+[9/12/2022 10:25 PM] szybet
+well i cant count ;p
+
+
+[9/12/2022 10:25 PM] tux_linux
+Maps are already implemented?
+
+
+[9/12/2022 10:25 PM] szybet
+where
+
+
+[9/12/2022 10:25 PM] tux_linux
+It's an userapp?
+
+
+[9/12/2022 10:25 PM] tux_linux
+I will remove the existing one soon
+
+
+[9/12/2022 10:26 PM] szybet
+oh okay
+
+
+[9/12/2022 10:26 PM] szybet
+http://pkgs-inkbox.duckdns.org:25560/apps/Maps.zip
+
+
+[9/12/2022 10:26 PM] szybet
+i didn't saw it
+
+
+[9/12/2022 10:26 PM] tux_linux
+*see it
+
+
+[9/12/2022 10:26 PM] szybet
+its in the past
+
+
+[9/12/2022 10:26 PM] szybet
+so saw it?
+
+
+[9/12/2022 10:26 PM] tux_linux
+No
+
+
+[9/12/2022 10:27 PM] szybet
+why...
+
+
+[9/12/2022 10:27 PM] tux_linux
+Didn't implies past
+You said it yourself
+
+
+[9/12/2022 10:27 PM] szybet
+oh
+
+
+[9/12/2022 10:27 PM] szybet
+yea
+
+
+[9/12/2022 10:27 PM] szybet
+cant remember that
+
+
+[9/12/2022 10:27 PM] szybet
+right
+
+
+[9/13/2022 1:47 PM] szybet (pinned)
+https://github.com/nuttyartist/notes
+
+{Embed}
+https://github.com/nuttyartist/notes
+GitHub - nuttyartist/notes: Note-taking application, write down you...
+Note-taking application, write down your thoughts. - GitHub - nuttyartist/notes: Note-taking application, write down your thoughts.
+/mnt/data/projects/git/conversations/media/notes-834C3
+
+
+[9/13/2022 1:47 PM] szybet
+y e s
+
+
+[9/13/2022 1:47 PM] szybet
+please pin this
+
+
+[9/13/2022 3:27 PM] the.mightydill
+you have the pin role
+
+
+[9/13/2022 3:39 PM] szybet
+Pinned a message.
+
+
+[9/13/2022 3:39 PM] szybet
+https://tenor.com/view/cat-wow-ohhh-gif-26143129
+
+{Embed}
+https://tenor.com/view/cat-wow-ohhh-gif-26143129
+/mnt/data/projects/git/conversations/media/cat-wow-7839C.png
+
+
+[9/13/2022 3:44 PM] the.mightydill
+LMAO
+
+
+[9/14/2022 2:36 AM] tux_linux
+Good
+
+
+[10/6/2022 9:11 PM] szybet (pinned)
+https://github.com/pbek/QOwnNotes
+
+{Embed}
+https://github.com/pbek/QOwnNotes
+GitHub - pbek/QOwnNotes: QOwnNotes is a plain-text file notepad and...
+QOwnNotes is a plain-text file notepad and todo-list manager with markdown support and Nextcloud / ownCloud integration. - GitHub - pbek/QOwnNotes: QOwnNotes is a plain-text file notepad and todo-l...
+/mnt/data/projects/git/conversations/media/01a04e00-c325-11e9-92ce-a83c1c27c018-B7E29
+
+
+[10/6/2022 9:11 PM] szybet
+Pinned a message.
+
+
+[10/6/2022 9:11 PM] szybet
+this one will be easier to implement
+
+
+[10/6/2022 11:24 PM] tux_linux
+Seems nice
+
+
+[10/7/2022 8:13 AM] szybet
+the problem that i see
+
+
+[10/7/2022 8:13 AM] szybet
+is
+
+
+[10/7/2022 8:13 AM] szybet
+keyboard support
+
+
+[10/7/2022 8:14 AM] szybet
+like, the plugin code is freaking magic spaghetti
+
+
+[10/7/2022 11:33 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image0-CF4B6.jpg
+
+{Reactions}
+🧐 (2) 
+
+[10/19/2022 7:31 PM] szybet
+https://github.com/tsujan/FeatherNotes
+
+{Embed}
+https://github.com/tsujan/FeatherNotes
+GitHub - tsujan/FeatherNotes: Lightweight Qt Notes-Manager for Linux
+Lightweight Qt Notes-Manager for Linux. Contribute to tsujan/FeatherNotes development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/FeatherNotes-A49CE
+
+
+[11/28/2022 9:45 PM] szybet
+RSS reader library
+
+https://github.com/mattsse/extrablatt
+
+result in file, pretty damn good
+
++ library support
+https://crates.io/crates/cxx
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-D0972.txt
+
+
+[12/28/2022 1:29 AM] tux_linux
+nice
+i will try to program a little app (or user app) with it
+
+
+[12/28/2022 10:34 AM] szybet
+no, i want to do it
+
+
+[12/28/2022 3:32 PM] tux_linux
+ok, but i will do a wikipedia app without this rust program
+you can do the article one with it
+
+
+[12/28/2022 4:19 PM] szybet
+i plan the article one on desktop and android too
+
+
+[12/28/2022 4:19 PM] szybet
+soo
+
+
+[12/28/2022 4:20 PM] tux_linux
+ok, you do the article one
+but i do the wikipedia one
+
+
+[12/28/2022 4:20 PM] szybet
+sure
+
+
+[12/28/2022 4:20 PM] szybet
+in the future*
+
+
+[12/28/2022 4:20 PM] szybet
+focus on 2.0
+
+{Reactions}
+👍 
+
+[1/24/2023 2:49 PM] szybet
+https://github.com/giacomogroppi/writernote-qt
+
+{Embed}
+https://github.com/giacomogroppi/writernote-qt
+GitHub - giacomogroppi/writernote-qt: Multiplatform application, cu...
+Multiplatform application, currently available for linux, windows, macOS and android, which allows you to take notes in an intelligent way, you can record audio as you write, and listen to it again...
+/mnt/data/projects/git/conversations/media/writernote-qt-04B91
+
+
+[1/24/2023 2:50 PM] szybet
+cool one
+
+
+[1/24/2023 3:05 PM] szybet
+http://app.vnote.fun/en_us/
+
+
+[1/24/2023 6:06 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230124_180527_DRO-B8946.jpg
+
+
+[1/24/2023 6:06 PM] szybet
+i will go with this
+- faster ( doesnt use sql database crap )
+- more features ( images ! )
+- no mac os style
+
+
+[2/5/2023 10:28 PM] szybet
+https://github.com/lapwat/papeer
+
+{Embed}
+https://github.com/lapwat/papeer
+GitHub - lapwat/papeer: Scrape the web in the eink era. Convert web...
+Scrape the web in the eink era. Convert websites into ebooks and markdown. - GitHub - lapwat/papeer: Scrape the web in the eink era. Convert websites into ebooks and markdown.
+/mnt/data/projects/git/conversations/media/papeer-320F8
+
+
+[2/7/2023 5:04 AM] tux_linux
+Nice
+
+
+[5/4/2023 6:34 PM] kuratius
+In case it's useful for anyone, I compiled the most recent version of zig from source for arm-linux-musleabihf and tested it on the nia. Works fine, at least on the postmarketOS port. The zig compiler can also compile C and C++, not just zig, so this may be be useful for some people. https://drive.google.com/file/d/1Op8M1fchu9zJaZZmvOmYJEv2y72p3o1F/view?usp=share_link
+Zig doesn't have an official release for arm32 and the zig-bootstrap script failed for me, so I had to download a recent enough zig release that can compile the stage3 self hosted compiler and compile that.
+Compilation options for the compiler were 
+```zig build -Dtarget=arm-linux-musleabihf -Doptimize=ReleaseFast -Dcpu=baseline``` in case anyone wants to reproduce it for a newer version of zig. (This has to be executed inside the zig repo with a working installation of zig)
+
+{Embed}
+https://drive.google.com/file/d/1Op8M1fchu9zJaZZmvOmYJEv2y72p3o1F/view?usp=share_link
+zig
+
+
+[5/4/2023 6:36 PM] kuratius
+(there are other options like Debug or ReleaseSmall for small binaries, but I figured if someone is going to compile something on a weak cpu they'll care more about the speed than how much disk space the compiler takes)
+
+
+[5/4/2023 6:38 PM] kuratius
+compiler version is 0.11.0-dev.2983+f05cd008d
+
+
+[5/4/2023 6:41 PM] kuratius
+sec this is missing some stuff
+
+
+[5/4/2023 6:41 PM] kuratius
+it runs but actually creating a project fails
+
+
+[5/4/2023 6:41 PM] kuratius
+one sec
+
+
+[5/4/2023 6:44 PM] szybet
+I soubt it will work on older kernela
+
+
+[5/4/2023 6:44 PM] szybet
+But maybe zig doesnt have glibc dependiecies or smth idk
+
+
+[5/4/2023 6:45 PM] szybet
+And if it was able to compile new software for older kernels, i would know it
+
+
+[5/4/2023 6:45 PM] kuratius
+https://drive.google.com/file/d/1DdyFfoGFhgxa_KfRuqCo79NLtjYFXB-9/view?usp=share_link
+
+{Embed}
+https://drive.google.com/file/d/1DdyFfoGFhgxa_KfRuqCo79NLtjYFXB-9/view?usp=share_link
+zig-out.7z
+
+
+[5/4/2023 6:46 PM] kuratius
+if you want to test it, here's an archive
+
+
+[5/4/2023 6:46 PM] kuratius
+should include the missing libraries, sorry
+
+
+[5/4/2023 6:49 PM] kuratius
+```Note: Generally, for Linux targets, we prefer the musl libc builds over the glibc builds here, because musl builds end up producing a static binary, which is more portable across Linux distributions.```
+
+
+[5/4/2023 6:50 PM] kuratius
+(this is a musl build)
+
+
+[5/4/2023 6:50 PM] kuratius
+so it'll probably run
+
+
+[5/4/2023 6:50 PM] szybet
+Have you tried compiling something in musl?
+
+
+[5/4/2023 6:51 PM] kuratius
+I dont think for a zig project it matters if the compiler is using glibc or musl
+
+
+[5/4/2023 6:52 PM] szybet
+Glibc incompability
+
+
+[5/4/2023 6:53 PM] kuratius
+cant you replace glibc with musl? or is that problematic for other projects?
+
+
+[5/4/2023 6:54 PM] kuratius
+zig states that it can also link against older versions of glibc, though not sure if that was talking about the compiler or the compiled projects in general
+
+
+[5/4/2023 6:55 PM] kuratius
+https://old.reddit.com/r/Zig/comments/y4rlzi/clarifications_on_zigs_relationship_to_libc/
+``` Zig can even link against older versions of GLIBC, something GCC doesnt even support. ````
+
+{Embed}
+https://old.reddit.com/r/Zig/comments/y4rlzi/clarifications_on_zigs_relationship_to_libc/
+r/Zig - Clarifications on Zig's Relationship to Libc
+30 votes and 24 comments so far on Reddit
+
+
+[5/4/2023 6:56 PM] kuratius
+probably compiled projects in general
+
+
+[5/4/2023 6:56 PM] kuratius
+so maybe you can compile newer software with it?
+
+
+[5/4/2023 6:56 PM] kuratius
+probably someone has to try first
+
+
+[5/4/2023 6:58 PM] kuratius
+ah fuck
+
+
+[5/4/2023 6:58 PM] kuratius
+just tried to compile an example hello world project and it segfaulted
+
+
+[5/4/2023 6:58 PM] kuratius
+will try compiling a debug build of the compiler
+
+
+[5/4/2023 8:03 PM] kuratius
+Debug build is wrong too, but 32 bit binaries that are cross compiled seem to work
+
+
+[5/4/2023 8:03 PM] kuratius
+*shrugs* I'll ask about it on the zig discord, probably an issue with the current compiler version
+
+
+[5/4/2023 8:03 PM] kuratius
+it is supposed to be able to self host, but apparently not
+
+
+[5/4/2023 8:18 PM] szybet
+We use both...
+
+
+[5/4/2023 8:19 PM] kuratius
+https://old.reddit.com/r/voidlinux/comments/muoqis/what_are_the_advantages_of_using_musl_in_place_of/
+
+{Embed}
+https://old.reddit.com/r/voidlinux/comments/muoqis/what_are_the_advantages_of_using_musl_in_place_of/
+r/voidlinux - What are the advantages of using musl in place of glibc?
+38 votes and 35 comments so far on Reddit
+
+
+[5/4/2023 8:20 PM] kuratius
+I don't think you need both in a single program
+
+
+[5/4/2023 8:33 PM] szybet
+Both in a single system, not program
+
+
+[5/4/2023 8:36 PM] kuratius
+then that's probably not relevant, I was talking in the context of compiling software that wasnt before due to glibc incompatibility with gcc
+
+
+[5/4/2023 8:38 PM] kuratius
+anyway, native-arm32 zig compiler is broken, but the cross compiling still produces working executables for arm32, but unless you have a project that you were trying to use which wouldnt compile before that's not super useful
+
+
+[5/5/2023 1:49 AM] kuratius
+I'll see if I can get a working arm32 zig compiler, just for fun
+
+{Reactions}
+👍 
+
+[7/1/2023 5:23 AM] tux_linux
+https://github.com/rimsa/qt-games
+I will port this to inkbox as user apps next week
+It will be some small vacation from more intensive work
+
+{Embed}
+https://github.com/rimsa/qt-games
+GitHub - rimsa/qt-games: Simple Qt Board Games
+Simple Qt Board Games. Contribute to rimsa/qt-games development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/qt-games-AC511
+
+{Reactions}
+👍 
+
+[7/19/2023 5:19 PM] tux_linux
+jello there
+
+
+[7/19/2023 5:29 PM] tux_linux
+@Szybet did you implement history in your matrix client finally?
+
+
+[7/19/2023 5:32 PM] szybet
+no
+
+
+[7/19/2023 5:32 PM] szybet
+but i think it works
+
+
+[7/19/2023 5:32 PM] szybet
+at least 70% of the time
+
+
+[7/19/2023 5:33 PM] tux_linux
+Hmm ok
+
+
+[7/19/2023 5:33 PM] tux_linux
+What does that mean
+
+
+[7/20/2023 4:45 PM] matterbridge#2154
+[matrix] Maximilian Gaedig ⚡️ 
+oh damn a matrix client for inbox? that's awesome
+
+
+[7/20/2023 4:45 PM] szybet
+it is released already
+
+
+[7/20/2023 5:26 PM] matterbridge#2154
+[matrix] tux-linux 
+.
+
+
+[7/20/2023 5:28 PM] [matrix] Szybet
+test it yourself, maybe it will work maybe not
+
+
+[7/20/2023 5:28 PM] [matrix] Szybet
+it may also depend on the channel and account
+
+
+[7/20/2023 5:28 PM] tux_linux
+hm ok
+
+
+[7/20/2023 5:28 PM] [matrix] Szybet
+matrix has custom settings for that
+
+
+[7/25/2023 1:53 PM] szybet
+https://github.com/flaviotordini/minitube
+
+{Embed}
+https://github.com/flaviotordini/minitube
+GitHub - flaviotordini/minitube: YouTube app
+YouTube app. Contribute to flaviotordini/minitube development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/minitube-0989A
+
+
+[7/25/2023 1:53 PM] szybet
+im not that insane but hehe
+
+
+[7/25/2023 1:56 PM] szybet
+https://github.com/dail8859/NotepadNext
+
+{Embed}
+https://github.com/dail8859/NotepadNext
+GitHub - dail8859/NotepadNext: A cross-platform, reimplementation o...
+A cross-platform, reimplementation of Notepad++. Contribute to dail8859/NotepadNext development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/85a97400-96c9-11eb-9836-e8abb8e901b9-159F7
+
+
+[7/25/2023 2:12 PM] tux_linux
+We have enough notepads for now
+
+
+[7/25/2023 2:12 PM] szybet
+huehue
+
+
+[7/26/2023 1:06 AM] luismaylon123
+I would recommend adding board games like chess
+
+
+[7/26/2023 6:57 AM] szybet
+There is a xorg app for chess
+
+
+[7/27/2023 1:05 PM] szybet
+https://github.com/YACReader/yacreader
+
+{Embed}
+https://github.com/YACReader/yacreader
+GitHub - YACReader/yacreader: This repo contains the code of YACRea...
+This repo contains the code of YACReader's desktop version. - GitHub - YACReader/yacreader: This repo contains the code of YACReader's desktop version.
+/mnt/data/projects/git/conversations/media/yacreader-0EB89
+
+
+[7/27/2023 2:06 PM] kuratius
+May not be directly relevant, but I hope this supports webtoon mode like openComic (infinite scroll mode), if it doesn't it's not useful
+
+
+[7/27/2023 2:07 PM] [matrix] Szybet
+ifinite scroll mode on eink
+no no no
+
+
+[7/27/2023 2:07 PM] kuratius
+Don't care
+
+
+[7/27/2023 2:08 PM] kuratius
+If you are on a tablet or phone or PC, and you want to read webtoons or you want to read on a stream you need this feature
+
+
+[7/27/2023 2:10 PM] kuratius
+https://github.com/ollm/OpenComic
+
+{Embed}
+https://github.com/ollm/OpenComic
+GitHub - ollm/OpenComic: Comic and Manga reader, written with Node....
+Comic and Manga reader, written with Node.js and using Electron - GitHub - ollm/OpenComic: Comic and Manga reader, written with Node.js and using Electron
+/mnt/data/projects/git/conversations/media/OpenComic-23BB3
+
+
+[7/27/2023 2:11 PM] szybet
+https://tenor.com/view/omori-sunny-javascript-nodejs-ovinu-gif-25860668
+
+{Embed}
+https://tenor.com/view/omori-sunny-javascript-nodejs-ovinu-gif-25860668
+/mnt/data/projects/git/conversations/media/omori-sunny-93D2C.png
+
+
+[7/27/2023 2:11 PM] kuratius
+😆
+
+
+[7/27/2023 2:12 PM] kuratius
+Still very obvious to me when it's missing, I read manga in webtoon mode too because it's just better
+
+
+[7/27/2023 2:12 PM] kuratius
+Zooming in is a special kind of hell reserved for those who can't do webtoon mode
+
+
+[7/27/2023 2:13 PM] szybet
+welp you can try it, then port it to inkbox ( pm os whatever ) :D
+
+
+[7/27/2023 2:16 PM] kuratius
+Probably wouldn't have good performance due to JS
+Still, Comic on small eink device means either lots of zooming or a scrolling mode, neither is fun, but one is better than the other because a scroll takes one refresh, a zoom takes 2 or 3 (zoom in and out,  or zoom in, pan right, pan down left, etc)
+
+
+[7/27/2023 2:16 PM] szybet
+im talking about the first one
+
+
+[7/27/2023 2:16 PM] szybet
+i sended
+
+
+[7/27/2023 2:17 PM] szybet
+could be done usable
+
+
+[7/27/2023 2:17 PM] szybet
+ultimate manga reader maybe is good
+
+
+[7/27/2023 2:17 PM] szybet
+havent tried
+
+
+[7/27/2023 3:25 PM] tux_linux
+NOOOOOOOOOOOOOOOOO
+
+
+[7/28/2023 7:34 PM] kuratius
+Is this interesting? 
+
+https://github.com/niutech/qt-ultralight-browser
+
+{Embed}
+https://github.com/niutech/qt-ultralight-browser
+GitHub - niutech/qt-ultralight-browser: Ultra-lightweight web brows...
+Ultra-lightweight web browser based on Qt Ultralight webview, powered by Ultralight HTML renderer - GitHub - niutech/qt-ultralight-browser: Ultra-lightweight web browser based on Qt Ultralight webv...
+/mnt/data/projects/git/conversations/media/qt-ultralight-browser-9F50E
+
+
+[7/28/2023 7:40 PM] tux_linux
+m a y b e
+
+
+[7/28/2023 7:41 PM] tux_linux
+Thanks for sharing
+
+
+[7/28/2023 8:04 PM] szybet
+https://tenor.com/view/nok-nok-penguin-nook-nook-nok-pingu-pingu-noknok-gif-25732325
+
+{Embed}
+https://tenor.com/view/nok-nok-penguin-nook-nook-nok-pingu-pingu-noknok-gif-25732325
+/mnt/data/projects/git/conversations/media/nok-nok-penguin-nook-nook-C8517.png
+
+
+[7/28/2023 8:04 PM] szybet
+im testing this
+
+
+[7/28/2023 8:04 PM] szybet
+n o w
+
+
+[7/28/2023 8:04 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-83C90.png
+
+
+[7/28/2023 8:05 PM] szybet
+hehe
+
+
+[7/28/2023 8:08 PM] szybet
+the creator is from poland
+
+
+[7/28/2023 8:14 PM] tux_linux
+cool
+
+
+[7/28/2023 8:20 PM] szybet
+```
+     With support for Windows, macOS, Linux, Xbox, PS4, and PS5 (and ARM64 coming in 1.4), Ultralight ensures your content displays smoothly and consistently on a wide range of platforms and hardware targets. 
+```
+
+
+[7/28/2023 8:20 PM] szybet
+arm
+
+
+[7/28/2023 8:20 PM] tux_linux
+well, oops
+
+
+[7/28/2023 8:21 PM] szybet
+i will try anyway
+
+
+[7/28/2023 8:21 PM] szybet
+but i have problems already
+
+
+[7/28/2023 8:21 PM] tux_linux
+i hope it's not some weird assembly stuff
+
+
+[7/28/2023 8:21 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-85F1B.txt
+
+
+[7/28/2023 8:22 PM] tux_linux
+i would not continue
+
+
+[7/28/2023 8:22 PM] tux_linux
+probably safer for mental health
+
+
+[7/28/2023 8:22 PM] tux_linux
+maybe open an issue
+
+
+[7/28/2023 8:23 PM] szybet
+https://tenor.com/view/omg-lol-laughing-wtf-haha-gif-20913507
+
+{Embed}
+https://tenor.com/view/omg-lol-laughing-wtf-haha-gif-20913507
+/mnt/data/projects/git/conversations/media/omg-lol-0F164.png
+
+
+[7/28/2023 8:23 PM] tux_linux
+i know
+
+
+[7/28/2023 8:23 PM] tux_linux
+but better than not doing anything
+
+
+[7/28/2023 8:24 PM] szybet
+you gived up after 3 minutes
+
+
+[7/28/2023 8:24 PM] tux_linux
+I dont mess with these errors
+
+
+[7/28/2023 8:24 PM] szybet
+you wouldt have libinput then
+
+
+[7/28/2023 8:24 PM] szybet
+and nachat
+
+
+[7/28/2023 8:25 PM] tux_linux
+maybe we should focus on things like reader before trying to do this
+
+
+[7/28/2023 8:26 PM] tux_linux
+or just getting usbms to work on kt
+
+
+[7/28/2023 8:26 PM] tux_linux
+ahem
+
+
+[7/28/2023 8:30 PM] szybet
+it depends on X11 / open gl too much propably sadly
+
+
+[7/28/2023 8:30 PM] szybet
+so yea
+
+
+[7/28/2023 8:39 PM] tux_linux
+welp
+
+
+[7/28/2023 8:45 PM] szybet
+fuck them
+
+
+[7/28/2023 8:45 PM] szybet
+those devs
+
+
+[7/28/2023 8:45 PM] szybet
+of ultralight
+
+
+[7/28/2023 8:45 PM] szybet
+only the samples are open source
+
+
+[7/28/2023 8:45 PM] szybet
+otherwise they provide binaries
+
+
+[7/28/2023 8:46 PM] szybet
+x64 ones
+
+
+[7/28/2023 8:46 PM] kuratius
+sad
+
+
+[7/28/2023 8:46 PM] szybet
+they say "partially open source"
+
+
+[7/28/2023 8:46 PM] szybet
+its not at all
+
+
+[7/28/2023 8:48 PM] kuratius
+https://github.com/ultralight-ux/Ultralight/issues/88
+```Arm64 supports is planned for 1.4
+
+Also AdamJS said it's possible to add x32 support in future.```
+maybe someday
+
+{Embed}
+https://github.com/ultralight-ux/Ultralight/issues/88
+Platform support : arm (raspberry pi) · Issue #88 · ultralight-ux/U...
+Hi :) Is your feature request related to a problem? Please describe. I would like to see Ultralight applications running on a Raspberry Pi, using direct opengl es 2.0 calls, without X, displaying a...
+/mnt/data/projects/git/conversations/media/88-1DC2F
+
+
+[7/28/2023 8:49 PM] kuratius
+this says it's not possible but I guess that's outdated https://github.com/ultralight-ux/Ultralight/issues/159
+
+{Embed}
+https://github.com/ultralight-ux/Ultralight/issues/159
+Port to 32-bit Linux · Issue #159 · ultralight-ux/Ultralight
+Several developers have requested a 32-bit Linux port (needed for low-memory embedded devices and some game platform integrations). We should try to cross-compile a 32-bit release on our 64-bit bui...
+/mnt/data/projects/git/conversations/media/159-A5177
+
+
+[7/28/2023 9:02 PM] szybet
+well anyway
+
+
+[7/28/2023 9:03 PM] szybet
+RSS guard uses qtextedit to view sites
+
+
+[7/28/2023 9:03 PM] szybet
+very basic html works
+
+
+[7/28/2023 9:03 PM] szybet
+so thats it at least
+
+
+[7/30/2023 7:54 AM] kuratius
+finished porting my fluidsim thingy to C
+
+
+[7/30/2023 7:57 AM] kuratius
+I have no idea if the Cmake file I used is "good", but it works and the exectuable isnt too big
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/minifb-fluidsim-3F4FB.zip
+
+
+[7/30/2023 7:58 AM] kuratius
+```cd build
+cmake ..
+make
+bin/fluidsim ```
+
+
+[7/30/2023 7:58 AM] kuratius
+should build it
+
+
+[7/30/2023 7:58 AM] kuratius
+I think
+
+
+[7/30/2023 7:58 AM] kuratius
+also may have mangled minifb
+
+
+[7/30/2023 8:02 AM] kuratius
+also Rust is so hilariously bloated it's not even funny
+C is a 50kB executable, Rust is 750kB
+
+
+[7/30/2023 11:42 AM] szybet
+In rust you get proper debugging info
+
+
+[7/30/2023 11:43 AM] szybet
+Look up inkbox tools in rust, they have optimisation for this
+
+
+[7/30/2023 4:07 PM] kuratius
+This is already stripped,  with lto, optimized for size,  etc
+
+
+[7/30/2023 4:07 PM] szybet
+welp
+
+
+[7/30/2023 4:07 PM] szybet
+rust is still worth it
+
+
+[7/30/2023 4:08 PM] kuratius
+Rust just doesn't compile std, it puts a binary blob
+
+
+[7/30/2023 4:08 PM] szybet
+there is something with std for size something
+
+
+[7/30/2023 4:09 PM] kuratius
+Rust's std requires an unstable compiler for some stupid reason
+
+
+[7/30/2023 4:09 PM] szybet
+its nightly
+
+
+[7/30/2023 4:09 PM] szybet
+and its not unstable
+
+
+[7/30/2023 4:09 PM] szybet
+i have seen real companies using nightly, not for production but still
+
+
+[7/30/2023 4:10 PM] kuratius
+If it was stable it'd be stable rust
+
+
+[7/30/2023 4:11 PM] kuratius
+Just really backwards to call your language stable when the standard library requires an unstable compiler
+
+
+[7/30/2023 4:11 PM] szybet
+you really expect a lot from a project starting from 2017? 19?
+
+
+[7/30/2023 4:11 PM] szybet
+c is older than you and me combined
+
+
+[7/30/2023 4:21 PM] kuratius
+Basic compilers aren't that hard if you don't overcomplicate your syntax and add new features every year, and instead focus on writing a better std
+
+Rust first stable release was in 2015
+
+
+[7/30/2023 4:22 PM] szybet
+rust started to go mainstream later
+
+
+[8/1/2023 2:51 AM] kuratius
+good news btw, zig has fixed its issues with the compiler not being available on arm
+
+
+[8/1/2023 4:46 AM] kuratius
+might be interesting to check if gccgo has a new-enough version to compile gomuks somewhere
+
+
+[8/1/2023 4:46 AM] kuratius
+should cut down on binary size
+
+
+[8/1/2023 4:46 AM] tux_linux
+Maybe
+
+
+[8/1/2023 5:01 AM] kuratius
+default on debian supports go 1.16
+
+
+[8/1/2023 5:01 AM] kuratius
+but I think that's outdated
+
+
+[8/1/2023 5:04 AM] kuratius
+``` The GCC 12 and 13 releases include a complete implementation of the Go 1.18 standard library. However, GCC does not yet include support for generics. ```
+
+
+[8/1/2023 5:04 AM] kuratius
+fuck
+
+
+[8/1/2023 5:04 AM] kuratius
+gomuks is 1.19
+
+
+[8/1/2023 5:07 AM] kuratius
+maybe in a year or two when gcc-14 or 15 is out
+
+
+[8/1/2023 5:11 AM] kuratius
+oh
+
+
+[8/1/2023 5:12 AM] kuratius
+apparently I was using golang-go 1.18 to compile gomuks and it worked
+
+
+[8/1/2023 5:12 AM] kuratius
+so that 1.19 is a lie
+
+
+[8/1/2023 5:13 AM] kuratius
+so technically if I can get gccgo-go in a version with gccgo 1.18 it would work
+
+
+[8/1/2023 5:13 AM] kuratius
+the current default in xubuntu's repo is for gcc-11
+
+
+[8/1/2023 5:13 AM] kuratius
+so either gcc-12 or gcc-13 should be able to compile gomuks
+
+
+[8/1/2023 5:19 AM] kuratius
+gcc-12 maybe cant, I'm getting errors, but for some reason it hasnt aborted
+
+
+[8/1/2023 5:23 AM] kuratius
+ggccgo-13 is an unstable debian package, so I guess not today
+
+
+[8/1/2023 5:27 AM] kuratius
+https://github.com/rivo/uniseg/issues/33
+this is the library that fails
+
+{Embed}
+https://github.com/rivo/uniseg/issues/33
+Error building using gcc go 1.13.1 · Issue #33 · rivo/uniseg
+c29cfd2 go version go1.18 gccgo (GCC) 13.1.1 20230429 linux/amd64 go build # github.com/rivo/uniseg ./properties.go:137:20: error: expected ‘(’ 137 | func propertySearch[E interface{ [3]int | [4]in...
+/mnt/data/projects/git/conversations/media/33-34149
+
+
+[8/1/2023 5:27 AM] kuratius
+so I guess generics support is the issue
+
+
+[8/1/2023 6:01 AM] kuratius
+checked, zig compiler runs on kobo nia
+
+
+[8/1/2023 6:02 AM] kuratius
+not useful because cross compiling wasnt broken
+
+
+[8/1/2023 6:02 AM] kuratius
+but nice to have
+
+
+[8/1/2023 6:02 AM] kuratius
+kobo-nia:~/zig-linux-armv7a-0.11.0-dev.4333+33e4cbb20$ ./zig version
+0.11.0-dev.4333+33e4cbb20
+kobo-nia:~/zig-linux-armv7a-0.11.0-dev.4333+33e4cbb20$
+
+
+[8/1/2023 7:19 AM] kuratius
+https://groups.google.com/g/golang-nuts/c/PPDjR7HBIhk
+
+
+[8/1/2023 7:19 AM] kuratius
+So, guess no generics until x time
+
+
+[8/1/2023 6:58 PM] kuratius
+https://go.googlesource.com/go/+/refs/heads/dev.go2go/README.go2go.md
+There might be a converter that converts generics into normal code
+
+
+[8/3/2023 6:31 AM] kuratius
+https://github.com/taylorskalyo/goreader
+it probably cant do ruby cause terminal, but would probably run OutoftheBox on inkbox
+
+{Embed}
+https://github.com/taylorskalyo/goreader
+GitHub - taylorskalyo/goreader: Terminal epub reader
+Terminal epub reader. Contribute to taylorskalyo/goreader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/goreader-BE404
+
+
+[8/3/2023 6:34 AM] kuratius
+yeah it shows the raw ruby tags lol
+
+
+[8/3/2023 6:36 AM] kuratius
+``` <ruby><span                    
+                                                                                               xmlns="http://www.w3.org/1999/xhtml" class="koboSpan"                       
+                                                                                               id="kobo.732.1">引/span><rt>ひ/rt></ruby>```
+
+
+[8/3/2023 6:36 AM] kuratius
+lol
+
+
+[8/3/2023 6:42 AM] kuratius
+I found a tool that correctly converts ruby syntax but it has broken unicode
+
+
+[8/3/2023 6:42 AM] kuratius
+lol
+
+
+[8/3/2023 6:43 AM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/test-109D7.pdf
+
+
+[8/3/2023 6:43 AM] kuratius
+https://wkhtmltopdf.org/index.html
+
+
+[8/3/2023 6:45 AM] kuratius
+yeesssss
+
+
+[8/3/2023 6:45 AM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/test-C7EAE.pdf
+
+
+[8/3/2023 6:46 AM] kuratius
+it needs an extra line in the html specifying that it uses utf8
+
+
+[8/3/2023 6:46 AM] kuratius
+then it works
+
+
+[8/3/2023 6:46 AM] kuratius
+so only question is can I feed it an epub?
+
+
+[8/3/2023 6:47 AM] kuratius
+ok so not by default
+
+
+[8/3/2023 6:47 AM] kuratius
+but probably there is a way to go epub->html->pdf
+
+
+[8/3/2023 6:47 AM] kuratius
+(I guess this is not useful since calibre exists, I prob shouldnt do it)
+
+
+[8/3/2023 6:50 AM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/test-4E0B4.pdf
+
+
+[8/3/2023 6:51 AM] kuratius
+this isnt great in terms of layout, but it's passable
+
+
+[8/3/2023 6:51 AM] kuratius
+pandoc -o test.html kimi.epub
+
+
+[8/3/2023 6:52 AM] kuratius
+wkhtmltopdf test.html test.pdf
+
+
+[8/3/2023 6:53 AM] kuratius
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+needs this line added to the head oder of the html
+
+
+[8/3/2023 6:54 AM] kuratius
+wkhtmltopdf is a C++ project
+
+
+[8/3/2023 6:54 AM] kuratius
+only question is sort of if mutool can do epub to html
+
+
+[8/3/2023 6:57 AM] kuratius
+ok so apparently mutool deletes the ruby tags
+
+
+[8/3/2023 6:57 AM] kuratius
+why
+
+
+[8/3/2023 6:58 AM] kuratius
+epub is html
+
+
+[8/3/2023 6:58 AM] kuratius
+you dont need to delete stuff
+
+
+[8/3/2023 6:59 AM] kuratius
+oh hey pandoc is haskell
+
+
+[8/3/2023 6:59 AM] kuratius
+not python
+
+
+[8/3/2023 7:09 AM] kuratius
+wanna bet this conversion runs faster than the speed at which koreader opens a book?
+
+
+[8/3/2023 7:11 AM] kuratius
+exporting epubs to html is a cool way to read epubs in browser, actually
+
+
+[8/3/2023 7:11 AM] kuratius
+It makes popub dictionaries usable
+
+
+[8/3/2023 7:11 AM] kuratius
+yay
+
+
+[8/3/2023 7:12 AM] kuratius
+gonna have to use this more often
+
+
+[8/3/2023 7:18 AM] kuratius
+only sad thing is pandoc breaks images in epubs
+
+
+[8/3/2023 7:18 AM] kuratius
+oh hey --extract-media=dir  exists in pandoc
+
+
+[8/3/2023 7:18 AM] kuratius
+probably that would fix it
+
+
+[8/3/2023 7:48 AM] szybet
+it can, we do it
+
+
+[8/3/2023 7:50 AM] kuratius
+apparently it cant
+
+
+[8/3/2023 7:50 AM] szybet
+it
+
+
+[8/3/2023 7:50 AM] kuratius
+it deletes ruby tags 😦
+
+
+[8/3/2023 7:50 AM] szybet
+can
+
+
+[8/3/2023 7:51 AM] szybet
+yea it deletes all tags it doesnt recognise
+
+
+[8/3/2023 7:51 AM] szybet
+which is sad, i also had this problem
+
+
+[8/3/2023 7:51 AM] szybet
+but
+
+
+[8/3/2023 7:51 AM] szybet
+you could propably modify the source eassly to avoid that
+
+
+[8/3/2023 7:51 AM] szybet
+but i dont think it would help even a bit, we have problem with the webkit anyway
+
+
+[8/3/2023 7:54 AM] kuratius
+do you remember what the problem was with webkit?
+
+
+[8/3/2023 7:54 AM] kuratius
+libc?
+
+
+[8/3/2023 7:54 AM] szybet
+yep, too old
+
+
+[8/3/2023 7:54 AM] kuratius
+what happens if you compile statically with zig?
+
+
+[8/3/2023 7:54 AM] kuratius
+or am I misunderstanding something?
+
+
+[8/3/2023 7:55 AM] szybet
+even if you compile it to musl somehow - it will be slow... its webkit
+
+
+[8/3/2023 7:55 AM] szybet
+then every binary will be huuuge
+
+
+[8/3/2023 7:55 AM] szybet
+otherwise idk
+
+
+[8/3/2023 7:55 AM] kuratius
+custom secondary libc to link agaist?
+
+
+[8/3/2023 7:55 AM] kuratius
+is that a thing?
+
+
+[8/3/2023 7:56 AM] szybet
+why would it? glibc is limited by kernel
+
+
+[8/3/2023 7:56 AM] szybet
+idk if kernel 4.15 would work for qt webkit if we had the newest possible glibc
+
+
+[8/3/2023 7:57 AM] kuratius
+nia c can use I suppose?
+idc how libc and kernel incompability works, but that one had a newer kernel I think
+
+
+[8/3/2023 7:57 AM] szybet
+it doesnt
+
+
+[8/3/2023 7:57 AM] szybet
+its not never
+
+
+[8/3/2023 7:58 AM] kuratius
+you said so on the github?
+
+
+[8/3/2023 7:58 AM] szybet
+anyway, the glibc is old because of oooold mini kernel 2.6
+we could use a newer for some devices
+
+
+[8/3/2023 7:58 AM] szybet
+its stil 4.x
+
+
+[8/3/2023 7:59 AM] kuratius
+for the time being, how large is compiling libc into a project?
+
+
+[8/3/2023 7:59 AM] kuratius
+statically
+
+
+[8/3/2023 7:59 AM] szybet
+you can write a self hosted API that does these things remotely... 🥴
+
+
+[8/3/2023 7:59 AM] szybet
+idk if you can do it statically
+
+
+[8/3/2023 7:59 AM] szybet
+idk
+
+
+[8/3/2023 8:02 AM] szybet
+qt webkit is not the answer, it would be slow
+
+
+[8/3/2023 9:15 AM] kuratius
+even for prerendering?
+
+
+[8/3/2023 10:49 AM] szybet
+yes, too heavy as i said
+
+
+[8/3/2023 10:49 AM] szybet
+the only diffrence between rendering and showing it on screen is dumping it to the eink
+
+
+[8/3/2023 11:06 AM] szybet
+https://github.com/CefView/QCefView
+
+{Embed}
+https://github.com/CefView/QCefView
+GitHub - CefView/QCefView: A Qt Widget encapsulated CEF view based ...
+A Qt Widget encapsulated CEF view based on QWidget - GitHub - CefView/QCefView: A Qt Widget encapsulated CEF view based on QWidget
+/mnt/data/projects/git/conversations/media/QCefView-3CB51
+
+
+[8/3/2023 11:36 AM] szybet
+@Kuratius check if your things work in this markdown app
+https://github.com/pbek/QOwnNotes
+
+{Embed}
+https://github.com/pbek/QOwnNotes
+GitHub - pbek/QOwnNotes: QOwnNotes is a plain-text file notepad and...
+QOwnNotes is a plain-text file notepad and todo-list manager with markdown support and Nextcloud / ownCloud integration. - GitHub - pbek/QOwnNotes: QOwnNotes is a plain-text file notepad and todo-l...
+/mnt/data/projects/git/conversations/media/01a04e00-c325-11e9-92ce-a83c1c27c018-B7E29
+
+
+[8/3/2023 11:40 AM] kuratius
+https://github.com/pbek/QOwnNotes/issues/2471
+
+{Embed}
+https://github.com/pbek/QOwnNotes/issues/2471
+Add support for ruby text  · Issue #2471 · pbek/QOwnNotes
+The <ruby> HTML element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. More technical ...
+/mnt/data/projects/git/conversations/media/2471-9D0EB
+
+
+[8/3/2023 11:41 AM] szybet
+oops
+
+
+[8/3/2023 11:46 AM] kuratius
+https://github.com/djfun/furigana_markdown/blob/master/furigana.py
+
+also am I understanding this correctly and markdown is just an intermediate language that gets turned into html?
+
+{Embed}
+https://github.com/djfun/furigana_markdown/blob/master/furigana.py
+furigana_markdown/furigana.py at master · djfun/furigana_markdown
+Furigana/Ruby annotations extension for Markdown in python - djfun/furigana_markdown
+/mnt/data/projects/git/conversations/media/furigana_markdown-FDE5C
+
+
+[8/3/2023 11:46 AM] kuratius
+so if an html tag is not supported there cant be a markdown workaround?
+
+
+[8/3/2023 11:47 AM] szybet
+propably, yes
+
+
+[8/3/2023 11:47 AM] szybet
+you could, like pandoc with some latex options turn those characters to images
+
+
+[8/3/2023 11:47 AM] kuratius
+HTML was a mistake, webpages should be in latex
+
+
+[8/3/2023 11:47 AM] kuratius
+clearly
+
+
+[8/3/2023 11:47 AM] szybet
+latex is too complicated
+
+
+[8/3/2023 11:48 AM] szybet
+lets say it like that
+
+
+[8/3/2023 11:48 AM] szybet
+latex is too complicated for simple things
+html is too complicated for complex things
+
+
+[8/3/2023 11:48 AM] kuratius
+latex is turing complete
+
+
+[8/3/2023 11:48 AM] kuratius
+😛
+
+
+[8/3/2023 11:48 AM] kuratius
+is html?
+
+
+[8/3/2023 11:53 AM] kuratius
+that's going to be a lot of images
+would not recommend
+anyway I really wonder why ruby isnt supported.
+It cant be that hard to squeeze characters into the space between lines, under normal circumstances it will not go beyond the margins so no need for linebreaking or trying to paginate it
+
+
+[8/3/2023 11:54 AM] szybet
+im sure ^ is supported
+
+
+[8/3/2023 11:54 AM] szybet
+as in 2^3 = 8
+
+
+[8/3/2023 11:54 AM] kuratius
+needs to be shifted slightly above and centered
+
+
+[8/3/2023 11:54 AM] szybet
+we can just go with one image
+
+
+[8/3/2023 11:54 AM] kuratius
+are images allowed to overlap with text?
+
+
+[8/3/2023 11:55 AM] kuratius
+or be displayed in between lines?
+
+
+[8/3/2023 11:55 AM] kuratius
+pandoc has the capability to render ruby correctly with no effort because \overset{}{} in latex exists
+
+
+[8/3/2023 11:55 AM] kuratius
+they just choose not to
+
+
+[8/3/2023 11:56 AM] szybet
+i dont think so
+
+
+[8/3/2023 11:56 AM] szybet
+not in a good looking way, yes
+
+
+[8/3/2023 11:56 AM] kuratius
+literally I could just rewrite every ruby tag in to an overset command
+
+
+[8/3/2023 11:57 AM] szybet
+write a script for it
+
+
+[8/3/2023 11:57 AM] kuratius
+depends, is there going to be a latex renderer ?
+
+
+[8/3/2023 11:58 AM] szybet
+https://wiki.qt.io/Qt_and_LaTeX_via_KLFBackend
+
+{Embed}
+https://wiki.qt.io/Qt_and_LaTeX_via_KLFBackend
+Qt and LaTeX via KLFBackend
+
+
+[8/3/2023 11:58 AM] szybet
+idk
+
+
+[8/3/2023 11:58 AM] szybet
+to images for sure
+
+
+[8/3/2023 12:00 PM] kuratius
+this screenshot from plato keeps making me think it supports latex? but that's just a pdf right?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/screenshot03-F6148.png
+
+
+[8/3/2023 12:00 PM] szybet
+idk what plato uses
+
+
+[8/3/2023 12:00 PM] szybet
+im pretty sure it uses mupdf svg / some raster thing
+
+
+[8/3/2023 12:00 PM] szybet
+for some things at least
+
+
+[8/3/2023 12:01 PM] kuratius
+if tinytex is resonably fast then could probably do what I suggested (or use the commands I gave before) and prerender to pdf
+
+
+[8/3/2023 12:01 PM] kuratius
+would at least not be slower than koreader
+
+
+[8/3/2023 12:02 PM] szybet
+well try it
+
+
+[8/3/2023 12:02 PM] kuratius
+and since it would be dynamic it would support font size changes etc
+
+
+[8/3/2023 12:02 PM] szybet
+would be cool
+
+
+[8/3/2023 12:04 PM] kuratius
+wait tinytex is in R?
+
+
+[8/3/2023 12:05 PM] szybet
+https://youtu.be/dfHrXsGJ8mo
+
+{Embed}
+Shaun's Shitposts
+https://www.youtube.com/watch?v=dfHrXsGJ8mo
+Team Fortress 2 - Dear God
+THERE'S MORE
+/mnt/data/projects/git/conversations/media/maxresdefault-70B4B.jpg
+
+
+[8/3/2023 12:06 PM] kuratius
+ok so there's two tiny texes
+
+
+[8/3/2023 12:06 PM] kuratius
+fucking hell
+
+
+[8/3/2023 12:06 PM] szybet
+"There is more" 😂
+
+
+[8/3/2023 12:06 PM] kuratius
+https://bitbucket.org/bruceoutdoors/tiny-tex/src/master/
+
+{Embed}
+https://bitbucket.org/bruceoutdoors/tiny-tex/src/master/
+Bitbucket
+
+
+[8/3/2023 12:07 PM] kuratius
+https://github.com/rstudio/tinytex
+
+{Embed}
+https://github.com/rstudio/tinytex
+GitHub - rstudio/tinytex: A lightweight, cross-platform, portable, ...
+A lightweight, cross-platform, portable, and easy-to-maintain LaTeX distribution based on TeX Live - GitHub - rstudio/tinytex: A lightweight, cross-platform, portable, and easy-to-maintain LaTeX di...
+/mnt/data/projects/git/conversations/media/tinytex-941CD
+
+
+[8/3/2023 12:07 PM] szybet
+thats this
+
+
+[8/3/2023 12:09 PM] kuratius
+am I seeing this correctly, this is just a wrapper around texlive?
+
+
+[8/3/2023 12:12 PM] szybet
+https://bitbucket.org/bruceoutdoors/workspace/projects/PROJ
+
+{Embed}
+https://bitbucket.org/bruceoutdoors/workspace/projects/PROJ
+Bitbucket
+
+
+[8/3/2023 12:12 PM] szybet
+here are some qt games
+
+
+[8/3/2023 12:12 PM] szybet
+idk, cant see now
+
+
+[8/3/2023 12:18 PM] kuratius
+https://smallhax.wordpress.com/2014/10/19/ruby-furigana-in-pure-css/
+also neat
+
+{Embed}
+jahu00
+https://smallhax.wordpress.com/2014/10/19/ruby-furigana-in-pure-css/
+Ruby furigana in pure css
+I’m not entirely sure about the nature of the ruby tag within HTML, but I know that it is used by many Japanese sites for including furigana. If you stumbled upon this post then you are proba…
+/mnt/data/projects/git/conversations/media/blank-6F087.jpg
+
+
+[8/3/2023 12:19 PM] szybet
+doubt it will work
+
+
+[8/3/2023 12:19 PM] szybet
+especially display
+
+
+[8/13/2023 2:58 PM] kuratius
+may be interesting for devices that can run a jvm https://github.com/plateaukao/einkbro
+
+{Embed}
+https://github.com/plateaukao/einkbro
+GitHub - plateaukao/einkbro: A small, fast web browser based on And...
+A small, fast web browser based on Android WebView. It&#39;s tailored for E-Ink devices but also works great on normal android devices. - GitHub - plateaukao/einkbro: A small, fast web browser ...
+/mnt/data/projects/git/conversations/media/bd771200-d807-11eb-9281-a070d7ed8762-8EF29
+
+
+[8/13/2023 2:59 PM] szybet
+java is too slow
+
+
+[8/13/2023 2:59 PM] szybet
++ ram issues
+
+
+[8/13/2023 2:59 PM] szybet
+so nope, sadly
+
+
+[8/13/2023 3:00 PM] kuratius
+https://www.youtube.com/watch?v=7x1UQ-JdTTo
+
+{Embed}
+Chalid Raqami
+https://www.youtube.com/watch?v=7x1UQ-JdTTo
+Tolino Epos 3 REVIEW: Hidden Android ereader
+Today I'm doing the world’s first hands-on review of the Tolino Epos 3. 
+
+It’s an 8 inch ereader with a 300 ppi E-Ink Carta 1200 display, and if you like – also with Android.
+
+Find out in the video, what I mean by that and how the Epos 3 performs in everyday use.
+
+--------------------
+
+The Tolino Epos 3 is a high quality device with great contra...
+/mnt/data/projects/git/conversations/media/maxresdefault-A7BEC.jpg
+
+
+[8/13/2023 3:01 PM] kuratius
+at least the epos can run android+java, low spec models probabyl cant
+
+
+[8/13/2023 3:01 PM] kuratius
+and I guess the backend is still android webview anyway
+
+
+[8/13/2023 3:01 PM] kuratius
+and that might not be java
+
+
+[8/13/2023 3:02 PM] szybet
+as i said before, inkbox is focused on cheap, small eink devices to unlock them for more
+
+those that cost 300 eur ( 3 nias, 2 xiaom phones... ) should run at least decent android or linux with such external apps already enabled
+
+
+[8/13/2023 3:02 PM] szybet
+just my opinion
+
+
+[8/14/2023 8:01 AM] szybet
+https://github.com/Builditluc/wiki-tui
+
+{Embed}
+https://github.com/Builditluc/wiki-tui
+GitHub - Builditluc/wiki-tui: A simple and easy to use Wikipedia Te...
+A simple and easy to use Wikipedia Text User Interface  - GitHub - Builditluc/wiki-tui: A simple and easy to use Wikipedia Text User Interface
+/mnt/data/projects/git/conversations/media/wiki-tui-AEC62
+
+
+[8/14/2023 12:23 PM] szybet
+https://mx-moment.xyz/
+
+
+[8/14/2023 12:23 PM] szybet
+https://wiki.postmarketos.org/wiki/Applications_by_category#Web_browsers
+
+{Embed}
+https://wiki.postmarketos.org/wiki/Applications_by_category
+Applications by category
+
+
+[8/22/2023 12:49 PM] szybet
+does anyone here want to try out kde's marble gps app on kobo? i flushed opengl from it and compiled it
+
+
+[8/22/2023 12:49 PM] szybet
+and i dont have access to my kobo now
+
+
+[8/22/2023 3:48 PM] tux_linux
+do you have an userapp
+
+
+[8/22/2023 3:54 PM] szybet
+bare compiled only
+
+
+[8/23/2023 8:45 AM] szybet (pinned)
+https://discord.com/channels/809205711778480158/809205711778480162/1143796892946411570
+
+
+[8/23/2023 8:45 AM] szybet
+Pinned a message.
+
+
+[9/29/2023 1:36 PM] [matrix] adamame
+So I have read the wiki and the readme on github regarding user applications. Just for testing purposes I decided to extract Sketch.zip from the same into the relevant folder .apps, however a new gui app did not appear after the restart.
+
+
+[9/29/2023 1:40 PM] [matrix] adamame
+Nevermind I rebooted the device a few addition times and it got recognized.
+
+
+[9/29/2023 1:42 PM] [matrix] Szybet
+You putted it via usb?
+
+
+[9/29/2023 1:48 PM] [matrix] adamame
+Yes
+
+
+[9/29/2023 1:49 PM] [matrix] Szybet
+Usb is cursed, contributions for fixing it are welcome
+
+
+[9/29/2023 1:53 PM] [matrix] adamame
+Btw what does inkbox use for managing wifi connections? I cannot connect to wifi becaue the keyboard does not contain all the ASCII characters
+
+
+[9/29/2023 2:16 PM] [matrix] Szybet
+Fully custom software?
+
+Make a pull request adding whats missing or change your wifi password for something normal
+
+
+[9/29/2023 2:19 PM] [matrix] adamame
+all right
+
+
+[9/29/2023 2:20 PM] [matrix] adamame
+seems like connecting to PEAP network will not be as simple as with network manager?
+
+
+[9/29/2023 2:46 PM] [matrix] Szybet
+I finished basic networking course and i hear of the protocol for the first time. I also designed the whole wifi manager for inkbox.
+Tldr no idea, propably won't work
+
+
+[9/29/2023 2:47 PM] [matrix] Szybet
+Pull request are welcome 🙈
+
+
+[9/29/2023 3:06 PM] [matrix] adamame
+This the only sensible os which runs on nia so I will look into this during summer
+
+
+[9/29/2023 3:08 PM] [matrix] Szybet
+Cool
+
+
+[9/29/2023 3:08 PM] tux_linux
+what does summer mean
+december of june?
+
+
+[9/29/2023 3:09 PM] [matrix] adamame
+Thats june for me
+
+
+[9/29/2023 3:10 PM] [matrix] tux-linux
+ok, was just wondering
+
+
+[9/29/2023 3:10 PM] [matrix] adamame
+univetsity eats up all my freetime
+
+
+[9/29/2023 3:11 PM] [matrix] tux-linux
+not in university, but study also eats my free time
+
+
+[9/29/2023 3:14 PM] [matrix] Szybet
+Study eats me.
+
+
+[9/29/2023 5:00 PM] [matrix] adamame
+I was just wondering would the pre-compiled koreader for generic armhf work on inkbox os on nia if I created the right squashfs file and launcher for it
+
+
+[9/29/2023 5:04 PM] [matrix] Szybet
+Of course, if it's written to be error proof than yes
+
+
+[9/29/2023 5:05 PM] [matrix] Szybet
+Dont expect wifi to work - anything with hardware related really
+
+
+[9/29/2023 5:05 PM] [matrix] adamame
+yes that makes sense
+
+
+[9/29/2023 5:06 PM] [matrix] Szybet
+Go hunt tux linux for a developer key, if he doesnt answer you till 1 day i will just share the nia keys with you
+
+
+[9/29/2023 5:07 PM] [matrix] Szybet
+I think thats a good policy ;p
+
+
+[9/29/2023 5:07 PM] [matrix] Szybet
+You dont need those keys anyway, when rooted you can remove all protection anyway
+
+
+[9/29/2023 5:08 PM] matterbridge#2154
+[matrix] Szybet 
+Actually i might have it already? If you want it then bother me in a few hours and i will send it
+
+
+[9/29/2023 5:10 PM] [matrix] adamame
+thanks
+
+
+[9/29/2023 5:11 PM] [matrix] adamame
+I will bother you if it will be necessary
+
+
+[9/29/2023 5:19 PM] [matrix] Szybet
+Feel free to ask about anything, inkbox is a complicated system
+
+
+[9/29/2023 5:45 PM] [matrix] tux-linux
+You want a key to develop user apps?
+
+
+[9/29/2023 5:45 PM] [matrix] tux-linux
+Did you install inkbox yet?
+
+
+[9/29/2023 5:49 PM] [matrix] adamame
+Yes I am already tinkering with inkbox
+
+
+[9/29/2023 5:49 PM] matterbridge#2154
+[matrix] adamame 
+sure if you can provide me obe
+
+
+[9/29/2023 5:50 PM] [matrix] adamame
+sure if you can provide me one
+
+
+[9/29/2023 5:59 PM] matterbridge#2154
+[matrix] Szybet 
+You figured out rooting and accessing shell?
+
+
+[9/29/2023 6:02 PM] [matrix] adamame
+well till now I was creating the koreader application but well it is not signed so it will not work
+
+
+[9/29/2023 6:04 PM] matterbridge#2154
+[matrix] adamame 
+yep I can access the shell
+
+
+[9/29/2023 6:05 PM] [matrix] adamame
+but I am not quiet sure what you mean by rooting
+
+
+[9/29/2023 6:05 PM] [matrix] adamame
+do you mean just su?
+
+
+[9/29/2023 6:06 PM] [matrix] Szybet
+If you got to the shell, than you have a rooted kernel? How do you access it?
+
+
+[9/29/2023 6:07 PM] matterbridge#2154
+[matrix] Szybet 
+Look up /etc/init.d/gui_userapps
+
+
+[9/29/2023 6:07 PM] [matrix] tux-linux
+gui_apps
+
+
+[9/29/2023 6:07 PM] [matrix] Szybet
+Ye
+
+
+[9/29/2023 6:07 PM] [matrix] adamame
+on it
+
+
+[9/29/2023 6:08 PM] [matrix] Szybet
+So you launched a terminal app?
+
+
+[9/29/2023 6:09 PM] [matrix] adamame
+Yes
+
+
+[9/29/2023 6:09 PM] [matrix] Szybet
+Yea this wont work
+
+
+[9/29/2023 6:09 PM] [matrix] Szybet
+Its sandboxed obviously
+
+
+[9/29/2023 6:09 PM] [matrix] Szybet
+You need to root your device
+
+
+[9/29/2023 6:09 PM] [matrix] tux-linux
+item?
+
+
+[9/29/2023 6:10 PM] [matrix] adamame
+makes sense
+
+
+[9/29/2023 6:10 PM] [matrix] tux-linux
+iterm
+
+
+[9/29/2023 6:10 PM] [matrix] Szybet
+Look up inkbox issues on github related to glo wifi, there is a guide how to root
+
+
+[9/29/2023 6:10 PM] [matrix] adamame
+ok thanks
+
+
+[9/29/2023 6:56 PM] [matrix] adamame
+I got into diagnostics and enabled usbnet, managed to telnet in.
+
+
+[9/29/2023 6:56 PM] [matrix] adamame
+however I don't see any option to root the device in diagnostics
+
+
+[9/29/2023 7:01 PM] [matrix] tux-linux
+Did you go into reset options
+
+
+[9/29/2023 7:01 PM] [matrix] tux-linux
+Also if you were able to telnet you are probably already rooted
+Otherwise there is a problem somewhere
+
+
+[9/29/2023 7:03 PM] [matrix] adamame
+man I completely overlooked it in the reset options
+
+
+[9/29/2023 7:27 PM] matterbridge#2154
+[matrix] adamame 
+now after the reset how should I acces this file / dir, I don't see it in /etc/init.d when telneted
+
+
+[9/29/2023 7:30 PM] [matrix] Szybet
+Ssh into it
+
+
+[9/29/2023 7:30 PM] [matrix] Szybet
+No telney
+
+
+[9/29/2023 7:32 PM] [matrix] adamame
+ok then, is the port 22?
+
+
+[9/29/2023 7:35 PM] [matrix] Szybet
+the default one
+
+
+[9/29/2023 7:36 PM] [matrix] Szybet
+for usbnet and ssh you need to set the ip address
+
+
+[9/29/2023 7:36 PM] [matrix] Szybet
+something like that
+
+
+[9/29/2023 7:36 PM] [matrix] Szybet
+sudo ifconfig enp0s20f0u5 192.168.2.3/24
+
+
+[9/29/2023 7:36 PM] [matrix] Szybet
+ip address and subnet is important
+
+
+[9/29/2023 7:38 PM] [matrix] adamame
+yeah I know, had to do it for telent already
+
+
+[9/29/2023 7:42 PM] [matrix] adamame
+the problem is it wont let me in with ssh but it will with telnet
+
+
+[9/29/2023 7:42 PM] [matrix] Szybet
+errors? logs?
+
+
+[9/29/2023 7:42 PM] [matrix] Szybet
+what command do you use
+
+
+[9/29/2023 7:44 PM] [matrix] adamame
+since there is no ifconfig on my system i use ```ip addr add 192.168.2.3/24 dev usb0```
+
+
+[9/29/2023 7:45 PM] [matrix] Szybet
+show me ip a command output
+
+
+[9/29/2023 7:45 PM] [matrix] adamame
+8: usb0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000    link/ether aa:a5:e9:c8:40:c6 brd ff:ff:ff:ff:ff:ff    inet 192.168.2.3/24 scope global usb0       valid_lft forever preferred_lft forever
+
+
+[9/29/2023 7:46 PM] [matrix] adamame
+other interfaces are internal and tunnels
+
+
+[9/29/2023 7:46 PM] [matrix] Szybet
+looks fine
+
+
+[9/29/2023 7:47 PM] [matrix] Szybet
+well ssh command, what does it show
+
+
+[9/29/2023 7:48 PM] [matrix] adamame
+ssh: connect to host 192.168.2.2 port 22: Connection refused
+
+
+[9/29/2023 7:48 PM] [matrix] Szybet
+you resetted the device to be rooted yes?
+
+
+[9/29/2023 7:48 PM] [matrix] adamame
+yes I did
+
+
+[9/29/2023 7:49 PM] [matrix] adamame
+it asked me for onboard storage size so I selected the default which is 64mib
+
+
+[9/29/2023 7:49 PM] [matrix] Szybet
+thats too low but whatever can be changed later
+
+
+[9/29/2023 7:50 PM] [matrix] adamame
+what does it even mean, is it the ram size or something completely else?
+
+
+[9/29/2023 7:51 PM] [matrix] Szybet
+size of storage for books, apps
+
+
+[9/29/2023 7:51 PM] [matrix] adamame
+alright
+
+
+[9/29/2023 7:51 PM] [matrix] Szybet
+does nmap show port 22 open?
+
+
+[9/29/2023 7:51 PM] [matrix] adamame
+I am reseting the device once more
+
+
+[9/29/2023 7:52 PM] [matrix] Szybet
+wont change much
+
+
+[9/29/2023 7:52 PM] [matrix] adamame
+I will try once again and send the nmap output
+
+
+[9/29/2023 7:52 PM] [matrix] Szybet
+ok, im waiting
+
+
+[9/29/2023 7:53 PM] [matrix] adamame
+go grab a cup of tea or something it takes some time to reset it
+
+
+[9/29/2023 8:05 PM] [matrix] adamame
+yes I forgot to mention I on the model C nia inkbox
+
+
+[9/29/2023 8:05 PM] [matrix] Szybet
+ooooh
+
+
+[9/29/2023 8:05 PM] [matrix] Szybet
+yea this doesnt explain much anyway
+
+
+[9/29/2023 8:06 PM] [matrix] adamame
+It has almost finished restting
+
+
+[9/29/2023 8:31 PM] [matrix] adamame
+nmap says the only port openned is telnet
+
+
+[9/29/2023 8:31 PM] [matrix] adamame
+23/tcp
+
+
+[9/29/2023 8:32 PM] [matrix] adamame
+no wonder it didn't work
+
+
+[9/29/2023 8:32 PM] [matrix] Szybet
+ummm
+
+
+[9/29/2023 8:32 PM] [matrix] Szybet
+is the gui on?
+
+
+[9/29/2023 8:32 PM] [matrix] Szybet
+the main UI
+
+
+[9/29/2023 8:37 PM] [matrix] adamame
+Am I this stupid
+
+
+[9/29/2023 8:38 PM] [matrix] adamame
+i didn't read it properly and thought it has to be done in diagnostics
+
+
+[9/29/2023 8:38 PM] [matrix] adamame
+in gui it is opened
+
+
+[9/29/2023 8:38 PM] [matrix] Szybet
+😄
+
+
+[9/29/2023 8:38 PM] [matrix] Szybet
+you are in shell
+
+
+[9/29/2023 8:39 PM] [matrix] Szybet
+you got futher than 80% of all people that tried
+
+
+[9/29/2023 8:39 PM] [matrix] adamame
+username should be root right?
+
+
+[9/29/2023 8:40 PM] [matrix] Szybet
+yes
+
+
+[9/29/2023 8:40 PM] [matrix] adamame
+password should be blank, or why is it asking for one
+
+
+[9/29/2023 8:41 PM] [matrix] Szybet
+password is "root"
+
+
+[9/29/2023 8:41 PM] [matrix] adamame
+the moment of truth then
+
+
+[9/29/2023 8:42 PM] [matrix] adamame
+I am in
+
+
+[9/29/2023 8:42 PM] [matrix] Szybet
+congratulations
+
+
+[9/29/2023 8:43 PM] [matrix] Szybet
+now look at the file in etc we mentioned and figure out how to disable sign verification
+
+
+[9/29/2023 8:45 PM] [matrix] adamame
+Oh man another problem has appeared the connection drops after always drops after 10 seconds
+
+
+[9/29/2023 8:45 PM] [matrix] adamame
+I will try changing the cable
+
+
+[9/29/2023 8:46 PM] [matrix] Szybet
+what DE are you using
+
+
+[9/29/2023 8:46 PM] [matrix] Szybet
+KDE with network manager tries to use DHCP on the device so it disconnects
+
+
+[9/29/2023 8:46 PM] [matrix] Szybet
+you need to turn it off
+
+
+[9/29/2023 8:47 PM] [matrix] adamame
+I do use networkmanager (artix linux, i3)
+
+
+[9/29/2023 8:47 PM] [matrix] adamame
+then time to disable it
+
+
+[9/29/2023 8:47 PM] [matrix] Szybet
+¯\_(ツ)_/¯
+
+
+[9/29/2023 9:19 PM] [matrix] adamame
+Oh boy, so I read the gui_apps script and there I saw devmode="$(cat /opt/something/keys/something)" and a comment that it disables sign verification. So I created the file it mentioned and made its content equal true. However, now I cannot mount or ssh. What have I done?
+
+
+[9/29/2023 9:20 PM] [matrix] Szybet
+a lot of the system went broke
+
+
+[9/29/2023 9:20 PM] [matrix] Szybet
+hehe
+
+
+[9/29/2023 9:21 PM] [matrix] Szybet
+disconnect the sd card, mount partition 3, there in rootfs/write find the file you created and replace it with the one i send you on private message
+
+
+[9/29/2023 9:23 PM] [matrix] adamame
+ok I am awaiting the file then
+
+
+[9/29/2023 9:23 PM] [matrix] Szybet
+uhm well i dont have it
+
+
+[9/29/2023 9:23 PM] [matrix] Szybet
+nicolas why
+
+
+[9/29/2023 9:23 PM] [matrix] Szybet
+tux-linux: tux-linux tux-linux give me it and to the guy
+
+
+[9/29/2023 9:24 PM] [matrix] Szybet
+for now just remove the file you created
+
+
+[9/29/2023 9:24 PM] [matrix] Szybet
+boot the ereader and check if everything works
+
+
+[9/29/2023 9:24 PM] [matrix] Szybet
+and now only save changes if you are sure of what you are doing
+
+
+[9/29/2023 9:25 PM] [matrix] Szybet
+and ask before doing things too, dont be afraid
+
+
+[9/29/2023 9:25 PM] [matrix] adamame
+you learn from your mistakes
+
+
+[9/29/2023 9:26 PM] [matrix] Szybet
+I also needed to reset inkbox a lot of times, until i made the sd card external so now i dont care ;D
+
+
+[9/29/2023 9:26 PM] [matrix] adamame
+To disbale signature verification did I have to actually modify the iniy script?
+
+
+[9/29/2023 9:27 PM] [matrix] Szybet
+for gui apps, yes
+
+
+[9/29/2023 9:27 PM] [matrix] Szybet
+easiest way to do this
+
+
+[9/29/2023 9:28 PM] [matrix] adamame
+the comment above devmode was promising to make it work
+
+
+[9/29/2023 9:28 PM] [matrix] adamame
+*looked promisinf
+
+
+[9/29/2023 9:28 PM] [matrix] Szybet
+yes, but not with putting true in it
+
+
+[9/29/2023 9:30 PM] [matrix] Szybet
+https://github.com/Kobo-InkBox/rootfs/blob/e644e58d463bc534e0d4cab155a6e4d4ee9a715a/etc/init.d/gui_apps#L44-L49C2
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/e644e58d463bc534e0d4cab155a6e4d4ee9a715a/etc/init.d/gui_apps
+rootfs/etc/init.d/gui_apps at e644e58d463bc534e0d4cab155a6e4d4ee9a7...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-88067
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+you modiffied this
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+and even im not sure what it does
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+complicated stuff ;)
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+nicolas explain
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+anyway we will bypass it
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+https://github.com/Kobo-InkBox/rootfs/blob/e644e58d463bc534e0d4cab155a6e4d4ee9a715a/etc/init.d/gui_apps#L54
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/e644e58d463bc534e0d4cab155a6e4d4ee9a715a/etc/init.d/gui_apps
+rootfs/etc/init.d/gui_apps at e644e58d463bc534e0d4cab155a6e4d4ee9a7...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-88067
+
+
+[9/29/2023 9:31 PM] [matrix] Szybet
+here is the line that is checking apps key
+
+
+[9/29/2023 9:32 PM] [matrix] Szybet
+just make it always true, the if statement like true = true but in shell syntax
+
+
+[9/29/2023 9:32 PM] [matrix] adamame
+if true; then
+
+
+[9/29/2023 9:32 PM] [matrix] adamame
+should suffice
+
+
+[9/29/2023 9:32 PM] [matrix] Szybet
+i hate shell and i cant program in it
+
+
+[9/29/2023 9:33 PM] [matrix] Szybet
+so dont ask me about it
+
+
+[9/29/2023 9:33 PM] [matrix] adamame
+I know a bit of shell
+
+
+[9/29/2023 9:33 PM] [matrix] adamame
+this will work
+
+
+[9/29/2023 9:40 PM] [matrix] adamame
+Sorry to bother you again, I have trouble mounting rootfs partition. It says write protected but read-write mode requested
+
+
+[9/29/2023 9:41 PM] [matrix] Szybet
+?
+
+
+[9/29/2023 9:41 PM] [matrix] Szybet
+what? where?
+
+
+[9/29/2023 9:41 PM] [matrix] Szybet
+on PC?
+
+
+[9/29/2023 9:41 PM] [matrix] adamame
+yes
+
+
+[9/29/2023 9:41 PM] [matrix] Szybet
+look up dmesg if it spits out something about sd card being messy
+
+
+[9/29/2023 9:42 PM] [matrix] Szybet
+second look up mount command and force + mount write arguments
+
+
+[9/29/2023 9:42 PM] [matrix] Szybet
+and use it
+
+
+[9/29/2023 9:42 PM] [matrix] Szybet
+should be fine
+
+
+[9/29/2023 9:44 PM] [matrix] adamame
+Made it
+
+
+[9/29/2023 9:45 PM] [matrix] Szybet
+does everything work? then save the file and boot the os
+
+
+[9/29/2023 10:33 PM] matterbridge#2154
+[matrix] tux-linux 
+Updates most importantly
+
+
+[9/29/2023 10:34 PM] matterbridge#2154
+[matrix] tux-linux 
+You said 1 day.
+
+
+[9/29/2023 10:35 PM] [matrix] tux-linux
+adamame: please do `dd if=/dev/mmcblk0 bs=256 count=1 skip=2`
+
+
+[9/29/2023 10:36 PM] matterbridge#2154
+[matrix] Szybet 
+he is toored already?...
+
+
+[9/29/2023 10:36 PM] [matrix] Szybet
+what are you trying to achieve
+
+
+[9/29/2023 10:36 PM] [matrix] tux-linux
+uid
+developer key
+
+
+[9/29/2023 10:36 PM] matterbridge#2154
+[matrix] Szybet 
+I didnt said we will be waiting 1 day
+
+
+[9/29/2023 10:36 PM] matterbridge#2154
+[matrix] Szybet 
+what
+
+
+[9/29/2023 10:36 PM] matterbridge#2154
+[matrix] tux-linux 
+.
+
+
+[9/29/2023 10:36 PM] [matrix] Szybet
+I didnt shared the keys
+
+
+[9/29/2023 10:37 PM] matterbridge#2154
+[matrix] Szybet 
+do you generate a random uid and match a developer key for it or what
+
+
+[9/29/2023 10:37 PM] [matrix] tux-linux
+https://github.com/Kobo-InkBox/kernel/blob/df49af52e528e270d502729b05ae72c12c28733a/initrd/common/developer-key#L5
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/blob/df49af52e528e270d502729b05ae72c12c28733a/initrd/common/developer-key
+kernel/initrd/common/developer-key at df49af52e528e270d502729b05ae7...
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-5A1D7
+
+
+[9/29/2023 10:37 PM] [matrix] tux-linux
+its designed to work only for one device with one uid
+
+
+[9/29/2023 10:38 PM] matterbridge#2154
+[matrix] tux-linux 
+then, please reboot and see if this outputs the same thing
+if not, tell me
+
+
+[9/29/2023 10:39 PM] matterbridge#2154
+[matrix] Szybet 
+lol how? its flawed already and gives extra steps
+
+
+[9/29/2023 10:40 PM] [matrix] Szybet
+first you just need to match the UID which is just another dd command
+
+
+[9/29/2023 10:40 PM] [matrix] Szybet
+recompiling kernel should be enough to overwrite the code
+
+
+[9/29/2023 10:41 PM] [matrix] Szybet
+i dont see any point in it, even if it works correctly only for this one uid ( i would love it to be explained how lol )
+
+
+[9/29/2023 10:41 PM] [matrix] tux-linux
+well, yes, but i don't see a better solution
+
+
+[9/29/2023 10:41 PM] [matrix] tux-linux
+it already limits hacking possibilities for people that are less aware of how the system works
+
+
+[9/29/2023 10:42 PM] [matrix] Szybet
+im sure adamame would figure it out in another 15 minutes in the gui apps script
+
+
+[9/29/2023 10:42 PM] [matrix] Szybet
+it should be just a switch in rooted kernel to disable veryfication anyway, thats it
+
+
+[9/29/2023 10:43 PM] [matrix] Szybet
+there is a reason all those big tech companies require for a "developer key" for a dev kit or anything a stable internet connection to their servers
+
+
+[9/29/2023 10:43 PM] [matrix] tux-linux
+well, if it was just a switch, it wouldn't require signing the uid by a main developer
+so, less secure
+
+
+[9/29/2023 10:44 PM] matterbridge#2154
+[matrix] tux-linux 
+sure
+you want to implement that?
+
+
+[9/29/2023 10:44 PM] [matrix] tux-linux
+go ahead
+
+
+[9/29/2023 10:45 PM] [matrix] Szybet
+the system is flawed, how can you sign a uid
+
+one developer key leaks, one UUID leaks and the whole system goes away
+
+
+[9/29/2023 10:45 PM] [matrix] Szybet
+the only reason i see this to know who leaked the key, that's it
+
+
+[9/29/2023 10:45 PM] matterbridge#2154
+[matrix] Szybet 
+are we big tech companies? should we care?
+
+
+[9/29/2023 10:45 PM] [matrix] tux-linux
+no
+
+
+[9/29/2023 10:46 PM] [matrix] tux-linux
+but maybe eventually it would be nice
+
+
+[9/29/2023 10:46 PM] matterbridge#2154
+[matrix] Szybet 
+we leave it for it
+
+
+[9/29/2023 10:46 PM] [matrix] Szybet
+`the system is flawed, how can you sign a uid`
+
+
+[9/29/2023 10:46 PM] [matrix] Szybet
+explain this
+
+
+[9/29/2023 10:46 PM] [matrix] tux-linux
+wdym
+
+
+[9/29/2023 10:46 PM] [matrix] Szybet
+you have random bytes
+
+
+[9/29/2023 10:47 PM] [matrix] Szybet
+how do you sign them with a public key already on the device
+
+
+[9/29/2023 10:47 PM] [matrix] tux-linux
+a private key
+
+
+[9/29/2023 10:47 PM] [matrix] tux-linux
+that is not on the device
+
+
+[9/29/2023 10:47 PM] [matrix] tux-linux
+i sign it here
+
+
+[9/29/2023 10:47 PM] [matrix] tux-linux
+public key is only for verification
+
+
+[9/29/2023 10:47 PM] [matrix] Szybet
+and the uid does what
+
+
+[9/29/2023 10:47 PM] [matrix] Szybet
+yes i said it wrong i understand it
+
+
+[9/29/2023 10:47 PM] [matrix] tux-linux
+Universal IDentifier
+
+
+[9/29/2023 10:47 PM] [matrix] Szybet
+so what
+
+
+[9/29/2023 10:48 PM] [matrix] tux-linux
+so you can't have two devices with the same uid
+if you don't overwrite anything
+
+
+[9/29/2023 10:48 PM] [matrix] tux-linux
+it's 256 bytes
+random enough it doesn't repeat somewhere else
+
+
+[9/29/2023 10:49 PM] [matrix] Szybet
+so what, how in the signing process does the uid do anything
+
+
+[9/29/2023 10:49 PM] [matrix] tux-linux
+well, if somehow the uid was on a rom, the developer key would only work for one device
+
+
+[9/29/2023 10:49 PM] [matrix] tux-linux
+that's the idea
+
+
+[9/29/2023 10:49 PM] [matrix] tux-linux
+of course it can be overwritten on kobos
+
+
+[9/29/2023 10:50 PM] [matrix] tux-linux
+on kindle I think it's on a separate chip
+maybe
+
+
+[9/29/2023 10:50 PM] [matrix] tux-linux
+i don't remember correctly
+
+
+[9/29/2023 10:51 PM] [matrix] Szybet
+you have the unique 256 bytes in the signing process ***what do you do with them to make it work***
+
+
+[9/29/2023 10:52 PM] [matrix] tux-linux
+i sign 256 bytes
+
+
+[9/29/2023 10:52 PM] [matrix] tux-linux
+that's it
+
+
+[9/29/2023 10:52 PM] [matrix] Szybet
+boom thats what i wanted to hear
+
+
+[9/29/2023 10:52 PM] [matrix] Szybet
+so my points stands
+
+
+[9/29/2023 10:53 PM] [matrix] Szybet
+it doesnt protect against anything, we only would know who leaked the key
+
+
+[9/29/2023 10:53 PM] [matrix] Szybet
+start making the list then
+
+
+[9/29/2023 10:53 PM] [matrix] tux-linux
+?
+
+
+[9/29/2023 10:53 PM] [matrix] Szybet
+list of requested developers keys
+
+
+[9/29/2023 10:54 PM] [matrix] tux-linux
+well, ok
+
+
+[9/29/2023 10:54 PM] [matrix] tux-linux
+i think he's the first one
+
+
+[9/29/2023 10:54 PM] [matrix] Szybet
+yes
+
+
+[9/29/2023 10:54 PM] [matrix] Szybet
+i didnt cared
+
+
+[9/29/2023 11:18 PM] matterbridge#2154
+[matrix] adamame 
+maybe tommorow, going to bed already
+
+
+[10/4/2023 8:42 AM] [matrix] Szybet
+wtf?
+
+
+[10/6/2023 5:13 AM] kuratius
+Thumbsup on porting koreader!
+
+
+[10/25/2023 11:07 PM] szybet
+`https://map.lightningmaps.org/carto/11/1293/859.png`
+
+
+[10/25/2023 11:08 PM] szybet
+and thats how i will add a storm map to the  map app ;p
+
+
+[12/22/2023 5:47 PM] luismaylon123
+app navegator web in inbox os?
+
+
+[12/22/2023 6:30 PM] [matrix] Szybet
+what
+
+
+[12/23/2023 1:06 AM] [matrix] tux-linux
+i think he wants to know if there is a web browser in inkbox
+
+
+[12/23/2023 1:06 AM] [matrix] tux-linux
+as a matter of fact, yes and no
+
+
+[12/23/2023 1:07 AM] [matrix] tux-linux
+tldr: it isn't great
+
+
+[1/7/2024 6:34 PM] [matrix] haitam-kenwai
+Hi, Just a quick question about app installation: where exactly do I have to unzip the folder? I tried directly on the 4th partition of the SD card but nothing shows up, I then tried to use the USB trasfer function (connecting the Kobo to the pc) but at that point the folders shows up in the "Reader" section
+
+
+[1/7/2024 6:34 PM] [matrix] haitam-kenwai
+And not under "User apps"
+
+
+[1/7/2024 6:34 PM] szybet
+.apps folder when connected via usb
+
+
+[1/7/2024 6:36 PM] [matrix] haitam-kenwai
+Got it
+
+
+[1/7/2024 6:37 PM] [matrix] haitam-kenwai
+Is this on the wiki? Cause I read it but I didn't found this
+
+
+[1/7/2024 6:37 PM] szybet
+nope
+
+
+[1/7/2024 6:37 PM] szybet
+you can add it
+
+
+[1/7/2024 6:37 PM] szybet
+i mean depends on which wiki
+on github no, on the site maybe it is
+
+
+[1/7/2024 6:38 PM] [matrix] haitam-kenwai
+I watched both
+
+
+[1/7/2024 6:38 PM] [matrix] haitam-kenwai
+Ok then I'll submit a small page as soon as I can
+
+
+[1/7/2024 6:39 PM] szybet
+yea its not hehe... so many specific stuff and not the basic ones
+
+you can copy the wiki from the website to github and add your things
+
+
+[1/7/2024 6:39 PM] szybet
+we are moving to github
+
+
+[1/7/2024 6:39 PM] szybet
+you can convert the wiki format via pandoc i think
+
+
+[1/7/2024 6:41 PM] [matrix] haitam-kenwai
+Great
+
+
+[1/7/2024 6:41 PM] szybet
+you can transit all the pages if you want
+
+
+[1/7/2024 6:41 PM] szybet
+and create docs for all things
+
+
+[1/7/2024 6:41 PM] szybet
+¯\_(ツ)_/¯
+
+
+[1/7/2024 6:43 PM] [matrix] haitam-kenwai
+If you are already planning to do this I think I will only add something, BUT if it is something that you will do in an unspecified future then I can do it
+
+
+[1/7/2024 6:44 PM] szybet
+someone someday will have to do it, but as for now and the near future me and nicolas dont have time to do that soo you can
+
+
+[1/7/2024 6:45 PM] [matrix] haitam-kenwai
+Just saying this because with work and hobbies is hard to do more, but if it is something that need to be done from 0% I will reserve some hours in the week to do it
+
+
+[1/7/2024 6:45 PM] matterbridge#2154
+[matrix] haitam-kenwai 
+Sounds great
+
+
+[1/8/2024 11:34 AM] kuratius
+Could consider kiwix or similar things to offer offline wikipedia on Kobo out of the box (didnt see it in szybet's list of user apps)
+
+
+[1/8/2024 11:35 AM] kuratius
+Only viable with large sd cards, but may be worth consideration as I dont think default kobo has an option for that
+
+
+[1/8/2024 11:35 AM] kuratius
+and sd cards go up to 1-2TB nowadays
+
+
+[1/8/2024 11:36 AM] kuratius
+https://en.wikipedia.org/wiki/Kiwix
+
+{Embed}
+https://en.wikipedia.org/wiki/Kiwix
+Kiwix
+Kiwix is a free and open-source offline web browser created by Emmanuel Engelhart and Renaud Gaudin in 2007. It was first launched to allow offline access to Wikipedia, but has since expanded to include other projects from the Wikimedia Foundation, public domain texts from Project Gutenberg, many of the Stack Exchange sites, and many other resou...
+/mnt/data/projects/git/conversations/media/1200px-Kiwix_logo_v3.svg-3AD0E.png
+
+
+[1/8/2024 11:36 AM] kuratius
+it has a server option too, but idk if that's useful
+
+
+[1/10/2024 7:20 PM] tux_linux
+it could probably be ported with some hard work
+
+
+[1/10/2024 7:20 PM] kuratius
+I'm just suggesting that a feature like making it easy to have offline wikipedia on your ereader could be cool and viable since most people who use inkbox replace their sd card anyway
+
+
+[1/10/2024 7:21 PM] kuratius
+doesnt necessarily need kiwix
+
+
+[1/10/2024 7:22 PM] tux_linux
+yes
+koreader can do that
+
+
+[1/10/2024 7:22 PM] kuratius
+does it download single articles or the entire wikipedia?
+
+
+[1/10/2024 7:22 PM] tux_linux
+single
+
+
+[1/10/2024 7:22 PM] tux_linux
+entire wikipedia is like >100gb?
+
+
+[1/10/2024 7:22 PM] szybet
+entire wikipedia -> a few tb
+
+
+[1/10/2024 7:22 PM] tux_linux
+it says 22 gb without images
+
+
+[1/10/2024 7:23 PM] szybet
+As of 2 July 2023, the size of the current version of all articles compressed is about 22.14 GB without media.
+
+
+[1/10/2024 7:23 PM] kuratius
+without images or with only important article I think it would fit
+
+
+[1/10/2024 7:23 PM] szybet
+huh
+
+
+[1/10/2024 7:23 PM] kuratius
+it shouldnt be the default because it'd bloat inkbox too much
+
+
+[1/10/2024 7:23 PM] kuratius
+but for people with large sd cards it'd be cool
+
+
+[1/10/2024 7:23 PM] tux_linux
+it would be nice to have as an option
+
+
+[1/10/2024 7:24 PM] kuratius
+probably just do something that downloads wikipedia from somewhere and then open it in koreader or something else
+
+
+[1/10/2024 7:24 PM] kuratius
+people can probably already do that
+
+
+[1/10/2024 7:24 PM] kuratius
+but with less overhead would be nice
+
+
+[1/10/2024 7:25 PM] kuratius
+like, less work required from the user is what I mean
+
+{Reactions}
+👍 
+
+[1/10/2024 9:33 PM] [matrix] haitam-kenwai
+Hi guys, trying to install Koreader rn and I can't quite understand how: I downloaded koreader-inkbox-main from github and unzip it in .apps but it doesn't populate "apps.json" and I can't see it under "User's application" on the reader.
+Maybe I have to run "create.sh" in inkbox_userapp (in koreader-inkbox-main)?
+
+
+[1/10/2024 9:34 PM] [matrix] Szybet
+how do you upload it to the reader?
+
+
+[1/10/2024 9:38 PM] [matrix] haitam-kenwai
+Connect reader with computer (MicroSD is in the reader) -> mount -> unzip in .apps folder
+
+
+[1/10/2024 9:38 PM] [matrix] Szybet
+show me the structure of .apps
+
+
+[1/10/2024 9:38 PM] [matrix] Szybet
+all the folders and files in it
+
+
+[1/10/2024 9:38 PM] [matrix] Szybet
+find command on linux
+
+
+[1/10/2024 10:05 PM] [matrix] haitam-kenwai
+drwxr-xr-x  7 haitam haitam 8.0K Jan  7 22:11 .
+drwxr-xr-x  7 haitam haitam 8.0K Jan  1  1970 ..
+drwxr-xr-x  3 haitam haitam 8.0K Jan  7 22:10 Conway
+drwxr-xr-x  4 haitam haitam 8.0K Oct  7 07:18 koreader-inkbox-main
+drwxr-xr-x 16 haitam haitam 8.0K Jul  2  2023 qt-games-master
+drwxr-xr-x  3 haitam haitam 8.0K Jan  7 22:10 rssguard
+drwxr-xr-x  3 haitam haitam 8.0K Oct  5 10:57 user-applications-main
+-rw-r--r--  1 haitam haitam 1.1K Jan  7 22:12 apps.json
+-rw-r--r--  1 haitam haitam  37K Jan  5 23:29 Conway.zip
+-rw-r--r--  1 haitam haitam  44M Jan  7 19:03 koreader-inkbox-main.zip
+-rw-r--r--  1 haitam haitam 1.8M Jan  5 23:31 qt-games-master.zip
+-rw-r--r--  1 haitam haitam 5.7M Jan  5 23:29 rssguard.zip
+-rw-r--r--  1 haitam haitam  46M Jan  7 19:02 user-applications-main.zip
+
+
+[1/10/2024 10:06 PM] [matrix] haitam-kenwai
+Conway and rssguard are shown correctly on the device
+
+
+[1/10/2024 10:07 PM] [matrix] haitam-kenwai
+drwxr-xr-x  4 haitam haitam 8.0K Oct  7 07:18 .
+drwxr-xr-x  7 haitam haitam 8.0K Jan  7 22:11 ..
+drwxr-xr-x  3 haitam haitam 8.0K Oct  7 07:18 inkbox_userapp
+drwxr-xr-x 17 haitam haitam 8.0K Oct  7 07:18 koreader
+-rw-r--r--  1 haitam haitam  157 Oct  7 07:18 .gitignore
+-rw-r--r--  1 haitam haitam  243 Oct  7 07:18 README.md
+
+
+[1/10/2024 10:08 PM] matterbridge#2154
+[matrix] haitam-kenwai 
+Koreader-inkbox-main
+
+
+[1/10/2024 10:08 PM] [matrix] haitam-kenwai
+Koreader-inkbox-main folder
+
+
+[1/10/2024 10:08 PM] szybet
+i dont know how you were able to extract it like that
+
+there needs to be an koreader folder and inside of it: app.json, koreader.isa and koreader.isa.dgst
+
+
+[1/10/2024 10:09 PM] szybet
+repair it, you propably have an additionall folder
+
+
+[1/10/2024 10:09 PM] szybet
+koreader folder is in .apps and inside of it the rest of the apps
+
+
+[1/10/2024 10:13 PM] matterbridge#2154
+[matrix] Szybet 
+the rest of the files
+
+
+[1/10/2024 10:13 PM] [matrix] Szybet
+my bad
+
+
+[1/10/2024 10:14 PM] [matrix] Szybet
+oof to summarize:
+in .apps/koreader must be: app.json, koreader.isa and koreader.isa.dgst
+
+
+[1/10/2024 10:18 PM] matterbridge#2154
+[matrix] haitam-kenwai 
+I downloaded the zip from Github, what is the correct way to unzip it?
+
+
+[1/10/2024 10:18 PM] [matrix] haitam-kenwai
+Since I can't find koreader.isa
+
+
+[1/10/2024 10:18 PM] [matrix] Szybet
+https://github.com/Szybet/koreader-inkbox/releases/download/2023-10-07/koreader_inkbox.zip
+
+
+[1/10/2024 10:18 PM] [matrix] Szybet
+here is the latest zip
+
+
+[1/10/2024 10:19 PM] matterbridge#2154
+[matrix] Szybet 
+ with whatever archive program
+
+
+[1/10/2024 10:20 PM] matterbridge#2154
+[matrix] haitam-kenwai 
+Ok, downloading this rn and trying
+
+
+[1/10/2024 10:25 PM] [matrix] haitam-kenwai
+Uh
+
+
+[1/10/2024 10:26 PM] [matrix] haitam-kenwai
+I have a problem but I think is something related to the SD and not Inkbox itself
+
+
+[1/10/2024 10:27 PM] [matrix] haitam-kenwai
+I remove koreader-inkbox-main folder and unzip the correct one (koreader folder with only app.json, koreader.isa and koreader.isa.dgst), I umount the device and koreader still isn't showing up, I reconnect the device and koreader-inkbox-main is still there
+
+
+[1/10/2024 10:27 PM] [matrix] haitam-kenwai
+wtf
+
+
+[1/10/2024 10:28 PM] [matrix] Szybet
+you unmount it uncorrectly
+
+
+[1/10/2024 10:28 PM] [matrix] Szybet
+incorrectly
+
+
+[1/10/2024 10:28 PM] [matrix] Szybet
+first run sync commannd a few times
+
+
+[1/10/2024 10:28 PM] [matrix] Szybet
+them umount command on the device
+
+
+[1/10/2024 10:28 PM] [matrix] haitam-kenwai
+Oke, retrying
+
+
+[1/10/2024 10:29 PM] [matrix] haitam-kenwai
+Never had this problem before
+
+
+[1/10/2024 10:32 PM] [matrix] haitam-kenwai
+Still nothing
+
+
+[1/10/2024 10:32 PM] [matrix] haitam-kenwai
+Tomorrow I will try with another computer
+
+
+[1/10/2024 10:32 PM] [matrix] haitam-kenwai
+Too tired rn
+
+
+[1/10/2024 10:32 PM] [matrix] haitam-kenwai
+Thanks anyway
+
+
+[1/25/2024 8:30 PM] wh4ky
+is there a port of doom or is porting it, planned?
+
+
+[1/25/2024 8:37 PM] tux_linux
+@Szybet
+
+
+[1/25/2024 8:38 PM] tux_linux
+https://www.youtube.com/watch?v=xb-FgfQZEUM
+
+{Embed}
+Nicolas Mailloux
+https://www.youtube.com/watch?v=xb-FgfQZEUM
+Doom running on Kobo
+@Szybet (https://github.com/Szybet) has ported Doom to their Kobo Nia that is running InkBox OS.
+https://github.com/Szybet/doomgeneric-rs-inkbox
+/mnt/data/projects/git/conversations/media/maxresdefault-61876.jpg
+
+
+[1/25/2024 8:38 PM] wh4ky
+thank you
+
+
+[2/3/2024 4:08 AM] tux_linux
+test
+
+
+[4/3/2024 3:15 PM] szybet
+its fucking closed source AAAAAAAAAAAAAAA
+https://cancel.fm/ripcord/
+
+{Embed}
+https://cancel.fm/ripcord/
+Ripcord: Desktop Chat Client
+Ripcord is a desktop chat client for Slack and Discord. It provides a traditional compact desktop interface designed for power users.
+
+
+[4/3/2024 3:16 PM] tux_linux
+yea and also it can make discord terminate your account
+
+
+[4/3/2024 3:16 PM] tux_linux
+let me guess
+it has a pricing tab
+
+
+[4/3/2024 3:16 PM] tux_linux
+yeo
+
+
+[4/3/2024 3:16 PM] tux_linux
+yep
+
+
+[4/3/2024 3:17 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-A1CB5.png
+
+
+[4/3/2024 3:17 PM] tux_linux
+lmao
+
+
+[4/3/2024 3:17 PM] tux_linux
+3,5 people
+
+
+[4/3/2024 3:18 PM] tux_linux
+there was a qt discord client
+
+
+[4/3/2024 3:18 PM] tux_linux
+that worked
+
+
+[4/3/2024 3:18 PM] szybet
+whatever i dont care
+
+
+[4/3/2024 3:18 PM] szybet
+we have matrix clients
+
+
+[4/3/2024 3:18 PM] tux_linux
+i think you already forgot nachat
+
+
+[4/3/2024 3:18 PM] tux_linux
+or smth
+
+
+[4/3/2024 3:18 PM] tux_linux
+and gomuks
+
+
+[4/3/2024 3:19 PM] szybet
+if qt6 will work, neochat will too because i was able to compile opengl software renderer in it
+
+
+[4/3/2024 3:19 PM] tux_linux
+neochat is decent
+
+
+[4/3/2024 3:19 PM] tux_linux
+i have it on mac
+
+
+[4/3/2024 3:19 PM] tux_linux
+it works
+
+
+[4/3/2024 3:19 PM] spagettioso
+It's unmaintained a while so may be completely broken with discord API changes but there was a cli discord client that would work if l in iterm if people where desperate
+
+
+[4/3/2024 3:19 PM] spagettioso
+I used it on my pinephone for a bit
+
+
+[4/3/2024 3:20 PM] tux_linux
+neochat?
+
+
+[4/3/2024 3:20 PM] spagettioso
+Gord
+
+
+[4/3/2024 3:20 PM] spagettioso
+Thought I mentioned the name lol
+
+
+[4/3/2024 3:20 PM] tux_linux
+oh
+
+
+==============================================================
+Exported 801 message(s)
+==============================================================

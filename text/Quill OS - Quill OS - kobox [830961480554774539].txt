@@ -1,0 +1,1116 @@
+==============================================================
+Guild: Quill OS
+Channel: Quill OS / kobox
+==============================================================
+
+[4/30/2022 8:44 PM] tux_linux
+Simon Tatham's Puzzles extension is getting ready!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220430_180839029-9FA3F.jpg
+
+{Reactions}
+🥳 (2) 
+
+[5/1/2022 6:10 AM] tux_linux
+Some screenshots
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/pearl-5DD9D.png
+/mnt/data/projects/git/conversations/media/net-4063C.png
+/mnt/data/projects/git/conversations/media/mines-045F2.png
+/mnt/data/projects/git/conversations/media/map-1DAD3.png
+/mnt/data/projects/git/conversations/media/list-32A3A.png
+/mnt/data/projects/git/conversations/media/flood-2C332.png
+/mnt/data/projects/git/conversations/media/cube-17706.png
+
+{Reactions}
+🤩 
+
+[5/1/2022 6:11 AM] nonasuomy
+Great work!
+
+
+[5/1/2022 6:12 AM] tux_linux
+Well, credit goes to the main developer
+
+
+[5/1/2022 6:13 AM] tux_linux
+Porting that to KoBox was relatively easy
+Without wanting to brag, my plugin/extensions system is really straightforward to setup/use/understand
+
+
+[5/1/2022 6:14 AM] nonasuomy
+Is it documented? You should put something up so others can do the same process with ease
+
+
+[5/1/2022 6:14 AM] tux_linux
+Compiling was really nice too
+It's just GTK code in C
+
+
+[5/1/2022 6:15 AM] nonasuomy
+It's all fun and games until you have to document things 😄
+
+
+[5/1/2022 6:15 AM] tux_linux
+yeah, I have to do that
+but basically, an extension only contains a part of a big root filesystem which contains the files and the things necessary to run the program.
+extensions are merged via overlayfs/unionfs magic at boot
+
+
+[5/1/2022 6:16 AM] tux_linux
+It was a nightmare to write
+https://github.com/Kobo-InkBox/kernel/blob/master/initrd/common/startx
+
+
+[5/1/2022 6:18 AM] nonasuomy
+But you conquered it like a champion!
+
+{Reactions}
+👍 
+
+[5/1/2022 6:19 AM] tux_linux
+Now available!
+http://23.163.0.39/bundles/kobox/extensions/
+
+
+[5/1/2022 6:19 AM] tux_linux
+puzzles.isa and puzzles.isa.dgst
+
+
+[5/1/2022 6:28 AM] tux_linux
+MR post
+https://www.mobileread.com/forums/showpost.php?p=4217904&postcount=71
+
+
+[5/1/2022 5:05 PM] tux_linux
+Currently compiling Pale-Moon browser on an ARM VM... The time at the left is in minutes (!).
+It is probably our last hope to get a functional browser in InkBox
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-30076.png
+
+
+[5/1/2022 5:11 PM] szybet
+why in a vm?
+
+
+[5/1/2022 5:11 PM] szybet
+also there are ways to convert sites to pdfs, whis could be a way to "browse" the internet
+
+
+[5/1/2022 5:14 PM] tux_linux
+you really want to try cross-compile that thing?
+
+
+[5/1/2022 6:33 PM] nonasuomy
+What are these WebKit sources that others are using?
+
+
+[5/1/2022 6:33 PM] nonasuomy
+Are you just trying to find something that works better than them?
+
+
+[5/1/2022 6:34 PM] szybet
+well 😆
+
+
+[5/1/2022 6:41 PM] tux_linux
+Qt webkit/webengine doesn't work on some kobos
+
+
+[5/1/2022 6:46 PM] nonasuomy
+What are these built in? https://oss.sony.net/Products/Linux/Audio/PRS-T1JP_20140702.html webkit-5.0.328.0-sony.tgz
+webkit-5.0.328.0.tgz
+webkit-sony-20140625.tar.gz
+
+{Embed}
+https://oss.sony.net/Products/Linux/Audio/PRS-T1JP_20140702.html
+Sony Global - Source Code Distribution Service
+Source code download
+
+
+[5/1/2022 6:48 PM] tux_linux
+that's a really old one
+I'm talking about actually usable qtwebkit/engine versions
+
+
+[5/1/2022 6:55 PM] nonasuomy
+That fread.ink uses libwebkit2gtk-4.0-dev libjavascriptcoregtk-4.0-dev
+
+
+[5/1/2022 6:59 PM] nonasuomy
+Why doesn’t WebKit qt work on some of the kobos?
+
+
+[5/1/2022 6:59 PM] tux_linux
+We don't know
+
+
+[5/1/2022 6:59 PM] tux_linux
+Hardware bug
+
+
+[5/1/2022 7:00 PM] nonasuomy
+Is it just the older ones?
+
+
+[5/1/2022 7:00 PM] tux_linux
+No
+
+
+[5/1/2022 7:00 PM] tux_linux
+It really depends
+Actually, I think it's the newer ones
+
+
+[5/1/2022 7:00 PM] tux_linux
+yeah
+
+
+[5/1/2022 7:01 PM] szybet
+isin't it becouse of glibc?...
+
+
+[5/1/2022 7:01 PM] tux_linux
+So you can run chromium on Kobo Mini, Kobo Touch, Kobo Glo (HD?)
+If you try to run it on the Libra it won't work
+It just hangs on the loading page
+
+
+[5/1/2022 7:01 PM] tux_linux
+no
+
+
+[5/1/2022 7:01 PM] tux_linux
+.
+
+
+[5/1/2022 7:01 PM] szybet
+what about firefox
+
+{Reactions}
+😂 
+
+[5/1/2022 7:01 PM] szybet
+like how
+
+
+[5/1/2022 7:01 PM] tux_linux
+already consumes full 512M of RAM before you even opening a webpage
+
+
+[5/1/2022 7:02 PM] szybet
+😆
+
+
+[5/1/2022 7:02 PM] tux_linux
+It can't initialize the render engine
+for some reason
+
+
+[5/1/2022 7:02 PM] szybet
+okay
+
+
+[5/1/2022 7:02 PM] szybet
+what nickel uses as a web browser?
+
+
+[5/1/2022 7:02 PM] nonasuomy
+Just port a text based browser 😄
+
+
+[5/1/2022 7:03 PM] nonasuomy
+Lynx
+
+
+[5/1/2022 7:04 PM] tux_linux
+it isn't usable
+
+
+[5/1/2022 7:04 PM] tux_linux
+i mean, maybe a little bit, but it gets old quick
+
+
+[5/1/2022 7:04 PM] szybet
+it isin't usable even on regular computers ;p
+
+
+[5/1/2022 7:08 PM] szybet
+well the best we could do to use use wget with pandoc, maybe phantomjs. weasyprint. there are many programs that do this
+
+
+[5/1/2022 7:08 PM] nonasuomy
+You would think someone would make a browser that would clear all content and just give you articles  of the textual data by now.
+
+
+[5/1/2022 7:12 PM] nonasuomy
+Mercury Reader
+
+
+[5/2/2022 1:16 AM] ninuje
+IIRC, the Alpine Kindle images run all kinds of browser stuff (painfully slowly, but they do it ;p)
+
+
+[5/2/2022 1:22 AM] tux_linux
+Yes, chromium works on the pw3, aka a Glo HD in terms of SoC
+So chromium should work there too, but devices like the Libra won't run it properly for an unknown reason.
+
+
+[5/4/2022 4:08 AM] tux_linux
+Pale Moon still compiling 😅
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-4D2E5.png
+
+
+[5/4/2022 8:48 AM] szybet
+😆
+
+
+[5/4/2022 8:48 AM] szybet
+how many cores are you using?
+
+
+[5/4/2022 8:48 AM] szybet
++ we have netsurf right? why do we need another browser
+
+
+[5/4/2022 10:52 AM] tux_linux
+Netsurf is not good
+Just test it you'll see
+
+
+[5/4/2022 10:53 AM] tux_linux
+1
+2 threads
+
+
+[5/4/2022 10:54 AM] szybet
+it was, *acceptable*
+
+
+[5/4/2022 1:45 PM] szybet
+https://en.wikipedia.org/wiki/Servo_(software)
+
+{Embed}
+https://en.wikipedia.org/wiki/Servo_(software)
+Servo (software)
+Servo is an experimental browser engine designed to take advantage of the memory safety properties and concurrency features of the Rust programming language. It seeks to create a highly parallel environment, in which rendering, layout, HTML parsing, image decoding, and other engine components are handled by fine-grained, isolated tasks. It also ...
+
+
+[5/4/2022 1:45 PM] szybet
+sadly, its unusable
+
+
+[5/9/2022 2:43 PM] tux_linux
+Found our Tetris game! https://github.com/xfangfang/gtktetris_kindle
+
+{Embed}
+https://github.com/xfangfang/gtktetris_kindle
+GitHub - xfangfang/gtktetris_kindle: Simple GTK tetris game (port f...
+Simple GTK tetris game (port for kindle). Contribute to xfangfang/gtktetris_kindle development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/gtktetris_kindle-D7352
+
+
+[5/9/2022 3:12 PM] nonasuomy
+Do you have to port GTK to QT?
+
+
+[5/9/2022 3:42 PM] nonasuomy
+You should set up a GitHub wiki page to list all the things you had to do to port apps and games so others can be inspired to attempt something like that
+
+
+[5/9/2022 3:59 PM] szybet
+why not a native app...
+
+
+[5/9/2022 3:59 PM] szybet
+https://doc.qt.io/qt-5/qtwidgets-widgets-tetrix-example.html
+
+
+[5/9/2022 4:16 PM] szybet
+oh its already for kindle
+
+
+[5/9/2022 4:16 PM] raycast_
+Native would still be faster tho
+
+
+[5/9/2022 5:27 PM] tux_linux
+Maybe
+I need to add controls too
+
+
+[5/26/2022 3:32 AM] tux_linux
+Star Wars Asciimation on the Glo HD with fixed X11 without VNC graphics!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220525_234403987-021CA.jpg
+
+{Reactions}
+👍 
+
+[5/26/2022 8:11 AM] szybet
+> fixed X11 without VNC graphics!
+how
+
+
+[5/26/2022 12:58 PM] tux_linux
+fbdepth to 16bpp
+
+
+[5/26/2022 12:59 PM] tux_linux
+Or 32
+I'm still testing
+
+
+[5/26/2022 1:20 PM] szybet
+o.0
+
+
+[6/7/2022 8:50 PM] tux_linux
+No way Midori compiled fine without any error at first try
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-F0EB6.png
+
+
+[6/7/2022 8:50 PM] tux_linux
+Will see if it's NetSurf-level or not
+
+
+[6/7/2022 8:56 PM] szybet
+gnome with kde wallpaper?
+
+
+[6/7/2022 10:18 PM] tux_linux
+yes?
+
+
+[6/7/2022 10:18 PM] szybet
+okay🥴
+
+
+[6/7/2022 10:18 PM] tux_linux
+it's a nice one
+
+
+[6/7/2022 10:18 PM] szybet
+sure
+
+
+[6/7/2022 10:18 PM] szybet
+just a bit confusing
+
+
+[6/7/2022 10:18 PM] tux_linux
+i'm on my fedora laptop
+
+
+[6/7/2022 10:19 PM] tux_linux
+I use KDE on my main pc
+
+
+[6/8/2022 12:48 AM] the.mightydill
+change $PS1 please
+
+
+[6/8/2022 2:59 PM] tux_linux
+No way we have an usable web browser for InkBox OS
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/web-13F1A.png
+
+{Reactions}
+🤯 (2) 
+
+[6/8/2022 3:01 PM] nonasuomy
+Does http://libgen.gs load?
+
+
+[6/8/2022 3:02 PM] tux_linux
+not currently, it's missing some libs for https
+
+
+[6/8/2022 3:02 PM] tux_linux
+i forgot to install them
+
+
+[6/8/2022 3:02 PM] tux_linux
+washington edu seemed pretty advanced
+
+
+[6/8/2022 3:04 PM] tux_linux
+JS works, nice
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/web-F4858.png
+
+
+[6/8/2022 3:08 PM] tux_linux
+I think it's also missing the libs to display images
+
+
+[6/8/2022 3:08 PM] tux_linux
+Will install them too and try it out
+
+
+[6/8/2022 6:29 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/instagram-50358.png
+
+
+[6/8/2022 6:32 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/inkboxwiki-56256.png
+
+
+[6/8/2022 6:33 PM] tux_linux
+It partly loaded github but I guess it OOM'ed before finishing
+
+
+[6/8/2022 7:31 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/mobileread-FC7B3.png
+
+
+[6/8/2022 7:31 PM] tux_linux
+It's not the best but it's better than Netsurf
+
+
+[6/8/2022 7:31 PM] raycast_
+I know perfect site to test performance
+
+
+[6/8/2022 7:32 PM] raycast_
+Most devices don't really like it
+
+
+[6/8/2022 7:32 PM] raycast_
+And the ereader will probably crash
+
+
+[6/8/2022 7:34 PM] raycast_
+http://bluemagicalwolf.github.io/
+
+
+It fills the ram
+Don't open it in any app that uses system WebView when you are on your phone (otherwise chrome and other webbrowsers will hang a couple of seconds everytime you open them)
+
+
+[6/8/2022 7:35 PM] raycast_
+It's a shame that you can't compress images on websites when you go to them
+
+
+[6/8/2022 7:36 PM] raycast_
+If it automatically made the resolution of the images lower and also made them black and white, it would probably save some ram
+
+
+[6/8/2022 7:55 PM] szybet
+Can you share a video of midori on a erader?
+
+
+[6/8/2022 11:39 PM] the.mightydill
+WHOAAA
+
+
+[6/8/2022 11:40 PM] the.mightydill
+Does yt run? I remember the Glo HD yt video
+
+
+[6/8/2022 11:40 PM] szybet
+videos on eink ?  🥴
+
+
+[6/8/2022 11:41 PM] the.mightydill
+Look at the YouTube video it's actually pretty cool
+
+
+[6/8/2022 11:41 PM] the.mightydill
+Yeah lol
+
+
+[6/8/2022 11:41 PM] the.mightydill
+~~now run Doom~~
+
+
+[6/9/2022 3:00 AM] tux_linux
+no
+i know it does not
+
+
+[6/9/2022 4:34 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/reddit-39A57.png
+
+
+[6/9/2022 4:34 AM] tux_linux
+you can browse reddit
+
+
+[6/9/2022 4:44 AM] tux_linux
+we got there
+it's missing some libs
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/youtube-1DC6B.png
+
+
+[6/9/2022 5:30 AM] tux_linux
+You can review GH things on Kobo now
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/github-commit-D553C.png
+/mnt/data/projects/git/conversations/media/github-181AE.png
+
+
+[6/9/2022 5:32 AM] tux_linux
+Available here now!
+http://23.163.0.39/bundles/kobox/extensions/midori.isa
+http://23.163.0.39/bundles/kobox/extensions/midori.isa.dgst
+Might take some time to launch the keyboard, but be patient, after that things will be a lot faster
+
+
+[6/9/2022 6:14 AM] szybet
+Ang chance for a better keyboard?
+
+
+[6/9/2022 6:22 AM] tux_linux
+It will be better on your nia since smaller screen resolution
+
+
+[6/9/2022 6:22 AM] tux_linux
+But I didn't find any way to change it
+
+
+[6/9/2022 6:31 AM] szybet
+Its just not usable for me
+
+
+[6/9/2022 6:32 AM] szybet
+Too smal l buttons
+
+
+[6/9/2022 6:32 AM] szybet
+What is this keyboard?
+
+
+[6/9/2022 6:32 AM] szybet
+Maybe i can modify its code
+
+
+[6/9/2022 6:33 AM] szybet
+Well i was thinking also about a psyhical keyboard
+
+
+[6/9/2022 6:40 AM] tux_linux
+It will be
+Your nia screen will help
+Glo HD is 300ppi
+
+
+[6/9/2022 6:40 AM] tux_linux
+onboard
+
+Worst name; when your search docs for it you can't find them because it gets mixed up with do much other unrelated things
+
+
+[6/9/2022 6:41 AM] tux_linux
+Also, it runs in Python, it's not great
+And it's slow at first
+
+
+[6/9/2022 6:41 AM] tux_linux
+Maybe an (equally great) rust thing or compiled language thing could do in the far far future
+
+
+[6/9/2022 6:52 AM] szybet
+Its really onboard? There are themes and button configurations for it
+
+
+[6/9/2022 6:52 AM] szybet
+So nice
+
+
+[6/9/2022 6:52 AM] szybet
+I will configure it for me :p
+
+
+[6/9/2022 6:53 AM] szybet
+Yes but
+
+
+[6/9/2022 6:53 AM] szybet
+Onboard is really a complicated xorg program, i dont think rewriting it is impossible ( for us for now )
+
+
+[6/9/2022 6:59 AM] szybet
+There is also florence
+
+
+[6/9/2022 7:00 AM] szybet
+But onboard is the only one that pushes the Windows from the bottom
+
+
+[6/9/2022 1:11 PM] tux_linux
+It literally takes 7 minutes to start
+
+
+[6/9/2022 1:12 PM] tux_linux
+On the fastest supported Kobo
+
+
+[6/9/2022 1:12 PM] tux_linux
+That is a crucial needed point
+
+
+[6/9/2022 1:13 PM] tux_linux
+Please document in the wiki so that other people can do it
+
+
+[6/9/2022 1:13 PM] tux_linux
+"KoBox configuration" for example
+
+
+[6/9/2022 2:10 PM] szybet
+What, onboard?
+
+
+[6/9/2022 2:15 PM] tux_linux
+Yes, when launched with midori
+
+
+[6/9/2022 2:39 PM] szybet
+I will add a chooser in kobox settings
+
+
+[6/9/2022 2:39 PM] szybet
+Then its midori fault?
+
+
+[6/9/2022 3:30 PM] tux_linux
+both are high-cpu intensive applications
+
+
+[6/9/2022 3:30 PM] tux_linux
+without midori it takes 2mins?
+
+
+[6/9/2022 3:39 PM] szybet
+1. Its an ereader. It's fine
+2. Onboard has such many options that those 2 min are worth it. Maybe in the future rewriting it makes sense, now other we have other prorities: in unfreezing xorg, user apps and power demon
+
+
+[6/9/2022 3:39 PM] tux_linux
+It's strange, I thought you would be the last person to say this
+
+
+[6/9/2022 3:40 PM] tux_linux
+2 mins is still bearable but 7 mins with midori is quite painful
+
+
+[6/9/2022 3:43 PM] tux_linux
+but you are right, anyways I wasn't planning to find a fix for this right now, got way too many things to fix already
+
+
+[6/9/2022 3:57 PM] szybet
+Im using onboard on other devices. Its great software, its slow on a ereader but had many options, customisations. There are years of work in it
+
+Python still can be used to create great software, but where it needs performance it shouldnt be used and be rewritten if it is. Kobox apps are launching ~5 minutes anyway so shrug
+
+
+[6/9/2022 5:18 PM] tux_linux
+Yes, I agree
+Maybe there is a way to compile it to pyc files to improve performance
+
+
+[6/11/2022 4:43 AM] tux_linux
+@Szybet here is your video
+https://photos.app.goo.gl/MamH1hpsT9MuS8gA9
+
+{Embed}
+https://photos.app.goo.gl/MamH1hpsT9MuS8gA9
+New video by Nicolas Mailloux
+/mnt/data/projects/git/conversations/media/-yeTEZiwqggSSs9YqfxnCqGWZ-pHFvSWV2t--okSMu-29345
+
+
+[6/11/2022 10:09 AM] szybet
+Looks good
+
+
+[6/11/2022 10:09 AM] szybet
+Slow a bit
+
+
+[6/11/2022 10:09 AM] szybet
+Did you try to set frequency governor to performance? It makes a diffrence
+
+
+[6/11/2022 10:10 AM] szybet
+Also, about kobox apps
+
+
+[6/11/2022 10:10 AM] szybet
+What about on the default shipping only kterm?
+
+
+[6/11/2022 10:12 AM] szybet
++ maybe a browser?
+
+
+[6/12/2022 1:19 AM] the.mightydill
+wow :D
+
+
+[6/17/2022 8:47 PM] tux_linux
+Thinking of making a Windows 3.11 extension...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220617_184511505-DE957.jpg
+
+
+[6/17/2022 8:47 PM] szybet
+https://tenor.com/view/the-office-michael-scott-dont-you-dare-gif-21943972
+
+{Embed}
+https://tenor.com/view/the-office-michael-scott-dont-you-dare-gif-21943972
+/mnt/data/projects/git/conversations/media/the-office-michael-scott-E10D4.png
+
+
+[6/17/2022 8:48 PM] tux_linux
+And? You just have to not install it
+
+
+[6/17/2022 8:48 PM] tux_linux
+It's quite fast honestly
+
+
+[6/17/2022 8:48 PM] szybet
+just joking
+
+
+[6/17/2022 8:48 PM] tux_linux
+As fast as an authentic 386 PC 😉
+
+
+[6/17/2022 8:48 PM] szybet
+its just heresy
+
+
+[6/17/2022 8:48 PM] szybet
+and its funny
+
+
+[6/17/2022 8:48 PM] tux_linux
+i know
+
+
+[6/17/2022 8:48 PM] szybet
+¯\_(ツ)_/¯
+
+
+[6/17/2022 8:48 PM] tux_linux
+i know too
+
+
+[6/17/2022 8:48 PM] tux_linux
+hehe
+
+
+[6/17/2022 9:07 PM] the.mightydill
+LMAO
+
+
+[6/17/2022 9:07 PM] the.mightydill
+video?
+
+
+[6/17/2022 9:08 PM] tux_linux
+will make one
+
+{Reactions}
+👍 
+
+[6/23/2022 6:13 AM] tux_linux
+One question: what's the point
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-F2C3D.png
+
+
+[6/23/2022 6:22 AM] szybet
+Herezy...
+
+
+[6/23/2022 6:22 AM] szybet
+But sure, try it maybe he will install inkbox
+
+
+[7/12/2022 7:04 PM] kelladon_k
+So I have a Kobo Glo HD and I attempted to install Kobox as per the instructions on MobileRead. But whenever I try to launch it via the nickel menu, I just get a black screen. Another person on the forum had this issue; is there a fix in the works?
+
+
+[7/12/2022 7:09 PM] tux_linux
+You should install the Glo HD InkBox image
+It includes a working KoBox install
+
+
+[7/12/2022 7:09 PM] tux_linux
+Graphics may be wonky in that one though, but it will be fixed in the next release
+
+
+[7/12/2022 7:09 PM] kelladon_k
+Noted! Thank you!
+
+{Reactions}
+👍 
+
+[7/12/2022 7:09 PM] tux_linux
+http://23.163.0.39/bundles/inkbox/native/n437/inkbox-1.9-n437.xz
+
+
+[7/12/2022 8:13 PM] szybet
+maybe drop the nickel support completly?
+
+
+[7/12/2022 8:13 PM] szybet
+i mean, remove the downloads
+
+
+[7/12/2022 8:16 PM] tux_linux
+This wasn't even related to InkBox
+
+
+[7/16/2022 6:06 AM] tux_linux
+poor thing
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-47F27.png
+
+
+[7/16/2022 6:55 PM] the.mightydill
+ouch lol
+
+
+[2/4/2023 2:36 AM] tux_linux
+What
+Guy developed a native touch driver for X11
+https://www.mobileread.com/forums/showpost.php?p=4295120&postcount=48
+
+{Embed}
+https://www.mobileread.com/forums/showpost.php?p=4295120&postcount=48
+MobileRead Forums - View Single Post -  [HOWTO][WIP] Run Xorg on yo...
+MobileRead - the resource for mobile geeks seeking information and advice for keeping their gadgets happy.
+
+
+[2/4/2023 11:12 AM] szybet
+cool
+
+
+[2/4/2023 11:12 AM] szybet
+cool...
+
+
+[4/22/2023 10:40 PM] tux_linux
+@Szybet: said Firefox implementation on Kobo
+https://www.youtube.com/watch?v=qOQt6Fxew2s
+This is over two years ago now...
+
+{Embed}
+Nicolas Mailloux
+https://www.youtube.com/watch?v=qOQt6Fxew2s
+X.org running on a Kobo Libra (pt. 2)
+A great, great increase in speed. This runs in an Alpine Linux chroot.
+HowTo here: https://www.mobileread.com/forums/showthread.php?t=336210
+/mnt/data/projects/git/conversations/media/maxresdefault-7EA6F.jpg
+
+
+[4/22/2023 10:42 PM] szybet
+well okay
+
+
+[4/22/2023 10:42 PM] szybet
+still works like crap
+
+
+[4/22/2023 10:42 PM] szybet
+VNC still is the way to go
+
+
+[4/22/2023 10:43 PM] kuratius
+is there an app to control your phone/use the eink as a big screen for it?
+
+
+[4/22/2023 10:44 PM] szybet
+vnc protocol
+
+
+[4/22/2023 10:44 PM] szybet
+litterally
+
+
+[4/22/2023 10:44 PM] kuratius
+that works on android?
+
+
+[4/22/2023 10:44 PM] kuratius
+with touch?
+
+
+[4/22/2023 10:45 PM] szybet
+it's litterally in inkbox right now ~~wasn't a good experience because of screen size, configs, wifi but hey, its only my experience~~
+
+
+[4/22/2023 10:45 PM] kuratius
+(I'm genuinely asking)
+
+
+[4/22/2023 10:46 PM] kuratius
+there's probably a way to hack it it make it like using a tablet
+I know there's people who really want eink tablets, if it was a good experience to use an existing tablet or phone over eink they might choose that
+
+
+[4/22/2023 10:47 PM] kuratius
+idk what the latency is like though
+
+
+[4/22/2023 10:47 PM] kuratius
+probably still lower than the screen
+
+
+[4/22/2023 10:47 PM] kuratius
+so prob doesnt matter
+
+
+[4/22/2023 10:47 PM] szybet
+maybe, propably
+
+
+[7/19/2023 5:19 PM] tux_linux
+hello there
+
+
+[8/14/2023 5:31 PM] poorpocketsmcnewhold
+Hey there, been wanting to get myself a e-ink reader, but couldn't stand to have to rely on proprietary firmware, so the InkBox project was right up my alley. From what i see the firmware device list, all of those are considered in the same level of stability ? I doesn't really know which one i should go with, as they are mostly all EOL devices. Kind of like the idea on tinkering with it possibly, but i doubt i might manage to port some other apps or help more myself.
+
+
+[8/14/2023 6:44 PM] szybet
+@tux-linux
+
+
+[8/14/2023 6:44 PM] szybet
+The tldr is: kobo nia is the newest and its goos
+
+
+[8/14/2023 6:44 PM] szybet
+Good
+
+
+[8/14/2023 6:44 PM] poorpocketsmcnewhold
+That's straight to the point. Nice !
+
+
+[8/14/2023 6:57 PM] tux_linux
+Glo HD is probably better
+
+
+[8/14/2023 6:57 PM] tux_linux
+More ram
+
+
+[8/14/2023 6:58 PM] szybet
+He asked for never devices
+
+
+[8/14/2023 6:58 PM] tux_linux
+well, ok
+
+
+[8/14/2023 6:59 PM] poorpocketsmcnewhold
+Not necesserally. Just said i noticed most where EOL, but didn't considered it a bad thing
+
+
+[8/14/2023 6:59 PM] tux_linux
+InkBox supports 12 yo devices
+
+
+[8/14/2023 6:59 PM] poorpocketsmcnewhold
+It's mostly why i asked, because i would have surely just use their own website comparator for such.
+
+{Reactions}
+👍 
+
+[10/8/2023 9:50 PM] dandelionkoi
+I'm definitely one of those people.  I have a hisense a5, and a hisense a7cc.  Currently I'm using the Hisense A7cc, but it barely functions as a phone.  Sometimes I get calls, sometimes calls don't go through and I don't even have a record of having missed it.  No group texts at all.  Sometimes regular texts work, but usually not.  It functions as a wifi tablet, but I don't like how locked down it is, or that important parts of the system are only in Chinese.
+
+
+[10/8/2023 9:52 PM] dandelionkoi
+Today I tried Geany through Kobox on the Kobo Nia.  It was a rough experience.  Most of the screen was some version of gray.  I figured out the top was a menu, but it just flashed and didn't stay long enough to select anything.  I couldn't figure out how to back out of Geany, and ended up restarting my Nia, briefly ending up in Diagnostics mode, before I got back to the home screen.
+
+
+[10/8/2023 9:53 PM] szybet
+kobox is a mess, halfly not even working at all. It was propably depth eink problems again
+
+TLDR: Until something motivates us to fix it for the 10 time, or someone else fixes it dont use xorg, shut it off - there are better native user apps anyway
+
+{Reactions}
+✅ 
+
+[10/8/2023 9:56 PM] [matrix] tux-linux
+Sometimes if you put it to sleep then wake it up it starts working again
+
+
+[10/8/2023 9:59 PM] szybet
+sometimes
+
+
+[10/8/2023 9:59 PM] szybet
+still a mess - if he is one nia c it is random at all
+
+
+[10/8/2023 9:59 PM] dandelionkoi
+I'm just going to stay out of kobox now that I know
+
+
+[10/8/2023 10:00 PM] szybet
+user apps are better in every way anyway
+
+
+[10/8/2023 10:00 PM] szybet
+kobos is barely usable even if it would work
+
+
+[10/8/2023 10:01 PM] [matrix] tux-linux
+Yes, it's crap but probably out of our knowledge why
+
+
+[10/13/2023 8:34 AM] kuratius
+https://shop.dasung.com/products/dasung-6-7-e-ink-phone-monitor-link
+
+closest equivalent, but very overpriced
+
+{Embed}
+https://shop.dasung.com/products/dasung-6-7-e-ink-phone-monitor-link
+DASUNG 6.7" E-ink Phone Monitor: Link
+Revolutionary Eye Protection Device for Smartphones Introducing a groundbreaking concept – a new era in eye protection. Experience the power of E-ink screens seamlessly integrated with smartphones. Meet "Link" - the innovation that elevates smartphone usage. Mirroring the smartphone screen flawlessly, Link supports rev
+/mnt/data/projects/git/conversations/media/1_a86efad0-81c4-4d90-9195-659542706182-96DD6.png
+
+
+[2/3/2024 4:08 AM] tux_linux
+test
+
+
+==============================================================
+Exported 234 message(s)
+==============================================================

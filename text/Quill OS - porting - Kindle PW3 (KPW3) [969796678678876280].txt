@@ -1,0 +1,421 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kindle PW3 (KPW3)
+==============================================================
+
+[4/30/2022 5:05 AM] tux_linux
+Let's... try?
+
+
+[4/30/2022 8:11 AM] tux_linux
+Docs:
+How to activate Serial Download Protocol mode (USB downloader mode) without soldering: https://www.mobileread.com/forums/showthread.php?t=341361
+How to create an initrd (follow exactly the steps): https://www.mobileread.com/forums/showthread.php?t=343310
+
+{Embed}
+https://www.mobileread.com/forums/showthread.php?t=341361
+Tutorial How-to: Booting U-Boot and Linux over USB - MobileRead Forums
+Tutorial How-to: Booting U-Boot and Linux over USB Kindle Developer's Corner
+
+{Embed}
+https://www.mobileread.com/forums/showthread.php?t=343310
+Tutorial How-to: Building a custom initramfs for fun and profit - M...
+Tutorial How-to: Building a custom initramfs for fun and profit Kindle Developer's Corner
+
+
+[4/30/2022 8:12 AM] nonasuomy
+Ping
+
+
+[4/30/2022 8:13 AM] nonasuomy
+What processor is this device?
+
+
+[4/30/2022 8:13 AM] tux_linux
+i.MX6SL
+
+
+[4/30/2022 8:14 AM] tux_linux
+3.0.35 kernel
+
+
+[4/30/2022 8:24 AM] tux_linux (pinned)
+How to write a kernel to the eMMC: `dd if=uImage of=/dev/mmcblk0 bs=4096 seek=65`
+
+
+[4/30/2022 8:24 AM] tux_linux
+Pinned a message.
+
+
+[4/30/2022 10:02 PM] andi15701
+that sounds like all the tolino/kobo devices...
+
+
+[4/30/2022 10:02 PM] andi15701
+probably just devicetree and we are done?
+
+
+[4/30/2022 10:05 PM] tux_linux
+kindles are so much more compliated than kobos
+pw4 and up even have HAB enabled
+
+
+[4/30/2022 10:06 PM] andi15701
+yes, HAB would be problematic...
+
+
+[4/30/2022 10:06 PM] tux_linux
+Also I have only partial access to the serial console, it seems it activates itself only when the kernel has been started, U-Boot is completely silent
+When I bought it, I could access U-Boot but somehow it broke for no reason after that
+
+
+[4/30/2022 10:08 PM] tux_linux
+Also the EPDC control is actually a kernel module, mxc_epdc_fb and mxc_epdc_eink
+I don't fully understand how the infrastructure works
+There are also two U-Boots, a standard one and another one named BIST (built-in self-test) which contains fastboot and is used for recovery or jailbreaking
+
+
+[4/30/2022 10:08 PM] andi15701
+but the PW3 if it is without HAB but with 3.0.35 kernel, things are more interesting. I personally avoided the kindles also because I do not want to finance build such locked stuff
+
+
+[4/30/2022 10:08 PM] tux_linux
+Fortunately there is a reliable download mode
+
+
+[4/30/2022 10:08 PM] andi15701
+that imx_usb seems to be identical to that uuu
+
+
+[4/30/2022 10:08 PM] tux_linux
+Which leads to an unbrickable device
+
+
+[4/30/2022 10:09 PM] tux_linux
+imx_usb can also boot Linux
+can uuu do that?
+
+
+[4/30/2022 10:09 PM] andi15701
+with the step of booting a bootloader first, probably yes
+
+
+[4/30/2022 10:09 PM] andi15701
+I guess imx_usb also does that
+
+
+[4/30/2022 10:10 PM] tux_linux
+imx_usb loads U-Boot then the kernel
+
+
+[4/30/2022 10:10 PM] andi15701
+that same serial download procotol can be enable in u-boot
+
+
+[4/30/2022 10:11 PM] andi15701
+and if it is... than you can use the same tool
+
+
+[4/30/2022 10:11 PM] tux_linux
+sample imx_usb log
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-341EB.txt
+
+
+[4/30/2022 10:11 PM] andi15701
+or boot an u-boot with fastboot  activated per default
+
+
+[4/30/2022 10:11 PM] tux_linux
+actually it seems it has hab but it isn't enabled
+
+
+[4/30/2022 10:11 PM] tux_linux
+that would be a great thing
+
+
+[4/30/2022 10:12 PM] tux_linux
+I'll see if I can understand how their U-Boot works... without a serial console
+
+
+[4/30/2022 10:23 PM] andi15701
+hmm, so where is the kernel source?
+
+
+[4/30/2022 10:29 PM] tux_linux
+https://github.com/katadelos/linux-3.0.35-lab126/tree/master
+it's also on Amazon's source code downloads page but it's easier to access there
+
+{Embed}
+https://github.com/katadelos/linux-3.0.35-lab126/tree/master
+GitHub - katadelos/linux-3.0.35-lab126: Linux kernel source tree fo...
+Linux kernel source tree for Amazon Kindle devices. Re-upload of GPL release - GitHub - katadelos/linux-3.0.35-lab126: Linux kernel source tree for Amazon Kindle devices. Re-upload of GPL release
+/mnt/data/projects/git/conversations/media/linux-3.0-FD18C.35-lab126
+
+
+[4/30/2022 10:32 PM] andi15701
+https://github.com/katadelos/linux-3.0.35-lab126/blob/master/arch/arm/mach-mx6/board-mx6sl_wario.c
+
+{Embed}
+https://github.com/katadelos/linux-3.0.35-lab126/blob/master/arch/arm/mach-mx6/board-mx6sl_wario.c
+linux-3.0.35-lab126/board-mx6sl_wario.c at master · katadelos/linux...
+Linux kernel source tree for Amazon Kindle devices. Re-upload of GPL release - linux-3.0.35-lab126/board-mx6sl_wario.c at master · katadelos/linux-3.0.35-lab126
+/mnt/data/projects/git/conversations/media/linux-3.0-FD18C.35-lab126
+
+
+[4/30/2022 10:32 PM] andi15701
+main information source for porting to recent kernels
+
+
+[4/30/2022 10:33 PM] andi15701
+not that messy as board-mx6sl-ntx
+
+
+[4/30/2022 10:35 PM] tux_linux
+amazon usually is better than kobo for making an infrastructure that makes sense
+
+
+[4/30/2022 10:38 PM] andi15701
+that kobo stuff covers a bunch of different devices
+
+
+[4/30/2022 10:48 PM] andi15701
+feasibility analysis: mmc: easy, main pmic: MAX77696, no source upstream maybe similar chips, but epdc supply needed, one pmic for everything, touchscreen: cyttsp4 / zforce2 both upstream,  sensors, some are there, some are missing,
+
+{Reactions}
+👍 
+
+[4/30/2022 10:49 PM] andi15701
+wlan is brcmfmac, so a similar situation as the cybertan stuff
+
+
+[4/30/2022 10:49 PM] tux_linux
+keep in mind that I probably won't be able to test that, because of the serial port issue
+maybe it will show something, maybe not
+the console seems to start a few moments after the kernel boots
+it's very strange
+
+
+[4/30/2022 10:50 PM] tux_linux
+also, hooking up that thing to serial is a pain.
+
+
+[4/30/2022 10:51 PM] andi15701
+max77696 is the biggest hurdle there
+
+
+[4/30/2022 10:51 PM] tux_linux
+like, 1mm large pads, I broke Tx and Rx yesterday while trying to solder them
+fortunately on the other side of the board there are tm800 and tm801 pads which bridge to those on the top of the board. so I'm trying to get that hooked up without breaking it again
+
+
+[4/30/2022 10:52 PM] andi15701
+about the devices next, I guess more priority has getting basic support for the aura 2, glo hd upstream
+
+
+[4/30/2022 10:53 PM] andi15701
+for me
+
+
+[4/30/2022 10:53 PM] tux_linux
+yeah sure
+
+
+[4/30/2022 10:53 PM] tux_linux
+3.0.35 is still a pretty fine kernel version
+
+
+[5/1/2022 1:40 AM] tux_linux
+well, end of the road here or I need a miracle
+I think I just fried half of the board up, no display, no FL, no feedback or anything
+SDP mode still works, loads U-Boot+kernel fine but nothing seems to run after that.
+I'll try to buy another one, a sane one this time...
+
+
+[5/1/2022 1:41 AM] szybet
+oh... how?
+
+
+[5/1/2022 1:41 AM] tux_linux
+i don't know
+probably messed up with 3.3v source or it got somewhere on the board it shouldn't have gone
+
+
+[5/1/2022 1:42 AM] tux_linux
+it was already kind of half-working, so...
+
+
+[5/1/2022 1:42 AM] szybet
+isin't this just a waste of money?... maybe try to focus on another device ( if its from donation request then its another story )
+
+
+[5/1/2022 1:43 AM] tux_linux
+no, it is not
+it's a great device
+I got that one for <$20, I'll try to find another good deal
+
+
+[5/1/2022 1:43 AM] szybet
+how? messing up with the software caused that?
+
+
+[5/1/2022 1:44 AM] tux_linux
+no, for SDP mode you need a power source that you connect to CR501 so maybe it was hanging around and touched some of the connectors at the wrong time
+
+
+[5/1/2022 1:44 AM] szybet
+do you have a multimiter / osciloscope / pure alcohol? we could try to repair this device
+
+
+[5/1/2022 1:45 AM] szybet
+you didn't solder it, did you?
+
+
+[5/1/2022 1:45 AM] tux_linux
+i did try to solder the serial port
+
+
+[5/1/2022 1:45 AM] tux_linux
+no luck
+
+
+[5/1/2022 1:45 AM] tux_linux
+broke two pads
+
+
+[5/1/2022 1:45 AM] szybet
+why...
+
+
+[5/1/2022 1:45 AM] tux_linux
+why why?
+it was my first time soldering
+
+
+[5/1/2022 1:45 AM] szybet
+oh okay
+
+
+[5/1/2022 1:46 AM] szybet
+try practicing some more, it needs time
+
+
+[5/1/2022 1:46 AM] tux_linux
+the other side of the board contains mirror pads of the serial thing, I wanted to try soldering that tonight but then it just broke while I was preparing
+
+
+[5/1/2022 1:46 AM] tux_linux
+yes
+
+
+[5/1/2022 1:46 AM] tux_linux
+multimeter
+
+
+[5/1/2022 1:47 AM] szybet
+is there a datasheet somewhere of that device?
+
+
+[5/1/2022 1:47 AM] tux_linux
+good luck finding one
+
+
+[5/1/2022 1:47 AM] szybet
+could you describe how?
+
+
+[5/1/2022 1:47 AM] tux_linux
+how what?
+
+
+[5/1/2022 1:48 AM] szybet
+yes, are there letters written on chips?
+
+
+[5/1/2022 1:48 AM] szybet
+they broke off
+
+
+[5/1/2022 1:48 AM] tux_linux
+well, the device broke off
+
+
+[5/1/2022 1:48 AM] tux_linux
+for some reason
+
+
+[5/1/2022 1:49 AM] szybet
+i meanthe solder pads
+
+
+[5/1/2022 1:49 AM] tux_linux
+i don't quite remember
+
+
+[5/1/2022 1:51 AM] szybet
+well okay
+
+
+[5/1/2022 1:52 AM] tux_linux
+i'm also looking out for kindle touch
+they are more hackable and have a download mode too
+
+
+[5/1/2022 1:52 AM] tux_linux
+it's about the same specs as the touch b or sony prs t1
+
+
+[5/1/2022 1:53 AM] szybet
+well if they are really that cheap then sure its a good idea
+
+
+[5/1/2022 1:54 AM] szybet
+i should have gotten an older device too, kobo nia was 100$
+
+
+[5/1/2022 1:54 AM] tux_linux
+kobo nia is good, it makes things easier for clara hd port
+
+
+[5/1/2022 1:56 AM] szybet
+in what way
+
+
+[5/1/2022 1:56 AM] tux_linux
+it's a newer U-Boot, newer kernel format (zImage), devicetree, etc.
+
+
+[5/1/2022 1:57 AM] szybet
+in my experience kobo nia doesn't have a great battery life... im developing things on it, testing it with inkbox kernel and its horrible, but still
+
+
+[5/1/2022 1:58 AM] szybet
+i will adress this issue when i will use the reader *in a normal way* for a month
+
+{Reactions}
+👍 
+
+[1/26/2024 6:06 PM] nonridiculousadjective
+How is the situation with PW3? Is it possible/any progress? I want to breathe a bit of life to an 8th gen kindle I got after my sis upgraded to a new one.
+
+
+[1/26/2024 6:08 PM] nonridiculousadjective
+(not in speed ofc, but rather in functionality as I really don't like what amazon has there)
+
+
+[1/26/2024 7:53 PM] tux_linux
+Hi, not really, mine's pretty much bricked, sorry
+
+
+[1/26/2024 10:43 PM] tux_linux
+@𝙉𝙤𝙣𝙍𝙞𝙙𝙞𝙘𝙪𝙡𝙤𝙪𝙨𝘼𝙙𝙟𝙚𝙘𝙩𝙞𝙫𝙚
+
+
+[1/26/2024 11:24 PM] nonridiculousadjective
+:(
+
+
+==============================================================
+Exported 91 message(s)
+==============================================================

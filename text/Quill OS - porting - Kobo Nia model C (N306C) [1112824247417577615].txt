@@ -1,0 +1,6898 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Nia model C (N306C)
+==============================================================
+
+[5/29/2023 9:26 PM] .kitkat1.
+start
+
+
+[5/29/2023 9:31 PM] szybet
+end
+
+
+[5/29/2023 9:31 PM] szybet
+https://github.com/Kobo-InkBox/kernel
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel
+GitHub - Kobo-InkBox/kernel: Kernel sources for InkBox OS
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-07C4C
+
+
+[5/29/2023 9:31 PM] szybet
+clone this repo
+
+
+[5/29/2023 9:32 PM] szybet
+grab this file
+
+
+[5/29/2023 9:32 PM] szybet
+https://github.com/kobolabs/Kobo-Reader/blob/940502e1ad63a9c309f00417c47e4ec62d11eee4/hw/imx6sll-clara2e/kernel.tar.bz2
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/blob/940502e1ad63a9c309f00417c47e4ec62d11eee4/hw/imx6sll-clara2e/kernel.tar.bz2
+Kobo-Reader/kernel.tar.bz2 at 940502e1ad63a9c309f00417c47e4ec62d11e...
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/Kobo-Reader-28CB2
+
+
+[5/29/2023 9:32 PM] szybet
+google or gpt it "how to compile linux kernel"
+
+
+[5/29/2023 9:32 PM] szybet
+and try to do it
+
+
+[5/29/2023 9:32 PM] szybet
+using the toolchains from this repo at /toolchains
+
+
+[6/26/2023 10:55 PM] andi15701
+do we have any dmesg output of a fully-running system?
+
+
+[6/26/2023 11:02 PM] szybet
+i will get one
+
+
+[6/26/2023 11:02 PM] szybet
+soon
+
+
+[7/7/2023 6:51 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/sanki_debug_export-4FCBD.txt
+
+
+[7/7/2023 6:51 PM] szybet
+some info from nickel
+
+
+[7/7/2023 6:58 PM] szybet
+a weird dmesg too
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/dmesg-ED0AE.log
+
+
+[7/9/2023 1:02 PM] .kitkat1.
+how do I download this ?
+
+
+[7/9/2023 1:03 PM] szybet
+click download on github site
+
+
+[7/9/2023 1:03 PM] szybet
+download raw
+
+
+[7/9/2023 1:03 PM] szybet
+right side of the page
+
+
+[7/9/2023 1:06 PM] .kitkat1.
+is this guide okay ? https://wiki.archlinux.org/title/Kernel/Traditional_compilation
+
+{Embed}
+https://wiki.archlinux.org/title/Kernel/Traditional_compilation
+Traditional compilation
+
+
+[7/9/2023 1:07 PM] szybet
+no, too complicated
+
+
+[7/9/2023 1:10 PM] .kitkat1.
+this one ? https://www.linux.com/topic/desktop/how-compile-linux-kernel-0/
+
+{Embed}
+https://www.linux.com/topic/desktop/how-compile-linux-kernel-0/
+How to Compile a Linux Kernel - Linux.com
+Once upon a time the idea of upgrading the Linux kernel sent fear through the hearts of many a user. Back then, the process of upgrading the kernel involved a lot of steps and even more time. Now, installing a new kernel can be easily handled with package managers like apt. With the addition of …
+/mnt/data/projects/git/conversations/media/chester-alvarez-644-unsplash-6897D.jpg
+
+
+[7/9/2023 1:11 PM] szybet
+somehow better, try a bit with it
+
+
+[7/9/2023 1:11 PM] szybet
+ignore the packets
+
+
+[7/9/2023 1:11 PM] szybet
+also, grab the config from your device
+
+
+[7/9/2023 1:11 PM] szybet
+and google how to get the current config on linux
+
+
+[7/9/2023 1:11 PM] szybet
+and post it here and use it
+
+
+[7/9/2023 1:29 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/config-7CFED.gz
+
+
+[7/9/2023 1:29 PM] szybet
+unpack it and post as a text file...
+
+
+[7/9/2023 1:34 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/config-8081A
+
+
+[7/9/2023 1:35 PM] szybet
+now find an identical file in the archive you downloaded from kobolabs github
+
+
+[7/9/2023 1:35 PM] szybet
+and post which file is it
+
+
+[7/9/2023 1:36 PM] szybet
+name can be diffrent
+
+
+[7/9/2023 1:47 PM] .kitkat1.
+arch/arm/configs/imx_v7_ntx_mepd_defconfig
+
+
+[7/9/2023 1:48 PM] szybet
+execute now:
+
+
+[7/9/2023 1:48 PM] szybet
+find . | grep "imx_v7_ntx"
+
+
+[7/9/2023 1:48 PM] szybet
+ls -shal arch/arm/configs/
+
+
+[7/9/2023 1:49 PM] szybet
+also dont do like me and format things with \`\`\`
+
+
+[7/9/2023 1:49 PM] andi15701
+hmm, what about going the 6.3 road
+
+
+[7/9/2023 1:49 PM] szybet
+touchscreen
+
+
+[7/9/2023 1:50 PM] szybet
+also, i want tux-linux to modify the build system to enable other devices to use one kernel source and many device trees for example
+
+
+[7/9/2023 1:50 PM] szybet
+so we need to wait for him
+
+
+[7/9/2023 1:50 PM] .kitkat1.
+./arch/arm/configs/imx_v7_ntx_defconfig
+./arch/arm/configs/imx_v7_ntx_mfg_defconfig
+./arch/arm/configs/imx_v7_ntx_mepd_defconfig
+
+
+[7/9/2023 1:50 PM] szybet
+@tux-linux
+
+
+[7/9/2023 1:50 PM] szybet
+so for now we just try the clara one, we will see
+
+
+[7/9/2023 1:50 PM] szybet
+its not working well from what niluje has said, so we just look arround for now
+
+
+[7/9/2023 1:51 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-A6F8C.txt
+
+
+[7/9/2023 1:52 PM] szybet
+hmmm okay
+
+
+[7/9/2023 1:52 PM] szybet
+now you need to open the device and clone the sd card
+
+
+[7/9/2023 1:55 PM] szybet
+stop
+
+
+[7/9/2023 1:55 PM] szybet
+actually
+
+
+[7/9/2023 1:56 PM] szybet
+first lets get the dtb
+
+
+[7/9/2023 1:57 PM] szybet
+@andi was ntx-_hwconfig used to get the device tree of the device?
+
+
+[7/9/2023 1:57 PM] szybet
+or your custom tool
+
+
+[7/9/2023 1:57 PM] szybet
+cant remember cant find...
+
+
+[7/9/2023 1:58 PM] andi15701
+extract-kobohidden is the keyword
+
+
+[7/9/2023 1:59 PM] andi15701
+imx6ull-e60u22b00.dts
+
+
+[7/9/2023 1:59 PM] szybet
+how do you know its that one?
+
+
+[7/9/2023 2:00 PM] .kitkat1.
+from where do i get it?
+
+
+[7/9/2023 2:01 PM] andi15701
+https://discord.com/channels/809205711778480158/943711473341960253/1108075860981989429
+
+
+[7/9/2023 2:02 PM] andi15701
+https://discord.com/channels/809205711778480158/943711473341960253/1095819441645817996
+
+
+[7/9/2023 2:02 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-00C79.txt
+
+
+[7/9/2023 2:04 PM] szybet
+ok, but where is the source of this tool?
+
+
+[7/9/2023 2:04 PM] andi15701
+https://github.com/akemnade/kobo-firmware-extractor
+
+{Embed}
+https://github.com/akemnade/kobo-firmware-extractor
+GitHub - akemnade/kobo-firmware-extractor: extracts firmware from h...
+extracts firmware from hidden partitions on Kobo/Tolino ebook readers - GitHub - akemnade/kobo-firmware-extractor: extracts firmware from hidden partitions on Kobo/Tolino ebook readers
+/mnt/data/projects/git/conversations/media/kobo-firmware-extractor-B8761
+
+
+[7/9/2023 2:06 PM] szybet
+thank you
+
+
+[7/9/2023 2:30 PM] .kitkat1.
+lol
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-C0392.png
+
+
+[7/9/2023 3:10 PM] .kitkat1.
+gcc -o output_filename source_code_file.c
+
+
+[7/9/2023 3:10 PM] .kitkat1.
+is this how I compile it ?
+
+
+[7/9/2023 3:11 PM] szybet
+when the entire internet, human knowledge, AI, bible says that
+
+then why are you asking me this, isint it clear?
+
+
+[7/9/2023 3:11 PM] szybet
+https://tenor.com/view/cease-your-heresy-warhammer-heresy-astartes-gif-18053812
+
+{Embed}
+https://tenor.com/view/cease-your-heresy-warhammer-heresy-astartes-gif-18053812
+/mnt/data/projects/git/conversations/media/cease-your-heresy-warhammer-F370A.png
+
+
+[7/9/2023 3:12 PM] szybet
+XD
+
+
+[7/9/2023 3:12 PM] .kitkat1.
+ok.
+
+
+[7/9/2023 3:12 PM] .kitkat1.
+done
+
+
+[7/9/2023 3:13 PM] szybet
+nice
+
+
+[7/9/2023 3:13 PM] szybet
+then use it as andi said on the image you made
+
+
+[7/9/2023 3:14 PM] .kitkat1.
+how
+
+
+[7/9/2023 3:15 PM] szybet
+.
+
+
+[7/9/2023 3:23 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/out-0303E.dtb
+
+
+[7/9/2023 3:24 PM] szybet
+were there any errors?
+
+
+[7/9/2023 3:24 PM] szybet
+when executing
+
+
+[7/9/2023 3:24 PM] .kitkat1.
+no?
+
+
+[7/9/2023 3:24 PM] szybet
+ok, now extract the waveshare too
+
+
+[7/9/2023 3:29 PM] .kitkat1.
+./extract-waveform.sh: line 4: busybox: command not found
+./extract-waveform.sh: line 8: extract-kobohidden: command not found
+./extract-waveform.sh: line 11: busybox: command not found
+modprobe: FATAL: Module mxc_epdc_drm not found in directory /lib/modules/6.1.37-1-lts
+
+
+[7/9/2023 3:30 PM] szybet
+whoops whatever then
+
+
+[7/9/2023 3:30 PM] .kitkat1.
+what
+
+
+[7/9/2023 3:31 PM] andi15701
+extract-kobohidden /dev/mmcblk0 14336 epdc.fw
+
+
+[7/9/2023 3:33 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/epdc-38FEA.fw
+
+
+[7/9/2023 3:40 PM] szybet
+weird at least
+
+
+[7/9/2023 3:41 PM] andi15701
+that extract-waveform.sh is made to be run at boot-time to put the waveform to filesystem
+
+
+[7/9/2023 3:41 PM] andi15701
+so it is not to be used standalone
+
+
+[7/9/2023 3:42 PM] andi15701
+so I have separeted the correponding command
+
+
+[7/9/2023 3:44 PM] szybet
+ok ok, i just wanted it to be exported for later
+
+
+[7/9/2023 4:06 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230709_160433-D1F6A.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230709_160405-0CAE4.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230709_160413-38F1A.jpg
+
+
+[7/9/2023 4:20 PM] .kitkat1.
+diffrences to the A ( maybe not all of them, some of them can be on the A, not sure ) anyway:
+- they added a few metalic inserts that go to the PCB and one plastic one that breaks off if the pcb is taken out - its important to cut it off otherwise it will bend the pcb...
+- flex cables are reinforced - the one with the chip on it is for sure
+- usb port has a plastic part reinforcing it now
+- on the bottom is a plastic piece now, isolating the pcb
+
+
+[7/9/2023 4:51 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-71EA1.txt
+
+
+[7/9/2023 4:51 PM] .kitkat1.
+serial boot output
+
+
+[7/9/2023 4:56 PM] .kitkat1.
+```
+    if [ `echo $KERNEL | grep -c ntx` == 1 ]; then
+        dd if=/dev/zero of=/dev/$DEVICE bs=512 seek=2047 count=1
+    fi
+    dd if=$KERNEL of=/dev/$DEVICE bs=512 seek=2048
+```
+@andi as $KERNEL is an unknown argument, should i dd the zero bytes too? i have no idea. i will try to replace the nickel kernel for now to see how its going
+
+
+[7/9/2023 5:05 PM] .kitkat1.
+@Szybet  is this guide okay ? https://piembsystech.com/cross-compilation-of-linux-kernel-modules-a-comprehensive-guide/
+
+
+[7/9/2023 5:06 PM] szybet
+no, not modules
+
+
+[7/9/2023 5:06 PM] .kitkat1.
+huh
+
+
+[7/9/2023 5:08 PM] .kitkat1.
+this https://gts3.org/2017/cross-kernel.html
+
+{Embed}
+https://gts3.org/2017/cross-kernel.html
+Linux Kernel Cross Compilation
+Experience in cross-compiling the Linux kernel
+
+
+[7/9/2023 5:09 PM] szybet
+they are so overcomplicating
+
+
+[7/9/2023 5:09 PM] szybet
+my god
+
+
+[7/9/2023 5:09 PM] szybet
+add the nickel toolchain bin dir to your PATH
+
+
+[7/9/2023 5:09 PM] szybet
+next look up the commands to make and add ARCH=arm and the second argument for the toolchain
+
+
+[7/9/2023 5:10 PM] szybet
+then use the config you sended and place it in the directory as .config
+
+
+[7/9/2023 5:10 PM] szybet
+and run make
+
+
+[7/9/2023 5:13 PM] szybet
+```
+export PATH=$PATH:/home/build/inkbox/kernel/toolchain/arm-nickel-linux-gnueabihf/bin/
+```
+
+
+[7/9/2023 5:43 PM] .kitkat1.
+`export PATH=$PATH:/home/build/inkbox/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/`
+
+
+[7/9/2023 5:43 PM] .kitkat1.
+```CHOST=arm CC=arm-kobo-linux-gnueabihf-gcc \
+AR=arm-kobo-linux-gnueabihf-ar \
+RANLIB=arm-kobo-linux-gnueabihf-ranlib \
+CXX=arm-kobo-linux-gnueabihf-g++ \
+LINK=arm-kobo-linux-gnueabihf-g++ \
+LD=arm-kobo-linux-gnueabihf-ld \
+ARCH=arm CROSS_COMPILE=arm-kobo-linux-gnueabihf- make -j 8```
+
+
+[7/9/2023 5:44 PM] szybet
+format with \`\`\` now
+
+
+[7/9/2023 5:44 PM] szybet
+seperate commands
+
+
+[7/9/2023 5:46 PM] .kitkat1.
+`make[2]: *** [scripts/Makefile.host:100 scripts/dtc/dtc] Error 1`
+`make[1]: *** [scripts/Makefile.build:403: scripts/dtc] Error 2`
+`make: *** [Makefile:555: scripts] Error 2`
+
+
+[7/9/2023 5:47 PM] .kitkat1.
+```/usr/bin/ld: scripts/dtc/dtc-parser.tab.o:(.bss+0x50): multiple definition of `yylloc'; scripts/dtc/dtc-lexer.lex.o:(.bss+0x0): first defined here
+collect2: error: ld returned 1 exit status
+```
+
+
+[7/9/2023 5:51 PM] .kitkat1.
+```export PATH=$PATH:/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/bin/
+```
+
+
+[7/9/2023 5:51 PM] szybet
+i said that you dont try the musl one, only the 3 others
+
+
+[7/9/2023 5:51 PM] szybet
+https://tenor.com/view/turtwig-turtwig-aaa-valogang-gif-25767993
+
+{Embed}
+https://tenor.com/view/turtwig-turtwig-aaa-valogang-gif-25767993
+/mnt/data/projects/git/conversations/media/turtwig-turtwig-aaa-377CF.png
+
+
+[7/9/2023 5:52 PM] .kitkat1.
+what 3 others
+
+
+[7/9/2023 5:53 PM] szybet
+not the musl one.
+
+
+[7/9/2023 5:54 PM] .kitkat1.
+```export PATH=$PATH:/home/build/inkbox/kernel/toolchain/gcc-4.4.1/bin/```
+
+
+[7/9/2023 5:54 PM] .kitkat1.
+```CHOST=arm CC=gcc-4.4.1-gcc \
+AR=gcc-4.4.1-ar \
+RANLIB=gcc-4.4.1-ranlib \
+CXX=gcc-4.4.1-g++ \
+LINK=gcc-4.4.1-g++ \
+LD=gcc-4.4.1-ld \
+ARCH=arm CROSS_COMPILE=gcc-4.4.1- make -j 8```
+
+
+[7/9/2023 5:54 PM] szybet
+wrong
+
+
+[7/9/2023 5:54 PM] .kitkat1.
+how ?
+
+
+[7/9/2023 5:55 PM] szybet
+look int `:/home/build/inkbox/kernel/toolchain/gcc-4.4.1/bin/` and there is the prefix
+
+
+[7/9/2023 5:55 PM] .kitkat1.
+```CHOST=arm CC=arm-none-linux-gnueabi-gcc \
+AR=arm-none-linux-gnueabi-ar \
+RANLIB=arm-none-linux-gnueabi-ranlib \
+CXX=arm-none-linux-gnueabi-g++ \
+LINK=arm-none-linux-gnueabi-g++ \
+LD=arm-none-linux-gnueabi-ld \
+ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- make -j 8```
+
+
+[7/9/2023 5:55 PM] .kitkat1.
+so like this ?
+
+
+[7/9/2023 5:56 PM] szybet
+yes
+
+
+[7/9/2023 5:56 PM] .kitkat1.
+```/usr/bin/ld: scripts/dtc/dtc-parser.tab.o:(.bss+0x50): multiple definition of `yylloc'; scripts/dtc/dtc-lexer.lex.o:(.bss+0x0): first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [scripts/Makefile.host:100: scripts/dtc/dtc] Error 1
+make[1]: *** [scripts/Makefile.build:403: scripts/dtc] Error 2
+make: *** [Makefile:555: scripts] Error 2
+```
+
+
+[7/9/2023 5:57 PM] szybet
+stop
+
+
+[7/9/2023 5:57 PM] szybet
+look the error in google
+
+
+[7/9/2023 5:57 PM] szybet
+try to find a solution
+
+
+[7/9/2023 5:59 PM] .kitkat1.
+https://fw64.net/solution-for-multiple-definition-of-yylloc-error
+
+
+[7/9/2023 5:59 PM] .kitkat1.
+?
+
+
+[7/9/2023 6:00 PM] szybet
+maybe idk, try it
+
+
+[7/9/2023 6:35 PM] andi15701
+gcc-10 host compiler is the problem
+
+
+[7/9/2023 6:35 PM] andi15701
+if gcc-6 is available
+
+
+[7/9/2023 6:36 PM] andi15701
+try that
+
+
+[7/9/2023 7:22 PM] szybet
+well we dont have such
+
+
+[7/9/2023 7:22 PM] szybet
+do we just download linaro gcc 6?
+
+
+[7/9/2023 7:22 PM] szybet
+@andi
+
+
+[7/9/2023 8:47 PM] andi15701
+gcc10-extern_YYLOC_global_declaration.patch
+
+
+[7/9/2023 8:47 PM] andi15701
+from pmaports repo
+
+
+[7/9/2023 8:47 PM] andi15701
+is what you need
+
+
+[7/9/2023 8:47 PM] andi15701
+apply it to the kernel
+
+
+[7/9/2023 8:47 PM] andi15701
+you can build it with newer gcc
+
+
+[7/9/2023 8:47 PM] szybet
+nickel or kobo toolchain?
+
+
+[7/9/2023 8:48 PM] szybet
+im lazy, link?
+
+
+[7/9/2023 8:50 PM] andi15701
+https://gitlab.com/postmarketOS/pmaports
+
+{Embed}
+https://gitlab.com/postmarketOS/pmaports
+postmarketOS / pmaports · GitLab
+postmarketOS package build recipes
+/mnt/data/projects/git/conversations/media/icon_mobile-9A834.png
+
+
+[7/9/2023 8:50 PM] andi15701
+sorry
+
+
+[7/9/2023 8:50 PM] andi15701
+https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/.shared-patches/linux
+
+{Embed}
+https://gitlab.com/postmarketOS/pmaports/-/tree/master/device/.shared-patches/linux
+device/.shared-patches/linux · master · postmarketOS / pmaports · G...
+postmarketOS package build recipes
+/mnt/data/projects/git/conversations/media/icon_mobile-9A834.png
+
+
+[7/9/2023 8:50 PM] andi15701
+this one
+
+
+[7/9/2023 8:50 PM] szybet
+thanks
+
+
+[7/9/2023 8:50 PM] andi15701
+https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration.patch
+
+{Embed}
+https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration.patch
+device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration....
+postmarketOS package build recipes
+/mnt/data/projects/git/conversations/media/icon_mobile-9A834.png
+
+
+[7/9/2023 8:51 PM] andi15701
+so hiere it is about the *host* side gcc, not the crosscompiler
+
+
+[7/9/2023 8:51 PM] szybet
+how host...
+
+
+[7/9/2023 8:51 PM] szybet
+we never use host
+
+
+[7/9/2023 8:52 PM] andi15701
+you do
+
+
+[7/9/2023 8:52 PM] andi15701
+the compiler used to compile tools required for the build process itself
+
+
+[7/9/2023 8:52 PM] szybet
+so we need to build the crosscompiler once more?...
+
+
+[7/9/2023 8:53 PM] andi15701
+no
+
+
+[7/9/2023 8:53 PM] andi15701
+but there is a bunch of things in kernel/scripts
+
+
+[7/9/2023 8:53 PM] andi15701
+wich gets compiled
+
+
+[7/9/2023 8:54 PM] andi15701
+and used during the build process
+
+
+[7/9/2023 8:55 PM] szybet
+ok thanks
+
+
+[7/12/2023 8:52 PM] .kitkat1.
+so what file is it ?
+
+
+[7/12/2023 8:53 PM] szybet
+https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration.patchhttps://gitlab.com/postmarketOS/pmaports/-/blob/master/device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration.patch
+
+{Embed}
+https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration.patchhttps://gitlab.com/postmarketOS/pmaports/-/blob/master/device/.shared-patches/linux/gcc10-extern_YYLOC_global_declaration.patch
+Files · master · postmarketOS / pmaports · GitLab
+postmarketOS package build recipes
+/mnt/data/projects/git/conversations/media/icon_mobile-9A834.png
+
+
+[7/12/2023 8:54 PM] .kitkat1.
+what should I do with it ?
+
+
+[7/12/2023 8:54 PM] szybet
+for the sake of simplicity: look at the file and edit in specified files the lines that were modified
+
+
+[7/12/2023 8:55 PM] .kitkat1.
+what
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-6CD0F.png
+
+
+[7/12/2023 8:56 PM] szybet
+idk this link works
+
+
+[7/12/2023 8:57 PM] .kitkat1.
+what do you mean by that
+
+
+[7/12/2023 8:58 PM] andi15701
+cd kernel_source ; patch -p1 <gcc10....patch
+
+
+[7/12/2023 8:59 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-6D52F.png
+
+
+[7/12/2023 8:59 PM] szybet
+doubts it will work, but worth trying too...
+
+
+[7/12/2023 9:00 PM] .kitkat1.
+what is kernel_source
+
+
+[7/12/2023 9:01 PM] szybet
+your clara 2e folder that you downloaded from kobo labs
+
+
+[7/12/2023 9:01 PM] szybet
+where you executed make command
+
+
+[7/12/2023 9:03 PM] .kitkat1.
+should I make it now ?
+
+
+[7/12/2023 9:03 PM] szybet
+what
+
+
+[7/12/2023 9:03 PM] szybet
+make command or what
+
+
+[7/12/2023 9:03 PM] .kitkat1.
+yes
+
+
+[7/12/2023 9:04 PM] andi15701
+after applying the patch
+
+
+[7/12/2023 9:04 PM] szybet
+just like last time with arguments, with nickel toolchain for the start
+
+
+[7/12/2023 9:06 PM] .kitkat1.
+```/tmp/ccneIIsN.s: Assembler messages:
+/tmp/ccneIIsN.s:984: Error: garbage following instruction -- `dmb ish'
+make[1]: *** [scripts/Makefile.build:259: arch/arm/kernel/signal.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:947: arch/arm/mm] Error 2
+/tmp/ccRr6jv1.s: Assembler messages:
+/tmp/ccRr6jv1.s:715: Error: unknown pseudo-op: `.arch_extension'
+/tmp/ccRr6jv1.s:716: Error: bad instruction `pldw [r3,#0]'
+/tmp/ccRr6jv1.s:738: Error: garbage following instruction -- `dmb ish'
+/tmp/ccRr6jv1.s:802: Error: garbage following instruction -- `dmb ish'
+/tmp/ccRr6jv1.s:809: Error: garbage following instruction -- `dsb ishst'
+/tmp/ccRr6jv1.s:852: Error: unknown pseudo-op: `.arch_extension'
+/tmp/ccRr6jv1.s:853: Error: bad instruction `pldw [ip,#0]'
+/tmp/ccRr6jv1.s:883: Error: garbage following instruction -- `dmb ish'
+make[1]: *** [scripts/Makefile.build:258: arch/arm/kernel/traps.o] Error 1
+make: *** [Makefile:947: arch/arm/kernel] Error 2
+```
+
+
+[7/12/2023 9:07 PM] szybet
+run `make arch=ARM clean`
+
+
+[7/12/2023 9:08 PM] szybet
+then repeat
+
+
+[7/12/2023 9:08 PM] .kitkat1.
+```arch/arm/kernel/entry-armv.S: Assembler messages:
+arch/arm/kernel/entry-armv.S:862: Error: garbage following instruction -- `dmb ish'
+arch/arm/kernel/entry-armv.S:869: Error: garbage following instruction -- `dmb ish'
+arch/arm/kernel/entry-armv.S:926: Error: garbage following instruction -- `dmb ish'
+arch/arm/kernel/entry-armv.S:989: Error: garbage following instruction -- `dmb ish'
+make[1]: *** [scripts/Makefile.build:294: arch/arm/kernel/entry-armv.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+/tmp/cc2XC62c.s: Assembler messages:
+/tmp/cc2XC62c.s:984: Error: garbage following instruction -- `dmb ish'
+make[1]: *** [scripts/Makefile.build:258: arch/arm/kernel/signal.o] Error 1
+/tmp/ccR67Lio.s: Assembler messages:
+/tmp/ccR67Lio.s:715: Error: unknown pseudo-op: `.arch_extension'
+/tmp/ccR67Lio.s:716: Error: bad instruction `pldw [r3,#0]'
+/tmp/ccR67Lio.s:738: Error: garbage following instruction -- `dmb ish'
+/tmp/ccR67Lio.s:802: Error: garbage following instruction -- `dmb ish'
+/tmp/ccR67Lio.s:809: Error: garbage following instruction -- `dsb ishst'
+/tmp/ccR67Lio.s:852: Error: unknown pseudo-op: `.arch_extension'
+/tmp/ccR67Lio.s:853: Error: bad instruction `pldw [ip,#0]'
+/tmp/ccR67Lio.s:883: Error: garbage following instruction -- `dmb ish'
+make[1]: *** [scripts/Makefile.build:258: arch/arm/kernel/traps.o] Error 1
+make: *** [Makefile:947: arch/arm/kernel] Error 2
+```
+
+
+[7/12/2023 9:09 PM] szybet
+damn thats bad
+
+
+[7/12/2023 9:09 PM] szybet
+what toolchain did you tried
+
+
+[7/12/2023 9:09 PM] .kitkat1.
+arm-none-linux-gnueabi
+
+
+[7/12/2023 9:09 PM] szybet
+which folder in kobo is it
+
+
+[7/12/2023 9:10 PM] szybet
+i mean inkbox kernel repo
+
+
+[7/12/2023 9:10 PM] .kitkat1.
+gcc-4.4.1
+
+
+[7/12/2023 9:10 PM] szybet
+i said try nickel
+
+
+[7/12/2023 9:10 PM] szybet
+then
+
+
+[7/12/2023 9:10 PM] szybet
+try
+
+
+[7/12/2023 9:10 PM] szybet
+nickel
+
+
+[7/12/2023 9:10 PM] .kitkat1.
+what
+
+
+[7/12/2023 9:11 PM] szybet
+in inkbox kernel repo
+
+
+[7/12/2023 9:11 PM] szybet
+is toolchain folder
+
+
+[7/12/2023 9:11 PM] szybet
+you tried gcc-4.4.1
+
+
+[7/12/2023 9:11 PM] szybet
+try the one with nickel in it
+
+
+[7/12/2023 9:11 PM] szybet
+and post all commands and output that you got
+
+
+[7/12/2023 9:12 PM] .kitkat1.
+okay
+
+
+[7/12/2023 9:14 PM] .kitkat1.
+```export PATH=$PATH:/home/build/inkbox/kernel/toolchain/arm-nickel-linux-gnueabihf/bin/```
+
+
+[7/12/2023 9:14 PM] .kitkat1.
+```CHOST=arm CC=arm-nickel-linux-gnueabihf-gcc \\
+AR=arm-nickel-linux-gnueabihf-ar \\
+RANLIB=arm-nickel-linux-gnueabihf-ranlib \\
+CXX=arm-nickel-linux-gnueabihf-g++ \\
+LINK=arm-nickel-linux-gnueabihf-g++ \\
+LD=arm-nickel-linux-gnueabihf-ld \\
+ARCH=arm CROSS_COMPILE=arm-nickel-linux-gnueabihf- make -j 8```
+
+
+[7/12/2023 9:16 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-F6A1F.txt
+
+
+[7/12/2023 9:17 PM] szybet
+https://tenor.com/view/birthday-happy-birthday-dancing-skeleton-happy-gif-26290215
+
+{Embed}
+https://tenor.com/view/birthday-happy-birthday-dancing-skeleton-happy-gif-26290215
+/mnt/data/projects/git/conversations/media/birthday-happy-birthday-19003.png
+
+
+[7/12/2023 9:17 PM] szybet
+connect the sd card from the device containing nickel to the laptop
+
+
+[7/12/2023 9:17 PM] szybet
+and show me `ls` the directory where you compiled
+
+
+[7/12/2023 9:24 PM] .kitkat1.
+how to get serial
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Peek_2023-07-12_21-24-458E9.gif
+
+
+[7/12/2023 9:25 PM] szybet
+`    dd if=$KERNEL of=/dev/$DEVICE bs=512 seek=2048`
+
+
+[7/12/2023 9:26 PM] .kitkat1.
+```arch   COPYING  crypto         drivers   fs       init  Kbuild   kernel  MAINTAINERS  mm               modules.order  README          samples  security  tools  virt
+block  CREDITS  Documentation  firmware  include  ipc   Kconfig  lib     Makefile     modules.builtin  net            REPORTING-BUGS  scripts  sound     usr
+```
+
+
+[7/12/2023 9:28 PM] szybet
+um no idea where it is
+
+
+[7/12/2023 9:28 PM] szybet
+@andi where is zImage
+
+
+[7/12/2023 9:28 PM] szybet
+or something went wrong
+
+
+[7/12/2023 9:28 PM] andi15701
+arch/arm/boot/zImage
+
+
+[7/12/2023 9:28 PM] szybet
+ah yes
+
+
+[7/12/2023 9:28 PM] szybet
+enter this directory
+
+
+[7/12/2023 9:28 PM] szybet
+and run ls
+
+
+[7/12/2023 9:30 PM] .kitkat1.
+there is no zImage
+
+
+[7/12/2023 9:30 PM] szybet
+i said enter directory
+
+
+[7/12/2023 9:30 PM] szybet
+and run
+
+
+[7/12/2023 9:30 PM] szybet
+ls
+
+
+[7/12/2023 9:30 PM] .kitkat1.
+what directory
+
+
+[7/12/2023 9:30 PM] szybet
+`cd arch/arm/boot/; ls -shal`
+
+
+[7/12/2023 9:30 PM] szybet
+execute
+
+
+[7/12/2023 9:31 PM] .kitkat1.
+```total 144K
+4,0K drwxr-xr-x  5 kitkat kitkat 4,0K 07-09 17:26 .
+4,0K drwxr-xr-x 91 kitkat kitkat 4,0K 07-09 17:26 ..
+4,0K drwxr-xr-x  2 kitkat kitkat 4,0K 07-09 17:26 bootp
+4,0K drwxr-xr-x  2 kitkat kitkat 4,0K 07-09 17:26 compressed
+116K drwxr-xr-x  3 kitkat kitkat 112K 07-12 21:13 dts
+4,0K -rw-r--r--  1 kitkat kitkat   46 2023-01-10  .gitignore
+4,0K -rw-r--r--  1 kitkat kitkat 1,7K 2023-01-10  install.sh
+4,0K -rw-r--r--  1 kitkat kitkat 3,1K 2023-01-10  Makefile
+```
+
+
+[7/12/2023 9:31 PM] szybet
+thats bad
+
+
+[7/12/2023 9:31 PM] szybet
+maybe the config got flushed with make clean?:
+
+
+[7/12/2023 9:31 PM] szybet
+anyway, show me install.sh
+
+
+[7/12/2023 9:31 PM] .kitkat1.
+what
+
+
+[7/12/2023 9:31 PM] szybet
+`cat install.sh`
+
+
+[7/12/2023 9:32 PM] .kitkat1.
+```#!/bin/sh
+#
+# arch/arm/boot/install.sh
+#
+# This file is subject to the terms and conditions of the GNU General Public
+# License.  See the file "COPYING" in the main directory of this archive
+# for more details.
+#
+# Copyright (C) 1995 by Linus Torvalds
+#
+# Adapted from code in arch/i386/boot/Makefile by H. Peter Anvin
+# Adapted from code in arch/i386/boot/install.sh by Russell King
+#
+# "make install" script for arm architecture
+#
+# Arguments:
+#   $1 - kernel version
+#   $2 - kernel image file
+#   $3 - kernel map file
+#   $4 - default install path (blank if root directory)
+#
+
+verify () {
+    if [ ! -f "$1" ]; then
+        echo ""                                                   1>&2
+        echo " *** Missing file: $1"                              1>&2
+        echo ' *** You need to run "make" before "make install".' 1>&2
+        echo ""                                                   1>&2
+        exit 1
+    fi
+}
+
+# Make sure the files actually exist
+verify "$2"
+verify "$3"
+
+# User may have a custom install script
+if [ -x ~/bin/${INSTALLKERNEL} ]; then exec ~/bin/${INSTALLKERNEL} "$@"; fi
+if [ -x /sbin/${INSTALLKERNEL} ]; then exec /sbin/${INSTALLKERNEL} "$@"; fi
+
+if [ "$(basename $2)" = "zImage" ]; then
+# Compressed install
+  echo "Installing compressed kernel"
+  base=vmlinuz
+else
+# Normal install
+  echo "Installing normal kernel"
+  base=vmlinux
+fi
+
+if [ -f $4/$base-$1 ]; then
+  mv $4/$base-$1 $4/$base-$1.old
+fi
+cat $2 > $4/$base-$1
+
+# Install system map file
+if [ -f $4/System.map-$1 ]; then
+  mv $4/System.map-$1 $4/System.map-$1.old
+fi
+cp $3 $4/System.map-$1
+
+if [ -x /sbin/loadmap ]; then
+  /sbin/loadmap
+else
+  echo "You have to install it yourself"
+fi
+```
+
+
+[7/12/2023 9:32 PM] szybet
+where is zimage :(
+
+
+[7/12/2023 9:33 PM] .kitkat1.
+you dont get zimage
+
+
+[7/12/2023 9:33 PM] szybet
+@Kitkat / Szybet ( sometimes ) try once more, make clean, then copy the config like before and compile and show me the content of the directory
+
+
+[7/12/2023 9:33 PM] .kitkat1.
+what config
+
+
+[7/12/2023 9:34 PM] szybet
+scroll up
+
+
+[7/12/2023 9:34 PM] szybet
+i already explained
+
+
+[7/12/2023 9:37 PM] szybet
+put this file in the kernel directory and rename it .config
+
+
+[7/12/2023 9:37 PM] szybet
+this one
+
+
+[7/12/2023 9:44 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-FE03E.txt
+
+
+[7/12/2023 9:45 PM] .kitkat1.
+answered in config yes to everything this time
+
+
+[7/12/2023 9:45 PM] .kitkat1.
+elan touch driver problems?
+
+
+[7/12/2023 9:46 PM] szybet
+`drivers/input/touchscreen/focaltech_touch/focaltech_flash.c:49:29: fatal error: include/firmware/fw_sample.i: No such file or directory`
+
+
+[7/12/2023 9:46 PM] szybet
+we dont need that?
+
+
+[7/12/2023 9:50 PM] .kitkat1.
+error while compiling without this device:
+```
+ke[1]: *** No rule to make target 'arch/arm/boot/dts/imx6sll-e70k14f00.dtb', needed by '__build'.  Stop.
+make: *** [arch/arm/Makefile:327: dtbs] Error 2
+make: *** Waiting for unfinished jobs....
+```
+
+
+[7/12/2023 9:51 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-18E49.txt
+
+
+[7/12/2023 9:52 PM] szybet
+still no zimage as i can see
+
+
+[7/12/2023 9:52 PM] szybet
+@andi any ideas?
+
+
+[7/12/2023 9:59 PM] szybet
+well... show `ls arch/arm/boot/dts/` @Kitkat / Szybet ( sometimes )
+
+
+[7/12/2023 10:04 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-ABA3D.txt
+
+
+[7/12/2023 10:07 PM] andi15701
+are you sure about the config?
+
+
+[7/12/2023 10:08 PM] andi15701
+imx_v7_ntx_defconfig
+
+
+[7/12/2023 10:31 PM] szybet
+We coppied it off the device
+
+
+[7/12/2023 10:31 PM] szybet
+And its identical to this one
+
+
+[7/12/2023 10:32 PM] szybet
+So sure? Idk really
+
+
+[7/12/2023 10:39 PM] andi15701
+$ grep TOUCHSCREEN ../clara2e/kernel/arch/arm/configs/imx_v7_ntx_mepd_defconfig | grep -v 'is\ not\ set'
+CONFIG_INPUT_TOUCHSCREEN=y
+CONFIG_OF_TOUCHSCREEN=y
+
+
+[7/12/2023 10:40 PM] andi15701
+no touchscreen drivers...
+
+
+[7/12/2023 10:40 PM] andi15701
+in that one
+
+
+[7/12/2023 10:41 PM] andi15701
+or did they update the sources...
+
+
+[7/12/2023 10:42 PM] andi15701
+well, for the error messages:
+
+
+[7/12/2023 10:42 PM] szybet
+I needed to say Y for elan touch screen in configs
+
+
+[7/12/2023 10:42 PM] andi15701
+delete non-existing devicetreoes from arch/arm/boot/dts/Makefile
+
+
+[7/12/2023 10:42 PM] szybet
+That simple? Cool
+
+
+[7/12/2023 10:42 PM] szybet
+I thought they grab only the one needed?
+
+
+[7/12/2023 10:43 PM] andi15701
+normally every devicetree gets processed which matches enabled archs/socs
+
+{Reactions}
+👍 
+
+[7/13/2023 11:36 AM] .kitkat1.
+so what should I do ?
+
+
+[7/13/2023 11:39 AM] .kitkat1.
+@Szybet
+
+
+[7/13/2023 11:42 AM] szybet
+send me `arch/arm/Makefile`
+
+
+[7/13/2023 11:46 AM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-61C0B.txt
+
+
+[7/13/2023 11:47 AM] szybet
+my bad, send `/arm/boot/dts/Makefile`
+
+
+[7/13/2023 11:47 AM] .kitkat1.
+what
+
+
+[7/13/2023 11:48 AM] .kitkat1.
+`arch/arm/boot/dts/Makefile `
+
+
+[7/13/2023 11:48 AM] .kitkat1.
+?
+
+
+[7/13/2023 11:49 AM] szybet
+send this file?
+
+
+[7/13/2023 11:49 AM] szybet
+yes
+
+
+[7/13/2023 11:49 AM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-13374.txt
+
+
+[7/13/2023 11:49 AM] szybet
+remove the line containing `imx6sll-e70k14f00.dtb`
+
+
+[7/13/2023 11:49 AM] szybet
+and try to compile
+
+
+[7/13/2023 11:56 AM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-DFABB.txt
+
+
+[7/13/2023 11:57 AM] szybet
+look up the images on github that you send and check if an IC has bd7182 on it
+
+
+[7/13/2023 11:57 AM] szybet
+you can reploaud them here
+
+
+[7/13/2023 11:58 AM] .kitkat1.
+what
+
+
+[7/13/2023 11:58 AM] szybet
+IC = chip
+
+
+[7/13/2023 11:59 AM] .kitkat1.
+-_-
+
+
+[7/13/2023 11:59 AM] .kitkat1.
+okay
+
+
+[7/13/2023 12:00 PM] szybet
+integrated circuit = IC = chip
+
+
+[7/13/2023 12:04 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230529_193642-A090B.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193701-E45F5.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193706-2EA17.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193718-91290.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193729-E865F.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193742-7B3DD.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193748-58D2F.jpg
+/mnt/data/projects/git/conversations/media/IMG_20230529_193811-38B2E.jpg
+/mnt/data/projects/git/conversations/media/PICT0001-9E3E1.jpg
+/mnt/data/projects/git/conversations/media/PICT0002-7F059.jpg
+
+
+[7/13/2023 12:04 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PICT0004-FC8F7.jpg
+/mnt/data/projects/git/conversations/media/PICT0005-6CBFB.jpg
+/mnt/data/projects/git/conversations/media/PICT0006-A8EC6.jpg
+/mnt/data/projects/git/conversations/media/PICT0007-DF8CC.jpg
+
+
+[7/13/2023 12:06 PM] szybet
+what is written on this one
+
+
+[7/13/2023 12:06 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230529_193811-38EE3.png
+
+
+[7/13/2023 12:06 PM] szybet
+the N20?
+
+
+[7/13/2023 12:06 PM] szybet
+just look with a magnifying glass
+
+
+[7/13/2023 12:13 PM] szybet
+also run in kernel dir `grep -R "fts_switch_charger"`
+
+
+[7/13/2023 12:13 PM] szybet
+and try with kobo toolchain, not the nickel one
+
+
+[7/13/2023 12:31 PM] .kitkat1.
+N20
+D71879
+243184
+
+
+[7/13/2023 12:33 PM] .kitkat1.
+```grep: drivers/built-in.o: binary file matches
+grep: drivers/power/bd71827-power.o: binary file matches
+grep: drivers/power/built-in.o: binary file matches
+drivers/power/bd71827-power.c:extern int fts_switch_charger(u8 value);
+drivers/power/bd71827-power.c:        printk(KERN_ERR"[%s_%d] fts_switch_charger : 0\n",__FUNCTION__,__LINE__);
+drivers/power/bd71827-power.c:        fts_switch_charger(0);
+drivers/power/bd71827-power.c:        printk(KERN_ERR"[%s_%d] fts_switch_charger : 1\n",__FUNCTION__,__LINE__);
+drivers/power/bd71827-power.c:        fts_switch_charger(1);
+drivers/input/touchscreen/focaltech_touch/focaltech_core.c:*  Name: fts_switch_charger
+drivers/input/touchscreen/focaltech_touch/focaltech_core.c:int fts_switch_charger(u8 value){
+drivers/input/touchscreen/focaltech_touch/focaltech_core.c:EXPORT_SYMBOL(fts_switch_charger);
+grep: drivers/input/touchscreen/focaltech_touch/focaltech_core.o: binary file matches
+grep: vmlinux.o: binary file matches```
+
+
+[7/13/2023 12:36 PM] andi15701
+exiting
+
+
+[7/13/2023 12:36 PM] andi15701
+noone is using that touchscreen, isn't it?
+
+
+[7/13/2023 12:38 PM] szybet
+so its from the touchscreen?
+
+
+[7/13/2023 12:39 PM] szybet
+very similar name to the pmic
+
+
+[7/13/2023 12:39 PM] szybet
+@Kitkat / Szybet ( sometimes ) dod you restarted the config?
+
+
+[7/13/2023 12:39 PM] szybet
+so you needed to say y or n to questions
+
+
+[7/13/2023 12:39 PM] .kitkat1.
+no
+
+
+[7/13/2023 12:40 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-BEC53.txt
+
+
+[7/13/2023 12:40 PM] szybet
+post your current .config
+
+
+[7/13/2023 12:40 PM] andi15701
+so you need to #if 0 the stuff around the fts_switch_charger stuff
+
+
+[7/13/2023 12:40 PM] szybet
+i had may messed something up?
+
+
+[7/13/2023 12:40 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/config-9ABFA
+
+
+[7/13/2023 12:40 PM] szybet
+disabling in config should be enough?
+
+
+[7/13/2023 12:40 PM] andi15701
+no
+
+
+[7/13/2023 12:41 PM] andi15701
+either enable it
+
+
+[7/13/2023 12:41 PM] andi15701
+or #if 0 the stuff
+
+
+[7/13/2023 12:41 PM] andi15701
+I think #if 0 is safer
+
+
+[7/13/2023 12:41 PM] szybet
+```
+#
+# MFD GPIO expanders
+#
+CONFIG_GPIO_BD71828=y
+```
+
+
+[7/13/2023 12:42 PM] szybet
+its a gpio expander that i said `y` to
+
+
+[7/13/2023 12:42 PM] andi15701
+not that one
+
+
+[7/13/2023 12:42 PM] szybet
+i see
+
+
+[7/13/2023 12:42 PM] andi15701
+CONFIG_TOUCHSCREEN_FTS
+
+
+[7/13/2023 12:42 PM] andi15701
+we are not using it
+
+
+[7/13/2023 12:43 PM] andi15701
+so just remove it
+
+
+[7/13/2023 12:43 PM] andi15701
+remove the lines
+
+
+[7/13/2023 12:43 PM] andi15701
+by #if 0'ing them
+
+
+[7/13/2023 12:43 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-596E9.png
+
+
+[7/13/2023 12:43 PM] szybet
+well yea
+
+
+[7/13/2023 12:43 PM] andi15701
+in bdsomething-power.c
+
+
+[7/13/2023 12:44 PM] szybet
+well @Kitkat / Szybet ( sometimes ) just send the file `drivers/power/bd71827-power.c`
+
+
+[7/13/2023 12:44 PM] andi15701
+we have still the ektf thing as a touchscreen I guess?
+
+
+[7/13/2023 12:45 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/bd71827-power-7761C.c
+
+
+[7/13/2023 12:45 PM] szybet
+the elan one, yes
+
+
+[7/13/2023 12:47 PM] szybet
+i dont think removing them from source file will help
+
+
+[7/13/2023 12:48 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/bd71827-power-86A55.c
+
+
+[7/13/2023 12:48 PM] szybet
+@Kitkat / Szybet ( sometimes ) replace the file and try again
+
+
+[7/13/2023 12:48 PM] szybet
+remember make clean
+
+
+[7/13/2023 12:49 PM] andi15701
+if(0x14 == gptHWCFG->m_val.bTouchCtrl){ // E60K24 , FT5426
+only ifdef around
+
+
+[7/13/2023 12:49 PM] andi15701
+that block
+
+
+[7/13/2023 12:50 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/bd71827-power-514CF.c
+
+
+[7/13/2023 12:50 PM] szybet
+makes sense
+
+
+[7/13/2023 12:50 PM] szybet
+try this
+
+
+[7/13/2023 12:57 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-011F6.txt
+
+
+[7/13/2023 12:57 PM] szybet
+did you used this file?
+
+
+[7/13/2023 12:57 PM] .kitkat1.
+no I used the first one
+
+
+[7/13/2023 1:00 PM] .kitkat1.
+so should I try the other one now ?
+
+
+[7/13/2023 1:00 PM] szybet
+yeo
+
+
+[7/13/2023 1:01 PM] szybet
+yep
+
+
+[7/13/2023 1:11 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-0DA00.txt
+
+
+[7/13/2023 1:15 PM] szybet
+```
+paru -S inetutils lzop
+```
+
+
+[7/13/2023 1:15 PM] szybet
+run this
+
+
+[7/13/2023 1:15 PM] szybet
+and try again
+
+
+[7/13/2023 1:24 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-0D9D7.txt
+
+
+[7/13/2023 1:24 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-6AF6A.png
+
+
+[7/13/2023 1:24 PM] .kitkat1.
+success ?
+
+
+[7/13/2023 1:25 PM] szybet
+https://tenor.com/view/yes-penguin-gif-26365947
+
+{Embed}
+https://tenor.com/view/yes-penguin-gif-26365947
+/mnt/data/projects/git/conversations/media/yes-penguin-ED80A.png
+
+
+[7/13/2023 1:25 PM] szybet
+insert the sd card back to the ereader
+
+
+[7/13/2023 1:25 PM] szybet
+connect serial
+
+
+[7/13/2023 1:26 PM] szybet
+and make sure you can get serial output out of the ereader while its booting up
+
+
+[7/13/2023 3:57 PM] szybet
+@tux-linux please write down changes to kernel sources to make them work with inkbox
+
+
+[7/13/2023 3:58 PM] szybet
+Config changes, modules how, command line arguments, inkbox author info
+
+
+[7/13/2023 3:59 PM] szybet
+Your 5 minutes would be better spend that mine hour reverse enginering commits
+
+
+[7/13/2023 4:00 PM] tux_linux
+?
+
+
+[7/13/2023 4:01 PM] szybet
+Which part do i need to explain further
+
+
+[7/13/2023 4:01 PM] tux_linux
+everything
+
+
+[7/13/2023 4:01 PM] szybet
+How do i make new kernel sources work with inkbox?
+
+
+[7/13/2023 4:02 PM] tux_linux
+well, it depends of the device
+
+
+[7/13/2023 4:02 PM] szybet
+Kobo nia
+
+
+[7/13/2023 4:02 PM] tux_linux
+older ones need a different build process
+
+
+[7/13/2023 4:02 PM] tux_linux
+are you using mainline kernel
+
+
+[7/13/2023 5:01 PM] szybet
+Nope
+
+
+[7/13/2023 5:01 PM] szybet
+Just describe both
+
+
+[7/13/2023 5:01 PM] szybet
+Do a proper guide finally
+
+
+[7/13/2023 7:25 PM] szybet
+@tux-linux pls...
+
+
+[7/13/2023 7:25 PM] szybet
+we will wait for you till you write the guide
+
+
+[7/13/2023 7:25 PM] szybet
+and thats bad considering I wanted to port the A 3 months ago
+
+
+[7/13/2023 7:26 PM] tux_linux
+then you will wait
+
+
+[7/13/2023 7:26 PM] szybet
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+
+{Embed}
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+/mnt/data/projects/git/conversations/media/crying-emoji-dies-70A6D.png
+
+
+[7/13/2023 9:47 PM] tux_linux
+Changed the channel name: Kobo Nia model C (N306C)
+
+
+[7/16/2023 3:52 PM] .kitkat1.
+so what should I do now ?
+
+
+[7/16/2023 3:54 PM] szybet
+mount the sd card
+
+
+[7/16/2023 3:54 PM] szybet
+i mean connect it to pc
+
+
+[7/16/2023 3:56 PM] .kitkat1.
+yes?
+
+
+[7/16/2023 3:56 PM] szybet
+go to the directory where zimage is
+
+
+[7/16/2023 3:58 PM] .kitkat1.
+yes ?
+
+
+[7/16/2023 3:58 PM] szybet
+show me
+
+
+[7/16/2023 3:58 PM] szybet
+lsblks
+
+
+[7/16/2023 3:58 PM] szybet
+and ls
+
+
+[7/16/2023 3:58 PM] szybet
+commands
+
+
+[7/16/2023 3:58 PM] .kitkat1.
+```NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda           8:0    0 111,8G  0 disk 
+├─sda3        8:3    0   299M  0 part /boot
+└─sda6        8:6    0 111,5G  0 part /
+sdb           8:16   0 931,5G  0 disk 
+├─sdb1        8:17   0 808,6G  0 part /mnt/HDD
+├─sdb2        8:18   0    16M  0 part 
+└─sdb3        8:19   0 122,9G  0 part 
+mmcblk0     179:0    0    15G  0 disk 
+├─mmcblk0p1 179:1    0   256M  0 part /run/media/kitkat/rootfs
+├─mmcblk0p2 179:2    0   256M  0 part /run/media/kitkat/recoveryfs
+└─mmcblk0p3 179:3    0   6,9G  0 part /run/media/kitkat/KOBOeReader
+```
+
+
+[7/16/2023 3:59 PM] szybet
+unmount those partitions of the sd card
+
+
+[7/16/2023 3:59 PM] .kitkat1.
+```bootp/  compressed/  dts/  Image*  install.sh  Makefile  zImage*
+```
+
+
+[7/16/2023 3:59 PM] szybet
+ls -shal then
+
+
+[7/16/2023 3:59 PM] .kitkat1.
+what
+
+
+[7/16/2023 4:00 PM] szybet
+`ls -shal`
+
+
+[7/16/2023 4:00 PM] .kitkat1.
+-_-
+
+
+[7/16/2023 4:00 PM] .kitkat1.
+```total 14M
+4,0K drwxr-xr-x  5 kitkat kitkat 4,0K 07-13 13:23 ./
+4,0K drwxr-xr-x 91 kitkat kitkat 4,0K 07-09 17:26 ../
+4,0K drwxr-xr-x  2 kitkat kitkat 4,0K 07-09 17:26 bootp/
+4,0K drwxr-xr-x  2 kitkat kitkat 4,0K 07-13 13:23 compressed/
+120K drwxr-xr-x  3 kitkat kitkat 116K 07-13 13:04 dts/
+4,0K -rw-r--r--  1 kitkat kitkat   46 2023-01-10  .gitignore
+8,6M -rwxr-xr-x  1 kitkat kitkat 8,6M 07-13 13:23 Image*
+4,0K -rw-r--r--  1 kitkat kitkat  114 07-13 13:23 .Image.cmd
+4,0K -rw-r--r--  1 kitkat kitkat 1,7K 2023-01-10  install.sh
+4,0K -rw-r--r--  1 kitkat kitkat 3,1K 2023-01-10  Makefile
+4,7M -rwxr-xr-x  1 kitkat kitkat 4,7M 07-13 13:23 zImage*
+4,0K -rw-r--r--  1 kitkat kitkat  141 07-13 13:23 .zImage.cmd
+```
+
+
+[7/16/2023 4:00 PM] szybet
+`file zImage`
+
+
+[7/16/2023 4:00 PM] szybet
+run
+
+
+[7/16/2023 4:01 PM] .kitkat1.
+```zImage: Linux kernel ARM boot executable zImage (little-endian)```
+
+
+[7/16/2023 4:01 PM] szybet
+done?
+
+
+[7/16/2023 4:01 PM] .kitkat1.
+yes
+
+
+[7/16/2023 4:02 PM] .kitkat1.
+?
+
+
+[7/16/2023 4:02 PM] szybet
+wait
+
+
+[7/16/2023 4:03 PM] szybet
+run `sudo dd if=zImage of=/dev/mmcblk0 bs=512 seek=2048`
+
+
+[7/16/2023 4:03 PM] szybet
+then a few times `sync`
+
+
+[7/16/2023 4:03 PM] .kitkat1.
+why a few times ?
+
+
+[7/16/2023 4:03 PM] szybet
+https://tenor.com/view/magic-gif-26166638
+
+{Embed}
+https://tenor.com/view/magic-gif-26166638
+/mnt/data/projects/git/conversations/media/magic-1ED77.png
+
+
+[7/16/2023 4:05 PM] .kitkat1.
+done
+
+
+[7/16/2023 4:12 PM] .kitkat1.
+everything works
+
+
+[7/16/2023 4:12 PM] .kitkat1.
+https://tenor.com/view/imagination-spongebob-squarepants-dreams-magic-gif-12725683
+
+{Embed}
+https://tenor.com/view/imagination-spongebob-squarepants-dreams-magic-gif-12725683
+/mnt/data/projects/git/conversations/media/imagination-spongebob-squarepants-53338.png
+
+
+[7/16/2023 4:13 PM] szybet
+https://tenor.com/view/youre-a-wizard-hagrid-afirmation-magic-magical-gif-16533730
+
+{Embed}
+https://tenor.com/view/youre-a-wizard-hagrid-afirmation-magic-magical-gif-16533730
+/mnt/data/projects/git/conversations/media/youre-a-wizard-hagrid-9E3FB.png
+
+
+[7/16/2023 4:14 PM] .kitkat1.
+https://tenor.com/view/harry-potter-wizard-gif-13824819
+
+{Embed}
+https://tenor.com/view/harry-potter-wizard-gif-13824819
+/mnt/data/projects/git/conversations/media/harry-potter-90AD3.png
+
+
+[7/16/2023 4:16 PM] szybet
+https://tenor.com/view/lose-voldemort-gif-24652757
+
+{Embed}
+https://tenor.com/view/lose-voldemort-gif-24652757
+/mnt/data/projects/git/conversations/media/lose-voldemort-94BF9.png
+
+
+[7/16/2023 4:49 PM] tux_linux
+?
+
+
+[7/16/2023 4:49 PM] szybet
+it works on nickel
+
+
+[7/16/2023 4:49 PM] tux_linux
+hm
+
+
+[7/16/2023 4:50 PM] tux_linux
+ok
+
+
+[7/16/2023 4:50 PM] szybet
+do you want to write the guide now or do i continue?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-9F935.png
+
+
+[7/16/2023 4:50 PM] tux_linux
+i am porting clara hd now
+
+
+[7/16/2023 4:50 PM] tux_linux
+continue
+
+
+[7/16/2023 4:50 PM] tux_linux
+there is no real guide
+
+
+[7/16/2023 4:50 PM] tux_linux
+everything depends on the device
+
+
+[7/16/2023 4:51 PM] tux_linux
+some may not even get mainline support
+
+
+[7/16/2023 4:51 PM] tux_linux
+loading method is different
+
+
+[7/16/2023 4:51 PM] tux_linux
+sometimes from filesystem, sometimes from unpartitioned space
+
+
+[7/16/2023 4:51 PM] szybet
+you know i care only about the space
+
+
+[7/16/2023 4:52 PM] tux_linux
+what?
+
+
+[7/16/2023 4:52 PM] szybet
+https://tenor.com/view/panda-angry-war-fuckyou-gif-5921517
+
+{Embed}
+https://tenor.com/view/panda-angry-war-fuckyou-gif-5921517
+/mnt/data/projects/git/conversations/media/panda-angry-53726.png
+
+
+[7/16/2023 4:52 PM] szybet
+i dont have mainline
+
+
+[7/16/2023 4:52 PM] tux_linux
+arent you trying to port mainline for nia c?
+
+
+[7/16/2023 4:53 PM] szybet
+nope
+
+
+[7/16/2023 4:53 PM] szybet
+touch is messed up
+
+
+[7/16/2023 4:53 PM] szybet
+we would need to transition to libinput everywhere
+
+
+[7/16/2023 4:53 PM] szybet
+which i and you dont want.
+
+
+[7/16/2023 4:53 PM] tux_linux
+well ok
+
+
+[7/16/2023 4:53 PM] tux_linux
+then load from unpartitioned space?
+
+
+[7/16/2023 4:53 PM] szybet
+yep
+
+
+[7/16/2023 4:56 PM] tux_linux
+how much does it weigh
+
+
+[7/16/2023 4:57 PM] szybet
+what
+
+
+[7/16/2023 4:57 PM] tux_linux
+well what do you mean by this
+
+
+[7/16/2023 4:58 PM] szybet
+i dont care about loading from file
+
+
+[7/16/2023 4:58 PM] tux_linux
+well ok then what do you want
+
+
+[7/16/2023 4:59 PM] szybet
+the nia c kernel sources prepared for inkbox
+
+
+[7/16/2023 5:00 PM] tux_linux
+well, i will be brief
+
+
+[7/16/2023 5:00 PM] tux_linux
+it has been a very long time since i ported a device
+
+
+[7/16/2023 5:01 PM] szybet
+do you actually modify something else than the config file?
+
+
+[7/16/2023 5:01 PM] tux_linux
+not really
+sometimes when there are bugs
+
+
+[7/16/2023 5:01 PM] tux_linux
+on kt i had to modify the kernel source to make touch work
+
+
+[7/16/2023 5:01 PM] tux_linux
+but usually no
+
+
+[7/16/2023 5:01 PM] szybet
+there arent thank you
+
+
+[7/16/2023 5:01 PM] szybet
+also: the bootloader works for the nia a and c, so we will use the A one?
+
+
+[7/16/2023 5:02 PM] szybet
+i dont see a reason to add a new one
+
+
+[7/16/2023 5:03 PM] tux_linux
+1. you modify kernel config to force cmdline that is embedded in kernel (i think it's called `CONFIG_CMDLINE_FORCE`)
+2. you point it to embed a ramdisk, compress it with lzma and embed it in kernel (this ramdisk can be the same as Nia A if it works)
+3. you enable various config options i don't remember about
+
+
+[7/16/2023 5:04 PM] szybet
+this all in the config?
+
+
+[7/16/2023 5:04 PM] tux_linux
+i will check for those
+
+
+[7/16/2023 5:04 PM] tux_linux
+yes
+
+
+[7/16/2023 5:04 PM] tux_linux
+i think
+
+
+[7/16/2023 5:04 PM] szybet
+good
+
+
+[7/16/2023 5:10 PM] tux_linux
+https://github.com/Kobo-InkBox/kernel/commit/d97871a1df6521ecd3fc32c4126c4c8d88f55ff6
+you could look at this commit ***and*** following commits
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/commit/d97871a1df6521ecd3fc32c4126c4c8d88f55ff6
+N306: Change kernel config · Kobo-InkBox/kernel@d97871a
+/mnt/data/projects/git/conversations/media/d97871a1df6521ecd3fc32c4126c4c8d88f55ff6-1EB82
+
+
+[7/16/2023 5:10 PM] szybet
+im comparing the config files of the A and C and its going well
+
+
+[7/16/2023 5:10 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-C856E.png
+
+
+[7/16/2023 5:10 PM] szybet
+also wooow
+
+
+[7/16/2023 5:11 PM] szybet
+for the C version, they enabled bluetooth in kernel config too
+
+
+[7/16/2023 5:11 PM] tux_linux
+cool
+
+
+[7/16/2023 5:22 PM] szybet
+@tux-linux what about modules?...
+
+
+[7/16/2023 5:23 PM] szybet
+i dont see anything about it in build kernel
+
+
+[7/16/2023 5:50 PM] szybet
+% du -h /home/build/inkbox/kernel/kernel/out/n306a/zImage-root  
+6.9M    /home/build/inkbox/kernel/kernel/out/n306a/zImage-root
+
+
+[7/16/2023 5:50 PM] szybet
+something went wrong
+
+
+[7/16/2023 10:36 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-B08C4.txt
+
+
+[7/16/2023 10:36 PM] .kitkat1.
+first kernel boot on the nia c
+
+
+[7/16/2023 10:37 PM] .kitkat1.
+the pmic talks
+
+
+[7/16/2023 10:37 PM] .kitkat1.
+thats good
+
+
+[7/16/2023 10:37 PM] .kitkat1.
+kernel recompilation is needed because @Szybet fucked up keys
+
+
+[7/16/2023 10:37 PM] .kitkat1.
+https://tenor.com/view/anime-angry-gif-21256020
+
+{Embed}
+https://tenor.com/view/anime-angry-gif-21256020
+/mnt/data/projects/git/conversations/media/anime-angry-BCA6B.png
+
+
+[7/16/2023 10:37 PM] .kitkat1.
+also the screen works, showed the error
+
+
+[7/16/2023 10:37 PM] .kitkat1.
+😄
+
+
+[7/16/2023 10:44 PM] .kitkat1.
+```
+ * Security policy was violated! Shutting down ...
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes
+Requesting system poweroff
+[   19.300671] reboot: Power down
+```
+
+
+[7/16/2023 10:44 PM] .kitkat1.
+something is more wrong
+
+
+[7/16/2023 10:44 PM] .kitkat1.
+interesting
+
+
+[7/16/2023 10:46 PM] .kitkat1.
+```
+  echo rooted | sudo dd of=/dev/sdd bs=512 seek=79872 
+```
+this is propably needed ;p
+
+
+[7/16/2023 10:49 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230716_224928-718BB.jpg
+
+
+[7/16/2023 10:52 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230716_225210-98EB2.jpg
+
+
+[7/16/2023 10:52 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C3071.txt
+
+
+[7/16/2023 10:52 PM] .kitkat1.
+boot that worked
+
+
+[7/16/2023 10:53 PM] .kitkat1.
+battery path is diffrent for sure
+
+
+[7/16/2023 10:53 PM] .kitkat1.
+brightness works
+
+
+[7/16/2023 10:53 PM] .kitkat1.
+battery level doesnt
+
+
+[7/16/2023 10:54 PM] .kitkat1.
+wifi refresh and on works XD
+
+
+[7/16/2023 10:55 PM] szybet
+i didnt said that earlier but i transpanted everything from the original to inkbox image - dtb, waveform...
+
+
+[7/16/2023 10:55 PM] szybet
+https://github.com/Szybet/eink-waveforms
+
+
+[7/16/2023 10:55 PM] szybet
+https://github.com/Szybet/niAudio/blob/main/kobo-dtb-hackery.md
+
+
+[7/16/2023 10:55 PM] .kitkat1.
+wifi works
+
+
+[7/16/2023 10:55 PM] szybet
+how the fuck
+
+
+[7/16/2023 10:55 PM] szybet
+@tux-linux
+
+
+[7/16/2023 10:58 PM] .kitkat1.
+full dmesg
+
+
+[7/16/2023 10:58 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-9B382.txt
+
+
+[7/16/2023 10:59 PM] .kitkat1.
+sleep doesnt work
+
+
+[7/16/2023 10:59 PM] .kitkat1.
+event0 doesnt report anything, even after killed ipd
+
+
+[7/16/2023 11:00 PM] .kitkat1.
+`/dev/input/by-path/platform-21f8000.i2c-platform-bd71828-pwrkey-even` reports something for button input, thats good
+
+
+[7/16/2023 11:01 PM] .kitkat1.
+```
+kobo:~# fbink -c
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+[FBInk] Detected a Kobo Nia (382 => Luna @ Mark 7)
+[FBInk] Enabled Kobo Mark 7 quirks
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 212 dpi
+[FBInk] Variable fb info: 758x1024, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 768 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 47 cols, Page size: 64 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] [refresh_kobo_mk7] MXCFB_SEND_UPDATE_V2: Operation not permitted!
+[FBInk] [fbink_cls] Failed to refresh the screen!
+kobo:~# 
+```
+
+
+[7/16/2023 11:01 PM] .kitkat1.
+@tux-linux its the same error you had with clara today
+
+
+[7/16/2023 11:05 PM] tux_linux
+it was SEND_UPDATE_V1 but yes, similar
+
+
+[7/16/2023 11:11 PM] .kitkat1.
+```
+kobo:~# cat /sys/class/power_supply/
+ac/       battery/  usb/
+kobo:~# cat /sys/class/power_supply/battery/
+capacity            current_max         present             uevent
+charge_full         current_now         register            voltage_max
+charge_full_design  device/             status              voltage_min
+charge_now          gauge               subsystem/          voltage_now
+charge_type         health              technology
+charging            online              temperature
+current_avg         power/              type
+kobo:~# cat /sys/class/power_supply/battery/capacity 
+44
+kobo:~# 
+```
+
+
+[7/16/2023 11:11 PM] .kitkat1.
+they finally maybe do some standarisation?
+
+
+[7/16/2023 11:19 PM] .kitkat1.
+EINK_BLANK maybe fixes it, i need to test more
+
+
+[7/16/2023 11:20 PM] .kitkat1.
+but for a short run it did fixed it
+
+
+[7/16/2023 11:25 PM] szybet
+@tux-linux things i like to know, bare minimum
+- where to set the device model ( kernel? ) - i propose that we use something like 2 files, device n306 and model either blank file or 'a' in it for things that needed it, like ipd to look at it
+- how imgtool works with those blank images? how can i add everything?
+- how modules work on inkbox... and why wifi works on the c ( its a diffrent kernel? )
+
+
+[7/16/2023 11:34 PM] tux_linux
+1. we keep n306 everywhere
+
+
+[7/16/2023 11:34 PM] tux_linux
+only specific things that need it can check in a specific file
+
+
+[7/16/2023 11:34 PM] tux_linux
+i don't know which one yet
+
+
+[7/16/2023 11:35 PM] tux_linux
+2. wdym
+
+
+[7/16/2023 11:35 PM] tux_linux
+3. they are compiled and put in a sqsh file ; it's only luck?
+
+
+[7/16/2023 11:35 PM] tux_linux
+if wifi works then most modules should work the same way in nia c
+
+
+[7/16/2023 11:54 PM] szybet
+Well figure it out, you have a few days maybe
+The faster the better
+
+
+[7/16/2023 11:54 PM] szybet
+How do i add the c model to img tool
+
+
+[7/16/2023 11:54 PM] szybet
+Because its magic a bit
+
+
+[7/17/2023 12:03 PM] szybet
+@Kitkat / Szybet ( sometimes ) dont charge the device
+
+
+[7/17/2023 12:03 PM] szybet
+its better to be done with a current limit for start
+
+
+[7/17/2023 12:03 PM] szybet
+to be sure
+
+
+[7/17/2023 12:04 PM] .kitkat1.
+ok
+
+
+[7/18/2023 9:22 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230718_212203-63D7D.jpg
+
+
+[7/18/2023 9:24 PM] tux_linux
+fbdepth
+
+
+[7/18/2023 9:24 PM] tux_linux
+@Szybet
+
+
+[7/18/2023 9:31 PM] szybet
+i wonder if it now works on the nia a
+
+
+[7/18/2023 9:31 PM] tux_linux
+🥴
+
+
+[7/18/2023 10:06 PM] szybet
+the kobo nia c usb connector, the stock one is build from a diffrent metal ( look of ), maybe the cables are worse, idk but it litterally shorts connecting turning off my power supply. The A one doesnt do that
+
+Im confused, is the cable soo good that such a spike of current is possible or in the other way?
+
+
+[7/20/2023 1:38 PM] .kitkat1.
+@Szybet
+
+
+[7/20/2023 1:42 PM] szybet
+@Kitkat / Szybet ( sometimes )
+
+
+[7/20/2023 1:46 PM] .kitkat1.
+the reader is not being detected
+
+
+[7/20/2023 1:46 PM] szybet
+by what
+
+
+[7/20/2023 1:46 PM] .kitkat1.
+by pc
+
+
+[7/20/2023 1:47 PM] .kitkat1.
+-_-
+
+
+[7/20/2023 1:48 PM] szybet
+dmesg
+
+
+[7/20/2023 1:48 PM] szybet
+and connect it directly to it with the usb ports on the right
+
+
+[7/20/2023 1:48 PM] szybet
+and what cable ar you using
+
+
+[7/20/2023 1:49 PM] .kitkat1.
+I tried both cables
+
+
+[7/20/2023 1:50 PM] szybet
+show me dmesg
+
+
+[7/20/2023 1:50 PM] .kitkat1.
+with which cable
+
+
+[7/20/2023 1:50 PM] szybet
+both i dont care
+
+
+[7/20/2023 1:52 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-F58C6.txt
+
+
+[7/20/2023 1:52 PM] szybet
+show ereader dmesg
+
+
+[7/20/2023 1:53 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-4C368.txt
+
+
+[7/20/2023 1:54 PM] szybet
+```
+[ 1332.450376] g_mass_storage: disagrees about version of symbol usb_composite_unregister
+[ 1332.450405] g_mass_storage: Unknown symbol usb_composite_unregister (err -22)
+```
+
+
+[7/20/2023 1:54 PM] szybet
+we need to recompile it
+
+
+[7/20/2023 1:54 PM] szybet
+@tux-linux give a description at least how to do that
+
+
+[7/20/2023 1:54 PM] szybet
+@Kitkat / Szybet ( sometimes ) skip usb and test further
+
+
+[7/20/2023 1:56 PM] .kitkat1.
+okay
+
+
+[7/20/2023 2:00 PM] .kitkat1.
+how do I get out of netsurf
+
+
+[7/20/2023 2:00 PM] szybet
+does it work?
+
+
+[7/20/2023 2:01 PM] szybet
+or is it like kterm
+
+
+[7/20/2023 2:04 PM] .kitkat1.
+works?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230720_140410-88895.jpg
+
+
+[7/20/2023 2:05 PM] szybet
+thats good and weird
+
+
+[7/20/2023 2:05 PM] szybet
+on the right is a small arrow
+
+
+[7/20/2023 2:05 PM] szybet
+click it
+
+
+[7/20/2023 2:05 PM] .kitkat1.
+arrow?
+
+
+[7/20/2023 2:08 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-0559F.png
+
+
+[7/20/2023 2:08 PM] szybet
+to exit
+
+
+[7/20/2023 2:09 PM] .kitkat1.
+I got out but idk what arrow you mean
+
+
+[7/20/2023 2:12 PM] .kitkat1.
+geany works too
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230720_141129-894D4.jpg
+
+
+[7/20/2023 2:12 PM] szybet
+try iterm
+
+
+[7/20/2023 2:12 PM] szybet
+then
+
+
+[7/20/2023 2:14 PM] .kitkat1.
+kterm ?
+
+
+[7/20/2023 2:14 PM] szybet
+ye
+
+
+[7/20/2023 2:15 PM] .kitkat1.
+works ?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_b5a66f37-6202-46a-5FE86.jpg
+
+
+[7/20/2023 2:15 PM] szybet
+works 60% of the time
+
+
+[7/20/2023 2:15 PM] szybet
+nic
+
+
+[7/20/2023 2:15 PM] .kitkat1.
+great -_-
+
+
+[7/20/2023 2:16 PM] szybet
+to almost all xorg apps you have user apps equivelents
+
+
+[7/20/2023 2:17 PM] .kitkat1.
+okay
+
+
+[7/20/2023 2:17 PM] szybet
+which are better and faster
+
+
+[7/20/2023 2:17 PM] .kitkat1.
+how do I get out of kterm
+
+
+[7/20/2023 2:17 PM] szybet
+type exit lol
+
+
+[7/20/2023 2:18 PM] .kitkat1.
+-_-
+
+
+[7/20/2023 2:20 PM] .kitkat1.
+what should I test now
+
+
+[7/20/2023 2:20 PM] szybet
+turn off xorg
+
+
+[7/20/2023 2:20 PM] .kitkat1.
+how
+
+
+[7/20/2023 2:20 PM] szybet
+magic
+
+
+[7/20/2023 2:21 PM] szybet
+settings
+
+
+[7/20/2023 2:21 PM] .kitkat1.
+ok
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_16323bfb-1f74-4cb-883B2.jpg
+
+
+[7/20/2023 2:23 PM] szybet
+👍
+
+
+[7/20/2023 2:27 PM] tux_linux
+Make modules?
+
+
+[7/20/2023 2:27 PM] szybet
+and?
+
+
+[7/20/2023 2:27 PM] szybet
+whats next?
+
+
+[7/20/2023 2:27 PM] tux_linux
+That's it
+
+
+[7/20/2023 2:27 PM] szybet
+no?
+
+
+[7/20/2023 2:27 PM] tux_linux
+Transfer all new modules to modules.sqsh
+
+
+[7/20/2023 2:27 PM] szybet
+so i will need a nia c ramdisk
+
+
+[7/20/2023 2:27 PM] tux_linux
+Yes
+
+
+[7/20/2023 2:28 PM] szybet
+can i just mount bind it in script?
+
+
+[7/20/2023 2:28 PM] tux_linux
+Link it maybe
+
+
+[7/20/2023 2:28 PM] szybet
+how?
+
+
+[7/23/2023 11:19 AM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-978F8.txt
+
+
+[7/23/2023 12:10 PM] szybet
+@tux-linux are you willing to do inkbox-os-init for kobo nia c today?
+
+
+[7/23/2023 12:10 PM] szybet
+diagnostics wont enter, we need another path applied
+
+
+[7/23/2023 12:45 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-6D7F0.png
+
+
+[7/23/2023 12:45 PM] szybet
+well this is weird
+
+
+[7/23/2023 12:45 PM] szybet
+ping pong for life
+
+
+[7/23/2023 12:49 PM] szybet
+wifi modules are diffrent names
+
+
+[7/23/2023 12:49 PM] szybet
+but the old one still work
+
+
+[7/23/2023 12:49 PM] szybet
+so i wont complain
+
+
+[7/23/2023 2:00 PM] tux_linux
+Well I could
+
+
+[7/23/2023 2:00 PM] tux_linux
+Why did it work with the other guy
+
+
+[7/23/2023 2:00 PM] tux_linux
+What's the other path
+
+
+[7/23/2023 2:07 PM] szybet
+```
+/dev/input
+/dev/input/by-path
+/dev/input/by-path/platform-21f8000.i2c-platform-bd71828-pwrkey-event
+/dev/input/by-path/platform-ntx_event0-event
+/dev/input/event2
+/dev/input/event1
+/dev/input/mouse0
+/dev/input/event0
+/dev/input/mice
+```
+
+
+[7/23/2023 2:08 PM] szybet
+```
+platform-21f8000.i2c-platform-bd71828-pwrkey-event
+```
+works with the button
+
+
+[7/23/2023 2:08 PM] tux_linux
+Which is which
+
+
+[7/23/2023 2:08 PM] szybet
+the rest is only hall sensor
+
+
+[7/23/2023 2:08 PM] tux_linux
+Ok
+
+
+[7/23/2023 2:08 PM] tux_linux
+Is it linked to eventX?
+
+
+[7/23/2023 2:08 PM] szybet
+its not
+
+
+[7/23/2023 2:08 PM] szybet
+thats the problem
+
+
+[7/23/2023 2:08 PM] szybet
+is there an easy way to do that?
+
+
+[7/23/2023 2:09 PM] tux_linux
+What is evtest saying
+
+
+[7/23/2023 2:09 PM] szybet
+if not, tinkering is needed to use by path
+
+
+[7/23/2023 2:09 PM] tux_linux
+For eventX
+
+
+[7/23/2023 2:09 PM] szybet
+regular stuff
+
+
+[7/23/2023 2:09 PM] szybet
+.
+
+
+[7/23/2023 2:11 PM] tux_linux
+Well, look at kernel source and try to see why it isn't in event0
+
+
+[7/23/2023 2:11 PM] tux_linux
+I will look at it too later
+
+
+[7/23/2023 2:12 PM] szybet
+any hints?
+
+
+[7/23/2023 2:12 PM] tux_linux
+`rg bd71828`
+
+
+[7/23/2023 2:52 PM] tux_linux
+well, ok, unless you found something, i will change event0 to that for the nia c in init
+
+
+[7/23/2023 2:52 PM] tux_linux
+you will need to add it in ipd as well
+
+
+[7/23/2023 2:52 PM] tux_linux
+don't forget to ***pull*** the repo before doing anything
+
+
+[7/23/2023 2:52 PM] szybet
+im searching
+
+
+[7/23/2023 2:52 PM] tux_linux
+ok
+
+
+[7/23/2023 2:52 PM] szybet
+i hope its something in dts
+
+
+[7/23/2023 2:52 PM] szybet
+first i wonder what dts it even uses
+
+
+[7/23/2023 2:53 PM] tux_linux
+well, the difficult part could be to "merge" existing events to the KEY_POWER event
+
+
+[7/23/2023 2:53 PM] tux_linux
+in event0
+
+
+[7/23/2023 2:53 PM] tux_linux
+if it was only one event, maybe would it be easier
+
+
+[7/23/2023 2:53 PM] szybet
+what
+
+
+[7/23/2023 2:54 PM] tux_linux
+what is the board number
+
+
+[7/23/2023 2:55 PM] szybet
+what
+
+
+[7/23/2023 2:56 PM] tux_linux
+on the nia c board
+
+
+[7/23/2023 2:57 PM] szybet
+what are you talking about
+
+pcb number, ntx hwconfig name, serial number, production number?
+
+
+[7/23/2023 2:57 PM] tux_linux
+event0 currently has KEY_F1 event which is hall sensor
+if we would only have to move platform-bd71828.... to event0, it would be easier as we would not care about other events
+but now we have to "merge" KEY_POWER to event0 with KEY_F1 and other existing things
+
+
+[7/23/2023 2:57 PM] tux_linux
+smth like e60k02
+
+
+[7/23/2023 2:57 PM] tux_linux
+well, that kind of thing
+
+
+[7/23/2023 2:57 PM] tux_linux
+pcb number probably
+
+
+[7/23/2023 2:58 PM] szybet
+or statement?
+
+
+[7/23/2023 2:58 PM] tux_linux
+statement? what?
+
+
+[7/23/2023 2:58 PM] szybet
+there are images, scroll up
+
+
+[7/23/2023 2:58 PM] szybet
+||
+
+
+[7/23/2023 2:59 PM] tux_linux
+e60u20
+
+
+[7/23/2023 2:59 PM] tux_linux
+do you have an elan touchscreen or not?
+
+
+[7/23/2023 3:00 PM] tux_linux
+also did you know you can decompile the dtb?
+
+
+[7/23/2023 3:00 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-E155F.txt
+
+
+[7/23/2023 3:00 PM] szybet
+choose
+
+
+[7/23/2023 3:00 PM] szybet
+its a text file
+
+
+[7/23/2023 3:01 PM] tux_linux
+the dtb isn't a text file
+
+
+[7/23/2023 3:02 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-011F9.txt
+
+
+[7/23/2023 3:02 PM] tux_linux
+you can extract dtb from mmc, then decompile it, then compare its content to the contents of dts files in arch/arm/boot/dts
+
+
+[7/23/2023 3:02 PM] szybet
+what is it then
+
+
+[7/23/2023 3:02 PM] tux_linux
+a binary blob
+
+
+[7/23/2023 3:02 PM] szybet
+.
+
+
+[7/23/2023 3:02 PM] tux_linux
+well ok what is it
+
+
+[7/23/2023 3:02 PM] szybet
+its easier to compile the most likely one and compare then
+
+
+[7/23/2023 3:03 PM] szybet
+idk a random file
+
+
+[7/23/2023 3:03 PM] szybet
+dts one
+
+
+[7/23/2023 3:08 PM] tux_linux
+try to decompile it
+
+
+[7/23/2023 3:09 PM] szybet
+how lol
+
+
+[7/23/2023 3:09 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-46A18.png
+
+
+[7/23/2023 3:10 PM] szybet
+they commented it out?
+
+
+[7/23/2023 3:10 PM] szybet
+i will check on nickel on the c if its like that for them too
+
+
+[7/23/2023 3:10 PM] szybet
+if they choosed to use by path, we will too - there was a reason for that
+
+
+[7/23/2023 3:11 PM] tux_linux
+extract it from mmc
+see u-boot boot log
+
+
+[7/23/2023 3:13 PM] tux_linux
+https://forum.digilent.com/topic/2427-how-to-decompile-dtb-file/
+
+{Embed}
+https://forum.digilent.com/topic/2427-how-to-decompile-dtb-file/
+how to decompile dtb file?
+dtb is binary blob file of the device tree, how can i get the source device tree readalble? Thanks
+/mnt/data/projects/git/conversations/media/favicon.png.4cf7ea0b5cc877b4d59dc7edbd686f-23033.png
+
+
+[7/23/2023 3:13 PM] tux_linux
+then do this
+
+
+[7/23/2023 3:15 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-42D03.txt
+
+
+[7/23/2023 3:16 PM] .kitkat1.
+```
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+
+```
+it also doesnt work on nickel
+
+
+[7/23/2023 3:16 PM] .kitkat1.
+event0
+
+
+[7/23/2023 3:16 PM] .kitkat1.
+for power button
+
+
+[7/23/2023 3:17 PM] tux_linux
+`dd if=/dev/mmcblk0 of=nia-c.dtb bs=512 count=1 skip=1285`
+
+
+[7/23/2023 3:18 PM] tux_linux
+then
+`dtc -I dtb -O dts -o nia-c.dts nia-c.dtb `
+
+
+[7/23/2023 3:18 PM] tux_linux
+then diff this file against the `imx6ull*` files in `arch/arm/boot/dts`
+
+
+[7/23/2023 3:21 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/nia-c-C5603.dtb
+
+
+[7/23/2023 3:22 PM] szybet
+```
+% dtc -I dtb -O dts -o nia-c.dts nia-c.dtb 
+FATAL ERROR: Blob has incorrect magic number
+```
+
+
+[7/23/2023 3:23 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-B2AAE.png
+
+
+[7/23/2023 3:23 PM] szybet
+wrong coordinates
+
+
+[7/23/2023 3:23 PM] szybet
+lol
+
+
+[7/23/2023 3:24 PM] tux_linux
+yeah it doesn't seem right
+
+
+[7/23/2023 3:30 PM] szybet
+its also not on 2415918592 which is 0x8ffffe00
+
+
+[7/23/2023 3:31 PM] tux_linux
+?
+
+
+[7/23/2023 3:31 PM] szybet
+idk uboot readed there
+
+
+[7/23/2023 3:33 PM] tux_linux
+show me u-boot env
+
+
+[7/23/2023 3:33 PM] szybet
+where
+
+
+[7/23/2023 3:33 PM] szybet
+how
+
+
+[7/23/2023 3:33 PM] szybet
+lol...
+
+
+[7/23/2023 3:33 PM] tux_linux
+`printenv`
+
+
+[7/23/2023 3:33 PM] tux_linux
+in u-boot command line
+
+
+[7/23/2023 3:34 PM] szybet
+one sec
+
+
+[7/23/2023 3:34 PM] tux_linux
+ok
+
+
+[7/23/2023 3:35 PM] .kitkat1.
+eBR-1A # printenv
+baudrate=115200
+board_name=NTX
+board_rev=14X14
+bootcmd=mmc dev ${mmcdev};if run loadimage; then run mmcboot; fi; 
+bootcmd_mfg=run mfgtool_args;bootz ${loadaddr} ${initrd_addr} ${fdt_addr};
+bootdelay=3
+bootscript=echo Running bootscript from mmc ...; source
+console=ttymxc0
+fastboot_dev=mmc1
+fdt_addr=0x83000000
+fdt_file=undefined
+fdt_high=0xffffffff
+image=zImage
+initrd_addr=0x83800000
+initrd_high=0xffffffff
+ip_dyn=yes
+loadaddr=0x80800000
+loadbootscript=fatload mmc ${mmcdev}:${mmcpart} ${loadaddr} ${script};
+loadfdt=load_ntxdtb
+loadimage=load_ntxkernel
+mfgtool_args=setenv bootargs console=${console},${baudrate} rdinit=/linuxrc g_mass_storage.stall=0 g_mass_storage.removable=1 g_mass_storage.file=/fat g_mass_storage.ro=1 g_mass_storage.idVendor=0x066F g_mass_storage.idProduct=0x37FF g_ma 
+mmcargs=setenv bootargs console=${console},${baudrate} rootwait rw no_console_suspend root=/dev/mmcblk0p2
+mmcautodetect=no
+mmcboot=echo Booting from mmc ...; run mmcargs; if run loadfdt; then bootz ${loadaddr} - ${fdt_addr}; else if test ${boot_fdt} = try; then bootz; else echo WARN: Cannot load the DT; fi; fi;
+mmcdev=0
+mmcpart=1
+panel=TFT43AB
+script=boot.scr
+stderr=serial
+stdin=serial
+stdout=serial
+
+Environment size: 1307/8188 bytes
+eBR-1A #
+
+
+[7/23/2023 3:36 PM] tux_linux
+well, nvm
+
+
+[7/23/2023 3:36 PM] tux_linux
+look up what `load_ntxdtb` does in u-boot source code
+
+
+[7/23/2023 3:36 PM] tux_linux
+which i don't think you have uploaded to the repo
+
+
+[7/23/2023 3:37 PM] tux_linux
+just throw it there as mx6ull-n306c
+
+
+[7/23/2023 3:42 PM] szybet
+The uboot is the same for 90%
+
+
+[7/23/2023 3:43 PM] szybet
+You can look it up, i dont have time now
+
+
+[7/23/2023 4:17 PM] szybet
+#define SD_OFFSET_SECS_DTB        1286
+
+
+[7/23/2023 4:17 PM] szybet
+lol
+
+
+[7/23/2023 4:17 PM] szybet
+```
+#define USB_OTG_FASTBOOT_MODE        1// enter fastboot mode by USB OTG .
+#define FASTBOOT_TIMEOUT_SETTING    1
+
+#define MMC_CMD_SEPERATED_SDNUM        1// run mmc command with seperated sd number .
+
+// binaries sector number of sd card .
+#define SD_OFFSET_SECS_KERNEL        81920
+#define SD_OFFSET_SECS_INITRD        12288
+#define SD_OFFSET_SECS_INITRD2        8192
+#ifdef _MX6Q_//[
+    #define SD_OFFSET_SECS_HWCFG        1524
+#else 
+    #define SD_OFFSET_SECS_HWCFG        1024
+#endif //]_MX6Q_
+#define SD_OFFSET_SECS_WAVEFORM        14336
+#define SD_OFFSET_SECS_LOGO            18432
+#define SD_OFFSET_SECS_LOGO2            34816
+#define SD_OFFSET_SECS_DTB        1286
+#define SD_OFFSET_SECS_RAMFS        20480
+```
+
+
+[7/23/2023 4:18 PM] tux_linux
+well, 1286, idk
+
+
+[7/23/2023 4:18 PM] tux_linux
+try again
+
+
+[7/23/2023 4:19 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-D6AE0.txt
+
+
+[7/23/2023 4:19 PM] szybet
+yea...
+
+
+[7/23/2023 4:19 PM] tux_linux
+hm ok
+
+
+[7/23/2023 4:19 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/nia-c-1884D.dts
+
+
+[7/23/2023 4:21 PM] szybet
+nothing
+
+
+[7/23/2023 4:21 PM] szybet
+is there
+
+
+[7/23/2023 4:22 PM] szybet
+apart from that that the half is wrong and commented
+
+
+[7/23/2023 4:22 PM] szybet
+here is where i give up
+
+
+[7/23/2023 4:22 PM] szybet
+we go with by-path
+
+
+[7/23/2023 4:25 PM] tux_linux
+ok
+
+
+[7/23/2023 4:26 PM] szybet
+you can change it in init
+
+
+[7/23/2023 4:26 PM] szybet
+if it will be fast, i will try it fast
+
+
+[7/23/2023 4:26 PM] tux_linux
+you haven't tried rootfs yet
+
+
+[7/23/2023 4:27 PM] szybet
+it didnt' it was a miracle it didnt blow up
+
+there was a diffrent pmic in place, imagine me trying to talk to you in chinese, you understanding anything would be hard
+
+
+[7/23/2023 4:27 PM] szybet
+yea sorry, i was tired yestarday
+
+today i will
+
+
+[7/23/2023 4:34 PM] szybet
+@tux-linux how do i sdquashfs it
+
+
+[7/23/2023 4:34 PM] szybet
+modules
+
+
+[7/23/2023 4:34 PM] szybet
+any specific settings
+
+
+[7/23/2023 4:34 PM] szybet
+https://github.com/Kobo-InkBox/imgtool/pulls
+
+{Embed}
+https://github.com/Kobo-InkBox/imgtool/pulls
+Pull requests · Kobo-InkBox/imgtool
+Reproducible image builder for InkBox OS. Contribute to Kobo-InkBox/imgtool development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/imgtool-0EE5B
+
+
+[7/23/2023 4:34 PM] szybet
+really
+
+
+[7/23/2023 4:34 PM] szybet
+-_-
+
+
+[7/23/2023 4:37 PM] szybet
+found it -b 1048576 -comp xz -Xdict-size 100% -always-use-fragments -all-root
+
+
+[7/23/2023 4:37 PM] tux_linux
+`mksquashfs . ../modules.sqsh -b 1048576 -comp gzip -always-use-fragments`
+
+
+[7/23/2023 4:37 PM] tux_linux
+no
+
+
+[7/23/2023 4:37 PM] szybet
+accept those pull requests
+
+
+[7/23/2023 4:37 PM] tux_linux
+use gzip
+
+
+[7/23/2023 4:37 PM] szybet
+ugh ok
+
+
+[7/23/2023 4:37 PM] szybet
+you have problems with accepting pull requests from 1 person
+
+
+[7/23/2023 4:38 PM] tux_linux
+i have problems dealing with my life and inkbox project all at once
+
+
+[7/23/2023 4:38 PM] szybet
+just click the accept pull request buttton
+
+
+[7/23/2023 4:39 PM] szybet
+https://tenor.com/view/just-do-it-thanos-gif-23831156
+
+{Embed}
+https://tenor.com/view/just-do-it-thanos-gif-23831156
+/mnt/data/projects/git/conversations/media/just-do-it-thanos-8B9BA.png
+
+
+[7/23/2023 4:50 PM] tux_linux
+what does uname -s print on kobo nia
+
+
+[7/23/2023 4:50 PM] tux_linux
+try it in initrd
+
+
+[7/23/2023 4:51 PM] tux_linux
+try with the new kernel commit i pushed in the last days
+
+
+[7/23/2023 4:52 PM] szybet
+i updated modules, will check in a minute
+
+
+[7/23/2023 4:52 PM] tux_linux
+ok
+
+
+[7/23/2023 5:23 PM] .kitkat1.
+```kobo:~# uname -a 
+Linux kobo 4.1.15-inkbox-n306c #1 SMP PREEMPT Sun Jul 23 16:54:39 CEST 2023 armv7l GNU/Linux
+kobo:~# uname
+Linux
+kobo:~# uname -s 
+Linux
+```
+
+
+[7/23/2023 5:23 PM] tux_linux
+try to make it print `inkbox-n306c`
+
+
+[7/23/2023 5:23 PM] tux_linux
+with some args
+
+
+[7/23/2023 5:24 PM] tux_linux
+i don't know which
+
+
+[7/23/2023 5:25 PM] .kitkat1.
+```kobo:~# uname -r
+4.1.15-inkbox-n306c
+```
+this is in rootfs I will in initrd soon
+
+
+[7/23/2023 5:27 PM] .kitkat1.
+```(initrd) Hit ENTER to stop auto-boot ... 
+
+inkbox login: 
+inkbox login: 
+inkbox login: 
+inkbox login: 
+inkbox login: root
+login[102]: root login on 'ttymxc0'
+~ # uname -a
+Linux inkbox 4.1.15-inkbox-n306c #1 SMP PREEMPT Sun Jul 23 16:54:39 CEST 2023 armv7l GNU/Linux
+~ # uname --help
+BusyBox v1.32.1 (2021-04-25 22:27:23 EDT) multi-call binary.
+
+Usage: uname [-amnrspvio]
+
+Print system information
+
+        -a      Print all
+        -m      The machine (hardware) type
+        -n      Hostname
+        -r      Kernel release
+        -s      Kernel name (default)
+        -p      Processor type
+        -v      Kernel version
+        -i      The hardware platform
+        -o      OS name
+~ # uname -m
+armv7l
+~ # uname -n
+inkbox
+~ # uname -r
+4.1.15-inkbox-n306c
+~ # uname -s
+Linux
+~ # uname -p
+unknown
+~ # uname -v
+#1 SMP PREEMPT Sun Jul 23 16:54:39 CEST 2023
+~ # uname -i
+unknown
+~ # uname -o
+GNU/Linux
+```
+
+
+[7/23/2023 5:30 PM] szybet
+chat gpt proposed `echo "4.1.15-inkbox-n306c" | grep -o '[^-]*-[^-]*$'`
+
+
+[7/23/2023 5:31 PM] szybet
+@Kitkat / Szybet ( sometimes ) try this command on your nia
+
+
+[7/23/2023 5:31 PM] .kitkat1.
+~ # echo "4.1.15-inkbox-n306c" | grep -o '[^-]*-[^-]*$'
+inkbox-n306c
+
+
+[7/23/2023 5:31 PM] szybet
+works
+
+
+[7/23/2023 5:31 PM] szybet
+so great
+
+
+[7/23/2023 5:45 PM] szybet
+`uname -r | grep -o '[^-]*-[^-]*$' | grep -o '[^-]*$'`
+
+
+[7/23/2023 5:45 PM] .kitkat1.
+```kobo:~# uname -r | grep -o '[^-]*-[^-]*$' | grep -o '[^-]*$'
+n306c```
+
+
+[7/23/2023 5:46 PM] szybet
+actually now
+
+
+[7/23/2023 5:46 PM] szybet
+`uname -r | grep -o '[^-]*$`
+
+
+[7/23/2023 5:46 PM] szybet
+try this
+
+
+[7/23/2023 5:48 PM] .kitkat1.
+```kobo:~# uname -r | grep -o '[^-]*$'
+n306c
+```
+
+
+[7/23/2023 6:15 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/ipd-32BDD
+
+
+[7/23/2023 6:15 PM] szybet
+download this file @Kitkat / Szybet ( sometimes )
+
+
+[7/23/2023 6:15 PM] szybet
+send it to your device using scp
+
+
+[7/23/2023 6:16 PM] szybet
+first make the rootfs rw ( when you log in it says how to )
+
+
+[7/23/2023 6:16 PM] szybet
+then rm /sbin/ipd
+
+
+[7/23/2023 6:16 PM] szybet
+then move the file i sended you to /sbin/
+
+
+[7/23/2023 6:16 PM] szybet
+and reboot
+
+
+[7/23/2023 6:18 PM] szybet
+before removing the file also killall ipd
+
+
+[7/23/2023 6:33 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/ipd-3674B
+
+
+[7/23/2023 6:33 PM] szybet
+try this one
+
+
+[7/23/2023 6:33 PM] szybet
+nie pomyl sie w wybieraniu plikow, usun poprzedni
+
+
+[7/23/2023 6:55 PM] szybet
+@Kitkat / Szybet ( sometimes ) show me whats in /sys/class/power_supply/mc13892_bat
+
+
+[7/23/2023 6:56 PM] .kitkat1.
+it doesn't exist
+
+
+[7/23/2023 6:57 PM] szybet
+freaking lol
+
+
+[7/23/2023 6:57 PM] szybet
+it does on nickel
+
+
+[7/23/2023 6:57 PM] szybet
+show me find /sys now
+
+
+[7/23/2023 7:02 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/output-6814A.txt
+
+
+[7/23/2023 7:03 PM] szybet
+show me ls /sys/class/power_supply/battery
+
+
+[7/23/2023 7:04 PM] .kitkat1.
+```kobo:/# ls /sys/class/power_supply/battery
+capacity            charge_now          current_avg         device              online              register            technology          uevent              voltage_now
+charge_full         charge_type         current_max         gauge               power               status              temperature         voltage_max
+charge_full_design  charging            current_now         health              present             subsystem           type                voltage_min```
+
+
+[7/23/2023 7:06 PM] szybet
+show me now /sys/class/power_supply/battery/capacity
+
+
+[7/23/2023 7:06 PM] szybet
+and status files
+
+
+[7/23/2023 7:06 PM] szybet
+with cat
+
+
+[7/23/2023 7:06 PM] szybet
+you can also show temperature, charging
+
+
+[7/23/2023 7:07 PM] .kitkat1.
+```kobo:/# cat  /sys/class/power_supply/battery/capacity
+80```
+
+
+[7/23/2023 7:07 PM] .kitkat1.
+```kobo:/# cat  /sys/class/power_supply/battery/capacity
+80
+kobo:/# cat  /sys/class/power_supply/battery/temperature 
+30
+kobo:/# cat  /sys/class/power_supply/battery/charging 
+0
+```
+
+
+[7/23/2023 7:08 PM] szybet
+status
+
+
+[7/23/2023 7:08 PM] szybet
+now
+
+
+[7/23/2023 7:08 PM] .kitkat1.
+```kobo:/# cat  /sys/class/power_supply/battery/status
+Discharging
+```
+
+
+[7/23/2023 7:13 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/ipd-BD358
+
+
+[7/23/2023 7:13 PM] szybet
+try
+
+
+[7/23/2023 7:23 PM] .kitkat1.
+suspending works great no elan touch errors
+
+
+[7/23/2023 7:36 PM] .kitkat1.
+```
+Charging
+kobo:/# cat  /sys/class/power_supply/battery/status
+Charging
+kobo:/# cat  /sys/class/power_supply/battery/status
+Charging
+kobo:/# [ 2894.247449] bd71827-power bd71827-power: DCIN_STAT CHANGED from 0x5 to 0x0
+kobo:/# cat  /sys/class/power_supply/battery/status
+Discharging
+kobo:/# 
+kobo:/# cat  /sys/class/power_supply/battery/status
+Discharging
+kobo:/# 
+```
+
+
+[7/23/2023 7:36 PM] .kitkat1.
+it needs 2 seconds to take change
+
+
+[7/23/2023 7:36 PM] .kitkat1.
+my god
+
+
+[7/23/2023 7:40 PM] tux_linux
+```
+#include <stdio.h>
+#include <sys/utsname.h>
+
+int main() {
+    struct utsname uname_data;
+    uname(&uname_data);
+    printf("%s\n", uname_data.release);
+}
+```
+Please compile this and run it on nia c
+
+
+[7/23/2023 7:40 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/ipd-B6B1C
+
+
+[7/23/2023 7:40 PM] szybet
+@Kitkat / Szybet ( sometimes ) try this
+
+
+[7/23/2023 7:40 PM] tux_linux
+could be worse
+
+
+[7/23/2023 7:40 PM] szybet
+musl?
+
+
+[7/23/2023 7:40 PM] tux_linux
+yes, static
+
+
+[7/23/2023 7:40 PM] tux_linux
+`armv7l-linux-musleabihf-gcc get_kernel_info.c -o get_kernel_info -static`
+
+
+[7/23/2023 7:41 PM] szybet
+take in your mind that this should work with all models
+
+
+[7/23/2023 7:41 PM] szybet
+future ones
+
+
+[7/23/2023 7:42 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/get_kernel_info-357A8
+
+
+[7/23/2023 7:42 PM] szybet
+@Kitkat / Szybet ( sometimes ) download this on your device
+
+
+[7/23/2023 7:44 PM] szybet
+@tux-linux we could release nia c today
+
+
+[7/23/2023 7:44 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-B2966.png
+
+
+[7/23/2023 7:44 PM] szybet
+what is your problem
+
+
+[7/23/2023 7:45 PM] tux_linux
+nvm
+
+
+[7/23/2023 7:45 PM] .kitkat1.
+```
+kobo:/# chmod +x get_kernel_info 
+kobo:/# ./get_kernel_info 
+4.1.15-inkbox-n306c
+kobo:/# 
+```
+
+
+[7/23/2023 7:45 PM] tux_linux
+you really think that with no testing at all, no testing of wifi at all, it will work right away like that?
+
+
+[7/23/2023 7:45 PM] .kitkat1.
+everything works expect battery in gui, even modules now do
+
+
+[7/23/2023 7:45 PM] .kitkat1.
+I ( kitkat ) have already tested
+
+
+[7/23/2023 7:45 PM] .kitkat1.
+i have written it above somwhere
+
+
+[7/23/2023 7:45 PM] tux_linux
+ok
+
+
+[7/23/2023 7:46 PM] tux_linux
+what about battery watchdog
+
+
+[7/23/2023 7:46 PM] tux_linux
+`/etc/init.d/battery_watchdog`
+
+
+[7/23/2023 7:46 PM] tux_linux
+what about x11
+
+
+[7/23/2023 7:46 PM] tux_linux
+freeze
+
+
+[7/23/2023 7:46 PM] .kitkat1.
+good, we will look into it
+
+
+[7/23/2023 7:46 PM] .kitkat1.
+x11 works
+
+
+[7/23/2023 7:46 PM] tux_linux
+ok
+
+
+[7/23/2023 7:46 PM] .kitkat1.
+one time fbdepth went crazy but only one time so idk
+
+
+[7/23/2023 7:47 PM] .kitkat1.
+other times, many tests it worked
+
+
+[7/23/2023 7:47 PM] .kitkat1.
+so nevermind
+
+
+[7/23/2023 7:47 PM] tux_linux
+did you test usbnet
+
+
+[7/23/2023 7:47 PM] .kitkat1.
+not yet
+
+
+[7/23/2023 7:47 PM] tux_linux
+dfl mode
+
+
+[7/23/2023 7:48 PM] .kitkat1.
+what is dfl
+
+
+[7/23/2023 7:48 PM] tux_linux
+https://inkbox.ddns.net/wiki/index.php?title=Direct_Firmware_Loader_mode
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=Direct_Firmware_Loader_mode
+Index.php
+
+
+[7/23/2023 7:48 PM] tux_linux
+also, boot usb debug mode
+
+
+[7/23/2023 7:48 PM] .kitkat1.
+please prepare init patch to make diagnostics work
+
+
+[7/23/2023 7:48 PM] .kitkat1.
+what
+
+
+[7/23/2023 7:48 PM] tux_linux
+if all of this works then it's probably good
+
+
+[7/23/2023 7:48 PM] tux_linux
+i am still waiting for you to run the binary szybet sent
+
+
+[7/23/2023 7:49 PM] tux_linux
+https://inkbox.ddns.net/wiki/index.php?title=Boot-time_USB_debug_mode
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=Boot-time_USB_debug_mode
+Index.php
+
+
+[7/23/2023 7:51 PM] tux_linux
+if all of this works then we should be good to release it
+
+
+[7/23/2023 8:07 PM] tux_linux
+```
+diff --git a/init.c b/init.c
+index a4922b4..83a1f57 100644
+--- a/init.c
++++ b/init.c
+@@ -146,6 +146,13 @@ int main(void) {
+        // Kernel version
+        struct utsname uname_data;
+        uname(&uname_data);
++       if(MATCH(uname_data.release, "n306c")) {
++               button_input_device = "/dev/input/by-path/platform-21f8000.i2c-platform-bd71828-pwrkey-event";
++       }
++       else {
++               button_input_device = "/dev/input/event0";
++       }
++
+        char * kernel_version = NULL;
+        // Pass 0 to snprintf to let it tell us how large of a buffer we need
+        int size = snprintf(kernel_version, 0U, "%s %s %s", uname_data.sysname, uname_data.nodename, uname_data.version);
+@@ -335,7 +342,7 @@ int main(void) {
+        bool power_button_pressed = false;
+        bool other_button_pressed = false;
+        // Allow 3 seconds for power button input (boot mode & DFL mode)
+-       int fd = open(BUTTON_INPUT_DEVICE, O_RDONLY | O_NONBLOCK);
++       int fd = open(button_input_device, O_RDONLY | O_NONBLOCK);
+        if (fd == -1) {
+                perror("open");
+                exit(EXIT_FAILURE);
+diff --git a/init.h b/init.h
+index 3b91699..9efd93b 100644
+--- a/init.h
++++ b/init.h
+@@ -39,7 +39,6 @@
+ #define ROOT_FLAG_SECTOR 79872
+ #define ROOT_FLAG_SECTOR_KT 98304
+ #define ROOT_FLAG_SIZE 6U
+-#define BUTTON_INPUT_DEVICE "/dev/input/event0"
+ #define BOOT_STANDARD 0
+ #define BOOT_DIAGNOSTICS 1
+ #define SERIAL_FIFO_PATH "/tmp/serial-fifo"
+@@ -47,6 +46,7 @@
+ 
+ // Variables
+ char * device = NULL;
++char * button_input_device = NULL;
+ char tty[8] = { 0 };
+ char * usbnet_ip;
+ char * usbnet_device_address;
+```
+I have a patch but I need to know if the code I sent you works the way I want it to
+
+
+[7/23/2023 8:13 PM] szybet
+so what?
+
+
+[7/23/2023 8:13 PM] szybet
+send the binary and where to replace it in kernel repo
+
+
+[7/23/2023 8:14 PM] szybet
+.
+
+
+[7/23/2023 8:15 PM] szybet
+also i hope usbnet will work - i didnt saw the modules compiled when i recompiled for usbms
+
+
+[7/23/2023 8:22 PM] tux_linux
+I need KitKat to test his code
+
+
+[7/23/2023 8:22 PM] szybet
+what
+
+
+[7/23/2023 8:22 PM] szybet
+what code
+
+
+[7/23/2023 8:22 PM] tux_linux
+.
+
+
+[7/23/2023 8:22 PM] szybet
+?
+
+
+[7/23/2023 8:22 PM] szybet
+he did it alrteady
+
+
+[7/23/2023 8:23 PM] tux_linux
+Oh ok didn't see it sorry
+
+
+[7/23/2023 8:23 PM] szybet
+@Kitkat / Szybet ( sometimes ) do `echo true > /boot/flags/USBNET_ENABLE`
+
+
+[7/23/2023 8:24 PM] szybet
+and reboot
+
+
+[7/23/2023 8:25 PM] tux_linux
+Copy this to git.patch
+Then
+Clone inkbox-os-init repo
+Then
+`git apply ../git.patch`
+Then
+`armv7l-linux-musleabihf-gcc init.c -o init -static; armv7l-linux-musleabihf-strip init`
+Then
+`cp init ../kernel/initrd/common/init`
+Then
+Recompile kernel
+
+
+[7/23/2023 8:26 PM] .kitkat1.
+done ?
+
+
+[7/23/2023 8:26 PM] szybet
+connect usb to the ereader directly to the laptop
+
+
+[7/23/2023 8:26 PM] szybet
+dont launch usb storage, dont touch the dialog
+
+
+[7/23/2023 8:27 PM] szybet
+show me dmesg of the kobo via serial
+
+
+[7/23/2023 8:27 PM] tux_linux
+You should use the same thing as I used for init patch in this code
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20230723-142700-92E0E.png
+
+
+[7/23/2023 8:28 PM] tux_linux
+This and compare with a contains function or smth
+
+
+[7/23/2023 8:28 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-A16C8.txt
+
+
+[7/23/2023 8:28 PM] szybet
+```
++       if(MATCH(uname_data.release, "n306c")) {
+```
+now imagine if there is a n306cv2
+
+
+[7/23/2023 8:28 PM] tux_linux
+Well, if match n306d then
+
+
+[7/23/2023 8:28 PM] tux_linux
+What's the problem
+
+
+[7/23/2023 8:29 PM] szybet
+```
+[   42.181339] configfs: exports duplicate symbol config_group_find_item (owned by kernel)
+[   42.274635] libcomposite: exports duplicate symbol usb_os_desc_prepare_interf_dir (owned by kernel)
+[   42.389482] u_ether: exports duplicate symbol gether_cleanup (owned by kernel)
+[   42.841637] usb_f_rndis: exports duplicate symbol rndis_add_hdr (owned by kernel)
+[   42.950759] using random self ethernet address
+[   42.950856] using random host ethernet address
+[   42.961837] usb0: HOST MAC 9e:42:54:e5:38:dc
+[   42.962496] usb0: MAC c2:61:da:52:c4:65
+[   42.962947] using random self ethernet address
+[   42.963022] using random host ethernet address
+[   42.963322] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[   42.963347] g_ether gadget: g_ether ready
+[   42.971251] bd71827-power**
+```**
+
+
+[7/23/2023 8:29 PM] szybet
+works nice
+
+
+[7/23/2023 8:29 PM] szybet
+can we leave it for now?
+
+
+[7/23/2023 8:30 PM] .kitkat1.
+it works
+
+
+[7/23/2023 8:30 PM] tux_linux
+I will change it
+
+
+[7/23/2023 8:30 PM] tux_linux
+In 15m
+
+
+[7/23/2023 8:30 PM] szybet
+sure
+
+
+[7/23/2023 8:31 PM] szybet
+@Kitkat / Szybet ( sometimes ) now echo true > /boot/flags/BOOT_USB_DEBUG
+
+
+[7/23/2023 8:31 PM] szybet
+@tux-linux DFL wasnt tested on the nia a either, what does it do, is it safe?
+
+
+[7/23/2023 8:31 PM] szybet
+explain the process
+
+
+[7/23/2023 8:31 PM] szybet
+then i will decide if we try it
+
+
+[7/23/2023 8:31 PM] .kitkat1.
+yep ?
+
+
+[7/23/2023 8:31 PM] szybet
+and rewboot
+
+
+[7/23/2023 8:32 PM] .kitkat1.
+rewboot ok
+
+
+[7/23/2023 8:39 PM] .kitkat1.
+@tux-linux what is the netmask for kernel telnet usb debug
+
+
+[7/23/2023 8:39 PM] .kitkat1.
+```
+tcpsvd: listening on 0.0.0.0:21, starting
+[   16.001554] configfs: exports duplicate symbol config_group_find_item (owned by kernel)
+Couldn't init module /modules/fs/[   16.040904] libcomposite: exports duplicate symbol usb_os_desc_prepare_interf_dir (owned by kernel)
+configfs/configfs.ko
+Couldn't init module /modules/dri[   16.079745] u_ether: exports duplicate symbol gether_cleanup (owned by kernel)
+vers/usb/gadget/libcomposite.ko
+Couldn't init module /modules/drivers/usb/gadget/function/u_ether.ko
+Couldn't init module /modules/drivers/usb/gadget/function/usb_f_ecm.ko
+Couldn't init module /modules/drivers/usb/gadget/function/usb_f_eem.ko
+Couldn't init module /modules/dri[   16.210311] usb_f_rndis: exports duplicate symbol rndis_add_hdr (owned by kernel)
+vers/usb/gadget/function/usb_f_ecm_subset.ko
+Couldn't init module /modules/drivers/usb/gadget/function/usb_f_rndis.ko
+Interface 'usb0': flags set to 0001.
+```
+
+
+[7/23/2023 8:40 PM] .kitkat1.
+also do they use diffrent modules?
+
+
+[7/23/2023 8:41 PM] szybet
+255.255.255.0 but i may be wrong
+
+
+[7/23/2023 8:42 PM] .kitkat1.
+```
+ * Starting USBNet ...[   42.104761] configfs: exports duplicate symbol config_group_find_item (owned by kernel)
+insmod: ERROR: could not insert module /modules/fs/configfs/configfs.ko: Invalid module format
+[   42.219219] libcomposite: exports duplicate symbol usb_os_desc_prepare_interf_dir (owned by kernel)
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/libcomposite.ko: Invalid module format
+[   42.317079] u_ether: exports duplicate symbol gether_cleanup (owned by kernel)
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/u_ether.ko: Invalid module format
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_ecm.ko: File exists
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_eem.ko: File exists
+insmod: ERROR: could not insert module /modules/drivers/usb/gadget/function/usb_f_ecm_subset.ko: File exists
+[   42.760690] usb_f_rndis: exports duplicate symbol rndis_add_hdr (owned by kernel)
+
+```
+
+
+[7/23/2023 8:42 PM] .kitkat1.
+it doesnt work
+
+
+[7/23/2023 8:42 PM] .kitkat1.
+usbms works tho
+
+
+[7/23/2023 8:42 PM] .kitkat1.
+and the network device appears on host
+
+
+[7/23/2023 8:45 PM] szybet
+% git apply git.patch
+error: patch failed: init.c:146
+error: init.c: patch does not apply
+
+
+[7/23/2023 8:45 PM] szybet
+also this, @tux-linux great patch...
+
+
+[7/23/2023 8:47 PM] szybet
+you can answer also how to make usb net to compile
+
+
+[7/23/2023 8:49 PM] tux_linux
+ipd patch
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/git-0CB53.patch
+
+
+[7/23/2023 8:49 PM] tux_linux
+did you pull the repo
+
+
+[7/23/2023 8:49 PM] tux_linux
+or is it a fresh clone
+
+
+[7/23/2023 8:49 PM] szybet
+cloned new
+
+
+[7/23/2023 8:50 PM] szybet
+you can just provide the binaries...
+
+
+[7/23/2023 8:51 PM] tux_linux
+try this one
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/git-68E14.patch
+
+
+[7/23/2023 8:51 PM] tux_linux
+i tested it
+
+
+[7/23/2023 8:51 PM] tux_linux
+bad practice
+
+
+[7/23/2023 8:51 PM] szybet
+oh no, a tragedy
+
+
+[7/23/2023 8:51 PM] szybet
+-_-
+
+
+[7/23/2023 8:51 PM] tux_linux
+replace all existing modules in modules.sqsh with ones compiled from n306c kernel tree
+
+
+[7/23/2023 8:52 PM] szybet
+are you reading what i say
+
+there are not modules for usbms
+
+
+[7/23/2023 8:52 PM] tux_linux
+it's for what then
+
+
+[7/23/2023 8:53 PM] tux_linux
+read the wiki page maybe?
+
+
+[7/23/2023 8:53 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-5A600.png
+
+
+[7/23/2023 8:53 PM] szybet
+0 details
+
+
+[7/23/2023 8:54 PM] szybet
+magic then?
+
+
+[7/23/2023 8:54 PM] tux_linux
+`exporting the whole MMC over USB`
+
+
+[7/23/2023 8:54 PM] szybet
+HOW
+
+
+[7/23/2023 8:54 PM] tux_linux
+`g_mass_storage file=/dev/mmcblk0`
+
+
+[7/23/2023 8:54 PM] szybet
+freaking telnet outputing bits?
+
+
+[7/23/2023 8:54 PM] szybet
+cool then
+
+
+[7/23/2023 8:54 PM] tux_linux
+what wiki reader needs to know that
+
+
+[7/23/2023 8:54 PM] szybet
+i need to.
+
+
+[7/23/2023 8:55 PM] szybet
+% cat modules.order
+kernel/drivers/net/wireless/nxp/mxm_wifiex/wlan_src/mlan.ko
+kernel/drivers/net/wireless/nxp/mxm_wifiex/wlan_src/moal.ko
+kernel/drivers/usb/gadget/legacy/g_zero.ko
+kernel/drivers/usb/gadget/legacy/g_ether.ko
+kernel/drivers/usb/gadget/legacy/gadgetfs.ko
+kernel/drivers/usb/gadget/legacy/g_mass_storage.ko
+kernel/drivers/usb/gadget/legacy/g_file_storage.ko
+kernel/drivers/usb/gadget/legacy/g_serial.ko
+kernel/drivers/usb/gadget/legacy/g_ncm.ko
+kernel/drivers/input/evbug.ko
+kernel/drivers/mmc/card/sdio_wifi_pwr.ko
+kernel/drivers/mmc/card/sdio_bt_pwr.ko
+kernel/drivers/rpmsg/imx_rpmsg_pingpong.ko
+kernel/drivers/rpmsg/imx_rpmsg_tty.ko
+
+
+[7/23/2023 8:55 PM] tux_linux
+maybe you can just search for `dfl` in init code as well
+
+
+[7/23/2023 8:55 PM] szybet
+enough that i know about the module
+
+
+[7/23/2023 8:56 PM] szybet
+where the A is:
+.
+./wifi
+./wifi/8189fs.ko
+./g_mass_storage.ko
+./fs
+./fs/configfs
+./fs/configfs/configfs.ko
+./drivers
+./drivers/usb
+./drivers/usb/gadget
+./drivers/usb/gadget/libcomposite.ko
+./drivers/usb/gadget/legacy
+./drivers/usb/gadget/legacy/g_mass_storage.ko
+./drivers/usb/gadget/legacy/g_ether.ko
+./drivers/usb/gadget/function
+./drivers/usb/gadget/function/usb_f_rndis.ko
+./drivers/usb/gadget/function/usb_f_obex.ko
+./drivers/usb/gadget/function/usb_f_mass_storage.ko
+./drivers/usb/gadget/function/usb_f_fs.ko
+./drivers/usb/gadget/function/usb_f_eem.ko
+./drivers/usb/gadget/function/usb_f_ecm_subset.ko
+./drivers/usb/gadget/function/usb_f_ecm.ko
+./drivers/usb/gadget/function/usb_f_acm.ko
+./drivers/usb/gadget/function/u_ether.ko
+./drivers/mmc
+./drivers/mmc/card
+./drivers/mmc/card/sdio_wifi_pwr.ko
+20:55 szybet@hyperbookszyb /tmp/squashfs-root
+
+
+[7/23/2023 8:56 PM] tux_linux
+well because of some freak all modules are in `legacy` instead of some in `function`
+
+
+[7/23/2023 8:57 PM] tux_linux
+try to move them
+
+
+[7/23/2023 8:57 PM] szybet
+those are diffrent names?
+
+
+[7/23/2023 8:57 PM] szybet
+what?
+
+
+[7/23/2023 8:57 PM] tux_linux
+the a has `usb/gadget/function`
+
+
+[7/23/2023 8:57 PM] tux_linux
+the c only has `usb/gadget/legacy`
+
+
+[7/23/2023 8:57 PM] tux_linux
+it shouldn't be like that
+
+
+[7/23/2023 8:58 PM] szybet
+yes and? diffrent names?
+
+
+[7/23/2023 8:58 PM] tux_linux
+put the nia c modules that would go in `function` in the nia a into a new dir `usb/gadget/function` in nia c modules
+
+
+[7/23/2023 8:58 PM] szybet
+how will it even work
+
+
+[7/23/2023 8:58 PM] tux_linux
+because you insmod them
+
+
+[7/23/2023 8:58 PM] szybet
+ipd wont grab them
+
+
+[7/23/2023 8:58 PM] tux_linux
+yes it will
+
+
+[7/23/2023 8:59 PM] tux_linux
+that's the point
+
+
+[7/23/2023 8:59 PM] szybet
+diffrent names
+
+
+[7/23/2023 8:59 PM] szybet
+DIFFRENT NAMES
+
+
+[7/23/2023 8:59 PM] tux_linux
+DIFFERENT
+
+
+[7/23/2023 8:59 PM] szybet
+WHATEVER
+
+
+[7/23/2023 8:59 PM] szybet
+;-;
+
+
+[7/23/2023 8:59 PM] tux_linux
+what do you mean the modules have the same name
+
+
+[7/23/2023 8:59 PM] tux_linux
+well, no
+
+
+[7/23/2023 8:59 PM] szybet
+are you blind
+
+
+[7/23/2023 9:00 PM] tux_linux
+well, ok, nia c is an alien which doesn't need additional modules
+
+
+[7/23/2023 9:00 PM] szybet
+w h a t
+
+
+[7/23/2023 9:00 PM] tux_linux
+so everything is included in g_ether.ko module
+
+
+[7/23/2023 9:00 PM] tux_linux
+you don't need to load deps
+
+
+[7/23/2023 9:00 PM] tux_linux
+that's why it worked
+
+
+[7/23/2023 9:00 PM] szybet
+i couldnt connect via telnet, even ssh?
+
+
+[7/23/2023 9:01 PM] szybet
+it doesnt
+
+
+[7/23/2023 9:01 PM] tux_linux
+i will make you a patch
+
+
+[7/23/2023 9:01 PM] tux_linux
+the interface was exported
+
+
+[7/23/2023 9:01 PM] tux_linux
+so it worked
+
+
+[7/23/2023 9:01 PM] szybet
+what,,,
+
+
+[7/23/2023 9:01 PM] szybet
+and just send the binaries
+
+
+[7/23/2023 9:01 PM] tux_linux
+it's a script
+
+
+[7/23/2023 9:01 PM] szybet
+i dont care just stop making the process slower
+
+
+[7/23/2023 9:01 PM] szybet
+oh ok
+
+
+[7/23/2023 9:01 PM] szybet
+then just send the whole script
+
+
+[7/23/2023 9:02 PM] szybet
+also, tell me about init
+
+
+[7/23/2023 9:02 PM] szybet
+i cant apply the patch
+
+
+[7/23/2023 9:02 PM] tux_linux
+whats the error now
+
+
+[7/23/2023 9:03 PM] szybet
+ok this one worked
+
+
+[7/23/2023 9:03 PM] szybet
+its a script in kernel too?
+
+
+[7/23/2023 9:04 PM] tux_linux
+no, what you showed me was the rootfs starting up
+
+
+[7/23/2023 9:04 PM] szybet
+it doesnt work in usb debug mode too
+
+
+[7/23/2023 9:05 PM] tux_linux
+why was the interface exported
+
+
+[7/23/2023 9:06 PM] szybet
+idk?
+
+
+[7/23/2023 9:06 PM] szybet
+i couldnt connect
+
+
+[7/23/2023 9:06 PM] tux_linux
+what ip did you set
+
+
+[7/23/2023 9:06 PM] szybet
+oh fuck
+
+
+[7/23/2023 9:06 PM] szybet
+wait
+
+
+[7/23/2023 9:06 PM] szybet
+i set 2.2
+
+
+[7/23/2023 9:06 PM] tux_linux
+yes
+
+
+[7/23/2023 9:06 PM] szybet
+i should hav 2.3
+
+
+[7/23/2023 9:06 PM] tux_linux
+no
+
+
+[7/23/2023 9:06 PM] tux_linux
+no
+
+
+[7/23/2023 9:06 PM] szybet
+yes
+
+
+[7/23/2023 9:06 PM] szybet
+2.2 is the ereader
+
+
+[7/23/2023 9:06 PM] tux_linux
+well, yes
+
+
+[7/23/2023 9:06 PM] tux_linux
+or 2.1
+
+
+[7/23/2023 9:06 PM] tux_linux
+that's why it didnt work then
+
+
+[7/23/2023 9:07 PM] szybet
+the same ip wont connect
+
+
+[7/23/2023 9:07 PM] tux_linux
+try again
+
+
+[7/23/2023 9:07 PM] szybet
+wait, i will try again with but first init and kernel
+
+
+[7/23/2023 9:07 PM] tux_linux
+ok
+
+
+[7/23/2023 9:11 PM] tux_linux
+Try this in rootfs repo for usbnet
+
+
+[7/23/2023 9:12 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/usbnet-D7371.patch
+
+
+[7/23/2023 9:12 PM] szybet
+send the whole file
+
+
+[7/23/2023 9:13 PM] szybet
+there is no reason for me to open rootfs, apply patch and then copy the file...
+
+
+[7/23/2023 9:14 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/usbnet-62459
+
+
+[7/23/2023 9:17 PM] .kitkat1.
+diagnostics dont work
+
+
+[7/23/2023 9:17 PM] szybet
+@Kitkat / Szybet ( sometimes ) download this file to the kobo
+
+
+[7/23/2023 9:27 PM] szybet
+@tux-linux
+
+
+[7/23/2023 9:27 PM] .kitkat1.
+yep
+
+
+[7/23/2023 9:27 PM] tux_linux
+Try to debug what `button_input_device` becomes with printf
+
+
+[7/23/2023 9:28 PM] tux_linux
+After the if
+
+
+[7/23/2023 9:28 PM] szybet
+debug how
+
+
+[7/23/2023 9:28 PM] tux_linux
+printf
+
+
+[7/23/2023 9:32 PM] szybet
+funny
+
+
+[7/23/2023 9:34 PM] szybet
+i can take a bet that the issue is `if(MATCH(uname_data.release, "n306c")) {`
+
+
+[7/23/2023 9:39 PM] szybet
+great init with no logs, just great...
+
+
+[7/23/2023 9:39 PM] szybet
+ipd is outputting everything and init nothing
+
+
+[7/23/2023 9:41 PM] .kitkat1.
+Szybet:
+@tux-linux what did you expected me to do?...
+kobo:~# service usbnet start
+ * Starting USBNet ...
+insmod: ERROR: could not load module /modules/g_ether.ko: No such file or directory
+ifconfig: SIOCGIFFLAGS: No such device
+ifconfig: SIOCSIFADDR: No such device
+ [ !! ]
+ * ERROR: usbnet failed to start
+kobo:~# ls /modules/
+drivers/           fs/                g_mass_storage.ko  wifi/
+kobo:~# ls /modules/^C
+kobo:~#
+
+
+[7/23/2023 9:49 PM] .kitkat1.
+```[    1.009272] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    4.001525] drivers/input/misc/usb_plug.c(56):skip usb_plug_handler() when mxc_usbplug not exist !
+[    6.707165] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021db0 ntx_machine_poweroff
+Interface 'lo': flags set to 0001.
+uname_data.release: 4.1.15-inkbox-n306c
+Match NOT FOUND FUCK FUCK FUCKfound! Using custom input device: /dev/input/event0
+
+Linux inkbox #1 SMP PREEMPT Sun Jul 23 21:47:02 CEST 2023 GNU/Linux
+InkBox OS, kernel build M2gf3hSQ, commit 6eb21a6
+
+Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+```
+
+
+[7/23/2023 9:49 PM] szybet
+i won the bet
+
+
+[7/23/2023 9:49 PM] szybet
+with no one
+
+
+[7/23/2023 9:50 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-3C31E.png
+
+
+[7/23/2023 9:50 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-F3EE5.png
+
+
+[7/23/2023 9:50 PM] szybet
+this will only work if its the same
+
+
+[7/23/2023 9:50 PM] szybet
+not if it contains
+
+
+[7/23/2023 9:50 PM] szybet
+@tux-linux
+
+
+[7/23/2023 10:50 PM] szybet
+@tux-linux tommorow will you fix & answer?
+
+
+[7/24/2023 5:14 AM] tux_linux
+well, great
+
+
+[7/24/2023 5:14 AM] tux_linux
+maybe i can check for last 4 chars
+
+
+[7/24/2023 6:53 AM] szybet
+Bad idea
+
+
+[7/24/2023 6:53 AM] szybet
+But whatever
+
+
+[7/24/2023 2:56 PM] tux_linux
+because
+
+
+[7/24/2023 2:56 PM] szybet
+other models
+
+
+[7/24/2023 2:56 PM] tux_linux
+last time i used strstr it made init segfault sometimes
+
+
+[7/24/2023 2:56 PM] szybet
+but i dont cre
+
+
+[7/24/2023 2:56 PM] tux_linux
+so what
+
+
+[7/24/2023 2:56 PM] szybet
+so nothing
+
+
+[7/24/2023 2:56 PM] szybet
+just make it work
+
+
+[7/24/2023 2:57 PM] tux_linux
+other model may be named n578d, idk
+
+
+[7/24/2023 2:57 PM] szybet
+just make it work for this one
+
+
+[7/24/2023 2:57 PM] tux_linux
+maybe actually 5 last chars
+
+
+[7/24/2023 2:57 PM] tux_linux
+yea
+
+
+[7/24/2023 2:57 PM] tux_linux
+i will try strstr
+
+
+[7/24/2023 2:57 PM] szybet
+last char is null?
+
+
+[7/24/2023 2:57 PM] tux_linux
+and hope it doesn't explode in my face
+
+
+[7/24/2023 2:57 PM] tux_linux
+yea, so actually last 6 chars
+
+
+[7/24/2023 2:57 PM] tux_linux
+strstr *should* work
+
+
+[7/24/2023 2:57 PM] szybet
+i dont know if you want the null
+
+
+[7/24/2023 2:57 PM] szybet
+ask chatgpt
+
+
+[7/24/2023 2:58 PM] szybet
+also, imit the nia c and make it work
+
+
+[7/24/2023 2:58 PM] tux_linux
+strstr should be fine for this use case
+
+
+[7/24/2023 2:58 PM] szybet
+and answer me about usbnet
+
+
+[7/24/2023 3:04 PM] tux_linux
+please symlink g_ether and g_mass_storage to the root of modules.sqsh
+
+
+[7/24/2023 3:04 PM] szybet
+what about usbnet in usb debug mode?
+
+
+[7/24/2023 3:04 PM] tux_linux
+well, it is for that
+
+
+[7/24/2023 3:05 PM] szybet
+its an openrc script?
+
+
+[7/24/2023 3:05 PM] szybet
+in rootfs?
+
+
+[7/24/2023 3:06 PM] tux_linux
+usb debug mode is a c function
+
+
+[7/24/2023 3:07 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-FCF24.png
+
+
+[7/24/2023 3:07 PM] szybet
+you edited only the rootfs file ???
+
+
+[7/24/2023 3:08 PM] tux_linux
+well, yes, it is two different things
+
+
+[7/24/2023 3:08 PM] tux_linux
+usbnet in init is only started from it when `BOOT_USB_DEBUG` is true
+
+
+[7/24/2023 3:08 PM] szybet
+im talking about that
+
+
+[7/24/2023 3:09 PM] tux_linux
+well, the excerpt of boot log you showed me yesterday was from rootfs
+
+
+[7/24/2023 3:09 PM] szybet
+ok, please provide init fix
+
+
+[7/24/2023 3:09 PM] szybet
+init behaves the same
+
+
+[7/24/2023 3:09 PM] szybet
+for diagnostics, I will be able to test in 2 hours
+
+
+[7/24/2023 3:10 PM] tux_linux
+ok
+
+
+[7/24/2023 3:11 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/git-D22C6.patch
+
+
+[7/24/2023 3:11 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/init-A53E6
+
+
+[7/24/2023 3:13 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/usbnet-36CC9.patch
+
+
+[7/24/2023 3:14 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/usbnet-E0878
+
+
+[7/24/2023 3:51 PM] szybet
+Usbnet for rootfs?
+
+
+[7/24/2023 3:51 PM] tux_linux
+yes
+
+
+[7/24/2023 3:51 PM] szybet
+Does init also have usbnet
+
+
+[7/24/2023 3:52 PM] tux_linux
+.
+
+
+[7/24/2023 4:07 PM] .kitkat1.
+szybet:
+
+
+[7/24/2023 4:07 PM] .kitkat1.
+and what, it should work in init too
+
+
+[7/24/2023 4:08 PM] tux_linux
+what?
+
+
+[7/24/2023 4:08 PM] tux_linux
+i sent you two patches
+
+
+[7/24/2023 4:18 PM] szybet
+Ok i asked in a wrong way
+
+
+[7/24/2023 4:18 PM] szybet
+Does init also contain usb net patches
+
+
+[7/24/2023 4:20 PM] tux_linux
+no, usbnet script only exists in rootfs
+
+
+[7/24/2023 4:35 PM] szybet
+But init also turns on usbnet, modules arent needed, they changed so they also need a change...
+
+
+[7/24/2023 4:46 PM] tux_linux
+When
+
+
+[7/24/2023 5:12 PM] szybet
+What when.........
+
+
+[7/24/2023 5:12 PM] tux_linux
+when does init turn on usbnet
+
+
+[7/24/2023 5:19 PM] szybet
+Usb debug flag
+
+
+[7/24/2023 5:20 PM] tux_linux
+`BOOT_USB_DEBUG`, yes
+
+
+[7/24/2023 5:20 PM] tux_linux
+if that flag is not enabled, it is turned on by rootfs
+
+
+[7/24/2023 5:20 PM] tux_linux
+only
+
+
+[7/24/2023 5:20 PM] tux_linux
+also i patched init for that, did you look at it?
+
+
+[7/24/2023 5:34 PM] szybet
+no im on my phone the whole time
+
+
+[7/24/2023 5:34 PM] szybet
+goods, thats what i wanted to know
+
+
+[7/24/2023 5:34 PM] tux_linux
+ok good
+
+
+[7/24/2023 6:29 PM] .kitkat1.
+```
+rootfs: clean, 29/32768 files, 74479/131072 blocks                              
+e2fsck 1.46.2 (28-Feb-2021)                                                     
+user: clean, 301/192768 files, 580056/769894 blocks                             
+                                                                                
+(initrd) Hit ENTER to stop auto-boot ...                                        
+                                                                                
+ * Device is rooted; not enforcing security policy                              
+open: No such file or directory                                                 
+The system is going down NOW!                                                   
+Sent SIGTERM to all processes                                                   
+Sent SIGKILL to all processes                                                   
+Requesting system poweroff    
+```
+
+
+[7/24/2023 6:30 PM] .kitkat1.
+```
+                                                                                
+(initrd) Hit ENTER to stop auto-boot ...                                        
+inkbox login:                                                                   
+inkbox login:                                                                   
+inkbox login:                                                                   
+inkbox login:                                                                   
+inkbox login: root                                                              
+login[102]: root login on 'ttymxc0'                                             
+~ #                                                                             
+~ # ls /dev/input                                                               
+event0  event1  event2  mice    mouse0                                          
+~ # 
+```
+
+
+[7/24/2023 6:30 PM] .kitkat1.
+https://tenor.com/view/tf2-soldier-zoom-reverse-gif-18249024
+
+{Embed}
+https://tenor.com/view/tf2-soldier-zoom-reverse-gif-18249024
+/mnt/data/projects/git/conversations/media/tf2-soldier-2482F.png
+
+
+[7/24/2023 6:31 PM] .kitkat1.
+dear god
+
+
+[7/24/2023 6:31 PM] .kitkat1.
+`/dev/input/event2` reacts to button presses in init
+
+
+[7/24/2023 6:32 PM] .kitkat1.
+no idea why by path is not available
+
+
+[7/24/2023 6:32 PM] tux_linux
+what happened
+
+
+[7/24/2023 6:32 PM] .kitkat1.
+no idea
+
+
+[7/24/2023 6:32 PM] .kitkat1.
+just change it to even2
+
+
+[7/24/2023 6:32 PM] tux_linux
+try to reboot and see if it does the same thing
+
+
+[7/24/2023 6:33 PM] .kitkat1.
+ok
+
+
+[7/24/2023 6:34 PM] tux_linux
+does event2 output KEY_POWER events?
+
+
+[7/24/2023 6:36 PM] .kitkat1.
+```(initrd) Hit ENTER to stop auto-boot ... 
+inkbox login: 
+inkbox login: 
+inkbox login: 
+inkbox login: 
+inkbox login: root
+login[102]: root login on 'ttymxc0'
+~ # evtest ^C
+~ # ls /dev/input
+event0  event1  event2  mice    mouse0
+~ # evtest /dev/input/event2
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "bd71828-pwrkey"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690216548.915033, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690216548.915033, -------------- SYN_REPORT ------------
+Event: time 1690216548.968801, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690216548.968801, -------------- SYN_REPORT ------------
+```
+
+
+[7/24/2023 6:36 PM] .kitkat1.
+I will test a few more
+
+
+[7/24/2023 6:37 PM] tux_linux
+did you reflash dtb or anything?
+
+
+[7/24/2023 6:37 PM] szybet
+nope
+
+
+[7/24/2023 6:38 PM] tux_linux
+ok
+
+
+[7/24/2023 6:38 PM] .kitkat1.
+```~ # ls /dev/input
+event0  event1  event2  mice    mouse0
+~ # evtest /dev/input/event2
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "bd71828-pwrkey"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690216669.444629, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690216669.444629, -------------- SYN_REPORT ------------
+Event: time 1690216669.559396, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690216669.559396, -------------- SYN_REPORT ------------
+```
+
+
+[7/24/2023 6:39 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/git-ED879.patch
+
+
+[7/24/2023 6:39 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/init-E274A
+
+
+[7/24/2023 6:40 PM] .kitkat1.
+```~ # ls /dev/input
+event0  event1  event2  mice    mouse0
+~ # e?test /dev/input/event2
+-sh: e?test: not found
+~ # evtest /dev/input/event2
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "bd71828-pwrkey"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690216762.208616, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690216762.208616, -------------- SYN_REPORT ------------
+Event: time 1690216762.340637, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690216762.340637, -------------- SYN_REPORT ------------
+```
+
+
+[7/24/2023 6:40 PM] szybet
+first we will try usbnet too
+
+
+[7/24/2023 6:41 PM] .kitkat1.
+```login[102]: root login on 'ttymxc0'
+~ # ls /dev/input
+event0  event1  event2  mice    mouse0
+~ # evtest /dev/input/event2
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "bd71828-pwrkey"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690216848.686169, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690216848.686169, -------------- SYN_REPORT ------------
+Event: time 1690216848.832542, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690216848.832542, -------------- SYN_REPORT ------------```
+
+
+[7/24/2023 6:42 PM] .kitkat1.
+```~ # ls /dev/input
+event0  event1  event2  mice    mouse0
+~ # evtest /dev/input/event2
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "bd71828-pwrkey"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690216942.538374, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690216942.538374, -------------- SYN_REPORT ------------
+Event: time 1690216942.589813, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690216942.589813, -------------- SYN_REPORT ------------
+^C
+```
+
+
+[7/24/2023 6:44 PM] tux_linux
+well, patch includes both
+
+
+[7/24/2023 6:45 PM] szybet
+the previous one too
+
+
+[7/24/2023 6:45 PM] szybet
+and i hope it will work without changes
+
+
+[7/24/2023 6:46 PM] tux_linux
+git reset --hard before applying
+
+
+[7/24/2023 6:49 PM] szybet
+i copy binaries
+
+
+[7/24/2023 6:49 PM] tux_linux
+ok
+
+
+[7/24/2023 6:55 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230724_185447-9156B.jpg
+
+
+[7/24/2023 6:55 PM] tux_linux
+good
+
+
+[7/24/2023 6:55 PM] tux_linux
+now please try this init on nia a
+
+
+[7/24/2023 6:55 PM] tux_linux
+see if it can go in diags as well
+
+
+[7/24/2023 6:56 PM] .kitkat1.
+later
+
+
+[7/24/2023 6:56 PM] tux_linux
+does boot_usb_debug work?
+
+
+[7/24/2023 7:01 PM] .kitkat1.
+```
+kitkat@KitKatPC ~> telnet 192.168.2.2
+Trying 192.168.2.2...
+Connected to 192.168.2.2.
+Escape character is '^]'.
+
+inkbox login: 
+inkbox login: root
+~ # 
+~ # 
+~ # ls
+~ # ls
+~ # ls
+~ # 
+```
+
+
+[7/24/2023 7:01 PM] .kitkat1.
+usb net works
+
+
+[7/24/2023 7:01 PM] .kitkat1.
+yay
+
+
+[7/24/2023 7:01 PM] tux_linux
+good
+
+
+[7/24/2023 7:01 PM] tux_linux
+and in rootfs?
+
+
+[7/24/2023 7:02 PM] tux_linux
+.
+
+
+[7/24/2023 7:03 PM] szybet
+please accept inkbox audio pull request
+
+
+[7/24/2023 7:03 PM] szybet
+and the others
+
+
+[7/24/2023 7:03 PM] szybet
+otherwise it will be a mess soon
+
+
+[7/24/2023 7:04 PM] szybet
+reader, nia c
+
+
+[7/24/2023 7:04 PM] szybet
+you can review it later...
+
+
+[7/24/2023 7:14 PM] .kitkat1.
+```kitkat@KitKatPC ~> telnet 192.168.2.2
+Trying 192.168.2.2...
+telnet: Unable to connect to remote host: Connection refused
+kitkat@KitKatPC ~ [1]> ssh root@192.168.2.2
+The authenticity of host '192.168.2.2 (192.168.2.2)' can't be established.
+ED25519 key fingerprint is SHA256:gJ4zfD4YCXimcCBEuZZbBNCuczivelPKQ387fhHMUcQ.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:5: 192.168.88.72
+Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+```
+
+
+[7/24/2023 7:14 PM] .kitkat1.
+its rootfs
+
+
+[7/24/2023 7:18 PM] tux_linux
+works
+
+
+[7/24/2023 7:18 PM] tux_linux
+i will commit changes
+
+
+[7/24/2023 7:31 PM] tux_linux
+.
+
+
+[7/24/2023 7:42 PM] szybet
+i will
+
+
+[7/24/2023 7:42 PM] szybet
+almost everything works
+
+
+[7/24/2023 7:42 PM] szybet
+what about imgtool
+
+
+[7/24/2023 7:42 PM] szybet
+to create a proper image with reset working, we need it
+
+
+[7/24/2023 7:42 PM] szybet
+and you didnt explained how to make it
+
+
+[7/24/2023 7:42 PM] tux_linux
+did you test usbms in gui
+
+
+[7/24/2023 7:43 PM] szybet
+yes it works
+
+
+[7/24/2023 7:45 PM] szybet
+as we prepare the final image, could you merge qt libraries and update gui bundle?
+
+
+[7/24/2023 7:46 PM] tux_linux
+what happened
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-F1B55.png
+
+
+[7/24/2023 7:46 PM] szybet
+what is it
+
+
+[7/24/2023 7:46 PM] tux_linux
+audio pr
+
+
+[7/24/2023 7:46 PM] szybet
+newer qt creator propably
+
+
+[7/24/2023 7:47 PM] szybet
+just live with it if it works
+
+
+[7/24/2023 7:53 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/inkbox-12CF5
+
+
+[7/24/2023 7:53 PM] szybet
+download this
+
+
+[7/24/2023 7:53 PM] tux_linux
+and then
+
+
+[7/24/2023 8:00 PM] .kitkat1.
+hehe
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C9863.txt
+
+
+[7/24/2023 8:02 PM] tux_linux
+this isn't supposed to happen
+
+
+[7/24/2023 8:02 PM] tux_linux
+for the 8189fs error, it also does it on clara
+
+
+[7/24/2023 8:03 PM] .kitkat1.
+i have written to a sys devices that is read only
+
+
+[7/24/2023 8:03 PM] .kitkat1.
+obviously the kernel will be mad
+
+
+[7/24/2023 8:05 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230724_200254-433D8.jpg
+
+
+[7/24/2023 8:18 PM] szybet
+i think thats it?
+
+
+[7/24/2023 8:19 PM] szybet
+now you need to accept pull requests, some patches and imgtool because you wont share access to repos & wont say how to do imgtool
+
+
+[7/25/2023 7:53 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-0E34E.png
+
+
+[7/25/2023 7:53 AM] szybet
+its only like that in init
+
+
+[7/25/2023 7:53 AM] szybet
+because there is no by-path dir
+
+
+[7/25/2023 7:53 AM] szybet
+revert that
+
+
+[7/25/2023 7:53 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-EC7B2.png
+
+
+[7/25/2023 7:53 AM] szybet
+really
+
+
+[7/25/2023 7:54 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-D557A.png
+
+
+[7/25/2023 7:54 AM] szybet
+`adjective: gray, brown, drab, dull, ashy, ashen, dusky, grey`
+
+
+[7/25/2023 7:54 AM] szybet
+;-;
+
+
+[7/25/2023 7:55 AM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-8F951.png
+
+
+[7/25/2023 7:55 AM] szybet
+wtf
+
+
+[7/25/2023 7:55 AM] szybet
+you really think fjuiewjgijwoi format is better than "grey"
+
+
+[7/25/2023 7:56 AM] szybet
+you would have more time for other usefull things than doing this
+
+
+[7/25/2023 9:25 AM] tux_linux
+It was too dark
+
+
+[7/25/2023 9:26 AM] szybet
+nah
+
+
+[7/25/2023 9:26 AM] tux_linux
+I tried light-gray but qt ended up displaying things black
+
+
+[7/25/2023 9:26 AM] szybet
+nonsense
+
+
+[7/25/2023 9:26 AM] szybet
+did you tried on clara or what
+
+
+[7/25/2023 9:26 AM] tux_linux
+Hmm yea udev
+
+
+[7/25/2023 9:26 AM] tux_linux
+Yes
+
+
+[7/25/2023 9:26 AM] szybet
+why do you test things on an experimental device
+
+
+[7/25/2023 9:27 AM] szybet
+but whatever i propably dont care
+
+
+[7/25/2023 9:27 AM] szybet
+rever the path
+
+
+[7/25/2023 9:27 AM] tux_linux
+Well, epdc is probably fine as for grayscale levels
+
+
+[7/25/2023 9:27 AM] szybet
+idk
+
+
+[7/25/2023 9:27 AM] tux_linux
+You can do it, it's 3am here
+
+
+[7/25/2023 9:27 AM] szybet
+why dont you sleep
+
+
+[7/25/2023 9:28 AM] tux_linux
+I briefly woke up
+
+
+[7/25/2023 9:28 AM] szybet
+well, thats also bad
+
+
+[7/25/2023 2:26 PM] tux_linux
+did you change it?
+
+
+[7/25/2023 2:26 PM] szybet
+not yet, nope
+
+
+[7/25/2023 2:26 PM] tux_linux
+ok i will do it
+
+
+[7/25/2023 2:35 PM] tux_linux
+i think we have modules to test in diags too
+
+
+[7/25/2023 2:35 PM] tux_linux
+because it's possible to update update.isa from there
+
+
+[7/25/2023 2:36 PM] tux_linux
+via usbms
+
+
+[7/25/2023 2:37 PM] szybet
+what
+
+
+[7/25/2023 2:37 PM] tux_linux
+explore diags a bit, you will understand
+
+
+[7/25/2023 2:40 PM] szybet
+yes there is some update things
+
+
+[7/25/2023 2:40 PM] szybet
+and
+
+
+[7/25/2023 2:40 PM] szybet
+it works on rootfs
+
+
+[7/25/2023 2:40 PM] tux_linux
+well yea, it's not the same code
+
+
+[7/25/2023 2:40 PM] tux_linux
+did you symlink nia c modules to the root of the archive?
+like /modules/g_ether.ko
+
+
+[7/25/2023 2:40 PM] tux_linux
+lets move here
+
+
+[7/25/2023 2:40 PM] szybet
+yes
+
+
+[7/25/2023 2:40 PM] tux_linux
+good
+
+
+[7/25/2023 2:41 PM] tux_linux
+then i will write the same thing for recoveryfs
+
+
+[7/25/2023 2:41 PM] tux_linux
+https://github.com/Kobo-InkBox/rootfs/blob/master/etc/init.d/mass_storage
+also I guess I need to change this but it's not so urgent
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/master/etc/init.d/mass_storage
+rootfs/etc/init.d/mass_storage at master · Kobo-InkBox/rootfs
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-08054
+
+
+[7/25/2023 2:42 PM] szybet
+what even is this lol
+
+
+[7/25/2023 2:43 PM] tux_linux
+also usbnet exists in diags too
+
+
+[7/25/2023 2:44 PM] szybet
+still should work
+
+
+[7/25/2023 2:45 PM] tux_linux
+no
+
+
+[7/25/2023 2:47 PM] tux_linux
+i will also put new ipd in rootfs
+
+
+[7/25/2023 2:51 PM] szybet
+well prepare everything for the final image
+
+
+[7/25/2023 2:51 PM] szybet
+& imgtool...
+
+
+[7/25/2023 3:12 PM] tux_linux
+show me fdisk -l
+
+
+[7/25/2023 4:15 PM] szybet
+of what
+
+
+[7/25/2023 4:15 PM] szybet
+the image, sd card?
+
+
+[7/25/2023 4:15 PM] tux_linux
+sd card
+
+
+[7/25/2023 4:15 PM] szybet
+um why
+
+
+[7/25/2023 4:15 PM] tux_linux
+show it
+
+
+[7/25/2023 4:15 PM] szybet
+layout is identical to nia a
+
+
+[7/25/2023 4:15 PM] tux_linux
+well what is nia a layout
+
+
+[7/25/2023 4:15 PM] szybet
+kernel unchanged / uboot identical
+
+
+[7/25/2023 4:15 PM] szybet
+welp
+
+
+[7/25/2023 4:15 PM] tux_linux
+unchanged
+are you kidding
+
+
+[7/25/2023 4:16 PM] szybet
+i mean as for config / layout
+
+
+[7/25/2023 4:16 PM] tux_linux
+show it to me still
+
+
+[7/25/2023 4:16 PM] szybet
+obviously new sources
+
+
+[7/25/2023 4:16 PM] szybet
+in a sec
+
+
+[7/25/2023 4:18 PM] szybet
+```
+% sudo fdisk -l /dev/mmcblk0
+[sudo] password for szybet: 
+Disk /dev/mmcblk0: 15 GiB, 16106127360 bytes, 31457280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xc9dd5cc0
+
+Device         Boot   Start      End  Sectors  Size Id Type
+/dev/mmcblk0p1        49152    79871    30720   15M 83 Linux
+/dev/mmcblk0p2       104448  1128447  1024000  500M 83 Linux
+/dev/mmcblk0p3      1128448  1390591   262144  128M 83 Linux
+/dev/mmcblk0p4      1390592 31116287 29725696 14.2G 83 Linux
+16:18 szybet@hyperbookszyb /home/szybet
+% 
+```
+
+
+[7/25/2023 4:18 PM] szybet
+what did you expect
+
+
+[7/25/2023 4:20 PM] tux_linux
+ok, do `dd if=/dev/mmcblk0 bs=512 count=49151 of=n306c.bin` and throw it to pkgs servers in misc folder thanks
+
+
+[7/25/2023 4:20 PM] szybet
+its all you need?
+
+
+[7/25/2023 4:20 PM] tux_linux
+yes
+
+
+[7/25/2023 4:20 PM] szybet
+waveform, uboot things, etc?
+
+
+[7/25/2023 4:20 PM] tux_linux
+well, yes, everything is in there
+
+
+[7/25/2023 4:20 PM] szybet
+https://github.com/Szybet/niAudio/blob/main/kobo-dtb-hackery.md
+https://github.com/Szybet/eink-waveforms
+
+{Embed}
+https://github.com/Szybet/niAudio/blob/main/kobo-dtb-hackery.md
+niAudio/kobo-dtb-hackery.md at main · Szybet/niAudio
+Kobo nia ereader with audio added. Contribute to Szybet/niAudio development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/niAudio-613C3
+
+{Embed}
+https://github.com/Szybet/eink-waveforms
+GitHub - Szybet/eink-waveforms
+Contribute to Szybet/eink-waveforms development by creating an account on GitHub.
+
+
+[7/25/2023 4:20 PM] szybet
+look here
+
+
+[7/25/2023 4:20 PM] szybet
+and check if you get everything needed
+
+
+[7/25/2023 4:21 PM] szybet
+also add this magic command in imgtool readme
+
+
+[7/25/2023 4:22 PM] tux_linux
+what magic command
+
+
+[7/25/2023 4:22 PM] tux_linux
+i just need the unpartitioned space
+
+
+[7/25/2023 4:22 PM] szybet
+.
+
+
+[7/25/2023 4:22 PM] tux_linux
+yes
+
+
+[7/25/2023 4:22 PM] tux_linux
+this
+
+
+[7/25/2023 4:23 PM] szybet
+done
+
+
+[7/25/2023 4:23 PM] szybet
+uploaded
+
+
+[7/25/2023 4:23 PM] tux_linux
+thanks
+
+
+[7/25/2023 5:11 PM] tux_linux
+well, everything should be in place
+
+
+[7/25/2023 5:21 PM] tux_linux
+done
+
+
+[7/25/2023 5:21 PM] szybet
+sooo now the image
+
+
+[7/25/2023 5:21 PM] tux_linux
+well, try to build it
+
+
+[7/25/2023 5:21 PM] szybet
+well sure
+
+
+[7/25/2023 5:22 PM] szybet
+first update gui bundle, and update isa on the servers
+
+
+[7/25/2023 5:23 PM] szybet
+with compiled-binaries and inkbox binary
+
+
+[7/25/2023 5:23 PM] tux_linux
+yea
+i don't need to include dbus please
+
+
+[7/25/2023 5:24 PM] szybet
+why not
+
+
+[7/25/2023 5:24 PM] szybet
+its only there because some apps need it and its hard to take it apart
+
+
+[7/25/2023 5:24 PM] szybet
+like rss guard i think too
+
+
+[7/25/2023 5:24 PM] szybet
+nachat is the best example
+
+
+[7/25/2023 5:29 PM] tux_linux
+so, the only thing you changed was to add dbus libs?
+
+
+[7/25/2023 5:29 PM] tux_linux
+and deps?
+
+
+[7/25/2023 5:29 PM] szybet
+no deps, its static
+
+
+[7/25/2023 5:29 PM] tux_linux
+ok
+
+
+[7/25/2023 5:29 PM] szybet
+static with no dbus included
+
+
+[7/25/2023 5:29 PM] szybet
+idk
+
+
+[7/25/2023 5:29 PM] szybet
+just like png support doesnt require libpng
+
+
+[7/25/2023 5:30 PM] tux_linux
+also is it normal that there are 10 more folders in plugins/?
+
+
+[7/25/2023 5:30 PM] tux_linux
+well, that virtualkeyboard appeared
+
+
+[7/25/2023 5:32 PM] szybet
+it depends whats in them
+
+
+[7/25/2023 5:34 PM] szybet
+well propably
+
+
+[7/25/2023 5:34 PM] szybet
+only bearer is weird
+
+
+[7/25/2023 5:34 PM] szybet
+but leave it
+
+
+[7/25/2023 5:34 PM] szybet
+because why not
+
+
+[7/25/2023 5:34 PM] tux_linux
+ok
+
+
+[7/26/2023 9:40 PM] szybet
+darkmode on the nia c is causing a kernel panick
+
+
+[7/26/2023 9:40 PM] szybet
+i will redesign it to use platform plugin anyway
+
+
+[7/27/2023 6:32 PM] .kitkat1.
+everything works after fixing ipd
+
+
+[7/27/2023 6:33 PM] szybet
+i will upload the image
+
+
+[7/27/2023 6:33 PM] szybet
+@yix
+
+
+[7/27/2023 6:33 PM] szybet
+@tux-linux can you update ipd with latest build?
+
+
+[7/27/2023 6:33 PM] tux_linux
+what fix
+
+
+[7/27/2023 6:34 PM] szybet
+todays commit
+
+
+[7/27/2023 7:08 PM] tux_linux
+Imgtool done
+
+
+[7/27/2023 7:16 PM] szybet
+i will upload the final image soion
+
+{Reactions}
+👍 
+
+[7/27/2023 7:20 PM] tux_linux
+Don't forget to pull kernel repo
+
+
+[7/27/2023 7:29 PM] szybet
+becayse?
+
+
+[7/27/2023 7:29 PM] szybet
+its working
+
+
+[7/27/2023 7:33 PM] tux_linux
+Init
+
+
+[8/24/2023 6:26 PM] andi15701
+just a quick summary here: so the imx6ull-e60u22b00.dts from the clara2e kernel does correctly describe the device?
+
+
+[8/24/2023 6:27 PM] szybet
+we didnt confirmed that, i couldnt uncompile the dts
+
+
+[8/24/2023 6:27 PM] szybet
+here are all files, you can try it
+
+
+[8/24/2023 6:27 PM] andi15701
+in the past I just have last compared compilation results
+
+
+[8/24/2023 6:28 PM] szybet
+well we didnt do that
+
+
+[8/24/2023 6:28 PM] szybet
+you could
+
+
+[8/24/2023 6:29 PM] andi15701
+but the clara2e kernel combined with factory devicetree did work?
+
+
+[8/24/2023 6:29 PM] szybet
+yes
+
+
+[8/24/2023 6:33 PM] andi15701
+@@ -1531,4 +1531,7 @@
+     ntx_led {
+         compatible = "ntx_led";
+     };
++    ntx_event0 {
++        compatible = "ntx_event0";
++    };
+ };
+
+
+[8/24/2023 6:34 PM] andi15701
+the only difference
+
+
+[8/30/2023 5:45 PM] andi15701
+what is the pmic really? I do not trust the devicetree so much
+
+
+[8/30/2023 5:46 PM] andi15701
+what is  the marking on that chip?
+
+
+[8/30/2023 5:48 PM] szybet
+the inkbox github issue contains a lot images
+
+
+[8/30/2023 5:49 PM] szybet
+and here
+
+
+[8/30/2023 5:49 PM] szybet
+https://github.com/Szybet/kobo-nia-model-c
+
+{Embed}
+https://github.com/Szybet/kobo-nia-model-c
+GitHub - Szybet/kobo-nia-model-c: kobo nia model C - some pictures,...
+kobo nia model C - some pictures, info, inkbox porting, kernel compiling - GitHub - Szybet/kobo-nia-model-c: kobo nia model C - some pictures, info, inkbox porting, kernel compiling
+/mnt/data/projects/git/conversations/media/kobo-nia-model-c-44000
+
+
+[8/30/2023 5:50 PM] szybet
+maybe
+
+
+[8/30/2023 5:50 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PICT0001-B5294.png
+
+
+[8/30/2023 5:50 PM] szybet
+those are some shitty images there
+
+
+[8/30/2023 6:03 PM] andi15701
+we have BD71828 / BD71878
+
+
+[8/30/2023 6:04 PM] andi15701
+but not BD71879
+
+
+[8/30/2023 6:05 PM] andi15701
+I guess this is handcrafted
+
+
+[8/30/2023 6:23 PM] szybet
+shouldnt make so much diffrence?
+
+
+[8/30/2023 6:25 PM] andi15701
+bd71879 does not exist, so it must be the bd71878
+
+
+[8/30/2023 6:30 PM] andi15701
+with regulators I prefer to double-check things if possible
+
+
+[8/30/2023 6:35 PM] szybet
+i believe you, but there is the 9 for some reason
+
+
+[8/30/2023 6:35 PM] szybet
+¯\_(ツ)_/¯
+
+
+[8/30/2023 6:45 PM] andi15701
+ok, there seems to be the 9 also on some clara2e
+
+
+[11/30/2023 10:56 AM] kuratius
+Is there someone here who has booted pmOS on the niaC? does the touchscreen issue where you get inaccurate touchscreen reads in the corners during a screen refresh exist there?
+wonder if the niaC fixed that
+
+
+[11/30/2023 11:20 AM] szybet
+No one
+
+
+[11/30/2023 11:20 AM] szybet
+Prepare a image and beg @Kitkat / Szybet ( sometimes ) to boot it
+
+
+[11/30/2023 1:33 PM] tux_linux
+First one
+
+{Reactions}
+😂 
+
+[12/11/2023 7:31 PM] kuratius
+@Kitkat / Szybet ( sometimes ) If I make an image, do you have a spare sd card to try? I think andi already added the needed changes to support nia C with the same image as nia A, at least from the commits I remember
+
+
+[12/11/2023 8:22 PM] szybet
+In the christmas new year break hr will have time to do it i think
+
+
+[12/11/2023 10:29 PM] andi15701
+we need some u-boot scripts to check for i2c bus inhabitants. I have prepared something for the kernel
+
+{Reactions}
+👍 
+
+[12/11/2023 10:29 PM] andi15701
+probably something for the christmas new year break
+
+
+[12/12/2023 3:47 AM] tux_linux
+I will try to catch up on Clara HD work
+
+
+[12/12/2023 3:48 AM] tux_linux
+We have lots of strikes here so my last exam is on 22nd December
+Also, I have an exam Saturday
+Things have gone wild
+
+
+[12/12/2023 4:23 PM] andi15701
+I will have to do something about Clara B... I have a register dump now, so I hope I can continue there
+
+
+[12/12/2023 4:23 PM] andi15701
+Whoever does that
+
+
+[12/12/2023 5:03 PM] tux_linux
+well, i don't have it
+
+
+[12/12/2023 5:03 PM] tux_linux
+only clara a
+
+
+[12/12/2023 5:20 PM] andi15701
+well, if that is fixed on pmOS install, we can put that fix into Inkbox
+
+
+[12/12/2023 5:20 PM] tux_linux
+yes
+
+
+[3/27/2024 7:53 PM] andi15701
+anyone willing to do some autodetection work?
+
+
+[3/27/2024 7:53 PM] andi15701
+or tests
+
+
+[3/27/2024 7:56 PM] andi15701
+you can do in u-boot ```i2c dev X
+if i2c probe 32 then do_a_related_stuff else do c_related_stuff fi
+```
+
+
+[3/27/2024 7:56 PM] szybet
+will do
+
+
+[3/27/2024 8:02 PM] andi15701
+at least in the new u-boot those things should work
+
+
+[3/27/2024 8:19 PM] szybet
+oh
+
+
+[3/27/2024 8:19 PM] szybet
+not on the stock one?
+
+
+[3/27/2024 8:19 PM] andi15701
+probably does not work with the stock one
+
+
+[3/27/2024 8:20 PM] andi15701
+we need to load a different hwconfig
+
+
+[3/27/2024 8:20 PM] andi15701
+per device
+
+
+[3/27/2024 8:20 PM] andi15701
+if using stock kernels
+
+
+[3/27/2024 8:21 PM] szybet
+well, maybe from stock os?
+
+
+[3/27/2024 8:21 PM] andi15701
+yes, hwconfig blob from stock os
+
+
+[3/27/2024 8:21 PM] szybet
+so what them
+
+
+[3/27/2024 8:23 PM] andi15701
+you need new u-boot + blobs from unpartitioned space from both variants
+
+
+[3/27/2024 8:23 PM] andi15701
+extract them via extract-kobohidden
+
+
+[3/27/2024 8:23 PM] andi15701
+and store them as files
+
+
+[3/27/2024 8:24 PM] andi15701
+maybe one directory for each revision
+
+
+[3/27/2024 8:24 PM] andi15701
+and in the clauses of the above-mentioned if you load the files
+
+
+[3/27/2024 8:27 PM] andi15701
+https://github.com/akemnade/u-boot-fslc/wiki a bit about the theory of booting a kobo kernel from that new u-boot
+
+{Embed}
+https://github.com/akemnade/u-boot-fslc/wiki
+Home
+U-Boot tree to host pending fixes and improvements - akemnade/u-boot-fslc
+/mnt/data/projects/git/conversations/media/u-boot-fslc-D5BF1
+
+
+[3/27/2024 8:31 PM] andi15701
+mx6ullnia_defconfig
+
+
+[3/27/2024 8:45 PM] szybet
+so i just extract-kobohidden? nothing more?
+
+
+[3/27/2024 8:47 PM] andi15701
+well, compile the new u-boot, have a bootscript and use extract-kobohidden on both devices once to extract the hidden stuff
+
+
+[3/27/2024 8:48 PM] andi15701
+you need to have everything in files (or at different places on the mmc for both devices)
+
+
+[3/27/2024 8:49 PM] andi15701
+but probably files are easier
+
+
+[3/27/2024 8:49 PM] andi15701
+so kernels and devicestrees also in place
+
+
+[3/27/2024 8:52 PM] szybet
+oof
+
+
+[3/27/2024 8:52 PM] szybet
+maybe something easier?
+
+
+[3/27/2024 8:54 PM] andi15701
+what is difficult here?
+
+
+[3/27/2024 9:04 PM] andi15701
+but did I understand it correctly that we have some trouble with booting with empty batteries
+
+
+[3/27/2024 9:06 PM] andi15701
+it is a bit easier with non-ntx kernels... but I let you the choice. Do you understand the clara boot process?
+
+
+[3/27/2024 9:10 PM] andi15701
+maybe we should fininsh the issue for the clara first, it is a bit easier there
+
+
+[3/27/2024 9:44 PM] szybet
+uh whatever i will do it
+
+
+[3/27/2024 9:44 PM] szybet
+maybe not today but yea
+
+
+[3/27/2024 9:44 PM] szybet
+both devices means what
+
+
+[3/27/2024 9:48 PM] andi15701
+so on a and c
+
+
+[3/27/2024 9:48 PM] andi15701
+to get the data from the hidden partitions
+
+
+[3/27/2024 9:48 PM] andi15701
+or do that on the images
+
+
+[3/28/2024 1:17 PM] andi15701
+does the c charge without sd card?
+
+
+[3/28/2024 1:17 PM] szybet
+what an odd question
+
+
+[3/28/2024 1:17 PM] szybet
+why would it not charge???
+
+
+[3/28/2024 1:18 PM] andi15701
+I have seen devices charging only to like 3.4V and then start booting
+
+
+[3/28/2024 1:19 PM] andi15701
+and charging is turned off
+
+
+[3/28/2024 1:19 PM] andi15701
+so the boot process has to early take care of configure charging
+
+
+[3/28/2024 1:20 PM] andi15701
+I have not tested that with the pmic in the c yet
+
+
+[3/28/2024 1:20 PM] andi15701
+I have not seen any issues with that with the rc5t619
+
+
+[3/28/2024 1:21 PM] andi15701
+and there is another effect on the shine2
+
+
+[3/28/2024 1:22 PM] andi15701
+on most of my usb ports connected to computer, i cannot charge it
+
+
+[3/28/2024 1:22 PM] andi15701
+it messes up whole hubs
+
+
+[3/28/2024 1:23 PM] andi15701
+apparently due to high charging currents enabled unconditionally in the bootloader
+
+
+[3/28/2024 1:23 PM] andi15701
+and the the eink refresh on top of that and they are not connecting usb to the usb input of the pmic
+
+
+[3/28/2024 1:24 PM] kuratius
+You have a nia c? If so probably check if the refresh/touch issue happens on the c revision when you play around with it next time
+
+
+[3/28/2024 1:24 PM] andi15701
+well, the pmic in the c is the same as in the clara2e
+
+
+[3/28/2024 1:24 PM] kuratius
+ah
+
+
+[3/28/2024 1:24 PM] andi15701
+I am dealing with at the moment
+
+
+[3/28/2024 1:25 PM] andi15701
+I am preparing a script to dump regulator state via userspace
+
+
+[3/28/2024 1:26 PM] andi15701
+so we can cross-check things on the devices
+
+
+[3/28/2024 2:33 PM] andi15701
+Someone ported a near-mainline kernel to the  Tolino Vision 4 HD using the same touchscreen chip
+
+
+[3/28/2024 2:33 PM] andi15701
+but I did not hear any trouble
+
+
+[3/28/2024 2:51 PM] kuratius
+If you can, maybe ask them to check for that specific issue (like e.g. touch screen position jitter caused by refreshes)
+
+
+[3/28/2024 2:51 PM] kuratius
+could have just gone unnoticed since it only appears in the corners
+
+
+[3/28/2024 2:52 PM] kuratius
+I uploaded a video you can maybe show them
+
+
+[3/28/2024 2:53 PM] kuratius
+https://discord.com/channels/809205711778480158/1095426950811619418/1141404691910115449
+
+
+[3/29/2024 5:32 PM] szybet
+IF you want the testing to speed up on my side, write direct instructions so a linux newbie can do that, so @Kitkat / Szybet ( sometimes ) will be able to do that himself
+
+
+[3/29/2024 5:32 PM] szybet
+also, is booting a custom uboot dangeroeus? i think not, dts stuff is handled in the kernel so regulators too, right?
+
+
+[3/29/2024 5:35 PM] andi15701
+modern uboot also has a dtb but does not use much of it, so only the stuff needed for the disks, and here we have no regulator drivers in there
+
+
+[3/29/2024 5:37 PM] andi15701
+custom uboot is only dangerous when you have no way to go back
+
+{Reactions}
+👍 
+
+[3/29/2024 6:49 PM] tux_linux
+even if the uboot fries regulators up?
+
+
+[3/29/2024 7:21 PM] andi15701
+well, things have to be in some default configuration allowing card access
+
+
+[3/29/2024 7:22 PM] andi15701
+even for loading u-boot
+
+
+[3/29/2024 7:22 PM] andi15701
+so u-boot often does not need to touch that
+
+
+[3/29/2024 7:49 PM] szybet
+that what i thought too
+
+
+[3/29/2024 8:37 PM] andi15701
+for just speed testing, I am playing around with stock u-boot on my libra h2o
+
+
+[3/29/2024 8:37 PM] andi15701
+eBR-1A # ums 0 mmc 0
+
+
+[3/29/2024 8:38 PM] andi15701
+so no fancy measures to get into that method in a nice was
+
+
+[3/29/2024 8:41 PM] andi15701
+# buffer -z 512k </dev/zero >/dev/sdb
+    1646080K,       2621K/s
+
+
+[3/29/2024 8:41 PM] andi15701
+so not the fastest
+
+
+[3/29/2024 8:42 PM] andi15701
+I'll cross check with kernel
+
+
+[3/29/2024 8:43 PM] andi15701
+that is klling the emmc contents
+
+
+[3/29/2024 8:43 PM] andi15701
+not sd card
+
+
+[3/29/2024 8:47 PM] andi15701
+background uboot might not have the fastest transfer modes
+
+
+==============================================================
+Exported 1,402 message(s)
+==============================================================

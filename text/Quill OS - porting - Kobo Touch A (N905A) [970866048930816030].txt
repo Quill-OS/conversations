@@ -1,0 +1,657 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Touch A (N905A)
+==============================================================
+
+[5/3/2022 3:55 AM] tux_linux
+@Free Radical here will be the place where we can start to port InkBox OS to a Touch A.
+
+
+[5/3/2022 3:55 AM] a.free.radical
+awesome!
+
+
+[5/3/2022 3:55 AM] tux_linux
+I suggest you try InkBox OS on your Touch B before and try to get some basics
+
+
+[5/3/2022 3:56 AM] a.free.radical
+yeah
+thats the plan, just downloading it bnow
+
+{Reactions}
+👍 
+
+[5/3/2022 3:56 AM] a.free.radical
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-D5ABB.png
+
+
+[5/3/2022 3:56 AM] tux_linux
+Do you have access to a serial console?
+
+
+[5/3/2022 3:56 AM] a.free.radical
+serial console?
+
+
+[5/3/2022 3:56 AM] tux_linux
+do you have a raspberry pi?
+
+
+[5/3/2022 3:57 AM] a.free.radical
+yes! (kind of, its complicated)
+
+
+[5/3/2022 3:57 AM] tux_linux
+or maybe you can use one of your kobos as the serial host
+
+
+[5/3/2022 3:57 AM] tux_linux
+but is the raspi gpio usable?
+
+
+[5/3/2022 3:57 AM] a.free.radical
+it is not... its at a family members house for the next few weeks
+
+
+[5/3/2022 3:58 AM] a.free.radical
+i only have vnc access
+
+
+[5/3/2022 3:58 AM] tux_linux
+Ok, we will use a Kobo then
+
+
+[5/3/2022 3:58 AM] a.free.radical
+alrighty then
+
+
+[5/3/2022 3:58 AM] tux_linux
+Pop open the Kobo in the worst physical state you have
+
+
+[5/3/2022 3:58 AM] tux_linux
+you have three A's, right?
+
+
+[5/3/2022 3:59 AM] a.free.radical
+what if the battery does not work?
+
+
+[5/3/2022 3:59 AM] a.free.radical
+will that be okay?
+
+
+[5/3/2022 3:59 AM] tux_linux
+no problem
+
+
+[5/3/2022 3:59 AM] tux_linux
+it powers on?
+
+
+[5/3/2022 3:59 AM] a.free.radical
+hmmm
+let me double check that
+
+
+[5/3/2022 4:01 AM] a.free.radical
+i think it'll need an hour to charge...
+
+
+[5/3/2022 4:02 AM] tux_linux
+well you can take another one
+we won't destroy it anyway
+
+
+[5/3/2022 4:02 AM] a.free.radical
+most of them are dead tbh (got them the other day)
+
+
+[5/3/2022 4:03 AM] tux_linux
+but then why did you want to install inkbox on them?
+
+
+[5/3/2022 4:03 AM] a.free.radical
+because I have no use for 5 regular e readers
+
+
+[5/3/2022 4:03 AM] a.free.radical
+OH dead battery
+
+
+[5/3/2022 4:03 AM] tux_linux
+but at what level are they dead?
+
+
+[5/3/2022 4:03 AM] a.free.radical
+not charged
+
+
+[5/3/2022 4:03 AM] tux_linux
+ok
+
+
+[5/3/2022 4:03 AM] a.free.radical
+needing charge
+
+
+[5/3/2022 4:03 AM] tux_linux
+no problem, touch and minis can work without battery, only with usb cable
+
+
+[5/3/2022 4:04 AM] a.free.radical
+oh?
+
+
+[5/3/2022 4:04 AM] a.free.radical
+on second thought... i may only have 2 kobos
+
+
+[5/3/2022 4:04 AM] tux_linux
+but some touches are complicated to get working without a battery
+
+
+[5/3/2022 4:04 AM] a.free.radical
+what does this mean?
+
+
+[5/3/2022 4:04 AM] tux_linux
+do you have a multimeter?
+
+
+[5/3/2022 4:04 AM] a.free.radical
+no 😦
+
+
+[5/3/2022 4:05 AM] tux_linux
+or voltmeter
+
+
+[5/3/2022 4:05 AM] tux_linux
+ok
+
+
+[5/3/2022 4:05 AM] a.free.radical
+man, we havent even started the porting and this has become complicated enough, so sorry
+
+
+[5/3/2022 4:06 AM] tux_linux
+you don't want to do it?
+
+
+[5/3/2022 4:06 AM] a.free.radical
+no i do!
+
+
+[5/3/2022 4:06 AM] tux_linux
+oh ok
+
+
+[5/3/2022 4:06 AM] a.free.radical
+just trying not to be burdedsome
+
+
+[5/3/2022 4:06 AM] tux_linux
+i've seen more complicated
+
+
+[5/3/2022 4:07 AM] tux_linux
+and we're only getting started
+take a peek at the sony prs-t1 porting thread to see what nightmare we could be facing later
+
+
+[5/3/2022 4:07 AM] a.free.radical
+well i appreciate your patience
+
+{Reactions}
+👍 
+
+[5/3/2022 4:09 AM] a.free.radical
+does the blue light mean it works? (even if it doesnt power on?)
+
+
+[5/3/2022 4:09 AM] tux_linux
+it powers on
+
+
+[5/3/2022 4:09 AM] tux_linux
+and no, it doesn't work
+
+
+[5/3/2022 4:09 AM] tux_linux
+but there might be hope
+
+
+[5/3/2022 4:09 AM] tux_linux
+for that you need a serial console
+
+
+[5/3/2022 4:10 AM] a.free.radical
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/84474FA9-D82C-46F1-B3C5-A10A1C4CF7C6-B0A08.jpg
+
+
+[5/3/2022 4:10 AM] a.free.radical
+This is the ideal kobo to use as a serial console
+
+
+[5/3/2022 4:11 AM] a.free.radical
+do ya think it would work?
+
+
+[5/3/2022 4:11 AM] tux_linux
+yes?
+but if it can power on (boot the system, I mean)
+
+
+[5/3/2022 4:13 AM] a.free.radical
+hmmmm, its not exactly behaving
+i think i'll bite the bullet and use a different kobo
+
+
+[5/3/2022 4:24 AM] tux_linux
+https://www.mobileread.com/forums/showpost.php?p=4185784&postcount=11
+This could be something to do (for Touch A)
+But I think there is another way without shorting any connection
+
+{Embed}
+https://www.mobileread.com/forums/showpost.php?p=4185784&postcount=11
+MobileRead Forums - View Single Post -  Kobo Touch N905 - need exte...
+MobileRead - the resource for mobile geeks seeking information and advice for keeping their gadgets happy.
+
+
+[5/3/2022 4:25 AM] a.free.radical
+is this for serial or battery? (im guessing serial, just being sure)
+
+
+[5/3/2022 4:25 AM] tux_linux
+serial
+
+
+[5/3/2022 4:28 AM] a.free.radical
+wow this is intense
+the touch b is just flashing the file you linked to the sd card yeah?
+
+
+[5/3/2022 4:29 AM] tux_linux
+yes
+
+
+[5/3/2022 4:30 AM] a.free.radical
+i think ill flash the sd card for the B tonight then, head to bed and come back at this tmr
+
+{Reactions}
+👍 
+
+[5/3/2022 4:53 AM] a.free.radical
+ive flashed the sd card
+do i just insert it and hit the reset button on the back with a paperclip?
+
+
+[5/3/2022 4:54 AM] tux_linux
+did you open the kobo?
+you're supposed to replace the **internal** sd card
+
+
+[5/3/2022 4:54 AM] a.free.radical
+internal???
+
+
+[5/3/2022 4:54 AM] a.free.radical
+ohhhhhh
+
+
+[5/3/2022 4:54 AM] a.free.radical
+ok ok
+
+
+[5/3/2022 4:55 AM] a.free.radical
+how do i pull off the back?
+
+
+[5/3/2022 4:56 AM] tux_linux
+credit card
+
+
+[5/3/2022 4:56 AM] tux_linux
+maybe a knife then a credit card
+
+
+[5/3/2022 4:56 AM] a.free.radical
+got it
+
+
+[5/3/2022 4:56 AM] tux_linux
+or something like a credit card
+
+
+[5/3/2022 4:58 AM] a.free.radical
+do i put it in sleep?
+
+
+[5/3/2022 4:58 AM] a.free.radical
+or pwoer off?
+
+
+[5/3/2022 4:58 AM] a.free.radical
+how to power off? i guess is my question
+
+
+[5/3/2022 4:59 AM] tux_linux
+slide power button for a long time
+
+
+[5/3/2022 5:01 AM] a.free.radical
+how do you pull out the sd card? its pretty wedged in there
+
+
+[5/3/2022 5:01 AM] tux_linux
+slide the sd card holder to the left or right, don't recall, then lift it up, it rotates
+
+
+[5/3/2022 5:02 AM] a.free.radical
+ohhhh tyty
+
+{Reactions}
+👍 
+
+[5/3/2022 5:03 AM] a.free.radical
+it booted! hell yeah
+
+{Reactions}
+🎉 
+
+[5/3/2022 5:03 AM] a.free.radical
+ok imma head to bed... ttyl
+
+{Reactions}
+👍 
+
+[5/3/2022 5:08 AM] tux_linux
+Don't forget to update it with http://23.163.0.39/bundles/inkbox/native/update/1.9/n905b/inkbox-update-1.9.upd.isa
+Update instructions: https://github.com/Kobo-InkBox/inkbox#how-do-i-upgrade-inkbox
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox
+GitHub - Kobo-InkBox/inkbox: An open-source, Qt-based eBook reader ...
+An open-source, Qt-based eBook reader for Kobos. Contribute to Kobo-InkBox/inkbox development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/inkbox-25DEA
+
+
+[5/3/2022 5:08 AM] a.free.radical
+ahh yes
+
+
+[5/3/2022 5:08 AM] a.free.radical
+nearly forgot
+
+
+[5/3/2022 5:08 AM] a.free.radical
+thx
+
+{Reactions}
+👍 
+
+[2/17/2023 1:46 PM] szybet
+@emulti here
+
+
+[2/17/2023 6:06 PM] emulti_
+yes will be in touch when serial cable arrives and is installed. Could be a few days
+
+
+[2/17/2023 6:06 PM] szybet
+im not sure about the uart voltage for this model
+
+
+[2/17/2023 6:06 PM] szybet
+be aware
+
+
+[2/17/2023 6:06 PM] szybet
+propably 3.3
+
+
+[2/21/2023 4:43 AM] emulti_
+I am also guessing 3.3. Not easy to find here, there is no eBay. It's coming from China.
+
+
+[2/21/2023 4:44 AM] emulti_
+A question about Inkbox: does the signing infrastructure mean that I can only run packages signed by the original developers? And can't modify the root filesystem at all unless signed by same?
+
+
+[2/21/2023 6:28 AM] szybet
+No, you can use your own keys
+
+
+[2/21/2023 6:31 AM] szybet
+And you can install alpine packages just fine
+
+
+[2/21/2023 6:32 AM] szybet
+Or even modify the filesystem
+
+
+[2/21/2023 6:32 AM] szybet
+( with root edition of inkbox ), the regular user edition protects this
+
+
+[2/21/2023 6:33 AM] szybet
+Signing is only for updates, to verify they are valid
+
+
+[2/22/2023 4:04 AM] tux_linux
+You can disable signature verification almost completely with a developer key
+I need to write a wiki page about this
+
+
+[2/22/2023 4:26 AM] emulti_
+It seems I could be out of luck: Kobo have not published the u-boot source code for the early N905 with internal EMMC and AR6003 Wifi like mine. Only "later Touch models".  This could also explain the non-working wifi.
+
+
+[2/22/2023 4:26 AM] tux_linux
+You have every right to ask for it
+
+
+[2/22/2023 4:27 AM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/issues/122
+Example
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/issues/122
+Kobo Clara 2E kernel sources · Issue #122 · kobolabs/Kobo-Reader
+Released last September 22nd, this new model doesn&#39;t have any public kernel sources in this repository. Providing this device runs a Linux kernel, this would violate the GPL license it has ...
+/mnt/data/projects/git/conversations/media/122-6F482
+
+
+[2/22/2023 4:28 AM] tux_linux
+Which led to https://github.com/kobolabs/Kobo-Reader/commit/940502e1ad63a9c309f00417c47e4ec62d11eee4
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/commit/940502e1ad63a9c309f00417c47e4ec62d11eee4
+kind demands for clara2e · kobolabs/Kobo-Reader@940502e
+/mnt/data/projects/git/conversations/media/940502e1ad63a9c309f00417c47e4ec62d11eee4-9CEDF
+
+
+[2/22/2023 4:29 AM] tux_linux
+You checked there? https://github.com/kobolabs/Kobo-Reader/tree/master/hw%2Fimx507
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw%2Fimx507
+Kobo-Reader/hw/imx507 at master · kobolabs/Kobo-Reader
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/Kobo-Reader-867F2
+
+
+[2/22/2023 4:33 AM] emulti_
+Have opened an issue requesting kernel and u-boot source code.
+
+
+[2/22/2023 4:35 AM] emulti_
+The folder you linked is for "... newer Touch".
+
+
+[2/22/2023 4:36 AM] emulti_
+I suppose they will confirm if it's also for the earlier model. It's not clear to me in the u-boot Makefile which config to use.
+
+
+[2/22/2023 4:44 AM] emulti_
+I can try building with imx50_rdp_config. What Toolchain do you recommend to use?
+
+
+[2/22/2023 11:34 AM] szybet
+arm-linux-gnueabihf from kernel repo
+
+
+[2/23/2023 4:33 AM] emulti_
+Sources apparently from hw/imx508/cls folder. There are several mx51_product_trilogy_defconfig with different hardware configs especially wifi. Only one builds the ar6000.ko module so I guess it's that one.  There seems to be no HWCONFIG record on this model (that part of the storage image is all 0x00) and the partitions start at 32768. So I don't understand how the kernel and u-boot find out what hardware is connected. There is no DTB?
+
+
+[2/23/2023 4:35 AM] tux_linux
+DTB is how we do things today
+Here we are in prehistoric times
+
+
+[2/23/2023 10:17 AM] emulti_
+.config looks sane , but
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf
+gives:
+
+
+[2/23/2023 10:17 AM] emulti_
+hey why can't I copy/paste in here? That's a bit limiting.
+
+
+[2/23/2023 10:25 AM] emulti_
+$ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+make[1]: 'include/generated/mach-types.h' is up to date.
+  CC      kernel/bounds.s
+In file included from include/linux/compiler.h:42:0,
+                 from include/linux/stddef.h:4,
+                 from include/linux/posix_types.h:4,
+                 from include/linux/types.h:14,
+                 from include/linux/page-flags.h:8,
+                 from kernel/bounds.c:9:
+include/linux/compiler-gcc.h:91:1: fatal error: linux/compiler-gcc7.h: No such file or directory
+ #include gcc_header(__GNUC__)
+ ^~~~
+compilation terminated.
+make[1]: *** [/home/chris/Documents/Products/kobo/linux-2.6.35.3/./Kbuild:36: kernel/bounds.s] Error 1
+make: *** [Makefile:924: prepare0] Error 2
+
+
+[2/23/2023 10:26 AM] emulti_
+the Arm toolchain I have installed is a 64-bit one. Could that be the reason?
+
+
+[2/23/2023 10:27 AM] emulti_
+To make paste fnctional in Discord I had to enable 'use legacy chat settings' in Accessibility.  Strange.
+
+
+[2/23/2023 10:35 AM] szybet
+You can?
+
+
+[2/23/2023 10:36 AM] szybet
+Weird
+
+
+[2/23/2023 10:37 AM] szybet
+You use the one from inkbox kernel repo?
+
+
+[2/23/2023 10:37 AM] szybet
+Hmmm try other toolchains then
+
+
+[2/23/2023 10:03 PM] tux_linux
+Ctrl+Shift+C in terminal maybe ?
+
+
+[2/24/2023 12:46 AM] the.mightydill
+Weird it works for me on Linux
+
+
+[2/24/2023 12:47 AM] the.mightydill
+Sorry I just jumped in haha
+
+
+[2/24/2023 2:52 AM] emulti_
+other toolchains from Inkbox kernel repo also fail during compilation. The one that got furthest was arm-nickel-linux-gnueabihf-  which dies with 
+  CC      kernel/itimer.o
+  TIMEC   kernel/timeconst.h
+Can't use 'defined(@array)' (Maybe you should just omit the defined()?) at kernel/timeconst.pl line 373.
+make[1]: *** [/home/emulti/Documents/Products/kobo/linux-2.6.35.3/kernel/Makefile:138: kernel/timeconst.h] Error 255
+make: *** [Makefile:884: kernel] Error 2
+
+ I will try some from the Koboreader repo. Guess I need a toolchain of similar age to the kernel source (12 years!)
+
+
+[2/24/2023 2:55 AM] emulti_
+I wonder if this is a waste of time. Maybe better to try and generate a DTB ( found one online for the original 2012 Aura which is quite similar in some ways to the Touch) and try a more recent kernel. Steep learning curve for me on that but may be worth it.
+
+
+[2/24/2023 3:03 AM] tux_linux
+it is a common error
+
+
+[2/24/2023 3:04 AM] tux_linux
+https://patchwork.kernel.org/project/linux-kbuild/patch/1353269117-39917-1-git-send-email-pefoley2@verizon.net/
+
+
+[2/24/2023 3:06 AM] emulti_
+thanks! on we go
+
+
+[2/24/2023 3:27 AM] emulti_
+OK that works now to add usb networking support so I can at least get into the thing without wifi
+
+
+[2/24/2023 3:41 AM] tux_linux
+use serial port instead?
+
+
+[2/24/2023 3:44 AM] emulti_
+cable not here yet. 
+Why when I enable usb ethernet gadget support and save the .config does make uImage force me to start line-by-line configuration from scratch?
+
+
+[2/24/2023 4:14 AM] emulti_
+nvm, I started again from scratch and it built including the g_ether.ko that is missing from my device.
+
+
+[2/24/2023 7:06 AM] szybet
+I dont remember, you meed to clean often / specofy the arch always
+
+
+[3/1/2023 3:42 PM] szybet
+Still waiting for serial connector?
+
+
+[3/2/2023 1:10 PM] szybet
+Dont die bro
+
+
+[3/5/2023 2:55 AM] emulti_
+Got the cable now I just need the time to solder it in. In the meantime have been experimenting with kernel options and Buildroot.
+
+{Reactions}
+👍 (2) 
+
+[3/15/2023 4:44 AM] emulti_
+still here but all my free time is taken up with fixing the brakes on my car. I'll get round to it eventually!
+
+{Reactions}
+👍 (2) 
+
+==============================================================
+Exported 139 message(s)
+==============================================================

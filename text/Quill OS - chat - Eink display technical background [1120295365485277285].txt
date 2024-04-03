@@ -1,0 +1,406 @@
+==============================================================
+Guild: Quill OS
+Channel: Discussion / chat / Eink display technical background
+==============================================================
+
+[6/19/2023 5:35 PM] kuratius
+
+
+
+[6/19/2023 5:35 PM] kuratius
+First message
+
+
+[6/19/2023 5:35 PM] kuratius
+https://patentimages.storage.googleapis.com/32/c3/b9/ad5a77e93737f5/US5961804.pdf
+
+
+[6/19/2023 5:36 PM] kuratius
+https://confit.atlas.jp/guide/event-img/idw2019/EP1-3/public/pdf_archive?type=in
+
+
+[6/19/2023 5:36 PM] kuratius
+https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)/12%3A_Chromatographic_and_Electrophoretic_Methods/12.07%3A_Electrophoresis
+
+{Embed}
+https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)/12%3A_Chromatographic_and_Electrophoretic_Methods/12.07%3A_Electrophoresis
+12.7: Electrophoresis
+Electrophoresis is a class of separation techniques in which we separate analytes by their ability to move through a conductive medium—usually an aqueous buffer—in response to an applied …
+/mnt/data/projects/git/conversations/media/1641605566-social-share-304DC.png
+
+
+[6/19/2023 6:03 PM] kuratius
+Some ideas: You can probably estimate the voltage required for a given refresh rate using Stokes Law.
+
+You need to move the black pigment a specific distance s in time t to achieve a color change.
+Meaning a velocity v=s/t
+
+We know from stokes law that for spheres F=6π eta R v 
+Electric force on a charged particle is
+qE
+
+E is voltage/distance
+so 
+
+
+qE=6π eta R v 
+qV/s=6π eta R s/t
+
+
+V=6π eta R s^2/(qt).
+t=1/framerate (let's call it f)
+so V=6π eta R s^2 f/q
+
+So for double the framerate you would expect double the voltage. Now the question is, when does higher voltage lead to damage?
+And where does the damage occur? 
+
+Also typically power draw scales with the square of the voltage, so you would expect that 2x voltage means 4x power draw.
+
+The other thing to consider is that Stokes Law is an approximation for low velocities, you would expect that for high velocities it is invalid and you may have a quadratic relationship between force and velocity, so your voltage may scale with s^3/t^2, (meaning double the framerate is now 4x the voltage and 8x 16x the power draw) (edited)
+
+
+[6/19/2023 6:03 PM] kuratius
+from  here: https://discord.com/channels/809205711778480158/958419944243089479/1097280871209386157
+
+
+[6/19/2023 6:04 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/US5961804-275B1.pdf
+
+
+[6/19/2023 6:04 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/EP1-3-297F4.pdf
+
+
+[6/19/2023 6:05 PM] kuratius
+(pdf backup uploads in case links get taken down)
+
+
+[6/19/2023 6:19 PM] kuratius
+references of this one are probably a gold mine for more details
+
+
+[6/19/2023 6:19 PM] kuratius
+also note to self, check what you get when integrating a waveform
+
+
+[6/20/2023 1:05 AM] kuratius
+https://m.youtube.com/watch?v=MsbiO8EAsGw
+
+{Embed}
+Applied Science
+https://www.youtube.com/watch?v=MsbiO8EAsGw
+E-paper hacking: fastest possible refresh rate
+How to modify E-paper display firmware to get 3Hz update rate.
+
+Links to all datasheets and sources: http://benkrasnow.blogspot.com/2017/10/fast-partial-refresh-on-42-e-paper.html
+
+Patreon:  https://www.patreon.com/AppliedScience
+/mnt/data/projects/git/conversations/media/maxresdefault-3CC26.jpg
+
+
+[6/20/2023 1:20 AM] kuratius
+https://benkrasnow.blogspot.com/2017/10/fast-partial-refresh-on-42-e-paper.html?m=1
+
+{Embed}
+https://benkrasnow.blogspot.com/2017/10/fast-partial-refresh-on-42-e-paper.html?m=1
+Fast partial refresh on 4.2" E-paper display from Waveshare / Good ...
+Google Drive link with Arduino firmware used in this project:   https://drive.google.com/drive/folders/0B4YXWiqYWB99UmRYQi1qdXJIVFk?reso...
+/mnt/data/projects/git/conversations/media/AByxGDSBJF2XL7vL87OtVGcTCI-nYmMQF96cERsBn8-16446
+
+
+[6/20/2023 6:51 PM] kuratius
+I am not sure this guy knows what he's talking about
+The format he states makes some sense, but it's really fucking weird and when I plot the waveforms described I get really weird stuff
+Either I am interpreting the voltage value wrong or the waveform format is not as described in the video
+
+
+[6/20/2023 7:19 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/wPi0HsxHQXuwAAAABJRU5ErkJggg-B9D75.png
+
+
+[6/20/2023 7:19 PM] kuratius
+these are the waveforms from his video
+
+
+[6/20/2023 7:20 PM] kuratius
+WW and BW are identical
+
+
+[6/20/2023 7:20 PM] kuratius
+as are BB and WB
+
+
+[6/20/2023 7:22 PM] kuratius
+and when I apply the same formatting to the waveforms from the badger2040, I get
+
+
+[6/20/2023 7:22 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/z6AQCwkGsvywAAho5yBwALUe4AYCHKHQAsRLkDgIUo-6DB0D.png
+
+
+[6/20/2023 7:23 PM] kuratius
+BW and WW are identical
+
+
+[6/20/2023 7:23 PM] kuratius
+hmm
+
+
+[6/20/2023 7:23 PM] kuratius
+maybe they are correct and I just have a wrong voltage parser
+
+
+[6/20/2023 7:23 PM] kuratius
+looking at it now
+
+
+[6/20/2023 7:23 PM] kuratius
+but still weird that it has identical waveforms
+
+
+[6/20/2023 10:54 PM] kuratius
+http://dmitry.gr/?r=05.Projects&proj=29.%20eInk%20Price%20Tags
+
+{Embed}
+http://dmitry.gr/?r=05.Projects&proj=29.%20eInk%20Price%20Tags
+Hacking eInk Price Tags - Dmitry.GR
+Dmitry.GR: Wireless picture frames that run for years on batteries
+
+
+[6/23/2023 12:35 AM] kuratius
+Was bored and solved the differential equation for the velocity and position
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Eink-movement-2057C.png
+
+
+[6/23/2023 12:40 AM] kuratius
+If I figure out the relationship between opacity and position+particle size, it may be possible to just curve fit and not care about knowing exact parameters.
+
+This assumes viscosity is constant btw, hopefully that's a decent enough assumption if we always run a zig zag waveform to get it loosen up a bit
+
+
+[6/23/2023 12:54 AM] kuratius
+Technique for getting 2 gray levels:
+Drive display to white with BW waveform
+
+Lie to display about previous state 
+Drive some pixels to black using WB waveform to update
+Pixels that remain white should use BW to update.
+Insert BB and WW waveforms that have adjusted timings,  but not voltages (due to unknown format), use BB to drive white pixels gray svade 1, WW to drive black pixels gray shade 2.
+
+
+[7/3/2023 7:05 PM] kuratius
+Simplified model: ignore higher order scattering, assume black ink acts like a perfect absorber, then the percentage  of reflected light is given by
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20230703-190533_Squid-D94A6.png
+
+
+[7/3/2023 7:06 PM] kuratius
+Derived by assuming you lose/scatter a certain % of light per m
+
+
+[7/3/2023 7:06 PM] kuratius
+Then integrating over the path it has to travel until it hits the wall
+
+
+[7/3/2023 7:09 PM] kuratius
+Todo: look up mapping of light intensity to gray shades
+Replace d with expression from equation of motion
+
+
+[7/3/2023 7:12 PM] kuratius
+Plot this and see what it looks like,figure out if some variables can be ignored or obtained from a curve fit
+
+This model is probably not ideal, there are some light transport processes and diffuse scattering I need to look up to make it better, but at least it doesn't give garbage
+
+
+[7/3/2023 7:14 PM] kuratius
+For d=0 the Black wall is at the top so it returns 0
+For d=infinity it returns 1, so basicslly white bdcause thd black wall is infinitely fsr away
+
+
+[7/3/2023 7:18 PM] kuratius
+Test procedure would be to start with screen in black position,  then measure resulting color for various voltages and times that the voltage is applied
+
+Should give a good fit if done right and those fit parameters would roughly predict the response of the eink screen to arbitrary waveforms
+
+
+[7/4/2023 8:21 PM] kuratius
+This technically shouldn't say s_0 but some constant C  that depends on s_0
+
+
+[7/4/2023 11:08 PM] kuratius
+@NiLuJe Since you're in this thread, have you ever experimented with voltages or timings on eink displays?
+Does this look plausible to you? Y axis is basically whiteness or something close to it. Units are arbitrary, just looking at it qualitatively
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/gXP4mIiEgJvpNBRERESnDIICIiIiU4ZBAREZESHDKI-CCEC8.png
+
+
+[7/4/2023 11:11 PM] kuratius
+this is with 1/1000 the mass I was using before
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/vgJAABMcJIBAABMEBkAAMAEkQEAAEwQGQAAwASRAQA-815D9.png
+
+
+[7/5/2023 2:51 AM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/JIST_2002_art00012_Richard-C_-Lean-F8C8C.pdf
+
+
+[7/5/2023 3:04 AM] kuratius
+has some experimental values for the parameters, nice
+
+
+[7/5/2023 4:25 PM] kuratius
+apparently some displays are driven with 90V
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-C29AB.png
+
+
+[7/5/2023 4:32 PM] szybet
+Thats dangerous?
+
+
+[7/5/2023 4:32 PM] szybet
+Also how do they get such high voltage with small smd elements
+
+
+[7/5/2023 4:33 PM] kuratius
+I dunno, probably depends on the dimensions of the cell
+
+
+[7/5/2023 4:33 PM] kuratius
+ultimately you care about the electric field, not directly the voltage
+
+
+[7/5/2023 4:34 PM] kuratius
+so if these were much bigger cells for research purposes and they needed them to refresh fast, and they don't apply the voltage for very long by oscillating it constantly it's probably safe
+
+
+[7/5/2023 4:34 PM] kuratius
+for the cells themselves I mean
+
+
+[7/5/2023 4:35 PM] kuratius
+Electrid field is Voltage/cell size
+
+
+[7/5/2023 4:36 PM] kuratius
+so double cell size=double voltage possible
+
+
+[7/5/2023 4:38 PM] kuratius
+this display in particular is probably a research thing, so the electronics for generating the voltage might not have to be on the board
+
+
+[7/5/2023 4:38 PM] kuratius
+and probably you can get really high voltage super easily when connected to main power
+
+
+[7/5/2023 5:44 PM] kuratius
+also the cells they used are fucking weird, they used blue fluid and white pigments
+
+
+[7/5/2023 5:44 PM] kuratius
+why
+
+
+[7/5/2023 5:45 PM] kuratius
+now I have to redo the derivation for the reflected light if I want to fit their data
+
+
+[7/5/2023 5:45 PM] kuratius
+cant they use black like normal people?
+
+
+[7/5/2023 5:45 PM] szybet
+pens are most often blue
+
+
+[7/5/2023 5:45 PM] szybet
+¯\_(ツ)_/¯
+
+
+[7/5/2023 8:53 PM] ninuje
+Way above my paygrade. I scored 2 out of 20 on my maths test way back when in the <insert name of the diploma for entry into higher education in your country>.
+
+
+[7/5/2023 8:54 PM] ninuje
+There's a reason I never went into CS in the first place; this is mostly it: I'm terrible at maths.
+
+
+[7/5/2023 8:54 PM] ninuje
+I could mostly follow basic physics or chemistry if I cared, but as soon as maths enter the fray, you lose me there too.
+
+
+[7/5/2023 8:55 PM] ninuje
+(TL;DR: I'm an English lit major)
+
+
+[7/16/2023 9:20 PM] szybet
+@Kuratius you may be interested
+https://github.com/Szybet/eink-waveforms/tree/main
+- in donating your wafeform ( yes i know you already sended it, but you need to provide the SN number from the package anyway )
+- to copy all the findings from this thread there - discord is a knowledge dark hole
+
+{Embed}
+https://github.com/Szybet/eink-waveforms/tree/main
+GitHub - Szybet/eink-waveforms
+Contribute to Szybet/eink-waveforms development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/eink-waveforms-0A617
+
+
+[7/16/2023 9:22 PM] szybet
+the restore command doesnt work crap
+
+
+[7/16/2023 9:37 PM] szybet
+ok now
+
+
+[7/17/2023 8:18 PM] kuratius
+corrected the offset constant I mentioned before
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/EInk_-_Page_2-70424.png
+
+
+[1/18/2024 6:47 AM] kuratius
+Relevant https://github.com/sqfmi/badgy/tree/master/examples/grayscale
+
+{Embed}
+https://github.com/sqfmi/badgy/tree/master/examples/grayscale
+badgy/examples/grayscale at master · sqfmi/badgy
+Home of Badgy - IoT Badge. Contribute to sqfmi/badgy development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/badgy-6D6C7
+
+
+[3/28/2024 2:48 PM] kuratius
+Description of waveforms in the watchy controller and commands to upload custom LUTs
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/SSD1681V0.13_Spec-C6421.pdf
+
+
+==============================================================
+Exported 69 message(s)
+==============================================================

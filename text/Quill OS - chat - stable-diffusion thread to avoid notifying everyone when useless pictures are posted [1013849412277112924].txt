@@ -1,0 +1,307 @@
+==============================================================
+Guild: Quill OS
+Channel: Discussion / chat / stable-diffusion thread to avoid notifying everyone when useless pictures are posted
+==============================================================
+
+[8/29/2022 6:35 PM] tux_linux
+A sea otter giving a press conference
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/00046-B81CD.png
+
+{Reactions}
+😍 (2) 
+
+[8/29/2022 7:24 PM] aryetis
+So I wanted a "man drowned by kitties" and instead I typed "man drawn by kitties". There you go
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/20220829192148_110048873-E7254.png
+
+
+[8/29/2022 7:24 PM] tux_linux
+that's great
+
+
+[8/29/2022 7:24 PM] tux_linux
+let me try the same thing here
+
+
+[8/29/2022 7:35 PM] aryetis
+Welp stable-diffusion doesn't work in command lines for me 😢
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-C4D76.png
+
+
+[8/29/2022 7:35 PM] aryetis
+Nice logs ...
+
+
+[8/29/2022 7:36 PM] tux_linux
+try in tty
+
+
+[8/29/2022 7:36 PM] tux_linux
+without your display manager
+
+
+[8/29/2022 7:36 PM] tux_linux
+now it works for me on kde but initially I had to use it in tty
+
+
+[8/29/2022 7:37 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/00057-1AA47.png
+
+
+[8/29/2022 7:38 PM] aryetis
+I'm using WSL :p soooooo
+
+
+[8/29/2022 7:39 PM] tux_linux
+oh ok
+
+
+[8/29/2022 7:39 PM] tux_linux
+i think you need to set memory settings for wsl
+
+
+[8/29/2022 7:39 PM] aryetis
+hmmmmmmm what
+
+
+[8/29/2022 7:43 PM] aryetis
+I might have found the problem lol
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-2B8AE.png
+
+
+[8/29/2022 7:44 PM] aryetis
+I was pretty sure I had them installed already
+
+
+[8/29/2022 7:44 PM] aryetis
+(it's supposed to be nvidia cuda driver stuff)
+
+{Reactions}
+👍 
+
+[8/29/2022 8:09 PM] aryetis
+I SIGSEG'd the nvidia cuda installer kek
+
+
+[8/29/2022 8:11 PM] tux_linux
+welp
+
+
+[8/29/2022 8:29 PM] aryetis
+wait what ? it's installed after all ?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-E45ED.png
+
+{Reactions}
+🤨 
+
+[8/29/2022 9:46 PM] aryetis
+been fighting for 10 minutes with stable-diffusion, anaconda and some advanced gui... Turns out the path is hardcoded to the default installation folder. I'm gonna break something... or someone.
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-CD001.png
+/mnt/data/projects/git/conversations/media/unknown-F85A6.png
+
+{Reactions}
+😄 
+
+[8/29/2022 9:47 PM] aryetis
+well at least they give us the option to add our own custom path... but this error message --" wow
+
+
+[8/29/2022 10:16 PM] aryetis
+Welp anyways, using this repo <https://github.com/hlky/stable-diffusion-webui> (still running on Nvidia GPU) I hit 5it/s whereas before using the GRisk GUI I was averaging at 3it/s and sometimes was hitting 5.
+Also now I've got access to img2img (still don't know how to make it works tho), GFPGAN for better faces, and RealESRGAN for upscaling.
+
+
+[8/29/2022 10:20 PM] tux_linux
+great
+
+
+[8/29/2022 10:22 PM] aryetis
+I can loopback the output to the entry ! Yes oh that's so cool
+7it/s using k_dpm_2 😮
+
+
+[8/29/2022 10:27 PM] aryetis
+I figured out img2img
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-37099.png
+
+
+[8/29/2022 10:27 PM] tux_linux
+cool
+
+
+[8/30/2022 6:20 PM] the.mightydill
+:fr: what
+
+
+[9/4/2022 9:36 PM] szybet
+https://youtu.be/Bo61vlZ3c9Q
+
+{Embed}
+Mental Outlaw
+https://www.youtube.com/watch?v=Bo61vlZ3c9Q
+The Joy of Algorithms, With Bot Ross
+Hi there friends, today I bring you a new kind of video, "The Joy of Algorithms" with Bot Ross.  In this video I use stable diffusion to create different kinds of art very quickly.  You can download stable diffusion to your desktop at the links below
+
+Stable Diffusion
+https://github.com/CompVis/stable-diffusion
+
+Guide to setup GUI
+https://github...
+/mnt/data/projects/git/conversations/media/maxresdefault-7AF76.jpg
+
+
+[9/4/2022 9:36 PM] szybet
+1080 TI?
+
+
+[9/4/2022 9:36 PM] szybet
+so maybe 1050TI will be not that bad?
+
+
+[9/4/2022 9:36 PM] tux_linux
+how much vram
+
+
+[9/4/2022 9:37 PM] szybet
+11 GB
+
+
+[9/4/2022 9:37 PM] tux_linux
+yes, 1080ti is ok
+
+
+[9/4/2022 9:37 PM] tux_linux
+1050ti has 4 right?
+
+
+[9/4/2022 9:37 PM] tux_linux
+oom for you there
+
+
+[9/4/2022 9:37 PM] szybet
+yea
+
+
+[9/4/2022 9:37 PM] szybet
+crap
+
+
+[9/4/2022 9:37 PM] tux_linux
+you can try on your cpu
+
+
+[9/4/2022 9:37 PM] tux_linux
+it works
+
+
+[9/4/2022 9:37 PM] tux_linux
+it's just a bit slower
+
+
+[9/4/2022 9:37 PM] szybet
+how to add these 30
+
+
+[9/4/2022 9:37 PM] tux_linux
+instead of 4 secs it's 10 minutes
+
+
+[9/4/2022 9:37 PM] tux_linux
+but it's still bearable
+
+
+[9/4/2022 9:38 PM] tux_linux
+?
+
+
+[9/4/2022 9:38 PM] szybet
+to 1050 ;p
+
+
+[9/4/2022 9:39 PM] tux_linux
+these 30 what
+
+
+[9/4/2022 9:39 PM] tux_linux
+oh, to 1080
+
+
+[9/4/2022 9:39 PM] szybet
+number
+
+
+[9/4/2022 9:39 PM] szybet
+a joke
+
+
+[9/4/2022 9:39 PM] tux_linux
+i guess you got to buy a new one...
+
+
+[9/4/2022 9:40 PM] szybet
+and resolder it to the laptop
+
+
+[9/4/2022 9:40 PM] szybet
+🥴
+
+
+[9/4/2022 10:39 PM] aryetis
+I mean I already told that it can run on 4gb if you tweak it <https://rentry.org/GUItard>  . But yeah it's a coin flip.
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-7A247.png
+
+
+[9/4/2022 10:39 PM] tux_linux
+oh, cool
+
+
+[9/4/2022 10:40 PM] tux_linux
+though 448x448 vs 576x576
+
+
+[5/6/2023 3:09 AM] aryetis
+necrobumping. I've found this lora that is probably helpful if you're still experimenting with SD to get a logo for Inkbox :p
+
+
+[5/6/2023 3:09 AM] aryetis
+https://civitai.com/models/57452/anylogo
+
+{Embed}
+https://civitai.com/models/57452/anylogo
+Anylogo - v1.0 | Stable Diffusion LoRA | Civitai
+LOGO设计类LORA 测试过和各类主流模型结合不错 可以添加你喜欢的各种元素进去，测试过基本都会有体现 如果需要添加自己的元素进去请降低权重0.6-0.75都会有不错的体现 支持手绘草图进入图生图配合tag生成对应的logo 也可以输入你的logo草图进行细化 此模型的设计风格较为固定 如有...
+/mnt/data/projects/git/conversations/media/c25a7194-d398-49bb-b3c2-1c8f1314a15e-8238E.jpeg
+
+
+[5/6/2023 3:10 AM] aryetis
+I might install it tomorrow and see what I can get out of it.
+
+
+[5/6/2023 3:11 AM] aryetis
+I've spent way too much time on SD so feel free to ask me anything btw.
+
+{Reactions}
+👍 
+
+==============================================================
+Exported 60 message(s)
+==============================================================

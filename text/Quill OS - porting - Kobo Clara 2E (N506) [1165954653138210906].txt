@@ -1,0 +1,108 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Clara 2E (N506)
+==============================================================
+
+[10/23/2023 12:07 PM] szybet
+here
+
+
+[10/23/2023 12:07 PM] szybet
+first read other porting threads to understand what is needed
+
+
+[10/23/2023 12:08 PM] szybet
+kobo nia's threads are good to start with
+
+
+[10/23/2023 12:08 PM] szybet
+@nisirfalas
+
+
+[10/28/2023 10:15 PM] andi15701
+there is some 5.16 fork of mainline linux
+
+
+[10/28/2023 10:15 PM] andi15701
+for it
+
+
+[10/28/2023 10:15 PM] andi15701
+based on my works
+
+
+[10/28/2023 10:15 PM] andi15701
+including u-boot
+
+
+[10/28/2023 10:16 PM] andi15701
+so that might be helpful
+
+
+[10/28/2023 10:16 PM] andi15701
+first step: a good documentation how to get the uSD card out....
+
+
+[10/29/2023 8:07 AM] nisirfalas
+I read some parts of the Kobo Nia threads and I think I can try with Kobo Clara 2E. I'll be home soon and can probably start to open it middle / end of next week. Will report back about how to get the SD card out. Thanks.
+
+
+[3/27/2024 7:37 PM] andi15701
+some working results:
+
+
+[3/27/2024 7:37 PM] andi15701
+there is an A and B here too
+
+
+[3/27/2024 7:37 PM] andi15701
+difference EPD PMIC
+
+
+[3/27/2024 7:38 PM] andi15701
+SY7636 vs. JD9930
+
+
+[3/27/2024 7:38 PM] andi15701
+can probably detected in u-boot
+
+
+[3/27/2024 7:40 PM] andi15701
+which model do you have?
+
+
+[3/27/2024 7:40 PM] andi15701
+I have B
+
+
+[3/27/2024 7:56 PM] szybet
+well ping him
+
+
+[3/27/2024 7:56 PM] szybet
+@nisirfalas
+
+
+[3/29/2024 5:24 PM] andi15701
+btw:
+
+
+[3/29/2024 5:24 PM] andi15701
+fake_s1d13522_initEx3:VCOM from HWCONFIG 0xff15=>-235 10mV,-2350000 uV
+
+
+[3/29/2024 5:25 PM] andi15701
+that is on the b different from anything else I have seen before, usually there is a value stored non-volatile in the epd pmic
+
+
+[3/29/2024 5:26 PM] andi15701
+not sure about the implications yet
+
+
+[3/29/2024 11:04 PM] andi15701
+first picture with some recent kernel on the B, was relaxed enough with dealing with the dirty jd9930 regulator code
+
+
+==============================================================
+Exported 25 message(s)
+==============================================================

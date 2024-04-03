@@ -1,0 +1,5647 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Aura H2O (N250)
+==============================================================
+
+[5/6/2022 11:45 PM] tux_linux
+@pibaoi welcome to the porting thread
+
+
+[12/3/2022 9:35 AM] jeremiah_weeds
+I have this ereader, but not sure how to start helping with porting
+
+
+[12/4/2022 3:01 PM] szybet
+Oh sory
+
+
+[12/4/2022 3:01 PM] szybet
+i didn't saw the message
+
+
+[12/4/2022 3:01 PM] szybet
+well maybe look at the clara porting thread when atro began, you will have an idea of whats needed
+
+
+[12/4/2022 10:12 PM] szybet
+@jeremiah_weeds pinging you so you see the message
+
+
+[12/6/2022 6:33 AM] szybet
+wake up samurai
+
+
+[12/6/2022 6:33 AM] szybet
+we have a ereader to port
+
+
+[12/6/2022 6:33 AM] szybet
+🥲
+
+{Reactions}
+🔥 
+
+[12/21/2022 5:40 AM] jeremiah_weeds
+I will take a look when I can, thanks 🙂
+
+{Reactions}
+👍 
+
+[12/21/2022 7:26 AM] szybet
+😮
+
+
+[12/21/2022 7:26 AM] szybet
+sure
+
+
+[2/15/2024 12:48 AM] tux_linux
+@Angus
+
+
+[2/15/2024 12:48 AM] angus9356
+Hi
+
+
+[2/15/2024 12:48 AM] tux_linux
+A good way to start would be to wire up serial to your device
+Do you have some technical background or linux knowledge?
+
+
+[2/15/2024 12:49 AM] angus9356
+I'm a linux kernel contributor and I have 25 years embedded experience
+
+
+[2/15/2024 12:49 AM] tux_linux
+WOOOOOOO
+
+
+[2/15/2024 12:50 AM] tux_linux
+@Szybet we got the jackpot
+
+
+[2/15/2024 12:50 AM] angus9356
+There seem to be 2 serial ports. One near the top of the board and one near the bottom
+
+
+[2/15/2024 12:50 AM] tux_linux
+i am 18 and szybet is 19
+we are the maintainers of inkbox os
+if you wanted to know
+
+
+[2/15/2024 12:50 AM] tux_linux
+Yes
+Do you have a picture of the pcb?
+
+
+[2/15/2024 12:51 AM] angus9356
+Thats awesome thanks for the hard work
+
+{Reactions}
+👍 
+
+[2/15/2024 12:51 AM] tux_linux
+Usually there is a way to know which one is the right one by looking at the order of the pins
+
+
+[2/15/2024 12:52 AM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_4f39f9f7-dd77-4a6-9974F.jpg
+
+
+[2/15/2024 12:52 AM] tux_linux
+the one at the top is probably the right one
+
+
+[2/15/2024 12:52 AM] tux_linux
+so i guess you know how to connect to it
+
+
+[2/15/2024 12:53 AM] angus9356
+That was my guess based on the proximity to the SOC
+
+
+[2/15/2024 12:53 AM] tux_linux
+maybe share the initial boot log
+
+
+[2/15/2024 12:53 AM] tux_linux
+usually in kobos the order is v,tx,rx,gnd
+
+
+[2/15/2024 12:53 AM] tux_linux
+so the other one is probably something else
+
+
+[2/15/2024 12:53 AM] angus9356
+It's makred on the PCB
+
+
+[2/15/2024 12:53 AM] tux_linux
+yes
+
+
+[2/15/2024 12:54 AM] angus9356
+Should it go into UUU mode without the SD card in it ?
+
+
+[2/15/2024 12:55 AM] tux_linux
+I dont think so
+
+
+[2/15/2024 12:55 AM] tux_linux
+it will probably just hang
+
+
+[2/15/2024 12:55 AM] tux_linux
+at least that is what other kobos do
+
+
+[2/15/2024 12:55 AM] tux_linux
+there is probably a way to enter download mode with some mw sequence in u-boot
+
+
+[2/15/2024 12:55 AM] tux_linux
+@andi knows more about that than me
+
+
+[2/15/2024 12:56 AM] tux_linux
+he is our low-level/linux/u-boot wizard
+
+
+[2/15/2024 12:56 AM] tux_linux
+but in theory it should (i think) allow you to enter u-boot if you press a key on the serial console
+
+
+[2/15/2024 12:56 AM] tux_linux
+though some older kobos have bootdelay set to 0
+
+
+[2/15/2024 12:57 AM] tux_linux
+that is something you can change but it's some fiddling
+
+
+[2/15/2024 1:00 AM] angus9356
+Boot capture
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/minicom-FDF57.cap
+
+
+[2/15/2024 1:00 AM] angus9356
+sd card is in bad shape
+
+
+[2/15/2024 1:02 AM] tux_linux
+still that 2009.08 u-boot
+
+
+[2/15/2024 1:03 AM] tux_linux
+well yea, it doesn't seem very healthy
+
+
+[2/15/2024 1:03 AM] tux_linux
+maybe you should back up the unpartitioned space
+
+
+[2/15/2024 1:04 AM] tux_linux
+can you issue fdisk -l on your kobo?
+
+
+[2/15/2024 1:04 AM] angus9356
+I tried imaging it. I think the card is toast
+
+
+[2/15/2024 1:04 AM] tux_linux
+well, the only important thing is what lies before the first partition
+
+
+[2/15/2024 1:05 AM] angus9356
+It copied the first 2GB
+
+
+[2/15/2024 1:06 AM] tux_linux
+that's enough
+
+
+[2/15/2024 1:06 AM] tux_linux
+do you have another microsd card lying around
+
+
+[2/15/2024 1:06 AM] angus9356
+Yup I'm putting the N905 image on it right now
+
+
+[2/15/2024 1:07 AM] tux_linux
+im not sure its a good idea
+
+
+[2/15/2024 1:07 AM] tux_linux
+the eink screen is probably not the same
+
+
+[2/15/2024 1:07 AM] angus9356
+Ok it seemed to use the same kernel version so I assumed that might be the closest rootfs
+
+
+[2/15/2024 1:07 AM] tux_linux
+https://github.com/Kobo-InkBox/inkbox/blob/master/LEGAL.md#warnings
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/blob/master/LEGAL.md
+inkbox/LEGAL.md at master · Kobo-InkBox/inkbox
+An open-source, Qt-based eBook reader for Kobos (and other devices). - Kobo-InkBox/inkbox
+/mnt/data/projects/git/conversations/media/inkbox-FD463
+
+
+[2/15/2024 1:07 AM] tux_linux
+read the 'waveform' part
+
+
+[2/15/2024 1:08 AM] angus9356
+I've heard of eink waveforms from working with the pinenote
+
+
+[2/15/2024 1:09 AM] tux_linux
+oh ok
+
+
+[2/15/2024 1:09 AM] tux_linux
+well then you know what problems it could cause
+
+
+[2/15/2024 1:09 AM] angus9356
+Yup I think I might have broken the touchscreen getting it apart anyway
+
+
+[2/15/2024 1:09 AM] tux_linux
+oops
+
+
+[2/15/2024 1:10 AM] angus9356
+Yep
+
+
+[2/15/2024 1:10 AM] tux_linux
+hm
+
+
+[2/15/2024 1:10 AM] tux_linux
+so what will you do
+
+
+[2/15/2024 1:10 AM] angus9356
+Get the kernel working then either replace the screen or get a second hand device
+
+
+[2/15/2024 1:11 AM] tux_linux
+well, nice
+
+
+[2/15/2024 1:11 AM] tux_linux
+if you dont care about your screen i guess you can try with the n905c image
+
+
+[2/15/2024 1:11 AM] tux_linux
+but it might also brick the device permanently
+
+
+[2/15/2024 1:11 AM] tux_linux
+so you know the risks
+
+
+[2/15/2024 1:11 AM] tux_linux
+esp. if the power regulator is not the same
+
+
+[2/15/2024 1:13 AM] angus9356
+There's a third serial port
+
+
+[2/15/2024 1:13 AM] tux_linux
+possible
+
+
+[2/15/2024 1:15 AM] angus9356
+The PMIC is a TPS65185
+
+
+[2/15/2024 1:26 AM] tux_linux
+from memory its the same as n905c
+
+
+[2/15/2024 1:27 AM] angus9356
+Hmm ok I didn't see it in the config
+
+
+[2/15/2024 1:27 AM] tux_linux
+but its not a guarantee that it will work
+
+
+[2/15/2024 1:27 AM] angus9356
+Just cloned the kernel repo
+
+
+[2/15/2024 1:27 AM] tux_linux
+look at n905c u-boot code
+
+
+[2/15/2024 1:27 AM] tux_linux
+there are probably more references to the pmic there
+
+
+[2/15/2024 1:27 AM] tux_linux
+and you can compare with the n250 uboot sources
+
+
+[2/15/2024 1:28 AM] angus9356
+Oh right thats probably where the PMIC will get configured
+
+
+[2/15/2024 1:28 AM] tux_linux
+yes
+
+
+[2/15/2024 1:28 AM] angus9356
+Where would I find the n250 u-boot ? would it be on mainline ?
+
+
+[2/15/2024 1:29 AM] tux_linux
+no
+
+
+[2/15/2024 1:29 AM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aurah2o
+here
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aurah2o
+Kobo-Reader/hw/imx507-aurah2o at master · kobolabs/Kobo-Reader
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/Kobo-Reader-77D0D
+
+
+[2/15/2024 1:35 AM] angus9356
+So just putting that u-boot and kernel onto the n905 image might work
+
+
+[2/15/2024 1:36 AM] tux_linux
+no guarantee
+
+
+[2/15/2024 1:36 AM] tux_linux
+but maybe
+
+
+[2/15/2024 1:36 AM] tux_linux
+m a y  b e
+
+
+[2/15/2024 1:36 AM] tux_linux
+though i fear a bit about the screen
+
+
+[2/15/2024 1:42 AM] angus9356
+Well touchscreen still works. Needs the bezel attached ??
+
+
+[2/15/2024 1:43 AM] angus9356
+So I should be waiting for @Szybet  for guidance ?
+
+
+[2/15/2024 1:43 AM] tux_linux
+the bezel thing is normal
+
+
+[2/15/2024 1:43 AM] tux_linux
+szybet doesn't have any of these old devices
+
+
+[2/15/2024 1:43 AM] tux_linux
+well, maybe the glo
+
+
+[2/15/2024 1:43 AM] tux_linux
+n613
+
+
+[2/15/2024 1:44 AM] angus9356
+Ok whos going to help extract the wavefrom and get u-boot and kernel running is that you ?
+
+
+[2/15/2024 1:44 AM] tux_linux
+its prob. an ir grid
+
+
+[2/15/2024 1:45 AM] angus9356
+Ok gotta go to a meeting back in an hour or so
+
+
+[2/15/2024 2:34 AM] angus9356
+There 2K lines difference between the default u-boot and the inkbox  imx507 u-boot
+
+
+[2/15/2024 2:39 AM] angus9356
+Where are the waveforms stored ?
+
+
+[2/15/2024 2:47 AM] tux_linux
+Check the boot log
+
+
+[2/15/2024 2:48 AM] tux_linux
+```
+MMC read: dev # 2, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 1024, count 1 partition # 0 ... 
+1 blocks read: OK
+PCB ID is 41
+ESDin=0,UPGKey=-1,PWRKey=0
+ram p=70000000,size=536870912
+
+MMC read: dev # 2, block # 14335, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 14336, count 13235 partition # 0 ... 
+13235 blocks read: OK
+
+MMC read: dev # 2, block # 18431, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+```
+
+
+[2/15/2024 2:48 AM] tux_linux
+somewhere in there probably
+
+
+[2/15/2024 2:49 AM] tux_linux
+iirc it was at offset 14335 or 14336
+
+
+[2/15/2024 2:50 AM] angus9356
+14336 is the largest one
+
+
+[2/15/2024 2:50 AM] angus9356
+The first 2 are probably the u-boot env ?
+
+
+[2/15/2024 2:58 AM] angus9356
+Does the kernel or u-boot load the waveform ?
+
+
+[2/15/2024 3:02 AM] tux_linux
+I think it's loaded by u-boot
+
+
+[2/15/2024 3:02 AM] tux_linux
+possible
+
+
+[2/15/2024 3:02 AM] tux_linux
+maybe see a hexdump or smth
+
+
+[2/15/2024 3:02 AM] tux_linux
+or binwalk
+
+
+[2/15/2024 3:02 AM] angus9356
+Thanks that was my assumption so it could display the logo
+
+{Reactions}
+👍 
+
+[2/15/2024 3:02 AM] tux_linux
+well theres no logo displayed
+
+
+[2/15/2024 3:02 AM] tux_linux
+but yea
+
+
+[2/15/2024 3:03 AM] angus9356
+Ha yep no "logo" header
+
+{Reactions}
+👍 
+
+[2/15/2024 7:06 AM] szybet
+Finally
+
+
+[2/15/2024 7:07 AM] szybet
+Idk about waveform and device tree. It may not exost for this device?
+
+
+[2/15/2024 7:08 AM] szybet
+Yea, binwalk needed or smth, we need to know what things are needed
+
+
+[2/15/2024 7:29 AM] szybet
+You could also upload the image somewhere for us to download, we could have a look at it too and help
+
+
+[2/15/2024 8:11 AM] szybet
+Its an IR touchscreen probably
+
+
+[2/15/2024 9:02 AM] andi15701
+it should
+
+
+[2/15/2024 9:05 AM] andi15701
+https://github.com/neuschaefer/linux/wiki
+
+{Embed}
+https://github.com/neuschaefer/linux/wiki
+Home
+Linux kernel source tree. Contribute to neuschaefer/linux development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/linux-9943D
+
+
+[2/15/2024 9:05 AM] andi15701
+if you have the courage about going mainline
+
+
+[2/15/2024 9:07 AM] andi15701
+so this one is imx5? PMIC is what?
+
+
+[2/15/2024 9:07 AM] andi15701
+tps65185 is only for the EPD
+
+
+[2/15/2024 9:09 AM] andi15701
+so what kind of chips do we have?
+
+
+[2/15/2024 9:09 AM] andi15701
+I brought several ebook readers to near-mainline
+
+
+[2/15/2024 9:11 AM] andi15701
+so if you have experience in kernel contributing, that might be feasible
+
+
+[2/15/2024 9:12 AM] andi15701
+we might need just to create a devicetree and some fiddling here and there
+
+
+[2/15/2024 9:22 AM] andi15701
+some theory here: Kobo uses a few almost identical kernels and have just a generic board file, but it gets a blob containing some hardware information to adapt to the different boards, that blob gets loaded into ram and the address is passed over to the kernel by u-boot
+
+
+[2/15/2024 9:22 AM] andi15701
+but if we manage to get this device working with something near-mainline
+
+
+[2/15/2024 9:23 AM] andi15701
+probably it is a step towards deorbiting 2.6 kernels from inkbox
+
+
+[2/15/2024 9:23 AM] andi15701
+so less userspace compatibility issues
+
+
+[2/15/2024 10:29 AM] szybet
+What blob
+
+
+[2/15/2024 10:29 AM] szybet
+device tree?
+
+
+[2/15/2024 3:29 PM] andi15701
+I mean the hwconfig thing
+
+
+[2/15/2024 3:33 PM] andi15701
+the <=3.0 kernels do not use devicetree. The main issue is probably EPDC, I think there is no official support for imx5 even in 4.1. But if I understand the code correctly, is still seems to be there behind EPDC_VERSION < 20 checks
+
+
+[2/15/2024 3:33 PM] andi15701
+That all is nothing I could do remotely without having access to the device
+
+
+[2/15/2024 3:33 PM] angus9356
+I think this is the hwconfig block
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/block_1024-ADA2B
+
+
+[2/15/2024 3:34 PM] andi15701
+but as there is someone with kernel dev experience it is a different story
+
+
+[2/15/2024 3:34 PM] tux_linux
+@andi for the chips here is the board picture
+it might help
+
+
+[2/15/2024 3:34 PM] andi15701
+https://github.com/akemnade/kobo-firmware-extractor
+
+{Embed}
+https://github.com/akemnade/kobo-firmware-extractor
+GitHub - akemnade/kobo-firmware-extractor: extracts firmware from h...
+extracts firmware from hidden partitions on Kobo/Tolino ebook readers - akemnade/kobo-firmware-extractor
+/mnt/data/projects/git/conversations/media/kobo-firmware-extractor-F8C80
+
+
+[2/15/2024 3:35 PM] tux_linux
+though some of them are not really legible
+
+
+[2/15/2024 3:35 PM] andi15701
+hmm, I seem not to get high res of that picture
+
+
+[2/15/2024 3:35 PM] tux_linux
+isn't there an option 'open in full window' or smth
+
+
+[2/15/2024 3:36 PM] andi15701
+I only get a 400x500 pixel picture
+
+
+[2/15/2024 3:36 PM] andi15701
+or something
+
+
+[2/15/2024 3:36 PM] tux_linux
+https://cdn.discordapp.com/attachments/972252738362695710/1207474427470544936/rn_image_picker_lib_temp_4f39f9f7-dd77-4a66-b40b-0cf4bd8d94f1.jpg?ex=65dfc731&is=65cd5231&hm=b7efe765b2a74414aafc0a9591ce2a502c362c55fbb7a4e49cd6c21da9e412c0&
+
+{Embed}
+https://cdn.discordapp.com/attachments/972252738362695710/1207474427470544936/rn_image_picker_lib_temp_4f39f9f7-dd77-4a66-b40b-0cf4bd8d94f1.jpg?ex=65dfc731&is=65cd5231&hm=b7efe765b2a74414aafc0a9591ce2a502c362c55fbb7a4e49cd6c21da9e412c0&
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_4f39f9f7-dd77-4a6-3276E.jpg
+
+
+[2/15/2024 3:37 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-81C68.png
+
+
+[2/15/2024 3:37 PM] tux_linux
+open in web browser
+
+
+[2/15/2024 3:37 PM] tux_linux
+i think
+
+
+[2/15/2024 3:37 PM] tux_linux
+`https://cdn.discordapp.com/attachments/972252738362695710/1207474427470544936/rn_image_picker_lib_temp_4f39f9f7-dd77-4a66-b40b-0cf4bd8d94f1.jpg?ex=65dfc731&is=65cd5231&hm=b7efe765b2a74414aafc0a9591ce2a502c362c55fbb7a4e49cd6c21da9e412c0&`
+
+
+[2/15/2024 3:37 PM] tux_linux
+link should work
+
+
+[2/15/2024 3:37 PM] andi15701
+ok, works
+
+
+[2/15/2024 3:38 PM] andi15701
+touchscreen = zforce_ts, should work
+
+
+[2/15/2024 3:38 PM] andi15701
+driver is mainlined and improved by me
+
+
+[2/15/2024 3:38 PM] andi15701
+cybertan wifi, no problem with mainline
+
+
+[2/15/2024 3:39 PM] tux_linux
+seems promising
+
+
+[2/15/2024 3:40 PM] andi15701
+u61 = ? u2=?
+
+
+[2/15/2024 3:40 PM] andi15701
+well, and we have the msp430 ec
+
+
+[2/15/2024 3:40 PM] andi15701
+there is a driver in mainline
+
+
+[2/15/2024 3:40 PM] andi15701
+named ntx_ec
+
+
+[2/15/2024 3:41 PM] andi15701
+well, and the tps65185 is .well known, I carry around some driver
+
+
+[2/15/2024 3:43 PM] angus9356
+Hopefully a better pic
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/20240215_063846-1049C.png
+
+
+[2/15/2024 3:44 PM] tux_linux
+is it just me or it's more low-res?
+
+{Reactions}
+👍 
+
+[2/15/2024 3:44 PM] szybet
+what about configuring inkbox to boot from the external sd card?
+
+
+[2/15/2024 3:44 PM] szybet
+there was somewhere talks that its possible
+
+
+[2/15/2024 3:45 PM] szybet
+idk how it went, maybe you need 2 sd cards?
+
+
+[2/15/2024 3:45 PM] szybet
+¯\_(ツ)_/¯
+
+
+[2/15/2024 3:45 PM] angus9356
+Could modify the u-boot env on the internal card to use the initrd and rootfs from the external card
+
+
+[2/15/2024 3:46 PM] szybet
+maybe the best solution is to enable this option but if there is no sd card, boot the internal one
+
+
+[2/15/2024 3:47 PM] tux_linux
+yes
+maybe you could load another u-boot from the sd card as well
+
+
+[2/15/2024 3:48 PM] szybet
+.
+dont force users 2 use 2 sd cards
+
+
+[2/15/2024 3:48 PM] angus9356
+I'm assuming that there is no user info in the first 2 partitions but I think I'd perfer to IM one or both of you the dump of partitions 1 and 2
+
+
+[2/15/2024 3:52 PM] angus9356
+562 MB so I'll need to upload it somewhere just a minute
+
+
+[2/15/2024 3:52 PM] andi15701
+there is some serial somewhere, but not in the hwconfig partition
+
+
+[2/15/2024 3:52 PM] andi15701
+or kernel
+
+
+[2/15/2024 3:55 PM] angus9356
+I've already given away the serial in the photo 🙂
+
+
+[2/15/2024 3:58 PM] angus9356
+Partition file is ready to download
+
+
+[2/15/2024 3:58 PM] tux_linux
+it's out of warranty anyway 😉
+
+
+[2/15/2024 4:01 PM] angus9356
+I had a brief look at the u-boot source differences from the kobo u-boot and the inkbox u-boot and there were only 2086 lines different and most of those didn't seem relevant
+
+
+[2/15/2024 4:06 PM] andi15701
+you are aware of arch/arm/boot/dts/nxp/imx/imx50-kobo-aura.dts?
+
+
+[2/15/2024 4:06 PM] andi15701
+so that can be a starting point for any mainline activities
+
+
+[2/15/2024 4:07 PM] angus9356
+I hadn't looked at the device tree yet
+
+
+[2/15/2024 4:07 PM] angus9356
+I figured getting the kobo kernel and u-boot working would be the first steps ?
+
+
+[2/15/2024 4:08 PM] szybet
+yep
+
+
+[2/15/2024 4:09 PM] szybet
+compile them ;)
+
+
+[2/15/2024 4:09 PM] angus9356
+Yeah can probably get to that this afternoon. Which rootfs do you guys suggest ?
+
+
+[2/15/2024 4:09 PM] andi15701
+well, to know that you are having the actual sources
+
+{Reactions}
+🥴 
+
+[2/15/2024 4:10 PM] andi15701
+some stone-age busybox
+
+
+[2/15/2024 4:10 PM] szybet
+we have an initrd there
+
+
+[2/15/2024 4:10 PM] andi15701
+or alpine
+
+
+[2/15/2024 4:10 PM] szybet
+yea
+
+
+[2/15/2024 4:10 PM] szybet
+probably just integrate it into inkbox build process
+
+
+[2/15/2024 4:11 PM] angus9356
+Thats what I was going to start with but based on which device ?
+
+
+[2/15/2024 4:11 PM] szybet
+all of them are similar
+
+
+[2/15/2024 4:11 PM] szybet
+nothing on edge
+
+
+[2/15/2024 4:11 PM] szybet
+for an example look for a device that uses a similar old kernel
+
+
+[2/15/2024 4:12 PM] angus9356
+Ok I downloaded the 905 image as it used the same kernel
+
+
+[2/15/2024 4:13 PM] szybet
+look up here https://github.com/Kobo-InkBox/kernel
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel
+GitHub - Kobo-InkBox/kernel: Kernel sources for InkBox OS
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+
+
+[2/15/2024 4:13 PM] szybet
+there are basic scripts
+
+
+[2/15/2024 4:13 PM] szybet
+eassly to modify them
+
+
+[2/15/2024 4:30 PM] angus9356
+Yeah I was looking at those last night. Thanks
+
+
+[2/15/2024 6:29 PM] andi15701
+do you have dmesg output of the original system?
+
+
+[2/15/2024 7:02 PM] angus9356
+@andi I shared a capture last night
+
+
+[2/15/2024 7:09 PM] andi15701
+I see only a serial console log
+
+
+[2/15/2024 7:09 PM] andi15701
+and the kobo kernels are often booted with the "quiet" parameter
+
+
+[2/15/2024 7:09 PM] andi15701
+often forcefully added by u-boot
+
+
+[2/15/2024 7:12 PM] tux_linux
+yea
+
+
+[2/15/2024 7:15 PM] angus9356
+Sorry missed the dmesg
+
+
+[2/15/2024 7:15 PM] andi15701
+I once ended up renaming the parameter
+
+
+[2/15/2024 7:16 PM] tux_linux
+lmao
+
+
+[2/15/2024 7:16 PM] tux_linux
+its that bad
+
+
+[2/15/2024 7:16 PM] andi15701
+in the kernel
+
+
+[2/15/2024 7:16 PM] tux_linux
+yea
+
+
+[2/15/2024 7:16 PM] angus9356
+What are the login creds going to be
+
+
+[2/15/2024 7:16 PM] tux_linux
+root
+
+
+[2/15/2024 7:16 PM] tux_linux
+and probably nothing
+
+
+[2/15/2024 7:16 PM] angus9356
+Ok
+
+
+[2/15/2024 7:16 PM] tux_linux
+yes, it's that open
+
+
+[2/15/2024 7:17 PM] angus9356
+There's no fw_setenv ?
+
+
+[2/15/2024 7:17 PM] tux_linux
+if your sd card is not too much toast there is even a telnet server that starts if you type devmodeon in the search bar of the ui
+
+
+[2/15/2024 7:17 PM] angus9356
+Ha
+
+
+[2/15/2024 8:04 PM] szybet
+what
+
+
+[2/15/2024 8:49 PM] tux_linux
+not in inkbox
+
+
+[2/15/2024 8:49 PM] tux_linux
+in kobo ui
+
+
+[2/15/2024 8:51 PM] szybet
+on stock?
+
+
+[2/15/2024 8:53 PM] tux_linux
+nickel
+
+
+[2/15/2024 8:55 PM] szybet
+without modification?
+
+
+[2/15/2024 8:57 PM] tux_linux
+without
+
+
+[2/15/2024 8:57 PM] tux_linux
+its that bad
+
+
+[2/15/2024 8:57 PM] tux_linux
+or that good
+
+
+[2/15/2024 8:57 PM] tux_linux
+depends on how you see it
+
+
+[2/15/2024 8:58 PM] szybet
+its excellent
+
+
+[2/15/2024 8:58 PM] szybet
+love it
+
+
+[2/15/2024 9:02 PM] angus9356
+dmesg is wrapping because of all of the mmc errors so I'm going to try moving the image to a new sd , fix the filesystem and then boot the new card
+
+
+[2/15/2024 9:03 PM] tux_linux
+you could try recompiling the stock kernel
+
+
+[2/15/2024 9:03 PM] tux_linux
+and forcing arguments
+
+
+[2/15/2024 9:03 PM] tux_linux
+CONFIG_CMDLINE_FORCE
+
+
+[2/15/2024 9:03 PM] tux_linux
+in config
+
+
+[2/15/2024 9:03 PM] tux_linux
+and remove `quiet`from it
+
+
+[2/15/2024 9:04 PM] tux_linux
+to see the current cmdline and copy it just `cat /proc/cmdline`
+
+
+[2/15/2024 9:04 PM] tux_linux
+but i think you know that already
+
+
+[2/15/2024 9:11 PM] andi15701
+or just hex-edit the bootloader
+
+
+[2/15/2024 9:12 PM] tux_linux
+that too
+
+
+[2/15/2024 9:12 PM] andi15701
+so replace quiet by quitt
+
+
+[2/15/2024 9:12 PM] tux_linux
+yes
+
+
+[2/15/2024 9:12 PM] andi15701
+CONFIG_CMLINE_FORCE is bad
+
+
+[2/15/2024 9:12 PM] andi15701
+here
+
+
+[2/15/2024 9:13 PM] andi15701
+because there is so many useful stuff added
+
+
+[2/15/2024 9:13 PM] andi15701
+like all the addresses
+
+
+[2/15/2024 9:13 PM] tux_linux
+in inkbox we keep the addresses
+
+
+[2/15/2024 9:13 PM] tux_linux
+its just that i didnt want to mess with the u-boot env
+
+
+[2/15/2024 9:13 PM] tux_linux
+also i was 15yo
+
+
+[2/15/2024 9:13 PM] tux_linux
+so some decisions had to be made
+
+
+[2/15/2024 9:49 PM] andi15701
+well, if carefully copy over stuff from /proc/cmdline of a running kernel
+
+
+[2/15/2024 9:50 PM] andi15701
+of course, it possible to do CONFIG_CMDLINE_FORCE
+
+
+[2/15/2024 9:51 PM] tux_linux
+this is what i did for every device
+
+
+[2/16/2024 12:16 AM] angus9356
+Here's the dmesg
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/dmesg-BCD8A.cap
+
+
+[2/16/2024 12:59 AM] angus9356
+What offset on the SD card is u-boot stored ?
+
+
+[2/16/2024 1:22 AM] tux_linux
+1K
+
+
+[2/16/2024 1:22 AM] tux_linux
+i think
+
+
+[2/16/2024 1:22 AM] tux_linux
+hang on
+
+
+[2/16/2024 1:23 AM] tux_linux
+https://github.com/Kobo-InkBox/rootfs/blob/ff5f840deffdeb62c4dde6fcf6d611079597d794/etc/init.d/update.sh#L217-L221
+see here
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/ff5f840deffdeb62c4dde6fcf6d611079597d794/etc/init.d/update.sh
+rootfs/etc/init.d/update.sh at ff5f840deffdeb62c4dde6fcf6d611079597...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-1570D
+
+
+[2/16/2024 1:23 AM] tux_linux
+your device is probably what comes after the else
+
+
+[2/16/2024 1:31 AM] angus9356
+Thanks
+
+{Reactions}
+👍 
+
+[2/16/2024 2:09 AM] angus9356
+So I tried adding the n250 as a u-boot variant of the n905b and it failed to build so I tried building the inkbox n905b and that fails the same way 
+```
+arm-kobo-linux-gnueabihf-gcc  -g  -Os  -fno-strict-aliasing -fno-common -ffixed-r8 -msoft-float -D__KERNEL__ -D_MX50_ -D__UBOOT__ -DTEXT_BASE=0x77800000 -I/usr/src/kobo_aura_h20/kernel/bootloader/imx508/include -fno-builtin -ffreestanding -nostdinc -isystem /usr/src/kobo_aura_h20/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/include -pipe -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv5   -Wall -Wstrict-prototypes -fno-stack-protector   -o board.o board.c -c
+board.c:131:6: error: 'coloured_LED_init' aliased to external symbol '__coloured_LED_init'
+ void coloured_LED_init(void)__attribute__((weak, alias("__coloured_LED_init")));
+      ^~~~~~~~~~~~~~~~~
+board.c:147:6: error: 'blue_LED_off' aliased to external symbol '__blue_LED_off'
+ void blue_LED_off(void) __attribute__((weak, alias("__blue_LED_off")));
+      ^~~~~~~~~~~~
+board.c:145:6: error: 'blue_LED_on' aliased to external symbol '__blue_LED_on'
+ void blue_LED_on(void) __attribute__((weak, alias("__blue_LED_on")));
+      ^~~~~~~~~~~
+```
+
+
+[2/16/2024 2:10 AM] angus9356
+This was the build command I tried
+``` 
+TARGET=arm-kobo-linux-gnueabihf TOOLCHAINDIR=/usr/src/kobo_aura_h20/kernel/toolchain/arm-kobo-linux-gnueabihf scripts/build_u-boot.sh n905b
+```
+
+
+[2/16/2024 2:26 AM] tux_linux
+look at inkbox build scripts
+
+
+[2/16/2024 2:26 AM] tux_linux
+https://github.com/Kobo-InkBox/kernel/blob/master/scripts/build_u-boot.sh
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/blob/master/scripts/build_u-boot.sh
+kernel/scripts/build_u-boot.sh at master · Kobo-InkBox/kernel
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-81DA0
+
+
+[2/16/2024 2:27 AM] tux_linux
+Maybe it can help
+
+
+[2/16/2024 2:27 AM] tux_linux
+or not
+
+
+[2/16/2024 2:33 AM] angus9356
+I used the u-boot script. That's what failed
+
+
+[2/16/2024 2:42 AM] tux_linux
+Well all those things that error seem to be useless
+So maybe you can try removing them
+
+
+[2/16/2024 2:45 AM] angus9356
+I did 🙂 and then it doesn't link
+
+
+[2/16/2024 8:58 AM] andi15701
+mc13892 Rev 0.0 FinVer 0 detected
+Initializing regulators for mx50 rdp.
+regulator: SW1: 600 <--> 1375 mV at 600 mV
+
+
+[2/16/2024 8:58 AM] andi15701
+does that one really exists?
+
+
+[2/16/2024 12:42 PM] tux_linux
+try with `arm-linux-gnueabihf`
+
+
+[2/16/2024 12:42 PM] tux_linux
+https://github.com/Kobo-InkBox/kernel/tree/master/toolchain/gcc-4.8
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/tree/master/toolchain/gcc-4.8
+kernel/toolchain/gcc-4.8 at master · Kobo-InkBox/kernel
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-81DA0
+
+
+[2/16/2024 12:43 PM] andi15701
+yes, something old
+
+
+[2/16/2024 12:43 PM] andi15701
+old compiler for old code
+
+
+[2/16/2024 12:43 PM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/raw/master/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux.tar.bz2
+
+
+[2/16/2024 12:44 PM] tux_linux
+there is a tarball of it there
+
+
+[2/16/2024 3:27 PM] angus9356
+I used the toolchain that was included in your kernel repo
+
+
+[2/16/2024 3:29 PM] angus9356
+On a fresh checkout can you build you n905b u-boot using the arm-kobo-linux-gnueabihf that you include in the repo ?
+
+
+[2/16/2024 3:30 PM] tux_linux
+you probably need to use arm-linux-gnueabihf
+
+
+[2/16/2024 3:30 PM] tux_linux
+not arm-kobo-linux-gnueabihf
+
+
+[2/16/2024 3:30 PM] tux_linux
+there is a huge difference between them
+
+
+[2/16/2024 3:31 PM] angus9356
+Ok I did start with that. I assumed that what was in the repo was for the code that was there. I will go back and try again
+
+
+[2/16/2024 3:31 PM] tux_linux
+Ok, then it's strange
+But I have no experience with the aura h2o u-boot
+
+
+[2/16/2024 3:32 PM] angus9356
+This is the n905b u-boot that is in the repo no changes
+
+
+[2/16/2024 3:33 PM] tux_linux
+strange
+
+
+[2/16/2024 3:33 PM] tux_linux
+i will see later today
+
+
+[2/16/2024 3:34 PM] tux_linux
+maybe you can try aura u-boot
+
+
+[2/16/2024 3:35 PM] angus9356
+I wanted to start with one of your working targets and modify that
+
+
+[2/16/2024 3:35 PM] angus9356
+I'll try on of the other compilers thats included
+
+
+[2/16/2024 3:37 PM] angus9356
+Ok the 4.4 from the kernel repo will compile it
+
+
+[2/16/2024 3:39 PM] tux_linux
+good
+
+
+[2/16/2024 7:10 PM] andi15701
+btw: the road to a more mainline u-boot would probably be to copy the dcd stuff over and take the aura devicetree from the kernel
+
+{Reactions}
+👍 
+
+[2/16/2024 7:12 PM] andi15701
+so  is there a mc13892 on the board?
+
+
+[2/16/2024 7:13 PM] tux_linux
+most probably
+
+
+[2/16/2024 7:13 PM] tux_linux
+mc13892 are everywhere in these old kobos
+
+
+[2/16/2024 7:14 PM] andi15701
+that one next to the battery connector?
+
+
+[2/16/2024 7:14 PM] tux_linux
+if you look in the kernel source there are sometimes dmesg messages about it
+
+
+[2/16/2024 7:14 PM] andi15701
+well, or that is fake
+
+
+[2/16/2024 7:15 PM] andi15701
+they kind of emulated that thing partly even if in reality it is a rc5t619
+
+
+[2/16/2024 7:19 PM] tux_linux
+Classic ntx hackery
+
+
+[2/16/2024 7:19 PM] tux_linux
+They are always in a hurry it seems
+
+
+[2/17/2024 8:14 PM] angus9356
+So the inkbox imx508 u-boot does not boot the N250
+
+
+[2/17/2024 8:15 PM] tux_linux
+why did you take the mx508
+
+
+[2/17/2024 8:15 PM] tux_linux
+i think your chip is mx507
+
+
+[2/17/2024 8:15 PM] tux_linux
+=n905c uboot
+
+
+[2/17/2024 8:15 PM] tux_linux
+in theory
+
+
+[2/17/2024 8:15 PM] angus9356
+The kobo u-boot build with gcc 4.4 does boot the kobo and also loads the inkbox n905b kernel
+
+
+[2/17/2024 8:16 PM] angus9356
+I think I chose the 905b
+
+
+[2/17/2024 8:16 PM] tux_linux
+but what boots and does not boot your kobo?
+
+
+[2/17/2024 8:16 PM] tux_linux
+what does "kobo u-boot build" mean
+
+
+[2/17/2024 8:16 PM] angus9356
+the kobo u-boot boots and loads the kernel but the inkbox kernel fails
+
+
+[2/17/2024 8:17 PM] angus9356
+This is the u-boot I got to boot. And it is indeed the imx507 so I'll try the other inkbox u-boot
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aurah2o
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/tree/master/hw/imx507-aurah2o
+Kobo-Reader/hw/imx507-aurah2o at master · kobolabs/Kobo-Reader
+Contribute to kobolabs/Kobo-Reader development by creating an account on GitHub.
+
+
+[2/17/2024 8:18 PM] tux_linux
+yes, this should boot
+
+
+[2/17/2024 8:18 PM] tux_linux
+as for the kernel, i think it is expected
+
+
+[2/17/2024 8:18 PM] tux_linux
+probably that taking the proper sources will help
+
+
+[2/17/2024 8:18 PM] angus9356
+Yes I didn't think it would just wok out of the box 🙂
+
+{Reactions}
+👍 
+
+[2/17/2024 8:18 PM] tux_linux
+the ones from the kobo repo
+
+
+[2/17/2024 8:19 PM] tux_linux
+i suggest you keep that working aura h2o uboot
+
+
+[2/17/2024 8:19 PM] tux_linux
+and we can build on it
+
+
+[2/17/2024 8:19 PM] tux_linux
+now try to boot a working kernel from the aura h2o sources
+
+
+[2/17/2024 8:20 PM] tux_linux
+and we can also tweak it for inkbox later
+
+
+[2/17/2024 8:20 PM] tux_linux
+maybe just getting it to panic on boot will be a good start
+
+
+[2/17/2024 8:20 PM] angus9356
+There's almost no difference between that and the u-boot you have in tree. I was a little surprised I got nothing from the inkbox u-boot
+
+
+[2/17/2024 8:20 PM] tux_linux
+just to know that it actually does something
+
+
+[2/17/2024 8:20 PM] tux_linux
+I would still take the provided u-boot if i was porting a new device
+You never know... 😉
+
+
+[2/17/2024 8:28 PM] angus9356
+imx507 inkbox u-boot does nothing
+
+
+[2/17/2024 8:30 PM] andi15701
+well, what is critical is the DCD section
+
+
+[2/17/2024 8:30 PM] andi15701
+if you see nothing
+
+
+[2/17/2024 8:30 PM] angus9356
+Ok
+
+
+[2/17/2024 8:30 PM] andi15701
+another pitfall
+
+
+[2/17/2024 8:30 PM] angus9356
+what/where is the dcd section ?
+
+
+[2/17/2024 8:31 PM] andi15701
+some u-boot builds prepare the image in such a way that you could do cat u-boot.bin >/dev/mmcblk0
+
+
+[2/17/2024 8:31 PM] andi15701
+before you partition things
+
+
+[2/17/2024 8:31 PM] andi15701
+and some do not
+
+
+[2/17/2024 8:31 PM] angus9356
+I've just dd it to 1k
+
+
+[2/17/2024 8:31 PM] angus9356
+there's some binary junk before u-boot I didn't want to overwrite
+
+
+[2/17/2024 8:32 PM] tux_linux
+so we probably need to work with the kobo u-boot
+
+
+[2/17/2024 8:32 PM] andi15701
+you find something named imximage.cfg
+
+
+[2/17/2024 8:32 PM] andi15701
+in uboot sources
+
+
+[2/17/2024 8:32 PM] andi15701
+that is also for configuring RAM
+
+
+[2/17/2024 8:33 PM] andi15701
+so that means I think "device configuration data"
+
+
+[2/17/2024 8:34 PM] andi15701
+it ends up in the beginning of the u-boot image
+
+
+[2/17/2024 8:34 PM] andi15701
+(if there is not 1K of zeros prepended)
+
+
+[2/17/2024 8:34 PM] andi15701
+check that there are no zeros at the beginning of the u-boot
+
+
+[2/17/2024 8:35 PM] andi15701
+extracting that would be the main step towards using some more recent u-boot
+
+
+[2/17/2024 8:35 PM] angus9356
+U-boot is all zeros but the SD card has stuff in there
+
+
+[2/17/2024 8:36 PM] andi15701
+all zeros or just the 1st 1K
+
+
+[2/17/2024 8:37 PM] angus9356
+All zeros for the first 1K of u-boot.bin
+
+
+[2/17/2024 8:38 PM] andi15701
+do you have u-boot.imx?
+
+
+[2/17/2024 8:38 PM] andi15701
+or only .bin
+
+
+[2/17/2024 8:38 PM] andi15701
+if all zeros for the first 1K, you need to do dd if=u-boot.bin bs=1024 seek=1 skip=1 of=/dev/sdX
+
+
+[2/17/2024 8:39 PM] andi15701
+to install it
+
+
+[2/17/2024 8:39 PM] andi15701
+or just cat u-boot.bin >/dev/sdX and then partition
+
+
+[2/17/2024 8:41 PM] andi15701
+the dcd block starts with D1
+
+
+[2/17/2024 8:41 PM] andi15701
+and that D1 has to be at offset 1024 bytes of the sd card
+
+
+[2/17/2024 8:58 PM] angus9356
+I've been using dd
+
+
+[2/17/2024 9:17 PM] angus9356
+There's 2400 lines difference between the inkbox board/freescale/mx50_rdp and most of those are significant
+
+
+[2/17/2024 9:37 PM] angus9356
+Where does the uImage sit on the sd card ?
+
+
+[2/17/2024 9:39 PM] tux_linux
+on the default kobo system i think it's at ```dd if=/dev/mmcblk0 bs=512 skip=2048```
+
+
+[2/17/2024 9:39 PM] angus9356
+This on the inkbox image
+
+
+[2/17/2024 9:39 PM] tux_linux
+on inkbox it's at
+```dd if=/dev/mmcblk0 bs=512 skip=81920```
+
+
+[2/17/2024 9:40 PM] tux_linux
+the inkbox kernel is bigger so it couldnt fit before first partition
+
+
+[2/17/2024 9:40 PM] tux_linux
+i moved it between 2 partitions
+
+
+[2/17/2024 9:40 PM] tux_linux
+in a 20m unpartitioned space
+
+
+[2/17/2024 9:41 PM] andi15701
+ntx_comm.c:#define KERNEL_OFFSET             2048
+
+
+[2/17/2024 9:41 PM] tux_linux
+yes, our uboot is modified
+
+
+[2/17/2024 9:41 PM] andi15701
+yes, I know
+
+
+[2/17/2024 9:41 PM] andi15701
+but that is the source
+
+
+[2/17/2024 9:41 PM] tux_linux
+yes
+
+
+[2/17/2024 9:42 PM] andi15701
+the point is that kobo u-boots heavily patch the bootm command
+
+
+[2/17/2024 9:42 PM] tux_linux
+Yes
+
+
+[2/17/2024 9:42 PM] andi15701
+to load things from some defaults
+
+
+[2/17/2024 9:43 PM] andi15701
+never played around with kobo imx5 u-boots but generally you can use fastboot to test something
+
+
+[2/17/2024 9:43 PM] tux_linux
+you cant
+
+
+[2/17/2024 9:43 PM] tux_linux
+its borked
+
+
+[2/17/2024 9:43 PM] andi15701
+on imx6 kernel I always managed to boot something
+
+
+[2/17/2024 9:43 PM] andi15701
+with it
+
+
+[2/17/2024 9:43 PM] tux_linux
+yes
+
+
+[2/17/2024 9:43 PM] tux_linux
+imx6
+
+
+[2/17/2024 9:44 PM] tux_linux
+i never succeeded on this stone age 2009.08 uboot
+
+
+[2/17/2024 9:48 PM] szybet
+Guys, let me intervene for a moment: Any reason for anything for unix socket to split messages for 4.6Mb?
+
+
+[2/17/2024 9:49 PM] tux_linux
+What
+
+
+[2/17/2024 9:49 PM] tux_linux
+Out of the blue, 32bit system?
+
+
+[2/17/2024 9:49 PM] szybet
+in rust i send this message and qt splits it up for no reason
+
+
+[2/17/2024 9:49 PM] tux_linux
+I think I have no idea what I'm talking about
+
+
+[2/17/2024 9:49 PM] szybet
+at least that's what i see
+
+
+[2/17/2024 9:49 PM] szybet
+kobo
+
+
+[2/17/2024 9:49 PM] tux_linux
+yes
+
+
+[2/17/2024 9:50 PM] tux_linux
+32 bit
+
+
+[2/17/2024 9:50 PM] tux_linux
+armv7
+
+
+[2/17/2024 9:50 PM] szybet
+i send in rust 4.6Mb and Qt sees it as many 146688 B messages
+
+
+[2/17/2024 9:50 PM] andi15701
+/proc/sys/net/core/wmem_max
+
+
+[2/17/2024 9:51 PM] andi15701
+https://stackoverflow.com/questions/21856517/whats-the-practical-limit-on-the-size-of-single-packet-transmitted-over-domain
+
+{Embed}
+https://stackoverflow.com/questions/21856517/whats-the-practical-limit-on-the-size-of-single-packet-transmitted-over-domain
+What's the practical limit on the size of single packet transmitted...
+Let us assume that there is a Unix domain socket created for a typical server-client program. The client sends a 10GB buffer over the socket and it is consumed by the server in the meanwhile.
+
+Does...
+/mnt/data/projects/git/conversations/media/apple-touch-icon%402-C50E4.png
+
+
+[2/17/2024 9:51 PM] tux_linux
+andi is your man
+
+
+[2/17/2024 9:54 PM] szybet
+didn't helped
+
+
+[2/17/2024 9:54 PM] szybet
+i quess qt is dumb
+
+
+[2/17/2024 10:20 PM] andi15701
+btw: does your device show up as usb device *without* sd card?
+
+
+[2/18/2024 12:05 AM] angus9356
+I've got serial so I can mess around in u-boot
+
+
+[2/18/2024 12:06 AM] tux_linux
+Good
+
+
+[2/18/2024 12:06 AM] angus9356
+Yes it shows without the SD card
+
+
+[2/18/2024 1:07 AM] angus9356
+it needs some HW config at block 1023 ( I zeroed it )
+```
+MMC read: dev # 2, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+binary magic @ sector no. 1024 not found !
+ISD hwconfig missing !
+``
+
+
+[2/18/2024 1:07 AM] tux_linux
+interesting
+
+
+[2/18/2024 1:08 AM] tux_linux
+on stock os, ntx_hwconfig usually reads from that i guess
+
+
+[2/18/2024 1:10 AM] angus9356
+Ok I put it back kobo u-boot and kernel works but kernel crashes almost immediately
+
+
+[2/18/2024 1:10 AM] tux_linux
+good
+
+
+[2/18/2024 1:10 AM] tux_linux
+send output
+
+
+[2/18/2024 1:10 AM] tux_linux
+please
+
+
+[2/18/2024 1:11 AM] angus9356
+Here you go
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-FED08.txt
+
+
+[2/18/2024 1:12 AM] tux_linux
+thats a good start
+
+
+[2/18/2024 1:12 AM] tux_linux
+so its the stock kernel
+
+
+[2/18/2024 1:12 AM] tux_linux
+did you change the partition layout?
+
+
+[2/18/2024 1:12 AM] angus9356
+Its the kobo kernel that I built
+
+
+[2/18/2024 1:13 AM] angus9356
+do you have a list of dot config changes needed for inkbox ?
+
+
+[2/18/2024 1:13 AM] tux_linux
+but you put hwconfig back?
+
+
+[2/18/2024 1:13 AM] angus9356
+yes without the HW config it crashes differentl
+
+
+[2/18/2024 1:13 AM] tux_linux
+i would need `cat /proc/cmdline` from stock os
+
+
+[2/18/2024 1:14 AM] tux_linux
+it shouldnt crash if everything is in place
+
+
+[2/18/2024 1:14 AM] tux_linux
+it should just boot
+
+
+[2/18/2024 1:14 AM] angus9356
+I'm going to stop it in u-boot and modify the rootfs
+
+
+[2/18/2024 1:14 AM] tux_linux
+wdym
+
+
+[2/18/2024 1:14 AM] angus9356
+huh ?
+
+
+[2/18/2024 1:14 AM] tux_linux
+huh for what
+
+
+[2/18/2024 1:15 AM] angus9356
+wdym "What do you mean" ?
+
+
+[2/18/2024 1:15 AM] tux_linux
+yes
+
+
+[2/18/2024 1:15 AM] tux_linux
+what does <stop it in u-boot> mean
+
+
+[2/18/2024 1:16 AM] angus9356
+It's not finding the rootfs from the message so I'll stop it in u-boot and modify the kernel cmdline
+
+
+[2/18/2024 1:16 AM] tux_linux
+im not sure u-boot will allow you to do that
+
+
+[2/18/2024 1:16 AM] tux_linux
+bootm command is borked
+
+
+[2/18/2024 1:16 AM] tux_linux
+it sets its own kernel arguments no matter what you define in the env
+
+
+[2/18/2024 1:17 AM] tux_linux
+so to circumvent it, either fix u-boot somehow or enforce `CONFIG_CMDLINE_FORCE` in kernel config
+
+
+[2/18/2024 1:17 AM] angus9356
+Huh well lucky I have the source then
+
+
+[2/18/2024 1:17 AM] tux_linux
+you can still try
+maybe your uboot is different
+
+
+[2/18/2024 1:17 AM] tux_linux
+but most 2009.08 uboots i have seen from kobo are the same
+
+
+[2/19/2024 11:46 PM] angus9356
+Do you know where this offset is stored in u-boot ?
+
+
+[2/20/2024 12:02 AM] angus9356
+Nevermind found it
+bootloader/imx507/board/freescale/mx50_rdp/ntx_comm.c
+
+
+[2/20/2024 12:32 AM] tux_linux
+Yes
+
+
+[2/20/2024 12:32 AM] tux_linux
+So basically change it to that offset
+
+
+[2/20/2024 12:32 AM] tux_linux
+And then please send fdisk -l
+
+
+[2/20/2024 12:32 AM] tux_linux
+Of your sd card
+
+
+[2/20/2024 2:00 AM] angus9356
+Not at the computer right now but I sent an image so you should be able to get it from that
+
+
+[2/20/2024 4:17 PM] angus9356
+Here's the waveform file
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/waveform-DDF03.bin
+
+
+[2/20/2024 4:17 PM] angus9356
+extracted from the image
+```
+dd if=kobo.img of=waveform.bin bs=512 skip=14336 count=13235
+```
+
+
+[2/20/2024 5:09 PM] andi15701
+extract-kobohidden kobo-img 14336 waveform.bin
+
+
+[2/20/2024 5:09 PM] andi15701
+should save you from length calculations
+
+
+[2/20/2024 5:45 PM] angus9356
+I just pulled it from the u-boot log
+
+
+[2/20/2024 6:13 PM] andi15701
+yes, that is another source
+
+
+[2/20/2024 10:37 PM] angus9356
+Need the sector before as well
+dd if=kobo.img of=waveform.bin bs=512 skip=14335 count=13236
+
+
+[2/20/2024 11:15 PM] andi15701
+depends
+
+
+[2/20/2024 11:16 PM] andi15701
+look at the source of that extract-kobohidden
+
+
+[2/20/2024 11:16 PM] andi15701
+so if you want to analyze it, you do not need
+
+
+[2/20/2024 11:16 PM] andi15701
+for the waveform:
+
+
+[2/20/2024 11:16 PM] andi15701
+if you want to load it as regular firmware
+
+
+[2/20/2024 11:17 PM] andi15701
+from /lib/firmware
+
+
+[2/20/2024 11:17 PM] andi15701
+you do not need it
+
+
+[2/20/2024 11:17 PM] andi15701
+if a kobo uboot should be able to read it
+
+
+[2/20/2024 11:17 PM] andi15701
+you need it
+
+
+[2/20/2024 11:48 PM] angus9356
+Without the additional sector the kobo u-boot was doing a short read
+
+
+[2/20/2024 11:49 PM] andi15701
+yes, it contains the length
+
+
+[2/20/2024 11:49 PM] angus9356
+I have u-boot working now and the kernel starts
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/minicom-C3BB8.cap
+
+
+[2/20/2024 11:50 PM] andi15701
+you can easily reconstruct it
+
+
+[2/20/2024 11:51 PM] angus9356
+soruce is here
+https://github.com/nytowl/kernel/tree/n250
+
+{Embed}
+https://github.com/nytowl/kernel/tree/n250
+GitHub - nytowl/kernel at n250
+Kernel sources for InkBox OS. Contribute to nytowl/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-65DF1
+
+
+[2/20/2024 11:52 PM] andi15701
+offset = strtoul(argv[2], NULL, 0); 
+   offset *= 512;
+   if (lseek(fd, offset - sizeof(magic) - 8, SEEK_SET) < 0) {
+       perror("seek failed");
+       return 1;
+   }
+   
+   if ((sizeof(head) != read(fd, head, sizeof(head))) ||
+       (memcmp(head, magic, sizeof(magic)))) {
+       fprintf(stderr, "did not find valid header\n");
+       return 1;
+   } 
+   
+   length = head[11];
+   length <<= 8;
+   length |= head[10];
+   length <<= 8;
+   length |= head[9];
+   length <<= 8;
+   length |= head[8];
+
+
+[2/20/2024 11:52 PM] andi15701
+that is about that sector
+
+
+[2/20/2024 11:53 PM] andi15701
+so if you want to put an extracted file back
+
+
+[2/20/2024 11:53 PM] andi15701
+you just need to reverse the action I have have done while reading
+
+
+[2/20/2024 11:55 PM] andi15701
+so now are you planing to do something on top of 6.6?
+
+
+[2/20/2024 11:56 PM] andi15701
+if you are a kernel contributer
+
+
+[2/20/2024 11:57 PM] angus9356
+First I'm going to get this thing working. Probably won't upstream it as I don't feel like completely rebuild the devicetree
+
+
+[2/20/2024 11:57 PM] angus9356
+I want a waterproof eink device that runs linux.
+
+
+[2/20/2024 11:59 PM] andi15701
+well, here the clara2e is waiting...
+
+
+[2/21/2024 12:00 AM] andi15701
+probably writing the devicetree is just a copy-modify-work with the imx50-kobo-aura.dts
+
+
+[2/21/2024 12:01 AM] angus9356
+That would be good if there is a reasonable starting place
+
+
+[2/21/2024 12:01 AM] angus9356
+Need to get this one going first
+
+
+[2/21/2024 12:02 AM] andi15701
+My impression is it is modifying the devicetree and fiddling a bit with the epdc driver to work with old chips
+
+
+[2/21/2024 12:03 AM] andi15701
+and if we have one imx5 device working, the others are easier and with some luck we can get rid of 2.6 kernels and the dependencies on some stone-age userspace
+
+
+[2/21/2024 12:04 AM] angus9356
+I added a CI build job to make the kernel and u-boot
+https://github.com/nytowl/kernel/actions/runs/7981082574/job/21792077011
+
+{Embed}
+https://github.com/nytowl/kernel/actions/runs/7981082574/job/21792077011
+CI-build.yml: add the inkbox link · nytowl/kernel@183d8be
+Kernel sources for InkBox OS. Contribute to nytowl/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-65DF1
+
+
+[2/21/2024 12:04 AM] andi15701
+nice
+
+
+[2/21/2024 12:05 AM] angus9356
+With the original kernel I got some config warnings
+```
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+```
+
+
+[2/21/2024 12:06 AM] angus9356
+Not seeing anything like that now. A missing file or mmc sector ?
+
+
+[2/21/2024 12:56 AM] andi15701
+often seen that
+
+
+[2/21/2024 12:56 AM] andi15701
+without any problem associated
+
+
+[2/21/2024 12:56 AM] andi15701
+nothing missing
+
+
+[2/21/2024 1:30 AM] angus9356
+The system is crashing at the point the power management gets enabled so guessing there a regulator not properly setup
+
+
+[2/22/2024 8:42 AM] andi15701
+oops, misinterpreted that, so if these messages are gone, then there is something missing
+
+
+[2/22/2024 8:42 AM] andi15701
+again for hwconfig, you need to create the sector before the data
+
+
+[2/22/2024 8:43 AM] andi15701
+same as for waveform
+
+
+[2/22/2024 8:43 AM] andi15701
+or for simplicity, start with a clone of the pre-partition space
+
+
+[2/22/2024 11:25 PM] angus9356
+Add sectors 1023 and 1024 changed the message but boot still fails
+
+
+[2/22/2024 11:47 PM] szybet
+Which uboot do you went with in the end? The vendor one or a generic one?
+
+
+[2/22/2024 11:47 PM] szybet
+And kernel
+
+
+[2/22/2024 11:49 PM] szybet
+I dont see any changes in the repo
+
+
+[2/22/2024 11:55 PM] tux_linux
+there is another branch
+
+
+[2/23/2024 12:19 AM] angus9356
+The kobo u-boot  can boot either the kernel from the original image or the kernel that I built from the kobo sources
+
+
+[2/23/2024 12:21 AM] angus9356
+the kernel I built crashes around the point of enabling the network driver and power management
+
+
+[2/23/2024 12:49 AM] angus9356
+Ok I think I have the kernel booting now. Just something wrong with the rootfs 
+can't run '/etc/init.d/rcS': No such file or directory
+
+
+[2/23/2024 9:48 AM] andi15701
+so, do you have the initrd stuff specified in the kernel config?
+
+
+[2/23/2024 5:40 PM] angus9356
+When I enable the initrd stuff in the kernel is when it crashes so maybe I need to generate the inintrd binaries with the same compiler.
+
+
+[2/23/2024 5:41 PM] angus9356
+How is the initrd being built ?
+
+
+[2/23/2024 5:44 PM] tux_linux
+you need an inkbox-type initrd
+
+
+[2/23/2024 5:45 PM] tux_linux
+https://github.com/Kobo-InkBox/kernel/tree/master/initrd/busybox-1.32.1/_install-glo
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/tree/master/initrd/busybox-1.32.1/_install-glo
+kernel/initrd/busybox-1.32.1/_install-glo at master · Kobo-InkBox/k...
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+
+
+[2/23/2024 5:45 PM] tux_linux
+like this one
+
+
+[2/23/2024 5:51 PM] andi15701
+CONFIG_INITRAMFS_SOURCE="/home/build/inkbox/kernel/initrd/devnodes-imx.txt /home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-touch"
+
+
+[2/23/2024 5:51 PM] andi15701
+well there is that
+
+
+[2/23/2024 5:51 PM] andi15701
+so it should be included
+
+
+[2/23/2024 5:52 PM] tux_linux
+yes
+some things in the initrd will need to be changed
+
+
+[2/23/2024 5:52 PM] tux_linux
+like the device id, public keys, etc.
+
+
+[2/23/2024 5:52 PM] tux_linux
+also we use a custom cmdline
+
+
+[2/23/2024 6:01 PM] angus9356
+I've linked to the n905b in the initrd and it's getting built into the image
+
+
+[2/23/2024 6:02 PM] angus9356
+I want to know how that initrd got generated.
+
+
+[2/23/2024 6:04 PM] angus9356
+https://github.com/nytowl/kernel/blob/183d8bea1c28145472b4454b4ca3d975f290f754/kernel/config/config-n250#L382
+
+{Embed}
+https://github.com/nytowl/kernel/blob/183d8bea1c28145472b4454b4ca3d975f290f754/kernel/config/config-n250
+kernel/kernel/config/config-n250 at 183d8bea1c28145472b4454b4ca3d97...
+Kernel sources for InkBox OS. Contribute to nytowl/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-65DF1
+
+
+[2/23/2024 6:05 PM] tux_linux
+it was manually created from a basic busybox install
+
+
+[2/23/2024 6:05 PM] tux_linux
+it's basically the same for each device but with small changes for device-specific stuff
+
+
+[2/23/2024 6:13 PM] angus9356
+Ok what commands did you use to manually generate it ?
+
+
+[2/23/2024 6:38 PM] szybet
+you mean the busybox?
+
+
+[2/23/2024 6:59 PM] angus9356
+Well the whole initrd directory or is the only binary in there busybox ?
+
+
+[2/23/2024 7:22 PM] tux_linux
+i will add a n250 directory later today
+
+
+[2/23/2024 7:27 PM] angus9356
+Ok thanks. I made a copy of the n905b dir and thats not working right now
+
+
+[2/23/2024 7:29 PM] angus9356
+Will you use the gcc 4.4 compiler to generate it ?
+
+
+[2/23/2024 9:29 PM] szybet
+is ti just busybox compiled with the crosscompiler and put into this filesystem?
+
+
+[2/23/2024 9:47 PM] andi15701
+btw there is support for iMX50 Kindle readers in mainline barebox... so maybe it is a starting point if the stone-age uboot gets too nasty...
+
+
+[2/23/2024 9:50 PM] tux_linux
+Basically yes
+
+
+[2/23/2024 9:50 PM] tux_linux
+And some extras
+
+
+[2/23/2024 9:50 PM] szybet
+yes some scripts some binaries
+
+
+[2/23/2024 9:50 PM] szybet
+but basic stuff
+
+
+[2/23/2024 9:50 PM] tux_linux
+Yes
+
+
+[2/23/2024 9:50 PM] tux_linux
+Also with init in it
+
+
+[2/23/2024 10:22 PM] tux_linux
+@Angus 
+I have some changes to push to your repo
+
+
+[2/23/2024 10:22 PM] tux_linux
+could you give me access
+
+
+[2/23/2024 10:22 PM] tux_linux
+thanks
+
+
+[2/23/2024 10:23 PM] tux_linux
+Also you will need to compile the kernel modules for that device
+or i can
+whatever, they need to be in modules.sqsh
+
+
+[2/23/2024 10:23 PM] tux_linux
+also, i don't think n250 kernel source is in there
+
+
+[2/23/2024 10:24 PM] tux_linux
+it should be
+
+
+[2/23/2024 10:24 PM] tux_linux
+you can give me access first, i'll push commits, then you can add your working kernel source
+
+
+[2/23/2024 10:25 PM] angus9356
+I pushed up the kobo n250 kernel
+
+
+[2/23/2024 10:25 PM] tux_linux
+where
+
+
+[2/23/2024 10:25 PM] tux_linux
+did you give me access first
+
+
+[2/23/2024 10:26 PM] tux_linux
+so i can push my commit
+
+
+[2/23/2024 10:26 PM] angus9356
+Working on it
+
+
+[2/23/2024 10:26 PM] tux_linux
+ok, thanks
+
+
+[2/23/2024 10:27 PM] angus9356
+Here's the n250 kernel source https://github.com/nytowl/kernel/tree/n250/kernel/linux-2.6.35.3-n250
+
+{Embed}
+https://github.com/nytowl/kernel/tree/n250/kernel/linux-2.6.35.3-n250
+kernel/kernel/linux-2.6.35.3-n250 at n250 · nytowl/kernel
+Kernel sources for InkBox OS. Contribute to nytowl/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-65DF1
+
+
+[2/23/2024 10:27 PM] tux_linux
+oh ok, it somehow escaped my eyes
+
+
+[2/23/2024 10:27 PM] tux_linux
+let me know when i can push
+
+
+[2/23/2024 10:28 PM] angus9356
+I'm trying to figure out how to add you
+
+
+[2/23/2024 10:28 PM] tux_linux
+i think it's in the repo settings
+
+
+[2/23/2024 10:28 PM] tux_linux
+under collaborators
+
+
+[2/23/2024 10:28 PM] tux_linux
+maybe
+
+
+[2/23/2024 10:28 PM] angus9356
+There is no settings tab after "insights"
+
+
+[2/23/2024 10:29 PM] angus9356
+If you push them to a branch on the main repo I can pull it from ther e
+
+
+[2/23/2024 10:30 PM] tux_linux
+are you sure you are logged in??
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-71272.png
+
+
+[2/23/2024 10:30 PM] tux_linux
+maybe bc it's a fork
+
+
+[2/23/2024 10:30 PM] tux_linux
+but still nonsense
+
+
+[2/23/2024 10:31 PM] angus9356
+Yeah I don't have that tab and I'm logged in
+
+
+[2/23/2024 10:31 PM] angus9356
+I've put all my changes on a branch
+
+
+[2/23/2024 10:31 PM] angus9356
+https://github.com/Kobo-InkBox/kernel/compare/master...nytowl:kernel:n250
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/compare/master...nytowl:kernel:n250
+Comparing Kobo-InkBox:master...nytowl:n250 · Kobo-InkBox/kernel
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-81DA0
+
+
+[2/23/2024 10:32 PM] tux_linux
+yes, i am on it
+
+
+[2/23/2024 11:10 PM] tux_linux
+I pushed on the main repo
+
+
+[2/23/2024 11:10 PM] tux_linux
+though gh actions are not relevant if you build this kernel only for this device
+
+
+[2/23/2024 11:17 PM] angus9356
+I grabbed it thanks
+
+{Reactions}
+👍 
+
+[2/23/2024 11:17 PM] tux_linux
+you need to compile modules for it
+
+
+[2/23/2024 11:17 PM] tux_linux
+and probably more than usual
+
+
+[2/23/2024 11:17 PM] tux_linux
+like g_ether and g_mass_storage ones
+
+
+[2/23/2024 11:17 PM] tux_linux
+maybe i can do it once i have time
+
+
+[2/23/2024 11:17 PM] tux_linux
+also what cursed wifi chip does this kobo have
+
+
+[2/23/2024 11:17 PM] tux_linux
+all kobo wifi chips are cursed
+
+
+[2/23/2024 11:18 PM] angus9356
+Not sure yet. Was going to look at that once I got it booting properly
+
+{Reactions}
+👍 
+
+[2/23/2024 11:19 PM] tux_linux
+oh, you got the most cursed of them all
+
+
+[2/23/2024 11:19 PM] tux_linux
+wc121/cybertan
+
+
+[2/23/2024 11:32 PM] angus9356
+I'm puzzled . The kernel boots fine until I include the initrd
+
+
+[2/23/2024 11:34 PM] tux_linux
+wdym?
+
+
+[2/23/2024 11:37 PM] angus9356
+If I build the initrd into the kernel it crashes here without any message
+
+[    2.053446] NET: Registered protocol family 2
+[    2.057997] IP route cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    2.065661] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+[    2.073234] TCP bind hash table entries: 16384 (order: 4, 65536 bytes)
+[    2.079983] TCP: Hash tables configured (established 16384 bind 16384)
+[    2.086580] TCP reno registered
+[    2.089751] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    2.095653] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    2.102108] NET: Registered protocol family 1
+
+
+[2/23/2024 11:38 PM] angus9356
+Without the initrd it obviously doesn't find a rootfs and stops
+
+[    1.960116] NET: Registered protocol family 17
+[    1.964629] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 2
+[    1.985557] pmic_rtc pmic_rtc.1: setting system clock to 2024-02-23 22:30:54 UTC (1708727454)
+[    2.019461] [zForce_ir_touch_recv_data-310] firmware version 0005 0002 0000 0001 
+[    2.036999] [zForce_ir_touch_recv_data-312] Interface protocol: major=0x05, minor=0x02
+[    2.045166] [ntx_get_battery_vol-1890] 96,bat=1010
+[    2.049975] [ntx_get_battery_vol-1890] 96,bat=1010
+[    2.055472] VFS: Mounted root (ramfs filesystem) on device 0:10.
+[    2.061531] Freeing init memory: 124K
+[    2.065344] Kernel panic - not syncing: No init found.  Try passing init= option to kernel. See Linux Documentation/i
+nit.txt for guidance.
+[    2.077870] [<8002c660>] (unwind_backtrace+0x0/0xec) from [<802f4c9c>] (panic+0x6c/0xec)
+[    2.085993] [<802f4c9c>] (panic+0x6c/0xec) from [<80027580>] (init_post+0xac/0xd4)
+[    2.093574] [<80027580>] (init_post+0xac/0xd4) from [<800084a4>] (kernel_init+0x124/0x168)
+[    2.101869] [<800084a4>] (kernel_init+0x124/0x168) from [<800289c0>] (kernel_thread_exit+0x0/0x8)
+[   12.094846] mmc1: Timeout waiting for hardware interrupt.
+[   12.100248] mxsdhci: ============== REGISTER DUMP ==============
+[   12.106257] mxsdhci: Sys addr: 0x00000000 | Version:  0x00001201
+[   12.112265] mxsdhci: Blk size: 0x00000000 | Blk cnt:  0x00000001
+[   12.118272] mxsdhci: Argument: 0x00000c00 | Trn mode: 0x341a0000
+[   12.124280] mxsdhci: Present:  0xff880008 | Host ctl: 0x00000121
+[   12.130288] mxsdhci: Clock:    0x000010ff
+[   12.134296] mxsdhci: Int stat: 0x00000000
+[   12.138306] mxsdhci: Int enab: 0x117f013f | Sig enab: 0x117f003f
+[   12.144312] mxsdhci: Caps:     0x07f30000
+[   12.148321] mxsdhci: ===========================================
+
+
+[2/23/2024 11:43 PM] angus9356
+What the /opt/key.sqsh for ?
+
+
+[2/23/2024 11:45 PM] tux_linux
+https://github.com/Kobo-InkBox/kernel/blob/0f8d448606ded3d7746d98ea3ee7e38fb54930e7/kernel/config/config-n437#L471
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/blob/0f8d448606ded3d7746d98ea3ee7e38fb54930e7/kernel/config/config-n437
+kernel/kernel/config/config-n437 at 0f8d448606ded3d7746d98ea3ee7e38...
+Kernel sources for InkBox OS. Contribute to Kobo-InkBox/kernel development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kernel-81DA0
+
+
+[2/23/2024 11:45 PM] tux_linux
+compare your cmdline with this one
+
+
+[2/23/2024 11:45 PM] tux_linux
+i think there are some things missing
+
+
+[2/23/2024 11:45 PM] tux_linux
+it contains the public key for package signature verification
+
+
+[2/23/2024 11:46 PM] tux_linux
+and some other keys too
+
+
+[2/24/2024 12:05 AM] angus9356
+The cmdline was ok. Going to try booting and mounting the second SD instead of the initrd
+
+
+[2/24/2024 12:08 AM] szybet
+@tux-linux you have access to a fork repo if the parent repo is yours
+
+
+[2/24/2024 12:13 AM] tux_linux
+It kept saying permission denied
+
+
+[2/24/2024 12:16 AM] szybet
+over ssh?
+
+
+[2/24/2024 12:17 AM] tux_linux
+Yes
+
+
+[2/24/2024 12:17 AM] szybet
+um no idea then
+
+
+[2/24/2024 12:31 AM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_53c77b27-5b68-401-893A2.jpg
+
+
+[2/24/2024 12:31 AM] angus9356
+Hacked around the initramfs issues and got a boot kinda
+
+
+[2/24/2024 12:32 AM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_249f0108-f0ce-43e-0B2BB.jpg
+
+
+[2/24/2024 12:33 AM] tux_linux
+Good!
+
+
+[2/24/2024 12:33 AM] angus9356
+I'll figure out the initrmafs thing tomorrow
+
+
+[2/24/2024 12:33 AM] tux_linux
+I have a progress bar to fix
+
+
+[2/24/2024 12:33 AM] tux_linux
+What is the screen resolution
+
+
+[2/24/2024 12:33 AM] tux_linux
+Du you have a boot log also
+
+
+[2/24/2024 12:35 AM] angus9356
+Guessing this is the issue
+Root filesystem's digital signature is invalid! Shutting down ...
+
+
+[2/24/2024 12:35 AM] tux_linux
+Yes
+You don't have a rootfs yet
+
+
+[2/24/2024 12:36 AM] angus9356
+I put the n905b image on there
+
+
+[2/24/2024 12:36 AM] tux_linux
+Well, signature's not valid then
+
+
+[2/24/2024 12:37 AM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/minicom-2DA9E.cap
+
+
+[2/24/2024 12:37 AM] tux_linux
+https://www.bradfordembedded.com/2016/06/openssl-file-signing
+
+
+[2/24/2024 12:37 AM] tux_linux
+You can sign it that way
+
+
+[2/24/2024 12:37 AM] tux_linux
+Use the private key i gave you
+
+
+[2/24/2024 12:37 AM] angus9356
+Ok
+
+
+[2/24/2024 12:37 AM] tux_linux
+You probably will get other problems
+
+
+[2/24/2024 12:37 AM] tux_linux
+But it's a start
+
+
+[2/24/2024 2:04 PM] andi15701
+modprobe brcmfmac and you are done
+
+
+[2/24/2024 2:04 PM] andi15701
+so what is cursed about that one
+
+
+[2/24/2024 2:04 PM] andi15701
+?
+
+
+[2/24/2024 5:16 PM] tux_linux
+it's dhd.ko
+
+
+[2/24/2024 5:47 PM] angus9356
+I think the WDT is triggering before the initramfs can be unpacked. The bootdelay countdown is also to fast by a factor of about 10
+
+
+[2/24/2024 5:47 PM] angus9356
+Seen either of these before ?
+
+
+[2/24/2024 5:51 PM] tux_linux
+wdt?
+
+
+[2/24/2024 5:52 PM] angus9356
+Watch dog timer
+
+
+[2/24/2024 5:52 PM] tux_linux
+it's possible
+
+
+[2/24/2024 5:52 PM] tux_linux
+oh
+
+
+[2/24/2024 5:52 PM] tux_linux
+try `i2c probe`
+
+
+[2/24/2024 5:52 PM] tux_linux
+in u-boot cmdline
+
+
+[2/24/2024 5:52 PM] tux_linux
+usually this prevents watchdog from triggering
+
+
+[2/24/2024 5:52 PM] angus9356
+I wondered why that was in the sources 🙂
+
+
+[2/24/2024 5:56 PM] angus9356
+Well now it works. That would have been good to know a couple of days ago :/
+
+
+[2/24/2024 6:09 PM] szybet
+maybe we should document that somewhere
+
+
+[2/24/2024 6:09 PM] szybet
+https://github.com/Szybet/niAudio/blob/main/inkbox.md
+here is an incomplete guide of porting inkbox
+
+https://github.com/Kobo-InkBox/inkbox/wiki
+here is our wiki placed
+
+
+[2/24/2024 6:10 PM] szybet
+a "general porting guide" would be cool
+
+
+[2/24/2024 6:10 PM] szybet
+I gived up on the one I started because I don't have enough deep knowledge to do that
+
+
+[2/24/2024 6:12 PM] angus9356
+That would have been a handy page to see. Glad you showed me before I started messing around with the signing
+
+
+[2/24/2024 6:13 PM] szybet
+It's not that helpfull, maybe some commands are but yea, incomplete
+
+
+[2/24/2024 6:20 PM] angus9356
+Whats the difference between the std kernel and the rooted ?
+
+
+[2/24/2024 6:22 PM] andi15701
+it is dhd.ko is some android kernels as external module
+
+
+[2/24/2024 6:23 PM] andi15701
+well, I gave you the link describing the watchdog
+
+
+[2/24/2024 6:23 PM] angus9356
+Ok , sorry don't remember seeing it 🙂
+
+
+[2/24/2024 6:25 PM] andi15701
+that one
+
+
+[2/24/2024 6:26 PM] angus9356
+I pushed out working kernel and u-boot
+
+
+[2/24/2024 6:26 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-74C11.png
+
+
+[2/24/2024 6:29 PM] andi15701
+regarded cursed wlan: brcmfmac for cybertan seems to be fine, for the realtek one, I even have used this one for kobo 4.1.15 kernels and got a big improvement https://github.com/jwrdegoede/rtl8189ES_linux.git
+
+{Embed}
+https://github.com/jwrdegoede/rtl8189ES_linux.git
+GitHub - jwrdegoede/rtl8189ES_linux
+Contribute to jwrdegoede/rtl8189ES_linux development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rtl8189ES_linux-E6D84
+
+
+[2/24/2024 6:29 PM] andi15701
+branch 8189fs
+
+
+[2/24/2024 6:29 PM] tux_linux
+oh ok, interesting
+
+
+[2/24/2024 6:29 PM] andi15701
+so that might help for anything running inkbox on 4.1.15 kernels
+
+
+[2/24/2024 6:30 PM] andi15701
+the main problem I have with wifi are captive portals requiring a fat browser
+
+
+[2/24/2024 6:32 PM] andi15701
+I ended up with some mac-spoofing, so logging in with some other device temporarily using the mac of the kobo...
+
+
+[2/24/2024 6:37 PM] angus9356
+Where is the public key supposed to be put ?
+
+
+[2/24/2024 6:39 PM] tux_linux
+it's in [initrd]/opt/key.sqsh
+
+{Reactions}
+👍 
+
+[2/24/2024 6:42 PM] tux_linux
+but it's already there for you
+
+
+[2/24/2024 6:42 PM] tux_linux
+i put it there yesterday
+
+
+[2/24/2024 6:42 PM] angus9356
+Oh ok I just need to sign the rootfs then
+
+
+[2/24/2024 6:43 PM] tux_linux
+yes
+
+
+[2/24/2024 6:43 PM] tux_linux
+and probably more things
+
+
+[2/24/2024 6:51 PM] angus9356
+Ok got it to boot
+```
+Welcome to InkBox OS 2.0
+Kernel 2.6.35.3-850-gbc67621-inkbox+ on armv7l (/dev/ttymxc0)
+
+inkbox login: 
+```
+
+
+[2/24/2024 6:52 PM] tux_linux
+the ui?
+
+
+[2/24/2024 6:52 PM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_2879a026-66cb-410-6F7A4.jpg
+
+
+[2/24/2024 6:52 PM] tux_linux
+its a good start
+
+
+[2/24/2024 6:53 PM] angus9356
+touchscreen doesn't seem to be working
+
+
+[2/24/2024 6:53 PM] tux_linux
+oh no
+you have a screen size we dont support yet
+
+
+[2/24/2024 6:53 PM] tux_linux
+6.8"?
+
+
+[2/24/2024 6:54 PM] angus9356
+yea
+
+
+[2/24/2024 6:54 PM] tux_linux
+please `cat /sys/class/graphics/fb0/rotate`
+
+
+[2/24/2024 6:54 PM] angus9356
+I wasn't able to login and it went to sleep
+
+
+[2/24/2024 6:55 PM] angus9356
+Oh console still works
+
+
+[2/24/2024 6:55 PM] angus9356
+```
+inkbox login: [  409.459780] [ntx_get_battery_vol-1890] 64,bat=963
+root
+Password: 
+Welcome to InkBox OS!
+login[3009]: root login on 'ttymxc0'
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+This account is not available
+```
+
+
+[2/24/2024 6:55 PM] tux_linux
+you are on std kernel
+
+
+[2/24/2024 6:55 PM] tux_linux
+.
+
+
+[2/24/2024 6:55 PM] angus9356
+yep
+
+
+[2/24/2024 6:55 PM] tux_linux
+build root kernel
+
+
+[2/24/2024 6:56 PM] tux_linux
+then `echo rooted | dd of=/dev/mmcblk0 bs=512 seek=79872`
+
+
+[2/24/2024 6:56 PM] szybet
+why is shell even enable on std kernel 😂
+
+
+[2/24/2024 6:56 PM] tux_linux
+its not?
+
+
+[2/24/2024 6:56 PM] szybet
+then how
+
+
+[2/24/2024 6:56 PM] tux_linux
+`This account is not available`?
+
+
+[2/24/2024 6:56 PM] tux_linux
+/sbin/nologin
+
+
+[2/24/2024 6:56 PM] szybet
+still
+
+
+[2/24/2024 6:56 PM] tux_linux
+so what
+
+
+[2/24/2024 6:59 PM] angus9356
+```
+
+[   11.433980] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+(initrd) Hit ENTER to stop auto-boot ... [   13.110010] usb unplugged
+
+
+ * Device is rooted; not enforcing security policy
+[   17.499810] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+ * Starting init ramdisk boot USB debug framework
+tcpsvd: listening on 0.0.0.0:21, starting
+[   17.548011] g_ether: Unknown symbol usb_gadget_register_driver (err 0)
+[   17.556989] g_ether: Unknown symbol usb_gadget_unregister_driver (err 0)
+Couldn't init module /modules/g_ether.ko
+Interface 'usb0': Error: SIOCSIFFLAGS failed: No such device
+[   18.626602] epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+[   19.455901] TPS65185 temprature data = 0x17,23
+ * This device is in boot-time USB debug mode. Please reset or reboot it to resume normal operation.
+ * This device is in boot-time USB debug mode. Please reset or reboot it to resume normal operation.
+```
+
+
+[2/24/2024 7:00 PM] tux_linux
+what happened
+
+
+[2/24/2024 7:01 PM] szybet
+you need to recompile modules
+
+
+[2/24/2024 7:01 PM] angus9356
+I loaded the rooted kernel and now it hangs repeating the USB debug mode message
+
+
+[2/24/2024 7:01 PM] szybet
+for usbnet
+
+
+[2/24/2024 7:01 PM] szybet
+make modules
+
+
+[2/24/2024 7:03 PM] angus9356
+Where are the modules supossed to be installed ?
+
+
+[2/24/2024 7:03 PM] szybet
+modules.sqsh
+
+
+[2/24/2024 7:03 PM] szybet
+and there is a directory hierarchy, just replace them
+
+
+[2/24/2024 7:04 PM] szybet
+hmmm @tux-linux what was the command to recreate that sqshfs
+
+
+[2/24/2024 7:04 PM] tux_linux
+`mksquashfs . ../modules.sqsh -b 1048576 -comp gzip -always-use-fragments`
+
+
+[2/24/2024 7:04 PM] szybet
+`mksquashfs . ../modules.sqsh -b 1048576 -comp gzip -always-use-fragments`
+
+
+[2/24/2024 7:04 PM] szybet
+yea
+
+
+[2/24/2024 7:04 PM] szybet
+discord search to the rescue
+
+
+[2/24/2024 7:04 PM] tux_linux
+i typed it out from memory
+
+
+[2/24/2024 7:05 PM] szybet
+https://tenor.com/view/going-insane-cat-insane-gif-21711418
+
+{Embed}
+https://tenor.com/view/going-insane-cat-insane-gif-21711418
+/mnt/data/projects/git/conversations/media/going-insane-cat-FEB5F.png
+
+
+[2/24/2024 7:06 PM] szybet
+thats insane you know
+
+
+[2/24/2024 7:06 PM] tux_linux
+no?
+
+
+[2/24/2024 7:06 PM] tux_linux
+maybe because i have been using it for 3yrs
+
+
+[2/24/2024 7:13 PM] angus9356
+Ok seem to be booting with the modules. I just added them to the initramfs
+
+
+[2/24/2024 7:14 PM] angus9356
+```
+Welcome to InkBox OS 2.0
+Kernel 2.6.35.3-850-gbc67621-inkbox+ on armv7l (/dev/ttymxc0)
+
+inkbox login: root
+Password: 
+Welcome to InkBox OS!
+login[2914]: root login on 'ttymxc0'
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+inkbox:~#
+```
+
+
+[2/24/2024 7:15 PM] angus9356
+@tux-linux 
+```
+inkbox:~# [  204.224390] TPS65185 temprature data = 0x18,24
+cat /sys/class/graphics/fb0/rotate
+2
+```
+
+
+[2/24/2024 7:17 PM] angus9356
+There is some response to touch
+```
+[  303.058497] Low signal exists!
+[  303.132238] [zForce_ir_touch_recv_data-289] Low signal Response
+[  303.140551] [zForce_ir_touch_recv_data-345] Low signal notification
+[  303.146828] No low signals!
+[  303.242024] [zForce_ir_touch_recv_data-289] Low signal Response
+[  303.279466] [zForce_ir_touch_recv_data-345] Low signal notification
+[  303.285748] Low signal exists!
+[  303.372680] [zForce_ir_touch_recv_data-289] Low signal Response
+[  303.492364] [zForce_ir_touch_recv_data-289] Low signal Response
+[  306.776963] [zForce_ir_touch_recv_data-345] Low signal notification
+[  306.783262] No low signals!
+[  330.478711] [zForce_ir_touch_recv_data-345] Low signal notification
+[  330.485009] Low signal exists!
+[  330.574040] [zForce_ir_touch_recv_data-289] Low signal Response
+[  330.582368] [zForce_ir_touch_recv_data-345] Low signal notification
+[  330.588635] No low signals!
+[  330.692275] [zForce_ir_touch_recv_data-289] Low signal Response
+```
+
+
+[2/24/2024 7:18 PM] szybet
+weird
+
+
+[2/24/2024 7:18 PM] szybet
+idk
+
+
+[2/24/2024 7:18 PM] szybet
+try evdev on the input device
+
+
+[2/24/2024 7:18 PM] szybet
+the tool is called ev* something
+
+
+[2/24/2024 7:19 PM] angus9356
+evtest
+
+
+[2/24/2024 7:19 PM] szybet
+if there is some data coming that looks reasonable, then it's Qt fault
+
+
+[2/24/2024 7:19 PM] szybet
+yea
+
+
+[2/24/2024 7:19 PM] szybet
+if not, then kernel
+
+
+[2/24/2024 7:19 PM] szybet
+if that's so i can fix it
+
+
+[2/24/2024 7:19 PM] angus9356
+kernel is working
+
+
+[2/24/2024 7:19 PM] angus9356
+top right is 0,0
+
+
+[2/24/2024 7:20 PM] szybet
+so it's reporting good data?
+
+
+[2/24/2024 7:21 PM] angus9356
+bottom left 1430,1080
+
+
+[2/24/2024 7:21 PM] angus9356
+Yup seems to be
+
+
+[2/24/2024 7:21 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-FE0A7.png
+
+
+[2/24/2024 7:21 PM] szybet
+which revision is that
+
+
+[2/24/2024 7:22 PM] angus9356
+I think it's the 1 but how would I check ?
+
+
+[2/24/2024 7:22 PM] szybet
+... ¯\_(ツ)_/¯
+
+
+[2/24/2024 7:22 PM] szybet
+anyway
+
+
+[2/24/2024 7:23 PM] szybet
+do you have access to a shell now?
+
+
+[2/24/2024 7:23 PM] angus9356
+yes
+
+
+[2/24/2024 7:23 PM] szybet
+run chroot /kobo
+
+
+[2/24/2024 7:24 PM] szybet
+no
+
+
+[2/24/2024 7:24 PM] szybet
+hmm
+
+
+[2/24/2024 7:24 PM] szybet
+first run htop then chroot and in this htop kill the current app, it should be someting oob with name in it
+
+
+[2/24/2024 7:25 PM] angus9356
+{oobe-inkbox} /bin/sh ./oobe-inkbox
+
+
+[2/24/2024 7:26 PM] szybet
+then in this chroot run `LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug /mnt/kobo/.adds/inkbox/oobe-inkbox-bin`
+
+
+[2/24/2024 7:26 PM] szybet
+the path may be different
+
+
+[2/24/2024 7:26 PM] szybet
+but something like that
+
+
+[2/24/2024 7:26 PM] szybet
+and post logs
+
+
+[2/24/2024 7:29 PM] angus9356
+```
+inkbox:/# LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr
+/lib QT_QPA_PLATFORM=kobo:debug /mnt/onboard/.adds/inkbox/oobe-inkbox
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+KoboKb: Attempting to capture input...
+device: "" 340 
+ screen: 1440 1080 dpi: 260
+[   14.927913] TPS65185 temprature data = 0x17,23
+```
+
+
+[2/24/2024 7:30 PM] szybet
+`device: "" 340 ` It's lost
+
+
+[2/24/2024 7:30 PM] angus9356
+where do the logs end up ?
+
+
+[2/24/2024 7:30 PM] szybet
+?
+
+
+[2/24/2024 7:31 PM] szybet
+does `/bin/kobo_config.sh` exist in your chroot env?
+
+
+[2/24/2024 7:31 PM] angus9356
+yes
+
+
+[2/24/2024 7:32 PM] angus9356
+There's no n250 in there
+
+
+[2/24/2024 7:32 PM] szybet
+well what is it
+
+
+[2/24/2024 7:32 PM] szybet
+show the file
+
+
+[2/24/2024 7:32 PM] angus9356
+```
+#!/bin/sh
+
+DEVICE=$(cat /opt/inkbox_device)
+
+if [ "${DEVICE}" = "n705" ]; then
+        echo "pixie"
+elif [ "${DEVICE}" = "n905b" ] || [ "${DEVICE}" = "n905c" ] || [ "${DEVICE}" = "
+n905" ]; then
+        echo "trilogy"
+elif [ "${DEVICE}" = "n613" ]; then
+        echo "daylight"
+elif [ "${DEVICE}" = "n236" ]; then
+        echo "star"
+elif [ "${DEVICE}" = "n437" ]; then
+        echo "alyssum"
+elif [ "${DEVICE}" = "n306" ]; then
+        echo "luna"
+elif [ "${DEVICE}" = "n873" ]; then
+        echo "storm"
+fi
+
+```
+
+
+[2/24/2024 7:33 PM] angus9356
+I'm running the n905b rootfs
+
+
+[2/24/2024 7:34 PM] szybet
+what is /opt/inkbox_device
+
+
+[2/24/2024 7:34 PM] angus9356
+n250
+
+
+[2/24/2024 7:34 PM] szybet
+do you have your old stock os somewhere?
+
+
+[2/24/2024 7:35 PM] angus9356
+yep
+
+
+[2/24/2024 7:35 PM] szybet
+you need to retrieve a file somewhere like `/mnt/onboard/.kobo/version`
+
+
+[2/24/2024 7:36 PM] szybet
+here you need to add snow for n250
+
+
+[2/24/2024 7:36 PM] szybet
+echo "snow"
+
+
+[2/24/2024 7:36 PM] angus9356
+How do I make the rootfs rw
+
+
+[2/24/2024 7:37 PM] szybet
+.
+
+
+[2/24/2024 7:37 PM] szybet
+do it for n250, n250a, n250b because we dont know
+
+
+[2/24/2024 7:37 PM] szybet
+yet which device you have exactly
+
+
+[2/24/2024 7:38 PM] szybet
+upload your changes here:
+https://github.com/Kobo-InkBox/rootfs
+and here for the chroot:
+https://github.com/Kobo-InkBox/gui-rootfs
+
+
+[2/24/2024 7:39 PM] szybet
+after you retrieve the version file replace the current one you have at that path and... idk to which repo to upload it
+
+
+[2/24/2024 7:39 PM] tux_linux
+its probably better not to
+
+
+[2/24/2024 7:39 PM] tux_linux
+but
+
+
+[2/24/2024 7:39 PM] tux_linux
+`ifsctl mnt rootfs rw`
+
+
+[2/24/2024 7:41 PM] szybet
+@tux-linux where to put the version file per device
+
+
+[2/24/2024 7:41 PM] tux_linux
+??
+
+
+[2/24/2024 7:41 PM] szybet
+/mnt/onboard/.kobo/version
+
+
+[2/24/2024 7:41 PM] angus9356
+well now it knows the device type
+```
+inkbox:/# LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr
+/lib QT_QPA_PLATFORM=kobo:debug /mnt/onboard/.adds/inkbox/oobe-inkbox
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+KoboKb: Attempting to capture input...
+device: "snow" 340 
+ screen: 1440 1080 dpi: 265
+```
+
+
+[2/24/2024 7:42 PM] szybet
+340 it is
+
+
+[2/24/2024 7:42 PM] szybet
+or you didnt updated the file yet, right?
+
+
+[2/24/2024 7:42 PM] tux_linux
+i still dont understand your question
+
+
+[2/24/2024 7:43 PM] szybet
+the file is device specific
+
+
+[2/24/2024 7:43 PM] angus9356
+I updated the kobo_config.sh
+
+
+[2/24/2024 7:43 PM] szybet
+where to put it in which repo to make it work
+
+
+[2/24/2024 7:43 PM] tux_linux
+its auto generated
+
+
+[2/24/2024 7:43 PM] szybet
+like does imgtool replace it or what
+
+
+[2/24/2024 7:43 PM] szybet
+what
+
+
+[2/24/2024 7:43 PM] szybet
+how
+
+
+[2/24/2024 7:43 PM] szybet
+idk explain that so angus can update it
+
+
+[2/24/2024 7:43 PM] tux_linux
+i dont remember where
+
+
+[2/24/2024 7:44 PM] szybet
+😭
+
+
+[2/24/2024 7:44 PM] tux_linux
+hang on
+
+
+[2/24/2024 7:44 PM] angus9356
+I'm u-boot and kernel 🙂
+
+
+[2/24/2024 7:44 PM] szybet
+@Angus show /dev/input
+
+
+[2/24/2024 7:44 PM] angus9356
+I'll pass it back to you for userpace 🙂
+
+{Reactions}
+👍 
+
+[2/24/2024 7:44 PM] szybet
+what is in there
+
+
+[2/24/2024 7:44 PM] tux_linux
+https://github.com/Kobo-InkBox/rootfs/blob/0ef992cba6a9c5a8256fa5e6e4ab569d18ac88ae/etc/init.d/inkbox_gui#L31
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/0ef992cba6a9c5a8256fa5e6e4ab569d18ac88ae/etc/init.d/inkbox_gui
+rootfs/etc/init.d/inkbox_gui at 0ef992cba6a9c5a8256fa5e6e4ab569d18a...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-1570D
+
+
+[2/24/2024 7:44 PM] angus9356
+inkbox:/# inkbox:~# ls /dev/input
+by-path  event0   event1
+
+
+[2/24/2024 7:45 PM] szybet
+event1 is touchscreen right?
+
+
+[2/24/2024 7:45 PM] angus9356
+```
+inkbox:~# evtest
+No device specified, trying to scan all of /dev/input/event*
+Available devices:
+/dev/input/event0:      mxckpd
+/dev/input/event1:      zForce-ir-touch
+```
+
+
+[2/24/2024 7:45 PM] szybet
+oh ok, so we need to know how the file looks
+
+
+[2/24/2024 7:45 PM] szybet
+ok good
+
+
+[2/24/2024 7:45 PM] szybet
+let me look...
+
+
+[2/24/2024 7:45 PM] szybet
+retrieve the version file so we know which device you have
+
+
+[2/24/2024 7:45 PM] tux_linux
+https://github.com/Kobo-InkBox/rootfs/blob/0ef992cba6a9c5a8256fa5e6e4ab569d18ac88ae/bin/kobo_config.sh
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/0ef992cba6a9c5a8256fa5e6e4ab569d18ac88ae/bin/kobo_config.sh
+rootfs/bin/kobo_config.sh at 0ef992cba6a9c5a8256fa5e6e4ab569d18ac88...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-1570D
+
+
+[2/24/2024 7:46 PM] tux_linux
+also we need to add n250 there
+
+
+[2/24/2024 7:46 PM] angus9356
+from the original device ?
+
+
+[2/24/2024 7:46 PM] szybet
+we did it already, read the chat
+
+
+[2/24/2024 7:46 PM] angus9356
+Where is it on the SD card ?
+
+
+[2/24/2024 7:46 PM] szybet
+yes
+
+
+[2/24/2024 7:46 PM] tux_linux
+ok but this needs to be commited
+
+{Reactions}
+👍 
+
+[2/24/2024 7:46 PM] szybet
+probably last partition at the same path?
+
+
+[2/24/2024 7:46 PM] tux_linux
+dont leave changes hanging around like that
+
+
+[2/24/2024 7:46 PM] szybet
+mount every partition and just search for it
+
+
+[2/24/2024 7:49 PM] angus9356
+There is no /mnt/onboard/.kobo
+
+
+[2/24/2024 7:49 PM] angus9356
+That is one of the directories that was trashed on the SD card
+
+
+[2/24/2024 7:49 PM] tux_linux
+`/kobo/mnt/onboard/.kobo`
+
+
+[2/24/2024 7:49 PM] tux_linux
+what
+
+
+[2/24/2024 7:50 PM] angus9356
+My original kobo sd card was trashed
+
+
+[2/24/2024 7:51 PM] szybet
+ok whatever
+
+
+[2/24/2024 7:51 PM] szybet
+we will figure it out the hard way later
+
+
+[2/24/2024 7:51 PM] szybet
+now please wait so i can figure out why there are no logs regarding input
+
+
+[2/24/2024 7:51 PM] angus9356
+is there somewhere else it is stored ?
+
+
+[2/24/2024 7:51 PM] tux_linux
+maybe we can ask some guy at mr for an image
+
+
+[2/24/2024 7:51 PM] szybet
+we dont need it
+
+
+[2/24/2024 7:52 PM] szybet
+if the x axis will be inverted then its the second one
+
+
+[2/24/2024 7:52 PM] tux_linux
+in your recovery partition
+probably
+
+
+[2/24/2024 7:53 PM] angus9356
+there is no /mnt/onboard in the recovery part
+
+
+[2/24/2024 7:54 PM] szybet
+forget about it
+
+
+[2/24/2024 7:54 PM] tux_linux
+there should be an archive somewhere with original rootfs
+
+
+[2/24/2024 7:54 PM] tux_linux
+but maybe you dont need it
+
+
+[2/24/2024 7:54 PM] angus9356
+ok
+
+
+[2/24/2024 7:55 PM] szybet
+to the launch command add those env vars: `QT_LOGGING_RULES=qt.qpa.input=true QT_DEBUG_PLUGINS=1`
+
+
+[2/24/2024 7:55 PM] szybet
+and now post logs
+
+
+[2/24/2024 7:58 PM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/minicom-A5E55.cap
+
+
+[2/24/2024 7:58 PM] angus9356
+Anything else you'd like me to retrieve before I head out ?
+
+
+[2/24/2024 7:59 PM] szybet
+```
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A  (multi), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1440
+qt.qpa.input: evdevtouch: overwriting touch x max: 1080
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 1080
+qt.qpa.input: evdevtouch: overwriting touch y max: 1440
+qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: zForce-ir-touch
+```
+
+
+[2/24/2024 7:59 PM] szybet
+nope, we are fine
+
+
+[2/24/2024 8:00 PM] szybet
+are you sure no touch is working?
+
+
+[2/24/2024 8:00 PM] szybet
+like click on different places, maybe something will happen
+
+
+[2/24/2024 8:00 PM] szybet
+if it will, then we need to invert axis probably
+
+
+[2/24/2024 8:00 PM] angus9356
+I've clicked all over the screen
+
+
+[2/24/2024 8:00 PM] szybet
+hm...
+
+
+[2/24/2024 8:01 PM] szybet
+launch it once again without QT_DEBUG_PLUGINS and click on the left top edge of the screen and post logs
+
+
+[2/24/2024 8:01 PM] szybet
+there should be anything
+
+
+[2/24/2024 8:01 PM] tux_linux
+is it because you have serial and dont have case put back on
+
+
+[2/24/2024 8:01 PM] szybet
+😶
+
+
+[2/24/2024 8:01 PM] szybet
+oh
+
+
+[2/24/2024 8:01 PM] szybet
+yea
+
+
+[2/24/2024 8:01 PM] szybet
+IR doesn't work without case
+
+
+[2/24/2024 8:01 PM] szybet
+or works horribly
+
+
+[2/24/2024 8:01 PM] angus9356
+I've got the bevel on
+
+
+[2/24/2024 8:02 PM] szybet
+then this
+
+
+[2/24/2024 8:03 PM] angus9356
+QT is getting events
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-F8B30.txt
+
+
+[2/24/2024 8:03 PM] angus9356
+Thats what I get when I try and click the forward button
+
+
+[2/24/2024 8:04 PM] angus9356
+I pushed all 4 corners and it does not advance
+
+
+[2/24/2024 8:04 PM] szybet
+you need to gather logs for all corners
+
+
+[2/24/2024 8:04 PM] szybet
+and describe which is which
+
+
+[2/24/2024 8:04 PM] szybet
+that will help me
+
+
+[2/24/2024 8:05 PM] angus9356
+top right
+```
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 47
+qt.qpa.input: EV_ABS MT_POS_Y 91
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.936806,0.0435185)
+qt.qpa.input: Touchpoint raw position: QPointF(47,91)
+qt.qpa.input: Screen rect: QRect(0,0 1440x1080)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(1347.56,46.4565 1x1) normalized QPointF(0.936806,0.0435185)2
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 44
+qt.qpa.input: EV_ABS MT_POS_Y 83
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.942361,0.0407407)
+qt.qpa.input: Touchpoint raw position: QPointF(44,83)
+qt.qpa.input: Screen rect: QRect(0,0 1440x1080)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(1355.56,43.4593 1x1) normalized QPointF(0.942361,0.0407407)2
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 44
+qt.qpa.input: EV_ABS MT_POS_Y 83
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.942361,0.0407407)
+qt.qpa.input: Touchpoint raw position: QPointF(44,83)
+```
+
+
+[2/24/2024 8:05 PM] angus9356
+top left
+```
+qt.qpa.input: Touchpoint normal position: QPointF(0.285417,0.0777778)
+qt.qpa.input: Touchpoint raw position: QPointF(84,1029)
+qt.qpa.input: Screen rect: QRect(0,0 1440x1080)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(410.215,83.4222 1x1) normalized QPointF(0.285417,0.0777778)2
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 82
+qt.qpa.input: EV_ABS MT_POS_Y 1029
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.285417,0.0759259)
+qt.qpa.input: Touchpoint raw position: QPointF(82,1029)
+qt.qpa.input: Screen rect: QRect(0,0 1440x1080)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(410.215,81.4241 1x1) normalized QPointF(0.285417,0.0759259)2
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 82
+qt.qpa.input: EV_ABS MT_POS_Y 1029
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.285417,0.0759259)
+qt.qpa.input: Touchpoint raw position: QPointF(82,1029)
+```
+
+
+[2/24/2024 8:06 PM] angus9356
+bottom right
+```
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1410
+qt.qpa.input: EV_ABS MT_POS_Y 58
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.959722,1)
+qt.qpa.input: Touchpoint raw position: QPointF(1080,58)
+qt.qpa.input: Screen rect: QRect(0,0 1440x1080)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(1380.54,1078.5 1x1) normalized QPointF(0.959722,1) press 0 2
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1410
+qt.qpa.input: EV_ABS MT_POS_Y 58
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.959722,1)
+qt.qpa.input: Touchpoint raw position: QPointF(1080,58)
+```
+
+
+[2/24/2024 8:07 PM] angus9356
+bottom left
+```
+qt.qpa.input: Screen rect: QRect(0,0 1440x1080)
+qt.qpa.input: Registering touch point: TouchPoint(1 @QRectF(415.211,1078.5 1x1) normalized QPointF(0.288889,1) press 0 2
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1378
+qt.qpa.input: EV_ABS MT_POS_Y 1024
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.288889,1)
+qt.qpa.input: Touchpoint raw position: QPointF(1080,1024)
+qt.qpa.input: EV_ABS TRACKING_ID  1
+qt.qpa.input: EV_ABS TOUCH_MAJOR
+qt.qpa.input: EV_ABS MT_POS_X 1378
+qt.qpa.input: EV_ABS MT_POS_Y 1024
+qt.qpa.input: EV_SYN MT_REPORT && lastEvent was not EV_SYN
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.288889,1)
+qt.qpa.input: Touchpoint raw position: QPointF(1080,1024)
+```
+
+
+[2/24/2024 8:07 PM] angus9356
+bottom left is where the arrow to advance is
+
+
+[2/24/2024 8:08 PM] szybet
+give me some time now...
+
+
+[2/24/2024 8:09 PM] szybet
+in the meantime you look up ( not in the chroot ) the /usr/local/bin/wifi directory
+
+
+[2/24/2024 8:09 PM] szybet
+or update the things you changed till now to our repos
+
+
+[2/24/2024 8:11 PM] angus9356
+I've added all of the kernel and u-boot changes to my branch
+
+
+[2/24/2024 8:11 PM] angus9356
+The only other change I made was the script change you asked for
+
+
+[2/24/2024 8:11 PM] szybet
+yes, open a pull request in the gui rootfs repo
+
+
+[2/24/2024 8:13 PM] angus9356
+Where does the HW config and the waveform get added ?
+
+
+[2/24/2024 8:13 PM] szybet
+actually its here https://github.com/Kobo-InkBox/rootfs/blob/0ef992cba6a9c5a8256fa5e6e4ab569d18ac88ae/bin/kobo_config.sh
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/0ef992cba6a9c5a8256fa5e6e4ab569d18ac88ae/bin/kobo_config.sh
+rootfs/bin/kobo_config.sh at 0ef992cba6a9c5a8256fa5e6e4ab569d18ac88...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-1570D
+
+
+[2/24/2024 8:13 PM] szybet
+rootfs repo
+
+
+[2/24/2024 8:13 PM] szybet
+imgtool
+
+
+[2/24/2024 8:13 PM] szybet
+maybe wait for @tux-linux for how to exactly add it
+
+
+[2/24/2024 8:13 PM] tux_linux
+its just writing a 20m unpartitioned space blob
+
+
+[2/24/2024 8:14 PM] szybet
+also we still dont know which revision are you
+
+
+[2/24/2024 8:14 PM] tux_linux
+idk exactly what is in it
+
+
+[2/24/2024 8:14 PM] szybet
+soa moment please
+
+
+[2/24/2024 8:17 PM] szybet
+```
+enum ScreenRotation
+{
+    RotationUR = 0, // 
+    RotationCW = 1, // Clock wise
+    RotationUD = 2,
+    RotationCCW = 3
+};
+```
+I want to comment these, can you help with those names?
+
+
+[2/24/2024 8:17 PM] szybet
+counter clockwise
+
+
+[2/24/2024 8:17 PM] szybet
+the other 2 idk
+
+
+[2/24/2024 8:18 PM] angus9356
+upside down ?
+
+
+[2/24/2024 8:18 PM] angus9356
+counter clock wise
+
+
+[2/24/2024 8:18 PM] szybet
+then what UR is
+
+
+[2/24/2024 8:18 PM] angus9356
+Upper right ??
+
+
+[2/24/2024 8:18 PM] szybet
+this doesnt make sense
+
+
+[2/24/2024 8:18 PM] angus9356
+upside right ?
+
+
+[2/24/2024 8:19 PM] szybet
+ugh... then which one would be 0 degrees?
+
+
+[2/24/2024 8:19 PM] angus9356
+UR
+
+
+[2/24/2024 8:19 PM] szybet
+upside right sound like 180
+
+
+[2/24/2024 8:20 PM] angus9356
+No that would be upside down
+
+
+[2/24/2024 8:20 PM] angus9356
+upside right = upside correct
+
+
+[2/24/2024 8:20 PM] szybet
+😆
+
+
+[2/24/2024 8:20 PM] szybet
+thanks
+
+
+[2/24/2024 8:22 PM] tux_linux
+it depends on the device
+
+
+[2/24/2024 8:22 PM] szybet
+aaaaaaaaaaaaaaaaaaaaa
+
+
+[2/24/2024 8:23 PM] tux_linux
+on libra h2o 0 is upright
+
+
+[2/24/2024 8:23 PM] tux_linux
+on mini 3 is upright
+
+
+[2/24/2024 8:23 PM] szybet
+who's idea was it to make it a mess
+
+
+[2/24/2024 8:23 PM] tux_linux
+i hear you saying 'these monkeys at kobo'
+
+
+[2/24/2024 8:23 PM] szybet
+huh...
+
+
+[2/24/2024 8:24 PM] tux_linux
+https://discord.com/channels/809205711778480158/1194011129580626011/1194723998987202650
+
+
+[2/24/2024 8:24 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-15B62.png
+
+
+[2/24/2024 8:24 PM] szybet
+ah...
+
+
+[2/24/2024 8:24 PM] szybet
+mess
+
+
+[2/24/2024 8:33 PM] szybet
+@Angus those top left top right are for the how the app is rotated or how the device is rotated normally ( default state )?
+
+
+[2/24/2024 8:55 PM] szybet
+try these commands:
+```
+LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug:touchscreen_invert_x=1 QT_LOGGING_RULES=qt.qpa.input=true QT_DEBUG_PLUGINS=1 /mnt/kobo/.adds/inkbox/oobe-inkbox-bin
+```
+```
+LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug:touchscreen_invert_x=1:touchscreen_swap_xy=1 QT_LOGGING_RULES=qt.qpa.input=true QT_DEBUG_PLUGINS=1 /mnt/kobo/.adds/inkbox/oobe-inkbox-bin
+```
+```
+LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug:touchscreen_swap_xy=1 QT_LOGGING_RULES=qt.qpa.input=true QT_DEBUG_PLUGINS=1 /mnt/kobo/.adds/inkbox/oobe-inkbox-bin
+```
+
+
+[2/24/2024 8:57 PM] szybet
+one of these should work
+
+
+[2/24/2024 8:57 PM] szybet
+its hard to conclude anything from logs...
+
+
+[2/24/2024 8:57 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-0487B.png
+
+
+[2/24/2024 9:04 PM] szybet
+forward button is actually in bottom right, which doesnt help
+
+
+[2/24/2024 9:18 PM] angus9356
+That was the device orientation
+
+
+[2/24/2024 9:19 PM] angus9356
+For me the forward button was bottom left of the device. The gui was displaying in landscape mode
+
+
+[2/24/2024 9:20 PM] angus9356
+For the display to be the correct portrait orientation would have been 90 CCW rotation
+
+
+[2/24/2024 9:21 PM] szybet
+hmmm okay
+
+
+[2/24/2024 9:21 PM] szybet
+try those commands anyway
+
+
+[2/24/2024 9:21 PM] szybet
+one of these should make touch working
+
+
+[2/24/2024 9:31 PM] angus9356
+Ok I might get a chance later today otherwise tomorrow am
+
+
+[2/24/2024 9:31 PM] angus9356
+Are there screen rotation commands as well ?
+
+
+[2/24/2024 9:57 PM] tux_linux
+`echo {0,1,2,3} > /sys/class/graphics/fb0/rotate`
+
+
+[2/24/2024 10:00 PM] angus9356
+The sleeping message comes up in the devices original orientation
+
+
+[2/24/2024 10:08 PM] szybet
+oh no
+
+
+[2/24/2024 10:08 PM] szybet
+thats not the solution for now
+
+
+[2/24/2024 10:08 PM] szybet
+so... the input for qt is correct but the UI is wrong
+
+
+[2/24/2024 10:08 PM] szybet
+right?
+
+
+[2/24/2024 10:10 PM] szybet
+by 90 degrees to the... right, because the bigger bezzel should be on the bottom
+
+
+[2/24/2024 10:10 PM] szybet
+so it's now in clockwise
+
+
+[2/24/2024 10:10 PM] szybet
+please correct me if im wrong
+
+
+[2/24/2024 10:11 PM] angus9356
+This is what I did to get the correct orientation on the GUI
+```
+inkbox:/# echo 3 > /sys/class/graphics/fb0/rotate
+[   49.984752] epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+inkbox:/# cat /sys/class/graphics/fb0/rotate 
+1
+```
+
+
+[2/24/2024 10:11 PM] szybet
+but then input was wrong?
+
+
+[2/24/2024 10:11 PM] angus9356
+Not sure trying the inputs now
+
+
+[2/24/2024 10:11 PM] szybet
+what? why is it 1 if you set it to 3
+
+
+[2/24/2024 10:11 PM] angus9356
+shrug
+
+
+[2/24/2024 10:11 PM] szybet
+this must work
+
+
+[2/24/2024 10:12 PM] angus9356
+With  the screen rotated it looks like the touchscreen is the correct orientation
+
+
+[2/24/2024 10:13 PM] szybet
+so it works now?
+
+
+[2/24/2024 10:13 PM] angus9356
+The arrow goes black when I touch it but nothing else happens
+
+
+[2/24/2024 10:13 PM] szybet
+click it, not hold it?
+
+
+[2/24/2024 10:14 PM] angus9356
+just clicking it
+
+
+[2/24/2024 10:14 PM] angus9356
+goes black
+
+
+[2/24/2024 10:14 PM] szybet
+and back to white?
+
+
+[2/24/2024 10:14 PM] angus9356
+no to get it to go back to white I need to click the back arrow
+
+
+[2/24/2024 10:15 PM] szybet
+?????????????????????
+
+
+[2/24/2024 10:15 PM] szybet
+fuck it, launch inkbox-bin instead of oobe-bin
+
+
+[2/24/2024 10:15 PM] szybet
+the same directory
+
+
+[2/24/2024 10:15 PM] szybet
+maybe it will launch, if not i need to look up some env variables
+
+
+[2/24/2024 10:17 PM] angus9356
+It doesn't crash but it also doesn't change the display
+
+
+[2/24/2024 10:17 PM] szybet
+nothing happens?
+
+
+[2/24/2024 10:17 PM] angus9356
+I get logging output on the terminal but nothing on the screen
+
+
+[2/24/2024 10:17 PM] szybet
+launch inkbox.sh then
+
+
+[2/24/2024 10:18 PM] angus9356
+The dispaly blinked but still just shows welcome
+
+
+[2/24/2024 10:18 PM] szybet
+launch 2048
+
+
+[2/24/2024 10:18 PM] szybet
+a game
+
+
+[2/24/2024 10:18 PM] szybet
+there
+
+
+[2/24/2024 10:19 PM] angus9356
+oh inkbox does something different from inkbox-bin
+
+
+[2/24/2024 10:19 PM] angus9356
+Now I have a reader interface with usb cable connected messge
+
+
+[2/24/2024 10:20 PM] angus9356
+If I click "not now" it greys out but nothing happens
+
+
+[2/24/2024 10:20 PM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_f9380af4-5fed-4ee-0B656.jpg
+
+
+[2/24/2024 10:21 PM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_f258bd0f-5961-484-669DA.jpg
+
+
+[2/24/2024 10:22 PM] angus9356
+So maybe this has something to do with the timer issue I was seeing in u-boot.
+
+
+[2/24/2024 10:23 PM] angus9356
+The bootdelay countdown counts 10x faster than it should
+
+
+[2/24/2024 10:24 PM] angus9356
+2048 doesn't work either
+
+
+[2/24/2024 10:24 PM] .kitkat1.
+ignore the account change
+it should still work if you click it, hold it, still hold it in the same position and then release
+
+
+[2/24/2024 10:25 PM] angus9356
+It does not click. It won't even change colour now
+
+
+[2/24/2024 10:26 PM] .kitkat1.
+hm... check evtest and simulate a button click
+
+
+[2/24/2024 10:26 PM] .kitkat1.
+click, hold, release
+
+
+[2/24/2024 10:26 PM] .kitkat1.
+look up what happens when
+
+
+[2/24/2024 10:26 PM] angus9356
+evtest works
+
+
+[2/24/2024 10:27 PM] angus9356
+qt outputs the events as well
+
+
+[2/24/2024 10:27 PM] .kitkat1.
+are you sure?
+
+
+[2/24/2024 10:27 PM] .kitkat1.
+can you show me then?
+
+
+[2/24/2024 10:27 PM] .kitkat1.
+those logs, and describe them
+
+
+[2/24/2024 10:27 PM] .kitkat1.
+i will compare with mine
+
+
+[2/24/2024 10:27 PM] angus9356
+I already posted evtest output above
+
+
+[2/24/2024 10:27 PM] .kitkat1.
+is it a click?
+
+
+[2/24/2024 10:28 PM] angus9356
+it repeats almost instantly
+
+
+[2/24/2024 10:28 PM] .kitkat1.
+does an event appear when you release
+
+
+[2/24/2024 10:28 PM] .kitkat1.
+hold it for longer
+
+
+[2/24/2024 10:30 PM] angus9356
+this was a click
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-940A2.txt
+
+
+[2/24/2024 10:30 PM] .kitkat1.
+one click or many?
+
+
+[2/24/2024 10:30 PM] angus9356
+just one
+
+
+[2/24/2024 10:30 PM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-939D3.txt
+
+
+[2/24/2024 10:31 PM] angus9356
+that was a hold
+
+
+[2/24/2024 10:31 PM] .kitkat1.
+this is one click?
+
+
+[2/24/2024 10:31 PM] .kitkat1.
+really?
+
+
+[2/24/2024 10:31 PM] angus9356
+Yep
+
+
+[2/24/2024 10:33 PM] angus9356
+I push I get a bunch of events then it stops. I release I get a bunch more events
+
+
+[2/24/2024 10:35 PM] szybet
+let me check on my nia
+
+
+[2/24/2024 10:36 PM] szybet
+check if you have your bessel really attached solidly
+
+
+[2/24/2024 10:36 PM] szybet
+maybe you need to attach the back too? idk
+
+
+[2/24/2024 10:37 PM] angus9356
+I won't be able to get serial out if I attache the back
+
+
+[2/24/2024 10:38 PM] szybet
+enable usbnet
+
+
+[2/24/2024 10:38 PM] szybet
+look up the wiki for boot flags
+
+
+[2/24/2024 10:39 PM] szybet
+```
+Event: time 1708801557.728665, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 0
+Event: time 1708801557.728665, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 1
+Event: time 1708801557.728665, type 3 (EV_ABS), code 50 (ABS_MT_WIDTH_MAJOR), value 1
+Event: time 1708801557.728665, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 980
+Event: time 1708801557.728665, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 329
+Event: time 1708801557.728665, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1708801557.728665, type 3 (EV_ABS), code 0 (ABS_X), value 980
+Event: time 1708801557.728665, type 3 (EV_ABS), code 1 (ABS_Y), value 329
+Event: time 1708801557.728665, type 3 (EV_ABS), code 24 (ABS_PRESSURE), value 1024
+Event: time 1708801557.728665, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 1
+Event: time 1708801557.728665, -------------- SYN_REPORT ------------
+
+```
+release:
+```
+Event: time 1708801560.010339, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 0
+Event: time 1708801560.010339, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 0
+Event: time 1708801560.010339, type 3 (EV_ABS), code 50 (ABS_MT_WIDTH_MAJOR), value 0
+Event: time 1708801560.010339, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 980
+Event: time 1708801560.010339, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 329
+Event: time 1708801560.010339, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1708801560.010339, type 3 (EV_ABS), code 24 (ABS_PRESSURE), value 0
+Event: time 1708801560.010339, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 0
+Event: time 1708801560.010339, -------------- SYN_REPORT ------------
+
+```
+
+
+[2/24/2024 10:40 PM] szybet
+is it just reporting constantly when there is a finger on your screen?
+
+
+[2/24/2024 10:45 PM] szybet
+some qt logs of the click would be helpfull too
+
+
+[2/24/2024 10:49 PM] tux_linux
+oh no
+
+
+[2/24/2024 10:50 PM] tux_linux
+please not another fbink issue
+
+
+[2/24/2024 10:51 PM] szybet
+its a input issue
+
+
+[2/24/2024 10:51 PM] szybet
+fbink is fine
+
+
+[2/24/2024 10:51 PM] szybet
+its just... like something weird happens when its releasing the finger
+
+
+[2/24/2024 10:51 PM] szybet
+@tux-linux do you have a similar touchscreen with IR and could gather logs?
+
+
+[2/24/2024 10:52 PM] andi15701
+Kobo Glo HD/Tolino Shine 2
+
+
+[2/24/2024 10:52 PM] andi15701
+the latter is mainline
+
+
+[2/24/2024 10:52 PM] andi15701
+no problems reported
+
+
+[2/24/2024 10:53 PM] szybet
+oh also is this mainline kernel?
+
+
+[2/24/2024 10:53 PM] szybet
+the aura we are working on
+
+
+[2/24/2024 10:53 PM] andi15701
+no
+
+
+[2/24/2024 10:53 PM] szybet
+okay
+
+
+[2/24/2024 10:53 PM] andi15701
+probably we do not have any other 2.6 device with the zforce_ts
+
+
+[2/24/2024 10:53 PM] szybet
+oh crap...
+
+
+[2/24/2024 10:53 PM] andi15701
+the others I know about are 3.0
+
+
+[2/24/2024 10:58 PM] szybet
+https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/commit/b740474e27b87b306fca82ba80c50d8b44bc4731
+
+
+[2/24/2024 10:59 PM] szybet
+there is a reworked touch manager upstream that we dont use
+
+
+[2/24/2024 11:00 PM] szybet
+https://github.com/Kobo-InkBox/qt5-kobo-platform-plugin/commit/19118f8385b764b1c0e93c351f018d46dedf1d0e
+
+
+[2/24/2024 11:00 PM] szybet
+that's probably it
+
+
+[2/24/2024 11:00 PM] szybet
+oh god merging that... yea
+
+
+[2/24/2024 11:05 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/libkobo-67AB1.so
+
+
+[2/24/2024 11:07 PM] szybet
+@Angus new plan, in `/mnt/onboard/.adds/qt-linux-5.15.2-kobo/`  is somewhere plugins directory and in it platforms directory and in in libkobo.so
+unmount libkobo.so and then mount the libkobo.so i sended you and try out 2048 app if something changed
+
+
+[2/24/2024 11:10 PM] szybet
+mount with --bind
+
+
+[2/25/2024 3:40 PM] angus9356
+Ok I'll see if I can get usbnet working
+
+
+[2/26/2024 4:58 PM] angus9356
+I mounted that kobo but then the app doesn't want to start
+inkbox:/# mount | grep libkobo
+unionfs on /overlaymount-rootfs/mnt/rootfs/overlay/opt/X11/vnc-touch/opt/qt5/plugins/platforms/libkobo.so type fuse.unio
+nfs (rw,nosuid,nodev,relatime,user_id=0,group_id=0,default_permissions,allow_other)
+unionfs on /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so type fuse.unionfs (rw,nosuid,nodev,relat
+ime,user_id=0,group_id=0,default_permissions,allow_other)
+inkbox:/# LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug /mnt/onb
+oard/.adds/inkbox/oobe-inkbox
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+qt.qpa.plugin: Could not load the Qt platform plugin "kobo" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fi
+x this problem.
+
+Available platform plugins are: kobo, vnc.
+
+Aborted
+
+
+[2/26/2024 5:15 PM] szybet
+launch it with QT_DEBUG_PLUGINS=1
+
+
+[2/26/2024 6:09 PM] angus9356
+inkbox:/# ls -al /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/
+total 1874
+-rw-r--r--    1 root     root       1169748 Feb 26 17:03 libkobo.so
+-rwxr-xr-x    1 root     root        748920 Jun 17  2023 libqvnc.so
+
+
+[2/26/2024 6:09 PM] angus9356
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/platforms" ...
+Cannot load library /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so: (libQt5DBus.so.5: cannot open 
+shared object file: No such file or directory)
+
+
+[2/26/2024 6:11 PM] szybet
+huh what
+
+
+[2/26/2024 6:12 PM] szybet
+oh your system is outdated
+
+
+[2/26/2024 6:12 PM] szybet
+get this
+
+
+[2/26/2024 6:12 PM] szybet
+https://github.com/Kobo-InkBox/compiled-binaries
+
+{Embed}
+https://github.com/Kobo-InkBox/compiled-binaries
+GitHub - Kobo-InkBox/compiled-binaries: Compiled binaries of stuff ...
+Compiled binaries of stuff used for InkBox OS. WARNING : Don't ever expect this to be regularly updated and/or maintained. - Kobo-InkBox/compiled-binaries
+
+
+[2/26/2024 6:13 PM] szybet
+put qt-linux-5.15.2-kobo inside of chroot and adjust LD_LIBRARY_PATH to use that
+
+
+[2/26/2024 6:16 PM] angus9356
+Would it be possible that you provide the updated qt.isa and then I just mount that libkobo.so into it ?
+
+
+[2/26/2024 6:22 PM] szybet
+its even more compiling and signing
+
+
+[2/26/2024 6:22 PM] szybet
+copying those libs directly is easier
+
+
+[2/26/2024 6:25 PM] angus9356
+So I just need to add them to one of the write directories ?
+
+
+[2/26/2024 6:35 PM] szybet
+put them to /kobo/qt
+
+
+[2/26/2024 6:35 PM] szybet
+for example
+
+
+[2/26/2024 6:36 PM] szybet
+and the env var will look like LD_LIBRARY_PATH=/qt/qt-linux-5.15.2-kobo/lib:/lib/:/usr/lib
+
+
+[2/26/2024 11:06 PM] angus9356
+@Szybet I loaded  those binaries and it's still having issues loading it 
+```
+inkbox:/# ls -al /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libko
+bo.so 
+-rw-r--r--    1 root     root       1169748 Feb 26 22:01 /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libko
+bo.so
+inkbox:/# LD_LIBRARY_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/lib/:/lib/:/usr/lib Q
+T_QPA_PLATFORM=kobo:debug /mnt/onboard/.adds/inkbox/2048
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+qt.qpa.plugin: Could not load the Qt platform plugin "kobo" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fi
+x this problem.
+
+Available platform plugins are: kobo, vnc.
+
+Aborted
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+qt.qpa.plugin: Could not load the Qt platform plugin "kobo" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fi
+x this problem.
+
+Available platform plugins are: kobo, vnc.
+```
+
+
+[2/27/2024 3:46 AM] tux_linux
+You are entering Qt Hell™
+
+
+[2/27/2024 6:05 AM] szybet
+Launch it with the qt debug plugins env var
+
+
+[2/29/2024 7:19 PM] angus9356
+Ok I'll probably get a chance later to give it a try
+
+
+[2/29/2024 7:20 PM] szybet
+QT_DEBUG_PLUGINS=1 to be exact
+
+
+[2/29/2024 7:43 PM] angus9356
+```
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "kobo"
+        ]
+    },
+    "archreq": 0,
+    "className": "KoboPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("kobo")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/platforms" ...
+Cannot load library /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so: (libQt5DBus.so.5: cannot open)
+QLibraryPrivate::loadPlugin failed on "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so" : "Cannot "
+qt.qpa.plugin: Could not load the Qt platform plugin "kobo" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may f.
+
+Available platform plugins are: kobo, vnc.
+
+Aborted
+```
+
+
+[2/29/2024 7:43 PM] szybet
+its still looking to `/mnt/onboard/.adds/qt-linux-5.15.2-kobo/`
+
+
+[2/29/2024 7:43 PM] szybet
+give me the command you are launching it with
+
+
+[2/29/2024 7:44 PM] angus9356
+LD_LIBRARY_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/lib/:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug QT_DEBUG_PLUGINS=1 /usr/bin/inkbox.sh
+
+
+[2/29/2024 7:44 PM] szybet
+add env -i at the beginning
+
+
+[2/29/2024 7:46 PM] szybet
+if that doesn't work, here is a command than will unmount the qt at that path, then mount bind your own
+```
+    findmnt -l -o TARGET | grep qt-linux-5.15.2-kobo | awk '{ print length, $0 }' | sort -r | sort -n | tac | cut -d " " -f2- | xargs umount {} 2>/dev/null
+```
+
+
+[2/29/2024 7:47 PM] angus9356
+env: ‘chroot’: No such file or directory
+
+
+[2/29/2024 7:47 PM] szybet
+god
+
+
+[2/29/2024 7:47 PM] szybet
+no
+
+
+[2/29/2024 7:47 PM] szybet
+i see now
+
+
+[2/29/2024 7:47 PM] szybet
+dont run inkbox.sh or inkbox.bin now
+
+
+[2/29/2024 7:47 PM] szybet
+those are too complicated and cursed
+
+
+[2/29/2024 7:47 PM] szybet
+run 2048
+
+
+[2/29/2024 7:47 PM] szybet
+thats the only one i trust
+
+
+[2/29/2024 7:47 PM] angus9356
+ok
+
+
+[2/29/2024 7:51 PM] angus9356
+still looking at the wrong path
+```
+Got keys from plugin meta data ("kobo")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/platforms" ...
+Cannot load library /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so: (libQt5DBus.so.5: cannot open 
+shared object file: No such file or directory)
+QLibraryPrivate::loadPlugin failed on "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so" : "Cannot l
+oad library /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so: (libQt5DBus.so.5: cannot open shared o
+bject file: No such file or directory)"
+qt.qpa.plugin: Could not load the Qt platform plugin "kobo" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fi
+x this problem.
+```
+
+
+[2/29/2024 7:51 PM] angus9356
+env -i LD_LIBRARY_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/lib/:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug QT_DEBUG_PLUGINS=1 /mnt/onboard/.adds/inkbox/2048
+
+
+[2/29/2024 7:51 PM] szybet
+```
+/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so
+```
+...
+
+
+[2/29/2024 7:52 PM] szybet
+aaaaaaaaaaa
+
+
+[2/29/2024 7:52 PM] szybet
+QT_PLUGIN_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/plugins or QT_PLUGIN_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/plugins/platforms
+
+
+[2/29/2024 7:52 PM] szybet
+try one of these, should change something in the output
+
+
+[2/29/2024 7:53 PM] szybet
+if not, run the command to unmount these libraries there and mount your own
+
+
+[2/29/2024 7:54 PM] angus9356
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-0EAE6.txt
+
+
+[2/29/2024 7:55 PM] angus9356
+inkbox:/# ls -al  /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libk
+obo.so
+-rw-r--r--    1 1000     1000       1169748 Feb 25 15:05 /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libko
+bo.so
+
+
+[2/29/2024 7:56 PM] szybet
+show me the command you are running it with
+
+
+[2/29/2024 7:56 PM] szybet
+always really, i want to be sure
+
+
+[2/29/2024 7:56 PM] angus9356
+env -i LD_LIBRARY_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/lib/:/lib/:/usr/lib QT_QPA_PLATFORM=kobo:debug QT_DEBUG_PLUGINS=1 QT_PLUGIN_PATH=/lib/qt-bin/qt-linux-5.15.2-kobo/plugins /mnt/onboard/.adds/inkbox/2048
+
+
+[2/29/2024 7:57 PM] szybet
+did the other with platforms added changed anything?
+
+
+[2/29/2024 8:03 PM] szybet
+if not, just unmount and mount your own
+
+
+[2/29/2024 8:03 PM] szybet
+idk what is going on, it worked for me
+
+
+[2/29/2024 8:03 PM] szybet
+but whatever
+
+
+[2/29/2024 8:04 PM] szybet
+also where did you put the new platform plugin? i hope in /lib/qt-bin/qt-linux-5.15.2-kobo/plugins/platforms
+
+
+[2/29/2024 8:24 PM] angus9356
+the kobo.so ? no I mounted that from a different path
+
+
+[2/29/2024 8:27 PM] angus9356
+mount --bind /modules/libkobo.so /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so
+
+
+[2/29/2024 8:43 PM] szybet
+dont use /mnt/onboard/.adds/qt-linux-5.15.2-kobo/ path at all
+
+
+[2/29/2024 8:43 PM] szybet
+nowhere
+
+
+[2/29/2024 8:43 PM] szybet
+please
+
+
+[2/29/2024 8:43 PM] szybet
+bind it to /lib/qt-bin/qt-linux-5.15.2-kobo/....... and unmount as i said to you /mnt/onboard/.adds/qt-linux-5.15.2-kobo/
+
+
+[2/29/2024 8:48 PM] angus9356
+ok so `umount /mnt/onboard/.adds/qt-linux-5.15.2-kobo/kobo.so` Or just never mount it there.
+
+
+[2/29/2024 8:49 PM] angus9356
+Does it need to bind mounted at `/lib/qt-bin/qt-linux-5.15.2-kobo/` or can I just copy it there ?
+
+
+[2/29/2024 8:57 PM] szybet
+its a replacament for /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so
+
+
+[2/29/2024 8:57 PM] szybet
+so put it to /lib/qt-bin/qt-linux-5.15.2-kobo/plugins/platforms/
+
+
+[2/29/2024 9:20 PM] angus9356
+Ok can it be copied there or does it need to be bind mounted ?
+
+
+[2/29/2024 9:33 PM] szybet
+copied
+
+{Reactions}
+👍 
+
+[2/29/2024 9:33 PM] szybet
+it doesnt matter
+
+
+[2/29/2024 9:33 PM] szybet
+copped easier
+
+
+[2/29/2024 9:58 PM] angus9356
+@Szybet Ok the sensitive area on the touchscreen for the button looks about right and seems to work . The image is inverted however
+
+
+[2/29/2024 10:01 PM] angus9356
+the inkbox GUI works as well but it is also inverted
+
+
+[2/29/2024 10:02 PM] szybet
+so touch works?
+
+
+[2/29/2024 10:02 PM] szybet
+now?
+
+
+[2/29/2024 10:03 PM] angus9356
+I think so. I had to guess at the button locations because of the inverted screen. Tocuhes did seem to register in the GUI
+
+
+[2/29/2024 10:05 PM] szybet
+oh god
+
+
+[2/29/2024 10:05 PM] szybet
+this will be a lot of work to merge
+
+
+[2/29/2024 10:06 PM] szybet
+i will have time for this in 2 weeks... maybe 2 months
+
+
+[2/29/2024 10:06 PM] szybet
+try the arguments for inverting touch i gived you
+
+
+[2/29/2024 10:06 PM] szybet
+they may not work anymore tho
+
+
+[2/29/2024 10:19 PM] angus9356
+Are there args for inverting the gui instead ? The buttons are the correct orientation for the device
+
+
+[2/29/2024 10:28 PM] szybet
+Fair point
+
+
+[2/29/2024 10:28 PM] szybet
+Probably not
+
+
+[2/29/2024 10:29 PM] szybet
+Its fbink fault
+
+
+[2/29/2024 10:29 PM] szybet
+But
+
+
+[2/29/2024 10:29 PM] szybet
+Wait
+
+
+[2/29/2024 10:29 PM] szybet
+FBINK_NO_SW_ROTA=1
+
+
+[2/29/2024 10:29 PM] szybet
+Maybe?
+
+
+[2/29/2024 10:30 PM] szybet
+https://github.com/NiLuJe/FBInk
+
+{Embed}
+https://github.com/NiLuJe/FBInk
+GitHub - NiLuJe/FBInk: FrameBuffer eInker, a small tool & library t...
+FrameBuffer eInker, a small tool & library to print text & images to an eInk Linux framebuffer - NiLuJe/FBInk
+/mnt/data/projects/git/conversations/media/FBInk-ADEBB
+
+
+[2/29/2024 10:30 PM] szybet
+Here is the library that manages the background
+
+
+[2/29/2024 10:30 PM] szybet
+It may have some more env
+
+
+[2/29/2024 10:30 PM] szybet
+If not, it needs to be coded into the plugin manually ( it will need to be done anyways so )
+
+
+[3/1/2024 2:15 PM] angus9356
+@Szybet Is that just you making me a new version of the libkobo.so ?
+
+
+[3/1/2024 2:42 PM] szybet
+nope
+
+
+[3/1/2024 2:43 PM] szybet
+merging the plugin upstream which has a complete rewrite of input to our fork which also has a few changes
+
+
+[3/1/2024 7:21 PM] szybet
+try to rotate the ui via the sys interface
+
+
+[3/1/2024 7:21 PM] szybet
+this needs to work before i do anything
+
+
+[3/1/2024 7:23 PM] szybet
+via the old platform plugin, not the experimental one
+
+
+[3/1/2024 7:26 PM] angus9356
+I did manage to rotate it with the old plugin
+
+
+[3/1/2024 7:41 PM] szybet
+good, at least that
+
+
+[3/1/2024 7:44 PM] szybet
+@NiLuJe how is default rotation determined?
+
+
+[3/1/2024 7:45 PM] szybet
+@Angus could you run ( not inside the chroot ) fbink command with some arguments and debug options to see it's output?
+
+
+[3/1/2024 7:50 PM] angus9356
+Sure post them I'll try to do them this afternoon. I'm going to be AFK from March 2-10th
+
+
+[3/1/2024 7:59 PM] szybet
+maybe in this time i will have time to merge the plugin together
+
+
+[3/1/2024 7:59 PM] szybet
+we will see
+
+
+[3/1/2024 9:31 PM] ninuje
+In which context?
+
+
+[3/1/2024 9:32 PM] ninuje
+The default is the system default, unless you ask FBInk for something in particular, nothing happens on Kobo on that front.
+
+
+[3/1/2024 9:32 PM] szybet
+default default
+
+
+[3/1/2024 9:33 PM] szybet
+well inkbox fault then
+
+
+[3/1/2024 9:33 PM] ninuje
+(or, more exactly, whatever the state it's in whenever you get to it. Stock systems will apply up to three different fb modes: boot (i.e., true native/default), pickel (i.e., the boot anim), then nickel (i.e., Portrait)
+
+
+[3/1/2024 9:34 PM] ninuje
+We use fbdepth to enforce UR on startup in KOReader, you can do that or use fbink_set_fb_info directly on startup
+
+
+[3/1/2024 9:35 PM] ninuje
+Special mention about the H2O: It has a native viewport (11 top pixels are behind the bezel), so this needs some specific handling in the frontend
+
+
+[3/1/2024 9:35 PM] ninuje
+You can compute it from stuff exported in FBInkState, but the maths is a little bit funky, I don't have an example on hand
+
+
+[3/1/2024 9:36 PM] ninuje
+In any case, those 11 top pixels are not dead, just invisible, and the kernel doesn't screw with you on that front (i.e., (0, 0) is a valid pixel & touch coordinate, it's just physically invisible and impossible to touch ;p)
+
+
+[3/1/2024 9:37 PM] szybet
+they stole 11 pixel from us
+
+
+[3/1/2024 9:37 PM] szybet
+@tux-linux when is initial rotation set
+
+
+[3/1/2024 10:10 PM] tux_linux
+I think in usr bin inkbox.sh
+
+
+[3/1/2024 10:11 PM] szybet
+okay
+
+
+[3/1/2024 11:09 PM] angus9356
+So using fbink_set_fb_info I should be able to set the correct rotation ?
+
+
+[3/1/2024 11:11 PM] szybet
+nope
+
+
+[3/1/2024 11:11 PM] szybet
+i mean yes
+
+
+[3/1/2024 11:11 PM] szybet
+but nope, leave these things to me
+
+
+[3/1/2024 11:12 PM] angus9356
+Until you get your stuff ready I just want to add something to inkox.sh so it's the right orientation and I can use it
+
+
+[3/1/2024 11:12 PM] szybet
+oh its just set via sys class graphics fb0 rotate
+
+
+[3/1/2024 11:13 PM] szybet
+but input rotation will change too
+
+
+[3/1/2024 11:13 PM] szybet
+well you can focus on wifi, usbnet for now
+
+
+[3/1/2024 11:13 PM] angus9356
+That didn't seem to affect the new libkobo
+
+
+[3/1/2024 11:13 PM] szybet
+also you won't be able to affect the file, its not editable
+
+
+[3/1/2024 11:13 PM] angus9356
+usbnet is working
+
+
+[3/1/2024 11:14 PM] szybet
+idk what mess you are in now but it depends which plugin you use and which command, inkbox.sh overwrites it probably inside
+
+
+[3/1/2024 11:14 PM] angus9356
+I edited most of the scripts to use the new bins you pointed me at
+
+
+[3/1/2024 11:15 PM] angus9356
+It boots up to inkbox but upside down
+
+
+[3/1/2024 11:16 PM] szybet
+idk how rotation works for the experimental plugin
+
+
+[3/1/2024 11:16 PM] szybet
+no
+
+
+[3/1/2024 11:16 PM] szybet
+idea
+
+
+[3/2/2024 12:17 AM] ninuje
+Oh, there's your problem.
+
+
+[3/2/2024 12:17 AM] ninuje
+Don't do that. (on ntx kernels, at least)
+
+
+[3/2/2024 12:17 AM] ninuje
+54% of the NTX kernels will screw that up.
+
+
+[3/2/2024 12:18 AM] ninuje
+https://github.com/NiLuJe/FBInk/blob/d4a7f98401ecf2bd56d6eed1c5cb60736f507047/fbink.h#L447-L465
+
+{Embed}
+https://github.com/NiLuJe/FBInk/blob/d4a7f98401ecf2bd56d6eed1c5cb60736f507047/fbink.h
+FBInk/fbink.h at d4a7f98401ecf2bd56d6eed1c5cb60736f507047 · NiLuJe/...
+FrameBuffer eInker, a small tool & library to print text & images to an eInk Linux framebuffer - NiLuJe/FBInk
+/mnt/data/projects/git/conversations/media/FBInk-ADEBB
+
+
+[3/2/2024 12:19 AM] ninuje
+Use fbdepth or fbink_set_fb_info, it'll bludgeon the stupid kernels into submission (at great pain).
+
+
+[3/2/2024 12:40 AM] szybet
+Huh...
+
+
+[3/2/2024 12:40 AM] szybet
+Do i need to create a file to track the rotation or can this br retrieved?
+
+
+[3/2/2024 12:52 AM] ninuje
+What?
+
+
+[3/2/2024 12:54 AM] ninuje
+https://github.com/NiLuJe/FBInk/blob/d4a7f98401ecf2bd56d6eed1c5cb60736f507047/fbink.h#L1342-L1349
+
+{Embed}
+https://github.com/NiLuJe/FBInk/blob/d4a7f98401ecf2bd56d6eed1c5cb60736f507047/fbink.h
+FBInk/fbink.h at d4a7f98401ecf2bd56d6eed1c5cb60736f507047 · NiLuJe/...
+FrameBuffer eInker, a small tool & library to print text & images to an eInk Linux framebuffer - NiLuJe/FBInk
+/mnt/data/projects/git/conversations/media/FBInk-ADEBB
+
+
+[3/2/2024 12:54 AM] ninuje
+Do read fbdepth, as it's now a proper API user, and does all of that
+
+
+[3/2/2024 12:57 AM] ninuje
+https://github.com/NiLuJe/FBInk/blob/d4a7f98401ecf2bd56d6eed1c5cb60736f507047/fbink.h#L552
+
+{Embed}
+https://github.com/NiLuJe/FBInk/blob/d4a7f98401ecf2bd56d6eed1c5cb60736f507047/fbink.h
+FBInk/fbink.h at d4a7f98401ecf2bd56d6eed1c5cb60736f507047 · NiLuJe/...
+FrameBuffer eInker, a small tool & library to print text & images to an eInk Linux framebuffer - NiLuJe/FBInk
+/mnt/data/projects/git/conversations/media/FBInk-ADEBB
+
+
+[3/2/2024 12:58 AM] ninuje
+Also possibly relevant: fbink_reinit
+
+
+[3/2/2024 5:41 PM] ninuje
+That's exactly the mess I was talking about yesterday ;). "Because NTX" ^^.
+
+
+[3/2/2024 5:42 PM] ninuje
+The H2O is a perfect storm of NTX hacks.
+
+
+[3/2/2024 5:42 PM] ninuje
+Fucked up bezel. Fucked up ioctls. Fucked up input translation. Extra fucked-up input protocol.
+
+
+[3/2/2024 5:45 PM] tux_linux
+It must have been a lot of effort engineering it that bad
+
+
+[3/2/2024 5:46 PM] ninuje
+e.g., it reports something along those lines: https://github.com/koreader/koreader/blob/ec98c6334bb8ad5fedc9321d4d4472bbb9bc8e7a/frontend/device/input.lua#L885-L943
+
+{Embed}
+https://github.com/koreader/koreader/blob/ec98c6334bb8ad5fedc9321d4d4472bbb9bc8e7a/frontend/device/input.lua
+koreader/frontend/device/input.lua at ec98c6334bb8ad5fedc9321d4d447...
+An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices - koreader/koreader
+/mnt/data/projects/git/conversations/media/koreader-7852D
+
+
+[3/2/2024 5:46 PM] ninuje
+With an extra twist, slot 0 doesn't exist, the first contact gets assigned to slot 1
+
+
+[3/2/2024 5:47 PM] ninuje
+Can *probably* be queried at runtime via EVIOCGABS on ABS_MT_TRACKING_ID (minimum field).
+
+
+[3/2/2024 5:50 PM] ninuje
+Yup:
+
+
+[3/2/2024 5:50 PM] ninuje
+```
+    Event code 57 (ABS_MT_TRACKING_ID)
+      Value      0
+      Min        1
+      Max        2
+```
+
+
+[3/2/2024 5:50 PM] szybet
+eh
+
+
+[3/2/2024 5:50 PM] szybet
+@tux-linux rotation needs to be redesigned / implemented properly in inkbox
+
+
+[3/2/2024 5:51 PM] ninuje
+```
+Event: time 1709398271.217255, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 1
+Event: time 1709398271.218805, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 1
+Event: time 1709398271.218836, type 3 (EV_ABS), code 50 (ABS_MT_WIDTH_MAJOR), value 1
+Event: time 1709398271.218854, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 62
+Event: time 1709398271.218867, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 545
+Event: time 1709398271.218881, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1709398271.218890, -------------- SYN_REPORT ------------
+Event: time 1709398271.232869, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 1
+Event: time 1709398271.232903, type 3 (EV_ABS), code 48 (ABS_MT_TOUCH_MAJOR), value 0
+Event: time 1709398271.232909, type 3 (EV_ABS), code 50 (ABS_MT_WIDTH_MAJOR), value 0
+Event: time 1709398271.232918, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 62
+Event: time 1709398271.232929, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 545
+Event: time 1709398271.232941, ++++++++++++++ SYN_MT_REPORT ++++++++++++
+Event: time 1709398271.232949, -------------- SYN_REPORT ------------
+```
+
+
+[3/2/2024 5:51 PM] ninuje
+(contact -> lift)
+
+
+[3/2/2024 6:00 PM] ninuje
+As for the input translation, you can get the swap/mirror flags from current FBInk (it's not in a release yet), e.g., https://github.com/NiLuJe/FBInk/blob/07aee7beb7505abba9e8dbc7ec482d444884dd09/utils/finger_trace.c#L513-L539
+
+{Embed}
+https://github.com/NiLuJe/FBInk/blob/07aee7beb7505abba9e8dbc7ec482d444884dd09/utils/finger_trace.c
+FBInk/utils/finger_trace.c at 07aee7beb7505abba9e8dbc7ec482d444884d...
+FrameBuffer eInker, a small tool & library to print text & images to an eInk Linux framebuffer - NiLuJe/FBInk
+/mnt/data/projects/git/conversations/media/FBInk-ADEBB
+
+
+[3/2/2024 6:02 PM] szybet
+we need to redesign and merge everything everywhere so... :(
+
+
+[3/2/2024 6:19 PM] ninuje
+As for the quirky viewport maths I mentioned yesterday: https://github.com/NiLuJe/FBInk/blob/07aee7beb7505abba9e8dbc7ec482d444884dd09/fbink.h#L533-L534
+
+{Embed}
+https://github.com/NiLuJe/FBInk/blob/07aee7beb7505abba9e8dbc7ec482d444884dd09/fbink.h
+FBInk/fbink.h at 07aee7beb7505abba9e8dbc7ec482d444884dd09 · NiLuJe/...
+FrameBuffer eInker, a small tool & library to print text & images to an eInk Linux framebuffer - NiLuJe/FBInk
+/mnt/data/projects/git/conversations/media/FBInk-ADEBB
+
+
+[3/2/2024 6:20 PM] ninuje
+viewport == vert_origin - vert_offset
+
+
+[3/2/2024 6:20 PM] ninuje
+11 = 18 - 7 on a H2O, for instance
+
+
+[3/2/2024 6:20 PM] ninuje
+FBInk enforces the viewport for every in-FBInk draw operations (including region dumps), unless you init with no_viewport set in the config
+
+
+[3/9/2024 5:22 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/libkobo-6F14D.so
+
+
+[3/9/2024 5:23 PM] szybet
+newer fbink, touch fixed, some other life helping things
+
+
+[3/9/2024 5:25 PM] szybet
+```
+    -r, --rota <-1|0|1|2|3>         Switch the framebuffer to the supplied rotation. -1 is a magic value matching the device-specific Portrait orientation.
+```
+I ❤️ FBInk
+
+
+[3/9/2024 6:19 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/fbdepth-C2D8C
+
+
+[3/9/2024 6:19 PM] tux_linux
+did you strip it
+
+
+[3/9/2024 6:20 PM] szybet
+you can run this binary inside gui rootfs with 
+```
+/mnt/onboard/.adds/inkbox/system/lib/ld-musl-armhf.so.1 /external_root/fbdepth
+```
+and adjust your rotation with it instead
+
+
+[3/9/2024 6:20 PM] szybet
+when you match rotation with it and the touch rotation in the new platform plugin i can adjust the rest later
+
+
+[3/9/2024 6:20 PM] szybet
+its not final anyway
+
+
+[3/9/2024 11:13 PM] ninuje
+FWIW, the `-R <UR|CW|CCW|UD>` syntax is preferred ( `-r -1` *should* match `-R UR`, but it's computed via legacy nastiness that might go poof one day, or just end up doing the wrong thing on theoretical future devices)
+
+
+[3/9/2024 11:14 PM] ninuje
+(If something like that is ever implemented on other devices, that's also something that will only work via -R and not -r -1)
+
+
+[3/9/2024 11:15 PM] szybet
+i just like the -1
+
+
+[3/9/2024 11:15 PM] szybet
+it avoid mess in the shell script
+
+
+[3/9/2024 11:15 PM] ninuje
+Even in terms of "right now" portability, -1 is only implemented on Kobo/Cervantes builds
+
+
+[3/9/2024 11:16 PM] szybet
+hmm, is from what you were talking UR is not always the default? ( like nickel boots... )
+
+
+[3/9/2024 11:16 PM] ninuje
+If you just have a thing against strings, `-R 0` == `-R UR` 😉
+
+
+[3/9/2024 11:18 PM] ninuje
+Yeah, it's almost never the boot rotation (the exception being the Libra ~~2~~ [OG Libra, actually]). On recent enough FW, it's what *should* be the Portrait Nickel rotation, though.
+
+
+[3/9/2024 11:18 PM] ninuje
+(i.e., buttons on the right for asymetric devices)
+
+
+[3/9/2024 11:20 PM] szybet
+So i will stick to -1 because it's that rotation ( default one? )
+
+
+[3/9/2024 11:20 PM] ninuje
+On that note, `-R` is *also* only implemented on Kobo currently ;p. (But it's the future-proof approach, there's a fairly large chance I'll kill the -1 codepath Soon(TM))
+
+
+[3/9/2024 11:21 PM] szybet
+ugh, so what do i do
+
+
+[3/9/2024 11:21 PM] ninuje
+`-R UR` == `-R 0`
+
+
+[3/9/2024 11:21 PM] ninuje
+== `-r -1`
+
+
+[3/9/2024 11:21 PM] szybet
+but its not the default always
+
+
+[3/9/2024 11:22 PM] ninuje
+It's what we as third-party apps should use by default, but it's rarely if ever the state we get from the device without manual intervention. hence this tool ;p
+
+
+[3/9/2024 11:24 PM] szybet
+what a mess
+
+
+==============================================================
+Exported 1,194 message(s)
+==============================================================

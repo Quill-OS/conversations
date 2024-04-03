@@ -1,0 +1,1038 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting
+Topic: Please create a thread here when you want to help porting Quill OS to your device. Porting requests addressed directly in this channel won't be accepted.
+==============================================================
+
+[1/22/2022 5:03 PM] tux_linux
+Started a thread.
+
+
+[1/22/2022 11:52 PM] daboone72
+Started a thread.
+
+
+[1/22/2022 11:53 PM] tux_linux (pinned)
+Please create a thread here when you want to help porting InkBox to your device. Porting requests addressed directly in this channel won't be accepted.
+
+
+[1/22/2022 11:54 PM] tux_linux
+Pinned a message.
+
+
+[1/25/2022 7:35 PM] tux_linux
+Started a thread.
+
+
+[1/28/2022 11:58 PM] tux_linux
+Started a thread.
+
+
+[2/9/2022 1:48 AM] tux_linux
+Started a thread.
+
+
+[2/12/2022 7:41 PM] tux_linux
+Started a thread.
+
+
+[2/17/2022 4:32 AM] tux_linux
+Started a thread.
+
+
+[4/21/2022 6:23 AM] tux_linux
+Started a thread.
+
+
+[4/28/2022 6:36 PM] nonasuomy
+https://github.com/fread-ink/linux-2.6.35.3-imx5-kindle4
+
+{Embed}
+https://github.com/fread-ink/linux-2.6.35.3-imx5-kindle4
+GitHub - fread-ink/linux-2.6.35.3-imx5-kindle4: An in-progress kern...
+An in-progress kernel for Kindle 4 NT based on the imx_2.6.35_maintain branch of the freescale linux-2.6-imx git repo with Yoshi sources added  - GitHub - fread-ink/linux-2.6.35.3-imx5-kindle4: An ...
+/mnt/data/projects/git/conversations/media/linux-2.6.35-A3087.3-imx5-kindle4
+
+
+[4/28/2022 6:45 PM] nonasuomy
+seems to have some notes there about reader formats https://github.com/fread-ink/fread.ui
+
+{Embed}
+https://github.com/fread-ink/fread.ui
+GitHub - fread-ink/fread.ui: Work-in-progress ebook reader, web bro...
+Work-in-progress ebook reader, web browser and primary UI for the fread.ink distro - GitHub - fread-ink/fread.ui: Work-in-progress ebook reader, web browser and primary UI for the fread.ink distro
+/mnt/data/projects/git/conversations/media/fread-884B9.ui
+
+
+[4/28/2022 7:37 PM] nonasuomy
+https://github.com/fread-ink/inkwave
+
+{Embed}
+https://github.com/fread-ink/inkwave
+GitHub - fread-ink/inkwave: Convert electronic paper display wavefo...
+Convert electronic paper display waveforms from .wbf to .wrf format - GitHub - fread-ink/inkwave: Convert electronic paper display waveforms from .wbf to .wrf format
+/mnt/data/projects/git/conversations/media/inkwave-54EAB
+
+
+[4/30/2022 5:05 AM] tux_linux
+Started a thread.
+
+
+[5/3/2022 3:55 AM] tux_linux
+Started a thread.
+
+
+[5/4/2022 11:30 PM] tux_linux
+Started a thread.
+
+
+[5/6/2022 11:45 PM] tux_linux
+Started a thread.
+
+
+[6/14/2022 11:22 PM] tux_linux
+Started a thread.
+
+
+[5/29/2023 9:26 PM] .kitkat1.
+Started a thread.
+
+
+[7/13/2023 9:47 PM] tux_linux
+Started a thread.
+
+
+[7/19/2023 5:19 PM] tux_linux
+hello there
+
+
+[7/19/2023 5:23 PM] [matrix] tux-linux
+how do you create a subspace
+
+
+[7/19/2023 5:34 PM] [matrix] Szybet
+image.png
+
+
+[7/19/2023 5:34 PM] [matrix] Szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-A639C.png
+
+
+[7/19/2023 5:34 PM] [matrix] Szybet
+bottom of add rooms
+
+
+[7/20/2023 6:34 PM] tux_linux
+@Szybet if you are on matrix
+thanks
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-38A41.png
+
+
+[7/20/2023 6:52 PM] matterbridge#2154
+[matrix] Szybet 
+just create the matrix channels
+
+
+[8/28/2023 9:52 AM] [matrix] Szybet
+Clara HD porting thread matrix test
+
+
+[8/28/2023 9:52 AM] matterbridge#2154
+[matrix] Szybet Test thread
+
+
+[8/28/2023 9:53 AM] matterbridge#2154
+[matrix] Szybet Ok, @vesto here you can ask things, write your loud thoughts and all
+
+
+[8/28/2023 9:54 AM] matterbridge#2154
+[matrix] Szybet actually not, the discord bot gets confused
+
+
+[9/17/2023 3:27 AM] dandelionkoi
+have you thought about porting InkBox to the Hisense A5?
+
+
+[9/17/2023 3:27 AM] dandelionkoi
+would that even be possible/reasonably easy?
+
+
+[9/17/2023 3:35 AM] tux_linux
+Probably not
+
+
+[9/17/2023 3:35 AM] kuratius
+Easiest ports are those whereyou have a way to recover from bricks+ serial access afsik
+
+
+[9/17/2023 3:36 AM] kuratius
+So removable storage
+
+
+[9/17/2023 3:36 AM] kuratius
+Or a Flashing tool that works with corrupted main storage
+
+
+[9/17/2023 3:36 AM] tux_linux
+Yes, but even then, Hisense has an Android platform afaik
+
+
+[9/17/2023 3:37 AM] tux_linux
+Which makes it kind of harder to port inkbox kernel over
+
+
+[9/17/2023 3:38 AM] dandelionkoi
+yeah, its android with a lot of built in chinese apps, and you have to install aurora/fdroid to get apps unless you happen to read chinese (i can't)
+
+
+[9/17/2023 3:38 AM] kuratius
+If you're lucky someone will port pmOS to the a5
+
+
+[9/17/2023 3:38 AM] kuratius
+If you're lucky twice or pay szybet for it you could run inkbox on pmOS
+
+
+[9/17/2023 3:39 AM] kuratius
+PostmarketOS
+
+
+[9/17/2023 3:39 AM] kuratius
+https://postmarketos.org/
+
+{Embed}
+https://postmarketos.org/
+postmarketOS // real Linux distribution for phones
+Aiming for a 10 year life-cycle for smartphones
+
+
+[9/17/2023 3:40 AM] tux_linux
+Well, unless you want to run inkbox in a VM, porting it to pmOS is probably a no-go as already discussed
+
+
+[9/17/2023 3:41 AM] kuratius
+Dont want /=/no go
+
+
+[9/17/2023 3:41 AM] tux_linux
+Well, \*probably\* I said
+
+
+[9/17/2023 3:42 AM] tux_linux
+But just from the infrastructure standpoint, it's not doable
+You would lose like 80% of the features
+
+
+[9/17/2023 3:43 AM] kuratius
+Inkbox relies on old packages, and uses a chroot to run on newer devices with newer kernel/OS right?
+
+
+[9/17/2023 3:44 AM] tux_linux
+Uses chroots for everything
+
+
+[9/17/2023 3:46 AM] tux_linux
+https://discord.com/channels/809205711778480158/958419944243089479/985652370010669066
+
+
+[9/17/2023 3:46 AM] tux_linux
+Containerizes everything
+
+
+[9/17/2023 3:47 AM] kuratius
+@dandelion  would still suggest pmOS and then figuring out a way to port a reader if you're set on the a5. Their project has more people, but very few who do eink optimized ui as good as inkbox
+
+
+[9/17/2023 3:47 AM] kuratius
+Then on a pmos install that would probably work too
+
+
+[9/17/2023 3:47 AM] dandelionkoi
+it looks like pmOS is working on the Hisense A9, that's cool
+
+
+[9/17/2023 3:48 AM] tux_linux
+Not with chroots
+
+
+[9/17/2023 3:49 AM] tux_linux
+Would need proot or some other things
+
+
+[9/17/2023 3:49 AM] tux_linux
+It wouldn't let it use UID 0
+
+
+[9/17/2023 3:50 AM] dandelionkoi
+mostly it was a "just wondering" question. sounds like it's difficult/not really possible, and would strain the resources of a small team, so i'm not wondering anymore
+
+
+[9/17/2023 3:51 AM] tux_linux
+Probably better to get it on a supported reader
+
+
+[9/17/2023 3:51 AM] tux_linux
+Like nia
+
+
+[9/17/2023 3:51 AM] kuratius
+I think andi also had some suggested tweaks that would make running inkbox on devices with different kernel seemless, have you had time to look at that?
+
+
+[9/17/2023 3:51 AM] tux_linux
+Not *that* seamless
+
+
+[9/17/2023 3:52 AM] tux_linux
+I looked at it, these are good ideas I don't have time to implement
+But it probably wouldn't help as for pmOS
+Inkbox lives in its sandbox, it's programmed to think it has the whole room for itself
+
+
+[9/17/2023 3:52 AM] kuratius
+If you spend some time you can probably figure out how to compile koreader or plato for pmOS
+
+
+[9/17/2023 3:52 AM] tux_linux
+Including root
+
+
+[9/17/2023 3:53 AM] tux_linux
+Yes, that will probably work better right away
+
+
+[9/17/2023 3:53 AM] tux_linux
+Koreader already ships Linux appimages
+
+
+[9/17/2023 3:53 AM] tux_linux
+For x86
+
+
+[9/17/2023 3:55 AM] kuratius
+So: get pmOS on highsense a9, then compile koreader for it I guess
+
+
+[9/17/2023 3:55 AM] kuratius
+@dandelion
+
+
+[9/17/2023 3:55 AM] kuratius
+Should get you close to what you want I think?
+
+
+[9/17/2023 3:55 AM] tux_linux
+Maybe just get it on your nia if you like it more
+
+
+[9/17/2023 3:55 AM] tux_linux
+Also there is a koreader Android app
+
+
+[9/17/2023 3:56 AM] dandelionkoi
+yeah, i think the starting place is once my nia arrives, figure out how to open it without breaking it, or see if my friend will help, etcher an sd card, and go from there
+
+{Reactions}
+👍 
+
+[9/17/2023 3:57 AM] kuratius
+Btw, there is a pmOS port for the nia, if you want to play around with that
+
+
+[9/17/2023 3:57 AM] kuratius
+It's missing an efficient ui like inkbox though
+
+
+[9/17/2023 3:58 AM] kuratius
+Nia has too little ram for xfce to be usable
+
+
+[9/17/2023 3:58 AM] kuratius
+It works, but you dont really have much left for programs
+
+
+[9/17/2023 3:58 AM] tux_linux
+Maybe you can try openbox and tint2?
+
+
+[9/17/2023 4:00 AM] kuratius
+https://pkgs.alpinelinux.org/package/edge/community/x86/tint2
+
+
+[9/17/2023 4:00 AM] kuratius
+Could work maybe?
+
+
+[9/17/2023 4:01 AM] dandelionkoi
+i have no programming skills, experience.   i'm at a very basic level, and a slow learner with tech things.  i can usually figure out intermediate level user stuff
+
+
+[9/17/2023 4:02 AM] kuratius
+pmOS is really close to a normal Linux distro
+
+
+[9/17/2023 4:02 AM] tux_linux
+It's quite good
+
+
+[9/17/2023 4:02 AM] tux_linux
+That and matchbox keyboard
+
+
+[9/17/2023 4:03 AM] tux_linux
+https://youtu.be/qOQt6Fxew2s?si=cNe4tukTk-OEfB1I
+See here
+
+{Embed}
+Nicolas Mailloux
+https://www.youtube.com/watch?v=qOQt6Fxew2s
+X.org running on a Kobo Libra (pt. 2)
+A great, great increase in speed. This runs in an Alpine Linux chroot.
+HowTo here: https://www.mobileread.com/forums/showthread.php?t=336210
+/mnt/data/projects/git/conversations/media/maxresdefault-7EA6F.jpg
+
+
+[9/17/2023 4:03 AM] tux_linux
+I don't know how I even got Firefox to run on this thing because shortly after that it was always crashing because of oom errors, wasn't even able to open a website anymore iirc
+
+
+[9/17/2023 4:05 AM] tux_linux
+Also this
+https://youtu.be/OkfPXQwNP94?si=57kzhUU4TaZ7KZfd
+
+{Embed}
+Nicolas Mailloux
+https://www.youtube.com/watch?v=OkfPXQwNP94
+Kobo Aura playing YouTube
+/mnt/data/projects/git/conversations/media/maxresdefault-05B3B.jpg
+
+
+[9/17/2023 4:05 AM] tux_linux
+All running with openbox
+
+
+[9/17/2023 4:06 AM] tux_linux
+Poor eink
+
+
+[9/17/2023 4:06 AM] tux_linux
+🥴
+
+
+[9/17/2023 4:08 AM] dandelionkoi
+that's pretty cool.  it's fun to play videos on my Hisense A7CC.
+
+{Reactions}
+👍 
+
+[9/17/2023 4:10 AM] dandelionkoi
+just trying to move out of that ecosystem.  Yeah, it's android.  if I cover the camera when it's locked, and try to unlock it, i get a message, "Do not cover the top of the screen" with a rectangle with the top 3rd shaded
+
+
+[9/17/2023 4:12 AM] dandelionkoi
+it gives you the option to press the power and volume up button to turn that off, but i think i'd have to do that every time i open my phone if i put a sticker on the camera
+
+
+[9/17/2023 4:14 AM] dandelionkoi
+also trying to get ahead of the issues discussed here: https://odysee.com/@RobBraxmanTech:6/e2e-x:0
+
+{Embed}
+Rob Braxman Tech
+https://odysee.com/@RobBraxmanTech:6/e2e-x:0
+End-to-End Encryption Will Be an Historical Footnote!
+Governments are pushing the idea of new legislation that is presented as being under the cover of doing something good for society. However, the end result of this is to build a mass surveillance syst...
+/mnt/data/projects/git/conversations/media/9e916e63d5a3c01d6cd3c92239d1e6cc-DCE1C.webp
+
+
+[9/21/2023 8:41 AM] andi15701
+there is some firefox-mobile-config package
+
+
+[9/21/2023 8:41 AM] andi15701
+in pmOS
+
+
+[9/21/2023 8:41 AM] andi15701
+maybe you can reuse something from there
+
+
+[9/23/2023 2:57 PM] [matrix] tux-linux
+test
+
+
+[9/23/2023 5:09 PM] [matrix] aarto
+Works!
+
+
+[10/22/2023 12:09 PM] nisirfalas
+Hi,
+I'm a full stack developer (but with no experience in C++). Recently, I bought a Kobo Clara 2E and would love to support with testing / porting. I commented in this GitHub issue: https://github.com/Kobo-InkBox/inkbox/issues/50
+
+So, first step would be to open the Kobo and flash the current image on the SD card?
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/issues/50
+Kobo Clara 2E · Issue #50 · Kobo-InkBox/inkbox
+Hi, does Inkbox run on Kobo Clara 2E EInk reader?
+/mnt/data/projects/git/conversations/media/50-D4857
+
+
+[10/22/2023 12:17 PM] szybet
+Hi
+let me create a thread first, what is your device model number? should be written somewhere
+
+
+[10/23/2023 8:21 AM] nisirfalas
+The model is N506.
+
+
+[10/23/2023 12:07 PM] szybet
+Started a thread.
+
+
+[10/28/2023 10:06 PM] aptgetyolo
+Hey saw this issue: https://github.com/Kobo-InkBox/inkbox/issues/4
+
+I got rudimentary code experience and can handle flashing a sd card. I’m lost on making a serial connection. Will I need to solder something or can it be done through USB?
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/issues/4
+Kobo Clara HD · Issue #4 · Kobo-InkBox/inkbox
+Hi, does Inkbox run on Kobo Clara HD EInk reader?
+/mnt/data/projects/git/conversations/media/4-A0C4B
+
+
+[10/28/2023 10:13 PM] aptgetyolo
+I’d love to help either by testing or contributing code if appropriate.
+
+
+[10/28/2023 10:17 PM] andi15701
+well, there is a kobo clara port
+
+
+[10/28/2023 10:17 PM] andi15701
+things changed a bit
+
+
+[10/28/2023 10:18 PM] aptgetyolo
+Yea I was reading comments that said kernels updated for that image. But wasn’t seeing it in the latest release, so I thought more work was needed?
+
+
+[10/28/2023 10:21 PM] andi15701
+well, it boots
+
+
+[10/28/2023 10:22 PM] andi15701
+towards full ui
+
+
+[10/28/2023 11:22 PM] aptgetyolo
+Ah, I see where I can do a build for it. I’ll give it a go and poke around, thanks.
+
+
+[11/29/2023 10:58 AM] andi15701
+well, the full reason for all that is: I do not want to change sd cards, so I examine possibilities to multi-boot, so I have inkbox, debian and postmarketos on one card, and to avoid mess with changing partition numbers, I tried to use gpt
+
+
+[11/29/2023 10:59 AM] andi15701
+which causes some mess on inkbox side
+
+
+[11/29/2023 10:59 AM] [matrix] Szybet
+inkbox uses maybe mounting partytion by bytes offset
+
+
+[11/29/2023 10:59 AM] [matrix] Szybet
+blame nicolas
+
+
+[11/29/2023 11:00 AM] andi15701
+if you do not have such strange things.. it should be simplier.
+
+
+[11/29/2023 11:00 AM] andi15701
+I hopefully try again this evening
+
+
+[11/29/2023 11:01 AM] andi15701
+to recreate a plain inkbox sdcard
+
+
+[12/20/2023 7:04 PM] thelinuxpirate
+Happy to help on the clara hd effort as well, just got my device / am wiring up serial now.
+
+
+[12/20/2023 7:04 PM] szybet
+look #deleted-channel
+
+{Reactions}
+❤️ (2) 
+
+[1/8/2024 9:13 PM] tux_linux
+Started a thread.
+
+
+[2/3/2024 4:08 AM] tux_linux
+test
+
+
+[3/1/2024 7:24 AM] ansraer
+Out of curiosity, why exactly do you need the official kernels from Kobo?
+
+
+[3/1/2024 7:25 AM] ansraer
+Afaik every linux kernel should contain information about how it was built in /proc/config.gz, so unless they made massive changes I don't see why you couldn't use that file to build a vanilla kernel with a generic eink driver.
+
+
+[3/1/2024 7:38 AM] szybet
+Because both NXP and kobo do some changes that are horrible hacks most of the time
+
+
+[3/1/2024 7:38 AM] szybet
+And those are weird and device specific
+
+
+[3/1/2024 7:38 AM] szybet
+For older models its worse, for newer its getting better
+
+
+[3/1/2024 7:39 AM] szybet
+If we get a mainline kernel running on a kobo clara 2e or a device that runs it, other devices could also run mainline
+
+
+[3/1/2024 7:39 AM] szybet
+Mainline in itself has problems
+
+
+[3/1/2024 7:39 AM] szybet
+Kobo clara hd still doesnt work
+
+
+[3/2/2024 5:02 PM] ninuje
+@andi : Which model does `kobo,aura2` map to in your kernel? (Remember, Kobo's naming scheme is terrible, there are eleven billion devices with "aura" in the name). The Aura Second Edition?
+
+
+[3/2/2024 5:04 PM] ninuje
+The other contender on an imx6sl would be the Aura H2O (which is often shortened to "H2O" to avoid the Aura mess)
+
+
+[3/2/2024 5:15 PM] ninuje
+Okay, yeah, checked the dts, E60QL is the Aura SE
+
+
+[3/2/2024 5:22 PM] tux_linux
+https://cdn.discordapp.com/attachments/935603767284469830/935610795834896384/PXL_20220125_185910925.jpg?ex=65f0a6f4&is=65de31f4&hm=85dba557f023e1dcd3e13761174fc8cfe947352984640d31265d208ddca90bb3&
+
+{Embed}
+https://cdn.discordapp.com/attachments/935603767284469830/935610795834896384/PXL_20220125_185910925.jpg?ex=65f0a6f4&is=65de31f4&hm=85dba557f023e1dcd3e13761174fc8cfe947352984640d31265d208ddca90bb3&
+/mnt/data/projects/git/conversations/media/PXL_20220125_185910925-D4831.jpg
+
+
+[3/2/2024 5:22 PM] tux_linux
+PCB picture of mine if you need more info
+
+
+[3/2/2024 7:12 PM] andi15701
+* Device tree for the Kobo Aura 2 ebook reader
+ *
+ * Name on mainboard is: 37NB-E60QL0+4B1
+
+
+[3/2/2024 7:12 PM] andi15701
+I always write down those things
+
+
+[3/2/2024 7:13 PM] andi15701
+especially since the clara revision mess
+
+
+[3/2/2024 7:15 PM] dferrg_30526
+There's also Aura 2 v2, which doesn't work with v1 SD images
+
+
+[3/2/2024 7:15 PM] dferrg_30526
+the PCB inscription on those is 37NB-E60QL0+4C0
+
+
+[3/2/2024 7:20 PM] andi15701
+so these refresh issues?
+
+
+[3/2/2024 7:20 PM] andi15701
+and other revisions?
+
+
+[3/2/2024 7:20 PM] andi15701
+well, the clara2e is next in my porting queue
+
+
+[3/2/2024 7:21 PM] szybet
+yep
+
+
+[3/2/2024 7:21 PM] andi15701
+the more devices run somehow mainline the easier we can debug things
+
+
+[3/2/2024 7:21 PM] andi15701
+and fix probably issues on several devices
+
+
+[3/2/2024 7:26 PM] andi15701
+clara2e will be interesting because if refresh problems are not there, then it is probably something with the epd pmic
+
+
+[3/2/2024 7:26 PM] andi15701
+so we can narrow things down
+
+
+[3/2/2024 7:28 PM] dferrg_30526
+That PMIC is TPS65186?
+
+
+[3/2/2024 7:28 PM] tux_linux
+probably
+
+
+[3/2/2024 7:28 PM] tux_linux
+65185
+
+
+[3/2/2024 7:28 PM] andi15701
+yes, that one is for the display
+
+
+[3/2/2024 7:28 PM] andi15701
+clara2e has a sy7636
+
+
+[3/2/2024 7:30 PM] dferrg_30526
+I tried it for a project some years ago, it was very problematic
+
+
+[3/2/2024 7:30 PM] andi15701
+there is something near mainline for the clara2e too
+
+
+[3/2/2024 7:31 PM] dferrg_30526
+i don't remember if mine was 65185 or 65186
+
+
+[3/2/2024 8:00 PM] andi15701
+clara hd vendor vs. mainline, there are bugs fixed in mainline and later also fixed in the vendor kernel, and there are bugs in the near-mainline kernel but not in the vendor kernel.
+
+
+[3/2/2024 11:38 PM] ninuje
+Yeah, curious how the Clara 2E's PMIC would fare on mainline, because it's.... fairly fucked up on vendor.
+
+
+[3/2/2024 11:39 PM] ninuje
+Yeah, that one was a doozy. Same PCB ID, *completely* different SoC.
+
+
+[3/2/2024 11:40 PM] ninuje
+They did the same with the H2O 2
+
+
+[3/23/2024 10:46 AM] andi15701
+Well, I enabled the regulator stuff and no smoke yet... cpufreq seems to work and adjusts regulators
+
+
+[3/23/2024 10:49 AM] andi15701
+but again there is A and B. Difference is the epd pmic, and the one in b was afaik never forward ported to anything near mainline. And I have b 😦
+
+
+[3/23/2024 10:53 AM] andi15701
+for a there is some older mainline port although it is a bit messed up regarding the regulators
+
+
+[3/23/2024 10:55 AM] andi15701
+I think cpufreq is not working properly on any kobo kernel with the rohm pmic
+
+
+[3/30/2024 12:54 AM] carnivorous_snow
+Greetings everyone. Is this the place to ask if Inkbox might possibly work with Kobo Aura H2O?
+
+
+[3/30/2024 12:56 AM] szybet
+yes but you would need to port it you need time, linux knowledge is welcome documentation are the threads in #porting you are welcome
+
+
+[3/30/2024 12:56 AM] szybet
+and hello btw
+
+
+[3/30/2024 1:00 AM] carnivorous_snow
+Thanks man. I'll have to look into it. I'm actually not sure what to do with my unit. I got it as a gift, but it had been cleaned with a damp cloth.. damp. It's supposed to be water proof. Well water got in, and the top left quadrant of the screen won't register touch. So as of yet, I'm unable to simply install the regular Kobo OS as I can't select English as the language. XD. Because half of width and half of height doesn't work, I do wonder if it is some sort of firmware glitch with the version I've been trying to install - which I have to look up.
+
+
+[3/30/2024 1:00 AM] carnivorous_snow
+You're familiar, do you play Soldat? Or do I know you from somewhere else.
+
+
+[3/30/2024 1:01 AM] szybet
+Nope, i dont play games much
+
+
+[3/30/2024 1:02 AM] carnivorous_snow
+Hmm, must be some programming community I had joined once upon a time. I basically deleted all my Discord and left. But rejoined just for this. 😛
+
+
+[3/30/2024 1:02 AM] szybet
+idk, inkbox won't resolve hardware issues but im sure you could use it at least to some extend without the part of the screen
+
+
+[3/30/2024 1:02 AM] carnivorous_snow
+That's what I'm hoping
+
+
+[3/30/2024 1:02 AM] szybet
+idk maybe even a photo frame, second screen, news agregator or anything
+
+
+[3/30/2024 1:03 AM] szybet
+a small server
+
+
+[3/30/2024 1:03 AM] szybet
+whatever really
+
+
+[3/30/2024 1:03 AM] szybet
+its a pure linux device then
+
+
+[3/30/2024 1:03 AM] szybet
+just a underpowered one
+
+
+[3/30/2024 1:04 AM] szybet
+maybe, idk im not that active on discord
+
+
+[3/30/2024 1:04 AM] carnivorous_snow
+It will work as an e-reader, just so long as I can select books, get to settings and flip pages with the bottom half of screen.
+
+
+[3/30/2024 1:04 AM] szybet
+koreader will do the trick i think
+
+
+[3/30/2024 1:05 AM] szybet
+it has some bad ui but i think its pretty resilient to such things
+
+
+[3/30/2024 1:05 AM] szybet
+ping me in the porting thread if i dont respond normally, discord threads sometimes dont show up
+
+
+[3/30/2024 1:06 AM] carnivorous_snow
+Ok will do. Thank you so much. 🙂
+
+{Reactions}
+👍 
+
+[4/1/2024 1:16 AM] exparrot
+anyone here thought about a pinenote port?
+
+
+[4/1/2024 1:19 AM] szybet
+We talked with pinenote, they dont have a real pinenote to give us but aprototype without a touchscreen
+
+
+[4/1/2024 1:19 AM] szybet
+and we arent doing it because we focus on other things for now
+
+
+[4/1/2024 1:19 AM] szybet
+eg. no time ;o
+
+
+[4/1/2024 1:42 AM] exparrot
+Ah yep. I’ve got a pine note sitting here
+
+
+[4/1/2024 1:43 AM] szybet
+huh
+
+
+[4/1/2024 1:43 AM] szybet
+are you a developer?
+
+
+[4/1/2024 1:43 AM] exparrot
+Yeah
+
+
+[4/1/2024 1:43 AM] szybet
+then you could port inkbox
+
+
+[4/1/2024 1:43 AM] szybet
+¯\_(ツ)_/¯
+
+
+[4/1/2024 1:43 AM] exparrot
+I ported koreader a while back, kind of tempting to try inkbox instead
+
+
+[4/1/2024 1:44 AM] szybet
+inkbox will give you access to a few other apps
+
+
+[4/1/2024 1:44 AM] szybet
+the rest is not perfect
+
+
+[4/1/2024 1:44 AM] exparrot
+Yeah nice
+
+
+[4/1/2024 1:44 AM] exparrot
+I wrote some writing software for the pine note too but there are some driver issues still
+
+
+[4/1/2024 1:44 AM] szybet
+the system if between "kind of a rpi with eink screen" and "a full edged eink os" but we are working on it
+
+{Reactions}
+👌 
+
+[4/1/2024 1:45 AM] szybet
+sad
+
+
+[4/1/2024 1:45 AM] szybet
+we use fbink mostly
+
+
+[4/1/2024 1:45 AM] exparrot
+I gotta head out but cool to have found this  project. I’ll be back at some point
+
+
+[4/1/2024 1:46 AM] szybet
+cool
+
+
+[4/1/2024 1:46 AM] szybet
+we plan to develop inkbox a lot in the summer
+
+
+[4/1/2024 1:46 AM] szybet
+and later
+
+
+[4/1/2024 1:46 AM] szybet
+now its a pause really
+
+
+[4/1/2024 1:46 AM] szybet
+school and things
+
+
+[4/1/2024 1:48 AM] tux_linux
+remember i have summer classes until july 17th
+
+
+[4/1/2024 1:48 AM] szybet
+Im talking about me
+
+
+[4/1/2024 1:48 AM] tux_linux
+ok
+
+
+[4/3/2024 9:11 AM] andi15701
+a new toy
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/dump-bd-regs-41DBA.sh
+
+
+[4/3/2024 9:11 AM] andi15701
+for dumping voltages of the bd71879
+
+
+[4/3/2024 9:11 AM] andi15701
+found in the nia c
+
+
+[4/3/2024 9:11 AM] andi15701
+clara2e
+
+
+[4/3/2024 9:11 AM] andi15701
+some libra2
+
+
+[4/3/2024 9:12 AM] andi15701
+so run it on every device
+
+
+[4/3/2024 9:12 AM] andi15701
+which uses that regulator to understand whether there is something unexpected done in kernel
+
+
+[4/3/2024 9:13 AM] andi15701
+you need to specify the bus number the pmic is on
+
+
+[4/3/2024 9:33 AM] szybet
+You could detect it automatically i think?
+
+
+[4/3/2024 9:33 AM] szybet
+But thats very cool anyway
+
+
+[4/3/2024 9:34 AM] szybet
+such toys if done properly could enavle us gathering info on devices that arw not yet supported via Quillwrite
+
+
+[4/3/2024 2:20 PM] andi15701
+well, i was just too lazy to do that
+
+
+[4/3/2024 2:20 PM] andi15701
+```root@bookworm:~# BUSNUM=`echo /sys/bus/i2c/devices/?-004b | sed 's|.*/\(.\).*|\1|'`
+root@bookworm:~# echo $BUSNUM
+2
+root@bookworm:~#```
+
+
+[4/3/2024 2:58 PM] szybet
+huh, awesome
+
+
+[4/3/2024 2:58 PM] szybet
+so instead of booting uboot just run this?
+
+
+[4/3/2024 3:08 PM] andi15701
+run this on any device with bd71879 in it
+
+
+[4/3/2024 3:08 PM] andi15701
+when it is running normally
+
+
+[4/3/2024 3:09 PM] andi15701
+to find out how the regulators are really set up
+
+
+[4/3/2024 3:30 PM] andi15701
+to put that into any devicetree or verify that the vendor kernel sources match at least what is actually running in case of regulator configuration
+
+
+[4/3/2024 4:14 PM] andi15701
+uboot hacks would be to detect board versions to load the correct devicetree (+ hwconfig binaries if kobo vendor kernel is run)
+
+
+==============================================================
+Exported 233 message(s)
+==============================================================

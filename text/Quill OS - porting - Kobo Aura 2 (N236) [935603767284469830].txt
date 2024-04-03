@@ -1,0 +1,5973 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Aura 2 (N236)
+==============================================================
+
+[1/25/2022 7:35 PM] tux_linux
+So I bought an Aura 2 for $20 on a local website yesterday. It was cheap, so I thought "Why not port InkBox to it?" and there I am, it arrived today.
+
+
+[1/25/2022 7:37 PM] tux_linux
+General observations: the screen is like the Glo's but sharper, even if it isn't in reality (they have the same resolution, 1024x758)
+It's quite a nice one, way better than on the Aura 1st gen (N514) and quite an improvement from the Glo.
+
+
+[1/25/2022 8:03 PM] tux_linux
+PCB picture
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220125_185910925-B663F.jpg
+
+
+[1/25/2022 8:19 PM] andi15701
+what is written on the chip down right on the flexible pcb?
+
+
+[1/25/2022 8:20 PM] tux_linux
+What are you talking about exactly?
+
+
+[1/25/2022 8:21 PM] tux_linux
+eKTF2232ALW
+
+
+[1/25/2022 8:21 PM] tux_linux
+BHT162J2
+
+
+[1/25/2022 8:21 PM] tux_linux
+1608D
+
+
+[1/25/2022 8:21 PM] tux_linux
+Is that it?
+
+
+[1/25/2022 8:21 PM] andi15701
+probably
+
+
+[1/25/2022 8:21 PM] andi15701
+the touchscreen controller
+
+
+[1/25/2022 8:22 PM] andi15701
+well the big things on the left are probably RAM, CPU, SDcard, RC5T619
+
+
+[1/25/2022 8:22 PM] andi15701
+serial console is obvious
+
+
+[1/25/2022 8:23 PM] andi15701
+testpoint number of the 4 pads next to the console
+
+
+[1/25/2022 8:23 PM] andi15701
+?
+
+
+[1/25/2022 8:23 PM] andi15701
+TPxxx
+
+
+[1/25/2022 8:26 PM] tux_linux
+TP198 it seems
+
+
+[1/25/2022 8:26 PM] tux_linux
+maybe for debugging battery
+
+
+[1/25/2022 8:26 PM] tux_linux
+jtag?
+
+
+[1/25/2022 8:26 PM] andi15701
+second serial port
+
+
+[1/25/2022 8:26 PM] tux_linux
+maybe too
+
+
+[1/25/2022 8:27 PM] andi15701
+and 3V3 and GND
+
+
+[1/25/2022 8:27 PM] andi15701
+on the Kobo Clara HD the second serial port has the same number
+
+
+[1/25/2022 8:27 PM] andi15701
+and same also on the Tolino Shine 2 + 3
+
+
+[1/25/2022 8:30 PM] andi15701
+I am just evaluating how much work it would be to get a recent kernel on it
+
+
+[1/25/2022 8:32 PM] tux_linux
+oooh please
+
+
+[1/25/2022 8:32 PM] tux_linux
+the emergency would be to update the 2.6.35.3 kernels on touch glo mini etc.
+
+
+[1/25/2022 8:33 PM] tux_linux
+which are atrociously old
+
+
+[1/25/2022 8:42 PM] tux_linux
+Boot log
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-D9173.txt
+
+
+[1/25/2022 8:42 PM] tux_linux
+Crap, still at U-Boot 2009.08
+
+
+[1/25/2022 8:42 PM] andi15701
+I guess everything using an I.MX6SoloLite is
+
+
+[1/25/2022 8:42 PM] tux_linux
+At least they bothered to set `bootdelay` to 1
+
+
+[1/25/2022 8:43 PM] andi15701
+same for the Tolino Vision 5 (=Libra H2O with imx.6sl instead of 6sll)
+
+
+[1/25/2022 8:43 PM] tux_linux
+Commands list
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-29E34.txt
+
+
+[1/25/2022 8:43 PM] tux_linux
+`wifi_3v3` is intriguing
+
+
+[1/25/2022 8:44 PM] andi15701
+download_mode
+
+
+[1/25/2022 8:44 PM] tux_linux
+yep
+
+
+[1/25/2022 8:44 PM] tux_linux
+I don't know if there is a way to enable it via hardware though
+
+
+[1/25/2022 8:46 PM] andi15701
+wifi is RTL8189FAV?
+
+
+[1/25/2022 8:47 PM] tux_linux
+I guess
+
+
+[1/25/2022 8:47 PM] tux_linux
+I haven't seen a CyberTAN chip on the PCB
+
+
+[1/25/2022 8:47 PM] tux_linux
+(CyberTAN chips are a nightmare)
+
+
+[1/25/2022 8:48 PM] andi15701
+which EPD PMIC is involved? Nothing looks like  the TPS65185
+
+
+[1/25/2022 8:49 PM] andi15701
+fp9928?
+
+
+[1/25/2022 8:49 PM] tux_linux
+where do you see that?
+
+
+[1/25/2022 8:49 PM] andi15701
+just guesswork
+
+
+[1/25/2022 8:50 PM] tux_linux
+Nanya chip is the RAM
+
+
+[1/25/2022 8:50 PM] andi15701
+yes
+
+
+[1/25/2022 8:50 PM] andi15701
+that is obious
+
+
+[1/25/2022 8:51 PM] andi15701
+hmm what is the FCC ID of that device?
+
+
+[1/25/2022 8:51 PM] tux_linux
+yeah, I looked it up but couldn't see PCB pictures
+
+
+[1/25/2022 8:51 PM] tux_linux
+They just photographed the outside
+
+
+[1/25/2022 8:51 PM] tux_linux
+hang on
+
+
+[1/25/2022 8:52 PM] tux_linux
+It seems it should be close to that one https://fccid.io/NCC/CCAI17LP0480T0
+
+{Embed}
+https://fccid.io/NCC/CCAI17LP0480T0
+Kobo N236 NCC CCAI17LP0480T0
+Taiwan NCC specificaitons and certification for Kobo N236 certification ID CCAI17LP0480T0.
+
+
+[1/25/2022 8:56 PM] andi15701
+https://fccid.io/NOIKBN236/Internal-Photos/Internal-Photos-3038178
+
+{Embed}
+https://fccid.io/NOIKBN236/Internal-Photos/Internal-Photos-3038178
+KBN236 6 h Electronic Display Device Teardown Internal Photos  Netr...
+6 inch Electronic Display Device Internal Photos details for FCC ID NOIKBN236 made by Netronix Inc. Document Includes Internal Photos Internal Photos
+/mnt/data/projects/git/conversations/media/png-5F44F.php
+
+
+[1/25/2022 8:56 PM] tux_linux
+nice
+
+
+[1/25/2022 8:58 PM] andi15701
+ok, we were right with the wifi
+
+
+[1/25/2022 8:58 PM] tux_linux
+rtl8189 is a sweet chip
+
+
+[1/25/2022 8:59 PM] tux_linux
+No kernel compilation pain and no errors either from what I've done on the Libra
+
+
+[1/25/2022 9:00 PM] andi15701
+what is the biggest chip between the touchscreen connector and the display connector?
+
+
+[1/25/2022 9:00 PM] tux_linux
+`9928A`
+
+
+[1/25/2022 9:00 PM] tux_linux
+`G`
+
+
+[1/25/2022 9:00 PM] tux_linux
+`5501 I`
+
+
+[1/25/2022 9:01 PM] tux_linux
+It seems
+
+
+[1/25/2022 9:01 PM] andi15701
+so that is probably the fp9928
+
+
+[1/25/2022 9:01 PM] andi15701
+the EPD PMIC
+
+
+[1/25/2022 9:01 PM] tux_linux
+interesting
+
+
+[1/25/2022 9:03 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220125_200215253-30E49.jpg
+
+
+[1/25/2022 9:03 PM] tux_linux
+For reference, here's the Aura 1st edition PCB
+
+
+[1/25/2022 9:03 PM] tux_linux
+There is a TPS 65185 in there
+
+
+[1/25/2022 9:11 PM] tux_linux
+Nice, it seems there aren't any available kernel sources for the N236
+
+
+[1/25/2022 9:16 PM] tux_linux
+Filed an issue
+
+
+[1/25/2022 9:17 PM] andi15701
+do you have the output of dmesg?
+
+
+[1/25/2022 9:17 PM] andi15701
+perhaps the sources are just the same
+
+
+[1/25/2022 9:17 PM] andi15701
+as for some other reader
+
+
+[1/25/2022 9:17 PM] tux_linux
+not right now unfortunately, the SD's backing up currently
+
+
+[1/25/2022 9:17 PM] tux_linux
+yeah, it's possible
+
+
+[1/25/2022 9:17 PM] andi15701
+it seems that there is quiet appended to the kernel commandline
+
+
+[1/25/2022 9:17 PM] tux_linux
+there sure is
+
+
+[1/25/2022 9:18 PM] tux_linux
+silly me, I didn't even bother to check the kernel version before backing up the SD
+
+
+[1/25/2022 9:18 PM] tux_linux
+Probably `3.0.35` I'd guess
+
+
+[1/25/2022 9:19 PM] andi15701
+if you give me the hwconfig hidden partition I could try to produce a basic 5.16 kernel for it
+
+
+[1/25/2022 9:19 PM] tux_linux
+Oh yes please
+
+
+[1/25/2022 9:19 PM] tux_linux
+Would you like the entire unpartitioned space?
+
+
+[1/25/2022 9:19 PM] tux_linux
+I think it's ~19MB
+
+
+[1/25/2022 9:20 PM] tux_linux
+There is the EPD waveform there too
+
+
+[1/25/2022 9:20 PM] andi15701
+yes, would be interesting
+
+
+[1/25/2022 9:20 PM] tux_linux
+Ok, no problem, I'll give you that as soon as my backup is finished
+
+
+[1/25/2022 9:20 PM] andi15701
+DCD is also interesting
+
+
+[1/25/2022 9:20 PM] tux_linux
+what's that?
+
+
+[1/25/2022 9:20 PM] andi15701
+device configuration data, needed to configure the RAM
+
+
+[1/25/2022 9:20 PM] tux_linux
+Yeah, maybe you could find useful info about that in U-Boot source
+
+
+[1/25/2022 9:21 PM] tux_linux
+(once we know where to find it)
+
+
+[1/25/2022 9:21 PM] andi15701
+there is some limited amount of static ram on the SoC
+
+
+[1/25/2022 9:21 PM] andi15701
+it is usually the first part of the uboot area
+
+
+[1/25/2022 9:21 PM] andi15701
+on these chips
+
+
+[1/25/2022 9:22 PM] tux_linux
+ok
+
+
+[1/25/2022 9:22 PM] tux_linux
+I guess it shouldn't be too difficult to have a bootable kernel on the serial port, but the display will probably be a whole another level
+
+
+[1/25/2022 9:23 PM] andi15701
+so, the sequence is: rom searches for some bootloader, loads the dcd into static ram, executes it, then loads the rest of the bootloader into DRAM
+
+
+[1/25/2022 9:23 PM] tux_linux
+Did you see Andreas Kemnade Linux 5.16 ports for the Clara HD & Libra on GitHub?
+
+
+[1/25/2022 9:23 PM] andi15701
+I am Andreas Kemnade
+
+
+[1/25/2022 9:23 PM] tux_linux
+Ah.
+
+
+[1/25/2022 9:23 PM] tux_linux
+AMAZING!
+
+
+[1/25/2022 9:23 PM] tux_linux
+Well then welcome
+
+
+[1/25/2022 9:24 PM] tux_linux
+I didn't recognize your username
+
+
+[1/25/2022 9:24 PM] tux_linux
+I thought it was the ROM that directly executed U-Boot which initialized the RAM itself
+
+
+[1/25/2022 9:25 PM] tux_linux
+On some boards it is like that, right?
+sunxi maybe
+
+
+[1/25/2022 9:25 PM] andi15701
+yes, DCD is imx specific
+
+{Reactions}
+👍 
+
+[1/25/2022 9:26 PM] andi15701
+on other boards you have often a two-part u-boot
+
+
+[1/25/2022 9:26 PM] andi15701
+some SPL
+
+
+[1/25/2022 9:26 PM] tux_linux
+yeah true
+
+
+[1/25/2022 9:26 PM] andi15701
+and the main u-boot
+
+
+[1/25/2022 9:27 PM] tux_linux
+I have my Lichee Pi Zero which has that
+I use it as a nice tiny serial appliance
+I created a FEL image I can just load via USB without any MMC plugged in
+
+
+[1/25/2022 9:28 PM] tux_linux
+So basically the ROM is doing what U-Boot SPL would do?
+
+
+[1/25/2022 9:29 PM] andi15701
+./board/freescale/mx6sll_ntx/imximage.cfg
+
+
+[1/25/2022 9:29 PM] andi15701
+/*
+ * Device Configuration Data (DCD)
+ *
+ * Each entry must have the format:
+ * Addr-type           Address        Value
+ *
+ * where:
+ *      Addr-type register length (1,2 or 4 bytes)
+ *      Address   absolute address of the register
+ *      value     value to be stored in the register
+ */
+
+/* Enable all clocks */
+DATA 4 0x020c4068 0xffffffff
+DATA 4 0x020c406c 0xffffffff
+DATA 4 0x020c4070 0xffffffff
+DATA 4 0x020c4074 0xffffffff
+DATA 4 0x020c4078 0xffffffff
+DATA 4 0x020c407c 0xffffffff
+DATA 4 0x020c4080 0xffffffff
+
+
+[1/25/2022 9:29 PM] andi15701
+and more lines like that
+
+
+[1/25/2022 9:29 PM] andi15701
+so setting these things would be what SPL would do
+
+
+[1/25/2022 9:30 PM] tux_linux
+So it indicates registers with blank values?
+
+
+[1/25/2022 9:30 PM] andi15701
+but the ROM can read that special format
+
+
+[1/25/2022 9:30 PM] andi15701
+and execute that thing
+
+
+[1/25/2022 9:30 PM] tux_linux
+ok
+
+
+[1/25/2022 9:30 PM] andi15701
+yes
+
+
+[1/25/2022 9:31 PM] andi15701
+there are more lines which write more interesting stuff, not just 0xffffff
+
+{Reactions}
+👍 
+
+[1/25/2022 9:32 PM] andi15701
+00000400: d100 2040 0000 8087 0000 0000 2cf4 7f87  .. @........,...
+00000410: 20f4 7f87 00f4 7f87 0000 0000 0000 0000   ...............
+00000420: 00f0 7f87 0030 0600 0000 0000 d202 1040  .....0.........@
+00000430: cc02 0c04 020c 4068 ffff ffff 020c 406c  ......@h......@l
+00000440: ffff ffff 020c 4070 ffff ffff 020c 4074  ......@p......@t
+00000450: ffff ffff 020c 4078 ffff ffff 020c 407c  ......@x......@|
+00000460: ffff ffff 020c 4080 ffff ffff 020e 0550  ......@........P
+
+
+[1/25/2022 9:32 PM] andi15701
+and that is on the Kobo Clara HD
+
+
+[1/25/2022 9:32 PM] tux_linux
+Which indicate what?
+
+
+[1/25/2022 9:32 PM] andi15701
+ram size, timings
+
+
+[1/25/2022 9:32 PM] tux_linux
+ok
+
+
+[1/25/2022 9:32 PM] tux_linux
+very interesting
+
+
+[1/25/2022 9:32 PM] andi15701
+number of rows/columns
+
+
+[1/25/2022 9:34 PM] andi15701
+and in that hexdump you see the beginning of u-boot
+
+{Reactions}
+👍 
+
+[1/25/2022 9:34 PM] andi15701
+with the dcd
+
+{Reactions}
+👍 
+
+[1/25/2022 9:36 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/xaa-FEB9C
+/mnt/data/projects/git/conversations/media/xab-2CA75
+/mnt/data/projects/git/conversations/media/xac-E2BE6
+/mnt/data/projects/git/conversations/media/xad-6634B
+
+
+[1/25/2022 9:36 PM] tux_linux
+There's the N236's unpartitioned space
+
+
+[1/25/2022 9:36 PM] tux_linux
+`cat xa* > aura-n236-bootmmc.bin`
+
+
+[1/25/2022 9:36 PM] tux_linux
+Up to sector `49151` just before the beginning of the first partition
+
+
+[1/25/2022 9:37 PM] tux_linux
+If you ever want to experiment with other models supported by InkBox (Mini, Touch B & C and Glo), you can get full SD images here http://23.163.0.39/bundles/inkbox/native/
+
+
+[1/25/2022 9:38 PM] tux_linux
+```
+nicolas@fedora ~> sha256sum aura-n236-bootmmc.bin 
+fae70b3afff254fe9ff5b92f15010ab860e7ae540850bc1e167c2de760fae3aa  aura-n236-bootmmc.bin
+```
+
+
+[1/25/2022 9:39 PM] andi15701
+matches
+
+
+[1/25/2022 9:39 PM] tux_linux
+Ok so it should be good
+I'm going to go see if it's possible to get dmesg output
+
+
+[1/25/2022 9:41 PM] tux_linux
+lots of messages about RTL871X
+
+
+[1/25/2022 9:43 PM] tux_linux
+Maximum I can get, otherwise there is an overflow
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-9C671.txt
+
+
+[1/25/2022 9:43 PM] tux_linux
+```Linux version 3.0.35+ (gallen@gallen-M51AC) (gcc version 4.6.2 20110630 (prerelease) (Freescale MAD -- Linaro 2011.07 -- Built at 2011/08/10 09:20) ) #5031 PREEMPT Tue Mar 30 14:26:27 CST 2021```
+
+
+[1/25/2022 9:44 PM] tux_linux
+```
+eBR-1A # printenv
+bootdelay=1
+baudrate=115200
+loadaddr=0x80800000
+rd_loadaddr=0x81000000
+uboot=u-boot.bin
+kernel=uImage
+bootargs_base=setenv bootargs console=ttymxc0,115200 rootwait rw
+bootcmd_mmc=run bootargs_base bootargs_mmc; mmc dev 0; bootm
+bootcmd_SD=run bootargs_base bootargs_SD; mmc dev 0; bootm
+bootcmd_recovery=run bootargs_base bootargs_recovery; mmc dev 0; bootm
+bootargs_SD=setenv bootargs ${bootargs} root=/dev/mmcblk1p1 rootfstype=ext4
+bootargs_recovery=setenv bootargs ${bootargs} root=/dev/mmcblk0p2 rootfstype=ext4
+bootargs_mmc=setenv bootargs ${bootargs}
+bootcmd=run bootcmd_mmc
+stdin=serial
+stdout=serial
+stderr=serial
+fastboot_dev=mmc0
+
+Environment size: 640/8188 bytes
+eBR-1A #
+```
+U-Boot env
+
+
+[1/25/2022 9:45 PM] tux_linux
+Only 256MB of RAM sadly... come on Kobo, it was 2016...
+
+
+[1/25/2022 9:55 PM] tux_linux
+Question : if device can currently only boot legacy U-Boot images (uImage), could it still boot a modern zImage+dtb?
+Maybe with a more recent U-Boot or via fastboot?
+
+
+[1/25/2022 10:03 PM] andi15701
+with a more recent U-Boot: yes
+
+
+[1/25/2022 10:04 PM] andi15701
+and then there:
+
+
+[1/25/2022 10:04 PM] tux_linux
+Ok so we'd first have to upgrade U-Boot
+
+
+[1/25/2022 10:04 PM] andi15701
+CONFIG_ARM_APPENDED_DTB
+
+
+[1/25/2022 10:04 PM] tux_linux
+Unless maybe we can compile an uImage with that?
+
+
+[1/25/2022 10:04 PM] andi15701
+so you can cat dtb >>zImage
+
+
+[1/25/2022 10:04 PM] tux_linux
+Into an uImage?
+
+
+[1/25/2022 10:05 PM] andi15701
+and do mkimage to convert into an uImage
+
+
+[1/25/2022 10:05 PM] tux_linux
+Ok
+
+
+[1/25/2022 10:05 PM] tux_linux
+That's handy
+
+
+[1/25/2022 10:05 PM] andi15701
+or mkbootimg for fastboot
+
+{Reactions}
+👍 
+
+[1/25/2022 10:12 PM] tux_linux
+Did you find something interesting in the unpartitioned space?
+
+
+[1/25/2022 10:12 PM] andi15701
+I did not look into it much yet
+
+
+[1/25/2022 10:12 PM] tux_linux
+Oh ok no problem
+
+
+[1/25/2022 10:26 PM] andi15701
+{m_hdr = {cMagicNameA = "HW CONFIG ", cVersionNameA = "v2.7", bHWConfigSize = 63 '?'}, m_val = {bPCB = 59 ';', bKeyPad = 12 '\f', bAudioCodec = 0 '\000', bAudioAmp = 0 '\000', 
+    bWifi = 8 '\b', bBT = 0 '\000', bMobile = 0 '\000', bTouchCtrl = 9 '\t', bTouchType = 3 '\003', bDisplayCtrl = 8 '\b', bDisplayPanel = 6 '\006', bRSensor = 0 '\000', 
+    bMicroP = 2 '\002', bCustomer = 9 '\t', bBattery = 1 '\001', bLed = 4 '\004', bRamSize = 2 '\002', bIFlash = 0 '\000', bExternalMem = 0 '\000', bRootFsType = 2 '\002', 
+    bSysPartType = 2 '\002', bProgressXHiByte = 1 '\001', bProgressXLoByte = 104 'h', bProgressYHiByte = 2 '\002', bProgressYLoByte = 228 '\344', bProgressCnts = 0 '\000', 
+    bContentType = 0 '\000', bCPU = 5 '\005', bUIStyle = 1 '\001', bRamType = 5 '\005', bUIConfig = 0 '\000', bDisplayResolution = 1 '\001', bFrontLight = 1 '\001', bCPUFreq = 0 '\000', 
+    bHallSensor = 1 '\001', bDisplayBusWidth = 0 '\000', bFrontLight_Flags = 6 '\006', bPCB_Flags = 1 '\001', bFrontLight_LED_Driver = 4 '\004', bVCOM_10mV_HiByte = 254 '\376', 
+    bVCOM_10mV_LoByte = 191 '\277', bPCB_REV = 0 '\000', bPCB_LVL = 1 '\001', bHOME_LED_PWM = 0 '\000', bPMIC = 1 '\001', bFL_PWM = 6 '\006', bRTC = 1 '\001', bBootOpt = 0 '\000', 
+    bTouch2Ctrl = 0 '\000', bTouch2Type = 0 '\000', bGPS = 0 '\000', bFM = 0 '\000', bRSensor2 = 0 '\000', bLightSensor = 0 '\000', bTPFWIDByte0 = 0 '\000', bTPFWIDByte1 = 0 '\000', 
+    bTPFWIDByte2 = 0 '\000', bTPFWIDByte3 = 0 '\000', bTPFWIDByte4 = 0 '\000', bTPFWIDByte5 = 0 '\000', bTPFWIDByte6 = 0 '\000', bTPFWIDByte7 = 0 '\000', bGPU = 0 '\000', 
+    bPCB_Flags2 = 0 '\000', bEPD_Flags = 0 '\000', bLAN = 0 '\000', bMobileIF = 0 '\000', bPIR = 0 '\000', bPanelLaminationSrc = 0 '\000', bFL_Channels = 0 '\000', bTTS = 0 '\000'}, 
+  m_bReserveA = '\000' <repeats 22 times>}
+
+
+[1/25/2022 10:27 PM] andi15701
+that should be a guide through a 3.0.35 kernel
+
+
+[1/25/2022 10:27 PM] tux_linux
+Yeah nice
+
+
+[1/25/2022 10:27 PM] tux_linux
+Well it is one
+
+
+[1/25/2022 10:29 PM] tux_linux
+Is it a hexdump or is it raw in the MMC like that?
+
+
+[1/25/2022 10:30 PM] andi15701
+it is binary on 0x80000 on the mmc
+
+{Reactions}
+👍 
+
+[1/25/2022 10:30 PM] andi15701
+#include <unistd.h>
+#include <fcntl.h>
+#include "ntx_hwconfig.h"
+NTX_HWCONFIG hwcfg;
+
+int main(int argc, char **argv)
+{
+   int fd = open(argv[1], O_RDONLY);
+   read(fd,&hwcfg, sizeof(hwcfg));
+   return 0;
+}
+
+
+[1/25/2022 10:31 PM] andi15701
+then I used gdb here
+
+
+[1/25/2022 10:31 PM] andi15701
+to print out hwcfg
+
+
+[1/25/2022 10:31 PM] tux_linux
+Cool
+
+
+[1/25/2022 10:31 PM] andi15701
+ntx_hwconfig.h is from a 3.0.35 kernel
+
+
+[1/25/2022 10:31 PM] andi15701
+and argv[1] is the extracted content from the mmc
+
+{Reactions}
+👍 
+
+[1/25/2022 10:40 PM] andi15701
+so summary: I try to produce some basic devicetree based on 5.16 for it, sdcard, usb, rtc, battery level, backlight, leds, buttons should work with that
+
+
+[1/25/2022 10:40 PM] tux_linux
+Very nice
+
+
+[1/25/2022 10:41 PM] tux_linux
+Thank you very much for your effort
+I play a bit with devicetrees sometimes but my knowledge is very limited
+
+
+[1/25/2022 10:42 PM] tux_linux
+I assume the EPDC is going to be another game, right?
+
+
+[1/25/2022 10:43 PM] andi15701
+about the other stuff: for ektf2132 there is some driver in mainline, but not for the ektf2232, maybe there is something in the Libra ok Clara kernel
+
+{Reactions}
+👍 
+
+[1/25/2022 10:43 PM] andi15701
+EPDC itself: same as on the other readers I support
+
+
+[1/25/2022 10:43 PM] tux_linux
+Is it the same controller?
+
+
+[1/25/2022 10:43 PM] andi15701
+there is only the fp9928 driver missing
+
+
+[1/25/2022 10:44 PM] andi15701
+but that is in the libra and clara sources
+
+
+[1/25/2022 10:44 PM] tux_linux
+Feel free to send me images for testing
+
+
+[1/25/2022 10:44 PM] andi15701
+yes, same controller
+
+{Reactions}
+👍 
+
+[1/25/2022 10:45 PM] andi15701
+well, there is apparently revision 2.1 in the i.MX6SoloLite and revision 3 in the i.MX6SLL
+
+
+[1/25/2022 10:46 PM] andi15701
+and probably something <2.0 in the i.MX5something
+
+
+[1/25/2022 10:46 PM] tux_linux
+I wouldn't doubt that
+
+
+[1/25/2022 10:48 PM] tux_linux
+There has been a lot of devices with I.MX507, and only one I.MX508, AFAIK. Interestingly enough, the 508 (Touch B) is the only one I successfully got the CyberTAN WC121 chip to work on (dhd.ko driver from Broadcom)
+
+
+[1/25/2022 10:49 PM] andi15701
+On the Tolino Shine2HD, there is also the CyberTAN chip
+
+
+[1/25/2022 10:49 PM] andi15701
+I got it working there
+
+
+[1/25/2022 10:49 PM] tux_linux
+Oh nice
+
+
+[1/25/2022 10:49 PM] tux_linux
+What kernel?
+
+
+[1/25/2022 10:49 PM] andi15701
+5.16
+
+
+[1/25/2022 10:49 PM] tux_linux
+Even nicer
+
+
+[1/25/2022 10:50 PM] andi15701
+brcmfmac is the driver
+
+
+[1/25/2022 10:50 PM] tux_linux
+Oh
+
+
+[1/25/2022 10:50 PM] andi15701
+it needs a firmware file
+
+
+[1/25/2022 10:50 PM] tux_linux
+I used an out of tree one
+
+
+[1/25/2022 10:50 PM] andi15701
+and a text file
+
+
+[1/25/2022 10:50 PM] tux_linux
+That was a nightmare
+
+
+[1/25/2022 10:50 PM] andi15701
+with some configuration
+
+
+[1/25/2022 10:50 PM] tux_linux
+nvram.txt
+
+
+[1/25/2022 10:50 PM] tux_linux
+Yeah
+
+
+[1/25/2022 10:50 PM] andi15701
+propely renamed
+
+
+[1/25/2022 10:51 PM] tux_linux
+No matter what I tried it never worked on 507s
+
+
+[1/25/2022 10:51 PM] tux_linux
+https://github.com/kobolabs/Kobo-Reader/issues/105
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/issues/105
+dhd.ko module incompatible with self-compiled kernel · Issue #105 ·...
+I&#39;ve recompiled a kernel from the imx507 sources for a Kobo Mini and Kobo Touch. All is fine but the wi-fi module doesn&#39;t want to cope with that kernel. I compiled the other modules...
+/mnt/data/projects/git/conversations/media/105-4E77D
+
+
+[1/25/2022 10:52 PM] tux_linux
+That was a wild adventure
+
+
+[1/25/2022 10:57 PM] andi15701
+/lib/firmware/brcm/brcmfmac43362-sdio.bin and I copied the nvram.txt to /lib/firmware/brcm/brcmfmac43362-sdio.kobo,tolino-shine2d.txt (devicetree compatible)
+
+
+[1/25/2022 10:58 PM] tux_linux
+Ok
+It seems to be rtecdc.bin here
+
+
+[1/25/2022 10:59 PM] tux_linux
+Btw you can use backticks to make code blocks
+
+
+[1/25/2022 11:02 PM] andi15701
+btw: there is also the devicetree for the kobo aura N514 in mainline, but getting the EPDC to work would be more difficult due to the older controller version
+
+
+[1/25/2022 11:03 PM] tux_linux
+Yeah, and honestly the screen is just not great
+
+
+[1/25/2022 11:03 PM] tux_linux
+Also, my N514's screen is broken :/
+
+
+[1/25/2022 11:05 PM] andi15701
+maybe I can meet one of the developers involved there once covid calms down a bit. It is probably just a 5h train ride. So maybe a hackathon at one weekend or something
+
+{Reactions}
+👍 
+
+[1/26/2022 3:09 AM] tux_linux
+I'll start porting InkBox with the vendor kernel, tell me when you have something to test and I'll be happy to update the official sources in the repo once it works 🙂
+
+
+[1/26/2022 10:54 AM] tux_linux
+Would you have an insight on which flash header to choose there ?
+https://github.com/kobolabs/Kobo-Reader/issues/115#issuecomment-1021825717
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/issues/115
+Kobo Aura Edition 2 (N236) kernel & bootloader · Issue #115 · kobol...
+Hello, I&#39;ve looked through the hw folder but I haven&#39;t been able to find the Aura 2 (N236) kernel or bootloader sources. There has been a previous issue about this (#65) but I wonde...
+/mnt/data/projects/git/conversations/media/115-490C9
+
+
+[1/26/2022 11:01 AM] andi15701
+well, simple, compare the flash header with the DCD in the u-boot binary
+
+
+[1/26/2022 11:01 AM] andi15701
+and choose the most similar one
+
+{Reactions}
+👍 
+
+[1/26/2022 11:02 AM] andi15701
+perhaps, comparing the result is easiest
+
+
+[1/26/2022 11:39 AM] andi15701
+addresses starting with 21Bxxxx are about memory configuration
+
+
+[1/26/2022 11:40 AM] andi15701
+chapter 31 in the imx6sl reference manual is about MMDC
+
+
+[1/26/2022 3:50 PM] tux_linux
+Ok, so apparently there are two versions of the same model
+The other one has an i.MX6SLL CPU (with the same model number)
+confusing...
+
+
+[1/26/2022 4:13 PM] tux_linux
+Interesting, when comparing stock U-Boot with compiled non-working U-Boot in binwalk, I get this:
+```
+nicolas@fedora /tmp> binwalk u-boot_lpddr2_256-E60QL0-LPDDR2.bin 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+178708        0x2BA14         CRC32 polynomial table, little endian
+203504        0x31AF0         Android bootimg, kernel size: 1869570560 bytes, kernel addr: 0x203A6974, ramdisk size: 543449442 bytes, ramdisk addr: 0x746F6F62, product name: " %08x (%d)"
+
+nicolas@fedora /tmp> binwalk u-boot.bin 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+3192          0xC78           Unix path: /home/build/inkbox/kernel/bootloader/mx6sl-n236/cpu/arm_cortexa8
+177580        0x2B5AC         CRC32 polynomial table, little endian
+202359        0x31677         Android bootimg, kernel size: 1869570560 bytes, kernel addr: 0x203A6974, ramdisk size: 543449442 bytes, ramdisk addr: 0x746F6F62, product name: " %08x (%d)"
+
+nicolas@fedora /tmp>
+```
+
+
+[1/26/2022 4:22 PM] tux_linux
+I'm at loss here; how would you do that? Also, I find strange that there are `flash_header.S*` files for every possible PCB out there but not for the `E60QL0` one.
+
+
+[1/26/2022 6:16 PM] andi15701
+dcd start at 0x42C of /dev/mmcblk0
+
+
+[1/26/2022 6:16 PM] andi15701
+uboot starts at 0x400
+
+
+[1/26/2022 6:17 PM] andi15701
+e.g. in
+
+
+[1/26/2022 6:17 PM] andi15701
+flash_header.E60QD0.S
+
+
+[1/26/2022 6:17 PM] andi15701
+/* !!!! Need update Len field after adding ddr script !!!!!!!!!!!!!!!!!*/
+dcd_hdr:          .word 0x402002D2 /* Tag=0xD2, Len=67*8 + 4 + 4, Ver=0x40 */
+
+
+[1/26/2022 6:17 PM] andi15701
+`/* !!!! Need update Len field after adding ddr script !!!!!!!!!!!!!!!!!*/
+dcd_hdr:          .word 0x402002D2 /* Tag=0xD2, Len=67*8 + 4 + 4, Ver=0x40 */
+`
+
+
+[1/26/2022 6:19 PM] andi15701
+either you compare by hand with the source
+
+
+[1/26/2022 6:21 PM] andi15701
+or compare starting at 0x42C of /dev/mmcblk0 with 0x2C of a compiled u-boot
+
+
+[1/26/2022 6:21 PM] tux_linux
+When you say `0x42C`, do you mean sector 1068 of mmc?
+
+
+[1/26/2022 6:21 PM] andi15701
+byte
+
+
+[1/26/2022 6:21 PM] tux_linux
+ok
+
+
+[1/26/2022 6:21 PM] tux_linux
+So you'd extract it like this?
+`dd if=/dev/mmcblk0 bs=1 skip=1068` until...?
+
+
+[1/26/2022 6:22 PM] andi15701
+or maybe first extract u-boot
+
+
+[1/26/2022 6:22 PM] tux_linux
+ok
+
+
+[1/26/2022 6:23 PM] andi15701
+512kbyte starting at byte 0x400
+
+
+[1/26/2022 6:23 PM] tux_linux
+like that?
+`dd if=u-boot.bin bs=1 skip=44`
+
+
+[1/26/2022 6:23 PM] tux_linux
+But then I see nothing
+
+
+[1/26/2022 6:24 PM] tux_linux
+Sorry I sure look very dumb
+
+
+[1/26/2022 6:24 PM] tux_linux
+I usually don't deal with such low-level things
+
+
+[1/26/2022 6:27 PM] andi15701
+you can also use  tail -c + $((0x2C+1)) u-boot.bin
+
+
+[1/26/2022 6:27 PM] andi15701
+| xxd
+
+
+[1/26/2022 6:28 PM] andi15701
+or | head -c 256
+
+
+[1/26/2022 6:28 PM] andi15701
+and >header
+
+
+[1/26/2022 6:29 PM] tux_linux
+Gives nothing
+
+
+[1/26/2022 6:29 PM] tux_linux
+```nicolas@gentoo-ryzen /tmp $ tail -c +$((0x2C+1)) u-boot.bin | head -c 256
+nicolas@gentoo-ryzen /tmp $ 
+```
+
+
+[1/26/2022 6:29 PM] andi15701
+still binay
+
+
+[1/26/2022 6:29 PM] andi15701
+you need to append some tool for hexdumping
+
+
+[1/26/2022 6:29 PM] andi15701
+like | xxd
+
+
+[1/26/2022 6:29 PM] tux_linux
+After or before head?
+
+
+[1/26/2022 6:29 PM] andi15701
+after
+
+
+[1/26/2022 6:30 PM] tux_linux
+I'm afraid this isn't much either
+```
+nicolas@gentoo-ryzen /tmp $ tail -c +$((0x2C+1)) u-boot.bin | head -c 256 | xxd
+00000000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000040: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000050: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000060: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000070: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000080: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000090: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+nicolas@gentoo-ryzen /tmp $ 
+```
+
+
+[1/26/2022 6:30 PM] tux_linux
+(this is the locally compiled U-Boot)
+
+
+[1/26/2022 6:30 PM] tux_linux
+Same thing for stock U-Boot provided in firmware upgrades
+```
+nicolas@gentoo-ryzen /tmp $ tail -c +$((0x2C+1)) u-boot_lpddr2_256-E60QL0-LPDDR2.bin | head -c 256 | xxd
+00000000: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000010: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000020: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000030: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000040: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000050: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000060: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000070: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000080: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+00000090: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000a0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000b0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000c0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000d0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000e0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+000000f0: 0000 0000 0000 0000 0000 0000 0000 0000  ................
+nicolas@gentoo-ryzen /tmp $
+```
+
+
+[1/26/2022 6:31 PM] andi15701
+so apparently the headrs are missing
+
+
+[1/26/2022 6:31 PM] tux_linux
+```
+nicolas@gentoo-ryzen /tmp $ ls kobo/upgrade/mx6sl-ntx/
+ntxfw-E60QM0.bin                      u-boot_lpddr2_256-E60Q90-LPDDR2.bin   u-boot_lpddr2_512-E60QM0A-LPDDR2.bin  u-boot_lpddr2_512-E70Q00-LPDDR2.bin   uImage-E60QL0                         uImage-E60QM0B
+ntxfw-E60QM0.bin.header               u-boot_lpddr2_512-E60Q90-LPDDR2.bin   u-boot_lpddr2_512-E60QM0B-LPDDR2.bin  uImage-E60Q90                         uImage-E60QM0A                        uImage-E70Q00
+nicolas@gentoo-ryzen /tmp $ ls kobo/upgrade/mx6sl-ntx/
+```
+`ntxfw` maybe?
+
+
+[1/26/2022 6:33 PM] andi15701
+so, definitively not
+
+
+[1/26/2022 6:33 PM] andi15701
+at least on tolino shine 2, fastboot strips away the first 0x400 bytes of u-boot
+
+
+[1/26/2022 6:33 PM] andi15701
+perhaps that u-boot build compensates for that
+
+
+[1/26/2022 6:36 PM] andi15701
+by prepending 0x400 bytes of zero
+
+
+[1/26/2022 6:37 PM] tux_linux
+Here are the first 2048 bytes of the stock U-Boot
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-C79C4.txt
+
+
+[1/26/2022 6:38 PM] andi15701
+hmm, crazy
+
+
+[1/26/2022 6:39 PM] andi15701
+and now compare with xxd backup-of-/dev/mmcblk0
+
+
+[1/26/2022 6:39 PM] tux_linux
+ok
+
+
+[1/26/2022 6:39 PM] tux_linux
+from where to where?
+
+
+[1/26/2022 6:39 PM] andi15701
+uboot starts at 0x400 there
+
+
+[1/26/2022 6:39 PM] andi15701
+and now look in that xxd you have sent me
+
+
+[1/26/2022 6:39 PM] andi15701
+and find the pattern there
+
+
+[1/26/2022 6:40 PM] tux_linux
+ok
+
+
+[1/26/2022 6:42 PM] tux_linux
+What command should I run exactly?
+
+
+[1/26/2022 6:42 PM] tux_linux
+Just look at it with xxd?
+
+
+[1/26/2022 6:42 PM] andi15701
+xxd backup-of-/dev/mmcblk0 | less in one window
+
+
+[1/26/2022 6:42 PM] andi15701
+and
+
+
+[1/26/2022 6:43 PM] andi15701
+tux-linux
+ — 
+Today at 6:37 PM
+Here are the first 2048 bytes of the stock U-Boot
+
+this output in another
+
+{Reactions}
+👍 
+
+[1/26/2022 6:44 PM] andi15701
+the partition table is from 0  to 0x200 in /dev/mmcblk0
+
+
+[1/26/2022 6:44 PM] andi15701
+so that part is not interesting
+
+
+[1/26/2022 6:45 PM] tux_linux
+what's 1K in hexadecimal?
+
+
+[1/26/2022 6:45 PM] tux_linux
+`dd if=bootmmc.bin bs=1K skip=1 | xxd | less`
+I saw the pattern with this
+
+
+[1/26/2022 6:46 PM] andi15701
+1K aka 1024 = 0x400
+
+
+[1/26/2022 6:47 PM] andi15701
+00000400: d100 2040 6006 8087 0000 0000 2c04 8087  .. @`.......,...
+
+
+[1/26/2022 6:47 PM] andi15701
+so this pattern
+
+
+[1/26/2022 6:47 PM] tux_linux
+got it
+
+
+[1/26/2022 6:48 PM] andi15701
+on the other file I  see that at 0x3D4
+
+
+[1/26/2022 6:49 PM] tux_linux
+The pattern does not seem to be there
+
+
+[1/26/2022 6:49 PM] tux_linux
+actually
+
+
+[1/26/2022 6:49 PM] tux_linux
+I only get a very long sequence of zeros from 00039440, seemingly after U-Boot
+
+
+[1/26/2022 6:50 PM] tux_linux
+Then zero sequence is interrupted at `00080bf0`
+
+
+[1/26/2022 6:50 PM] tux_linux
+by ntxfw
+
+
+[1/26/2022 6:51 PM] andi15701
+0x3D4 + 0x2C=0x400
+
+
+[1/26/2022 6:51 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-18225.txt
+
+
+[1/26/2022 6:51 PM] andi15701
+yep, that one is not interesting
+
+
+[1/26/2022 6:52 PM] andi15701
+so if you copy that stock u-boot with zeros prepended to byte 0x400  on your mmc
+
+
+[1/26/2022 6:52 PM] andi15701
+it will really start at 0x800
+
+
+[1/26/2022 6:52 PM] tux_linux
+I already flashed it
+
+
+[1/26/2022 6:52 PM] tux_linux
+After it didn't work with my compiled one
+
+
+[1/26/2022 6:53 PM] tux_linux
+I flashed it with `dd if=u-boot of=/dev/mmcblk0 bs=1K seek=1 skip=1`
+
+
+[1/26/2022 6:53 PM] tux_linux
+And it worked
+
+
+[1/26/2022 6:53 PM] andi15701
+yes
+
+
+[1/26/2022 6:54 PM] andi15701
+and your compiled one starts with that magic? oder with zeros?
+
+
+[1/26/2022 6:54 PM] tux_linux
+both start with zeros
+
+
+[1/26/2022 6:55 PM] andi15701
+then you need also the skip there
+
+
+[1/26/2022 6:55 PM] tux_linux
+oh so that's why there's seek and skip in dd command
+
+
+[1/26/2022 6:56 PM] tux_linux
+So it skips 1K of data in input file and skips 1K of space on mmc
+right?
+
+
+[1/26/2022 6:56 PM] andi15701
+yes
+
+
+[1/26/2022 6:56 PM] andi15701
+seek is for output, skip for input
+
+
+[1/26/2022 6:56 PM] tux_linux
+So maybe we should skip 1k in xxd
+
+
+[1/26/2022 6:57 PM] tux_linux
+is that what you mean?
+
+
+[1/26/2022 6:57 PM] andi15701
+or just cut away it somehow
+
+
+[1/26/2022 6:58 PM] andi15701
+and whenever you build another u-boot check whether it meets your expectations about zeros
+
+
+[1/26/2022 6:58 PM] andi15701
+my 2020.10 fork does not produce the zeros at the beginning
+
+
+[1/26/2022 6:59 PM] tux_linux
+Vendor U-Boot is always full of weird things and surprises
+
+
+[1/26/2022 6:59 PM] tux_linux
+And confusing code too
+
+
+[1/26/2022 7:00 PM] tux_linux
+Can your 2020.10 fork support this Kobo model?
+
+
+[1/26/2022 7:00 PM] andi15701
+yes, that is why I wanted to get rid of it
+
+
+[1/26/2022 7:00 PM] andi15701
+as said, ram configuration needs to be added
+
+
+[1/26/2022 7:01 PM] andi15701
+I would first try to produce some kernel
+
+{Reactions}
+👍 
+
+[1/26/2022 7:01 PM] tux_linux
+The reason why I absolutely need to recompile U-Boot is to change the kernel location from sector 2048 to 81920
+Otherwise, it eats up waveform and other firmware things and the Kobo can't boot because kernel is too big
+
+
+[1/26/2022 7:02 PM] andi15701
+maybe create an android image on an ext2 partition
+
+
+[1/26/2022 7:02 PM] andi15701
+load it in uboot
+
+
+[1/26/2022 7:02 PM] tux_linux
+Well, the provided 3.0.35 sources actually build and run fine, so that's a start, I guess you can look at those stock source tarballs for some insight
+
+
+[1/26/2022 7:02 PM] andi15701
+and boot it
+
+
+[1/26/2022 7:03 PM] tux_linux
+Yeah, I thought of maybe fatload or extload but it's already settled in for all other Kobos, so ideally I'd want that to be the same
+
+
+[1/26/2022 7:03 PM] andi15701
+the kernel checkts for HWCONFIG-> bPCB
+
+
+[1/26/2022 7:03 PM] tux_linux
+yeah, IIRC I think the kernel also ate the waveform
+
+
+[1/26/2022 7:04 PM] andi15701
+among other things
+
+
+[1/26/2022 7:04 PM] tux_linux
+yeah
+
+
+[1/26/2022 7:05 PM] tux_linux
+That's why I decided to use a "SPL" kernel for the Libra that is smaller than the actual InkBox kernel and just kexec's it from another place (without touching U-Boot in the eMMC)
+But normally what I do for other devices is always to move the kernel location to 81920, I set up my partition layout to have ~12M of free space starting at 81920 before another partition starts
+
+
+[1/26/2022 7:08 PM] andi15701
+maybe a transition point would be for the devices running near-mainline stuff
+
+
+[1/26/2022 7:08 PM] andi15701
+and the 2020.10 u-boot fork
+
+
+[1/26/2022 7:08 PM] tux_linux
+What do you mean by "transition point"?
+
+
+[1/26/2022 7:08 PM] andi15701
+to change things maybe
+
+
+[1/26/2022 7:09 PM] tux_linux
+But yeah, U-Boot 2020.10 is definitely a good thing to have
+
+
+[1/26/2022 7:09 PM] andi15701
+the near-mainline kernels do not take things from the hidden partitions
+
+
+[1/26/2022 7:09 PM] tux_linux
+Yeah
+
+
+[1/26/2022 7:09 PM] tux_linux
+You load them directly from a partition?
+
+
+[1/26/2022 7:09 PM] andi15701
+waveform is expected in /lib/firmware/imx/epdc/epdc.fw
+
+
+[1/26/2022 7:10 PM] tux_linux
+Oh true
+
+
+[1/26/2022 7:10 PM] andi15701
+and besides that it only needs its devicetree
+
+
+[1/26/2022 7:10 PM] andi15701
+but nothing of this kobo special stuff
+
+
+[1/26/2022 7:11 PM] tux_linux
+Not even hwconfig?
+
+
+[1/26/2022 7:11 PM] andi15701
+yes, not even hwconfig
+
+
+[1/26/2022 7:11 PM] tux_linux
+nice
+
+
+[1/26/2022 7:11 PM] andi15701
+hwconfig acts as a "poor man's" devicetree for the kobo vendor kernels
+
+{Reactions}
+👍 
+
+[1/26/2022 7:11 PM] tux_linux
+Once the EPDC module is stable, Kobo should switch to your kernels
+
+
+[1/26/2022 7:13 PM] andi15701
+and they should send me prototypes of their new models
+
+
+[1/26/2022 7:13 PM] tux_linux
+ah yes!
+
+
+[1/26/2022 7:15 PM] tux_linux
+I guess InkBox may help your stuff to get more popular
+
+
+[1/26/2022 7:15 PM] tux_linux
+If EPDC module becomes stable, I'll happily upgrade the kernels for each device and make that a feature in the README
+
+
+[1/26/2022 7:15 PM] tux_linux
+3.0.35 is still livable with, but 2.6.35.3 is truly a pain
+
+
+[1/26/2022 7:16 PM] tux_linux
+4.1.15 is the best of the three
+
+
+[1/26/2022 7:17 PM] tux_linux
+But is your EPDC code only in device trees? Or do you have to modify the source tree code a bit?
+
+
+[1/26/2022 8:17 PM] andi15701
+you have to use a new kernel, too
+
+
+[1/26/2022 8:25 PM] andi15701
+userspace: it has to go through DRM_IOCTL_MODE_DIRTYFB
+
+
+[1/26/2022 8:26 PM] andi15701
+there is also some ioctl in the drm atomic api
+
+{Reactions}
+👍 
+
+[1/26/2022 8:57 PM] andi15701
+flash_header.E60Q90.S
+
+
+[1/26/2022 8:57 PM] tux_linux
+you found it ?!
+
+
+[1/26/2022 8:58 PM] tux_linux
+ok it builds, let's try
+
+
+[1/26/2022 8:58 PM] andi15701
+I have not fully compared it
+
+
+[1/26/2022 8:59 PM] andi15701
+but I found at least one mismatch with everything else
+
+
+[1/26/2022 9:00 PM] tux_linux
+nope, doesn't boot
+
+
+[1/26/2022 9:01 PM] tux_linux
+thanks anyway
+
+
+[1/26/2022 9:01 PM] andi15701
+can you send me the binary?
+
+
+[1/26/2022 9:02 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/u-boot-C63EF.bin
+
+
+[1/26/2022 9:14 PM] andi15701
+it seems not to contain that flash_header
+
+
+[1/26/2022 9:15 PM] tux_linux
+it was built with it though
+
+
+[1/26/2022 9:15 PM] tux_linux
+Yesterday I got plenty of makefile errors saying it couldn't find flash_header.S before I symlinked it
+
+
+[1/26/2022 9:15 PM] tux_linux
+What if you compare it with stock u-boot?
+
+
+[1/26/2022 9:16 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/u-boot_lpddr2_256-E60QL0-LPDDR2-77373.bin
+
+
+[1/26/2022 9:16 PM] andi15701
+i did compare with the unpartitioned space
+
+
+[1/26/2022 9:16 PM] andi15701
+you send me yesterday
+
+
+[1/26/2022 9:16 PM] andi15701
+hmm, was the flash_header.o really rebuilt?
+
+
+[1/26/2022 9:16 PM] tux_linux
+I'll see
+
+
+[1/26/2022 9:17 PM] tux_linux
+I did make clean and recompiled it now
+
+
+[1/26/2022 9:18 PM] tux_linux
+Now it has
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-9E255.txt
+
+
+[1/26/2022 9:18 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/u-boot-8BCB2.bin
+
+
+[1/26/2022 9:18 PM] tux_linux
+I'll try on the Aura
+
+
+[1/26/2022 9:20 PM] tux_linux
+it does boot now !!
+
+
+[1/26/2022 9:20 PM] tux_linux
+Thanks for your help!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-CCD96.txt
+
+
+[1/26/2022 9:52 PM] andi15701
+https://github.com/kobolabs/Kobo-Reader/issues/93 <-- it feels quite strange that this is not fixed in the original kernel. I provided a patch
+
+{Embed}
+https://github.com/kobolabs/Kobo-Reader/issues/93
+Kobo Clara HD epd suspend trouble-> unitialized variable · Issue #9...
+I have seen the device not going into suspend serveral times and found out that there is an unitialized variable in static int mxc_epdc_fb_suspend(struct device *dev) { int ret; if EPD_SUSPEND_BLAN...
+/mnt/data/projects/git/conversations/media/93-AF651
+
+
+[1/26/2022 9:52 PM] tux_linux
+They probably just forgot about it
+
+
+[1/26/2022 9:53 PM] tux_linux
+It is usually very difficult (except for GPL violation-related queries, like the "Updated kernels" issue I created) to obtain a reply from the maintainer
+
+
+[1/26/2022 10:01 PM] andi15701
+about gpl violations: you have in the 4.1.15 kernel the drivers/video/fbdev/mxc/lib.a_shipped-imx6sl-noaa
+
+
+[1/26/2022 10:01 PM] andi15701
+without source
+
+
+[1/26/2022 10:01 PM] tux_linux
+Ah
+What does that lib do?
+
+
+[1/26/2022 10:01 PM] andi15701
+https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/testing/linux-kobo-clara/fbdev-mxc-epdc-replace-blob-by-source-functions.patch
+
+{Embed}
+https://gitlab.com/postmarketOS/pmaports/-/blob/master/device/testing/linux-kobo-clara/fbdev-mxc-epdc-replace-blob-by-source-functions.patch
+device/testing/linux-kobo-clara/fbdev-mxc-epdc-replace-blob-by-sour...
+postmarketOS package build recipes
+/mnt/data/projects/git/conversations/media/icon_mobile-9A834.png
+
+
+[1/26/2022 10:01 PM] andi15701
+I killed that
+
+
+[1/26/2022 10:02 PM] andi15701
+if noaa is in the name, it is not too exiting
+
+
+[1/26/2022 10:02 PM] tux_linux
+i'm assuming it has nothing to do with weather? ;p
+
+
+[1/26/2022 10:03 PM] tux_linux
+https://www.noaa.gov
+
+{Embed}
+https://www.noaa.gov/
+National Oceanic and Atmospheric Administration
+U.S. Department of Commerce
+
+
+[1/26/2022 10:03 PM] andi15701
+some waveform magic, if there is only -aa in the name, then it might be exiting
+
+{Reactions}
+👍 
+
+[1/26/2022 10:04 PM] andi15701
+I linked that library against some userspace program and tried around
+
+
+[1/26/2022 10:04 PM] andi15701
+and wrote a replacement
+
+
+[1/26/2022 10:05 PM] tux_linux
+nice
+
+
+[1/26/2022 10:14 PM] andi15701
+so you can apply that patch against your 4.1.15 tree and deorbit that binary afterwards
+
+
+[1/26/2022 10:15 PM] tux_linux
+cool
+
+
+[1/26/2022 10:57 PM] andi15701
+well, they have updated the clara sources, and my bug is apparently fixed, so they just forgot updating the ticket
+
+{Reactions}
+👍 
+
+[1/27/2022 3:59 AM] tux_linux
+Wow congrats Kobo, that's a very nice business practice you have there
+```
+InkBox OS, kernel build sAJ302PQ
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+
+Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+rootfs: recovering journal
+rootfs has been mounted 571 times without being checked, check forced.
+```
+
+
+[1/27/2022 3:59 AM] tux_linux
+571 times!!
+
+
+[1/27/2022 4:00 AM] tux_linux
+(rootfs is the from the stock Nickel firmware, I'm porting InkBox kernel/initrd to the device currently)
+
+
+[1/27/2022 7:50 PM] tux_linux
+Would someone have an idea where to turn off the LED on this model? I haven't seen any sysfs paths related to this, they only seem to point to the backlight.
+
+
+[1/27/2022 8:10 PM] tux_linux
+Inkbox runs quite well on it but I can't get the LED to turn off
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220127_190940690-1271C.jpg
+
+
+[1/27/2022 8:16 PM] andi15701
+lets have a look
+
+
+[1/27/2022 8:16 PM] andi15701
+void led_red (int isOn) {
+
+
+[1/27/2022 8:16 PM] andi15701
+is in the kernel
+
+
+[1/27/2022 8:17 PM] andi15701
+do we have /dev/ntx_io?
+
+
+[1/27/2022 8:17 PM] tux_linux
+I think so
+
+
+[1/27/2022 8:17 PM] tux_linux
+let me see
+
+
+[1/27/2022 8:18 PM] tux_linux
+yes it's there
+
+
+[1/27/2022 8:18 PM] andi15701
+ioctl(fd, CM_nLED, &state)
+
+
+[1/27/2022 8:18 PM] andi15701
+probably
+
+
+[1/27/2022 8:18 PM] tux_linux
+ok
+
+
+[1/27/2022 8:18 PM] tux_linux
+So replace state by 0 or 1?
+
+
+[1/27/2022 8:19 PM] andi15701
+yes
+
+
+[1/27/2022 8:20 PM] tux_linux
+ok, I'll have a try shortly
+
+
+[1/27/2022 8:20 PM] tux_linux
+thanks
+
+
+[1/27/2022 8:22 PM] andi15701
+check also for                 gMX6SL_CHG_LED  in ntx_gpio_init()
+
+
+[1/27/2022 8:23 PM] andi15701
+I have decoded the HWCONFIG for you
+
+{Reactions}
+👍 
+
+[1/27/2022 8:23 PM] andi15701
+there you can find out the values
+
+
+[1/27/2022 8:23 PM] tux_linux
+thanks
+
+
+[1/27/2022 8:24 PM] andi15701
+and then there is:
+
+
+[1/27/2022 8:24 PM] andi15701
+plat-mxc/include/mach/gpio.h:#define IMX_GPIO_NR(bank, nr)        (((bank) - 1) * 32 + (nr))
+
+
+[1/27/2022 8:25 PM] andi15701
+and you can do
+
+
+[1/27/2022 8:25 PM] andi15701
+echo number >/sys/class/gpio/export
+
+
+[1/27/2022 8:25 PM] tux_linux
+ooh
+
+
+[1/27/2022 8:25 PM] tux_linux
+That could be less pain
+
+
+[1/27/2022 8:25 PM] andi15701
+and have  /sys/class/gpio/gpioXXX/value
+
+
+[1/27/2022 8:26 PM] andi15701
+and /sys/class/gpio/gpioXXX/direction
+
+
+[1/27/2022 8:29 PM] andi15701
+that one is the source for the relevant values for that gpio_init stuff
+
+{Reactions}
+👍 
+
+[1/27/2022 9:28 PM] andi15701
+did you find the number for the led?
+
+
+[1/27/2022 9:30 PM] tux_linux
+no, 2 hours that i'm trying to fix a critical bug in the GUI that segfaults the app when I click on the Apps, Settings or Home button 😂 
+Quite critical
+I'll go test that as soon as I hopefully fix it
+
+
+[1/27/2022 9:33 PM] tux_linux
+Found the problematic commit: https://github.com/Kobo-InkBox/inkbox/commit/e310dd14b357c91d5c8df956eafa1c0b34615e53
+Shit, it's been almost one month...
+
+
+[1/27/2022 9:35 PM] tux_linux
+Interesting that just hiding the button doesn't cause a segfault...
+
+
+[1/27/2022 9:41 PM] tux_linux
+Oof, fixed.
+
+
+[1/27/2022 9:41 PM] tux_linux
+I'm going to try the led thing now
+
+
+[1/27/2022 9:46 PM] tux_linux
+`bLed = 4 '\004'`
+
+
+[1/27/2022 9:46 PM] tux_linux
+So... does 4 have something to do with GPIO or not at all?
+
+
+[1/27/2022 9:47 PM] andi15701
+arch/arm/mach-mx6/board-mx6sl_ntx.c:  ntx_gpio_init
+
+
+[1/27/2022 9:48 PM] andi15701
+there you look for gMX6SL_CHG_LED
+
+
+[1/27/2022 9:48 PM] tux_linux
+ok
+
+
+[1/27/2022 9:48 PM] andi15701
+you find that several times
+
+
+[1/27/2022 9:48 PM] andi15701
+with a lot of if () around it
+
+
+[1/27/2022 9:48 PM] tux_linux
+```
+build@inkbox ~/i/k/k/linux-3.0.35-n236 (master)> cat arch/arm/mach-mx6/board-mx6sl_ntx.c | grep gMX6SL_CHG_LED
+volatile unsigned gMX6SL_CHG_LED = IMX_GPIO_NR(4, 16);  /* FEC_TXD1 */
+                gMX6SL_CHG_LED = IMX_GPIO_NR(5, 10);
+                        gMX6SL_CHG_LED = IMX_GPIO_NR(5, 13);
+                        gMX6SL_CHG_LED = IMX_GPIO_NR(5, 13);
+                        gMX6SL_CHG_LED = IMX_GPIO_NR(5, 9);
+                                gMX6SL_CHG_LED = IMX_GPIO_NR(5, 7);
+        if(gMX6SL_CHG_LED!=gMX6SL_ON_LED) {
+                gpio_request (gMX6SL_CHG_LED, "MX6SL_CHG_LED");
+                gpio_direction_input (gMX6SL_CHG_LED);
+build@inkbox ~/i/k/k/linux-3.0.35-n236 (master)>
+```
+
+
+[1/27/2022 9:49 PM] tux_linux
+But IMX_GPIO_NR is 5 or ...?
+
+
+[1/27/2022 9:49 PM] tux_linux
+Wait I'll try
+
+
+[1/27/2022 9:49 PM] andi15701
+you have to find the right one
+
+
+[1/27/2022 9:49 PM] andi15701
+and then: plat-mxc/include/mach/gpio.h:#define IMX_GPIO_NR(bank, nr)        (((bank) - 1) * 32 + (nr))
+
+
+[1/27/2022 9:49 PM] andi15701
+insert it there
+
+
+[1/27/2022 9:50 PM] andi15701
+and use the resulting number in /sys/class/gpio/export
+
+
+[1/27/2022 9:51 PM] tux_linux
+So I plug IMX_GPIO_NR values into gpio.h and try to export those values one at a time?
+
+
+[1/27/2022 9:52 PM] andi15701
+you look at the whole function, try to find the right led define
+
+
+[1/27/2022 9:52 PM] andi15701
+and then try to export it
+
+
+[1/27/2022 9:53 PM] andi15701
+if(50==gptHWCFG->m_val.bPCB||58==gptHWCFG->m_val.bPCB)
+                {
+
+
+[1/27/2022 9:53 PM] andi15701
+there is
+
+
+[1/27/2022 9:53 PM] andi15701
+for example
+
+
+[1/27/2022 9:53 PM] andi15701
+and you know bPCB
+
+
+[1/27/2022 9:53 PM] andi15701
+so you can find out
+
+
+[1/27/2022 9:54 PM] tux_linux
+I tried to export 4 and 5, both had a value of 0.
+13, 9, 7, 10, 16 returned a resource busy error when I tried to write their number in export
+
+
+[1/27/2022 9:54 PM] andi15701
+IMX_GPIO_NR(5, 13) = (((5)-1) *32 + (13))
+
+
+[1/27/2022 9:54 PM] andi15701
+for example
+
+
+[1/27/2022 9:55 PM] tux_linux
+oh
+
+
+[1/27/2022 9:55 PM] tux_linux
+ok, I have to do the calculation
+
+
+[1/27/2022 9:55 PM] tux_linux
+Then if I find the right one, I should be able to `echo 0 > /sys/class/gpio/gpiox/value` and the LED should turn off?
+
+
+[1/27/2022 9:55 PM] andi15701
+probably
+
+
+[1/27/2022 9:55 PM] andi15701
+sometimes things are inverted
+
+
+[1/27/2022 9:56 PM] andi15701
+and check /sys/class/gpio/gpiox/direction
+
+
+[1/27/2022 9:56 PM] tux_linux
+ok
+Well 5 and 13 gave 141 and returned resource busy
+
+
+[1/27/2022 9:56 PM] tux_linux
+Let's try with 5 and 10
+
+
+[1/27/2022 9:58 PM] tux_linux
+GPIO 112 (4, 16) exported fine, value is set to 0 and direction to `in`
+
+
+[1/27/2022 9:58 PM] tux_linux
+Trying to write `1` returns Operation not permitted
+
+
+[1/27/2022 9:59 PM] andi15701
+well, if set to in it is an input
+
+
+[1/27/2022 9:59 PM] tux_linux
+Ok, wrote `out` to direction and changed value to 1 but LED didn't power off
+
+
+[1/27/2022 10:00 PM] andi15701
+I would rather be a bit careful there, you can damage things
+
+
+[1/27/2022 10:00 PM] andi15701
+so try to do some educated guess
+
+
+[1/27/2022 10:01 PM] andi15701
+so really study the function
+
+
+[1/27/2022 10:01 PM] andi15701
+ntx_gpio_init
+
+{Reactions}
+👍 
+
+[1/27/2022 10:06 PM] tux_linux
+The bPCB ID is 59, in the function there aren't any things about LEDs for bPCB 59
+
+
+[1/27/2022 10:12 PM] andi15701
+gMX6SL_CHG_LED = IMX_GPIO_NR(5, 10);
+
+
+[1/27/2022 10:12 PM] andi15701
+looks like the default
+
+
+[1/27/2022 10:13 PM] tux_linux
+Yeah, it gives 138 as GPIO number
+
+
+[1/27/2022 10:13 PM] tux_linux
+```
+kobo:~# echo 138 > /sys/class/gpio/export 
+ash: write error: Resource busy
+kobo:~#
+```
+But it fails there
+
+
+[1/27/2022 10:15 PM] andi15701
+that is good and bad
+
+
+[1/27/2022 10:15 PM] andi15701
+good: indicates that gpio is used by something
+
+
+[1/27/2022 10:16 PM] andi15701
+bad: the driver blocks use by something else
+
+
+[1/27/2022 10:16 PM] tux_linux
+Maybe ntx_io?
+
+
+[1/27/2022 10:16 PM] andi15701
+yes, probably
+
+
+[1/27/2022 10:19 PM] tux_linux
+Ok, so I'll try the ioctl instead
+
+
+[1/27/2022 10:20 PM] andi15701
+well, does your busybox have devmem applet?
+
+
+[1/27/2022 10:20 PM] tux_linux
+probably
+
+
+[1/27/2022 10:20 PM] tux_linux
+It's booting currently
+
+
+[1/27/2022 10:20 PM] andi15701
+well, we can cheat
+
+
+[1/27/2022 10:21 PM] andi15701
+just bypass all that driver stuff
+
+
+[1/27/2022 10:21 PM] andi15701
+and write directly to the hardware
+
+
+[1/27/2022 10:21 PM] andi15701
+so the register address is needed
+
+
+[1/27/2022 10:21 PM] tux_linux
+```
+kobo:~# busybox-initrd devmem
+BusyBox v1.32.1 (2021-03-12 18:42:42 EST) multi-call binary.
+
+Usage: devmem ADDRESS [WIDTH [VALUE]]
+
+Read/write from physical address
+
+        ADDRESS Address to act upon
+        WIDTH   Width (8/16/...)
+        VALUE   Data to be written
+kobo:~#
+```
+Yep
+
+
+[1/27/2022 10:21 PM] andi15701
+page 1064 IMX6SL reference manual
+
+
+[1/27/2022 10:21 PM] andi15701
+GPIO5_DR
+
+
+[1/27/2022 10:22 PM] tux_linux
+That's a nice idea
+
+
+[1/27/2022 10:22 PM] tux_linux
+Have a link?
+
+
+[1/27/2022 10:22 PM] andi15701
+register it 20AC000
+
+
+[1/27/2022 10:22 PM] andi15701
+try to read it
+
+
+[1/27/2022 10:23 PM] tux_linux
+ah well
+
+
+[1/27/2022 10:23 PM] tux_linux
+no `/dev/mem`
+
+
+[1/27/2022 10:23 PM] andi15701
+https://www.nxp.com/webapp/Download?colCode=IMX6SLRM
+
+
+[1/27/2022 10:23 PM] andi15701
+hmm, strange that is blocked
+
+
+[1/27/2022 10:24 PM] tux_linux
+When trying to set up HAB I was asked to agree to a license
+I was like, hmm, maybe not now
+
+
+[1/27/2022 10:24 PM] andi15701
+crw-r----- 1 root kmem 1, 1 Jan 16 22:56 /dev/mem
+
+
+[1/27/2022 10:24 PM] tux_linux
+NXP seems quite restrictive
+
+
+[1/27/2022 10:24 PM] tux_linux
+Maybe it's a kernel option?
+
+
+[1/27/2022 10:24 PM] andi15701
+so does the file exist?
+
+
+[1/27/2022 10:25 PM] tux_linux
+No
+
+
+[1/27/2022 10:25 PM] tux_linux
+```
+kobo:~# ls /dev/mem
+ls: /dev/mem: No such file or directory
+kobo:~#
+```
+
+
+[1/27/2022 10:25 PM] andi15701
+so do a mknod
+
+
+[1/27/2022 10:25 PM] tux_linux
+Create
+
+
+[1/27/2022 10:25 PM] tux_linux
+ok
+
+
+[1/27/2022 10:25 PM] tux_linux
+```
+kobo:~# mknod c 1 1 /dev/mem
+mknod: invalid device type ‘1’
+Try 'mknod --help' for more information.
+kobo:~#
+```
+Should work, right?
+
+
+[1/27/2022 10:26 PM] andi15701
+mknod /dev/mem c 1 1
+
+
+[1/27/2022 10:26 PM] tux_linux
+oh works now
+
+
+[1/27/2022 10:26 PM] tux_linux
+thanks
+
+
+[1/27/2022 10:27 PM] tux_linux
+amazing
+```
+kobo:~# busybox-initrd devmem 0x20ac000
+devmem: can't open '/dev/mem': No such device or address
+kobo:~#
+```
+
+
+[1/27/2022 10:28 PM] andi15701
+CONFIG_DEVMEM=y
+CONFIG_DEVKMEM=y
+
+
+[1/27/2022 10:28 PM] tux_linux
+Oh, it was disabled
+
+
+[1/27/2022 10:28 PM] tux_linux
+Ok, recompiling
+
+
+[1/27/2022 10:32 PM] andi15701
+an important point in trying this out is also to find important information for the devicetree
+
+{Reactions}
+👍 
+
+[1/27/2022 10:32 PM] andi15701
+leds: leds {
+                compatible = "gpio-leds";
+                pinctrl-names = "default";
+                pinctrl-0 = <&pinctrl_led>;
+
+                on {
+                        label = "tolinoshine2hd:white:on";
+                        gpios = <&gpio5 13 GPIO_ACTIVE_LOW>;
+                        linux,default-trigger = "timer";
+                };
+        };
+
+
+[1/27/2022 10:32 PM] tux_linux
+works!
+```
+~ # busybox devmem 0x20ac000
+0x00003F44
+~ #
+```
+
+
+[1/27/2022 10:33 PM] andi15701
+so, bit 10 is interesting
+
+
+[1/27/2022 10:34 PM] andi15701
+echo $[0x3F44 & (1 << 10)]
+
+
+[1/27/2022 10:34 PM] andi15701
+apparently it is set
+
+
+[1/27/2022 10:34 PM] tux_linux
+Would make sense?
+
+
+[1/27/2022 10:34 PM] andi15701
+printf %x\\n $[0x3F44 & ~(1 << 10)]
+3b44
+
+
+[1/27/2022 10:34 PM] andi15701
+so, lets clear it
+
+
+[1/27/2022 10:35 PM] andi15701
+busybox devmem 0x20ac000 32 0x00003B44
+
+
+[1/27/2022 10:35 PM] tux_linux
+Nope, LED's still up
+
+
+[1/27/2022 10:35 PM] tux_linux
+And it gives the same thing
+
+
+[1/27/2022 10:37 PM] andi15701
+hmm, is your busybox different?
+
+
+[1/27/2022 10:37 PM] andi15701
+busybox devmem?
+
+
+[1/27/2022 10:37 PM] tux_linux
+It's actually the same binary
+
+
+[1/27/2022 10:37 PM] andi15701
+so the help output
+
+
+[1/27/2022 10:37 PM] tux_linux
+I'm just under the actual initrd, in the pre-boot shell, it's faster than waiting for the whole system to start
+
+
+[1/27/2022 10:37 PM] andi15701
+so just enter busybox devmem
+
+
+[1/27/2022 10:38 PM] tux_linux
+```
+~ # busybox devmem --help
+BusyBox v1.32.1 (2021-04-25 22:27:23 EDT) multi-call binary.
+
+Usage: devmem ADDRESS [WIDTH [VALUE]]
+
+Read/write from physical address
+
+        ADDRESS Address to act upon
+        WIDTH   Width (8/16/...)
+        VALUE   Data to be written
+~ #
+```
+Well, not the same actually (build date), but same version
+
+
+[1/27/2022 10:47 PM] andi15701
+I  compared here on the tolino shine 2
+
+
+[1/27/2022 10:47 PM] andi15701
+with the stock 3.0.15 kernel
+
+
+[1/27/2022 10:47 PM] andi15701
+i needed to clear that bit
+
+
+[1/27/2022 10:49 PM] tux_linux
+Clear what?
+
+
+[1/27/2022 10:50 PM] andi15701
+i needed to set it to turn the led of
+
+
+[1/27/2022 10:50 PM] andi15701
+so is it really 5,13?
+
+
+[1/27/2022 10:50 PM] andi15701
+lets check directions:
+
+
+[1/27/2022 10:51 PM] andi15701
+0x209C004
+
+
+[1/27/2022 10:51 PM] andi15701
+0=input, 1= output
+
+
+[1/27/2022 10:53 PM] andi15701
+so busybox devmem 0x209C004
+
+
+[1/27/2022 10:54 PM] tux_linux
+```
+kobo:~# busybox-initrd devmem 0x209C004
+0x9FFFFF80
+kobo:~#
+```
+
+
+[1/27/2022 10:56 PM] andi15701
+so bit 10 is output
+
+
+[1/27/2022 10:56 PM] andi15701
+hmm
+
+
+[1/27/2022 10:56 PM] andi15701
+hmm, how does the stock kernel behave?
+
+
+[1/27/2022 10:57 PM] andi15701
+can you write to 0x209C000 there
+
+
+[1/27/2022 10:57 PM] andi15701
+or does something turn on the led all the time
+
+
+[1/27/2022 11:03 PM] tux_linux
+hang on
+i'll be back shortly
+
+
+[1/27/2022 11:04 PM] andi15701
+btw: did you find out what IMX_GPIO_NR(5,13) is for?
+
+
+[1/27/2022 11:04 PM] andi15701
+on your board?
+
+
+[1/27/2022 11:05 PM] tux_linux
+no
+
+
+[1/27/2022 11:08 PM] andi15701
+it is also in ntx_gpio_init
+
+
+[1/27/2022 11:09 PM] andi15701
+I think that beast has to be tamed
+
+
+[1/27/2022 11:09 PM] andi15701
+that function
+
+
+[1/27/2022 11:09 PM] andi15701
+perhaps copy it into an userspace program
+
+
+[1/27/2022 11:09 PM] andi15701
+which reads the hwcfg
+
+
+[1/27/2022 11:10 PM] andi15701
+and add stubs
+
+
+[1/27/2022 11:10 PM] andi15701
+and copy in the IMX_GPIO_NR macro
+
+
+[1/27/2022 11:10 PM] andi15701
+then we learn  a lot of things more easily
+
+
+[1/27/2022 11:11 PM] andi15701
+if(3==gptHWCFG->m_val.bTouchType||54==gptHWCFG->m_val.bPCB)
+                {
+                        // C touch PCB design .
+                        // ED0Q1X|E60QLX|E60QMX
+                        gMX6SL_IR_TOUCH_RST = IMX_GPIO_NR(5, 13);
+                }
+
+
+[1/27/2022 11:11 PM] andi15701
+we have that one
+
+
+[1/27/2022 11:11 PM] andi15701
+that matches
+
+
+[1/27/2022 11:13 PM] andi15701
+so it is the reset line of your touch controller
+
+
+[1/27/2022 11:13 PM] andi15701
+the ektf thing
+
+
+[1/27/2022 11:14 PM] tux_linux
+But why is there no 59 in the if condition?
+(for bPCB)?
+
+
+[1/27/2022 11:15 PM] andi15701
+there is 3==gptHWCFG->m_val.bTouchType
+
+
+[1/27/2022 11:15 PM] andi15701
+and that matches
+
+
+[1/27/2022 11:15 PM] tux_linux
+oh ok
+
+
+[1/27/2022 11:15 PM] tux_linux
+yeah i see
+
+
+[1/27/2022 11:16 PM] tux_linux
+Do you have a binary I could run?
+
+
+[1/27/2022 11:16 PM] andi15701
+I have never said that the function is clearly structured
+
+
+[1/27/2022 11:16 PM] andi15701
+not yet
+
+
+[1/27/2022 11:16 PM] andi15701
+maybe I create one tomorrow
+
+{Reactions}
+👍 
+
+[1/27/2022 11:16 PM] tux_linux
+Meanwhile, I'll try with the ioctl thing you provided
+
+
+[1/27/2022 11:17 PM] andi15701
+and try the devmem write under the stock kernel
+
+
+[1/27/2022 11:17 PM] tux_linux
+ok
+
+
+[1/27/2022 11:19 PM] andi15701
+how many keys has that reader?
+
+
+[1/27/2022 11:23 PM] tux_linux
+Buttons you mean?
+
+
+[1/27/2022 11:23 PM] tux_linux
+Only the power button
+
+
+[1/27/2022 11:23 PM] tux_linux
+That's all
+
+
+[1/27/2022 11:23 PM] andi15701
+and a hall sensor?
+
+
+[1/27/2022 11:23 PM] tux_linux
+Might be one
+
+
+[1/27/2022 11:23 PM] tux_linux
+Hang on
+
+
+[1/27/2022 11:24 PM] tux_linux
+Try with evtest?
+
+
+[1/27/2022 11:24 PM] andi15701
+yes
+
+
+[1/27/2022 11:26 PM] andi15701
+https://www.scribd.com/doc/208874913/IMX6SLRM-Processor-Reference-Manual
+
+{Embed}
+https://www.scribd.com/doc/208874913/IMX6SLRM-Processor-Reference-Manual
+IMX6SLRM Processor Reference Manual | PDF
+IMX6SLRM Processor Reference Manual
+/mnt/data/projects/git/conversations/media/1643301071-B8ABD
+
+{Reactions}
+👍 
+
+[1/27/2022 11:26 PM] tux_linux
+```
+~ # evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 35 (KEY_H)
+    Event code 59 (KEY_F1)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+  Event type 5 (EV_SW)
+    Event code 0 (SW_LID) state 0
+    Event code 2 (SW_HEADPHONE_INSERT) state 0
+Properties:
+Testing ... (interrupt to exit)
+```
+
+
+[1/27/2022 11:26 PM] tux_linux
+Strange that there is `SW_HEADPHONE_INSERT`
+
+
+[1/27/2022 11:28 PM] andi15701
+KEY_H is probably the hall sensor
+
+
+[1/27/2022 11:28 PM] andi15701
+so try it out
+
+
+[1/27/2022 11:29 PM] tux_linux
+how?
+
+
+[1/27/2022 11:29 PM] andi15701
+a small magnet
+
+
+[1/27/2022 11:29 PM] tux_linux
+ok
+
+
+[1/27/2022 11:29 PM] andi15701
+and slowly
+
+
+[1/27/2022 11:29 PM] tux_linux
+where exactly?
+
+
+[1/27/2022 11:30 PM] andi15701
+look how covers look like
+
+
+[1/27/2022 11:30 PM] andi15701
+for that device
+
+
+[1/27/2022 11:30 PM] andi15701
+and where these covers might have a magnet
+
+
+[1/27/2022 11:31 PM] tux_linux
+```
+~ # evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 35 (KEY_H)
+    Event code 59 (KEY_F1)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+  Event type 5 (EV_SW)
+    Event code 0 (SW_LID) state 0
+    Event code 2 (SW_HEADPHONE_INSERT) state 0
+Properties:
+Testing ... (interrupt to exit)
+Event: time 305.491036, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 305.491111, -------------- SYN_REPORT ------------
+Event: time 307.350809, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 307.350827, -------------- SYN_REPORT ------------
+Event: time 319.350941, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 319.350990, -------------- SYN_REPORT ------------
+Event: time 321.000718, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 321.000731, -------------- SYN_REPORT ------------
+```
+It's `KEY_F1`
+
+
+[1/27/2022 11:32 PM] andi15701
+ah, yes it is overwritten somewhere
+
+
+[1/27/2022 11:32 PM] andi15701
+i remember strange things happend
+
+
+[1/27/2022 11:33 PM] andi15701
+I expected it to be SW_LID once
+
+
+[1/27/2022 11:33 PM] tux_linux
+Now that makes sense
+When I tried emulating Nickel in QEMU, all worked except touch input, and when I pressed F1 inside QEMU the "device" went to sleep
+
+
+[1/27/2022 11:33 PM] tux_linux
+I never knew why before now
+
+
+[1/27/2022 11:34 PM] andi15701
+well, I wondered why my battery drained quite quickly
+
+
+[1/27/2022 11:35 PM] andi15701
+when I ran still the vendor kernel
+
+
+[1/27/2022 11:35 PM] andi15701
+with a terminal outputting cr*p because of F1
+
+
+[1/27/2022 11:35 PM] tux_linux
+hehe
+
+
+[1/27/2022 11:42 PM] andi15701
+page 1064, GPIOx_PSR
+
+
+[1/27/2022 11:42 PM] andi15701
+you can read these registers
+
+
+[1/27/2022 11:42 PM] andi15701
+and find the bits for your buttons
+
+
+[1/27/2022 11:48 PM] andi15701
+so, really time to sleep again here
+
+{Reactions}
+👍 
+
+[1/27/2022 11:54 PM] tux_linux
+Thanks for your help!
+
+
+[1/28/2022 2:11 AM] tux_linux
+The stock kernel doesn't have devmem enabled
+
+
+[1/28/2022 5:15 AM] tux_linux
+Here's Nickel strace at boot on the Aura.
+Opens ntx_io two times, at lines 1431 and 4327
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/nickel-strace-8A094
+
+
+[1/28/2022 8:16 AM] andi15701
+interesting are the ioctl lines
+
+
+[1/28/2022 8:16 AM] andi15701
+with the file descriptor then
+
+
+[1/28/2022 8:17 AM] andi15701
+open("/dev/ntx_io", O_RDWR)             = 9
+ioctl(9, 0xf2, 0x2c1cb0cc)              = 0
+
+
+[1/28/2022 8:18 AM] andi15701
+open("/dev/ntx_io", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 23
+
+
+[1/28/2022 8:18 AM] andi15701
+ioctl(23, 0xf1, 0)                      = 0
+ioctl(23, 0xf1, 0x1)                    = 0
+ioctl(23, 0xf1, 0x2)                    = 0
+ioctl(23, 0xf1, 0x3)                    = 0
+ioctl(23, 0xf1, 0x4)                    = 0
+ioctl(23, 0xf1, 0x5)                    = 0
+ioctl(23, 0xf1, 0x6)                    = 0
+ioctl(23, 0xf1, 0x7)                    = 0
+ioctl(23, 0xf1, 0x8)                    = 0
+ioctl(23, 0xf1, 0x9)                    = 0
+ioctl(23, 0xf1, 0xa)                    = 0
+ioctl(23, 0xf1, 0xb)                    = 0
+ioctl(23, 0xf1, 0xc)                    = 0
+ioctl(23, 0xf1, 0xd)                    = 0
+ioctl(23, 0xf1, 0xe)                    = 0
+ioctl(23, 0xf1, 0xf)                    = 0
+ioctl(23, 0xf1, 0x10)                   = 0
+ioctl(23, 0xf1, 0x11)                   = 0
+ioctl(23, 0xf1, 0x12)                   = 0
+ioctl(23, 0xf1, 0x13)                   = 0
+ioctl(23, 0xf1, 0x14)                   = 0
+ioctl(23, 0xf1, 0x15)                   = 0
+ioctl(23, 0xf1, 0x16)                   = 0
+ioctl(23, 0xf1, 0x17)                   = 0
+ioctl(23, 0xf1, 0x18)                   = 0
+ioctl(23, 0xf1, 0x19)                   = 0
+ioctl(23, 0xf1, 0x1a)                   = 0
+ioctl(23, 0xf1, 0x1b)                   = 0
+ioctl(23, 0xf1, 0x1c)                   = 0
+ioctl(23, 0xf1, 0x1d)                   = 0
+ioctl(23, 0xf1, 0x1e)                   = 0
+
+
+[1/28/2022 8:19 AM] andi15701
+so what does it do::
+
+
+[1/28/2022 8:19 AM] andi15701
+look atkernel/arch/arm/mach-mx6/mx6sl_ntx_io.c
+
+
+[1/28/2022 8:20 AM] andi15701
+ioctlDriver()
+
+
+[1/28/2022 8:21 AM] andi15701
+$ echo $((0xf1))
+241
+
+
+[1/28/2022 8:21 AM] andi15701
+$ echo $((0xf2))
+242
+
+
+[1/28/2022 8:22 AM] andi15701
+there is       switch(command)
+
+
+[1/28/2022 8:22 AM] andi15701
+so you can look up things
+
+{Reactions}
+👍 
+
+[1/28/2022 1:31 PM] tux_linux
+I'll try
+
+
+[1/28/2022 6:12 PM] tux_linux
+What do I do with those? Export them in GPIO?
+
+
+[1/28/2022 6:13 PM] andi15701
+second parameter of ioctl
+
+
+[1/28/2022 6:14 PM] andi15701
+that ends up in ioctlDriver()
+
+
+[1/28/2022 6:14 PM] tux_linux
+ok
+
+
+[1/28/2022 6:14 PM] andi15701
+in kernel/arch/arm/mach-mx6/mx6sl_ntx_io.c
+
+
+[1/28/2022 6:14 PM] andi15701
+and then in switch(command)
+
+
+[1/28/2022 6:14 PM] andi15701
+and you can understand what nickel does
+
+
+[1/28/2022 6:15 PM] tux_linux
+interesting
+so first parameter is fd, second 241 or 242, and third 0 or 1
+
+
+[1/28/2022 6:15 PM] tux_linux
+right?
+
+
+[1/28/2022 6:15 PM] andi15701
+for 242, it is some pointer
+
+
+[1/28/2022 6:15 PM] andi15701
+I guess
+
+
+[1/28/2022 6:16 PM] tux_linux
+Pointer to what?
+
+
+[1/28/2022 6:16 PM] andi15701
+probably to some more data to send or return
+
+{Reactions}
+👍 
+
+[1/28/2022 6:16 PM] andi15701
+you will understand when you look in the switch(command) case 242:
+
+
+[1/28/2022 7:43 PM] tux_linux
+Neither of those work
+
+
+[1/28/2022 7:43 PM] tux_linux
+I'm using this code
+```
+#include <stdio.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+
+int main() {
+        int light;
+        if((light = open("/dev/ntx_io", O_RDWR)) == -1) {
+                fprintf(stderr, "Error opening ntx_io device\n");
+        }
+        ioctl(light, 242, 0);
+}
+```
+
+
+[1/28/2022 7:45 PM] andi15701
+242 = 0xf2, so how does the ioctl() call looks like?
+
+
+[1/28/2022 7:45 PM] tux_linux
+with strace?
+
+
+[1/28/2022 7:45 PM] andi15701
+and what did you find out in the switch(command)
+
+
+[1/28/2022 7:45 PM] andi15701
+you have sent me an strace of nickel
+
+
+[1/28/2022 7:45 PM] tux_linux
+Nothing, I did not find "case 242"
+
+
+[1/28/2022 7:45 PM] andi15701
+nobody wants to write that
+
+
+[1/28/2022 7:46 PM] tux_linux
+Well then it's one of CM_*?
+
+
+[1/28/2022 7:46 PM] andi15701
+there must be a #define  SOME_COMMAND 0xf2
+
+
+[1/28/2022 7:46 PM] andi15701
+or 242
+
+
+[1/28/2022 7:46 PM] andi15701
+yes
+
+
+[1/28/2022 7:47 PM] tux_linux
+`./mx6sl_ntx_io.c:125:#define CM_FRONT_LIGHT_AVAILABLE   242`
+
+
+[1/28/2022 7:47 PM] tux_linux
+`./mx6sl_ntx_io.c:124:#define CM_FRONT_LIGHT_SET         241`
+
+
+[1/28/2022 7:47 PM] tux_linux
+Seems what we want to do, strange that it doesn't work
+
+
+[1/28/2022 7:49 PM] andi15701
+ok, then look at the case CM_FRONT_LIGHT_AVAILABLE: and case CM_FRONT_LIGHT_SET:
+
+
+[1/28/2022 7:49 PM] andi15701
+area
+
+
+[1/28/2022 7:49 PM] andi15701
+in that function
+
+
+[1/28/2022 7:49 PM] tux_linux
+ok
+
+
+[1/28/2022 7:52 PM] tux_linux
+Those? What do I do then?
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-1FDD8.png
+/mnt/data/projects/git/conversations/media/unknown-82FAF.png
+
+
+[1/28/2022 7:54 PM] andi15701
+CM_FRONT_LIGHT_AVAILABLE copies i back to the address given in the third argument of ioctl(fd, 242, &some_variable);
+
+
+[1/28/2022 7:55 PM] andi15701
+CM_FRONT_LIGHT_SET uses the value in the third argument (no address) as a percentage for the backlight
+
+
+[1/28/2022 7:55 PM] tux_linux
+Yeah
+
+
+[1/28/2022 7:55 PM] tux_linux
+I already tried that
+
+
+[1/28/2022 7:55 PM] tux_linux
+LED is still blinking
+
+
+[1/28/2022 7:56 PM] tux_linux
+Unless 1 means disabled
+
+
+[1/28/2022 7:56 PM] andi15701
+yes, these ioctl() are about display backlight, not the led
+
+
+[1/28/2022 7:56 PM] tux_linux
+oh
+
+
+[1/28/2022 7:57 PM] andi15701
+so first make sure that you have understand how things work and play with the backlight using /dev/ntx_io and then find out a CM_* value for the led
+
+
+[1/28/2022 8:01 PM] tux_linux
+ok, frontlight works
+
+
+[1/28/2022 8:01 PM] andi15701
+so we found out what happenend there
+
+
+[1/28/2022 8:01 PM] tux_linux
+first I had to set `1` to `242`, then `100` to `241`
+
+
+[1/28/2022 8:02 PM] tux_linux
+But then where on earth does it shut down that led 😂
+
+
+[1/28/2022 8:02 PM] andi15701
+hmm, does it just shut down when the system goes to suspend?
+
+
+[1/28/2022 8:02 PM] tux_linux
+in InkBox, yes
+
+
+[1/28/2022 8:03 PM] tux_linux
+but it comes back alive after
+
+
+[1/28/2022 8:03 PM] tux_linux
+in Nickel it is killed somehow by something
+
+
+[1/28/2022 8:03 PM] andi15701
+for 242 the correct code would be
+
+
+[1/28/2022 8:05 PM] andi15701
+unsigned int v = 0;
+ioctl(fd, 242,&v);
+if (v) {
+    printf("we have a frontlight\n");
+}
+
+
+[1/28/2022 8:07 PM] tux_linux
+Well, the frontlight works, when I did that the display brightness went to 100% and I could see it
+
+
+[1/28/2022 8:07 PM] andi15701
+yes, usage of 241 was correct
+
+
+[1/28/2022 8:08 PM] andi15701
+hmm, there is CM_nLED
+
+
+[1/28/2022 8:08 PM] andi15701
+peprhaps that works
+
+
+[1/28/2022 8:08 PM] tux_linux
+```
+./mx6sl_ntx_io.c:71:#define     CM_nLED                                 101
+./mx6sl_ntx_io.c:72:#define     CM_nLED_CPU                             102
+```
+
+
+[1/28/2022 8:09 PM] tux_linux
+I'll try
+
+
+[1/28/2022 8:09 PM] tux_linux
+iirc I did that yesterday and it didn't work
+
+
+[1/28/2022 8:09 PM] tux_linux
+let's see
+
+
+[1/28/2022 8:09 PM] andi15701
+and there is CM_LED_BLINK
+
+
+[1/28/2022 8:09 PM] andi15701
+case CM_nLED:
+                        //printk("CM_nLED %d\n",p);
+                        led_green(p?1:0);
+                        break;                  
+                        
+                case CM_nLED_CPU:
+                        break;
+
+
+[1/28/2022 8:10 PM] tux_linux
+ooh
+
+
+[1/28/2022 8:10 PM] tux_linux
+maybe I could try 127
+
+
+[1/28/2022 8:10 PM] andi15701
+case CM_LED_BLINK:
+                    if (2==p) {
+                                spin_lock(&led_flash_lock);
+                        LED_Flash_Count++;
+                                spin_unlock(&led_flash_lock);
+                        }
+                        if (!LED_conitnuous)
+                                wake_up_interruptible(&LED_freeze_WaitQueue);
+                        LED_conitnuous = p;         
+              break;
+
+
+[1/28/2022 8:12 PM] andi15701
+here again p is third argument of ioctl()
+
+
+[1/28/2022 8:12 PM] tux_linux
+strange
+
+
+[1/28/2022 8:12 PM] tux_linux
+ok, trying that
+
+
+[1/28/2022 8:12 PM] tux_linux
+IT WENT OFF
+
+
+[1/28/2022 8:12 PM] tux_linux
+AT LAST
+
+
+[1/28/2022 8:13 PM] tux_linux
+```
+#include <stdio.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+
+int main() {
+        int light;
+        if((light = open("/dev/ntx_io", O_RDWR)) == -1) {
+                fprintf(stderr, "Error opening ntx_io device\n");
+        }
+        ioctl(light, 127, 0);
+}
+```
+This works
+
+
+[1/28/2022 8:14 PM] tux_linux
+wait
+
+
+[1/28/2022 8:14 PM] tux_linux
+did I hallucinate
+
+
+[1/28/2022 8:15 PM] tux_linux
+ok it works for real this time
+
+
+[1/28/2022 8:15 PM] tux_linux
+When I hit `reboot` strangely it started flashing again
+
+
+[1/28/2022 8:15 PM] andi15701
+maybe CM_LED_BLINK to stop blinking and CM_nLED to set the correct state
+
+
+[1/28/2022 8:18 PM] tux_linux
+Ok I got reproducible behavior
+
+
+[1/28/2022 8:18 PM] tux_linux
+```
+~ # ./test
+~ # reboot
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes[   30.375625] Restarting system.
+```
+
+
+[1/28/2022 8:18 PM] tux_linux
+At the moment where it says "Sent SIGTERM to all processes", the LED starts blinking again
+
+
+[1/28/2022 8:19 PM] tux_linux
+Not too bad but still strange
+Thanks for your help, really I couldn't have found this without you
+
+
+[1/28/2022 8:31 PM] tux_linux
+And sorry for being dumb, too ;p
+Low-level kernel/hardware stuff like this is usually not really my field
+
+
+[1/28/2022 8:33 PM] andi15701
+yes, but probably if you have fun in hacking devices, it is a good idea to learn things there
+
+
+[1/28/2022 8:33 PM] tux_linux
+Sure
+
+
+[1/28/2022 8:34 PM] tux_linux
+I ordered a sunxi Banana Pi M2 Zero to try to port InkBox to it
+Permitted me to learn a bit more about DeviceTrees
+
+
+[1/28/2022 8:34 PM] andi15701
+that is why I try to give you hints, rather than full solutions
+
+{Reactions}
+👍 
+
+[1/28/2022 8:34 PM] andi15701
+so you have the chance to learn something
+
+{Reactions}
+👍 
+
+[1/28/2022 8:35 PM] tux_linux
+And soon I'll have to develop my display driver for some SPI external eInk screen
+The main system is already there and working
+Only the display is missing
+
+
+[1/28/2022 8:35 PM] tux_linux
+Probably the biggest part ;p
+
+
+[1/28/2022 8:44 PM] tux_linux
+BTW the `dhcp_openbpf: eth0: Protocol not available` also happens on the Aura
+
+
+[1/28/2022 8:44 PM] tux_linux
+And when using udhcpc instead of dhcpcd, everything's fine
+
+
+[1/28/2022 9:01 PM] andi15701
+a waveshare display?
+
+
+[1/28/2022 9:01 PM] tux_linux
+Yeah probably
+
+
+[1/28/2022 9:03 PM] andi15701
+I have a waveshare connected to a bpi zero
+
+
+[1/28/2022 9:03 PM] andi15701
+no touchscreen
+
+
+[1/28/2022 9:03 PM] tux_linux
+does it work well?
+
+
+[1/28/2022 9:03 PM] andi15701
+partial refresh is ugly
+
+
+[1/28/2022 9:03 PM] tux_linux
+hmm
+
+
+[1/28/2022 9:04 PM] andi15701
+it always looks like full refresh
+
+
+[1/28/2022 9:04 PM] andi15701
+smaller displays seem to work different
+
+
+[1/28/2022 9:04 PM] tux_linux
+what model of display do you have?
+
+
+[1/28/2022 9:05 PM] andi15701
+400x300 pixel
+
+
+[1/28/2022 9:05 PM] tux_linux
+that's an horrible resolution IMO
+
+
+[1/28/2022 9:05 PM] tux_linux
+But yeah their displays are expensive
+
+
+[1/28/2022 9:05 PM] andi15701
+well, compare that to a used ebookreader
+
+
+[1/28/2022 9:06 PM] tux_linux
+https://www.waveshare.com/product/displays/e-paper/epaper-1/6inch-hd-e-paper.htm
+That one seems promising
+
+{Embed}
+https://www.waveshare.com/product/displays/e-paper/epaper-1/6inch-hd-e-paper.htm
+1448×1072 high definition, 6inch E-Ink raw display, black/white, 16...
+1448×1072 high definition, 6inch E-Ink raw display, black/white, 16 gray scale, without PCB
+
+
+[1/28/2022 9:06 PM] andi15701
+I have it as a generic information display
+
+
+[1/28/2022 9:06 PM] andi15701
+near my front door
+
+
+[1/28/2022 9:06 PM] tux_linux
+Even the Kobo Mini has a bigger resolution
+
+
+[1/28/2022 9:06 PM] tux_linux
+nice
+
+
+[1/28/2022 9:07 PM] andi15701
+displays train timetable (5min away from train station)
+
+
+[1/28/2022 9:07 PM] tux_linux
+Well yeah, for other things than e-reading 400x300 is usable
+
+
+[1/28/2022 9:07 PM] tux_linux
+cool!
+
+
+[1/28/2022 9:07 PM] andi15701
+temperature
+
+
+[1/28/2022 9:07 PM] andi15701
+in/out
+
+
+[1/28/2022 9:07 PM] andi15701
+water temperature of a nearby river (where I usually go swimming)
+
+
+[1/28/2022 9:07 PM] andi15701
+weather warnings
+
+
+[1/28/2022 9:08 PM] andi15701
+power consumption
+
+
+[1/28/2022 9:08 PM] tux_linux
+Nice thing, do you have a picture?
+
+
+[1/28/2022 9:08 PM] andi15701
+I can take one, it is not fully working now
+
+
+[1/28/2022 9:08 PM] tux_linux
+np
+
+
+[1/28/2022 9:41 PM] andi15701
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG20220128213832-5803F.jpg
+
+
+[1/28/2022 9:42 PM] tux_linux
+Hmm, I cannot really see much, but it seems nice
+
+
+[1/28/2022 9:42 PM] tux_linux
+How do you draw to it?
+
+
+[1/28/2022 9:42 PM] andi15701
+I have an userspace program which sends things to spi
+
+{Reactions}
+👍 
+
+[1/28/2022 9:43 PM] tux_linux
+I was thinking to write a kernel driver
+Don't know if I will give up or it will be too difficult
+
+
+[1/28/2022 9:43 PM] andi15701
+btw: usb line is interesting, 6 meters or so
+
+
+[1/28/2022 9:43 PM] tux_linux
+that's quite long
+
+
+[1/28/2022 9:43 PM] andi15701
+so there is a fat cable
+
+
+[1/28/2022 9:44 PM] andi15701
+and a micro b plug/full-size a socket adaptor
+
+
+[1/28/2022 9:44 PM] andi15701
+i removed the a socket
+
+
+[1/28/2022 9:44 PM] andi15701
+and had big solder points for that cable
+
+
+[1/28/2022 9:45 PM] andi15701
+I was thinking about that, too
+
+
+[1/28/2022 9:45 PM] andi15701
+a kernel driver
+
+
+[1/28/2022 9:45 PM] andi15701
+but not top priority
+
+
+[1/28/2022 9:45 PM] tux_linux
+I use fbink sometimes to display things on screen, that's why
+
+
+[1/28/2022 9:45 PM] tux_linux
+Otherwise I could have written something only for Qt
+
+
+[1/28/2022 9:45 PM] tux_linux
+And having fb0 node is quite nice
+
+
+[1/28/2022 9:46 PM] andi15701
+in my example I am using imagemagick
+
+
+[1/28/2022 9:46 PM] andi15701
+and sending picture files to it
+
+{Reactions}
+👍 
+
+[1/28/2022 9:46 PM] andi15701
+but if you want to have a full ui
+
+
+[1/28/2022 9:46 PM] andi15701
+then it is a different story
+
+
+[1/28/2022 9:46 PM] tux_linux
+Yeah
+
+
+[1/28/2022 9:47 PM] andi15701
+there is some virtual framebuffer driver
+
+
+[1/28/2022 9:47 PM] andi15701
+drivers/video/fbdev/vfb.c
+
+
+[1/28/2022 9:47 PM] tux_linux
+hmm
+
+
+[1/28/2022 9:48 PM] andi15701
+so you could read /dev/fb0
+
+
+[1/28/2022 9:48 PM] andi15701
+with some userspace program
+
+
+[1/28/2022 9:48 PM] andi15701
+and send it to the display
+
+
+[1/28/2022 9:48 PM] tux_linux
+that's a genius idea
+
+
+[1/28/2022 9:49 PM] tux_linux
+Don't know if it would really be that good for the display though
+
+
+[1/28/2022 9:50 PM] andi15701
+well trigger the updates the same way as you are doing it now
+
+
+[1/28/2022 9:50 PM] andi15701
+but instead of sending the special ioctl
+
+
+[1/28/2022 9:50 PM] andi15701
+start your userspace update program
+
+
+[1/28/2022 9:50 PM] tux_linux
+would partial refreshes work?
+
+
+[1/28/2022 9:51 PM] andi15701
+if the display supports it, yes
+
+
+[1/28/2022 9:51 PM] tux_linux
+actually it is integrated in the microcontroller
+
+
+[1/28/2022 9:51 PM] tux_linux
+right
+
+
+[1/28/2022 9:51 PM] tux_linux
+so no worries on that front?
+
+
+[1/28/2022 9:52 PM] andi15701
+as said, if the display supports it (they are different in that regard), it should work
+
+{Reactions}
+👍 
+
+[1/28/2022 9:53 PM] andi15701
+if you want to start kernel hacking, fixing libra backlight would be an easier starting point
+
+
+[1/28/2022 9:53 PM] tux_linux
+hmm
+
+
+[1/28/2022 9:54 PM] andi15701
+I think I have told you what is going wrong there
+
+
+[1/28/2022 9:54 PM] tux_linux
+yeah, in some email
+
+
+[1/28/2022 9:56 PM] andi15701
+basically, first doing that from userspace
+
+
+[1/28/2022 9:57 PM] andi15701
+than doing it that it works for you in the driver, then do it in a clean way
+
+{Reactions}
+👍 
+
+[1/28/2022 9:57 PM] andi15701
+so that it can be upstreamed into kernel mainline
+
+{Reactions}
+👍 
+
+[2/9/2022 11:50 PM] andi15701
+do you have an overview of the situation on  the i2c bus, e.g. via i2cdetect -r -y 0 (and also 1 and 2)
+
+
+[2/9/2022 11:51 PM] andi15701
+and/or the contents of  /sys/bus/i2c/devices
+
+
+[2/9/2022 11:55 PM] tux_linux
+I'll check, busy right now
+
+
+[2/9/2022 11:56 PM] tux_linux
+Unrelated, but would you have an idea of what's going on with Wi-Fi on the Glo HD?
+
+
+[2/9/2022 11:59 PM] andi15701
+probably userspace wanting newer apis than kernel provides or something
+
+
+[2/10/2022 12:01 AM] tux_linux
+Hmm
+Though the same thing works on a 2.6.35.3 kernel and same chip
+
+
+[2/10/2022 12:02 AM] tux_linux
+Maybe is it because I used the built-in driver in the tree
+
+
+[2/10/2022 12:02 AM] tux_linux
+(bcmdhd)
+
+
+[2/11/2022 2:38 AM] tux_linux
+@andi , here is the output of `i2cdetect`:
+```
+kobo:/# busybox-initrd i2cdetect -r -y 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- UU -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+kobo:/# busybox-initrd i2cdetect -r -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- UU -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+kobo:/# busybox-initrd i2cdetect -r -y 2
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- UU -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+kobo:/#
+```
+
+
+[2/11/2022 2:39 AM] tux_linux
+And the contents of `/sys/bus/i2c`:
+
+
+[2/11/2022 2:39 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-D1992.txt
+
+
+[2/11/2022 7:00 PM] andi15701
+cd /sys/class/regulator ; for name in * ; do cat $name/name $name/state ; done
+
+
+[2/11/2022 8:33 PM] andi15701
+I have pushed something at kobo/aura2-test
+
+
+[2/11/2022 8:36 PM] andi15701
+cat arch/arm/boot/zImage arch/arm/boot/dts/imx6sl-kobo-aura2.dtb  >/tmp/img ; mkbootimg --kernel /tmp/img --base 0x80800000 --cmdline ... -o out.img
+
+
+[2/11/2022 8:43 PM] andi15701
+fillout something after --cmdline
+
+
+[2/11/2022 8:43 PM] andi15701
+kobo_defconfig
+
+
+[2/11/2022 8:50 PM] tux_linux
+Ok thanks!!
+
+
+[2/11/2022 8:50 PM] tux_linux
+I'll do that once I get home
+
+
+[2/11/2022 9:10 PM] andi15701
+leds, key mmc (and if compiled: wifi) should work
+
+
+[2/11/2022 9:10 PM] andi15701
+some kind of backlight
+
+
+[2/11/2022 9:11 PM] andi15701
+There should be two nodes in /sys/class/backlight
+
+
+[2/11/2022 9:11 PM] andi15701
+and one of them should work
+
+
+[2/11/2022 9:13 PM] tux_linux
+Ok
+
+
+[2/12/2022 4:39 AM] tux_linux
+Now there is one thing... My Aura 2's USB port only works for power and the data channel doesn't seem to be active anymore. Any way to boot it without fastboot?
+
+
+[2/12/2022 4:40 AM] tux_linux
+Kernel and DTBs compiled fine btw
+
+
+[2/12/2022 6:45 AM] tux_linux
+Maybe load fastboot image via ymodem over serial port?
+
+
+[2/12/2022 9:46 AM] andi15701
+or copy it to sd card
+
+
+[2/12/2022 9:46 AM] andi15701
+and then load it
+
+{Reactions}
+👍 
+
+[2/12/2022 9:46 AM] andi15701
+it should be an android image for that or that dreaded uboot will overwrite it
+
+
+[2/12/2022 4:23 PM] tux_linux
+Even `bootm` overwrites it when loading it via serial port
+
+
+[2/12/2022 4:24 PM] tux_linux
+Maybe can we append the dtb in the kernel and flash it as a uImage?
+
+
+[2/12/2022 6:52 PM] andi15701
+you can try
+
+
+[2/12/2022 6:52 PM] tux_linux
+I'm also compiling Libra patch you sent a few days ago right now
+
+
+[2/12/2022 6:52 PM] andi15701
+so just replace mkbootimg by mkimage
+
+
+[2/12/2022 6:52 PM] tux_linux
+ok
+
+
+[2/12/2022 6:53 PM] tux_linux
+Same options?
+
+
+[2/12/2022 6:53 PM] andi15701
+so
+
+
+[2/12/2022 6:53 PM] andi15701
+no
+
+
+[2/12/2022 6:55 PM] tux_linux
+ok
+
+
+[2/12/2022 6:55 PM] andi15701
+mkimage  -A arm -O linux -C none  -T kernel -a 0x80008000 -e 0x80008000 -n 'linuxtest' -d img uImage
+
+{Reactions}
+👍 
+
+[2/12/2022 6:55 PM] tux_linux
+I'll try that
+
+
+[2/17/2022 8:22 AM] andi15701
+any success?
+
+
+[2/17/2022 12:17 PM] tux_linux
+I'll hopefully try it tonight!
+
+
+[2/19/2022 8:13 PM] andi15701
+did some research: you should be able to boot android images using booti with that uboot
+
+
+[2/19/2022 8:13 PM] tux_linux
+booti?
+
+
+[2/19/2022 8:13 PM] andi15701
+yes
+
+
+[2/19/2022 8:13 PM] andi15701
+not bootm
+
+
+[2/19/2022 8:14 PM] tux_linux
+that command exists?
+
+
+[2/19/2022 8:14 PM] andi15701
+at least on the shine3
+
+
+[2/19/2022 8:14 PM] tux_linux
+ok; let's see
+I'll connect it to serial
+
+
+[2/19/2022 8:16 PM] andi15701
+so that way should work then
+
+{Reactions}
+👍 
+
+[2/19/2022 8:30 PM] tux_linux
+it is there
+
+
+[2/19/2022 8:34 PM] tux_linux
+`booti`, after loading it via serial for example?
+
+
+[2/19/2022 8:34 PM] andi15701
+yes
+
+{Reactions}
+👍 
+
+[2/19/2022 8:34 PM] andi15701
+or from flash
+
+
+[2/19/2022 8:34 PM] andi15701
+at least ext2 should be supported
+
+
+[2/19/2022 8:35 PM] andi15701
+and ext4 perhaps without 64bit
+
+
+[2/19/2022 8:36 PM] tux_linux
+iirc, even bootm was starting load_ntxkernel anyways
+
+
+[2/19/2022 8:37 PM] andi15701
+well, on the newer kobo uboots, it is sufficient, to execute load_ntxkernel once
+
+
+[2/19/2022 8:37 PM] andi15701
+and then overwrite it
+
+
+[2/19/2022 8:37 PM] andi15701
+with the stuff you really want
+
+
+[2/19/2022 8:37 PM] tux_linux
+oh
+
+
+[2/19/2022 8:38 PM] andi15701
+and for the shine3, booti seems not to do funny overwrites
+
+
+[2/19/2022 8:48 PM] tux_linux
+`LOADADDR` is 80800000, right?
+
+
+[2/19/2022 8:48 PM] tux_linux
+```
+  Kernel: arch/arm/boot/zImage is ready
+multiple (or no) load addresses: 
+This is incompatible with uImages
+Specify LOADADDR on the commandline to build an uImage
+make[1]: *** [arch/arm/boot/Makefile:90: arch/arm/boot/uImage] Error 1
+make: *** [arch/arm/Makefile:308: uImage] Error 2
+```
+
+
+[2/19/2022 8:55 PM] tux_linux
+actually I need to take the android img
+
+
+[2/19/2022 9:04 PM] andi15701
+you, you can try
+
+
+[2/19/2022 9:04 PM] andi15701
+booti with android image
+
+
+[2/19/2022 9:05 PM] tux_linux
+well, just loaded it with `loady` and launched `booti`, nothing
+
+
+[2/19/2022 9:05 PM] tux_linux
+```
+kobo => loady
+## Ready for binary (ymodem) download to 0x80800000 at 115200 bps...                                                                     
+C274(SOH)/0(STX)/0(CAN) packets, 4 retries
+## Total Size      = 0x0044e3d7 = 4514775 Bytes
+kobo => booti
+kobo =>
+```
+
+
+[2/19/2022 9:05 PM] andi15701
+booti 0x80800000
+
+
+[2/19/2022 9:07 PM] tux_linux
+```
+kobo => booti 0x80800000
+booti: bad boot image magic
+kobo =>
+```
+
+
+[2/19/2022 9:07 PM] tux_linux
+I created it with that command
+
+
+[2/19/2022 9:08 PM] andi15701
+and you used out.img
+
+
+[2/19/2022 9:08 PM] andi15701
+?
+
+
+[2/19/2022 9:08 PM] tux_linux
+oh-
+
+
+[2/19/2022 9:08 PM] tux_linux
+I used img
+
+
+[2/19/2022 9:08 PM] tux_linux
+welp, sorry
+
+
+[2/19/2022 9:10 PM] tux_linux
+ok, transferring
+
+
+[2/19/2022 9:19 PM] tux_linux
+```
+kobo => booti 0x80800000
+
+ hwcfgp=8ffffe00,pcb=59,customer=9
+
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 14336, count 2274 ... 2274 blocks read: OK
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+
+MMC read: dev # 0, block # 1030, count 2 ... 2 blocks read: OK
+Kernel RAM visiable size=254M->254M
+hwcfg rootfstype : 2
+hwcfg partition type : 2
+kernel   @ 80808000 (4514775)
+ramdisk  @ 81800000 (0)
+kernel cmdline: 
+        use uboot command line:
+        console=ttymxc0,115200 hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8fee3a00 waveform_sz=1164278 ntxfw_p=0x8fee3600 ntxfw_sz=782 mem=254M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 qu 
+
+Starting kernel ...
+
+[    0.168871] debugfs: Directory 'dummy-iomuxc-gpr@20e0000' with parent 'regmap' already present!
+[    1.135344] vddarm: bypassed regulator has no supply!
+[    1.142820] vddpu: bypassed regulator has no supply!
+[    1.150160] vddsoc: bypassed regulator has no supply!
+[    1.274559] Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/admin-guide/init.rst for guidance.
+[    1.289101] ---[ end Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/admin-guide/init.rst for guidance. ]---
+```
+It seems to work?
+
+
+[2/19/2022 9:19 PM] tux_linux
+Is there a way to override cmdline?
+
+
+[2/19/2022 9:21 PM] andi15701
+seems to some degree working
+
+
+[2/19/2022 9:21 PM] andi15701
+you can rename early_param("quiet", quiet_kernel);
+ in init/main.c
+
+
+[2/19/2022 9:22 PM] andi15701
+to make it ignore quiet
+
+
+[2/19/2022 9:23 PM] andi15701
+what did you specify as commandline in the mkbootimg command?
+
+
+[2/19/2022 9:23 PM] andi15701
+and then there is CONFIG_CMDLINE_FORCE
+
+
+[2/19/2022 9:23 PM] andi15701
+in the kernel
+
+
+[2/19/2022 9:26 PM] andi15701
+ext2load mmc 0:1 /boot/boot.img 0x80808000
+
+
+[2/19/2022 9:27 PM] tux_linux
+oh yeah sure
+
+
+[2/19/2022 9:27 PM] andi15701
+booti 0x80808000
+
+
+[2/19/2022 9:27 PM] andi15701
+should also work
+
+
+[2/19/2022 9:52 PM] andi15701
+would be interesting, if button, led backlight, usb and wifi works
+
+
+[2/19/2022 10:11 PM] andi15701
+probably s/0x80808000/0x80800000/
+
+
+[2/19/2022 11:14 PM] tux_linux
+?
+
+
+[2/19/2022 11:14 PM] tux_linux
+I'll try with CONFIG_CMDLINE_FORCE
+
+
+[2/19/2022 11:22 PM] andi15701
+typo from me in the ext2load / booti commands
+
+
+[2/19/2022 11:22 PM] tux_linux
+oh ok
+
+
+[2/19/2022 11:49 PM] andi15701
+btw: rootwait might help
+
+
+[2/19/2022 11:49 PM] tux_linux
+yeah
+
+
+[2/20/2022 10:58 PM] andi15701
+any news here? I am a bit curious about the backlight
+
+
+[2/20/2022 11:00 PM] tux_linux
+I'm playing with a million things at once, testing that kernel is in the stack 😉
+
+
+[2/20/2022 11:01 PM] tux_linux
+I will, hopefully before tomorrow
+
+
+[4/29/2022 5:43 AM] tux_linux
+@andi there's nothing in `/sys/class/backlight`, but here's a full boot log to InkBox initrd.
+It's still awesome...
+
+
+[4/29/2022 5:43 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-AE7FC.txt
+
+
+[4/29/2022 8:06 AM] andi15701
+is CONFIG_REGULATOR_RN5T618=y set
+
+
+[4/29/2022 8:06 AM] andi15701
+?
+
+
+[4/29/2022 8:07 AM] tux_linux
+yes
+
+
+[4/29/2022 8:08 AM] andi15701
+and did you try to load LM3630A modules?
+
+
+[4/29/2022 8:08 AM] andi15701
+CONFIG_BACKLIGHT_LM3630A=m
+
+
+[4/29/2022 8:08 AM] tux_linux
+you put that in a module?
+oh
+
+
+[4/29/2022 8:08 AM] tux_linux
+why?
+
+
+[4/29/2022 8:09 AM] andi15701
+hardware clock works?
+
+
+[4/29/2022 8:09 AM] tux_linux
+i will test that tomorrow morning, really time to sleep here... (2:09 AM... oops)
+
+
+[4/29/2022 8:09 AM] tux_linux
+but if you look at the log and the /dev entries...
+
+
+[4/29/2022 8:09 AM] tux_linux
+`Jan 1 00:00` is suspicious
+
+
+[4/29/2022 8:13 AM] tux_linux
+Oh, btw the power LED works
+
+
+[4/29/2022 8:14 AM] tux_linux
+But not display backlight (or I missed how to use it)
+I'm also curious about how to check the battery status
+
+
+[4/29/2022 8:15 AM] andi15701
+CONFIG_RN5T618_POWER=m
+
+
+[4/29/2022 8:15 AM] andi15701
+so, just some module loading
+
+
+[4/29/2022 8:16 AM] tux_linux
+Ok
+
+
+[4/29/2022 8:16 AM] andi15701
+I kept things as modules which are not that important at boot up and which are not available on every kobo
+
+
+[4/29/2022 8:16 AM] andi15701
+to have the kernel more universal
+
+{Reactions}
+👍 
+
+[4/29/2022 8:18 AM] tux_linux
+The epdc too?
+
+
+[4/29/2022 8:18 AM] andi15701
+lm3630a_bl, rtc-rc5t619, rn5t618_power
+
+{Reactions}
+👍 
+
+[4/29/2022 8:18 AM] andi15701
+yes, epdc is a module, but I am missing the fp9928 driver
+
+{Reactions}
+👍 
+
+[4/29/2022 8:31 AM] andi15701
+battery capacity read out:
+
+
+[4/29/2022 8:31 AM] andi15701
+#!/bin/sh
+for name in /sys/class/power_supply/*
+do
+    if grep -q Battery "$name/type"
+    then
+        echo "found battery at $name with capacity: $(cat "$name"/capacity)"
+   fi
+done
+
+{Reactions}
+👍 
+
+[4/29/2022 8:31 AM] andi15701
+that should work with every well-written driver
+
+
+[4/30/2022 10:15 PM] andi15701
+did you have success with any further testing here?
+
+
+[4/30/2022 10:16 PM] tux_linux
+I had the kernel recompiled before I had the idea to port InkBox the the PW3, will see if I can boot it now
+
+
+[4/30/2022 10:33 PM] tux_linux
+this does not work
+
+
+[4/30/2022 10:33 PM] tux_linux
+nothing in /sys/class/power_supply
+
+
+[4/30/2022 10:33 PM] andi15701
+rn5t618_power is loaded?
+
+
+[4/30/2022 10:33 PM] tux_linux
+maybe I didn't recompile the kernel, only change the config?
+hmm
+
+
+[4/30/2022 10:33 PM] tux_linux
+hang on
+
+
+[4/30/2022 10:55 PM] tux_linux
+still compiling...
+
+
+[4/30/2022 10:56 PM] tux_linux
+my thinkpad is not as fast as my desktop
+
+
+[4/30/2022 11:05 PM] tux_linux
+ok, nothing in /sys/class/backlight or /sys/class/power_supply
+`CONFIG_BACKLIGHT_LM3630A=y` but rn5t618_power doesn't seem to exist
+
+
+[4/30/2022 11:07 PM] andi15701
+CONFIG_RN5T618_ADC, CONFIG_RTC_DRV_RC5T619 are both enabled?
+
+
+[4/30/2022 11:19 PM] andi15701
+grep R.5T61 .config
+CONFIG_RN5T618_POWER=m
+CONFIG_RN5T618_WATCHDOG=y
+CONFIG_MFD_RN5T618=y
+CONFIG_REGULATOR_RN5T618=y
+CONFIG_RTC_DRV_RC5T619=m
+CONFIG_RN5T618_ADC=m
+
+
+[4/30/2022 11:19 PM] andi15701
+of course you can set them to y
+
+
+[4/30/2022 11:39 PM] andi15701
+if kernel compile problems are ruled out, some i2cdetect -r -y 0
+
+
+[4/30/2022 11:39 PM] andi15701
+and 1 and 2 would be interesting
+
+
+[4/30/2022 11:40 PM] andi15701
+to see if i2c is messed up somehow
+
+
+[4/30/2022 11:44 PM] tux_linux
+ok, i'll try that
+
+
+[4/30/2022 11:46 PM] andi15701
+so, what is working: mmc, wifi card is at least detected, led, button?
+
+
+[4/30/2022 11:48 PM] andi15701
+$ echo /sys/bus/platform/drivers/r?5t6*  
+/sys/bus/platform/drivers/rc5t619-rtc /sys/bus/platform/drivers/rn5t618-adc /sys/bus/platform/drivers/rn5t618-power /sys/bus/platform/drivers/rn5t618-regulator /sys/bus/platform/drivers/rn5t618-wdt
+
+
+[4/30/2022 11:48 PM] andi15701
+to test whether drivers are available
+
+
+[4/30/2022 11:48 PM] andi15701
+echo /sys/bus/i2c/drivers/*
+
+
+[4/30/2022 11:48 PM] andi15701
+same for i2c
+
+
+[4/30/2022 11:49 PM] andi15701
+available and loaded (in case of modules)
+
+
+[4/30/2022 11:49 PM] andi15701
+mfd subdevices count as platform devices here
+
+
+[4/30/2022 11:55 PM] tux_linux
+nothing in backlight
+
+
+[4/30/2022 11:55 PM] tux_linux
+something in power supply
+
+
+[4/30/2022 11:55 PM] tux_linux
+battery working
+```
+found battery at /sys/class/power_supply/rn5t618-battery with capacity: 95
+```
+
+
+[4/30/2022 11:56 PM] andi15701
+nice
+
+
+[4/30/2022 11:56 PM] andi15701
+and probably also rtc
+
+
+[4/30/2022 11:56 PM] tux_linux
+```
+~ # evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 5 (EV_SW)
+    Event code 0 (SW_LID) state 0
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1651355777.442666, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1651355777.442666, -------------- SYN_REPORT ------------
+Event: time 1651355777.686579, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1651355777.686579, -------------- SYN_REPORT ------------
+```
+
+
+[4/30/2022 11:56 PM] tux_linux
+power button works
+
+
+[4/30/2022 11:56 PM] tux_linux
+how to test that?
+
+
+[4/30/2022 11:56 PM] tux_linux
+time seems ok at least
+```
+~ # date
+Sat Apr 30 21:56:41 UTC 2022
+~ # 
+```
+
+
+[4/30/2022 11:56 PM] andi15701
+hwclock
+
+
+[4/30/2022 11:57 PM] andi15701
+ok, then it should work
+
+
+[4/30/2022 11:57 PM] tux_linux
+```
+~ # hwclock -r
+Sat Apr 30 21:57:06 2022  0.000000 seconds
+~ # 
+```
+
+
+[4/30/2022 11:59 PM] andi15701
+does SW_LID work?
+
+
+[4/30/2022 11:59 PM] tux_linux
+sleep cover?
+
+
+[4/30/2022 11:59 PM] andi15701
+yes
+
+
+[4/30/2022 11:59 PM] andi15701
+wifi should be same as for clara hd
+
+
+[4/30/2022 11:59 PM] andi15701
+same external module
+
+
+[5/1/2022 12:00 AM] tux_linux
+yes
+```
+~ # evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 5 (EV_SW)
+    Event code 0 (SW_LID) state 0
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1651355999.118868, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1651355999.118868, -------------- SYN_REPORT ------------
+ÿþEvent: time 1651355999.323778, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1651355999.323778, -------------- SYN_REPORT ------------
+ÿüðÿøEvent: time 1651356000.348280, type 5 (EV_SW), code 0 (SW_LID), value 1
+Event: time 1651356000.348280, -------------- SYN_REPORT ------------
+Event: time 1651356001.372881, type 5 (EV_SW), code 0 (SW_LID), value 0
+Event: time 1651356001.372881, -------------- SYN_REPORT ------------
+```
+
+
+[5/1/2022 12:00 AM] tux_linux
+yes, that one is less of a pain to compile
+
+
+[5/1/2022 12:01 AM] andi15701
+so, usb is hw broken if I remember correcly
+
+
+[5/1/2022 12:01 AM] tux_linux
+yes
+
+
+[5/1/2022 12:01 AM] tux_linux
+only works for charging
+
+
+[5/1/2022 12:01 AM] tux_linux
+is unstable even there
+
+
+[5/1/2022 12:02 AM] andi15701
+so, lm3630a is in /sys/bus/i2c/drivers?
+
+
+[5/1/2022 12:05 AM] tux_linux
+lm3630a_bl, yes
+
+
+[5/1/2022 12:05 AM] andi15701
+do you have i2cdetect available?
+
+
+[5/1/2022 12:06 AM] tux_linux
+yes
+
+
+[5/1/2022 12:06 AM] tux_linux
+```
+~ # i2cdetect -l
+i2c-1   i2c             21a4000.i2c                             I2C adapter
+i2c-2   i2c             21a8000.i2c                             I2C adapter
+i2c-0   i2c             21a0000.i2c                             I2C adapter
+~ # 
+```
+
+
+[5/1/2022 12:06 AM] andi15701
+i2cdetect -r -y 0
+
+
+[5/1/2022 12:06 AM] andi15701
+i2cdetect -r -y 1
+
+
+[5/1/2022 12:06 AM] andi15701
+i2cdetect -r -y 2
+
+
+[5/1/2022 12:07 AM] tux_linux
+```
+~ # i2cdetect -r -y 0
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+~ # i2cdetect -r -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- 15 -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- 48 -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+~ # i2cdetect -r -y 2
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- UU -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --                         
+~ # 
+```
+
+
+[5/1/2022 12:08 AM] andi15701
+so everything is there besides the backlight
+
+
+[5/1/2022 12:08 AM] andi15701
+0x32 is the rc5t619
+
+
+[5/1/2022 12:09 AM] andi15701
+0x48 fp9928: power supply for the display
+
+
+[5/1/2022 12:09 AM] andi15701
+0x15: touch
+
+
+[5/1/2022 12:09 AM] tux_linux
+ok
+
+
+[5/1/2022 12:21 AM] andi15701
+hmm, I guess the enable gpio of the backlight is just missing
+
+
+[5/1/2022 12:22 AM] andi15701
+so, other things that should work now: 2nd serial port at TP198 and wifi
+
+{Reactions}
+👍 
+
+[5/1/2022 12:23 AM] andi15701
+that 2nd port is at /dev/ttymxc3
+
+
+[5/1/2022 12:25 AM] andi15701
+you have done that i2cdetect thing on the stock kernel
+
+
+[5/1/2022 12:25 AM] andi15701
+so I could compare
+
+
+[5/1/2022 8:38 AM] andi15701
+about ttymxc3: you can just to some stty -F /dev/ttymxc3 raw -echo ; yes >/dev/ttymxc3 and touch one of the middle parts with your rx wire of some 3.3v device
+
+{Reactions}
+👍 
+
+[5/1/2022 8:38 AM] andi15701
+no need to solder it
+
+
+[5/1/2022 8:49 AM] andi15701
+or just bridge the middle pins
+
+
+[5/1/2022 8:50 AM] andi15701
+about backlight: I wll patch the kernel
+
+
+[5/1/2022 9:02 AM] andi15701
+bridge the middle pins and do a cat /dev/ttymxc3 at the same time the transfer in the other direction is running
+
+
+[5/1/2022 9:02 AM] andi15701
+if you have wlan working you can log in over ssh or something.
+
+
+[5/1/2022 9:03 AM] andi15701
+I just want to ensure that everything specified in the devicetree is working
+
+
+[5/1/2022 9:15 AM] andi15701
+you can also simply measure with your multimeter if tx works
+
+
+[5/1/2022 9:16 AM] andi15701
+voltage should change if you send something continously (and did that stty -F /dev/ttymxc3 raw -echo thing before)
+
+
+[5/1/2022 3:09 PM] tux_linux
+ttymxc3 is working
+
+
+[5/1/2022 3:09 PM] tux_linux
+```
+~ # microcom -s 115200 /dev/ttymxc3
+ÿÿàÿÿÿÿÿÿþøï?ÿààþàÿÿÿþÿþÿÿ
+```
+
+
+[5/1/2022 6:49 PM] andi15701
+thanks for testing, so we only have wifi and backlight (for backlight I need a patch
+
+{Reactions}
+👍 
+
+[5/1/2022 6:49 PM] andi15701
+to tesst
+
+
+[5/1/2022 7:06 PM] tux_linux
+and epdc
+
+
+[5/1/2022 7:09 PM] andi15701
+just for the first submission to have something in the kernel
+
+
+[5/1/2022 7:09 PM] andi15701
+so people notice that there is something done
+
+{Reactions}
+👍 
+
+[5/1/2022 7:09 PM] andi15701
+and do not duplicate work
+
+
+[5/1/2022 7:10 PM] andi15701
+epdc needs the fp9928 driver
+
+
+[5/1/2022 7:11 PM] andi15701
+ttymxc3 is not that important for usual work, but hard to find, and it opens a lot of possiblities
+
+
+[5/1/2022 7:13 PM] andi15701
+Have you seen my serial adaptor I use for debugging in my fosdem presentation?
+
+
+[5/1/2022 7:14 PM] andi15701
+that works nicely for uarts with 2.54mm pitch
+
+
+[5/1/2022 7:15 PM] tux_linux
+no, is there a link to see it?
+
+
+[5/1/2022 7:18 PM] andi15701
+http://mirroronet.pl/pub/mirrors/video.fosdem.org/2022/D.mobile/mobile_kernel_ebook_reader.webm
+
+
+[5/1/2022 7:18 PM] andi15701
+11:30
+
+
+[5/1/2022 7:22 PM] tux_linux
+nice
+
+
+[5/1/2022 7:22 PM] andi15701
+the pogo header is available at digikey, These boards take power from the target device and you can connect via BLE
+
+
+[5/1/2022 7:22 PM] andi15701
+they are my work
+
+
+[5/1/2022 7:23 PM] andi15701
+I have some of them, not everything works well enough
+
+
+[5/1/2022 7:26 PM] andi15701
+so if I clean up firmware update there I could probably send you one. You can also just solder tht pogo header onto a breadboard
+
+
+[5/1/2022 7:26 PM] tux_linux
+very nice
+speaking of serial; kindle boards usually work at 1.8v instead of 3.3v for serial; do you think using a 3.3v connection to them could damage the serial port? (not VCC, only using tx, rx and gnd)
+I'm wondering if this caused the strange issue with U-Boot and serial output on mine, although initially U-Boot showed up and it worked.
+I've also bought a Kindle Touch (imx508) that should arrive soon, maybe a port for both Kobo Touch and Kindle Touch of U-Boot and kernel would be nice in the future
+
+
+[5/1/2022 7:27 PM] tux_linux
+awesome
+but really I'll have to learn how to properly solder before...
+
+
+[5/1/2022 7:27 PM] andi15701
+during 2020 lockdown I had to teach someone soldering remote!
+
+{Reactions}
+😂 
+
+[5/1/2022 7:30 PM] andi15701
+using 3.3v is at least risky at that place
+
+
+[5/1/2022 7:30 PM] tux_linux
+i just don't want to reproduce that issue on the kindle touch once i have it...
+
+
+[5/1/2022 7:31 PM] tux_linux
+1.8v adapters are expensive
+
+
+[5/1/2022 7:31 PM] andi15701
+no
+
+
+[5/1/2022 7:32 PM] tux_linux
+have got a link of a cheap one?
+
+
+[5/1/2022 7:32 PM] andi15701
+a voltage divider (two resistors might be enough)
+
+
+[5/1/2022 7:32 PM] tux_linux
+hmm
+
+
+[5/1/2022 7:32 PM] andi15701
+at the rx pin of the kindle
+
+
+[5/1/2022 7:33 PM] andi15701
+or maybe ttymxc3 can be reconfigured to to 1.8v and you bridge that
+
+
+[5/1/2022 7:33 PM] tux_linux
+that's lit
+
+
+[5/1/2022 7:33 PM] tux_linux
+it would actually be really great
+although...
+i'd have to solder on both places...
+
+
+[5/1/2022 7:34 PM] tux_linux
+is there a way to reconfigure ttymxc0 to 1.8v? (at least there I can use toothpicks or ethernet wires)
+I could access it via telnet/ssh
+
+
+[5/1/2022 7:34 PM] tux_linux
+or port inkbox in blind mode without console, but that is not a very good idea
+
+
+[5/1/2022 7:35 PM] andi15701
+just looking at the datasheet: both can be
+
+
+[5/1/2022 7:35 PM] andi15701
+keyword Low Voltage Enable Field
+
+
+[5/1/2022 7:37 PM] tux_linux
+nice
+
+
+[5/1/2022 7:54 PM] andi15701
+regular parcel takes 60 days to the USA, approx 20 days to Canada, tracked small parcel is 5-10 days,  that sounds more sane. Of course express at horrible prices works also. Sending you one of these BLE serial adapters might be feasible
+
+
+[5/1/2022 7:55 PM] andi15701
+but i need to fully the other ones i have
+
+
+[5/1/2022 7:56 PM] tux_linux
+if you want, would be really nice
+I'm not in a hurry, ethernet wires and toothpicks really work well on kobos currently
+
+
+[5/1/2022 7:57 PM] tux_linux
+maybe in a simple letter envelope too
+
+
+[5/1/2022 8:05 PM] andi15701
+yes, something with bubblewrap as long as it is not more  than 3cm thick
+
+
+[5/1/2022 8:11 PM] andi15701
+busybox devmem 0x20E05A0 32 0x41b0b1
+
+
+[5/1/2022 8:11 PM] andi15701
+busybox devmem 0x20E05A4 32 0x41b0b1
+
+
+[5/1/2022 8:12 PM] andi15701
+that might switch the uart0 to 1v8
+
+
+[5/1/2022 8:13 PM] andi15701
+or replace the number in
+
+
+[5/1/2022 8:13 PM] andi15701
+pinctrl_uart1: uart1grp {
+                fsl,pins = <
+                        MX6SL_PAD_UART1_TXD__UART1_TX_DATA 0x1b0b1
+                        MX6SL_PAD_UART1_RXD__UART1_RX_DATA 0x1b0b1
+                >;
+        };
+
+{Reactions}
+👍 
+
+[5/1/2022 8:13 PM] andi15701
+in the devicetree
+
+
+[5/1/2022 8:15 PM] andi15701
+I guess the ttymx3 of the Kobo Glo HD is more easily accessible
+
+
+[5/1/2022 8:30 PM] tux_linux
+Maybe
+I could use the board from my broken Glo HD
+
+
+[5/1/2022 8:31 PM] tux_linux
+Are those the commands for the Glo HD too?
+
+
+[5/1/2022 8:33 PM] andi15701
+it should work on all the mx6sl kobos (not the libra)
+
+
+[5/1/2022 8:33 PM] andi15701
+Glo HD urgently needs a new kernel with brcmfmac
+
+
+[5/1/2022 8:34 PM] andi15701
+brcmfmac is just mainline, tolino shine 2 kernel mostly works there
+
+
+[5/1/2022 8:40 PM] tux_linux
+Ok 👍
+
+
+[5/1/2022 8:40 PM] andi15701
+but first I want to have Aura 2 finished to something upstreamable, than glo hd, than porting fp9928 probably
+
+{Reactions}
+👍 
+
+[5/1/2022 9:53 PM] andi15701
+ttymxc3 on the Glo HD is 2,54 mm pitch with holes, I guess
+
+
+[5/1/2022 9:53 PM] andi15701
+that would not mess with console
+
+
+[5/1/2022 10:05 PM] tux_linux
+It will be easier to connect too
+
+
+[5/1/2022 10:06 PM] andi15701
+probably the serial port next to the console
+
+
+[5/2/2022 8:19 PM] andi15701
+ok, I pushed something
+
+
+[5/2/2022 8:19 PM] andi15701
+kobo/aura2-test
+
+
+[5/2/2022 8:19 PM] andi15701
+on github.com/akemnade/linux
+
+
+[5/2/2022 8:19 PM] andi15701
+perhaps backlight works now
+
+
+[5/2/2022 8:26 PM] tux_linux
+Ok, I will test it tonight, thanks
+
+
+[5/3/2022 5:20 AM] tux_linux
+Sorry, nothing
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-CA1FC.txt
+
+
+[5/3/2022 6:49 AM] tux_linux
+Could you take a look at the Sony porting thread too if you have time? This watchdog is really putting us on our nerves... Thanks
+
+
+[5/3/2022 9:03 AM] andi15701
+[    0.791130] lm3630a_bl 0-0036: i2c failed to access register
+[    0.791177] lm3630a_bl 0-0036: fail : init chip
+
+
+[5/3/2022 9:03 AM] andi15701
+at least the driver tries to access it
+
+
+[5/3/2022 9:56 PM] andi15701
+oops, forgotten half the stuff
+
+
+[5/3/2022 10:11 PM] andi15701
+ready for next try
+
+{Reactions}
+👍 
+
+[5/4/2022 3:26 AM] tux_linux
+Ok, backlight works
+But only backlight_warm
+I don't know why you put two backlight paths, in the Aura 2/SE there's only a cold backlight (frontlight actually).
+so
+```
+echo 100 > /sys/class/backlight/backlight_warm/brightness
+```
+triggers backlight to go to maximum
+but
+```
+echo 100 > /sys/class/backlight/backlight_cold/brightness
+```
+does nothing
+
+
+[5/4/2022 3:27 AM] tux_linux
+I could probably fix this in the dts, unless those two are there for an actual purpose...?
+
+
+[5/4/2022 7:49 AM] andi15701
+I did not find out which one would work, so I needod two and someone to test
+
+{Reactions}
+👍 
+
+[5/5/2022 7:08 AM] tux_linux
+doesn't work
+3.3v everywhere (ttymxc0 and ttymxc3, 5.16 kernel on the aura, didn't do anything on the Glo HD)
+
+
+[5/6/2022 4:46 AM] tux_linux
+Kindle Touch is probably even worse... 2.6.31...
+You can look at the porting thread, I posted some U-Boot logs and info about the device (successfully got a custom made level shifter to work)
+
+
+[5/15/2022 10:42 PM] andi15701
+i have created a new aura2-for-linux branch on my kernel github
+
+
+[5/15/2022 10:42 PM] andi15701
+that is the final version I would like to send
+
+
+[5/15/2022 10:42 PM] andi15701
+to submit to the kernel
+
+
+[5/15/2022 10:44 PM] tux_linux
+nice
+without epdc support?
+
+
+[5/15/2022 10:44 PM] andi15701
+yes, I will do that later
+
+
+[5/15/2022 10:44 PM] andi15701
+the epdc driver is not upstream anyways yet
+
+
+[5/15/2022 10:48 PM] tux_linux
+ok cool
+
+
+[5/15/2022 10:48 PM] tux_linux
+I will try to test it
+
+
+[5/15/2022 10:48 PM] andi15701
+the idea is just to have something uptsream so people recognize there is work in progress
+
+{Reactions}
+👍 
+
+[5/21/2022 12:36 PM] andi15701
+so does this thing based on 5.18-rc6 still work?
+
+
+[5/21/2022 12:37 PM] andi15701
+i would like to have a final test before submitting things
+
+
+[5/21/2022 2:45 PM] tux_linux
+5.18?
+Was it not 5.16?
+I will test it today
+
+
+[5/21/2022 3:01 PM] andi15701
+well, if I want to upstream something, I need to test it againt newest kernel
+
+
+[5/21/2022 3:02 PM] andi15701
+I guess, it will arrive in 5.20
+
+
+[5/21/2022 3:02 PM] andi15701
+in mainline
+
+
+[5/21/2022 3:08 PM] tux_linux
+Ok
+
+
+[5/21/2022 4:43 PM] tux_linux
+https://github.com/akemnade/linux/tree/aura2-for-linux
+That branch?
+
+{Embed}
+https://github.com/akemnade/linux/tree/aura2-for-linux
+GitHub - akemnade/linux at aura2-for-linux
+Linux kernel source tree. Contribute to akemnade/linux development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/linux-36D55
+
+
+[5/21/2022 5:35 PM] andi15701
+yes
+
+{Reactions}
+👍 
+
+[5/21/2022 6:04 PM] tux_linux
+nope
+hangs at "Starting kernel"
+
+
+[5/21/2022 6:04 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-0FA78.txt
+
+
+[5/21/2022 6:06 PM] tux_linux
+the command line is `console=/dev/ttymxc0,115200 root=/dev/ram0 rdinit=/sbin/init rootfstype=ramfs`
+
+
+[5/21/2022 6:06 PM] andi15701
+hmm, devicetree is appended kernel config is what?
+
+
+[5/21/2022 6:07 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/config-0F1F0
+
+
+[5/21/2022 6:07 PM] tux_linux
+yes, DT was appended
+
+
+[5/21/2022 6:17 PM] tux_linux
+interestingly enough, the power light blinks some seconds after `Starting kernel ...`
+
+
+[5/21/2022 6:17 PM] tux_linux
+but nothing on the console
+
+
+[5/21/2022 6:25 PM] andi15701
+hmm, that is weird
+
+
+[5/21/2022 6:29 PM] andi15701
+hmm, does earlycon as parameter give more output
+
+
+[5/21/2022 6:29 PM] andi15701
+?
+
+
+[5/21/2022 6:30 PM] tux_linux
+i'll try
+
+
+[5/21/2022 6:35 PM] tux_linux
+hangs there now
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-F25B7.txt
+
+
+[5/21/2022 6:45 PM] andi15701
+hmm, interiesting kernel configuration, many archs enabled
+
+
+[5/21/2022 6:45 PM] andi15701
+chances that will some really nasty bugs will unhide
+
+
+[5/21/2022 6:46 PM] andi15701
+hmm, does this thing boot on the kobo glo hd (with tolino-shine2hd.dtb)?
+
+
+[5/21/2022 6:46 PM] andi15701
+just same kernel
+
+
+[5/21/2022 6:47 PM] andi15701
+same kernel binary with different dtb appended
+
+
+[5/21/2022 7:14 PM] andi15701
+is that the same config you were using with that 5.16 kernel you tested earlier?
+
+
+[5/21/2022 7:14 PM] tux_linux
+no
+
+
+[5/21/2022 7:15 PM] andi15701
+hmm, can you test with something similar?
+
+
+[5/21/2022 7:16 PM] andi15701
+not that we start to debug some unrelated problems
+
+
+[5/21/2022 7:16 PM] andi15701
+the things which are not available will be dropped from that config
+
+
+[5/21/2022 9:39 PM] tux_linux
+Works now!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-0D888.txt
+
+
+[5/21/2022 9:39 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/config-51826
+
+
+[5/21/2022 9:40 PM] tux_linux
+but there is nothing in `/sys/class/backlight`
+
+
+[5/21/2022 9:40 PM] tux_linux
+battery reading works
+
+
+[5/21/2022 9:46 PM] andi15701
+[    0.835445] lm3630a_bl 0-0036: i2c failed to access register
+[    0.835491] lm3630a_bl 0-0036: fail : init chip
+
+
+[5/21/2022 9:46 PM] andi15701
+hmmm
+
+
+[5/21/2022 9:46 PM] andi15701
+one thing: CONFIG_LOCALVERSION_AUTO is really helpful is such cases
+
+
+[5/21/2022 9:47 PM] andi15701
+this is a bit an exception
+
+
+[5/21/2022 9:47 PM] andi15701
+but then the git commit id is included
+
+
+[5/21/2022 9:47 PM] tux_linux
+I'm on the latest one from that branch
+
+
+[5/21/2022 9:47 PM] tux_linux
+I just downloaded a zip archive, the whole repo is a bit too big (so no version control in there)
+
+
+[5/21/2022 9:47 PM] andi15701
+in the kernel version, so in the bootlog we really see what was booted
+
+
+[5/21/2022 9:48 PM] andi15701
+ok
+
+
+[5/21/2022 10:54 PM] andi15701
+hmm, does
+
+
+[5/21/2022 10:54 PM] andi15701
+echo 0-0036 > /sys/bus/i2c/drivers/lm3630a_bl/bind
+
+
+[5/21/2022 10:54 PM] andi15701
+help regarding backlight?
+
+
+[5/21/2022 11:02 PM] tux_linux
+yes it does
+
+
+[5/21/2022 11:02 PM] tux_linux
+```
+~ # echo 0-0036 > /sys/bus/i2c/drivers/lm3630a_bl/bind
+[   19.622656] lm3630a_bl 0-0036: LM3630A backlight register OK.
+~ # ls /sys/class/backlight/
+backlight
+~ # ls /sys/class/backlight/backlight/
+actual_brightness  device/            scale              uevent
+bl_power           max_brightness     subsystem/
+brightness         power/             type
+~ #
+```
+
+
+[5/21/2022 11:02 PM] tux_linux
+max brightness value is 255
+
+
+[5/21/2022 11:02 PM] tux_linux
+it seems it goes even brighter than I've ever seen before...
+
+
+[5/21/2022 11:03 PM] szybet
+sometimes it happens with linux drivers
+
+
+[5/21/2022 11:03 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220521_210312492-06D96.jpg
+
+
+[5/21/2022 11:03 PM] szybet
+enjoy your brighter screen
+and less life for the dioded
+
+
+[5/21/2022 11:03 PM] tux_linux
+hehe
+
+
+[5/21/2022 11:04 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220521_210419968-EB749.jpg
+
+
+[5/21/2022 11:10 PM] szybet
+its as bright as on the nia
+
+
+[5/21/2022 11:10 PM] szybet
+( well, on the picture )
+
+
+[5/21/2022 11:10 PM] szybet
+not you can use your erader as a flash light
+
+
+[5/21/2022 11:11 PM] andi15701
+explanation of the problem: backlight gets powered by LDO7
+
+
+[5/21/2022 11:11 PM] andi15701
+of the rc5t619
+
+
+[5/21/2022 11:11 PM] szybet
+you have the datasheet of the aura2?
+
+
+[5/21/2022 11:12 PM] andi15701
+but the backlight driver does not allow to specify a power source
+
+
+[5/21/2022 11:12 PM] andi15701
+so if the rc5t619 regulator driver is probed after the backlight, the backlight will not work
+
+
+[5/21/2022 11:13 PM] andi15701
+by that echo .... >bind command, the probe function is re-executed
+
+
+[5/21/2022 11:14 PM] andi15701
+I have no datasheet, but I have studied the vendor kernel source
+
+
+[5/21/2022 11:19 PM] szybet
+okay, good work
+
+
+[5/21/2022 11:49 PM] andi15701
+does wifi work? (compiling branch rtl8189fs of  https://github.com/jwrdegoede/rtl8189ES_linux.git)
+
+
+[5/21/2022 11:51 PM] andi15701
+make KSRC=/path/to/my/koboaura2sources CROSS_COMPLIE=.....
+
+
+[5/21/2022 11:52 PM] andi15701
+well, the backlight issue is not a problem for upstreaming I guess
+
+
+[6/4/2022 6:48 PM] andi15701
+so, I have sent a second patch series
+
+{Reactions}
+👍 
+
+[6/4/2022 6:48 PM] andi15701
+hopefully, that gets accepted
+
+
+[6/4/2022 6:48 PM] andi15701
+just style corrections
+
+
+[9/24/2022 12:12 AM] andi15701
+This got a bit lost
+
+
+[9/24/2022 12:13 AM] andi15701
+some  cosmetic changes for a v3
+
+
+[9/24/2022 12:13 AM] andi15701
+patch series
+
+
+[9/24/2022 12:13 AM] tux_linux
+ok, which ones?
+
+
+[9/24/2022 12:14 AM] andi15701
+I just have sent them to the kernel lists
+
+
+[9/24/2022 12:14 AM] andi15701
+I think that will be accepted
+
+
+[9/24/2022 12:14 AM] andi15701
+because it is only cosmetics
+
+
+[9/24/2022 12:14 AM] andi15701
+nothing really functional
+
+
+[9/24/2022 12:15 AM] andi15701
+So I guess it is time to fiddle with the fp9928
+
+{Reactions}
+👍 
+
+[9/24/2022 12:16 AM] andi15701
+the mostly missing piece
+
+
+[9/24/2022 12:16 AM] andi15701
+to have something working here
+
+
+[9/24/2022 12:18 AM] tux_linux
+epdc right?
+
+
+[9/24/2022 12:24 AM] andi15701
+well, the small chip that generates the higher voltages
+
+{Reactions}
+👍 
+
+[9/24/2022 12:24 AM] andi15701
+for the EPD
+
+{Reactions}
+👍 
+
+[10/10/2022 9:16 PM] andi15701
+fp9928 is also in the ntx 4.1.15, so it is at leastt something dtb based
+
+
+[10/10/2022 9:17 PM] andi15701
+so the usual stuff, clean up the worst things, then disinfect your screen
+
+
+[10/10/2022 9:17 PM] andi15701
+as usual after displaying ntx code
+
+
+[10/10/2022 9:19 PM] tux_linux
+?
+
+
+[10/10/2022 9:20 PM] andi15701
+and then it should work with the recent kernel
+
+
+[10/10/2022 9:31 PM] andi15701
+do you have any bootup dmesg?
+
+
+[10/10/2022 9:40 PM] tux_linux
+of what kernel?
+
+
+[10/10/2022 9:41 PM] andi15701
+of the stock one
+
+
+[10/10/2022 9:43 PM] andi15701
+/*
+ * Parse user specified options (`fp9928:')
+ * example:
+ *   fp9928:pass=2,vcom=-1250000
+ */
+static int __init fp9928_setup(char *options)
+{
+        int ret;
+        char *opt;
+        unsigned long ulResult;
+        while ((opt = strsep(&options, ",")) != NULL) {
+                if (!*opt)
+                        continue;
+                if (!strncmp(opt, "pass=", 5)) {
+                        ret = kstrtoul(opt + 5, 0, &fp9928_pass_num);
+                        if (ret < 0)
+                                return ret;
+                }
+                if (!strncmp(opt, "vcom=", 5)) {
+                        int offs = 5;
+                        if (opt[5] == '-')
+                                offs = 6;
+                        ret = kstrtoul((const char *)(opt + offs), 0, &ulResult);
+                        fp9928_vcom = (int) ulResult;
+                        if (ret < 0)
+                                return ret;
+                        fp9928_vcom = -fp9928_vcom;
+                }
+        }
+
+        return 1;
+}
+
+__setup("fp9928:", fp9928_setup);
+
+
+[10/10/2022 9:43 PM] andi15701
+that thing I found in the 4.1.15 ntx kernel
+
+
+[10/10/2022 9:44 PM] andi15701
+it handles some kernel options
+
+
+[10/10/2022 9:44 PM] andi15701
+and I am wondering what is expected there
+
+
+[10/10/2022 9:44 PM] andi15701
+so the easiest thing would be to look at the dmesg output of the stock kernel
+
+
+[10/10/2022 9:47 PM] andi15701
+if you recompiled the stock kernel and the display is working, than also that would be enough
+
+
+[10/11/2022 8:07 PM] andi15701
+any bootup dmesg with working display would be helpful
+
+
+[10/11/2022 8:57 PM] tux_linux
+With the stock kernel right? Will try to get you one tonight
+
+
+[10/11/2022 10:20 PM] andi15701
+any kernel with a working display
+
+
+[10/16/2022 2:40 PM] tux_linux
+I haven't forgotten
+Will provide it soon
+
+
+[1/20/2023 6:22 PM] andi15701
+ping
+
+
+[1/20/2023 6:25 PM] tux_linux
+Ouch yes, sorry...! Will try my best
+
+
+[1/20/2023 6:27 PM] andi15701
+basic support is now in Kernel 6.2
+
+
+[1/20/2023 6:30 PM] tux_linux
+Good
+
+
+[1/20/2023 6:31 PM] tux_linux
+My aura is also having usb port problems, I don't know for still how much time I will be able to charge it
+
+
+[1/20/2023 6:32 PM] tux_linux
+The data line didn't work even when I received it and I have to split it somehow to get it to charge and hold it with something so that it stays put
+
+
+[1/20/2023 6:32 PM] tux_linux
+Is there a way to charge it other than that one ?
+
+
+[1/20/2023 6:33 PM] andi15701
+well, I guess there are test points near the usb socket
+
+
+[1/20/2023 6:33 PM] andi15701
+to access it
+
+{Reactions}
+👍 
+
+[1/20/2023 6:33 PM] andi15701
+As long as it is somehow working
+
+
+[1/20/2023 6:34 PM] andi15701
+you should probably beep things through with your multimeter to find out where you can access usb
+
+{Reactions}
+👍 
+
+[1/20/2023 6:35 PM] andi15701
+or you find capacitors
+
+
+[1/20/2023 6:36 PM] andi15701
+some esd/overvoltage protection might also be there
+
+
+[1/20/2023 6:47 PM] andi15701
+compared with the clara: I have in a row, one unsoldered z-diode, 3 capacitors, 1 diode, 1 testpoint for 5V
+
+
+[1/20/2023 6:47 PM] andi15701
+GND you will have lots of choices
+
+
+[1/20/2023 7:20 PM] andi15701
+there should also be some bigger capacitor near the rc5t619, but probably no test point
+
+
+[1/20/2023 7:21 PM] andi15701
+and probably more chances to have some short circuit
+
+
+[1/20/2023 8:53 PM] tux_linux
+Ok, some experiments on the road
+
+
+[1/20/2023 8:53 PM] tux_linux
+Thanks
+
+
+[1/21/2023 8:32 PM] andi15701
+that is maybe something less exiting in between
+
+
+[1/21/2023 8:33 PM] andi15701
+I have a bunch of regulators here which are schroedinger's cat
+
+
+[1/21/2023 8:34 PM] andi15701
+on my other "pet" the moverio bt-200
+
+
+[1/21/2023 8:35 PM] andi15701
+Regulators where I am not sure whether they exist at all, state in running stock kernel conflicts with what I see in the source
+
+
+[3/16/2023 11:31 PM] andi15701
+Tolino Vision 4 has the same touchscreen chip as this one
+
+
+[3/16/2023 11:31 PM] andi15701
+so if that gets solved
+
+
+[3/16/2023 11:32 PM] andi15701
+than we can try the same on the Aura 2
+
+
+[3/18/2023 9:23 PM] andi15701
+do you have stable connections now?
+
+
+[4/27/2023 5:34 AM] tux_linux
+Well, it seems to have gone dead since it doesn't want to charge anymore as from today
+
+
+[4/27/2023 5:35 AM] tux_linux
+will probably need to look into soldering
+
+
+[4/27/2023 5:35 AM] tux_linux
+at least I have a soldering iron now
+
+
+[4/27/2023 9:13 AM] szybet
+Dont even try without some practise on some scrap
+
+
+[4/27/2023 12:44 PM] tux_linux
+I did try some practice on some things
+
+
+[4/27/2023 12:44 PM] tux_linux
+Almost bricked rpi pico but miraculously got there without issues
+
+
+[4/27/2023 12:46 PM] andi15701
+and as said, there are probably some more easy points
+
+{Reactions}
+👍 
+
+[4/27/2023 12:46 PM] andi15701
+then the socket itself
+
+
+[4/27/2023 1:19 PM] szybet
+ugh
+
+
+[4/27/2023 1:19 PM] szybet
+well
+
+
+[4/27/2023 1:20 PM] szybet
+i hope you have lead solder, or even better lead - flux solder combo ( flux is already in the tin! )
+
+
+[4/27/2023 1:20 PM] tux_linux
+No
+
+
+[4/27/2023 1:20 PM] tux_linux
+Synthesized one
+
+
+[4/27/2023 1:20 PM] tux_linux
+It's crap
+
+
+[4/27/2023 1:20 PM] szybet
+yep
+
+
+[4/27/2023 1:21 PM] szybet
+get proper tools first
+
+
+[4/27/2023 1:21 PM] tux_linux
+It's so crappy I decided to wipe all the solder out and connect wires by twisting them around the pin
+
+
+[4/27/2023 1:21 PM] tux_linux
+Hint: it works
+
+
+[4/27/2023 1:21 PM] szybet
+😞
+
+
+[4/29/2023 3:00 PM] tux_linux
+charges now
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20230429_125953484-8BFDD.jpg
+
+
+[4/29/2023 3:01 PM] tux_linux
+Still has old wifi framework !!
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20230429_130057655-4C186.jpg
+
+
+[4/29/2023 3:57 PM] szybet
+My god
+
+
+==============================================================
+Exported 1,253 message(s)
+==============================================================

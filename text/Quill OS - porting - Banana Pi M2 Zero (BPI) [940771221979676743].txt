@@ -1,0 +1,745 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Banana Pi M2 Zero (BPI)
+==============================================================
+
+[2/9/2022 1:49 AM] tux_linux
+Well, here will be documented my attempt to port InkBox on non-Kobo hardware for the first time (yay, this is probably going to be a nightmare ;p).
+
+
+[2/9/2022 1:49 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220209_004804579-0EE16.jpg
+
+
+[2/9/2022 1:50 AM] tux_linux
+@andi , how did you get the waveshare display to work on your sunxi hardware? I bought one (not from Waveshare, but could be similar) from there: https://www.buydisplay.com/black-1-54-inch-e-paper-display-module-for-arduino-raspberry-pi
+Documentation just doesn't exist (as usual) and the only thing I could find was the library example from the website. It seems I need an RPi Zero for that though, which I don't have.
+Is there a way to check that it's even working, let's say by using spidev interface?
+
+{Embed}
+https://www.buydisplay.com/black-1-54-inch-e-paper-display-module-for-arduino-raspberry-pi
+Black 1.54" inch e-Paper Display Module for Arduino,Raspberry Pi
+ER-EPM0154-1B is 1.54 inch e-paper (e-ink) display module,152x152 pixels with controller UC8151C,SPI interface,supports white,black for arduino,raspberry pi.
+/mnt/data/projects/git/conversations/media/black_1.54_inch_e-ink_display_module-B7B0F.jpg
+
+
+[2/9/2022 1:55 AM] tux_linux
+This is the datasheet for the controller, might find useful info here: https://www.buydisplay.com/download/ic/UC8151C.pdf
+
+
+[2/9/2022 2:33 AM] tux_linux
+Ok, well, it does seem very useful, but I can't find out what "D0-D1-D2-D3-D4-D5-D6-D7" mean in the command table
+
+
+[2/9/2022 2:34 AM] tux_linux
+Is it possible to at least refresh the screen using the gpio interface in U-Boot/Linux?
+
+
+[2/9/2022 8:25 AM] andi15701
+well, D0-D1-D2-... are the data bits going over spi, so you have to convert that binary to hex to find out what to send
+
+
+[2/9/2022 5:18 PM] andi15701
+so display refresh = 0001 0010 = 0x12
+
+
+[2/9/2022 5:20 PM] tux_linux
+Ooooh thanks!!
+
+
+[2/9/2022 5:20 PM] tux_linux
+Do I send that over the spidev node or with something else?
+
+
+[2/9/2022 5:20 PM] tux_linux
+Do I need to do some setup before sending the refresh command too?
+
+
+[2/9/2022 5:21 PM] andi15701
+you need set the c/d line to the corresponding state
+
+
+[2/9/2022 5:29 PM] andi15701
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/epd.tar-C1BE7.gz
+
+
+[2/9/2022 5:29 PM] andi15701
+that is for the waveshare 4 1/2 inch
+
+
+[2/9/2022 6:01 PM] tux_linux
+Ok thanks!
+
+
+[2/12/2022 10:31 PM] tux_linux
+How do you do that?
+
+
+[2/12/2022 10:32 PM] tux_linux
+I saw `epd-init.sh` but I'm not sure what pins are necessary to choose here
+
+
+[2/12/2022 10:33 PM] tux_linux
+https://www.buydisplay.com/download/interfacing/Interfacing_e-Paper_%20Display_Module_to_Raspberry_Pi.pdf
+It is connected that way (Banana Pi has the same pins layout than that of a Raspberry Pi)
+
+
+[2/13/2022 9:04 PM] andi15701
+https://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO#GPIO_PIN_define
+
+{Embed}
+https://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO
+Banana Pi BPI-M2 ZERO
+
+
+[2/13/2022 9:05 PM] andi15701
+PAx -> gpio0-31 PBx -> gpio32-63
+
+
+[2/13/2022 9:05 PM] andi15701
+and so on
+
+
+[2/13/2022 9:07 PM] tux_linux
+I'm not sure I understand
+
+
+[2/13/2022 9:10 PM] tux_linux
+In your epd.tar.gz archive, there are defines for pins
+What device is it for?
+
+
+[2/13/2022 9:10 PM] andi15701
+it is a custom adaptor with some soldering
+
+
+[2/13/2022 9:11 PM] andi15701
+connected to my bpi zero
+
+
+[2/13/2022 9:11 PM] tux_linux
+ok
+But let's say I would just want to do a screen refresh to start, what should I do?
+
+
+[2/13/2022 9:12 PM] tux_linux
+Unless the waveshare has the same controller, I doubt your program would work...?
+
+
+[2/13/2022 9:12 PM] andi15701
+yes, unlikely to work
+
+
+[2/13/2022 9:13 PM] andi15701
+but it can be a programming interface
+
+
+[2/13/2022 9:13 PM] tux_linux
+They provide a RPi demo
+
+
+[2/13/2022 9:14 PM] tux_linux
+https://www.buydisplay.com/Raspberry_Pi/Library-Example_ER-EPD(M)0154-1B.zip
+
+
+[2/13/2022 9:14 PM] tux_linux
+But I'm not sure what to do with it
+
+
+[2/13/2022 9:17 PM] andi15701
+I am looking at it
+
+
+[2/13/2022 9:17 PM] tux_linux
+me too
+
+
+[2/13/2022 9:18 PM] tux_linux
+How can I know the number to put in `/sys/class/gpio/export` which corresponds to a physical pin on the 40-pin gpio?
+
+
+[2/13/2022 9:18 PM] tux_linux
+```
+void EPD_SendCommand(UBYTE Reg)
+{
+    DEV_Digital_Write(EPD_DC_PIN, 0);
+    DEV_Digital_Write(EPD_CS_PIN, 0);
+    DEV_SPI_WriteByte(Reg);
+    DEV_Digital_Write(EPD_CS_PIN, 1);
+}
+```
+Ideally I'd want to do that and send `0x12` to refresh
+
+
+[2/13/2022 9:19 PM] andi15701
+you need to replace DEV_Digital_Write by sysfs access
+
+
+[2/13/2022 9:19 PM] andi15701
+#define DEV_Digital_Write(_pin, _value) bcm2835_gpio_write(_pin, _value)
+
+
+[2/13/2022 9:19 PM] andi15701
+and we do not have the bcmxxx stuff
+
+
+[2/13/2022 9:19 PM] tux_linux
+yeah
+
+
+[2/13/2022 9:20 PM] andi15701
+you have the table
+
+
+[2/13/2022 9:20 PM] andi15701
+40 PIN GPIO of Banana pi BPI-M2 zero
+
+
+[2/13/2022 9:20 PM] andi15701
+on said page
+
+
+[2/13/2022 9:21 PM] tux_linux
+So basically
+1. Find the pins to export in `/sys/class/gpio/export`
+2. Write corresponding directions/values to them
+3. Send refresh command
+
+
+[2/13/2022 9:21 PM] tux_linux
+It is cryptic to me
+
+
+[2/13/2022 9:21 PM] andi15701
+yes, it is
+
+
+[2/13/2022 9:21 PM] andi15701
+so lets dercrypt
+
+
+[2/13/2022 9:21 PM] tux_linux
+How can I know what number corresponds to `CON2-P06` for example
+
+
+[2/13/2022 9:22 PM] andi15701
+you look for PAx PBx PCx entries
+
+
+[2/13/2022 9:22 PM] andi15701
+in the table
+
+
+[2/13/2022 9:22 PM] tux_linux
+ok, I see some
+
+
+[2/13/2022 9:22 PM] andi15701
+that you can translate into gpio numbers
+
+
+[2/13/2022 9:22 PM] tux_linux
+how?
+
+
+[2/13/2022 9:23 PM] andi15701
+PA0  = gpio0
+
+
+[2/13/2022 9:23 PM] andi15701
+PA1= gpio1
+
+
+[2/13/2022 9:23 PM] andi15701
+...
+
+
+[2/13/2022 9:23 PM] andi15701
+PB0 = gpio32
+
+
+[2/13/2022 9:23 PM] andi15701
+PC0  = gpio64
+
+
+[2/13/2022 9:23 PM] andi15701
+and so on
+
+
+[2/13/2022 9:23 PM] tux_linux
+So for SPI MOSI, I'd need to export pin 15
+
+
+[2/13/2022 9:24 PM] andi15701
+if you want to use that line as gpio
+
+
+[2/13/2022 9:24 PM] andi15701
+yes
+
+
+[2/13/2022 9:25 PM] andi15701
+if you want to use SPI, you do not need that
+
+
+[2/13/2022 9:25 PM] tux_linux
+ok
+I guess I don't need to export gnd/3v3 pins
+
+
+[2/13/2022 9:25 PM] andi15701
+correct
+
+
+[2/13/2022 9:25 PM] tux_linux
+Well, it is needed in the interfacing document
+
+
+[2/13/2022 9:25 PM] tux_linux
+https://www.buydisplay.com/download/interfacing/Interfacing_e-Paper_%20Display_Module_to_Raspberry_Pi.pdf
+
+
+[2/13/2022 9:26 PM] andi15701
+you need SPI but you do not want to do that using /sys/class/gpioX
+
+
+[2/13/2022 9:26 PM] tux_linux
+oh true
+
+
+[2/13/2022 9:27 PM] andi15701
+you use some /dev/spi*
+
+
+[2/13/2022 9:27 PM] tux_linux
+yeah, I had a hard time with devicetrees trying to get that work
+
+
+[2/13/2022 9:27 PM] tux_linux
+but it does now
+
+
+[2/13/2022 9:27 PM] tux_linux
+So then, which pins to export?
+
+
+[2/13/2022 9:28 PM] tux_linux
+CS, DC, RST, BUSY?
+
+
+[2/13/2022 9:32 PM] andi15701
+CS maybe
+
+
+[2/13/2022 9:32 PM] andi15701
+the others: yes
+
+
+[2/13/2022 9:32 PM] andi15701
+I would separately check whether that exporting works
+
+
+[2/13/2022 9:32 PM] tux_linux
+I can't find them in the table (except CS)
+
+
+[2/13/2022 9:33 PM] andi15701
+that are the pin names on the epd side
+
+
+[2/13/2022 9:34 PM] andi15701
+you need to find where that ends on the bpi side
+
+
+[2/13/2022 9:35 PM] tux_linux
+what do you mean?
+
+
+[2/13/2022 9:39 PM] andi15701
+These entries are the key: Physical PIN1
+
+
+[2/13/2022 9:40 PM] andi15701
+you find them in column 1 of that BPI Zero table
+
+
+[2/13/2022 9:45 PM] andi15701
+hmm, so what is the basic thing to understand here: There pins at the display named CS,DC, RST, BUSY are connected to the 40 pin header
+
+
+[2/13/2022 9:47 PM] tux_linux
+Yes
+
+
+[2/13/2022 9:48 PM] andi15701
+there you have some numbers ranging numbers from 1 to 40
+
+
+[2/13/2022 9:48 PM] andi15701
+specifiying that pin
+
+
+[2/13/2022 9:48 PM] andi15701
+on the BPI/RPI side these pins are connected to the SoC
+
+
+[2/13/2022 9:49 PM] andi15701
+that pin number on the header is not directly important/useful for programming
+
+
+[2/13/2022 9:49 PM] andi15701
+the SoC does not "know" the physical connector
+
+
+[2/13/2022 9:50 PM] andi15701
+for programming you need to know at which pin of the SoC that all ends on
+
+
+[2/13/2022 9:51 PM] andi15701
+for that translation, you use the cryptic table in the BPi document we talked about
+
+
+[2/13/2022 9:52 PM] andi15701
+and there things start to get useful
+
+{Reactions}
+👍 
+
+[2/13/2022 9:53 PM] andi15701
+we are there with the PAx
+
+
+[2/13/2022 9:53 PM] andi15701
+and stuff
+
+
+[2/13/2022 9:53 PM] andi15701
+and then the next thing to understand is how to get the kernel use the stuff, that is the translation from e.g. PA15 to gpio15
+
+
+[2/13/2022 9:54 PM] andi15701
+or how to modify devicetree to enable spi
+
+
+[2/13/2022 9:55 PM] tux_linux
+That is done
+
+
+[2/13/2022 9:56 PM] tux_linux
+https://github.com/Kobo-InkBox/kernel/commit/4a1d6e0e3714f59a3dadd03211c4b5dfc56ef53f
+
+{Embed}
+https://github.com/Kobo-InkBox/kernel/commit/4a1d6e0e3714f59a3dadd03211c4b5dfc56ef53f
+sunxi: Enable spidev driver · Kobo-InkBox/kernel@4a1d6e0
+/mnt/data/projects/git/conversations/media/4a1d6e0e3714f59a3dadd03211c4b5dfc56ef53f-744A1
+
+
+[2/13/2022 9:56 PM] tux_linux
+And other related commits before/after
+
+
+[4/2/2022 11:35 PM] vpuedro
+it worked ? the kernel worked on BPI ?
+
+
+[4/2/2022 11:35 PM] tux_linux
+only the kernel and base system...
+
+
+[4/2/2022 11:35 PM] tux_linux
+VNC to the GUI too but I haven't had any success with an external eink screen
+
+
+[4/2/2022 11:36 PM] vpuedro
+i'm curious if you have document to pack the image (or script) ?
+
+
+[4/2/2022 11:36 PM] tux_linux
+no, it's still manual work... sorry
+
+
+[4/2/2022 11:36 PM] tux_linux
+you have one?
+
+
+[4/2/2022 11:37 PM] vpuedro
+no, i search about it, i have a lot of raspberry but no banana pi
+
+
+[4/2/2022 11:37 PM] tux_linux
+it's a nice board but with very poor documentation
+
+
+[4/2/2022 11:37 PM] vpuedro
+i search to create an img with 2 partition (uboot) and the kernel to make some test
+
+
+[4/2/2022 11:38 PM] vpuedro
+(sorry for bad english)
+
+
+[4/2/2022 11:38 PM] tux_linux
+no worries
+
+
+[1/15/2024 10:23 PM] tux_linux
+@Szybet
+
+
+[1/15/2024 10:24 PM] szybet
+if you save up enough money by donations i can create this new device
+
+
+[1/15/2024 10:24 PM] tux_linux
+i guess in 5yrs maybe
+
+
+[1/15/2024 10:25 PM] tux_linux
+will need an enormous budget
+especially if it is sold afterwards
+
+
+[1/15/2024 10:25 PM] szybet
+once we have a prototype we can look for someone who would like to sell it for some %
+
+
+[1/15/2024 10:25 PM] tux_linux
+do you remember that guy aadesh
+
+
+[1/15/2024 10:26 PM] tux_linux
+he was living on mars
+
+
+[1/15/2024 10:26 PM] szybet
+not an asian guy
+
+
+[1/15/2024 10:26 PM] tux_linux
+the nepalese guy
+
+
+[1/15/2024 10:26 PM] szybet
+the chinese seller who recreated the watchy is cool
+
+
+[1/15/2024 10:26 PM] szybet
+but he is from honkkong
+
+
+[1/15/2024 10:27 PM] tux_linux
+things are probably cheaper there
+
+
+[1/15/2024 10:27 PM] tux_linux
+also, aliexpress orders arrive faster
+
+
+[1/15/2024 10:27 PM] szybet
+he used recycled parts, propably
+
+
+[1/15/2024 10:27 PM] szybet
+but first software
+
+
+[1/15/2024 10:27 PM] tux_linux
+yes
+
+
+[1/15/2024 10:27 PM] szybet
+make inkbox usable
+
+
+[1/15/2024 10:28 PM] tux_linux
+it is usable minus the reader
+
+
+[1/15/2024 10:28 PM] szybet
+i finish the reader that is in the making for 2 years now and you make inkbox code normal
+
+
+[1/15/2024 10:28 PM] tux_linux
+eta 2 yrs
+
+
+[1/15/2024 10:28 PM] szybet
+🥴
+
+
+[1/15/2024 10:29 PM] szybet
+i think i will have longer vacations between school and uni
+
+
+[1/15/2024 10:29 PM] tux_linux
+well, good
+it will be raining pull requests
+
+
+[1/15/2024 10:29 PM] tux_linux
+or not
+
+
+[1/15/2024 10:29 PM] szybet
+well i hope you have such pause too
+
+
+[1/15/2024 10:29 PM] szybet
+and will not study math in vacations
+
+
+[1/15/2024 10:30 PM] tux_linux
+i think
+but maybe i will take summer classes
+
+
+[1/15/2024 10:30 PM] tux_linux
+probably
+
+
+[1/15/2024 10:30 PM] tux_linux
+i will
+
+
+[1/15/2024 10:30 PM] szybet
+https://tenor.com/view/anime-cringe-frog-hammer-destroy-gif-15182993
+
+{Embed}
+https://tenor.com/view/anime-cringe-frog-hammer-destroy-gif-15182993
+/mnt/data/projects/git/conversations/media/anime-cringe-512F1.png
+
+
+[1/15/2024 10:30 PM] tux_linux
+school system in quebec:
+
+
+[1/15/2024 10:30 PM] szybet
+https://tenor.com/view/noooo-no-no-emote-emote-nooo-emote-gif-23071619
+
+{Embed}
+https://tenor.com/view/noooo-no-no-emote-emote-nooo-emote-gif-23071619
+/mnt/data/projects/git/conversations/media/noooo-no-80F30.png
+
+
+[1/15/2024 10:31 PM] tux_linux
+did i tell you i had a 4h exam at 7:30 am on a saturday?
+
+
+[1/15/2024 10:31 PM] tux_linux
+philosophy essay
+
+
+[1/15/2024 10:31 PM] szybet
+why the hell do you learn philosphy
+
+
+[1/15/2024 10:32 PM] tux_linux
+we had strikes during a long time so all the exams got shrunk together
+wednesday: math 4h 14:30-18:30
+thursday: chemistry 4h 7:30-11:30
+friday: physics 4h 14:00-18:00
+
+
+[1/15/2024 10:32 PM] tux_linux
+i have the pleasure to inform you that it is mandatory in the cegep curriculum
+for everyone
+
+
+[1/15/2024 10:33 PM] szybet
+hilarious
+
+
+[1/15/2024 10:35 PM] tux_linux
+also, are your class averages like extra low
+
+
+[1/15/2024 10:35 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-5FA20.png
+
+
+[1/15/2024 10:36 PM] tux_linux
+right is the class average
+
+
+[1/15/2024 10:36 PM] szybet
+what do you mean by that
+
+
+[1/15/2024 10:36 PM] tux_linux
+french, which is the base language here, scores a 69 class average
+
+
+[1/15/2024 10:36 PM] tux_linux
+average of the grades of the students in one class
+
+
+[1/15/2024 10:37 PM] szybet
+yea pretty much
+
+
+[1/15/2024 10:37 PM] tux_linux
+sad
+
+
+[1/15/2024 10:37 PM] szybet
+in polish i have a 4 and the rest of the class has 2
+
+where 6 is great and 1 is bad
+
+
+[1/15/2024 10:37 PM] tux_linux
+im also sad to have had a better english grade than the french one
+
+
+[1/15/2024 10:37 PM] tux_linux
+hm
+33% average
+great
+
+
+[1/15/2024 10:38 PM] tux_linux
+but the english teacher was less strict than the french one
+
+
+[1/15/2024 10:38 PM] szybet
+my friend who finishes classes with "distinction" just as me also has a 2 in polish because polish literature is fucked
+
+
+[1/15/2024 10:39 PM] tux_linux
+did you read french literature
+
+
+[1/15/2024 10:39 PM] szybet
+we have french words to remember for no reason
+
+
+[1/15/2024 10:39 PM] szybet
+apart from that, no
+
+{Reactions}
+👍 
+
+[1/20/2024 3:58 AM] the.mightydill
+hi 🥲
+
+
+[1/20/2024 3:59 AM] the.mightydill
+they never tell us class averages for some reason
+
+
+[1/20/2024 3:59 AM] the.mightydill
+i started german because i did french for 9 years :/
+
+
+==============================================================
+Exported 168 message(s)
+==============================================================

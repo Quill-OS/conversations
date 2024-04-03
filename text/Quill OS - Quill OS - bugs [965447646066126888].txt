@@ -1,0 +1,3594 @@
+==============================================================
+Guild: Quill OS
+Channel: Quill OS / bugs
+Topic: This is not intended to be a channel to chat about life or general things. Use #chat or #inkbox for that. Only put your bug reports there. If the bug seems important enough to you, please report it here too: https://github.com/Kobo-InkBox/inkbox/issues
+==============================================================
+
+[4/19/2022 2:50 AM] tux_linux
+First 1.9 release bug...
+Well, I guess people can live with it lol
+
+
+[4/19/2022 2:50 AM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20220419_004638816-708F5.jpg
+
+
+[4/19/2022 2:31 PM] szybet (pinned)
+No update Available when wifi is off, this is misleading ( inkbox 1.8 )
+
+{Reactions}
+👍 
+
+[4/19/2022 7:13 PM] the.mightydill (pinned)
+Blank "imaginary cover" page when opening epubs
+
+
+[4/19/2022 7:14 PM] szybet
+are there any pages in options? could you provide a image of this?
+
+
+[4/19/2022 7:14 PM] tux_linux
+Ideally in the future the real cover can be shown
+
+
+[4/19/2022 7:14 PM] szybet
+oh okay
+
+
+[4/19/2022 7:14 PM] the.mightydill
+yeah the book loads, you just need to press next
+
+
+[4/19/2022 7:14 PM] szybet
+real covers are low res, i dont thinks its a good idea
+
+
+[4/19/2022 7:15 PM] tux_linux
+Then skip to page 2 directly?
+
+
+[4/19/2022 7:15 PM] the.mightydill
+better than a blank page
+
+
+[4/19/2022 7:15 PM] the.mightydill
+good idea
+
+
+[4/19/2022 7:15 PM] szybet
+remove first page
+
+
+[4/19/2022 7:15 PM] tux_linux
+But I don't know if all ebooks are like that
+
+
+[4/19/2022 7:15 PM] szybet
+me too
+
+
+[4/20/2022 12:57 AM] nonasuomy
+Ah I just thought the book was missing the cover when I downloaded it 😄
+
+{Reactions}
+👍 
+
+[4/20/2022 6:59 PM] szybet (pinned)
+usb cabble connected every window appears every 10 s?
+
+
+[4/20/2022 7:12 PM] tux_linux
+Huh?
+
+
+[4/20/2022 7:13 PM] szybet
+the best part: it stacks himself up, so there are after some time many windows above each other
+
+
+[4/20/2022 7:13 PM] tux_linux
+It happens everytime?
+
+
+[4/20/2022 7:14 PM] szybet
+i think yes
+
+
+[4/20/2022 7:14 PM] tux_linux
+You're the only device where it happens then
+
+
+[4/20/2022 7:14 PM] szybet
+D:
+
+
+[4/20/2022 7:14 PM] szybet
+maybe the usb cable is damaged?
+
+
+[4/20/2022 7:14 PM] tux_linux
+Maybe
+
+
+[4/20/2022 7:15 PM] tux_linux
+Maybe it's a kernel bug
+
+
+[4/20/2022 7:16 PM] szybet
+as you are here, could you look at this?
+```cpp
+message($$IOS_ARCH)
+ # here it says kobo
+IOS_ARCH:Kobo {
+    LIBS += -L$$PWD/libraries/zip_libraries/lib-build/KOBO -lzip
+    message(Library for kobo)
+} else {
+    LIBS += -L$$PWD/libraries/zip_libraries/lib-build/PC -lzip
+    # but this else is executed always
+    message(Library for pc)
+}
+```
+why
+
+
+[4/20/2022 7:35 PM] tux_linux
+What are you doing?
+
+
+[4/20/2022 7:35 PM] tux_linux
+Also head out to #dev
+
+
+[4/21/2022 10:29 PM] szybet
+inkbox crash 255 when changing to page 80 on a random book
+
+
+[4/21/2022 10:30 PM] szybet
+every time
+
+
+[4/21/2022 10:30 PM] szybet
+😂
+
+
+[4/21/2022 10:35 PM] szybet
+oh. only on this book
+
+
+[4/21/2022 10:37 PM] szybet
+i will make a github issue, but first GUI_DEBUG
+
+
+[4/21/2022 10:37 PM] tux_linux
+Oof
+
+
+[4/21/2022 10:39 PM] tux_linux
+At least the auto restart helps things a bit
+
+
+[4/21/2022 10:40 PM] szybet
+yea
+
+
+[4/21/2022 10:45 PM] szybet (pinned)
+https://github.com/Kobo-InkBox/inkbox/issues/27
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/issues/27
+Segmentation fault at "Go to page" button, only in specific book + ...
+As in the tittle. I can provide the book on pv if you want to test it. Here is the GUI_DEBUG log: kobo:/boot/flags# iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini cat: can&#39;t open &...
+/mnt/data/projects/git/conversations/media/27-93A4F
+
+
+[4/21/2022 10:46 PM] tux_linux
+Yes, provide the book
+
+
+[4/21/2022 10:46 PM] szybet
+for me it loops itself at some stage
+
+
+[4/21/2022 10:46 PM] tux_linux
+Oh it's a pdf
+
+
+[4/21/2022 10:47 PM] tux_linux
+PDF have strange issues with go to page
+
+
+[4/21/2022 10:47 PM] tux_linux
+Reader segfaults for literally no reason and I have not found out why
+Maybe you can look in the code and try to see what's the problem, I don't know on my side
+
+
+[4/21/2022 10:49 PM] szybet
+first i want to make sanki usable and then add the json thing to app menu
+
+{Reactions}
+👍 
+
+[4/21/2022 10:49 PM] szybet
+let the issue just be there on github, to remember it
+
+
+[4/21/2022 10:50 PM] tux_linux
+Ok
+
+
+[4/21/2022 10:50 PM] szybet
+for 2.0 we should solve all bugs
+
+
+[4/21/2022 10:50 PM] tux_linux
+Ha ha ha
+Probably not all of them, we will create new ones in fixing others I guess
+
+
+[4/21/2022 10:50 PM] szybet
+yes, its called programming
+
+
+[4/21/2022 10:51 PM] szybet
+😆
+
+
+[4/21/2022 11:24 PM] nonasuomy
+Please introduce a bug that makes wifi work on the n905c for v2.0 😄
+
+{Reactions}
+👍 
+
+[4/21/2022 11:24 PM] szybet
+well, you can maybe try to make it work at your own
+
+
+[4/21/2022 11:25 PM] szybet
+i did some tweaks for the nia touchscreen, and i dont know cpp at all
+
+
+[4/21/2022 11:26 PM] the.mightydill
+N705 too ;p
+
+
+[4/21/2022 11:26 PM] tux_linux
+You're willing to get brain damage from this then...
+
+
+[4/21/2022 11:26 PM] tux_linux
+It's a **nightmare**
+
+
+[4/21/2022 11:27 PM] nonasuomy
+I’m only a poor programmer at best more of a hacker. I can understand and follow code. Smash bits of code together and hope for the best.
+
+{Reactions}
+👍 (2) 
+
+[4/21/2022 11:27 PM] nonasuomy
+If @tux-linux can’t figure it out I’m hopeless.
+
+
+[4/21/2022 11:28 PM] szybet
+maybe you guys could write to kobo, that they should update the linux sources, becouse of the license otherwise you will call the cyber police or smth
+
+
+[4/21/2022 11:28 PM] tux_linux
+Pinned a message.
+
+
+[4/21/2022 11:28 PM] tux_linux
+Pinned a message.
+
+
+[4/21/2022 11:28 PM] tux_linux
+Pinned a message.
+
+
+[4/21/2022 11:28 PM] szybet
+not only you can have it, share the pain ;p
+
+
+[4/21/2022 11:28 PM] tux_linux
+Pinned a message.
+
+
+[4/21/2022 11:29 PM] tux_linux
+Yay ....
+
+
+[4/21/2022 11:29 PM] tux_linux
+That will be when I have truly no other solution
+
+
+[4/21/2022 11:30 PM] szybet
+this was a faulty usb cable! + 2 chinese usb hubs
+
+but the usb menu still appears when i exit a book, it should only appear when the cable is connected once
+
+
+[4/21/2022 11:31 PM] szybet
++ their opinion on right to repair, maybe they could share the datasheets? just to ask, im curious
+
+
+[4/21/2022 11:31 PM] tux_linux
+Idk
+
+
+[4/21/2022 11:32 PM] tux_linux
+Providing that their software still supports a 12 year old device...
+
+
+[4/21/2022 11:32 PM] nonasuomy
+Still seems to be getting official updates
+
+
+[4/21/2022 11:32 PM] szybet
+its nothing big, its called good software design at the beginning
+
+
+[4/21/2022 11:32 PM] szybet
+but still, its great
+
+
+[4/21/2022 11:33 PM] tux_linux
+Look at Kindle, Apple, etc
+
+
+[4/21/2022 11:33 PM] nonasuomy
+Even though when I contacted them they told me my device is dead and to buy a new one
+
+
+[4/21/2022 11:33 PM] tux_linux
+Hmm
+
+
+[4/21/2022 11:33 PM] szybet
+they are shitty companies? end?
+
+
+[4/21/2022 11:33 PM] nonasuomy
+(Just gave me the wrong directions for  factory rest)
+
+
+[4/21/2022 11:34 PM] szybet
+you mean kobo?
+
+
+[4/21/2022 11:34 PM] nonasuomy
+Yeah
+
+
+[4/21/2022 11:34 PM] szybet
+but what was the problem?
+
+
+[4/21/2022 11:34 PM] szybet
+and how much was the device old
+
+
+[4/21/2022 11:34 PM] szybet
+i can fully understand not providing parts etc for a 12 year old device for example
+
+
+[4/21/2022 11:34 PM] nonasuomy
+The screen had lines across it and wouldn’t turn on
+
+
+[4/21/2022 11:35 PM] nonasuomy
+If you search up this issue it basically says it’s dead.
+
+
+[4/21/2022 11:35 PM] nonasuomy
+I contacted them for a last ditch effort
+
+
+[4/21/2022 11:36 PM] nonasuomy
+To get the firmware
+
+
+[4/21/2022 11:36 PM] nonasuomy
+As I thought it probably just got a bad update and purged its content
+
+
+[4/21/2022 11:37 PM] nonasuomy
+They told me they don’t have firmware files.
+
+
+[4/21/2022 11:37 PM] szybet
+how much old it is...
+
+
+[4/21/2022 11:38 PM] nonasuomy
+The n905c no idea really old
+
+
+[4/21/2022 11:39 PM] nonasuomy
+23 may 2011
+
+
+[4/21/2022 11:39 PM] szybet
+10 years
+
+
+[4/21/2022 11:39 PM] nonasuomy
+They were telling me lies though they said they don’t have firmware files for any of their devices
+
+
+[4/21/2022 11:40 PM] szybet
+"the tech team said that the call center shouldn't give them so much problems"
+
+
+[4/21/2022 11:40 PM] nonasuomy
+I sent them a link to their firmware files
+
+
+[4/21/2022 11:40 PM] nonasuomy
+And they still kept denying it
+
+{Reactions}
+😂 (2) 
+
+[4/21/2022 11:40 PM] szybet
+thats just some weird helper
+
+
+[4/21/2022 11:40 PM] szybet
+do you have proof for what you are saying? some ss?
+
+
+[4/21/2022 11:41 PM] szybet
+this would be hilarious
+
+
+[4/21/2022 11:42 PM] tux_linux
+I messaged them about a similar problem a long time ago, at least they said that they couldn't provide them to customers, not that they didn't exist
+
+
+[4/21/2022 11:43 PM] nonasuomy
+I was like this unit will work if you can give me these files. Finally I just gave up on them and dumped the firmware files from the website in the .kobo folder and found the right button combo and boom screen blanked and it worked fine
+
+
+[4/21/2022 11:43 PM] szybet
+`they` so the call center
+
+
+[4/21/2022 11:43 PM] szybet
+i think asking them on twitter, where a smarter persons responds could give another respond. maybe not positive, but with more sense
+
+
+[4/21/2022 11:43 PM] nonasuomy
+It even just got an April update
+
+
+[4/21/2022 11:44 PM] nonasuomy
+I would understand if they were no longer updating it and maybe they purged their archive of old data.
+
+
+[4/21/2022 11:48 PM] nonasuomy
+After that I found InkBox which made me happy.
+
+{Reactions}
+👍 
+
+[4/21/2022 11:49 PM] nonasuomy
+https://pgaskin.net/KoboStuff/kobofirmware.html
+
+{Embed}
+https://pgaskin.net/KoboStuff/kobofirmware.html
+Kobo Firmware Downloads
+Get the latest automatically-updated links to firmware releases and release notes for Kobo devices, or download older firmware versions. To install an update, extract the zip file into the .kobo folder on your device.
+
+
+[4/21/2022 11:50 PM] szybet
+yea, i started tinkering with the nia thanks to this site
+
+
+[4/21/2022 11:50 PM] nonasuomy
+They said they were not legitimate files
+
+
+[4/21/2022 11:51 PM] nonasuomy
+I was like k…
+
+
+[4/21/2022 11:51 PM] szybet
+oh, its pgaskin site
+
+
+[4/21/2022 11:51 PM] szybet
+i didn't noticed
+
+
+[4/22/2022 12:15 AM] the.mightydill
+idk if this is a bug as much as a design issue, but settings page is too big horizontally
+
+
+[4/22/2022 12:16 AM] tux_linux
+the bug is the kobo mini screen size
+
+
+[4/22/2022 12:16 AM] szybet
+😂
+
+
+[4/22/2022 12:16 AM] szybet
+its `mini`
+
+
+[4/22/2022 12:16 AM] the.mightydill
+hm yeah probably 🤣
+
+
+[4/27/2022 3:06 AM] nonasuomy
+usr/gen_initramfs.sh: Cannot open '/home/build/inkbox/kernel/initrd/busybox-1.32.1/_install-emu/'
+make[1]: *** [usr/Makefile:80: usr/initramfs_data.cpio] Error 1
+
+
+[4/27/2022 3:07 AM] tux_linux
+That's normal
+You need to change CONFIG_INTRAMFS_SOURCE to your initrd source path
+
+
+[4/27/2022 3:07 AM] nonasuomy
+What's my initrd source path haha...
+
+
+[4/27/2022 3:07 AM] tux_linux
+`~/code/busybox/_install` in your case
+
+
+[4/27/2022 3:22 AM] nonasuomy
+```
+export CONFIG_INTRAMFS_SOURCE=~/code/busybox/_install
+```
+
+
+[4/27/2022 3:22 AM] nonasuomy
+thanks
+
+
+[4/27/2022 3:22 AM] tux_linux
+you can really do that?!
+
+
+[4/27/2022 3:22 AM] tux_linux
+awesome
+
+
+[4/27/2022 3:25 AM] nonasuomy
+```
+Formatting 'sd.img', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=4294967296 lazy_refcounts=off refcount_bits=16
+qemu-img: sd.img: Failed to get "write" lock
+Is another process using the image [sd.img]?
+```
+
+
+[4/27/2022 3:25 AM] tux_linux
+what's the command?
+
+
+[4/27/2022 3:26 AM] tux_linux
+hmmm
+stop what you are doing
+
+
+[4/27/2022 3:26 AM] nonasuomy
+env GITDIR=${PWD} ./bootstrap.sh
+
+
+[4/27/2022 3:26 AM] tux_linux
+`sudo qemu-nbd --disconnect /dev/nbd0`
+
+
+[4/27/2022 3:26 AM] tux_linux
+what's `ls /tmp -shal`?
+
+
+[4/27/2022 3:27 AM] tux_linux
+You did install all the required deps?
+```
+sudo apt install build-essential qemu-system-arm git u-boot-tools swig python-dev python3-dev bison flex squashfs-tools bc
+```
+
+
+[4/27/2022 3:27 AM] nonasuomy
+yes
+
+
+[4/27/2022 3:28 AM] nonasuomy
+it died during the build of the emu so it locked the image write process still running not sure how to resume but run the command again.
+
+
+[4/27/2022 3:28 AM] tux_linux
+how did it 'die'?
+
+
+[4/27/2022 3:28 AM] tux_linux
+?
+
+
+[4/27/2022 3:28 AM] nonasuomy
+here
+
+
+[4/27/2022 3:28 AM] tux_linux
+oh ok
+
+
+[4/27/2022 3:29 AM] tux_linux
+but then you aren't using the right thing
+
+
+[4/27/2022 3:31 AM] tux_linux
+```
+sudo umount /tmp/inkbox/*
+sudo rm -rf /tmp/inkbox/
+sudo qemu-nbd --disconnect /dev/nbd0
+```
+
+
+[4/27/2022 3:31 AM] tux_linux
+then
+
+
+[4/27/2022 3:32 AM] tux_linux
+Delete the entire emu repo from its current folder, then
+```
+mkdir -p /home/build/kernel
+chown -R nonasuomy:nonasuomy /home/build
+cd /home/build/kernel
+git clone https://github.com/Kobo-InkBox/emu && cd emu
+env GITDIR="${PWD}" ./bootstrap.sh
+```
+
+
+[4/27/2022 3:34 AM] tux_linux
+or, if you want to clone the kernel repo separately instead of the script doing it
+```
+mkdir -p /home/build/inkbox
+cd /home/build/inkbox
+git clone https://github.com/Kobo-InkBox/kernel
+git clone https://github.com/Kobo-InkBox/emu && cd emu/
+env GITDIR="${PWD}" KERNELDIR="/home/build/inkbox/kernel" ./release.sh
+```
+
+
+[4/27/2022 3:37 AM] nonasuomy
+This is going to take a long time to make mistakes
+
+
+[4/27/2022 3:37 AM] tux_linux
+hang on 2secs
+
+
+[4/27/2022 3:38 AM] tux_linux
+alright you can do that (+ the chown part)
+I pushed a new gui bundle to 23.163.0.39 for emu
+
+
+[4/27/2022 3:39 AM] tux_linux
+I'm also bootstrapping it now, I accidentally deleted the folder last week
+
+{Reactions}
+😅 
+
+[4/27/2022 3:39 AM] tux_linux
+luckily, nothing important was in there
+
+
+[4/27/2022 4:15 AM] nonasuomy
+./release.sh no such file...
+
+
+[4/27/2022 4:20 AM] tux_linux
+*bootstrap.sh sorry
+
+
+[4/27/2022 5:03 AM] nonasuomy
+Yay!
+```
+/dev/nbd0 disconnected
++ echo 'Bootstrap done. You should now be able to launch the emulator by running: '\''env GITDIR=/home/build/inkbox/emu /home/build/inkbox/emu/out/boot/qemu-boot'\''.'
+Bootstrap done. You should now be able to launch the emulator by running: 'env GITDIR=/home/build/inkbox/emu /home/build/inkbox/emu/out/boot/qemu-boot'.
+```
+Great work!
+
+{Reactions}
+👍 
+
+[4/27/2022 5:05 AM] nonasuomy
+Will this catch on fire running in virtualbox 😄
+
+
+[4/27/2022 5:08 AM] nonasuomy
+Oooh I saw the InkBox logo!
+
+
+[4/27/2022 5:08 AM] nonasuomy
+loads sideways
+
+
+[4/27/2022 5:10 AM] nonasuomy
+Got a blinking cursor maybe something will load eventually.
+
+
+[4/27/2022 5:18 AM] tux_linux
+you need to vnc to the gui
+
+
+[4/27/2022 5:18 AM] tux_linux
+read the readme
+
+
+[4/27/2022 5:19 AM] nonasuomy
+oh so I see the logo a second time that is all I will see until I VNC.
+
+
+[4/27/2022 5:20 AM] nonasuomy
+I flipped back to the page and it was sitting right there haha VNC...
+
+{Reactions}
+👍 
+
+[4/27/2022 5:20 AM] tux_linux
+yes
+
+
+[4/27/2022 5:21 AM] tux_linux
+it will probably be real slow, as in unusable
+
+
+[4/27/2022 5:21 AM] tux_linux
+but you can try to use it anyway
+
+
+[4/27/2022 5:22 AM] nonasuomy
+Yeah that's fine just wanted to see it working I'll move it outside of the VM afterwards.
+
+
+[4/27/2022 5:22 AM] tux_linux
+I once made a livedvd of the emulator
+
+
+[4/27/2022 5:22 AM] tux_linux
+it's not up-to-date, but maybe i'll update it soon
+
+
+[4/27/2022 5:22 AM] tux_linux
+http://23.163.0.39/bundles/inkbox/emulator/inkboxos_emulator.iso
+
+
+[4/27/2022 5:23 AM] tux_linux
+https://www.mobileread.com/forums/showpost.php?p=4201675&postcount=62
+
+{Embed}
+https://www.mobileread.com/forums/showpost.php?p=4201675&postcount=62
+MobileRead Forums - View Single Post -  InkBox: a new open-source O...
+MobileRead - the resource for mobile geeks seeking information and advice for keeping their gadgets happy.
+
+{Reactions}
+🤩 
+
+[4/27/2022 5:26 AM] tux_linux
+there seems to be some fix to do to the dpi config
+it's a little bit too big
+
+
+[4/27/2022 5:26 AM] tux_linux
+oh, it's fine after oobe setup
+
+
+[4/27/2022 5:26 AM] tux_linux
+did you succeed in getting vnc to work?
+
+
+[4/27/2022 5:27 AM] nonasuomy
+Nope Unable to connect to socket: Connection timed out (110)
+
+
+[4/27/2022 5:27 AM] tux_linux
+you'll also be able to use online library on the emulator
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-BDCAD.png
+
+
+[4/27/2022 5:27 AM] tux_linux
+what address?
+
+
+[4/27/2022 5:27 AM] nonasuomy
+127.0.0.1:5901
+
+
+[4/27/2022 5:28 AM] tux_linux
+ok, well, maybe it's starting
+
+
+[4/27/2022 5:28 AM] tux_linux
+does `top` show a lot of cpu usage?
+
+
+[4/27/2022 5:29 AM] nonasuomy
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-3D7AA.png
+
+
+[4/27/2022 5:29 AM] tux_linux
+in the qemu window, type 'root', enter, then 'root'
+
+
+[4/27/2022 5:29 AM] tux_linux
+you should see something overwriting the splash
+
+
+[4/27/2022 5:29 AM] tux_linux
+and have a console
+
+
+[4/27/2022 5:30 AM] tux_linux
+--or-no
+
+
+[4/27/2022 5:30 AM] tux_linux
+my bad
+
+
+[4/27/2022 5:30 AM] tux_linux
+you need to go in the terminal you launched the emulator from
+
+
+[4/27/2022 5:30 AM] tux_linux
+there will be a console there
+
+
+[4/27/2022 5:31 AM] nonasuomy
+```
+Setting up watches.
+Watches established.
+ * Checking for available updates ...
+Update skipped or no update available, aborting ...
+ [ ok ]
+ * Waiting for a power button event to put the device to sleep ...
+ [ ok ]
+ * WARNING: wake_standby is already stopped
+Setting up watches.
+Watches established.
+ * Starting InkBox GUI ...
+ * Starting InkBox Daemon (ibxd) ...
+ [ ok ]
+
+```
+
+
+[4/27/2022 5:32 AM] tux_linux
+yeah, no login prompt?
+
+
+[4/27/2022 5:32 AM] nonasuomy
+tried typing root in there nothing showed up
+
+
+[4/27/2022 5:32 AM] tux_linux
+maybe it hung up ;o)
+
+
+[4/27/2022 5:32 AM] tux_linux
+it's very demanding for the hardware
+
+
+[4/27/2022 5:32 AM] tux_linux
+it has to emulate another architecture
+
+
+[4/27/2022 5:33 AM] nonasuomy
+Does it run really slow even if it's not running in another vm ?
+
+
+[4/27/2022 5:35 AM] nonasuomy
+```
+/tmp/touch_event MODIFY 
+/tmp/power MODIFY 
+Setting up watches.
+Watches established.
+/tmp/power MODIFY 
+Setting up watches.
+Watches established.
+/tmp/power MODIFY 
+Setting up watches.
+Watches established.
+Setting up watches.
+Watches established.
+```
+
+
+[4/27/2022 5:35 AM] nonasuomy
+this just started dumping to the console after I tried to click on the qemu window
+
+
+[4/27/2022 5:36 AM] nonasuomy
+Not sure if directly related.
+
+
+[4/27/2022 5:37 AM] nonasuomy
+tried typing root root again nothing happened.
+
+
+[4/27/2022 5:50 AM] nonasuomy
+maybe the vm is not using the same network interface (bridge)?
+
+
+[4/27/2022 5:52 AM] tux_linux
+Yes
+
+
+[4/27/2022 5:52 AM] nonasuomy
+```
+root
+root
+
+/tmp/touch_event MODIFY 
+Setting up watches.
+Watches established.
+Generic PHY 4e000000.ethernet-ffffffff:01: attached PHY driver (mii_bus:phy_addr=4e000000.ethernet-ffffffff:01, irq=POLL)
+smsc911x 4e000000.ethernet eth0: SMSC911x/921x identified at 0xc08b0000, IRQ: 30
+udhcpc: started, v1.33.0
+udhcpc: sending discover
+udhcpc: sending select for 10.0.2.15
+udhcpc: lease of 10.0.2.15 obtained, lease time 86400
+ [ ok ]
+
+Welcome to InkBox OS 1.9
+Kernel 5.15.10 on armv7l (/dev/ttyAMA0)
+
+inkbox login: root
+Password: 
+Login incorrect
+login[23162]: invalid password for 'root' on 'ttyAMA0'
+inkbox login: root
+Password: 
+Welcome to InkBox OS!
+login[23231]: root login on 'ttyAMA0'
+
+ls
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+inkbox:~# 
+inkbox:~# ls
+```
+
+
+[4/27/2022 5:53 AM] tux_linux
+Oh ok
+
+
+[4/27/2022 5:53 AM] tux_linux
+It took so long
+
+
+[4/27/2022 5:53 AM] tux_linux
+Now VNC should be available
+
+
+[4/27/2022 5:53 AM] tux_linux
+Yes, but less slow
+
+
+[4/27/2022 5:57 AM] nonasuomy
+Just a black screen so far in VNC  maybe still loading...
+
+
+[4/27/2022 5:57 AM] nonasuomy
+Reminds me of trying to run MacOS in VM back in the day.
+
+
+[4/27/2022 5:58 AM] nonasuomy
+Took multiple hours to boot 😄
+
+
+[4/27/2022 5:59 AM] tux_linux
+It is
+
+
+[4/27/2022 5:59 AM] tux_linux
+But good luck on actually using that...
+
+
+[4/27/2022 6:00 AM] tux_linux
+On my VM I can get about 1/2 the speed of the Touch
+
+{Reactions}
+😁 
+
+[4/27/2022 6:00 AM] tux_linux
+Which is really usable
+
+
+[4/27/2022 6:00 AM] nonasuomy
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-4295A.png
+
+
+[4/27/2022 6:01 AM] tux_linux
+Nice
+
+
+[4/27/2022 6:01 AM] tux_linux
+Click on a button, you'll probably have to wait 15 min to actually see something new...
+
+{Reactions}
+😂 
+
+[4/27/2022 6:02 AM] nonasuomy
+We'll time it 12:01 clicked....
+
+
+[4/27/2022 6:03 AM] nonasuomy
+Is there a way to get live console output still after logging in?
+
+
+[4/27/2022 6:03 AM] nonasuomy
+To watch what it's processing
+
+
+[4/27/2022 6:04 AM] nonasuomy
+I think 15 mins may be an understatement 😄
+
+{Reactions}
+😂 
+
+[4/27/2022 6:05 AM] tux_linux
+There's not much to watch while it's processing...
+Try `strace -p $(pidof inkbox-bin)`
+That will give you a lot of info but it's not a log from the program itself
+
+
+[4/27/2022 6:07 AM] nonasuomy
+```
+inkbox:~# strace -p $(pidof inkbox-bin)
+strace: option requires an argument: p
+```
+
+
+[4/27/2022 6:11 AM] nonasuomy
+So only 6mins per menu item 🔥
+
+
+[4/27/2022 6:17 AM] nonasuomy
+2/4... 🥳
+
+
+[4/27/2022 6:17 AM] tux_linux
+Wooo
+
+
+[4/27/2022 6:17 AM] tux_linux
+Oh
+oobe-inkbox-bin
+
+
+[4/27/2022 6:18 AM] tux_linux
+Normally it's inkbox-bin
+
+
+[4/27/2022 6:19 AM] nonasuomy
+Any way to load this interface without emulating?
+
+
+[4/27/2022 6:20 AM] tux_linux
+Nope
+
+
+[4/27/2022 6:20 AM] tux_linux
+Or get a powerful aarch64 board and run it under KVM, maybe...
+
+
+[4/27/2022 6:21 AM] nonasuomy
+Back in the day we built a simulator for people to build kodi skins/python addons.
+
+
+[4/27/2022 6:21 AM] tux_linux
+Try to increase the VM's number of CPU cores as much as you can (VirtualBox)
+
+
+[4/27/2022 6:22 AM] tux_linux
+InkBox OS is too complicated for a simulator, alas
+
+
+[4/27/2022 6:23 AM] nonasuomy
+Maybe just have certain specifications for building your QT app in and then hope for the best.
+
+
+[4/27/2022 6:24 AM] tux_linux
+The problem is that the Qt app depends on named pipes (ibxd) and is really tightly linked to the system and kernel/initrd
+
+
+[4/27/2022 6:25 AM] nonasuomy
+Stuck on 2 of 4 so far looks like it still dumps a few things to the console
+```
+PM: suspend entry (s2idle)
+Filesystems sync: 0.651 seconds
+Freezing user space processes ... (elapsed 0.278 seconds) done.
+OOM killer disabled.
+Freezing remaining freezable tasks ... (elapsed 0.209 seconds) done.
+printk: Suspending console(s) (use no_console_suspend to debug)
+```
+
+
+[4/27/2022 6:26 AM] tux_linux
+lmao
+
+
+[4/27/2022 6:26 AM] tux_linux
+It's going to sleep automatically
+
+
+[4/27/2022 6:27 AM] tux_linux
+echo -1 > /data/config/15-sleep_timeout/config
+
+
+[4/27/2022 6:28 AM] nonasuomy
+Not sure how to wake it up 😄 tried clicking on the qemu windows/typing in the console (nothing shows up)/click in the vnc. Maybe it will take a while to register what I did to those three...
+
+
+[4/27/2022 6:29 AM] tux_linux
+Ok reboot in initrd console
+
+
+[4/27/2022 6:30 AM] nonasuomy
+Maybe disable that sleep function as default for good measure on the emu 😄
+
+
+[4/27/2022 6:32 AM] tux_linux
+mount MMC p1
+echo false > /MMCp1/flags/FIRST_BOOT
+unmount MMC p1
+mount MMC p4
+echo -1 > /MMCp4/config/15.../config
+unmount MMC p4
+sync
+reboot
+
+
+[4/27/2022 6:32 AM] tux_linux
+Hit a key on "hit any key..."
+Login is root, password root if it needs one
+
+
+[4/27/2022 6:33 AM] nonasuomy
+is that u-boot?
+
+
+[4/27/2022 6:33 AM] tux_linux
+No
+
+
+[4/27/2022 6:33 AM] tux_linux
+There isn't U-Boot in the emu
+
+
+[4/27/2022 6:34 AM] tux_linux
+It's that
+
+
+[4/27/2022 6:36 AM] tux_linux
+Create dirs in p1 if they don't exist
+
+
+[4/27/2022 6:40 AM] nonasuomy
+Started mashing the keyboard here but don't think it responded when it wanted.
+```
+(initrd) Hit any key to stop auto-boot ... 
+Security policy not enforced; root access permitted.
+[FBInk] Block device `/dev/mmcblk0` does not appear to contain an NTX HWConfig entry!
+[FBInk] [refresh_kobo] MXCFB_SEND_UPDATE_V1_NTX: Inappropriate ioctl for device!
+[FBInk] [fbink_cls] Failed to refresh the screen!
+[FBInk] Block device `/dev/mmcblk0` does not appear to contain an NTX HWConfig entry!
+[FBInk] [refresh_kobo] MXCFB_SEND_UPDATE_V1_NTX: Inappropriate ioctl for device!
+EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null). Quota mode: disabled.
+ext4 filesystem being mounted at /rootfs-part supports timestamps until 2038 (0x7fffffff)
+Verifying root filesystem's digital signature ...
+```
+
+
+[4/27/2022 6:41 AM] tux_linux
+Smash it as soon as you launch QEMU
+
+
+[4/27/2022 6:41 AM] nonasuomy
+ok I was doing that too but very slowly
+
+
+[4/27/2022 6:41 AM] nonasuomy
+once per line
+
+
+[4/27/2022 6:41 AM] tux_linux
+Do it more
+
+
+[4/27/2022 6:42 AM] tux_linux
+Try normal keyboard keys, like a, b, etc
+
+
+[4/27/2022 6:44 AM] nonasuomy
+May have caused some kind of weird panic
+
+
+[4/27/2022 6:45 AM] nonasuomy
+```
+[<80868fb8>] (_raw_spin_unlock_irqrestore) from [<806bc910>] (mmc_start_request+0x84/0xac)
+[<806bc910>] (mmc_start_request) from [<806bca2c>] (mmc_wait_for_req+0x64/0xd0)
+[<806bca2c>] (mmc_wait_for_req) from [<806c6e0c>] (mmc_app_send_scr+0x10c/0x148)
+[<806c6e0c>] (mmc_app_send_scr) from [<806c5878>] (mmc_sd_setup_card+0x50/0x34c)
+[<806c5878>] (mmc_sd_setup_card) from [<806c5c70>] (mmc_sd_init_card+0xfc/0x918)
+[<806c5c70>] (mmc_sd_init_card) from [<806c663c>] (mmc_attach_sd+0xd4/0x178)
+[<806c663c>] (mmc_attach_sd) from [<806be124>] (mmc_rescan+0x2bc/0x30c)
+[<806be124>] (mmc_rescan) from [<8013dd68>] (process_one_work+0x1f0/0x524)
+[<8013dd68>] (process_one_work) from [<8013e100>] (worker_thread+0x64/0x5a8)
+[<8013e100>] (worker_thread) from [<801454f8>] (kthread+0x148/0x164)
+[<801454f8>] (kthread) from [<80100130>] (ret_from_fork+0x14/0x24)
+Exception stack(0x81893fb0 to 0x81893ff8)
+3fa0:                                     00000000 00000000 00000000 00000000
+3fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+3fe0: 00000000 00000000 00000000 00000000 00000013 00000000
+
+```
+
+
+[4/27/2022 6:45 AM] tux_linux
+Just pkill qemu-system-arm
+
+
+[4/27/2022 6:45 AM] tux_linux
+While doing what?
+
+
+[4/27/2022 6:46 AM] nonasuomy
+mashing the asd keys
+
+
+[4/27/2022 6:46 AM] tux_linux
+Ok
+Strange
+
+
+[4/27/2022 6:46 AM] tux_linux
+Try restarting QEMU
+
+
+[4/27/2022 6:46 AM] nonasuomy
+I just hit reset at the top of QEMU
+
+{Reactions}
+👍 
+
+[4/27/2022 6:47 AM] tux_linux
+Time to sleep here... Good night
+
+
+[4/27/2022 6:48 AM] nonasuomy
+Yup tossing in the towel! thanks again have a good rest!
+
+{Reactions}
+👍 
+
+[4/27/2022 6:49 AM] nonasuomy
+ascii art for you
+
+```
+/home/build/inkbox/emu$ fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdfdfdfdfdfdfdfdfdfdfdfdfdfdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdfasdasda
+```
+
+
+[4/27/2022 6:50 AM] nonasuomy
+I call this one Full Self Driving Beta.
+
+
+[4/27/2022 7:00 AM] nonasuomy
+This is what we all should do more often...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-B3167.png
+
+
+[4/28/2022 8:49 PM] tux_linux
+It's even rotated the right way around lmao
+
+{Reactions}
+😂 
+
+[5/17/2022 5:58 AM] tux_linux
+Fixed: https://github.com/Kobo-InkBox/inkbox/commit/c328761bc55763442c2b322a7f99ec1f451976c4
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/commit/c328761bc55763442c2b322a7f99ec1f451976c4
+Tiny fixes in OTA updater · Kobo-InkBox/inkbox@c328761
+/mnt/data/projects/git/conversations/media/c328761bc55763442c2b322a7f99ec1f451976c4-B3B45
+
+{Reactions}
+🥳 
+
+[7/17/2022 9:57 PM] szybet
+as for time syncing, there is a bigger problem? i cant ping any domain, nslookup works fine, wget too with domains. also the ntp domains are fine, only the ereader has some problems
+
+
+[7/17/2022 9:57 PM] szybet
+im asking, maybe you know the issue ( a certificate ) if not i will debug more
+
+
+[7/17/2022 10:05 PM] tux_linux
+I had this domain problem when using `busybox wget`; it seems it can't resolve domain names even though `busybox nslookup` is able to; that's why you get the util-linux version of `wget` in the rootfs
+
+
+[7/17/2022 10:07 PM] tux_linux
+Recently I updated the bundled BusyBox to v1.34.1, maybe it caused the NTP issue?
+
+
+[7/17/2022 10:07 PM] tux_linux
+(it's been updated at around the end of May)
+
+
+[7/17/2022 10:17 PM] szybet
+propably
+
+
+[7/18/2022 8:52 AM] tux_linux (pinned)
+TODO : don't forget to support text files in local library widget
+EDIT: done
+
+
+[7/18/2022 8:52 AM] tux_linux
+Pinned a message.
+
+
+[7/26/2022 3:57 PM] tux_linux (pinned)
+TODO: Remember that we need to compile FBInk shared library for power daemon on Kindle
+
+
+[7/26/2022 3:57 PM] tux_linux
+Pinned a message.
+
+
+[7/26/2022 5:25 PM] tux_linux
+~~ipd: not setting cpu governor after GUI settings update, needs restart~~
+solved, weird qt bug
+
+
+[7/26/2022 5:32 PM] szybet
+okay? weird
+
+
+[7/28/2022 6:54 PM] tux_linux
+TODO: ipd: Implement `ready` fifo function that tells it to start idleSleep once the GUI is ready
+
+
+[7/28/2022 8:39 PM] szybet
+what?
+
+
+[7/28/2022 8:39 PM] szybet
+do you want to read from the pipe?
+
+
+[7/28/2022 8:39 PM] szybet
+i can just look if inkbox-bin is started + wait 10s and it will be fine
+
+
+[7/28/2022 10:47 PM] tux_linux
+that could work
+
+
+[7/28/2022 10:47 PM] tux_linux
+wait more like 30s
+
+
+[7/28/2022 10:47 PM] tux_linux
+on older devices it can take that time
+
+
+[7/28/2022 10:47 PM] szybet
+sure
+
+
+[8/4/2022 9:31 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-D675B.png
+
+
+[8/4/2022 9:32 PM] tux_linux
+Fbdepth
+
+
+[8/4/2022 9:33 PM] szybet
+did he choosed the wrong image?
+
+
+[8/9/2022 4:56 AM] tux_linux (pinned)
+online library sync bug (arghhh)
+
+
+[8/9/2022 4:56 AM] tux_linux
+Pinned a message.
+
+
+[8/23/2022 12:43 AM] aryetis
+So .... I might be stupid. But I can't flash the 1.9 image using balenaEtcher (nor rufus, but I'm not sure if rufus is even capable of such thing)
+
+
+[8/23/2022 12:43 AM] aryetis
+I get the following error 
+`Can't configure or trim a source that is not randomly readable`
+
+
+[8/23/2022 12:46 AM] aryetis
+I hope, I'm not working on a dead sd card
+
+
+[8/23/2022 12:47 AM] aryetis
+... that might be the case .... welp that one was stupid mistake to waste time on.
+
+
+[8/23/2022 12:48 AM] aryetis
+yeaaaah it's dead jim
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-F84EF.png
+
+
+[8/23/2022 12:48 AM] aryetis
+it locked itself in read only
+
+
+[8/23/2022 12:50 AM] tux_linux
+Bruh
+
+
+[8/23/2022 12:50 AM] tux_linux
+Find another one maybe?
+
+
+[8/23/2022 12:51 AM] aryetis
+kinda hard at midnight, it'll have to wait. That's the last one I got for now.
+
+
+[8/23/2022 12:51 AM] tux_linux
+True
+
+
+[8/23/2022 12:51 AM] tux_linux
+Did you try to reboot your PC?
+
+
+[8/23/2022 12:51 AM] tux_linux
+Just in case
+
+
+[8/23/2022 12:52 AM] aryetis
+worth a shot
+
+
+[8/23/2022 12:55 AM] aryetis
+nope, extra dead
+
+
+[8/23/2022 12:57 AM] tux_linux
+That's just great
+
+
+[8/23/2022 1:07 AM] aryetis
+well next episode thirsday then.
+
+{Reactions}
+👍 
+
+[8/23/2022 1:16 AM] ninuje
+Isn't there still a physical write lock on SD cards?
+
+
+[8/23/2022 1:16 AM] tux_linux
+yes
+
+
+[8/23/2022 1:16 AM] ninuje
+(Can't remember if that applies to the smaller ones and/or which ones those devices even use :D)
+
+
+[8/23/2022 1:16 AM] tux_linux
+but I think he took that into account?
+
+
+[8/23/2022 1:16 AM] aryetis
+yeah I checked it
+
+{Reactions}
+👍 
+
+[8/23/2022 1:17 AM] ninuje
+👍
+
+
+[8/23/2022 1:17 AM] aryetis
+dying sd cards lock themselves in read only mode when dying. At least my last 3 did. So it's probably the same deal here.
+
+
+[8/23/2022 1:18 AM] tux_linux
+I've had that issue with one too sadly
+
+
+[8/23/2022 8:59 AM] szybet
+90% its a dead SD card
+
+
+[8/24/2022 8:51 PM] aryetis
+Got myself a new card, however..... It's not booting up ? Whenever I power the Glo on, the power led lights up in blue for about 8 seconds and then nothing, screen doesn't even flash.
+The stock sd card still works so it shouldn't be an issue induced by the sd card extender.
+
+
+[8/24/2022 8:52 PM] szybet
+well we need serial connection info
+
+
+[8/24/2022 8:52 PM] szybet
+output
+
+
+[8/24/2022 8:52 PM] aryetis
+How do I get those ?
+
+
+[8/24/2022 8:53 PM] szybet
+we need a guide about this finally
+
+
+[8/24/2022 8:53 PM] szybet
+well do you have a arduino, rpi, anything?
+
+
+[8/24/2022 8:53 PM] aryetis
+raspberry (0 and 3), usb uart, no arduino tho
+
+
+[8/24/2022 8:55 PM] szybet
+well open the glo
+
+
+[8/24/2022 8:56 PM] szybet
+and connect GND TX and RX
+
+
+[8/24/2022 8:56 PM] szybet
+with the usb uart
+
+
+[8/24/2022 8:56 PM] szybet
+and thats it
+
+
+[8/24/2022 8:56 PM] szybet
+maybe google it to know more
+
+
+[8/24/2022 8:56 PM] szybet
+your TX needs to connect to the glo RX
+
+
+[8/24/2022 9:10 PM] aryetis
+kay getting the soldering iron ready
+
+
+[8/24/2022 9:10 PM] szybet
+finally someone that solders their serial connection
+
+
+[8/24/2022 9:10 PM] szybet
+*very good*
+
+
+[8/24/2022 9:12 PM] aryetis
+I don't have much choice ^^" there's no proper port and I don't have much tool to keep things stable enough
+
+
+[8/24/2022 9:14 PM] aryetis
+Plus I ll have proper port on my USB UART and I don't want to destroy those as they're useful when I m working on routers
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/1661368383420-15DC9.jpg
+
+
+[8/24/2022 9:49 PM] aryetis
+Someone else around here managed to connect to a kobo in serial using putty and usb uart ?
+
+
+[8/24/2022 9:49 PM] szybet
+ugh putty
+
+
+[8/24/2022 9:50 PM] szybet
+you need 11520 baud rate
+
+
+[8/24/2022 9:50 PM] szybet
+for sure
+
+
+[8/24/2022 9:50 PM] tux_linux
+Yes
+
+
+[8/24/2022 9:50 PM] aryetis
+thanks
+
+
+[8/24/2022 9:50 PM] tux_linux
+No
+
+
+[8/24/2022 9:50 PM] szybet
+8 bit something
+
+and hwardware flow control
+
+
+[8/24/2022 9:50 PM] tux_linux
+Never tried
+
+
+[8/24/2022 9:50 PM] aryetis
+Well let's try that
+
+
+[8/24/2022 9:50 PM] szybet
+🙄
+
+
+[8/24/2022 9:50 PM] tux_linux
+Just to be sure
+You put the SD card in the internal slot
+
+
+[8/24/2022 9:51 PM] tux_linux
+And which image did you download
+
+
+[8/24/2022 9:51 PM] aryetis
+in the sd extender yes.
+
+{Reactions}
+👍 
+
+[8/24/2022 9:51 PM] tux_linux
+What is your kobo model number
+
+
+[8/24/2022 9:51 PM] szybet
+actually
+
+
+[8/24/2022 9:52 PM] aryetis
+model n613
+
+
+[8/24/2022 9:52 PM] tux_linux
+So you downloaded the n613 image
+
+
+[8/24/2022 9:52 PM] szybet
+uour behaviour is similar to mine when the kobo didnt saw the sd card in the external slot
+
+led flash, and it outputed '0' as a bit to serial
+
+we will see, you need to connect serial
+
+
+[8/24/2022 9:52 PM] aryetis
+using inkbox-1.9-n306.xz image
+
+
+[8/24/2022 9:52 PM] aryetis
+I'm stupid
+
+
+[8/24/2022 9:52 PM] szybet
+broooo
+
+
+[8/24/2022 9:52 PM] szybet
+thats the nia
+
+
+[8/24/2022 9:52 PM] aryetis
+lol
+
+
+[8/24/2022 9:53 PM] szybet
+😁
+
+
+[8/24/2022 9:53 PM] tux_linux
+why
+
+
+[8/24/2022 9:53 PM] szybet
+at least uboot booted😁
+
+
+[8/24/2022 9:53 PM] aryetis
+cause I'm stupid
+
+
+[8/24/2022 9:53 PM] tux_linux
+No, the led lights up blue even if there is no SD card
+
+
+[8/24/2022 9:53 PM] aryetis
+yup
+
+
+[8/24/2022 9:54 PM] szybet
+oh ok
+
+
+[8/24/2022 9:56 PM] tux_linux
+Don't forget you have to update to 1.6 first
+Follow instructions
+
+
+[8/24/2022 9:56 PM] tux_linux
+Then I can send you a dev update package
+
+
+[8/24/2022 10:08 PM] aryetis
+It works better somehow when you re using the good file. Crazy how technology works
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20220824_220737_1-CE9CC.jpg
+
+
+[8/24/2022 10:08 PM] szybet
+mind blowing🧐
+
+{Reactions}
+🤯 
+
+[8/24/2022 10:09 PM] tux_linux
+tell me when you are on 1.6
+
+
+[8/24/2022 10:20 PM] aryetis
+1.6 or 1.9 ? Btw I don't think it's mentioned in the instructions that I have to first upgrade to 1.6 before doing the others.
+
+
+[8/24/2022 10:20 PM] tux_linux
+yes it is
+
+
+[8/24/2022 10:20 PM] tux_linux
+everywhere
+
+
+[8/24/2022 10:21 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-B39B6.png
+
+
+[8/24/2022 10:21 PM] aryetis
+nowhere there <https://inkbox.ddns.net/installation.html> 
+nor here <http://23.163.0.39/bundles/inkbox/native/update/Update-HOWTO>
+
+
+[8/24/2022 10:21 PM] tux_linux
+http://23.163.0.39/bundles/inkbox/native/update/1.6/HOWTO-Update
+
+
+[8/24/2022 10:21 PM] tux_linux
+I will add it
+
+{Reactions}
+👌 
+
+[8/24/2022 10:43 PM] aryetis
+There you go. 1.6
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20220824_224245_1-79D60.jpg
+
+
+[8/24/2022 11:22 PM] tux_linux
+good, preparing you a bundle
+
+
+[8/25/2022 11:42 PM] aryetis
+Scrollbar showing up in inbox settings page 1 for seemingly no reasons.
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/1661463691269-DEC85.jpg
+
+
+[8/25/2022 11:42 PM] tux_linux
+good catch
+
+
+[8/25/2022 11:42 PM] tux_linux
+i think we need an adjustSize for this one @Szybet ...?
+
+
+[8/25/2022 11:44 PM] szybet
+maybe
+
+we ( I )  need to implement that if those happens that there isint much to mobe woth the slider it will hide it
+
+it is possible with some math
+
+please add it to todo
+
+
+[8/25/2022 11:55 PM] aryetis
+Timezones setting seems to be incorrect (keep in mind, I've got no wifi to ntp so I can't even set the clock precisely if for some reasons it goes wrong)
+eg : 
+ETC/GMT => 21:52
+ETC/GMT+2 => 19:52
+Actual time in France (GMT+2) => 23:52
+
+
+[8/25/2022 11:55 PM] szybet
+first do ntp
+
+
+[8/25/2022 11:55 PM] szybet
+also you need to reboot after setting gimezones? i dont remember
+
+
+[8/25/2022 11:57 PM] aryetis
+I will ntp once I've got wifi (but I'd argue that not everyone will have their ereader connected to wifi).
+And if I need to reboot the information is not conveyed properly as I can see the time getting updated on the home screen after changing this setting.
+
+
+[8/25/2022 11:58 PM] szybet
+its linux timezones, how can they be false hmm
+
+
+[8/25/2022 11:58 PM] szybet
+well time is messed up on the stock os all the time
+
+
+[8/25/2022 11:58 PM] szybet
+so that we did ntp all the time is good
+
+
+[8/26/2022 12:03 AM] aryetis
+don't know how but for now I'm setting it at GMT-2 (so in the middle of the ocean pretty much) for it to report the correct time.
+
+
+[8/26/2022 12:05 AM] szybet
+shouldnt you set it to france? and not those weird gmt?
+
+
+[8/26/2022 12:05 AM] szybet
+or i dont understand something
+
+
+[8/26/2022 12:08 AM] aryetis
+I've just set it to the first corresponding timezone I could found.... Setting it to Europe/Paris does indicate the correct time.
+
+
+[8/26/2022 12:08 AM] aryetis
+Soooo I don't know.
+
+
+[8/26/2022 12:28 AM] tux_linux
+if you have no ntp then it's already wrong
+
+
+[8/26/2022 12:28 AM] tux_linux
+Try phone hotspot without special characters passphrase
+
+
+[8/26/2022 12:32 AM] szybet
+add keyboard special characters to todo
+
+
+[8/26/2022 12:43 AM] ninuje
+DST
+
+
+[8/26/2022 12:43 AM] ninuje
+The answer to timezone shenanigans is always DST 😉
+
+{Reactions}
+👍 
+
+[8/26/2022 12:44 AM] ninuje
+(The GMT TZs are absolute, no DST)
+
+
+[8/26/2022 12:45 AM] ninuje
+Making it currently UTC+2 -1
+
+
+[9/19/2022 2:46 AM] tux_linux
+upon deleting a book from local library, only folders are shown, books disappear until I relaunch the widget
+
+
+[9/19/2022 2:49 AM] tux_linux
+upon deleting a book from its folder, I get a segmentation fault, and although the book may have already been deleted, it is still shown in the database and in the folder on relaunch
+
+
+[9/19/2022 6:12 AM] tux_linux
+also, files-only mode doesn't work
+
+
+[9/19/2022 7:27 AM] szybet
+thats bad
+
+
+[9/20/2022 7:46 PM] szybet
+```
+void bookOptionsDialog::deleteBook() {
+    log("Deleting book '" + bookPath + "'", className);
+    global::toast::delay = 3000;
+    if(QFile::remove(bookPath)) {
+        emit showToast("Book deleted successfully");
+        global::localLibrary::bookOptionsDialog::bookDeleted = true;
+        QFile::remove(global::localLibrary::databasePath);
+    }
+    else {
+        emit showToast("Failed to delete book");
+    }
+}
+```
+
+
+[9/20/2022 7:46 PM] szybet
+what are you doing here
+
+
+[9/20/2022 7:46 PM] szybet
+regenerate the library?
+
+
+[9/20/2022 8:53 PM] tux_linux
+What line exactly
+
+
+[9/20/2022 8:53 PM] szybet
+nevermind
+
+
+[9/20/2022 8:53 PM] szybet
+solved
+
+
+[10/20/2022 11:01 PM] tux_linux
+Highlighting regression bug fix commit has broken font size, margins and line spacing on page turns
+Great
+
+
+[10/20/2022 11:05 PM] szybet
+i dont understand your solution there?
+
+
+[10/20/2022 11:07 PM] szybet
+idk, but the text was already html, readed from file, so why do you do it second time .toHtml
+
+
+[10/26/2022 4:01 AM] tux_linux
+https://github.com/Kobo-InkBox/inkbox/commit/db9dbb24ec3ad447ee6bdfb287e7977e7e5bd6fd
+fixed (in the small amount of time I had for this)
+@Szybet, set font size to 10, line spacing to 4 for example, then try to highlight; does it look a bit ugly on your device compared to a page turn?
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/commit/db9dbb24ec3ad447ee6bdfb287e7977e7e5bd6fd
+Reader: Fix major regression bug caused by commit e2c170b · Kobo-In...
+This bug prevented the user from applying new font sizes, margins or line spacings to an opened book.
+TODO: Fix ugly UI issue with highlighting
+/mnt/data/projects/git/conversations/media/db9dbb24ec3ad447ee6bdfb287e7977e7e5bd6fd-E3E88
+
+
+[10/26/2022 6:30 AM] szybet
+i still dobt know what was the problem
+
+
+[10/26/2022 6:30 AM] szybet
+i will test it... in 2 weeks?...😞
+
+
+[1/4/2023 11:29 AM] szybet
+Folder library: it launches the wrong book🥴
+
+
+[1/4/2023 7:59 PM] tux_linux
+Congratulations
+
+
+[1/4/2023 7:59 PM] tux_linux
+Hehe
+
+
+[1/4/2023 7:59 PM] szybet
+😂
+
+
+[1/4/2023 7:59 PM] tux_linux
+But seriously, fix it soon please
+
+
+[1/4/2023 8:29 PM] szybet
+well, now
+
+
+[1/4/2023 8:29 PM] szybet
+i will add some other improvments
+
+
+[1/4/2023 8:30 PM] szybet
+they will be in audio repo, so if you want to implent them fast then you will need to convert invidual commits to patches
+
+
+[1/4/2023 8:44 PM] szybet
+well
+
+
+[1/4/2023 8:44 PM] szybet
+everything doesnt work
+
+
+[1/4/2023 8:44 PM] szybet
+even without folder
+
+
+[1/4/2023 8:44 PM] szybet
+well
+
+
+[1/4/2023 8:57 PM] szybet
+yea ~~my fault~~ its the previous problem with non valid epubs
+
+
+[1/4/2023 8:58 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-02D27.png
+
+
+[1/4/2023 8:58 PM] szybet
+https://youtu.be/w9rCP3JouAM
+
+{Embed}
+Big Dan Gaming
+https://www.youtube.com/watch?v=w9rCP3JouAM
+STOP RIGHT THERE CRIMINAL SCUM
+...THEN PAY WITH YOUR BLOOD!
+
+Voice acting by Wes Johnson - THE voice of Oblivion
+/mnt/data/projects/git/conversations/media/maxresdefault-54DDA.jpg
+
+
+[1/4/2023 9:13 PM] tux_linux
+But does it work now?
+Also remind me to update epubtool if not done before Saturday
+
+
+[1/4/2023 9:14 PM] szybet
+well the problem is corrupted epub files, and the database generation gets confused
+
+
+[1/4/2023 9:16 PM] szybet
+i will display a message, logs from epubtool:
+```
+Error while generating database. It Will work incorrectly. Please contact inkbox developers or remove corrupted files
+---
+*logs*
+```
+
+
+[1/4/2023 9:16 PM] szybet
+i get those errors from a epub file that litterally nothing can open, so
+
+
+[1/4/2023 9:17 PM] szybet
+and i will leave the database as it is because its still usable, and if the user cant repair it right now he will be pissed, but he can launch a book anyways ( maybe the incorect one ) so thats good
+
+
+[1/4/2023 9:19 PM] tux_linux
+InkBox
+not
+inkbox
+
+
+[1/4/2023 9:19 PM] tux_linux
+welp
+
+
+[1/4/2023 9:19 PM] szybet
+iNkbOX
+
+
+[1/4/2023 10:15 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20230104_221222990-D6A72.jpg
+
+
+[1/4/2023 10:15 PM] szybet
+done
+
+
+[1/4/2023 10:17 PM] szybet
+i see nothing
+
+
+[1/4/2023 11:12 PM] szybet
+i will add other things to the reader:
+- info in settings that changing those setting can affect saved page accuracy ✓
+- ~~option to show on click the menu for book info ( disable dorect opening )~~ nah
+- ~~adding to the menu an open button~~ naaah
+- loading toast
+- in front page disable duplicates once for all ✓
+
+
+[1/5/2023 7:06 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230105_190554_DRO-4B0EF.jpg
+
+
+[1/5/2023 7:06 PM] szybet
+what if i told you
+
+
+[1/5/2023 7:06 PM] szybet
+there is a world without unused screen
+
+
+[1/5/2023 8:37 PM] tux_linux
+How
+
+
+[1/5/2023 8:38 PM] szybet
+tinkering with ui file
+
+
+[1/5/2023 8:38 PM] szybet
+for too long
+
+
+[1/5/2023 8:38 PM] tux_linux
+Ok, now try to open options and send screenshot
+
+
+[1/5/2023 8:39 PM] szybet
+no because i didn't added margins there yet
+
+
+[1/5/2023 8:39 PM] szybet
+;p
+
+
+[1/5/2023 8:56 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230105_205638_DRO-70C09.jpg
+
+
+[1/5/2023 8:57 PM] szybet
+now
+
+
+[1/5/2023 11:39 PM] szybet
+https://github.com/Szybet/inkbox/commit/0c75190f03b2638c679741350dc460052760cb3c
+
+{Embed}
+https://github.com/Szybet/inkbox/commit/0c75190f03b2638c679741350dc460052760cb3c
+big reader improvments: perfect margings, option to disable highlig...
+…s / word search, info in settings about reader settings inpact and minor functions changes
+/mnt/data/projects/git/conversations/media/0c75190f03b2638c679741350dc460052760cb3c-77B2D
+
+
+[1/26/2023 4:38 AM] weeda2192
+Sorry maybe not a bug....but how do you get out of this menu.
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_9a9bbf15-e71b-496-4A9A6.jpg
+
+
+[1/26/2023 4:38 AM] weeda2192
+Kobo touch n905c
+
+
+[1/26/2023 4:39 AM] weeda2192
+Everything between 'look in:' and file type is responsive. But above and below are not
+
+
+[1/26/2023 4:40 AM] weeda2192
+Not sure how to scroll to the right between 'look in:' 'Files of type:'
+
+
+[1/26/2023 8:22 AM] szybet
+already fixed in 2.0
+
+
+[1/26/2023 8:22 AM] szybet
+😄
+
+
+[1/26/2023 8:24 AM] szybet
+to fix
+
+well you can update manually to the latest dev version
+
+motivate tux-linux
+
+
+[1/26/2023 11:37 AM] tux_linux
+double click
+
+
+[1/26/2023 11:38 AM] tux_linux
+Click on the last visible file in list to scroll
+
+
+[1/26/2023 12:18 PM] szybet
+oof
+
+
+[1/26/2023 2:13 PM] weeda2192
+Aaaa....thank you
+
+
+[1/27/2023 4:23 AM] weeda2192
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_408716c4-0be1-4cb-93126.jpg
+
+
+[1/27/2023 4:23 AM] weeda2192
+I updated to 1.6 first. Doesn't like 1.9
+
+
+[1/27/2023 4:24 AM] tux_linux
+You are on n905c?
+
+
+[1/27/2023 4:24 AM] tux_linux
+Can I see system info in settings ?
+
+
+[1/27/2023 4:24 AM] weeda2192
+Yup
+
+
+[1/27/2023 4:25 AM] weeda2192
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_54a368aa-85c2-412-2C584.jpg
+
+
+[1/27/2023 4:25 AM] tux_linux
+InkBox settings
+
+
+[1/27/2023 4:25 AM] weeda2192
+Which one you want
+
+
+[1/27/2023 4:26 AM] tux_linux
+Second page
+
+
+[1/27/2023 4:26 AM] weeda2192
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_052d919e-1160-4b4-A993A.jpg
+
+
+[1/27/2023 4:26 AM] tux_linux
+Click on show
+
+
+[1/27/2023 4:27 AM] weeda2192
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_a2e6b18c-142b-4d1-14B5D.jpg
+
+
+[1/27/2023 4:28 AM] weeda2192
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/rn_image_picker_lib_temp_39ecc5a1-8e23-432-EAA0E.jpg
+
+
+[1/27/2023 4:28 AM] tux_linux
+Ok
+Can you try again to update ? Be sure to eject the device a thousand times before disconnecting it
+
+
+[1/27/2023 4:29 AM] weeda2192
+Delete the file and reload it first? Or just reboot and try again
+
+
+[1/27/2023 4:29 AM] tux_linux
+The file is still there ?
+
+
+[1/27/2023 4:29 AM] tux_linux
+Where did you put it
+
+
+[1/27/2023 4:29 AM] weeda2192
+Umm
+
+
+[1/27/2023 4:30 AM] weeda2192
+In the in the .inbox foldet
+
+
+[1/27/2023 4:30 AM] weeda2192
+Folder
+
+
+[1/27/2023 4:30 AM] weeda2192
+Its still there
+
+
+[1/27/2023 4:30 AM] tux_linux
+.inkbox not inbox
+
+
+[1/27/2023 4:30 AM] tux_linux
+Right?
+
+
+[1/27/2023 4:31 AM] weeda2192
+Correct
+
+
+[1/27/2023 4:31 AM] tux_linux
+What is the weight of the file
+
+
+[1/27/2023 4:32 AM] weeda2192
+138.1mb
+
+
+[1/27/2023 4:32 AM] tux_linux
+You are on windows?
+
+
+[1/27/2023 4:32 AM] weeda2192
+Linux
+
+
+[1/27/2023 4:32 AM] tux_linux
+Ok
+What do the can_* files contain
+If they are there
+
+
+[1/27/2023 4:33 AM] tux_linux
+Also, what is the file name of the update file?
+
+
+[1/27/2023 4:33 AM] weeda2192
+Both say false
+
+
+[1/27/2023 4:33 AM] tux_linux
+Ok
+
+
+[1/27/2023 4:34 AM] weeda2192
+Inkbox-update-1.9.upa.isa
+
+
+[1/27/2023 4:34 AM] tux_linux
+What was the download link
+
+
+[1/27/2023 4:36 AM] weeda2192
+Hmmmm....maybe I downloaded the b and not c
+
+
+[1/27/2023 4:36 AM] weeda2192
+Gimmie a couple min
+
+{Reactions}
+👍 
+
+[1/27/2023 4:54 AM] weeda2192
+Yeah I'm an idiot...I downloaded the wrong one initially
+
+
+[1/27/2023 4:55 AM] tux_linux
+You have your answer
+
+
+[1/27/2023 4:58 AM] tux_linux
+Each update package is tied to a specific kernel and public key used for digital signature verification for each device. If you input the wrong one, it will stop you from installing it (probably for your device safety, considering that some n905c kernels boot on the B and didn't do that good things to the screen AFAICS)
+
+
+[1/27/2023 4:59 AM] tux_linux
+Please be aware that this has not been fixed in 1.9 but only in 2.0 development version. If you want to update, let me know
+
+
+[1/27/2023 5:00 AM] weeda2192
+Yeah I'm game
+
+
+[1/27/2023 5:00 AM] weeda2192
+I like messing around with it
+
+
+[1/27/2023 5:01 AM] tux_linux
+First try updating to 1.9 to see if it works now
+
+
+[1/27/2023 5:01 AM] weeda2192
+1.9 is up and running
+
+
+[1/27/2023 5:25 AM] tux_linux
+http://166.62.241.240:500/stuff/inkbox-update-2.0.upd.isa
+try this
+
+
+[1/27/2023 5:25 AM] tux_linux
+good night
+
+
+[1/31/2023 1:12 AM] weeda2192
+I've tried several iterations: upgrading to 2.0 from 1.5, 1.6, and 1.9. All seem to crash/freeze about 5 min into the upgrade
+
+
+[1/31/2023 1:13 AM] weeda2192
+Anything I should try doing?
+
+
+[1/31/2023 8:17 AM] szybet
+how do you update to 2.0🥴? ( ok i see )
+
+
+[1/31/2023 8:17 AM] szybet
+there are many messages related to updates, that it cant be done with jumps, read the wiki
+
+
+[1/31/2023 8:17 AM] szybet
+also @tux-linux
+
+
+[1/31/2023 8:18 AM] szybet
+and, did you grab the correct image this time?
+
+
+[1/31/2023 8:18 AM] szybet
+if this works, and from it 2.0 doesnt, then what do you expect?
+
+
+[1/31/2023 8:21 AM] szybet
+you need the whole system upgrade, not only the p4 for 2.0?... tux-linux
+
+
+[1/31/2023 12:55 PM] tux_linux
+Yes but the bundle is sufficient for more things
+
+
+[1/31/2023 12:55 PM] tux_linux
+Replace files by yourself in the SD card
+
+
+[1/31/2023 1:01 PM] tux_linux
+[p4]/update/update.isa*
+[p3]/rootfs.squashfs*
++Kernel
+Szybet can explain to you if he has time
+Otherwise look at unsquashfs
+
+
+[5/1/2023 11:46 PM] dominiac
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230501_224606-2C4D0.jpg
+
+
+[5/1/2023 11:46 PM] szybet
+already fixed thank you
+
+
+[5/1/2023 11:47 PM] dominiac
+wut
+
+
+[5/1/2023 11:47 PM] szybet
+1.9 is already 1 year old
+
+
+[5/1/2023 11:47 PM] szybet
+almost 2.0 has many fixes
+
+
+[5/1/2023 11:48 PM] dominiac
+ha I see
+
+
+[5/1/2023 11:48 PM] szybet
+you need to update to the dev version
+
+
+[5/17/2023 6:45 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230517_184441-AC118.jpg
+
+
+[5/17/2023 6:45 PM] szybet
+Xorg.
+
+
+[5/17/2023 6:45 PM] szybet
+I turned it on yesterday
+
+
+[5/17/2023 6:53 PM] szybet
+also the whole system is slower on xorg
+
+
+[5/17/2023 6:54 PM] szybet
+like, simple buttons
+
+
+[5/17/2023 8:20 PM] ninuje
+Same 8bpp vs 32bpp confusion as the last guy ;p
+
+
+[5/17/2023 8:20 PM] szybet
+yep
+
+
+[5/17/2023 8:20 PM] szybet
+xorg, nia
+
+
+[5/18/2023 1:15 AM] tux_linux
+fbdepth -d 8
+fbdepth -d 16
+fbdepth -d 32
+one of these should fix it
+
+
+[5/18/2023 1:15 AM] tux_linux
+might be because of `blank`
+try disabling it (`echo false > /boot/flags/EINK_BLANK`)
+maybe we can see if it's its fault
+
+
+[5/18/2023 7:31 AM] szybet
+Maybe
+
+
+[6/28/2023 2:58 AM] tux_linux
+hmm
+hmm
+hmm
+hmm
+hmm
+
+
+[6/28/2023 2:59 AM] tux_linux
+hehe look what we have here
+
+
+[6/28/2023 2:59 AM] tux_linux
+hmm hmm
+
+
+[6/28/2023 6:08 AM] szybet
+Haha
+
+
+[6/28/2023 4:41 PM] tux_linux
+on libra
+ipd doesn't freeze iterm when waking up and launching lockscreen
+
+
+[6/28/2023 4:42 PM] tux_linux
+also I think it's going a bit crazy
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/ipd-CC121.log
+
+
+[6/28/2023 4:42 PM] tux_linux
+maybe sleepcover?
+
+
+[6/28/2023 4:43 PM] tux_linux
+yes it was
+
+
+[6/28/2023 4:45 PM] szybet
+```
+Wed Jun 28 10:39:27 2023 | functions: /kobo/tmp/currentlyRunningUserApplication is: ITerm
+Wed Jun 28 10:39:27 2023 | appsFreeze: Looking for process matching 'ITerm.bin' string
+Wed Jun 28 10:39:27 2023 | appsFreeze: Couldn't find PID of ITerm.bin
+Wed Jun 28 10:39:27 2023 | appsFreeze: Looking for process matching 'ITerm' string
+Wed Jun 28 10:39:27 2023 | appsFreeze: Found PID of ITerm: 2252 in line: squashfuse-oallow_other,nosuid/data/onboard/.apps/ITerm/ITerm.isa/data/onboard/.apps/ITerm/ITerm
+Wed Jun 28 10:39:27 2023 | appsFreeze: Freezing process with PID 2252
+Wed Jun 28 10:39:27 2023 | appsFreeze: Killing process with PID 2252 with signal 19
+```
+
+
+[6/28/2023 4:45 PM] szybet
+here is your problem
+
+
+[6/28/2023 4:45 PM] tux_linux
+Ok so it's my fault
+
+
+[6/28/2023 4:45 PM] tux_linux
+good
+
+
+[6/28/2023 4:45 PM] szybet
+add anreall
+
+
+[6/28/2023 4:45 PM] szybet
+reaaly for sure?
+
+
+[6/28/2023 4:45 PM] tux_linux
+?
+
+
+[6/28/2023 4:45 PM] szybet
+your
+
+
+[6/28/2023 4:45 PM] szybet
+fault
+
+
+[6/28/2023 4:45 PM] szybet
+100%?
+
+
+[6/28/2023 4:45 PM] tux_linux
+well, there is no ITerm.bin
+
+
+[6/28/2023 4:45 PM] tux_linux
+only ITerm
+
+
+[6/28/2023 4:45 PM] tux_linux
+and ITerm.sh
+
+
+[6/28/2023 4:45 PM] tux_linux
+wiki page was misleading?
+
+
+[6/28/2023 4:46 PM] szybet
+n o
+
+
+[6/28/2023 4:46 PM] szybet
+it should prioritise .bin files i think
+
+
+[6/28/2023 4:46 PM] szybet
+check it yourself
+
+
+[6/28/2023 4:46 PM] tux_linux
+ok, well I will repackage it
+
+
+[6/28/2023 4:46 PM] szybet
+still to be sure : add an option to ignore squashfuse
+
+
+[6/28/2023 4:46 PM] szybet
+in the name
+
+
+[7/19/2023 5:19 PM] tux_linux
+hello there
+
+
+[7/26/2023 9:23 PM] szybet
+RW_ROOTFS doesnt work
+
+
+[7/26/2023 9:23 PM] szybet
+flag
+
+
+[7/26/2023 9:27 PM] tux_linux
+Good to know
+
+
+[10/11/2023 10:04 PM] szybet
+Ipd needs to look for detached children in the chroot ( thanks koreader )
+
+
+[10/11/2023 10:58 PM] [matrix] tux-linux
+Great
+
+
+[10/16/2023 7:02 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-19F83.txt
+
+
+[10/16/2023 7:10 PM] tux_linux
+Reboot maybe?
+
+
+[10/16/2023 7:14 PM] szybet
+yep
+
+
+[11/12/2023 5:52 PM] szybet
+all those usb issues can be related to not unmounting properly things there, in gui apps stop is a way to do that properly.
+
+
+[11/27/2023 11:39 AM] szybet
+i cant set brightness via this code, but it works with regular echo inside the user app...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-8BEE4.txt
+
+
+[11/27/2023 11:40 AM] szybet
+koreader can change it, sanki dont - its the same sandoxed env
+
+
+[11/27/2023 11:40 AM] szybet
+@NiLuJe why is koreader always better ;p?
+
+
+[11/27/2023 2:43 PM] [matrix] haitam-kenwai (@haitam-
+Hi everyone, I installed InkBox on a 16GB MicroSD, but when I upload books via PC connection I only see a storage of 512MB, is this an expected behavior?
+
+
+[11/27/2023 4:02 PM] [matrix] Szybet
+Yes and no
+
+
+[11/27/2023 4:02 PM] [matrix] Szybet
+On the wiki is the solution to this
+
+
+[11/27/2023 4:31 PM] [matrix] haitam-kenwai
+Okie Dokie, page found, thx
+
+
+[11/27/2023 8:23 PM] ninuje
+I assume you don't have access to /dev/ntx_io and the insane fuckery that is going on in the other branch is taken?
+
+
+[11/27/2023 8:23 PM] ninuje
+In which case: burn it with fire, just open/write/close, FFS.
+
+
+[11/27/2023 8:28 PM] [matrix] Szybet
+Yep
+
+
+[11/27/2023 8:28 PM] [matrix] Szybet
+I used the sys brightness something in koreader
+
+
+[11/27/2023 8:28 PM] [matrix] Szybet
+So it uses the same thing
+
+
+[11/28/2023 11:14 AM] szybet
+Also, does it make sense to show text / hide it with diffrent waveform modes? I think A2 doesnt cause any ghosting when hiding
+
+
+[11/28/2023 3:48 PM] ninuje
+Depends on your definition of "text". I'd say for UI highlights you could play with A2/DU on one side (generally, showing the flash) but GL16/REAGL/GC16 when hiding the highlight, because you'll want the better fidelity for what's actually persistent
+
+
+[11/28/2023 3:48 PM] ninuje
+But otherwise, no
+
+
+[11/28/2023 9:30 PM] matterbridge#2154
+[matrix] haitam-kenwai 
+Good evening, I'm stuck on this:
+
+this is lsblk from the wiki
+sdx                     3.6G
+├─sdxp1                 19M
+├─sdxp2                 500M
+├─sdxp3                 128M
+└─sdxp4                 2.9G
+
+
+[11/28/2023 9:31 PM] [matrix] haitam-kenwai
+And this is my lsblk (for the interested storage):
+sdb           8:16   1  14.8G  0 disk
+├─sdb1        8:17   1    15M  0 part
+├─sdb2        8:18   1   500M  0 part
+├─sdb3        8:19   1   128M  0 part
+└─sdb4        8:20   1  14.2G  0 part
+
+
+[11/28/2023 9:32 PM] [matrix] haitam-kenwai
+The wiki use sdxp4 as partition to enlarge, I used sdb4 with the same commands but without success
+
+
+[11/28/2023 9:32 PM] [matrix] haitam-kenwai
+Also, shouldn't I enlarge sdxp2 (or in my case, sdb2)?
+
+
+[11/28/2023 9:34 PM] [matrix] haitam-kenwai
+I think everyone know what I'm referring to but this is the wiki page for completion sake: https://inkbox.ddns.net/wiki/index.php?title=Resizing_USB_mass_storage
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=Resizing_USB_mass_storage
+Index.php
+
+
+[11/28/2023 9:51 PM] szybet
+Its already big
+
+
+[11/28/2023 9:52 PM] szybet
+Look up with gparted if everything is fine with thw partition
+
+
+[11/28/2023 9:52 PM] szybet
+If yes, then continue where the partition is mounted and make the file larger
+
+
+[11/28/2023 9:52 PM] szybet
+Make it as large as you want there
+
+
+[11/28/2023 9:56 PM] [matrix] haitam-kenwai
+Mmmhhh... opened up Gparted and something don't seem right
+
+
+[11/28/2023 9:56 PM] [matrix] haitam-kenwai
+Posting a screenshot in a sec
+
+
+[11/28/2023 9:56 PM] [matrix] haitam-kenwai
+pic-selected-231128-2156-22.png
+
+
+[11/28/2023 9:56 PM] [matrix] haitam-kenwai
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/pic-selected-231128-2156-22-EC06A.png
+
+
+[11/28/2023 9:57 PM] [matrix] haitam-kenwai
+Should I try to shrink down ad then resize?
+
+
+[11/28/2023 9:58 PM] szybet
+Choose the repair option
+
+
+[11/28/2023 9:58 PM] szybet
+And apply
+
+
+[11/28/2023 9:58 PM] szybet
+then ut should be fine
+
+
+[11/28/2023 10:00 PM] [matrix] haitam-kenwai
+Ok now should be good
+
+
+[11/28/2023 10:00 PM] [matrix] haitam-kenwai
+Trying in the Kobo rn
+
+
+[11/28/2023 10:01 PM] szybet
+The part about the file inside the partition
+
+
+[11/28/2023 10:01 PM] szybet
+Have you done it?
+
+
+[11/28/2023 10:02 PM] [matrix] haitam-kenwai
+The "onboard" file?
+
+
+[11/28/2023 10:02 PM] szybet
+Yes
+
+
+[11/28/2023 10:03 PM] [matrix] haitam-kenwai
+...
+
+
+[11/28/2023 10:03 PM] [matrix] haitam-kenwai
+Coming back in a sec
+
+
+[11/28/2023 10:03 PM] szybet
+🥴
+
+
+[11/28/2023 10:03 PM] [matrix] haitam-kenwai
+Sorry It's pretty late here and I'm making stupid mistake
+
+
+[11/28/2023 10:04 PM] [matrix] Szybet
+Nah, everyone learns with mistakes
+
+
+[11/28/2023 10:06 PM] [matrix] haitam-kenwai
+Also, while I'm waiting, if I want to install Koreader should I follow the "Kobo" guide or the "Linux" one?
+
+
+[11/28/2023 10:14 PM] szybet
+None
+
+
+[11/28/2023 10:15 PM] szybet
+Is there on wiki a guide how to install user apps?
+
+
+[11/28/2023 10:15 PM] szybet
+Should be
+
+
+[11/28/2023 10:15 PM] szybet
+Tldr you extract a zip and it works
+
+
+[11/28/2023 10:16 PM] matterbridge#2154
+[matrix] haitam-kenwai 
+https://inkbox.ddns.net/wiki/index.php?title=InkBox_GUI_user_apps
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=InkBox_GUI_user_apps
+Index.php
+
+
+[11/28/2023 10:16 PM] [matrix] haitam-kenwai
+This one?
+
+
+[11/28/2023 10:16 PM] [matrix] haitam-kenwai
+Also, still 512M on storage
+
+
+[11/28/2023 10:17 PM] [matrix] haitam-kenwai
+Strange since lsblk gave me 12 GB after this command: qemu-img resize /mnt/onboard 11.7G
+
+
+[11/28/2023 10:18 PM] szybet
+Check if the file is the size you want
+
+
+[11/28/2023 10:18 PM] szybet
+The omboard file
+
+
+[11/28/2023 10:18 PM] szybet
+Yes
+
+
+[11/28/2023 10:19 PM] [matrix] haitam-kenwai
+Yes it is:
+ls -lah /mnt/
+total 538M
+drwxr-xr-x  9   1001   1001 4.0K Nov 28 20:53 .
+drwxr-xr-x  1 root   root    142 Sep 26 20:49 ..
+drwxr-xr-x 27 haitam haitam 4.0K Nov 28 20:55 config
+-rw-r--r--  1 root   root      0 Nov 28 21:59 dhcpcd_duid
+drwxr-xr-x  5   1001   1001 4.0K May 26  2021 gui_rootfs
+-rw-r--r--  1   1001   1001  26M Jun 20 22:43 gui_rootfs.isa
+-rw-r--r--  1   1001   1001  256 Jun 20 22:43 gui_rootfs.isa.dgst
+drwx------  2 root   root    16K Jun 20 22:40 lost+found
+-rw-r--r--  1   1001   1001  12G Nov 28 22:03 onboard
+drwxr-xr-x  2 root   root   4.0K Nov 28 20:53 ssh
+drwxr-xr-x  2   1001   1001 4.0K Aug  2  2011 tmpfs
+drwxr-xr-x  2   1001   1001 4.0K Nov 28 20:55 update
+drwxr-xr-x  3   1001   1001 4.0K Jun 10 16:49 X11
+
+
+[11/28/2023 10:19 PM] [matrix] haitam-kenwai
+onboard is 12GB:
+-rw-r--r--  1   1001   1001  12G Nov 28 22:03 onboard
+
+
+[11/28/2023 10:19 PM] szybet
+And the device rebooted and its still small?
+
+
+[11/28/2023 10:20 PM] [matrix] haitam-kenwai
+Yep, to remove the MicroSD I shutdown the Kobo, extract, do all the stuff on the pc, re-insert and the power on
+
+
+[11/28/2023 10:21 PM] szybet
+Try to mount the file to see its content
+
+
+[11/28/2023 10:21 PM] szybet
+and then in gparted
+
+
+[11/28/2023 10:21 PM] szybet
+Losetup, something like that
+
+
+[11/28/2023 10:21 PM] szybet
+On pc
+
+
+[11/28/2023 10:21 PM] szybet
+Mount with loosetup
+
+
+[11/28/2023 10:21 PM] [matrix] haitam-kenwai
+Ok
+
+
+[11/28/2023 10:21 PM] szybet
+Loop devices, cant remember
+
+
+[11/28/2023 10:25 PM] [matrix] haitam-kenwai
+So I try to mount directly the content?
+
+
+[11/28/2023 10:28 PM] [matrix] Szybet
+The onboard file
+
+
+[11/28/2023 10:31 PM] [matrix] haitam-kenwai
+Ok mounted and contains:
+drwxr-xr-x  2 root root 4096 Nov 28 21:18 .apps
+drwxr-xr-x  2 root root 4096 Nov 28 22:19 .database
+drwxr-xr-x  2 root root 4096 Nov 28 20:55 .inkbox
+drwxr-xr-x  2 root root 4096 Nov 28 20:56 .thumbnails
+
+
+[11/28/2023 10:31 PM] [matrix] haitam-kenwai
+df -h .
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/loop0      511M   36K  511M   1% /mnt/inkboxusb
+
+
+[11/28/2023 10:32 PM] [matrix] haitam-kenwai
+Should I try to resize loop0 directly?
+
+
+[11/28/2023 10:34 PM] [matrix] Szybet
+Open gparted now
+
+
+[11/28/2023 10:34 PM] [matrix] Szybet
+And maybe you will see something new
+
+
+[11/28/2023 10:35 PM] [matrix] haitam-kenwai
+Nope, can't see loop mount in Gparted
+
+
+[11/28/2023 10:35 PM] [matrix] haitam-kenwai
+The only thing new is the fact that sdb4 is mounted
+
+
+[11/28/2023 10:35 PM] [matrix] Szybet
+Try fdisk on the loop device
+
+
+[11/28/2023 10:35 PM] [matrix] Szybet
+To show some info
+
+
+[11/28/2023 10:37 PM] [matrix] haitam-kenwai
+Command (m for help): p
+Disk /dev/loop0: 11.7 GiB, 12562779136 bytes, 24536678 sectors
+Units: sectors of 1 \* 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00000000
+
+Command (m for help): F
+Unpartitioned space /dev/loop0: 11.7 GiB, 12561730560 bytes, 24534630 sectors
+Units: sectors of 1 \* 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+
+Start      End  Sectors  Size
+ 2048 24536677 24534630 11.7G
+
+
+[11/28/2023 10:38 PM] [matrix] haitam-kenwai
+First is partition table and second is unpartitioned space
+
+
+[11/28/2023 10:38 PM] [matrix] haitam-kenwai
+So yeah, I guess I should increase loop0
+
+
+[11/28/2023 10:56 PM] [matrix] haitam-kenwai
+Still nothing, I will continue with this tomorrow, in the meantime thank for the help guys
+
+
+[11/28/2023 10:56 PM] [matrix] haitam-kenwai
+Really appreciated
+
+
+[11/28/2023 11:18 PM] szybet
+`dd if=/dev/zero of=/data/storage/onboard bs=1M count=128 `
+`mkfs.vfat /data/storage/onboard`
+
+
+[11/28/2023 11:18 PM] szybet
+this is the way to do it i did 2 years ago
+
+
+[11/28/2023 11:18 PM] szybet
+any other qemu resizer, loop thing is a bit heresy
+
+
+[11/28/2023 11:18 PM] szybet
+i needed to find it deep in the chat
+
+
+[11/29/2023 9:56 AM] matterbridge#2154
+[matrix] haitam-kenwai 
+Goodmorning, could you please clarify for me what "/dev/zero" is?
+
+
+[11/29/2023 9:56 AM] szybet
+https://en.wikipedia.org/wiki//dev/zero
+
+{Embed}
+https://en.wikipedia.org/wiki//dev/zero
+/dev/zero
+/dev/zero is a special file in Unix-like operating systems that provides as many null characters (ASCII NUL, 0x00) as are read from it. One of the typical uses is to provide a character stream for initializing data storage.
+
+
+[11/29/2023 9:56 AM] szybet
+zeros
+
+
+[11/29/2023 9:56 AM] [matrix] haitam-kenwai
+Rn I'm looking everywhere and the sizing seems correct (from pc, then they are not when inserted in the Kobo)
+
+
+[11/29/2023 9:57 AM] szybet
+whatever, do the command i posted
+
+
+[11/29/2023 9:57 AM] szybet
+or just now try the format command
+
+
+[11/29/2023 9:58 AM] [matrix] haitam-kenwai
+Just to understand, does it fill the partitions with zeros?
+
+
+[11/29/2023 9:59 AM] szybet
+it creates a file ( onboard ) that is just zeros
+
+
+[11/29/2023 9:59 AM] szybet
+try this command at start
+`mkfs.vfat onboard`
+
+
+[11/29/2023 10:01 AM] [matrix] haitam-kenwai
+Even if onboard is already vfat? Accordingly to fdisk
+
+
+[11/29/2023 10:01 AM] szybet
+do it
+
+
+[11/29/2023 10:01 AM] szybet
+it maybe will make the partition... bigger
+
+
+[11/29/2023 10:01 AM] szybet
+if that doesnt work, remove onboard and create it with dd
+
+
+[11/29/2023 10:02 AM] [matrix] haitam-kenwai
+Ok I'll look on how to exec the command at boot, I will try to remove onboard and recreate it in case the first won't work
+
+
+[11/29/2023 10:03 AM] szybet
+remove the sd card
+
+
+[11/29/2023 10:03 AM] [matrix] haitam-kenwai
+Sadly I will be able to test this evening
+
+
+[11/29/2023 10:03 AM] szybet
+do it from the pc
+
+
+[11/29/2023 10:03 AM] szybet
+just easier
+
+
+[11/29/2023 10:03 AM] matterbridge#2154
+[matrix] haitam-kenwai 
+So I don't have to run this at every boot?
+
+
+[11/29/2023 10:03 AM] szybet
+nope, only once
+
+
+[11/29/2023 10:04 AM] [matrix] haitam-kenwai
+Oh oke
+
+
+[11/29/2023 10:04 AM] [matrix] haitam-kenwai
+Then this evening I will see if it is fixed
+
+
+[11/29/2023 10:04 AM] [matrix] haitam-kenwai
+Since from the pc everything look fine
+
+
+[11/30/2023 10:13 PM] [matrix] haitam-kenwai
+Ok, sorry for not replying yesterday but I finally fixed my MicroSD
+
+
+[11/30/2023 10:13 PM] [matrix] haitam-kenwai
+Don't know exactly what I was getting wrong but it took a couple of complete re-flashing of the OS
+
+
+[11/30/2023 10:15 PM] [matrix] haitam-kenwai
+Then the procedure was the following:
+1. repair partition 4 with gparted
+2. partition 4 is already big so run this command to make the onboard file big -> `dd if=/dev/zero of=onboard bs=1M count=11264` (command to make it 11G in my case)
+3. `mkfs.vfat onboard`
+
+{Reactions}
+❤️ 
+
+[11/30/2023 10:16 PM] [matrix] haitam-kenwai
+Maybe it will be helpful to someone idk
+
+
+[11/30/2023 10:16 PM] [matrix] haitam-kenwai
+But thanks for the help!
+
+
+[12/23/2023 1:51 AM] thelinuxpirate
+Thank you for this, I had already resized partition 4 to fill the remaining space on my 128GB microSD card but was missing this step. I've now got 100GBs of onboard storage on my Clara HD.
+
+(I didn't have to repair, just recreated the larger onboard image/filesystem)
+
+
+[2/3/2024 4:08 AM] tux_linux
+test
+
+
+[2/10/2024 8:22 PM] passiveaggressor
+Hi
+
+
+[2/10/2024 8:23 PM] passiveaggressor
+I have a problem, the WiFi gui is unable to respond to me trying to join any network
+
+
+[2/10/2024 8:27 PM] [matrix] Szybet
+what does that mean "respond"
+
+
+[2/10/2024 8:28 PM] passiveaggressor
+It just nothing happens, I can open the WiFi gui but I cannot join any networks, I will record a video in a few minutes, I also broke my power button lol. This is a kobo nia model 4a2
+
+
+[2/10/2024 8:28 PM] [matrix] Szybet
+so it's the A model?
+
+
+[2/10/2024 8:29 PM] passiveaggressor
+Yea, is this a known problem?
+
+
+[2/10/2024 8:29 PM] matterbridge#2154
+[matrix] Szybet
+You need first turn on wifi on the right and then if it shows you no networks, click manually scan
+
+
+[2/10/2024 8:29 PM] matterbridge#2154
+[matrix] Szybet
+no, the nia model a is the most supported device
+
+
+[2/10/2024 8:29 PM] [matrix] Szybet
+I have it, I designed and wrote the wifi gui and it works for me on the same device
+
+
+[2/10/2024 8:29 PM] passiveaggressor
+I did turn on WiFi, it shows me networks but tapping on them doesn't do anything
+
+
+[2/10/2024 8:31 PM] passiveaggressor
+Also I noted that kobo nia is most common in the hardware revision nia github page, how come? Is it cause its the cheapest?
+
+
+[2/10/2024 8:36 PM] matterbridge#2154
+[matrix] Szybet
+you need to click on the button on the right, an arrow
+
+
+[2/10/2024 8:36 PM] matterbridge#2154
+[matrix] Szybet
+what do you mean?
+
+
+[2/10/2024 8:36 PM] passiveaggressor
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/HwVideoEditor_2024_02_11_083555716-079E4.mp4
+
+
+[2/10/2024 8:37 PM] passiveaggressor
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20240211_083657_com.android.chr-153A9.jpg
+
+
+[2/10/2024 8:37 PM] szybet
+its just that nia a was first at the release, thats it
+
+
+[2/10/2024 8:38 PM] passiveaggressor
+I see
+
+
+[2/10/2024 8:38 PM] szybet
+nooooooooooooo :(
+a known bug, will be fixed but you need to get away from the network that has the longest wors, it pushes all the buttons to the right
+
+
+[2/10/2024 8:39 PM] passiveaggressor
+Oooh lol I see. Hmm. How do I do that?
+
+
+[2/10/2024 8:40 PM] szybet
+run
+
+
+[2/10/2024 8:40 PM] szybet
+away
+
+
+[2/10/2024 8:40 PM] szybet
+from
+
+
+[2/10/2024 8:40 PM] szybet
+the
+
+
+[2/10/2024 8:40 PM] szybet
+router
+
+
+[2/10/2024 8:40 PM] szybet
+:D
+
+
+[2/10/2024 8:40 PM] passiveaggressor
+Is it possible to set up WiFi via usbnet?
+
+
+[2/10/2024 8:41 PM] passiveaggressor
+I don't think I'll be able to run away, because I'd need to take my router with me as well
+
+
+[2/10/2024 8:44 PM] kuratius
+see if you can find szybets wifi code and limit strings to a fixed size?
+
+
+[2/10/2024 8:44 PM] kuratius
+or wait for the fix xD
+
+
+[2/10/2024 8:47 PM] szybet
+Thats not a solution and now we know it
+
+
+[2/10/2024 8:48 PM] szybet
+Implement it yourself, we know what to do :p
+
+
+[2/10/2024 8:48 PM] szybet
+Yep, all via cli no problem
+
+
+[2/10/2024 8:48 PM] passiveaggressor
+Okay dokay thank you
+
+
+[2/10/2024 8:50 PM] passiveaggressor
+Also for the vnc, is it tight vnc only?
+
+
+[2/10/2024 9:07 PM] szybet
+there is the xorg one which is meh
+
+
+[2/10/2024 9:08 PM] szybet
+there is also a demo I made, look up #dev and #chat recently - that one is better but a demo only
+
+
+[2/10/2024 9:08 PM] szybet
+if you would like to improve it then thats the way to go - xorg is a mess, it barely works - keep that in mind
+
+
+[2/10/2024 9:10 PM] passiveaggressor
+Vewy cool
+
+
+[2/10/2024 9:11 PM] szybet
+we are looking for contributors bla bla bla to build a healthy open source project bla bla bla
+
+
+[2/10/2024 9:11 PM] szybet
+¯\_(ツ)_/¯
+
+
+[2/10/2024 9:27 PM] passiveaggressor
+If only I knew how to code
+
+
+[2/10/2024 9:31 PM] [matrix] Szybet
+learn if you have time
+
+
+[2/10/2024 9:31 PM] [matrix] Szybet
+I came to the project knowing not much
+
+
+[3/14/2024 10:07 AM] kabrsdeliverance
+has anyone had issues accessing the internal storage from a computer? if i connect a known good usb cable 9 times out of 10 it doesn't show up (both linux and windows) and requires a full reboot to fix
+
+
+[3/14/2024 10:27 AM] szybet
+What device
+
+
+[3/14/2024 10:28 AM] szybet
+and yes, its bad.  Feel free to fix it, its open source ~~send help there are only 2 of us for this project : (~~
+
+
+[3/14/2024 10:45 AM] kabrsdeliverance
+n905c
+
+
+[3/14/2024 10:45 AM] kabrsdeliverance
+oh ok, nevermind (i know nothing about coding)
+
+
+[3/14/2024 11:16 AM] [matrix] Szybet
+Its the kobo touch, it has the most problem with usb ( if not all of them )
+
+Its more linux / scripts then coding
+
+
+[3/14/2024 11:17 AM] kabrsdeliverance
+nice i got lucky then 😭
+
+
+[3/14/2024 11:22 AM] [matrix] Szybet
+Root the device and upload things via network
+
+
+[3/14/2024 11:26 AM] kabrsdeliverance
+will do
+
+
+[3/14/2024 11:50 AM] tux_linux
+N705 is the worst device
+
+
+[3/14/2024 11:50 AM] tux_linux
+Probably
+
+
+[3/15/2024 12:20 PM] powerful4019
+Hello! Same problem as @Kabr's deliverance has (n905c). It's probably related to onboard file being formated as a whole device without partitions (/dev/sdd in my case). Formatting it to have partition (/dev/sdd1 as fat32) worked flawlessly when connecting to pc (no reboot needed and device was detected right away), HOWEVER, Inkbox doesn't see transferred files when they are on this partition instead of whole device, so I was wondering if it's possible to change how Inkbox scans this onboard file to detect them
+
+
+[3/15/2024 12:22 PM] szybet
+What
+
+
+[3/15/2024 12:23 PM] szybet
+Well uhm
+
+
+[3/15/2024 12:23 PM] szybet
+It doesnt make sense
+
+
+[3/15/2024 12:24 PM] szybet
+You can look up /etc/init.d/inkbox_gui for how its being mounted
+
+
+[3/15/2024 12:24 PM] szybet
+If you make it work that would be great
+
+
+[3/15/2024 12:24 PM] powerful4019
+Thanks! I'll look into it
+
+
+[3/15/2024 12:25 PM] szybet
+Its veing mouted to /kobo/mnt/onboard/onboard and thats where inkbox looks for books
+
+
+[3/20/2024 7:49 PM] tux_linux (pinned)
+https://discord.com/channels/809205711778480158/830961435122991155/1220079835716522084
+bug
+
+
+[3/20/2024 7:49 PM] tux_linux
+Pinned a message.
+
+
+[3/20/2024 7:49 PM] leo_chrom
+is it a bug?
+
+
+[3/20/2024 7:49 PM] tux_linux
+supposed to show inkbox logo white on black
+
+
+[3/20/2024 7:50 PM] leo_chrom
+oh actually while it was resetting it turned black, but it was turned off. infact when i pressed power it booted up as normal
+
+
+[3/20/2024 7:51 PM] leo_chrom
+idk if it's still a bug
+
+
+==============================================================
+Exported 766 message(s)
+==============================================================

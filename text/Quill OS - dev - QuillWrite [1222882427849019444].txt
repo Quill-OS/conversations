@@ -1,0 +1,1629 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / dev / QuillWrite
+==============================================================
+
+[3/28/2024 1:18 PM] szybet
+bonjour
+
+
+[3/28/2024 1:18 PM] szybet
+Kobo nia model C dmesg when resetted and asked for the kobo app:
+```
+[13641.949501] usb 1-2.1.4.1: new high-speed USB device number 19 using xhci_hcd
+[13644.509637] usb 1-2.1.4.1: new high-speed USB device number 20 using xhci_hcd
+[13644.702649] usb 1-2.1.4.1: New USB device found, idVendor=2237, idProduct=4230, bcdDevice= 4.01
+[13644.702663] usb 1-2.1.4.1: New USB device strings: Mfr=3, Product=4, SerialNumber=5
+[13644.702668] usb 1-2.1.4.1: Product: eReader-4.37.21586
+[13644.702672] usb 1-2.1.4.1: Manufacturer: Kobo
+[13644.702675] usb 1-2.1.4.1: SerialNumber: N306310440233
+[13644.703855] usb-storage 1-2.1.4.1:1.0: USB Mass Storage device detected
+[13644.704239] scsi host1: usb-storage 1-2.1.4.1:1.0
+[13645.727382] scsi 1:0:0:0: Direct-Access     Linux    File-Stor Gadget 0401 PQ: 0 ANSI: 2
+[13645.728373] sd 1:0:0:0: Power-on or device reset occurred
+[13645.729029] sd 1:0:0:0: [sdb] 14393341 512-byte logical blocks: (7.37 GB/6.86 GiB)
+[13645.729301] sd 1:0:0:0: [sdb] Write Protect is off
+[13645.729304] sd 1:0:0:0: [sdb] Mode Sense: 0f 00 00 00
+[13645.729614] sd 1:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[13645.742587]  sdb:
+[13645.742919] sd 1:0:0:0: [sdb] Attached SCSI removable disk
+```
+
+
+[3/28/2024 1:18 PM] szybet
+`N306310440233` There is no C :(
+
+
+[3/28/2024 1:19 PM] szybet
+`eReader-4.37.21586` that's the firmware version
+
+
+[3/28/2024 1:19 PM] szybet
+lsusb, nothing new:
+```
+Bus 001 Device 020: ID 2237:4230 Kobo Inc. eReader-4.37.21586
+```
+
+
+[3/28/2024 1:20 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-1FD8E.png
+
+
+[3/28/2024 1:20 PM] szybet
+there is a `N306310440233` 3 in there
+
+
+[3/28/2024 1:20 PM] szybet
+as in 3 = C
+
+
+[3/28/2024 1:21 PM] szybet
+MAYBE
+
+
+[3/28/2024 1:23 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-5B6BF.txt
+
+
+[3/28/2024 1:26 PM] szybet
+```
+[14083.321651] sd 1:0:0:0: [sdb] Synchronize Cache(10) failed: Result: hostbyte=DID_NO_CONNECT driverbyte=DRIVER_OK
+[14164.703270] usb 1-2.1.4.1: new high-speed USB device number 21 using xhci_hcd
+[14164.902479] usb 1-2.1.4.1: New USB device found, idVendor=0525, idProduct=a4a2, bcdDevice= 4.01
+[14164.902492] usb 1-2.1.4.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[14164.902498] usb 1-2.1.4.1: Product: RNDIS/Ethernet Gadget
+[14164.902502] usb 1-2.1.4.1: Manufacturer: Linux 4.1.15-inkbox-n306a with 2184000.usb
+[14164.965024] cdc_ether 1-2.1.4.1:1.0 eth0: register 'cdc_ether' at usb-0000:69:00.3-2.1.4.1, CDC Ethernet Device, f0:ff:ff:ff:ff:ff
+[14165.553587] usbcore: registered new interface driver cdc_subset
+```
+inkbox overwrites things
+
+
+[3/28/2024 1:31 PM] szybet
+```
+[14493.597545] usb 1-2.1.4.1: New USB device found, idVendor=0525, idProduct=a4a5, bcdDevice= 4.01
+[14493.597550] usb 1-2.1.4.1: New USB device strings: Mfr=3, Product=4, SerialNumber=0
+[14493.597552] usb 1-2.1.4.1: Product: Mass Storage Gadget
+[14493.597553] usb 1-2.1.4.1: Manufacturer: Linux 4.1.15-inkbox-n306a with 2184000.usb
+[14493.598709] usb-storage 1-2.1.4.1:1.0: USB Mass Storage device detected
+[14493.598954] usb-storage 1-2.1.4.1:1.0: Quirks match for vid 0525 pid a4a5: 10000
+[14493.599116] scsi host1: usb-storage 1-2.1.4.1:1.0
+[14494.603119] scsi 1:0:0:0: Direct-Access     Linux    File-Stor Gadget 0401 PQ: 0 ANSI: 2
+[14494.604115] sd 1:0:0:0: Power-on or device reset occurred
+[14494.604663] sd 1:0:0:0: [sdb] 20480000 512-byte logical blocks: (10.5 GB/9.77 GiB)
+[14494.605027] sd 1:0:0:0: [sdb] Write Protect is off
+[14494.605036] sd 1:0:0:0: [sdb] Mode Sense: 0f 00 00 00
+[14494.605361] sd 1:0:0:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[14494.608009]  sdb:
+[14494.608313] sd 1:0:0:0: [sdb] Attached SCSI removable disk
+```
+yea here too
+
+
+[3/28/2024 1:32 PM] tux_linux
+wdym
+
+
+[3/28/2024 1:32 PM] szybet
+I will ask on mobileforums for people ID's for more examples
+
+
+[3/28/2024 1:32 PM] szybet
+@Spagett done
+
+
+[3/28/2024 1:32 PM] tux_linux
+good luck getting a reply
+
+
+[3/28/2024 1:33 PM] szybet
+only elinkser will
+
+
+[3/28/2024 1:33 PM] szybet
+hehe
+
+
+[3/28/2024 1:33 PM] tux_linux
+yea was thinking same thing
+
+
+[3/28/2024 1:39 PM] spagettioso
+Awesome, thanks a ton!
+
+
+[3/28/2024 1:39 PM] spagettioso
+It would be interesting to see if the B has a different idProduct value
+
+
+[3/28/2024 1:40 PM] szybet
+B doesn't exist probably
+
+
+[3/28/2024 1:40 PM] szybet
+A does
+
+
+[3/28/2024 1:40 PM] spagettioso
+Ah righto
+
+
+[3/28/2024 1:40 PM] spagettioso
+I just assumed b since it was c
+
+
+[3/28/2024 1:43 PM] szybet
+https://www.mobileread.com/forums/showthread.php?p=4409761#post4409761
+
+{Embed}
+https://www.mobileread.com/forums/showthread.php?p=4409761
+USB Identification for kobo devices - MobileRead Forums
+USB Identification for kobo devices Kobo Developer's Corner
+
+
+[3/28/2024 1:44 PM] szybet
+https://www.reddit.com/r/kobo/comments/1bpuok9/usb_identification_for_kobo_devices/
+
+{Embed}
+https://www.reddit.com/r/kobo/comments/1bpuok9/usb_identification_for_kobo_devices/
+From the kobo community on Reddit
+Explore this post and more from the kobo community
+/mnt/data/projects/git/conversations/media/1bpuok9-87EF8
+
+
+[3/28/2024 1:44 PM] szybet
+I'm shadow banned on kobo subreddit so it won't do much lol
+
+
+[3/28/2024 1:46 PM] spagettioso
+I'll repost it with my account if there is nothing in a day or so
+
+
+[3/28/2024 1:46 PM] spagettioso
+I've never posted there so I shouldn't be shadow banned
+
+
+[3/28/2024 1:48 PM] szybet
+im shadow banned because i called an mod decission stupid
+
+
+[3/28/2024 1:48 PM] szybet
+because it was stupid
+
+
+[3/28/2024 1:48 PM] szybet
+we can advertise inkbox there but we cant ask what features people want
+
+
+[3/28/2024 1:48 PM] szybet
+fuck him thats what
+
+
+[3/28/2024 1:48 PM] szybet
+i hope his ereader breaks
+
+
+[3/28/2024 1:48 PM] szybet
+https://tenor.com/view/angry-angry-cat-mad-cat-mad-death-stare-gif-2007099240114134459
+
+{Embed}
+https://tenor.com/view/angry-angry-cat-mad-cat-mad-death-stare-gif-2007099240114134459
+/mnt/data/projects/git/conversations/media/angry-angry-cat-08DD7.png
+
+
+[3/28/2024 1:48 PM] spagettioso
+Lol
+
+
+[3/28/2024 1:48 PM] spagettioso
+That sucks
+
+
+[3/28/2024 1:49 PM] spagettioso
+I got shadow banned from the pine64 Reddit after a post about pineflash
+
+
+[3/28/2024 1:49 PM] spagettioso
+But that was Reddit itself apparently cause the mods told me about it
+
+
+[3/28/2024 1:49 PM] szybet
+¯\_(ツ)_/¯
+
+
+[3/28/2024 1:49 PM] szybet
+reddit sucks
+
+
+[3/28/2024 1:49 PM] spagettioso
+Yeah
+
+
+[3/28/2024 1:49 PM] szybet
+lemmy is so much better
+
+
+[3/28/2024 1:49 PM] szybet
+sadly there is no one there
+
+
+[3/28/2024 1:50 PM] spagettioso
+I Reddit as little as possible these days
+
+
+[3/28/2024 1:50 PM] spagettioso
+Yeah Lemmy is alright
+
+
+[3/28/2024 1:50 PM] szybet
+yea
+
+
+[3/28/2024 1:51 PM] spagettioso
+It's unfortunate the product ID changed when inkbox is installed
+
+
+[3/28/2024 1:51 PM] spagettioso
+I assumed it would be the same cause my phone says the same as it said on the stock os as with lineageos
+
+
+[3/28/2024 1:51 PM] szybet
+nicolas overwrited it in kernel
+
+
+[3/28/2024 1:52 PM] szybet
+for 100%
+
+
+[3/28/2024 1:52 PM] spagettioso
+Oh righto
+
+
+[3/28/2024 1:52 PM] szybet
+we can change that obviously
+
+
+[3/28/2024 1:52 PM] spagettioso
+I mean doing that does make sense
+
+
+[3/28/2024 1:52 PM] szybet
+but its better if we know whats nickel and whats inkbox
+
+
+[3/28/2024 1:52 PM] spagettioso
+It just makes gathering the initial data a bit more inconvenient
+
+
+[3/28/2024 1:52 PM] spagettioso
+I quite agree
+
+
+[3/28/2024 1:52 PM] szybet
+i wonder if we can read the default value on inkbox from userspace
+
+
+[3/28/2024 1:52 PM] szybet
+it must be somewhere right
+
+
+[3/28/2024 1:53 PM] spagettioso
+Not sure
+
+
+[3/28/2024 1:57 PM] spagettioso
+@Szybet not sure it you already have looked but this is from that Reddit post you saw.
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image0-86D9D.png
+
+
+[3/28/2024 1:58 PM] szybet
+yea
+
+
+[3/28/2024 1:58 PM] szybet
+im not interested
+
+
+[3/28/2024 1:58 PM] szybet
+im interested in them doing something reasonable ;p
+
+
+[3/28/2024 1:58 PM] spagettioso
+Aight, I just saw your message in the comments
+
+
+[3/28/2024 1:58 PM] spagettioso
+Lol
+
+
+[3/28/2024 1:58 PM] szybet
+upvote it ;D
+
+
+[3/28/2024 1:59 PM] spagettioso
+Done lol
+
+
+[3/28/2024 2:03 PM] spagettioso
+More than just overwriting things I've just looked up that vendor id, it seems to be a generic one rather than a Kobo specific one
+
+
+[3/28/2024 2:03 PM] spagettioso
+For the white touch and glo Kobo seemed to use their own custom vendor and product id
+
+
+[3/28/2024 2:05 PM] spagettioso
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20240328-090403_Fennec-7B677.png
+
+
+[3/28/2024 2:06 PM] spagettioso
+But I suppose Kobo moved away from that to use plx technologies
+
+
+[3/28/2024 2:06 PM] szybet
+well yes
+
+
+[3/28/2024 2:06 PM] szybet
+its the usb chip something
+
+
+[3/28/2024 2:06 PM] spagettioso
+Yeah
+
+
+[3/28/2024 2:06 PM] szybet
+we are interested in serialnumber
+
+
+[3/28/2024 2:07 PM] spagettioso
+I don't see a reported serial number
+
+
+[3/28/2024 2:07 PM] szybet
+well inkbox
+
+
+[3/28/2024 2:08 PM] szybet
+nicolas forgot to overwrite it ;p
+
+
+[3/28/2024 2:08 PM] spagettioso
+Wait no I'm just an idiot
+
+
+[3/28/2024 2:08 PM] spagettioso
+I was looking at both logs you sent with the inkbox device
+
+
+[3/28/2024 2:08 PM] spagettioso
+And was getting really confused
+
+
+[3/28/2024 2:08 PM] spagettioso
+Ignore me lmao
+
+
+[3/28/2024 2:09 PM] spagettioso
+Yeah no Kobo still uses their own vendor id
+
+
+[3/28/2024 2:09 PM] spagettioso
+Everything I've said in the last couple minutes feel free to ignore
+
+
+[3/28/2024 2:12 PM] szybet
+¯\_(ツ)_/¯
+
+
+[3/28/2024 2:12 PM] szybet
+i think there is no default serialnumber
+
+
+[3/28/2024 2:12 PM] szybet
+os needs to overwrite it
+
+
+[3/28/2024 2:12 PM] szybet
+hmm
+
+
+[3/28/2024 2:14 PM] spagettioso
+I mean we just need to find out if the serial number is different between models such as the nia C and A
+
+
+[3/28/2024 2:14 PM] szybet
+kernel configs
+
+
+[3/28/2024 2:14 PM] szybet
+HMMM
+
+
+[3/28/2024 2:18 PM] spagettioso
+One possibility is also that the serial number is unique to each individual device
+
+
+[3/28/2024 2:18 PM] szybet
+there should be patterns
+
+
+[3/28/2024 2:20 PM] spagettioso
+Hopefully
+
+
+[3/28/2024 2:22 PM] szybet
+there is nothing in kernel configs
+
+
+[3/28/2024 2:22 PM] szybet
+like these that kobo provides
+
+
+[3/28/2024 2:23 PM] szybet
+maybe bootloader...
+
+
+[3/28/2024 2:34 PM] szybet
+@andi is serialnumber contained somewhere in linux kernel sources?
+
+
+[3/28/2024 2:35 PM] szybet
+i think not really
+
+
+[3/28/2024 2:36 PM] szybet
+or uboot
+
+
+[3/28/2024 2:36 PM] andi15701
+well, if you have access to the full device, you can read out devicetree, hwconfig and do shasums to match against something known
+
+
+[3/28/2024 2:36 PM] szybet
+or somehow to read the original serial number>
+
+
+[3/28/2024 2:36 PM] szybet
+so its there?
+
+
+[3/28/2024 2:37 PM] andi15701
+no, but for determining that the device is supported
+
+
+[3/28/2024 2:37 PM] szybet
+well no
+
+
+[3/28/2024 2:37 PM] szybet
+thats not the point
+
+
+[3/28/2024 2:37 PM] andi15701
+hmm, serial is right after partition table
+
+
+[3/28/2024 2:38 PM] andi15701
+or *some* serial
+
+
+[3/28/2024 2:39 PM] andi15701
+but what is the point
+
+
+[3/28/2024 2:39 PM] andi15701
+determining the exact model to install the right image?
+
+
+[3/28/2024 2:40 PM] spagettioso
+For a host device (desktop etc) to determine the model of e-reader connected to it in file transfer mode
+
+
+[3/28/2024 2:40 PM] szybet
+for now just knowing the pattern of the serial number of kobo devices
+
+
+[3/28/2024 2:41 PM] andi15701
+well, again, if you want the model incl. A/C, you can shasum the devicetree and hwconfig and match against a database
+
+
+[3/28/2024 2:41 PM] szybet
+AAAAAA WE DONT HAVE AN APP RUNNING ON A KOBO ANYMORE
+
+
+[3/28/2024 2:41 PM] szybet
+we are on host
+
+
+[3/28/2024 2:41 PM] szybet
+we want to know what the device is
+
+
+[3/28/2024 2:41 PM] szybet
+to
+
+
+[3/28/2024 2:41 PM] szybet
+exactly to
+
+
+[3/28/2024 2:41 PM] szybet
+download the kernel and uboot of the exact device and include with the app
+
+
+[3/28/2024 2:42 PM] andi15701
+well, you can do two-step
+
+
+[3/28/2024 2:43 PM] andi15701
+you can just install QuillWrite
+
+
+[3/28/2024 2:43 PM] andi15701
+and let it determine its surrounds
+
+
+[3/28/2024 2:43 PM] andi15701
+and expose the whole disk via nbd
+
+
+[3/28/2024 2:43 PM] spagettioso
+Szybet. When you connect an ereader in file transfer isn't there a .Kobo folder with some system files?
+
+
+[3/28/2024 2:43 PM] andi15701
+s i m p l e
+
+
+[3/28/2024 2:44 PM] szybet
+yes yes whatever, knowing that before will enable us...
+
+
+[3/28/2024 2:44 PM] szybet
+oh yea im stupid ain't i
+
+
+[3/28/2024 2:44 PM] szybet
+:D
+
+
+[3/28/2024 2:44 PM] szybet
+yes
+
+
+[3/28/2024 2:44 PM] szybet
+give me a sec
+
+
+[3/28/2024 2:44 PM] spagettioso
+Surely we can find a file in there we can use
+
+
+[3/28/2024 2:44 PM] szybet
+there is a sql db
+
+
+[3/28/2024 2:44 PM] spagettioso
+That sounds like it will have the info we need
+
+
+[3/28/2024 2:45 PM] szybet
+well the serialnumber would be even simpler
+
+
+[3/28/2024 2:45 PM] spagettioso
+True but this seems like a very reliable way of doing it
+
+
+[3/28/2024 2:47 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/kobo-6F9C3.zip
+
+
+[3/28/2024 2:47 PM] szybet
+this is the .kobo folder
+
+
+[3/28/2024 2:47 PM] szybet
+look at the version file
+
+
+[3/28/2024 2:47 PM] szybet
+there is the version file
+
+
+[3/28/2024 2:47 PM] szybet
+which contains the serial number
+
+
+[3/28/2024 2:47 PM] spagettioso
+Perfect
+
+
+[3/28/2024 2:47 PM] szybet
+https://tenor.com/view/emril-lagasse-bam-chef-cooking-gif-4785353
+
+{Embed}
+https://tenor.com/view/emril-lagasse-bam-chef-cooking-gif-4785353
+/mnt/data/projects/git/conversations/media/emril-lagasse-E3715.png
+
+
+[3/28/2024 2:48 PM] szybet
+yea so as its the same we can determine everything we need i think
+
+
+[3/28/2024 2:55 PM] andi15701
+well, you do not know the pattern, why bother to find it out if you have more direct sources
+
+
+[3/28/2024 2:55 PM] spagettioso
+So long as there is a good pattern between devices of the same model (there should be
+
+
+[3/28/2024 2:55 PM] andi15701
+as long as the model same enough...
+
+
+[3/28/2024 2:57 PM] andi15701
+And how do you ensure that the device connected via usb is the same as the one connected via wifi?
+
+
+[3/28/2024 2:59 PM] szybet
+ping pong
+
+
+[3/28/2024 2:59 PM] szybet
+idk what spagett decides on finally, his decission if use only usb or wifi or both
+
+
+[3/28/2024 3:02 PM] andi15701
+QuillWrite might also expose things via wifi to help analyze device data
+
+
+[3/28/2024 3:02 PM] andi15701
+to speed up porting
+
+
+[3/28/2024 3:03 PM] andi15701
+I think the more general question is a bit which side is responsible of what
+
+
+[3/28/2024 3:03 PM] spagettioso
+The general overview of what I was thinking is
+
+
+[3/28/2024 3:04 PM] spagettioso
+Desktop determines device - sends relevant payload
+
+Payload mounts as read only and exposes via nbd
+
+Desktop takes backup from the nbd
+
+Payload then installs quill kernel allowing for the proper installation
+
+
+[3/28/2024 3:05 PM] szybet
+yes, very good
+
+
+[3/28/2024 3:05 PM] andi15701
+well, QuillWrite could be quite device indepedant?
+
+
+[3/28/2024 3:05 PM] spagettioso
+It's the kernel installation bit that is device dependant
+
+
+[3/28/2024 3:05 PM] spagettioso
+Currently I was thinking it could be part of the payload
+
+
+[3/28/2024 3:06 PM] andi15701
+kernel install could be done via nbd
+
+
+[3/28/2024 3:06 PM] spagettioso
+But what could work is the kernel is transmitted over nbd
+
+
+[3/28/2024 3:06 PM] spagettioso
+That way the payload part could be completely device independence
+
+
+[3/28/2024 3:06 PM] andi15701
+so the things on the kobo side could be more general
+
+
+[3/28/2024 3:06 PM] spagettioso
+Yeah
+
+
+[3/28/2024 3:06 PM] andi15701
+yes, that was also my idea
+
+
+[3/28/2024 3:07 PM] andi15701
+solve a bigger class of problems
+
+
+[3/28/2024 3:07 PM] spagettioso
+I wonder if there would be a way to push nbd and the wifi services to run solely in ram,
+
+
+[3/28/2024 3:07 PM] spagettioso
+That way the desktop portion could install the entirety of quillos over nbd
+
+
+[3/28/2024 3:07 PM] spagettioso
+Cutting out a step of the installation after the kernel
+
+
+[3/28/2024 3:10 PM] andi15701
+hmm, add a ramdisk, hack into the init process to make it call exec()
+
+
+[3/28/2024 3:11 PM] andi15701
+that was also why I was dreaming about usb-msd
+
+
+[3/28/2024 3:11 PM] andi15701
+but that might stay a dream
+
+
+[3/28/2024 3:11 PM] spagettioso
+msd?
+
+
+[3/28/2024 3:12 PM] andi15701
+mass storage device
+
+
+[3/28/2024 3:12 PM] spagettioso
+Oh ofc
+
+
+[3/28/2024 3:13 PM] spagettioso
+I wonder if remounting / onto tmpfs would be enough
+
+
+[3/28/2024 3:14 PM] andi15701
+well, exposing over nbd is easier, but having some whole-disk usb-msd would make things easier on other places, but is harder to get done
+
+
+[3/28/2024 3:15 PM] spagettioso
+Yeah not sure Ill try that
+
+
+[3/28/2024 3:29 PM] andi15701
+or maybe for QuillWrite 2.0
+
+
+[3/28/2024 3:33 PM] spagettioso
+Hmm, it seems that using nbd would make things very annoying on windows
+
+
+[3/28/2024 3:45 PM] spagettioso
+I think a netcat style thing would be better for now
+
+
+[3/28/2024 3:46 PM] tux_linux
+will be extremely slow
+
+
+[3/28/2024 3:46 PM] tux_linux
+trust me
+
+
+[3/28/2024 3:47 PM] tux_linux
+like, literal hour to flash an image
+
+
+[3/28/2024 3:47 PM] tux_linux
+its slow over usbms as well
+
+
+[3/28/2024 3:47 PM] tux_linux
+but probably less worse
+
+
+[3/28/2024 3:55 PM] spagettioso
+Hmm
+
+
+[3/28/2024 3:56 PM] andi15701
+an hour over usbms?
+
+
+[3/28/2024 3:57 PM] andi15701
+ok, writing
+
+
+[3/28/2024 3:57 PM] andi15701
+not reading
+
+
+[3/28/2024 3:57 PM] andi15701
+but then slow ssd might be an issue
+
+
+[3/28/2024 3:57 PM] andi15701
+how slow are they?
+
+
+[3/28/2024 3:57 PM] tux_linux
+It was on kobo touch 2011
+
+
+[3/28/2024 3:57 PM] tux_linux
+But yea
+
+
+[3/28/2024 3:58 PM] tux_linux
+Probably that 1ghz cpu and 256m ram doesn't help
+
+
+[3/28/2024 3:58 PM] andi15701
+well, I am writing only to newer, bigger ones
+
+
+[3/28/2024 3:58 PM] tux_linux
+Also network transfer is cpu hungry
+
+
+[3/28/2024 3:58 PM] andi15701
+keeping the small original ones as a backup
+
+{Reactions}
+👍 
+
+[3/28/2024 3:58 PM] tux_linux
+Iirc
+
+
+[3/28/2024 3:58 PM] andi15701
+so my experiences can be different
+
+
+[3/28/2024 4:40 PM] szybet
+not that much
+
+
+[3/28/2024 4:41 PM] szybet
+why dont just flash the kernel, uboot and then in it with usbnet download inkbox components
+
+
+[3/28/2024 4:41 PM] tux_linux
+more points of failure
+
+
+[3/28/2024 4:44 PM] szybet
+nope
+
+
+[3/28/2024 4:44 PM] szybet
+my god
+
+
+[3/28/2024 4:44 PM] szybet
+just verify things
+
+
+[3/28/2024 4:44 PM] szybet
+checksums
+
+
+[3/28/2024 4:45 PM] szybet
+you cant really do that if you flash the whole image at once instead of parts of it
+
+
+[3/28/2024 4:46 PM] szybet
+what is inkbox?
+
+uboot kernel and a fs files
+
+
+[3/28/2024 4:46 PM] szybet
+-_-
+
+
+[3/28/2024 5:29 PM] spagettioso
+Well right now I'm working on a backup over tcp
+
+
+[3/28/2024 5:30 PM] spagettioso
+Not sure whether using fast gz compression would be beneficial or detrimental
+
+On one hand it would mean less data to transfer 
+
+On the other hand the CPU is then transfering by network and doing compression (albeit light compression)
+
+
+[3/28/2024 5:30 PM] spagettioso
+I think that's something that will need to be tested
+
+
+[3/28/2024 5:34 PM] szybet
+i propose xz
+
+
+[3/28/2024 5:34 PM] szybet
+and compress it on the other end
+
+
+[3/28/2024 5:34 PM] szybet
+send checksums after every "chunk"
+
+
+[3/28/2024 5:35 PM] szybet
+idk what you are doing with network, but if you want a easy to use library for rust: https://github.com/lemunozm/message-io
+
+{Embed}
+https://github.com/lemunozm/message-io
+GitHub - lemunozm/message-io: Fast and easy-to-use event-driven net...
+Fast and easy-to-use event-driven network library. - lemunozm/message-io
+/mnt/data/projects/git/conversations/media/message-io-67E3C
+
+
+[3/28/2024 5:35 PM] szybet
+is sooo easy and works awesome, my screen mirroring app uses it
+
+
+[3/28/2024 5:35 PM] spagettioso
+I've just been using the tcp in the stdio
+
+
+[3/28/2024 5:36 PM] szybet
+w h a t?
+
+
+[3/28/2024 5:36 PM] spagettioso
+It's actually really easy to use
+
+
+[3/28/2024 5:36 PM] szybet
+are you
+
+
+[3/28/2024 5:36 PM] szybet
+are you shell scripting it
+
+
+[3/28/2024 5:36 PM] szybet
+whatever, use native rust components only
+
+
+[3/28/2024 5:37 PM] szybet
+so we control everything
+
+
+[3/28/2024 5:37 PM] szybet
+the library i sended you just gives you an interface to the other app like it would be another thread in rust
+
+
+[3/28/2024 5:37 PM] szybet
+sooo easy
+
+
+[3/28/2024 5:37 PM] spagettioso
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-AF21F.png
+/mnt/data/projects/git/conversations/media/image-0604C.png
+
+
+[3/28/2024 5:37 PM] szybet
+https://github.com/Szybet/kobo-screen-mirror example
+
+{Embed}
+https://github.com/Szybet/kobo-screen-mirror
+GitHub - Szybet/kobo-screen-mirror: Mirror your kobo screen to PC, ...
+Mirror your kobo screen to PC, on InkBox OS. Contribute to Szybet/kobo-screen-mirror development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/kobo-screen-mirror-D3950
+
+
+[3/28/2024 5:37 PM] spagettioso
+this is the code ive got at the moment
+
+
+[3/28/2024 5:37 PM] szybet
+another example
+https://github.com/Szybet/screen-to-kobo
+
+{Embed}
+https://github.com/Szybet/screen-to-kobo
+GitHub - Szybet/screen-to-kobo: send your screen to kobo
+send your screen to kobo. Contribute to Szybet/screen-to-kobo development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/screen-to-kobo-134F4
+
+
+[3/28/2024 5:38 PM] szybet
+its fine but complicates things in my opinion
+
+
+[3/28/2024 5:39 PM] szybet
+you could be just receiving directly a structure and in it a chunk and the checksum
+
+
+[3/28/2024 5:39 PM] spagettioso
+ill take a look at it
+
+
+[3/28/2024 5:39 PM] szybet
+and then ping pong it to send more if its fine
+
+
+[3/28/2024 5:39 PM] szybet
+look here first, an updated version of it
+
+
+[3/28/2024 5:39 PM] spagettioso
+i dont have anything against using libraries but sometimes i do find it fun to play around with base libraries
+
+
+[3/28/2024 5:40 PM] szybet
+you are doing code that others will read and use
+
+
+[3/28/2024 5:40 PM] szybet
+we use libraries because it makes easier
+
+
+[3/28/2024 5:40 PM] szybet
+otherwise everyone would still write in assembly
+
+
+[3/28/2024 5:40 PM] spagettioso
+lol
+
+
+[3/28/2024 5:40 PM] spagettioso
+we do indeed
+
+
+[3/28/2024 5:40 PM] szybet
+yea my sentence cut off in the middle
+
+
+[3/28/2024 5:40 PM] spagettioso
+after i make lunch ill look over message-io
+
+
+[3/28/2024 5:41 PM] szybet
+\- to read the code
+
+
+[3/28/2024 5:41 PM] spagettioso
+yeah i get ya
+
+
+[3/28/2024 5:41 PM] szybet
+you can use other libraries, there are a lot of them
+
+
+[3/28/2024 5:41 PM] szybet
+i just found others forcing tokio on you and being confusing for no reason
+
+
+[3/28/2024 5:42 PM] spagettioso
+yeah i have never really played around with tokio
+
+
+[3/28/2024 5:42 PM] spagettioso
+id rather avoid it for now
+
+
+[3/28/2024 5:42 PM] szybet
+its awesome to use until you do something unexpected
+
+
+[3/28/2024 5:42 PM] szybet
+then the fun starts
+
+
+[3/28/2024 5:42 PM] spagettioso
+lol
+
+
+[3/28/2024 6:00 PM] spagettioso
+are checksums needed if we use tcp? (whether through messageio or any library)
+
+
+[3/28/2024 6:00 PM] spagettioso
+seems redundant unless we use udp or smth
+
+
+[3/28/2024 6:03 PM] szybet
+huh
+
+
+[3/28/2024 6:03 PM] szybet
+i mean
+
+
+[3/28/2024 6:03 PM] szybet
+um
+
+
+[3/28/2024 6:03 PM] szybet
+yea
+
+
+[3/28/2024 6:04 PM] szybet
+probably not
+
+
+[3/28/2024 6:04 PM] szybet
+but if we want to be extra sure
+
+
+[3/28/2024 6:04 PM] szybet
+¯\_(ツ)_/¯
+
+
+[3/28/2024 6:04 PM] szybet
+so yea not needed for now
+
+
+[3/28/2024 6:05 PM] spagettioso
+it probably wouldnt be hard but calculating that many checksums on an ereader would probably eat up some cpu over the process
+
+
+[3/28/2024 6:05 PM] szybet
+nah its fine
+
+
+[3/28/2024 6:06 PM] szybet
+you really underestimate what an ereader can do
+
+
+[3/28/2024 6:06 PM] szybet
+https://www.youtube.com/watch?v=hRqquXvsR1Q
+
+{Embed}
+Nicolas Mailloux
+https://www.youtube.com/watch?v=hRqquXvsR1Q
+How to kill an eInk screen with YouTube
+All credits go to Szybet: https://github.com/Szybet/kobo-screen-mirror-reverse/tree/main
+/mnt/data/projects/git/conversations/media/maxresdefault-612D2.jpg
+
+
+[3/28/2024 6:06 PM] szybet
+this takes up 20-30% of cpu
+
+
+[3/28/2024 6:07 PM] szybet
+on the ereader
+
+
+[3/28/2024 6:07 PM] szybet
+its receiving over network, then transfering over a unix socket and then showing it on screen as a png
+
+
+[3/28/2024 6:10 PM] spagettioso
+hmm ill add it in then
+
+
+[3/28/2024 6:10 PM] spagettioso
+a bit of extra reduncancy cant hurt
+
+
+[3/28/2024 6:11 PM] szybet
+its really easy to add
+
+
+[3/28/2024 6:11 PM] szybet
+instead of sending a buffer you send a structure and in it a buffer and the checksum
+
+
+[3/28/2024 6:12 PM] szybet
+convertion done automatically obviously
+
+
+[3/28/2024 6:15 PM] spagettioso
+yeah
+
+
+[3/28/2024 6:18 PM] spagettioso
+calibre seems to work off of the usb product id
+
+
+[3/28/2024 6:18 PM] spagettioso
+and they have a list we could use
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-C1C98.png
+
+
+[3/28/2024 6:20 PM] spagettioso
+unfortunately all nia models seem to share the same id, as do the touch
+
+
+[3/28/2024 6:35 PM] szybet
+okay, this is the answer
+
+
+[3/28/2024 6:35 PM] szybet
+and we give up at this point
+
+
+[3/28/2024 6:35 PM] szybet
+with usb things
+
+
+[3/28/2024 6:35 PM] szybet
+we need to detect it ourself
+
+
+[3/28/2024 6:36 PM] szybet
+with the payload
+
+
+[3/28/2024 6:36 PM] szybet
+luckly you are going the way i intended so we have 2 way communication anyway :D
+
+
+[3/28/2024 6:37 PM] spagettioso
+if only the models A and C etc had different product id's
+
+
+[3/28/2024 6:39 PM] spagettioso
+im suprised that they need separate kernels
+
+
+[3/28/2024 6:53 PM] szybet
+different pmics
+
+
+[3/28/2024 7:04 PM] spagettioso
+ah, thats unfortunate
+
+
+[3/28/2024 8:58 PM] tux_linux
+Are usb ids controlled by the kernel or the USB device itself?
+
+
+[3/28/2024 8:58 PM] tux_linux
+Maybe ntx hacked it that much
+
+
+[3/28/2024 9:06 PM] spagettioso
+Well inkbox has different Id from nickel
+
+
+[3/28/2024 9:06 PM] tux_linux
+Then you can play with it
+
+
+[3/28/2024 9:07 PM] tux_linux
+We can set different id for nia c in kernel maybe
+
+
+[3/28/2024 9:07 PM] spagettioso
+Well the idea is that we are using it to detect what device it is when it's running stock
+
+
+[3/28/2024 9:07 PM] spagettioso
+To figure out what to install to it
+
+
+[3/28/2024 9:07 PM] tux_linux
+Oh
+
+
+[3/28/2024 9:07 PM] tux_linux
+Yea
+
+
+[3/28/2024 9:07 PM] spagettioso
+Yeah
+
+
+[3/28/2024 9:14 PM] spagettioso
+What I'm going to do (and have been working on today) is as follows:
+The desktop program will use the productid of the eReaders but only so we don't accidentally open up an android phone or other mtp device which happens to be plugged in
+
+
+[3/28/2024 9:15 PM] spagettioso
+It sends over 'QuilLoad' which will open up communications with the desktop over wifi
+
+
+[3/28/2024 9:15 PM] spagettioso
+It then transmits the exact model of the device
+
+
+[3/28/2024 9:15 PM] spagettioso
+Problem solved
+
+
+[3/28/2024 9:16 PM] tux_linux
+Over wifi?
+
+
+[3/28/2024 9:16 PM] spagettioso
+Well if we are transmitting the backup over wifi it makes sense to do it that way
+
+
+[3/28/2024 9:17 PM] tux_linux
+I'm fearing reliability issues
+
+
+[3/28/2024 9:18 PM] spagettioso
+Does usbnet work properly on nickel?
+
+
+[3/28/2024 9:18 PM] tux_linux
+Yes
+But you need to enable it first
+
+
+[3/28/2024 9:19 PM] spagettioso
+Is that something that requires a reboot?
+
+
+[3/28/2024 9:19 PM] tux_linux
+No
+
+
+[3/28/2024 9:19 PM] tux_linux
+Just insmodding modules
+
+
+[3/28/2024 9:19 PM] spagettioso
+Then quilload can activate it
+
+
+[3/28/2024 9:19 PM] tux_linux
+Ok
+You will need different modules list for each device
+
+
+[3/28/2024 9:20 PM] spagettioso
+Should be ok
+
+
+[3/28/2024 9:20 PM] tux_linux
+I don't have them at hand now but you can experiment with your nia
+
+
+[3/28/2024 9:20 PM] tux_linux
+/drivers
+
+
+[3/28/2024 9:20 PM] tux_linux
+g_ether.ko
+
+
+[3/28/2024 9:21 PM] tux_linux
+Will need a bunch of other ones before it accepts to load
+
+
+[3/28/2024 9:44 PM] szybet
+tcp exists -_-
+
+
+[3/28/2024 9:44 PM] szybet
+well no, no usbnet
+
+
+[3/28/2024 9:44 PM] szybet
+because new devices and we won't know how to do that
+
+
+[3/28/2024 9:44 PM] szybet
+if we do it over wifi it will work for all devices even unsupported to take a backup
+
+
+[3/28/2024 9:48 PM] spagettioso
+I'll let you two argue about that
+
+
+[3/28/2024 9:49 PM] szybet
+we cant get people to make usbnet working on inkbox
+
+
+[3/28/2024 9:49 PM] szybet
+and those are people who were able to install it
+
+
+[3/28/2024 9:49 PM] szybet
+the conclusion is obvious.
+
+
+[3/28/2024 9:49 PM] andi15701
+modprobe g_ether
+
+
+[3/28/2024 9:50 PM] andi15701
+nothing special
+
+
+[3/28/2024 9:50 PM] andi15701
+on inkbox
+
+
+[3/28/2024 9:50 PM] szybet
+how do you make sure nickel won't make a funny redesign next update / device so it will be different?
+
+
+[3/28/2024 9:51 PM] spagettioso
+That my worry about using usbnet
+
+
+[3/28/2024 9:51 PM] szybet
+then do what you think is reasonable
+
+
+[3/28/2024 9:51 PM] szybet
+:D
+
+
+[3/28/2024 9:52 PM] spagettioso
+But on the other hand transfer speeds may be faster?
+
+
+[3/28/2024 9:52 PM] andi15701
+usbnet on nickel: that is different
+
+
+[3/28/2024 9:52 PM] andi15701
+but on anything else it is easy
+
+
+[3/28/2024 9:53 PM] spagettioso
+That's what we are thinking about
+
+
+[3/28/2024 9:53 PM] andi15701
+I played a bit around with my crazy ideas
+
+
+[3/28/2024 9:53 PM] andi15701
+eBR-1A # mw 20d8040 30
+eBR-1A # mw 20d8044 10000000
+reset
+
+
+[3/28/2024 9:54 PM] andi15701
+doing the equivalent in nickel seems to work
+
+
+[3/28/2024 9:54 PM] szybet
+once again, this won't work on all devices / all future devices
+
+
+[3/28/2024 9:55 PM] andi15701
+with little work on anything imx6
+
+
+[3/28/2024 9:55 PM] andi15701
+about future, anything might change
+
+
+[3/28/2024 9:55 PM] andi15701
+update mechanism might change for introducing payloads
+
+
+[3/28/2024 9:59 PM] tux_linux
+Nickel switches wifi off automatically
+
+
+[3/28/2024 9:59 PM] tux_linux
+Can be circumvented with setting but still
+
+
+[3/28/2024 10:00 PM] tux_linux
+And what happens if device randomly loses connection during install process
+
+
+[3/28/2024 10:00 PM] andi15701
+but if that is faster, do you think that everyone should use the slower alternative because somewhere is a device that does not work that way
+
+
+[3/28/2024 10:01 PM] andi15701
+And there are readers without wifi, so if you insist on something everywhere...
+
+
+[3/28/2024 10:02 PM] szybet
+we need to only upload kernel and uboot
+
+
+[3/28/2024 10:03 PM] andi15701
+I do not think we have one fits all solution here
+
+
+[3/28/2024 10:03 PM] spagettioso
+If that happens then it will remove the files
+
+
+[3/28/2024 10:03 PM] andi15701
+but of course we have to limit variants
+
+
+[3/28/2024 10:04 PM] szybet
+can you like accept that tcp and rust error handling exists and is fine?
+
+
+[3/28/2024 10:04 PM] szybet
+it cant hurt you, it will help you
+
+
+[3/28/2024 10:04 PM] spagettioso
+I think I agree here, we can start with wifi only, if we either have problems with wifi or want to support a device without wifi we can always add it in later
+
+
+[3/28/2024 10:05 PM] spagettioso
+At least that's what I'm going to do. If anyone wants to add usbnet before then feel free to add it.
+
+
+[3/28/2024 10:07 PM] tux_linux
+Ok, i thought it loaded the whole system to the card
+
+
+[3/28/2024 10:07 PM] tux_linux
+Right away
+
+
+[3/28/2024 10:07 PM] spagettioso
+Nah
+
+
+[3/28/2024 10:07 PM] tux_linux
+And hoping kobo os doesn't crash for some reason in the meantime
+
+
+[3/28/2024 10:07 PM] spagettioso
+As you said that would be a bad way to go about it
+
+
+[3/28/2024 10:08 PM] spagettioso
+Even if we where using usbnet as if the cable got disconnected for whatever reason you are in a bad spot
+
+
+[3/28/2024 10:08 PM] szybet
+a meteor will hit and hit the new inkbox user
+
+
+[3/28/2024 10:08 PM] szybet
+[ * ]
+
+
+[3/28/2024 10:08 PM] tux_linux
+Ok what happens if you overwrite u-boot badly
+
+
+[3/28/2024 10:08 PM] tux_linux
+You need checksums
+
+
+[3/28/2024 10:08 PM] spagettioso
+Of course
+
+
+[3/28/2024 10:08 PM] tux_linux
+Then fine
+
+
+[3/28/2024 11:40 PM] spagettioso
+Progress has been made 👍 it now pushes data to an mtp device which matches one of the id's of supported devices
+
+{Reactions}
+👍 
+
+==============================================================
+Exported 371 message(s)
+==============================================================

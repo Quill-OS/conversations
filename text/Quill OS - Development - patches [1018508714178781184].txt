@@ -1,0 +1,915 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / patches
+==============================================================
+
+[9/11/2022 3:10 PM] tux_linux
+Only Git patches are allowed here
+Description + patch itself
+**No chat**
+
+
+[9/11/2022 3:22 PM] szybet
+https://discord.com/channels/809205711778480158/958419944243089479/1016454316380401796
+
+https://discord.com/channels/809205711778480158/958419944243089479/1016445100269764628
+
+
+[9/11/2022 8:22 PM] szybet
+keyboard redesign + special characters
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-more-characters-in-keyboard-and-a-gen-10E65.patch
+
+{Reactions}
+👍 
+
+[9/13/2022 5:44 PM] szybet
+fix for flashing reader
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-fix-for-reader-flashing-9174A.patch
+
+{Reactions}
+👍 
+
+[9/20/2022 8:37 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-requested-fixes-CE4E8.patch
+
+{Reactions}
+👍 
+
+[9/26/2022 8:57 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-Options-to-disable-dialogs-at-launch.-B75AD.patch
+
+
+[9/27/2022 12:01 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-some-changes-6B0B2.patch
+
+
+[9/28/2022 10:36 PM] szybet
+Started a thread.
+
+
+[10/9/2022 3:11 PM] szybet
+https://discord.com/channels/809205711778480158/958419944243089479/1012713975944855632
+
+xorg keyboard
+
+{Reactions}
+👍 
+
+[10/15/2022 4:35 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-Fixes-edge-cases-like-empty-library-B4FC4.patch
+
+{Reactions}
+👍 
+
+[11/20/2022 5:41 PM] andi15701
+still missing
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-rcS-root-fix-things-for-kobo-clara-hd-FF90D.patch
+
+{Reactions}
+👍 
+
+[11/20/2022 5:58 PM] andi15701
+and this one also
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-inkbox-splash-refresh-only-once-3B933.patch
+
+
+[12/13/2022 12:15 AM] szybet
+https://github.com/Kobo-InkBox/inkbox/pull/40
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/pull/40
+minor library fixes by Szybet · Pull Request #40 · Kobo-InkBox/inkb...
+one of 3 pull requests, this one is the smallest
+/mnt/data/projects/git/conversations/media/40-DB7DD
+
+
+[12/13/2022 12:16 AM] szybet
+fixed.
+
+
+[12/30/2022 5:15 PM] szybet
+Ok so for lockscreen:
+```
+- Try to find out why IPD launches lockscreen when waking from sleep even if it is disabled and even if it supposedly contains code to prevent that
+```
+im sure you didn't restarted ipd. it needs to grab the config once more, you can do that with
+```
+// Notify power daemon of configuration update    writeFile("/mnt/onboard/.adds/inkbox/.config/20-sleep_daemon/updateConfig", "true");
+```
+
+the second
+```
+- Try to find out why FBInk restore doesn't work after the passcode is entered correctly and the program quits
+```
+Because IPD doesn't cares, to do it add fbink command to restore the screen from a file from /tmp. Also to avoid lockscreen clearing the screen exit lockscreen with executing from lockscreen `killall -9 lockscreen`. If you want to that the screen will be cleared, just add this option for the mode where the previous app is behind lockscreen
+
+
+[12/30/2022 11:52 PM] tux_linux
+1. It should already have done that while disabling it
+
+
+[12/30/2022 11:53 PM] szybet
+??????????? no
+
+
+[12/30/2022 11:53 PM] szybet
+it monitors this one file for changes, if it was changed, then it updates its config
+
+
+[12/31/2022 12:07 AM] tux_linux
+Wait a second, I'll check something
+
+
+[12/31/2022 12:10 AM] tux_linux
+It still doesn't work
+Try to enable lockscreen from a fresh boot and put it to sleep, then wake up
+
+
+[12/31/2022 12:10 AM] tux_linux
+Nothing in logs about it
+
+
+[12/31/2022 12:11 AM] szybet
+did you added this
+```
+// Notify power daemon of configuration update    writeFile("/mnt/onboard/.adds/inkbox/.config/20-sleep_daemon/updateConfig", "true");
+```
+right next after writing true to the lockscreen config dir?
+
+
+[12/31/2022 12:13 AM] tux_linux
+No
+
+
+[12/31/2022 12:13 AM] tux_linux
+Isn't it supposed to do it when you press ok already?
+
+
+[12/31/2022 12:14 AM] szybet
+power daemon has diffrent settings
+
+
+[12/31/2022 12:14 AM] szybet
+page
+
+
+[12/31/2022 12:14 AM] szybet
+well whatever enable / disable lockscreen, then enter power daemon settings, click OK, then go to sleep
+
+
+[12/31/2022 12:14 AM] tux_linux
+Ok
+
+
+[6/17/2023 9:25 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-Local-library-Fix-folder-long-names-k-5C493.patch
+
+
+[6/17/2023 9:26 PM] szybet
+I do wonder how github can be sure it's from me, this commit - connect it with my username. like its not signed
+
+
+[6/17/2023 9:27 PM] tux_linux
+Ok thanks
+Did you test it extensively?
+
+
+[6/17/2023 9:27 PM] tux_linux
+It will do that already I think
+
+
+[6/17/2023 9:28 PM] tux_linux
+(gh)
+
+
+[6/17/2023 9:28 PM] szybet
+only on my library
+
+
+[6/17/2023 9:28 PM] szybet
+just click some times should be fine
+
+
+[6/17/2023 9:28 PM] szybet
+there are not a lot of changes
+
+
+[6/17/2023 9:28 PM] tux_linux
+Ok
+
+
+[6/17/2023 9:28 PM] szybet
+maybe regenerate the library
+
+
+[6/17/2023 9:28 PM] szybet
+too
+
+
+[6/17/2023 9:28 PM] szybet
+i'm tired
+
+
+[6/17/2023 9:29 PM] tux_linux
+Nothing else to do then?
+
+
+[6/17/2023 9:29 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-F14C0.png
+
+
+[6/17/2023 9:29 PM] szybet
+not in code
+
+
+[6/17/2023 9:29 PM] szybet
+i need to do the video
+
+
+[6/17/2023 9:30 PM] szybet
+and maybe the kobo nia wiki page
+
+
+[6/17/2023 9:30 PM] szybet
+but if you finish your things, dont wait for me and do my things
+
+
+[6/17/2023 9:31 PM] szybet
+im taking a pause
+
+
+[6/17/2023 9:31 PM] szybet
+h? 2?
+
+
+[6/17/2023 9:31 PM] szybet
+idk
+
+
+[6/17/2023 9:31 PM] tux_linux
+Good
+Np
+
+
+[6/29/2023 2:33 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-if-those-logs-will-be-removed-I-will--CE542.patch
+
+
+[6/29/2023 2:33 PM] szybet
+@tux-linux @tux-linux @tux-linux @tux-linux fnmsaedkujgfnewsriku
+
+
+[6/29/2023 3:57 PM] tux_linux
+What's the change
+
+
+[6/29/2023 4:05 PM] tux_linux
+No, I will not enable the debug output
+
+
+[6/29/2023 4:05 PM] tux_linux
+It's too much
+
+
+[6/29/2023 4:05 PM] tux_linux
+I will leave the arguments
+
+
+[6/29/2023 4:06 PM] szybet
+its needed to help people
+
+
+[6/29/2023 4:06 PM] szybet
+it will only work if log is enabled
+
+
+[6/29/2023 4:07 PM] szybet
+thats the point of logs
+
+
+[6/29/2023 4:14 PM] szybet
+enable it
+
+
+[6/29/2023 4:14 PM] szybet
+or make an additionall flag for it
+
+
+[6/29/2023 4:14 PM] szybet
+i dont care
+
+
+[6/29/2023 4:14 PM] tux_linux
+yes, a flag is better
+
+
+[6/29/2023 4:14 PM] szybet
+GUI_DEBUG_A_LOT
+
+
+[7/21/2023 9:13 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/gui_apps-81143
+
+
+[7/21/2023 9:14 PM] szybet
+i removed one unneceserry line and added a mount bind for dev null because syncthing needs it
+
+
+[7/21/2023 9:14 PM] szybet
+please apply it, im too lazy to make a pull request
+
+
+[7/21/2023 9:14 PM] tux_linux
+what was the unnecessary line
+
+
+[7/21/2023 9:14 PM] szybet
+remounting /dev/ 2 times ro
+
+
+[7/21/2023 9:14 PM] szybet
+no reason to do that
+
+
+[7/21/2023 9:15 PM] tux_linux
+you
+
+
+[7/21/2023 9:15 PM] tux_linux
+didn't
+
+
+[7/21/2023 9:15 PM] tux_linux
+pull
+
+
+[7/21/2023 9:15 PM] tux_linux
+from
+
+
+[7/21/2023 9:15 PM] tux_linux
+rootfs
+
+
+[7/21/2023 9:15 PM] tux_linux
+repo
+
+
+[7/21/2023 9:15 PM] szybet
+i coppied the latest gui apps file
+
+
+[7/21/2023 9:15 PM] szybet
+if yuou updated in to 3 days ago, yes its outdated
+
+
+[7/21/2023 9:16 PM] tux_linux
+https://github.com/Kobo-InkBox/rootfs/commit/aba86b1696ef18fd36c4f46f3c594367968de2d7
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/commit/aba86b1696ef18fd36c4f46f3c594367968de2d7
+N249: GUI apps improvements · Kobo-InkBox/rootfs@aba86b1
+/mnt/data/projects/git/conversations/media/aba86b1696ef18fd36c4f46f3c594367968de2d7-E9DA0
+
+
+[7/21/2023 9:16 PM] szybet
+i applied some fixes for clara, i remember that
+
+
+[7/21/2023 9:16 PM] tux_linux
+this means you didn't test kobo nia with different fbink device id
+
+
+[7/21/2023 9:16 PM] szybet
+no i didnt
+
+
+[7/21/2023 9:16 PM] tux_linux
+well
+
+
+[7/21/2023 9:17 PM] tux_linux
+maybe your doom can run better with it
+
+
+[7/21/2023 9:17 PM] szybet
+i didnt said i did it?
+
+
+[7/21/2023 9:17 PM] szybet
+ok i will try now
+
+
+[7/21/2023 9:17 PM] tux_linux
+.
+
+
+[7/21/2023 9:17 PM] szybet
+apply the file
+
+
+[7/21/2023 9:17 PM] szybet
+upload the video
+
+
+[7/21/2023 9:17 PM] szybet
+i will do all those things
+
+
+[7/21/2023 9:17 PM] tux_linux
+is it not better to try it now before i upload the video?
+
+
+[7/21/2023 9:17 PM] tux_linux
+in case you actually get something more usable
+
+
+[7/21/2023 9:18 PM] szybet
+i doubt it - diffrence between nickel and inkbox was nothing
+
+
+[7/21/2023 9:19 PM] szybet
+for 99% it wont change anythijng
+
+
+[7/21/2023 9:19 PM] szybet
+so upload it
+
+
+[7/21/2023 9:20 PM] tux_linux
+https://www.youtube.com/watch?v=xb-FgfQZEUM
+
+{Embed}
+Nicolas Mailloux
+https://www.youtube.com/watch?v=xb-FgfQZEUM
+Doom running on Kobo Nia
+@Szybet (https://github.com/Szybet) has ported Doom to their Kobo Nia that is running InkBox OS.
+https://github.com/Szybet/doomgeneric-rs-inkbox
+/mnt/data/projects/git/conversations/media/hqdefault-4B597.jpg
+
+
+[7/21/2023 9:20 PM] tux_linux
+it is up
+
+
+[7/21/2023 9:21 PM] szybet
+Thanks!
+
+{Reactions}
+👍 
+
+[7/21/2023 9:22 PM] szybet
+can i create the second table?
+
+
+[7/21/2023 9:23 PM] tux_linux
+well ok but don't put doom in it
+
+
+[7/21/2023 9:23 PM] tux_linux
+i will package it
+
+
+[7/21/2023 9:23 PM] szybet
+ok then i dont care
+
+
+[7/21/2023 9:24 PM] szybet
+ok maybe i will add it with sanki
+
+
+[7/21/2023 9:24 PM] [matrix] tux-linux
+?
+
+
+[7/21/2023 9:24 PM] szybet
+syncthing
+
+
+[7/21/2023 9:24 PM] szybet
+my god you see im not thinking
+
+
+[7/21/2023 9:24 PM] [matrix] tux-linux
+wdym
+
+
+[7/21/2023 9:24 PM] szybet
+add gui apps patch and i will test rootfs today
+
+
+[7/21/2023 9:26 PM] szybet
+i added you to the repo
+
+
+[7/21/2023 9:27 PM] tux_linux
+good
+
+
+[7/21/2023 9:28 PM] tux_linux
+you know that dev is only mounted read-only once?
+
+
+[7/21/2023 9:28 PM] szybet
+so what did i deleted
+
+
+[7/21/2023 9:29 PM] tux_linux
+the line where it is mounted read-only
+
+
+[7/21/2023 9:29 PM] tux_linux
+remounted
+
+
+[7/21/2023 9:29 PM] szybet
+no
+
+
+[7/21/2023 9:29 PM] szybet
+there is a second line doing that below
+
+
+[7/21/2023 9:29 PM] tux_linux
+where
+
+
+[7/21/2023 9:30 PM] szybet
+maybe etc
+
+
+[7/21/2023 9:30 PM] szybet
+lol nevermind
+
+
+[7/21/2023 9:42 PM] tux_linux
+done
+
+
+[7/21/2023 9:43 PM] szybet
+tommorow then, you are late 5 minutes
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-D56F3.png
+
+
+[7/21/2023 9:43 PM] szybet
+when will you make doom as a user app?
+
+
+[7/21/2023 9:43 PM] szybet
+estimated time
+
+
+[7/21/2023 9:44 PM] tux_linux
+?
+
+
+[7/21/2023 9:44 PM] tux_linux
+when clara support is done, maybe
+
+
+[7/21/2023 9:44 PM] szybet
+ok then, i will announce syncthing
+
+
+[7/21/2023 9:44 PM] tux_linux
+you know that you would have turned it off anyway to update the rootfs?
+
+
+[7/21/2023 9:44 PM] tux_linux
+does it need qtdbus
+
+
+[7/21/2023 9:45 PM] szybet
+also something kitkat noticed: everyone can write in #announcements thats bad: limit the channel to me and you
+
+
+[7/21/2023 9:45 PM] szybet
+propably, the same as in nachat and doom: someone wants it, i will provide it
+
+
+[7/21/2023 9:46 PM] tux_linux
+i already did that
+
+
+[7/21/2023 9:46 PM] tux_linux
+how
+
+
+[7/21/2023 9:46 PM] szybet
+recompile the binary?
+
+
+[7/21/2023 9:46 PM] tux_linux
+which one
+
+
+[7/21/2023 9:46 PM] szybet
+what
+
+
+[7/21/2023 9:46 PM] szybet
+every one
+
+
+[7/21/2023 9:46 PM] tux_linux
+and you will provide a whole update package?
+
+
+[7/21/2023 9:46 PM] szybet
+no, user app
+
+
+[7/21/2023 9:46 PM] tux_linux
+with each binary required?
+
+
+[7/21/2023 9:47 PM] szybet
+no
+
+
+[7/21/2023 9:47 PM] szybet
+without dbus
+
+
+[7/21/2023 9:47 PM] tux_linux
+then how can it work
+
+
+[7/21/2023 9:47 PM] szybet
+what is your problem
+
+
+[7/21/2023 9:47 PM] szybet
+i dont use dbus
+
+
+[7/21/2023 9:47 PM] szybet
+my qt build uses it so it automatically linked
+
+
+[7/21/2023 9:47 PM] tux_linux
+so you will use old qt
+
+
+[7/21/2023 9:47 PM] szybet
+or maybe not? nachat is weird
+
+
+[7/21/2023 9:47 PM] szybet
+let me check
+
+
+[7/21/2023 9:47 PM] tux_linux
+well, good it will permit us to see if users are really interested in the project or not
+
+
+[7/21/2023 9:48 PM] szybet
+https://github.com/Szybet/nachat-inkbox/blob/7ecd3f12b98584db09067f72cb78a6371d396995/src/CMakeLists.txt#L3
+
+{Embed}
+https://github.com/Szybet/nachat-inkbox/blob/7ecd3f12b98584db09067f72cb78a6371d396995/src/CMakeLists.txt
+nachat-inkbox/src/CMakeLists.txt at 7ecd3f12b98584db09067f72cb78a63...
+Portable desktop chat client for Matrix. Contribute to Szybet/nachat-inkbox development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/nachat-inkbox-07E9E
+
+
+[7/21/2023 9:48 PM] szybet
+this was weird, really
+
+
+[7/21/2023 9:48 PM] szybet
+one hour wasted to debug this and nothing
+
+
+[7/21/2023 9:48 PM] tux_linux
+ok
+
+
+[7/21/2023 9:48 PM] szybet
+NO IDEA
+
+
+[7/24/2023 8:05 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-kobo-nia-c-support-D8F71.patch
+
+
+[7/24/2023 8:06 PM] szybet
+@tux-linux to be applied to original inkbox repo
+
+
+[7/24/2023 8:15 PM] .kitkat1.
+rrr
+
+
+[7/24/2023 8:15 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-98A3F.png
+
+
+[7/24/2023 8:15 PM] .kitkat1.
+im banned
+
+
+[7/24/2023 8:16 PM] tux_linux
+from
+
+
+[7/24/2023 8:16 PM] .kitkat1.
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/battery_watchdog-DCA84.zip
+
+
+[7/24/2023 8:16 PM] .kitkat1.
+but a zip file works
+
+
+[7/24/2023 8:16 PM] .kitkat1.
+here is the updated battery watchdog
+
+
+[7/25/2023 2:32 PM] szybet
+@tux-linux remember this here too
+
+
+[7/25/2023 2:32 PM] tux_linux
+ok
+
+
+[7/25/2023 5:11 PM] szybet
+i dont see this applied
+
+
+[7/25/2023 5:11 PM] szybet
+maybe im blind
+
+
+[7/25/2023 5:11 PM] tux_linux
+oh i forgot
+
+
+[7/25/2023 5:18 PM] tux_linux
+and i need to apply this as well
+
+
+[7/25/2023 5:19 PM] szybet
+yes
+
+
+[7/25/2023 5:19 PM] szybet
+a few lines
+
+
+[7/25/2023 11:12 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-permission-fixes-0DDC2.patch
+
+
+[7/25/2023 11:12 PM] szybet
+was this patch ever applied?
+
+
+[7/25/2023 11:13 PM] szybet
+i dont think so
+
+
+[7/25/2023 11:13 PM] szybet
+there were conversations about it
+
+
+[7/25/2023 11:14 PM] tux_linux
+It isn't needed
+
+
+[7/25/2023 11:14 PM] tux_linux
+I use -all-root mksquashfs option
+
+
+[7/25/2023 11:14 PM] tux_linux
+Never encountered problems with it
+
+
+[7/25/2023 11:15 PM] szybet
+chmod wouldnt hurt
+
+
+[7/25/2023 11:15 PM] tux_linux
+All root does exactly that
+
+
+[10/20/2023 9:42 PM] andi15701
+patch for inkbox, should clean up battery probing
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-proper-probing-of-battery-path-A4763.patch
+
+
+[10/21/2023 8:23 PM] tux_linux
+thanks
+
+
+[10/28/2023 11:31 PM] andi15701
+will you apply it?
+
+
+[10/28/2023 11:38 PM] [matrix] tux-linux
+it works on clara hd?
+it will work on other devices?
+
+
+[10/28/2023 11:40 PM] nebajoth
+Does it work on Clara now?
+
+
+[10/29/2023 7:43 AM] andi15701
+I have just checked battery display on my desktop, but I see no reason to break anything
+
+
+[10/29/2023 7:43 AM] andi15701
+on any devices
+
+
+[10/29/2023 8:02 AM] andi15701
+the main point is that having if (device == something) is not very feasible
+
+
+[10/29/2023 8:02 AM] andi15701
+if number of devices rises
+
+
+[10/29/2023 8:03 AM] andi15701
+so better do these things now than later
+
+
+[10/29/2023 7:01 PM] andi15701
+ok, cross-checked it with the clara, still works there
+
+
+[12/26/2023 12:14 AM] andi15701
+so what about that patch
+
+
+[12/26/2023 1:15 AM] tux_linux
+i will look at it
+
+
+[2/3/2024 4:08 AM] tux_linux
+test
+
+
+[3/28/2024 11:45 PM] andi15701
+first step towards clara a/b autodetect
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/0001-use-u-boot-from-submodule-for-n249-44D9F.patch
+
+
+[3/28/2024 11:45 PM] andi15701
+you can then remove the other u-boot
+
+
+==============================================================
+Exported 196 message(s)
+==============================================================

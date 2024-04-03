@@ -1,0 +1,55 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / dev / probably the name is different on ubuntu
+==============================================================
+
+[6/27/2023 10:51 PM] kuratius
+
+
+
+[6/27/2023 10:51 PM] kuratius
+dk@dk-ThinkPad-E560:~/imgtool$ nbd-client
+ERROR: no information specified
+
+Usage: nbd-client -name|-N name host [port] nbd_device
+    [-block-size|-b block size] [-timeout|-t timeout] [-swap|-s] [-sdp|-S]
+    [-persist|-p] [-nofork|-n] [-systemd-mark|-m] [-nonetlink|-L]
+    [-readonly|-R] [-size|-B bytes] [-preinit|-P]
+Or   : nbd-client -u (with same arguments as above)
+Or   : nbd-client nbdX
+Or   : nbd-client -d nbd_device
+Or   : nbd-client -c nbd_device
+Or   : nbd-client -h|--help
+Or   : nbd-client -l|--list host
+Or   : nbd-client -V|--version
+All commands that connect to a host also take:
+    [-F|-certfile certfile] [-K|-keyfile keyfile]
+    [-A|-cacertfile cacertfile] [-H|-tlshostname hostname] [-x|-enable-tls]
+Default value for blocksize is 512
+Allowed values for blocksize are 512,1024,2048,4096
+Note, that kernel 2.4.2 and older ones do not work correctly with
+blocksizes other than 1024 without patches
+Default value for port is 10809. Note that port must always be numeric
+Bug reports and general discussion should go to nbd@other.debian.org
+dk@dk-ThinkPad-E560:~/imgtool$
+
+
+[6/27/2023 10:51 PM] kuratius
+does this look right?
+
+
+[6/27/2023 10:51 PM] kuratius
+@Szybet
+
+
+[6/27/2023 10:52 PM] szybet
+what are you trying to achieve
+
+
+[6/27/2023 10:52 PM] szybet
+try if the modprobe command works
+
+
+==============================================================
+Exported 6 message(s)
+==============================================================

@@ -1,0 +1,3020 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / dev / SQFMI Watchy
+==============================================================
+
+[1/9/2024 6:26 PM] tux_linux
+@Szybet @Kuratius 
+I suggest we move Watchy discussion here, as it will eventually be related in some way to InkBox
+
+
+[1/9/2024 6:27 PM] kuratius
+https://www.youtube.com/watch?v=EAQI2ZSmxPU
+
+{Embed}
+Andreas Spiess
+https://www.youtube.com/watch?v=EAQI2ZSmxPU
+Rutgers University Confirmed: Meshtastic and LoRa are dangerous
+In 2020, I was the first YouTuber to make a video about “Meshtastic,” created by Kevin Hester. The project name was a merge between Mesh and Fantastic. Already then, I loved the project. But why is it the “most dangerous LoRa project”? Here is the proof: My video was included in a study titled “NETWORK-ENABLED ANARCHY” by an organization feature...
+/mnt/data/projects/git/conversations/media/maxresdefault-C1511.jpg
+
+
+[1/9/2024 6:27 PM] kuratius
+could be interesting for watchy integration
+
+
+[1/9/2024 6:27 PM] tux_linux
+what is it exactly
+
+
+[1/9/2024 6:28 PM] kuratius
+basically decentralized long range text messaging that works without cell towers
+
+
+[1/9/2024 6:28 PM] tux_linux
+awesome
+
+
+[1/9/2024 6:28 PM] kuratius
+a few km in range
+
+
+[1/9/2024 6:28 PM] tux_linux
+like amateur radio a bit
+
+
+[1/9/2024 6:28 PM] kuratius
+yeah
+
+
+[1/9/2024 6:28 PM] szybet
+lora? is it long range esp something?
+
+
+[1/9/2024 6:28 PM] kuratius
+it's a communication protocol iirc
+
+
+[1/9/2024 6:28 PM] kuratius
+very interference resistant but slow
+
+
+[1/9/2024 6:28 PM] szybet
+can you send me a esp32 doc for this?
+
+
+[1/9/2024 6:29 PM] kuratius
+you need an extra chip or an esp32 with it anyway but, sec
+
+
+[1/9/2024 6:29 PM] kuratius
+https://www.aliexpress.com/item/32872078587.html?aff_fcid=6f843b35d0914dbbbe0da93f54ff86c1-1704821366208-04062-_DBTUwxV&tt=CPS_NORMAL&aff_fsk=_DBTUwxV&aff_platform=shareComponent-detail&sk=_DBTUwxV&aff_trace_key=6f843b35d0914dbbbe0da93f54ff86c1-1704821366208-04062-_DBTUwxV&terminal_id=da8e8c59ffb0402b84e7be1a6904d0ef&afSmartRedirect=y
+
+
+[1/9/2024 6:29 PM] kuratius
+for example
+
+
+[1/9/2024 6:30 PM] kuratius
+you'd probably put it in your pocket and it'd send updates to your watch
+
+
+[1/9/2024 6:30 PM] kuratius
+https://www.aliexpress.com/item/1005005692235592.html?aff_fcid=1809019a26e34897b0a0717635f1ef87-1704821424168-08556-_Dk8N1TV&tt=CPS_NORMAL&aff_fsk=_Dk8N1TV&aff_platform=shareComponent-detail&sk=_Dk8N1TV&aff_trace_key=1809019a26e34897b0a0717635f1ef87-1704821424168-08556-_Dk8N1TV&terminal_id=da8e8c59ffb0402b84e7be1a6904d0ef&afSmartRedirect=y similar
+
+
+[1/9/2024 6:31 PM] kuratius
+there are message forwarding protocols for it
+
+
+[1/9/2024 6:31 PM] kuratius
+so you can have a group chat spanning multiple cities
+
+
+[1/9/2024 6:31 PM] tux_linux
+seems nice
+
+
+[1/9/2024 6:34 PM] kuratius
+iirc it was originally intended for offgrid countries with bad cell connections but it can be used for emergency communications
+
+
+[1/9/2024 6:34 PM] tux_linux
+probably illegal here
+
+
+[1/9/2024 6:34 PM] tux_linux
+we have extremely strict amateur radio standards in canada
+
+
+[1/9/2024 6:34 PM] kuratius
+or for text messaging without government censorship
+
+
+[1/9/2024 6:34 PM] kuratius
+depends on the chip you buy
+
+
+[1/9/2024 6:35 PM] kuratius
+iirc they have versions that use an unlicensed band appropriate for most countries
+
+{Reactions}
+👍 
+
+[1/9/2024 6:35 PM] kuratius
+I know for sure the US and Germany have versions
+
+
+[1/9/2024 6:35 PM] tux_linux
+cool
+
+
+[1/9/2024 6:36 PM] tux_linux
+maybe it could be used to transmit 512kbps internet via pocsag1200
+
+
+[1/9/2024 6:36 PM] kuratius
+maybe, yeah
+
+
+[1/9/2024 6:36 PM] tux_linux
+https://www.reddit.com/r/linux/comments/rixsgu/audiojackweb_browse_the_internet_over_two_35_mm/
+i did something like that
+
+{Embed}
+https://www.reddit.com/r/linux/comments/rixsgu/audiojackweb_browse_the_internet_over_two_35_mm/
+From the linux community on Reddit: audio-jack-web: Browse the Inte...
+Explore this post and more from the linux community
+/mnt/data/projects/git/conversations/media/rixsgu-A3BCD
+
+
+[1/9/2024 6:36 PM] tux_linux
+over audio cables
+
+
+[1/9/2024 6:36 PM] tux_linux
+it was hilarious
+
+
+[1/9/2024 6:36 PM] tux_linux
+but very cool
+
+
+[1/9/2024 6:36 PM] kuratius
+it's very slow though, so beyond text messaging it's not that useful
+
+
+[1/9/2024 6:36 PM] kuratius
+good thing is the low power and high range
+
+{Reactions}
+👍 
+
+[1/9/2024 6:39 PM] szybet
+if you are looking at something like that
+
+
+[1/9/2024 6:39 PM] szybet
+esp has espnow which also has impressive range
+
+
+[1/9/2024 6:39 PM] szybet
+i already tinkered with it, cool protocol
+
+
+[1/9/2024 6:40 PM] kuratius
+is it multiple km?
+
+
+[1/9/2024 6:40 PM] kuratius
+5-16km lora
+
+
+[1/9/2024 6:40 PM] tux_linux
+ive always searched for a way to have mobile data without a sim
+
+
+[1/9/2024 6:40 PM] kuratius
+~250m espnow
+
+
+[1/9/2024 6:40 PM] tux_linux
+at some point i was sending webpages over sms
+
+
+[1/9/2024 6:41 PM] tux_linux
+it worked so-so
+
+
+[1/9/2024 6:41 PM] tux_linux
+they were split in base64
+
+
+[1/9/2024 6:41 PM] tux_linux
+html
+
+
+[1/9/2024 6:42 PM] kuratius
+other than that, I guess you could provide an access point for games that require wifi for LAN play I guess?
+
+
+[1/9/2024 6:42 PM] kuratius
+from the watchy I mean
+
+
+[1/9/2024 6:45 PM] szybet
+¯\_(ツ)_/¯
+
+
+[1/9/2024 6:47 PM] kuratius
+https://www.elektor.de/ilabs-challenger-rp2040-lora-eu868 this looks like there are lorachips with the same footprint as the watchy btw
+
+{Embed}
+https://www.elektor.de/ilabs-challenger-rp2040-lora-eu868
+iLabs Challenger RP2040 LoRa (EU868)
+Challenger RP2040 LoRa ist ein Arduino/CircuitPython-kompatibles Mikrocontroller-Board im Adafruit Feather-Format, das auf dem Raspberry Pi Pico (RP2040)-Chip basiert.
+Der Transceiver verfügt über ein LoRa-Langstreckenmodem, das Spread-Spectrum-Kommunikation über große Entfernungen und hohe Störfestigkeit bei minimalem Stromverbrauch ermöglicht...
+/mnt/data/projects/git/conversations/media/ilabs-challenger-rp2040-lora-eu868-F94B8.jpg
+
+
+[1/9/2024 6:47 PM] kuratius
+the little green chip
+
+
+[1/9/2024 7:04 PM] kuratius
+https://www.aliexpress.com/item/1005005642999869.html?pdp_npi=3%40dis%21EUR%2153.47%2153.47%21%21%21%21%21%402116488717020915243488775db15e%2112000033861406916%21affd%21%21&spm=a2g0o.detail.1000023.8.1895aLS9aLS9PK&aff_fcid=251221a2630a4f2f85beec03940e6696-1704823468711-02272-_Dc986Xb&tt=CPS_NORMAL&aff_fsk=_Dc986Xb&aff_platform=portals-billboard&sk=_Dc986Xb&aff_trace_key=251221a2630a4f2f85beec03940e6696-1704823468711-02272-_Dc986Xb&terminal_id=da8e8c59ffb0402b84e7be1a6904d0ef&afSmartRedirect=y
+apparently this exists lol
+
+
+[1/9/2024 7:06 PM] kuratius
+only issue is that it has bad battery life compared to the watchy
+
+
+[1/9/2024 7:06 PM] kuratius
+probably due to the display
+
+
+[1/9/2024 7:08 PM] kuratius
+https://www.aliexpress.com/item/32984655636.html?spm=a2g0o.productlist.main.21.50f5os2Xos2Xq1&algo_pvid=2b0c63fa-11ba-46ea-b631-5b63e6f68883&algo_exp_id=2b0c63fa-11ba-46ea-b631-5b63e6f68883-10&pdp_npi=4%40dis%21EUR%2114.69%2110.43%21%21%2115.73%21%21%40211b61ae17048236642632028e8dac%2166791113415%21sea%21DE%214767331086%21&curPageLogUid=tfmNIC4rFGrf&utparam-url=scene%3Asearch%7Cquery_from%3A apparently these are also sold separately?
+
+
+[1/9/2024 7:09 PM] kuratius
+would be curious if it can be added to the watchy in a custom case
+
+
+[1/9/2024 7:10 PM] kuratius
+probably not without a lot of work
+
+
+[1/9/2024 7:11 PM] kuratius
+but a lora+eink device could be really cool in my opinion
+
+
+[1/9/2024 7:19 PM] kuratius
+https://www.aliexpress.com/item/1005005647926628.html?spm=a2g0o.productlist.main.21.7ca42819ZaJWHE&algo_pvid=db4bd5cb-c532-4e05-b56b-89b8c1139c92&algo_exp_id=db4bd5cb-c532-4e05-b56b-89b8c1139c92-10&pdp_npi=4%40dis%21EUR%2119.97%2117.18%21%21%2121.38%21%21%40211b618e17048242979446651e6496%2112000033876928263%21sea%21DE%214767331086%21&curPageLogUid=68RIxvFoez8D&utparam-url=scene%3Asearch%7Cquery_from%3A
+
+
+[1/9/2024 7:19 PM] kuratius
+lol ali has almost everything
+
+
+[1/9/2024 7:19 PM] tux_linux
+But takes 3 months to get you what you order
+
+
+[1/9/2024 7:20 PM] kuratius
+https://github.com/HelTecAutomation/ESP32_LoRaWAN?spm=a2g0o.detail.1000023.22.1610HI1CHI1Cff
+
+{Embed}
+https://github.com/HelTecAutomation/ESP32_LoRaWAN?spm=a2g0o.detail.1000023.22.1610HI1CHI1Cff
+GitHub - HelTecAutomation/ESP32_LoRaWAN: Transplanted from Semtech ...
+Transplanted from Semtech LoRaWAN(https://github.com/Lora-net/LoRaMac-node) protocol to &quot;ESP32 + Arduino&quot; platform. Use RTC, support deep sleep, only working with ESP32 + LoRa boa...
+/mnt/data/projects/git/conversations/media/ESP32_LoRaWAN-3F529
+
+
+[1/9/2024 7:21 PM] kuratius
+https://www.aliexpress.com/item/1005002842456390.html?spm=a2g0o.detail.1000014.1.3939KyHaKyHarr&gps-id=pcDetailBottomMoreOtherSeller&scm=1007.40000.326746.0&scm_id=1007.40000.326746.0&scm-url=1007.40000.326746.0&pvid=ad930736-7a5d-4d2f-ac64-332d7d0598e8&_t=gps-id:pcDetailBottomMoreOtherSeller,scm-url:1007.40000.326746.0,pvid:ad930736-7a5d-4d2f-ac64-332d7d0598e8,tpp_buckets:668%232846%238114%23711&pdp_npi=4%40dis%21EUR%2174.17%2174.17%21%21%2179.41%2179.41%21%402103888a17048244668784956e5747%2112000029894657905%21rec%21DE%214767331086%21&utparam-url=scene%3ApcDetailBottomMoreOtherSeller%7Cquery_from%3A neat but too expensive
+
+
+[1/9/2024 7:22 PM] kuratius
+I guess you could use espnow to connect to a lora device nearby
+
+{Reactions}
+👍 
+
+[1/9/2024 7:23 PM] kuratius
+that could be a good compromise
+
+
+[1/9/2024 7:23 PM] kuratius
+though then you're basically building cell tower infrastructure from scratch lol
+
+{Reactions}
+👍 
+
+[1/9/2024 7:24 PM] kuratius
+oooh
+
+
+[1/9/2024 7:24 PM] kuratius
+I  figured out why it's so expensive
+
+
+[1/9/2024 7:25 PM] kuratius
+it's the thing where sellers make the last few items too expensive instead of confessing that they're out of stock
+
+
+[1/9/2024 7:25 PM] kuratius
+for search engine optimization
+
+
+[1/9/2024 7:25 PM] kuratius
+ffs
+
+
+[1/9/2024 7:26 PM] kuratius
+I'll look for a cheap esp/rp2040 lora thingy and go from there
+
+{Reactions}
+👍 
+
+[1/9/2024 9:08 PM] kuratius
+bought this one for now https://www.aliexpress.com/item/1005005967763162.html?spm=a2g0o.detail.0.0.30ac6a62soA8xF&mp=1
+
+
+[1/9/2024 9:08 PM] kuratius
+has headers if I want to solder something else to it
+
+
+[1/9/2024 9:10 PM] szybet
+ummm
+
+
+[1/9/2024 9:10 PM] szybet
+sooo
+
+
+[1/9/2024 9:11 PM] szybet
+what do you plan to do with the watchy?
+
+
+[1/9/2024 9:11 PM] kuratius
+maybe see if I can get it to display lora messages
+
+
+[1/9/2024 9:11 PM] kuratius
+beyond that idk
+
+
+[1/9/2024 9:11 PM] kuratius
+if there is a way to hack the driver to get greyscale, maybe that
+
+
+[1/9/2024 9:13 PM] kuratius
+is there a matrix client that runs on esps?
+
+
+[1/9/2024 9:16 PM] kuratius
+maybe help you if there's low hanging fruit or something where I can do math lol
+
+
+[1/9/2024 9:17 PM] kuratius
+also is it hard to get an app to communicate over bluetooth?
+
+
+[1/9/2024 9:17 PM] kuratius
+or wifi for that matter
+
+
+[1/9/2024 9:25 PM] kuratius
+waiiit
+
+
+[1/9/2024 9:25 PM] kuratius
+didnt the nia have gpio?
+
+
+[1/9/2024 9:27 PM] szybet
+bro...
+
+
+[1/9/2024 9:27 PM] kuratius
+?
+
+
+[1/9/2024 9:28 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20240107_121457-8E53D.jpg
+
+
+[1/9/2024 9:28 PM] szybet
+is this guine pig enough for you?
+
+
+[1/9/2024 9:29 PM] kuratius
+is that dithering or greyscale or a mix?
+
+
+[1/9/2024 9:29 PM] kuratius
+I think it's just dithering
+
+
+[1/9/2024 9:31 PM] szybet
+dithering
+
+
+[1/9/2024 9:31 PM] szybet
+not at all, easy
+
+
+[1/9/2024 9:31 PM] szybet
+even easier
+
+
+[1/9/2024 9:32 PM] szybet
+not really
+
+
+[1/9/2024 9:39 PM] kuratius
+what did you use to add the audio chip?
+
+
+[1/9/2024 9:41 PM] kuratius
+https://cdn.discordapp.com/attachments/1095426950811619418/1095818390288990268/PXL_20230326_111333253.jpg?ex=65a84267&is=6595cd67&hm=9ab6a8255852b6c163bf8fcfd9bf1ef6cffe7089657cca21177f6bb5b6aff3d3&
+
+{Embed}
+https://cdn.discordapp.com/attachments/1095426950811619418/1095818390288990268/PXL_20230326_111333253.jpg?ex=65a84267&is=6595cd67&hm=9ab6a8255852b6c163bf8fcfd9bf1ef6cffe7089657cca21177f6bb5b6aff3d3&
+/mnt/data/projects/git/conversations/media/PXL_20230326_111333253-79887.jpg
+
+
+[1/9/2024 9:42 PM] kuratius
+is it possible to talk to the ports where the missing chip is via some sort of register?
+
+
+[1/9/2024 9:43 PM] kuratius
+other than that I guess technically someone could frankenstein something via serial communication lol
+
+
+[1/9/2024 9:43 PM] szybet
+usb...
+
+
+[1/9/2024 9:43 PM] szybet
+via usb...
+
+
+[1/9/2024 9:43 PM] kuratius
+I think technically the nia does have gpio, they're just mostly already used for other things
+
+
+[1/9/2024 9:43 PM] szybet
+🥴
+
+
+[1/9/2024 9:43 PM] szybet
+there is serial for sure, somewhere
+
+
+[1/9/2024 9:44 PM] szybet
+also the debugging serial
+
+
+[1/9/2024 9:44 PM] szybet
+maybe some i2c lines here and there
+
+
+[1/9/2024 9:44 PM] szybet
+tldr: usb is the easier and it was still pain
+
+
+[1/9/2024 10:02 PM] kuratius
+power button is where?
+
+
+[1/9/2024 10:04 PM] kuratius
+accidentally started a bluetooth ota update and cant finish it
+
+
+[1/9/2024 10:04 PM] szybet
+there is none
+
+
+[1/9/2024 10:04 PM] szybet
+um lol
+
+
+[1/9/2024 10:04 PM] szybet
+disconnect the battery
+
+
+[1/9/2024 10:04 PM] szybet
+with a wooden something
+
+
+[1/9/2024 10:04 PM] kuratius
+alternatively I could figure out how to actually do the ota update
+
+
+[1/9/2024 10:05 PM] kuratius
+the instructions just said to go to the website but it doesnt work lol
+
+
+[1/9/2024 10:05 PM] szybet
+ota is stupid, it limits the firmware to 49% of flash size
+
+
+[1/9/2024 10:08 PM] kuratius
+does this page even work?
+
+
+[1/9/2024 10:11 PM] kuratius
+https://watchy.sqfmi.com/watchfaces/
+
+{Embed}
+https://watchy.sqfmi.com/watchfaces/
+Watch Faces | Watchy
+/mnt/data/projects/git/conversations/media/watchy_social_card-933E0.png
+
+
+[1/9/2024 10:15 PM] kuratius
+figured out a way to leave the menu at least
+
+
+[1/9/2024 10:47 PM] szybet
+nope
+
+
+[1/9/2024 10:47 PM] szybet
+hehe
+
+
+[1/9/2024 10:48 PM] szybet
+i will be able to run
+https://github.com/risinek/esp32-wifi-penetration-tool on my watchy
+
+
+[1/9/2024 10:48 PM] szybet
+i mean it runs now too, but with all my code
+
+
+[1/10/2024 4:10 AM] kuratius
+Some ideas I had after my nap:
+
+Anki and Latex Support
+
+Word of the minute with an add-to-anki option
+
+Japanese character rendering
+
+Kanji of the hour
+
+Fake fluid Sim
+
+
+
+
+Map application with this(?) Lora GPS thingy
+
+https://de.aliexpress.com/item/1005005681504175.html?spm=a2g0n.productlist.0.0.75652ac1ZVM33p&browser_id=e181ad1a35864448aa3db5456e0f8c17&aff_trace_key=8004ee6ab3d74477b5cdaab4aacf3684-1686262108737-06918-_DBAXlFb&aff_platform=msite&m_page_id=ezjhtzswycawlbqa18cefa19a2c219d6fceb1a6b81&pdp_npi=4%40dis%21EUR%2130.81%2128.04%21%21%2132.99%21%21%402103854617048273944454264e742d%2112000033994534257%21sea%21DE%214767331086%21&algo_pvid=b75f7772-cf52-4b0b-a5f2-31f52abf0166
+
+
+[1/10/2024 5:16 AM] kuratius
+oh, grocery shopping list feature
+
+
+[1/10/2024 7:12 AM] tux_linux
+szybet will want you to integrate it with sanki on ereaders
+
+
+[1/10/2024 5:04 PM] kuratius
+@Szybet where is images.h?
+
+
+[1/10/2024 5:05 PM] kuratius
+tried to compile your repo with pio run
+
+
+[1/10/2024 5:05 PM] kuratius
+also your readme talks about a bash script that doesnt exist
+
+
+[1/10/2024 5:06 PM] szybet
+its called generate.h and its in resources/
+
+
+[1/10/2024 5:08 PM] kuratius
+Building in release mode
+Compiling .pio/build/InkWatchy/src/functions.cpp.o
+Compiling .pio/build/InkWatchy/src/hardware/RTC.cpp.o
+Compiling .pio/build/InkWatchy/src/hardware/axc.cpp.o
+Compiling .pio/build/InkWatchy/src/hardware/battery.cpp.o
+In file included from src/functions.h:4,
+                 from src/functions.cpp:1:
+src/defines/defines.h:34:10: fatal error: images.h: No such file or directory
+
+****************************************************************
+* Looking for images.h dependency? Check our library registry!
+*
+
+
+[1/10/2024 5:08 PM] kuratius
+I installed platformiol via the curl script
+
+
+[1/10/2024 5:13 PM] kuratius
+did you use this package? https://os.mbed.com/users/Gfolker/code/images/
+
+{Embed}
+https://os.mbed.com/users/Gfolker/code/images/
+images - Bit maps of the images drawn to the screens for t…
+ |...
+Bit maps of the images drawn to the screens for the Hexi Sensor Project
+
+
+[1/10/2024 5:16 PM] szybet
+can you call this script?
+
+
+[1/10/2024 5:16 PM] szybet
+can you read the readme?
+
+
+[1/10/2024 5:16 PM] szybet
+thanks
+
+
+[1/10/2024 5:16 PM] kuratius
+I called the script
+
+
+[1/10/2024 5:16 PM] kuratius
+still doesnt find the header
+
+
+[1/10/2024 5:16 PM] szybet
+read the output
+
+
+[1/10/2024 5:16 PM] szybet
+you are missing some commands
+
+
+[1/10/2024 5:16 PM] kuratius
+pio is supposed to get the packages automatically
+
+
+[1/10/2024 5:16 PM] szybet
+its my external script
+
+
+[1/10/2024 5:17 PM] szybet
+it creates the header file from ground up
+
+
+[1/10/2024 5:17 PM] kuratius
+so it's missing folders ?
+
+
+[1/10/2024 5:17 PM] szybet
+no
+
+
+[1/10/2024 5:17 PM] szybet
+stop assuming things
+
+
+[1/10/2024 5:18 PM] szybet
+stop
+
+
+[1/10/2024 5:18 PM] kuratius
+resources/generate.sh: line 4: cd: images/: No such file or directory
+resources/generate.sh: line 5: ./convertImages.sh: No such file or directory
+
+Processing fonts
+resources/generate.sh: line 10: cd: fonts/: No such file or directory
+resources/generate.sh: line 11: ./convertFonts.sh: No such file or directory
+
+Processing book
+resources/generate.sh: line 16: cd: books/: No such file or directory
+resources/generate.sh: line 17: ./convertBooks.py: No such file or directory
+
+Processing vault
+resources/generate.sh: line 22: cd: vault/: No such file or directory
+resources/generate.sh: line 23: ./convertImagesVault.sh: No such file or directory
+
+
+[1/10/2024 5:18 PM] szybet
+run the script
+
+
+[1/10/2024 5:18 PM] kuratius
+I didnt assume
+
+
+[1/10/2024 5:18 PM] szybet
+look at the output
+
+
+[1/10/2024 5:18 PM] szybet
+run it from the directory it is
+
+
+[1/10/2024 5:18 PM] kuratius
+ModuleNotFoundError: No module named 'unidecode'
+
+
+[1/10/2024 5:18 PM] szybet
+yea, install that
+
+
+[1/10/2024 5:18 PM] szybet
+that one is ython
+
+
+[1/10/2024 5:18 PM] szybet
+or disable books
+
+
+[1/10/2024 5:18 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-FC091.png
+
+
+[1/10/2024 5:18 PM] szybet
+i have a button for that in vscode
+
+
+[1/10/2024 5:20 PM] kuratius
+new errors
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-F3723.txt
+
+
+[1/10/2024 5:21 PM] szybet
+...
+
+
+[1/10/2024 5:21 PM] szybet
+read the whole output from the command
+
+
+[1/10/2024 5:21 PM] szybet
+not only the book part
+
+
+[1/10/2024 5:21 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-1F5F0.txt
+
+
+[1/10/2024 5:22 PM] szybet
+you have old version of xxd
+
+
+[1/10/2024 5:22 PM] szybet
+mine is
+
+
+[1/10/2024 5:22 PM] szybet
+xxd 2023-09-01 by Juergen Weigert et al.
+
+
+[1/10/2024 5:22 PM] szybet
+install it
+
+
+[1/10/2024 5:22 PM] szybet
+or dont use debian
+
+
+[1/10/2024 5:23 PM] szybet
+i will update the readme with your problems...
+
+
+[1/10/2024 5:34 PM] szybet
+pull the repo for changes
+
+
+[1/10/2024 5:34 PM] szybet
+i updated a few things
+
+
+[1/10/2024 5:41 PM] kuratius
+It's a bit tricky to install xxd
+
+
+[1/10/2024 5:41 PM] kuratius
+can I just adjust your script to work with the older version?
+
+
+[1/10/2024 5:41 PM] kuratius
+there's multiple sources for xxd and I'd probably have to update vim etc etc
+
+
+[1/10/2024 5:41 PM] kuratius
+dont want to mess up everything
+
+
+[1/10/2024 5:42 PM] szybet
+paru -S xxd-standalone
+
+
+[1/10/2024 5:42 PM] szybet
+via aur
+
+
+[1/10/2024 5:43 PM] szybet
+i doubt you will be able
+
+
+[1/10/2024 5:43 PM] szybet
+i also use specific xxd features in vault
+
+
+[1/10/2024 5:43 PM] szybet
+you can look there at the source its getting it from
+
+
+[1/10/2024 5:43 PM] tux_linux
+maybe you can try busybox xxd?
+
+
+[1/10/2024 5:43 PM] tux_linux
+or maybe it won't have some options you want
+
+
+[1/10/2024 5:44 PM] tux_linux
+```
+build@inkbox ~> busybox xxd --help
+BusyBox v1.35.0 (Debian 1:1.35.0-4+b3) multi-call binary.
+
+Usage: xxd [-pri] [-g N] [-c N] [-n LEN] [-s OFS] [-o OFS] [FILE]
+
+Hex dump FILE (or stdin)
+
+    -g N        Bytes per group
+    -c N        Bytes per line
+    -p        Show only hex bytes, assumes -c30
+    -i        C include file style
+    -l LENGTH    Show only first LENGTH bytes
+    -s OFFSET    Skip OFFSET bytes
+    -o OFFSET    Add OFFSET to displayed offset
+    -r        Reverse (with -p, assumes no offsets in input)
+build@inkbox ~>
+```
+
+
+[1/10/2024 5:44 PM] szybet
+lol no
+
+
+[1/10/2024 5:45 PM] kuratius
+aur packages on debian sounds like bad idea
+
+
+[1/10/2024 5:45 PM] tux_linux
+yes
+
+
+[1/10/2024 5:45 PM] tux_linux
+https://github.com/ckormanyos/xxd
+if you build it from source
+
+{Embed}
+https://github.com/ckormanyos/xxd
+GitHub - ckormanyos/xxd: hex-dump-type utility xxd
+hex-dump-type utility xxd. Contribute to ckormanyos/xxd development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/xxd-BDDA1
+
+
+[1/10/2024 5:50 PM] kuratius
+I cant install this without uinstalling vim I think
+
+
+[1/10/2024 5:50 PM] kuratius
+but building works
+
+
+[1/10/2024 5:51 PM] tux_linux
+why do you need to uninstall vim
+
+
+[1/10/2024 5:51 PM] tux_linux
+`make install` doesn't work?
+
+
+[1/10/2024 5:51 PM] kuratius
+xxd is a package vim depends on
+
+
+[1/10/2024 5:51 PM] tux_linux
+oh ok
+
+
+[1/10/2024 5:51 PM] tux_linux
+maybe you can just change your PATH
+
+
+[1/10/2024 5:51 PM] tux_linux
+and not install it
+
+
+[1/10/2024 5:52 PM] tux_linux
+PATH=/path/to/xxd/folder:${PATH}
+
+
+[1/10/2024 5:52 PM] tux_linux
+priority
+
+
+[1/10/2024 5:52 PM] kuratius
+tried via bash rc, my changes are lower priority than the system
+
+
+[1/10/2024 5:52 PM] tux_linux
+if you put it right before the building command
+
+
+[1/10/2024 5:52 PM] tux_linux
+you can try env -i to clear the environment too
+
+
+[1/10/2024 5:52 PM] tux_linux
+but you will probably have to add /usr/bin:/bin to your path at least
+
+
+[1/10/2024 5:54 PM] szybet
+install arch
+
+
+[1/10/2024 5:54 PM] tux_linux
+if you want you can setup a qemu vm with a preinstalled image
+
+
+[1/10/2024 5:55 PM] tux_linux
+https://github.com/archlinux/arch-boxes
+
+{Embed}
+https://github.com/archlinux/arch-boxes
+GitHub - archlinux/arch-boxes: Arch-boxes provides automated builds...
+Arch-boxes provides automated builds of the Arch Linux releases for different providers and post-processors (read-only mirror)  - GitHub - archlinux/arch-boxes: Arch-boxes provides automated builds...
+/mnt/data/projects/git/conversations/media/arch-boxes-3A130
+
+
+[1/10/2024 5:55 PM] tux_linux
+take the qcow2 one
+
+
+[1/10/2024 5:55 PM] tux_linux
+then you can boot it with `qemu-system-x86_64 -hda arch.img -m 8G -enable-kvm`
+
+
+[1/10/2024 5:56 PM] kuratius
+I will look at the xxd commands
+
+
+[1/10/2024 5:56 PM] kuratius
+what is it actually used for anyway?
+
+
+[1/10/2024 5:56 PM] kuratius
+it's a hexdump utility
+
+
+[1/10/2024 5:57 PM] kuratius
+why is it a dependency?
+
+
+[1/10/2024 5:58 PM] kuratius
+PATH=/home/dk/xxd/build/xxd:${PATH} ../.platformio/penv/bin/pio run is this what you mean btw?
+
+
+[1/10/2024 5:59 PM] kuratius
+../xxd/build/xxd --version
+xxd 2022-01-14 by Juergen Weigert et al.  (2022-03-28 Build for VC Christopher Kormanyos)
+ version too old I think?
+
+
+[1/10/2024 5:59 PM] tux_linux
+yes something like that
+
+
+[1/10/2024 5:59 PM] szybet
+look at the script
+
+
+[1/10/2024 5:59 PM] szybet
+and may other scripts
+
+
+[1/10/2024 5:59 PM] szybet
+its needed, the end
+
+
+[1/10/2024 5:59 PM] kuratius
+explain it to me
+
+
+[1/10/2024 6:00 PM] tux_linux
+me or szybet
+
+
+[1/10/2024 6:00 PM] kuratius
+szybet
+
+
+[1/10/2024 6:00 PM] szybet
+🙄
+
+
+[1/10/2024 6:00 PM] szybet
+it creates c variables from convert command which converts images
+
+
+[1/10/2024 6:00 PM] szybet
+convert command outputs pure bytes
+
+
+[1/10/2024 6:01 PM] kuratius
+oh so you use to store images as arrays
+
+
+[1/10/2024 6:01 PM] kuratius
+or something like that
+
+
+[1/10/2024 6:01 PM] szybet
+yes
+
+
+[1/10/2024 6:01 PM] szybet
+all other watchy firmwares use a website for it
+
+
+[1/10/2024 6:01 PM] szybet
+to update it in other watchy firmwares, you need to open that website, configure it, replace your file - in mine its just 1 click after editing the image
+
+
+[1/10/2024 6:04 PM] kuratius
+https://stackoverflow.com/questions/2076475/read-an-image-file-in-c-c-into-an-array ?
+
+{Embed}
+https://stackoverflow.com/questions/2076475/read-an-image-file-in-c-c-into-an-array
+Read an image file in C/C++ into an array
+How can I read a gray scale JPEG image file in C/C++ into a 2D array?
+/mnt/data/projects/git/conversations/media/apple-touch-icon%402-C50E4.png
+
+
+[1/10/2024 6:05 PM] kuratius
+does the watchy have the concept of a filesystem?
+
+
+[1/10/2024 6:05 PM] kuratius
+or esp32 in general
+
+
+[1/10/2024 6:05 PM] szybet
+lol no
+
+
+[1/10/2024 6:06 PM] kuratius
+```Option #2: Store the Image on the ESP32/ESP8266 SPIFFS
+
+SPIFFS stands for Serial Peripheral Interface Flash File System and it is a lightweight filesystem created for microcontrollers with a flash chip like the ESP32 and ESP8266.```
+
+
+[1/10/2024 6:07 PM] kuratius
+https://randomnerdtutorials.com/display-images-esp32-esp8266-web-server/
+
+{Embed}
+https://randomnerdtutorials.com/display-images-esp32-esp8266-web-server/
+How to Display Images in ESP32/ESP8266 Web Server | Random Nerd Tut...
+Learn how to display images in your ESP32 or ESP8266 web servers using Arduino IDE. Embedded images in an asynchronous web server or simple HTTP server.
+/mnt/data/projects/git/conversations/media/How-to-Display-Images-in-ESP32-ESP8266-Web-6FCC8.jpg
+
+
+[1/10/2024 6:07 PM] szybet
+and what is the advantage to utilise this abstraction that will cost resources and battery life instead of you compiling xxd like a human being?... :(
+
+
+[1/10/2024 6:08 PM] kuratius
+are ram contents preserved between sleeps?
+
+
+[1/10/2024 6:08 PM] szybet
+nope
+
+
+[1/10/2024 6:08 PM] szybet
+only RTC ram which is like 8kb only
+
+
+[1/10/2024 6:09 PM] kuratius
+so it loads the image from disk every time anyway
+
+
+[1/10/2024 6:09 PM] szybet
+not from disk
+
+
+[1/10/2024 6:09 PM] kuratius
+only question is if loading the image is much slower than loading the array
+
+
+[1/10/2024 6:09 PM] szybet
+there is no disk
+
+
+[1/10/2024 6:10 PM] kuratius
+flash
+
+
+[1/10/2024 6:10 PM] szybet
+from flash
+
+
+[1/10/2024 6:10 PM] kuratius
+but w/e
+
+
+[1/10/2024 6:10 PM] szybet
+it is
+
+
+[1/10/2024 6:10 PM] szybet
+here you load pure bytes
+
+
+[1/10/2024 6:10 PM] szybet
+and there... whatever there is its slover
+
+
+[1/10/2024 6:10 PM] kuratius
+cant I write the contents of a file directly to memory?
+
+
+[1/10/2024 6:11 PM] kuratius
+just make it a weird binary thing
+
+
+[1/10/2024 6:11 PM] kuratius
+pretty sure flash memory is addressable as ram anyway lol
+
+
+[1/10/2024 6:11 PM] kuratius
+on esp32/pico devices
+
+
+[1/10/2024 6:11 PM] kuratius
+XIP
+
+
+[1/10/2024 6:11 PM] szybet
+its not taking pure png and putting them into flash
+
+its dithering them, making them monochrome, converting to pure 1 and 0 and then into variable
+
+
+[1/10/2024 6:12 PM] kuratius
+dithering/monochrome isnt done by xdd I think
+
+
+[1/10/2024 6:12 PM] szybet
+its not
+
+
+[1/10/2024 6:12 PM] szybet
+but still
+
+
+[1/10/2024 6:12 PM] szybet
+stop
+
+
+[1/10/2024 6:13 PM] kuratius
+If I figure out a way to load just the converted image from disk without extra processing, would you accept that change?
+
+
+[1/10/2024 6:13 PM] szybet
+its doing that now
+
+
+[1/10/2024 6:13 PM] szybet
+and there is no better way to do that
+
+
+[1/10/2024 6:13 PM] kuratius
+well
+
+
+[1/10/2024 6:14 PM] kuratius
+you can probably do it without hardcoding assets in C files
+
+
+[1/10/2024 6:14 PM] szybet
+then you are wasting resources
+
+
+[1/10/2024 6:14 PM] szybet
+the end!
+
+
+[1/10/2024 6:14 PM] kuratius
+and also I think the sm64 port does something like what you did for C files
+
+
+[1/10/2024 6:14 PM] kuratius
+but it doesnt require that version of xdd to compile
+
+
+[1/10/2024 6:14 PM] kuratius
+so that's weird
+
+
+[1/10/2024 6:15 PM] szybet
+you can look for an alternative for xxd
+
+
+[1/10/2024 6:15 PM] szybet
+or rewrite it to python or smth
+
+
+[1/10/2024 6:15 PM] szybet
+whatever
+
+
+[1/10/2024 6:15 PM] szybet
+https://github.com/Nicoretti/xxd-rs
+
+{Embed}
+https://github.com/Nicoretti/xxd-rs
+GitHub - Nicoretti/xxd-rs: make a hexdump or do the reverse.
+make a hexdump or do the reverse. Contribute to Nicoretti/xxd-rs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/xxd-rs-9EA75
+
+
+[1/10/2024 6:15 PM] szybet
+or try to use that
+
+
+[1/10/2024 6:15 PM] szybet
+lol
+
+
+[1/10/2024 6:26 PM] kuratius
+what does the -n option in xxd do?
+
+
+[1/10/2024 6:26 PM] kuratius
+xxd -h
+Usage:
+       xxd [options] [infile [outfile]]
+    or
+       xxd -r [-s [-]offset] [-c cols] [-ps] [infile [outfile]]
+Options:
+    -a          toggle autoskip: A single '*' replaces nul-lines. Default off.
+    -b          binary digit dump (incompatible with -ps,-i,-r). Default hex.
+    -C          capitalize variable names in C include file style (-i).
+    -c cols     format <cols> octets per line. Default 16 (-i: 12, -ps: 30).
+    -E          show characters in EBCDIC. Default ASCII.
+    -e          little-endian dump (incompatible with -ps,-i,-r).
+    -g bytes    number of octets per group in normal output. Default 2 (-e: 4).
+    -h          print this summary.
+    -i          output in C include file style.
+    -l len      stop after <len> octets.
+    -o off      add <off> to the displayed file position.
+    -ps         output in postscript plain hexdump style.
+    -r          reverse operation: convert (or patch) hexdump into binary.
+    -r -s off   revert with <off> added to file positions found in hexdump.
+    -d          show offset in decimal instead of hex.
+    -s [+][-]seek  start at <seek> bytes abs. (or +: rel.) infile offset.
+    -u          use upper case hex letters.
+    -v          show version: "xxd 2021-10-22 by Juergen Weigert et al.".
+
+
+[1/10/2024 6:26 PM] kuratius
+missing
+
+
+[1/10/2024 6:26 PM] szybet
+% xxd --help
+Usage:
+       xxd [options] [infile [outfile]]
+    or
+       xxd -r [-s [-]offset] [-c cols] [-ps] [infile [outfile]]
+Options:
+    -a          toggle autoskip: A single '*' replaces nul-lines. Default off.
+    -b          binary digit dump (incompatible with -ps,-i,-r). Default hex.
+    -C          capitalize variable names in C include file style (-i).
+    -c cols     format <cols> octets per line. Default 16 (-i: 12, -ps: 30).
+    -E          show characters in EBCDIC. Default ASCII.
+    -e          little-endian dump (incompatible with -ps,-i,-r).
+    -g bytes    number of octets per group in normal output. Default 2 (-e: 4).
+    -h          print this summary.
+    -i          output in C include file style.
+    -l len      stop after <len> octets.
+    -n name     set the variable name used in C include output (-i).
+    -o off      add <off> to the displayed file position.
+    -ps         output in postscript plain hexdump style.
+    -r          reverse operation: convert (or patch) hexdump into binary.
+    -r -s off   revert with <off> added to file positions found in hexdump.
+    -d          show offset in decimal instead of hex.
+    -s [+][-]seek  start at <seek> bytes abs. (or +: rel.) infile offset.
+    -u          use upper case hex letters.
+    -R when     colorize the output; <when> can be 'always', 'auto' or 'never'. Default: 'auto'.
+    -v          show version: "xxd 2023-09-01 by Juergen Weigert et al.".
+18:26 szybet@hyperbookszyb /home/szybet
+%
+
+
+[1/10/2024 6:27 PM] kuratius
+so if I dont use it just uses the filename as the variable name
+
+
+[1/10/2024 6:28 PM] kuratius
+sounds acceptable
+
+
+[1/10/2024 6:28 PM] kuratius
+xxd -i accept.png 
+unsigned char accept_png[] = {
+*snip*
+};
+unsigned int accept_png_len = 378;
+
+
+[1/10/2024 6:29 PM] szybet
+nope
+
+
+[1/10/2024 6:29 PM] szybet
+i attend a few things to the name
+
+
+[1/10/2024 6:30 PM] kuratius
+yeah but that can be made a requirement via the readme
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-1FFB0.png
+
+
+[1/10/2024 6:30 PM] kuratius
+"images need to end in Img"
+
+
+[1/10/2024 6:30 PM] kuratius
+or something
+
+
+[1/10/2024 6:30 PM] szybet
+will look ugly in the folder
+
+
+[1/10/2024 6:30 PM] szybet
+you know you can compile xxd and just replace the binary on your system
+
+
+[1/10/2024 6:30 PM] kuratius
+less ugly than having to install arch to compile your project
+
+
+[1/10/2024 6:30 PM] szybet
+or put it in ~/.local/bin?
+
+
+[1/10/2024 6:31 PM] szybet
+install a system that is not outdated by 3 years
+
+
+[1/10/2024 6:31 PM] kuratius
+still dont actually know which repo you use for xxd
+
+
+[1/10/2024 6:31 PM] kuratius
+also like I said making this change is less work for me
+
+
+[1/10/2024 6:31 PM] kuratius
+so I'll do that
+
+
+[1/10/2024 6:32 PM] kuratius
+instead of frankensteining my vim install or putting another vm on my system
+
+
+[1/10/2024 6:32 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Peek_2024-01-10_18-32-6D522.gif
+
+
+[1/10/2024 6:32 PM] szybet
+download xxd from there
+
+
+[1/10/2024 6:32 PM] szybet
+put it in  ~/.local/bin
+
+
+[1/10/2024 6:32 PM] szybet
+and run with it
+
+
+[1/10/2024 6:32 PM] szybet
+thats it
+
+
+[1/10/2024 6:36 PM] kuratius
+adding a variable to your script for the xxd  path sounds like a good compromise
+
+
+[1/10/2024 6:37 PM] kuratius
+and then put that into the readme
+
+
+[1/10/2024 6:37 PM] kuratius
+e.g. you can set a local variable XXD_PATH=/put/xxd/executable/here ./generate.sh
+
+
+[1/10/2024 6:37 PM] kuratius
+and then link the arch vim repo
+
+
+[1/10/2024 6:38 PM] kuratius
+and tell people to cd into the xxd directory and run make
+
+
+[1/10/2024 6:38 PM] kuratius
+avoids installing a vm
+
+
+[1/10/2024 6:39 PM] kuratius
+avoids fucking up people's vim install
+
+
+[1/10/2024 6:40 PM] szybet
+you can do that
+
+
+[1/10/2024 6:40 PM] szybet
+but at default, use the default xxd as its now
+
+
+[1/10/2024 6:40 PM] kuratius
+also actually you know what
+
+
+[1/10/2024 6:41 PM] kuratius
+you dont need -n at all if you are reading from stdin
+
+
+[1/10/2024 6:41 PM] kuratius
+it outputs the content between { } if you do that
+
+
+[1/10/2024 6:42 PM] kuratius
+cat accept.png | xxd -i
+  0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0x00, 0x00, 0x00, 0x0d,
+  0x49, 0x48, 0x44, 0x52, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x10,
+  0x08, 0x06, 0x00, 0x00, 0x00, 0x1f, 0xf3, 0xff, 0x61, 0x00, 0x00, 0x01,
+   etc etc
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-18B11.txt
+
+
+[1/10/2024 6:42 PM] kuratius
+so you can actually make it compatible with older xxd
+
+
+[1/10/2024 6:42 PM] kuratius
+even while preserving filenames with the way you are doing now
+
+
+[1/10/2024 6:43 PM] szybet
+do it
+
+
+[1/10/2024 6:43 PM] szybet
+¯\_(ツ)_/¯
+
+
+[1/10/2024 6:44 PM] kuratius
+just need to append  unsigned char accept_png[] = {
+
+run the command
+append }
+
+
+[1/10/2024 6:44 PM] kuratius
+well
+
+
+[1/10/2024 6:44 PM] kuratius
+accept_png needs be replaced with your bash variable
+
+
+[1/10/2024 6:44 PM] kuratius
+but you get the point
+
+
+[1/10/2024 6:46 PM] szybet
+if it will work for you and for me, then sure
+
+
+[1/10/2024 6:46 PM] szybet
+there is also vault that needs to work
+
+
+[1/10/2024 6:46 PM] szybet
+there is xxd too
+
+
+[1/10/2024 7:16 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/convertImages-7F1D8.sh
+
+
+[1/10/2024 7:17 PM] kuratius
+can probably be done in a prettier way
+
+
+[1/10/2024 7:18 PM] kuratius
+what's the line in vault that needs changes?
+
+
+[1/10/2024 7:20 PM] szybet
+that one that uses xxd
+
+
+[1/10/2024 7:20 PM] szybet
+it may work
+
+
+[1/10/2024 7:20 PM] szybet
+idk
+
+
+[1/10/2024 7:20 PM] szybet
+maybe write a function that does that...
+
+
+[1/10/2024 7:26 PM] kuratius
+how do I get book.h?
+
+
+[1/10/2024 7:27 PM] kuratius
+probably the python script in books but I dont think it runs
+
+
+[1/10/2024 7:29 PM] kuratius
+disabled BOOK in config.h for now
+
+
+[1/10/2024 7:30 PM] kuratius
+but book.txt not existing shouldnt give a compilation error
+
+
+[1/10/2024 7:30 PM] kuratius
+ok vault.h is missing?
+
+
+[1/10/2024 7:31 PM] szybet
+you need to install a python package
+
+
+[1/10/2024 7:31 PM] kuratius
+I installed it
+
+
+[1/10/2024 7:31 PM] kuratius
+I think
+
+
+[1/10/2024 7:31 PM] szybet
+and put there a book
+
+
+[1/10/2024 7:31 PM] szybet
+whatever
+
+
+[1/10/2024 7:31 PM] szybet
+read the readme once again
+
+
+[1/10/2024 7:31 PM] szybet
+you can disable VAULT, BOOK, WIFI_TOOL
+
+
+[1/10/2024 7:31 PM] kuratius
+what is vault anyway?
+
+
+[1/10/2024 7:31 PM] szybet
+encrypted images decrypted by a pin
+
+
+[1/10/2024 7:32 PM] szybet
+"phonebook"
+
+
+[1/10/2024 7:32 PM] kuratius
+ok yeah nobody needs that
+
+
+[1/10/2024 7:32 PM] szybet
+read the readme 🦗
+
+
+[1/10/2024 7:32 PM] szybet
+me, but yea its an option
+
+
+[1/10/2024 7:33 PM] kuratius
+disable it by default so people dont run into the error
+
+
+[1/10/2024 7:34 PM] kuratius
+also compile times are longer than I would expect
+
+
+[1/10/2024 7:34 PM] kuratius
+is there a lot of c++ instead of c code?
+
+
+[1/10/2024 7:35 PM] szybet
+its propaly my fault, because of headers
+
+
+[1/10/2024 7:35 PM] szybet
+i include them all in one file
+
+
+[1/10/2024 7:35 PM] szybet
+so its longer, propably - idk
+i know that the code looks super clean thanks to that soo
+
+
+[1/10/2024 7:35 PM] szybet
+there is only c++
+
+
+[1/10/2024 7:35 PM] kuratius
+github says you write C style
+
+
+[1/10/2024 7:35 PM] kuratius
+lol
+
+
+[1/10/2024 7:36 PM] szybet
+yea
+
+
+[1/10/2024 7:36 PM] kuratius
+(I think that's a good thing btw)
+
+
+[1/10/2024 7:36 PM] szybet
+i need to make that my personal changes wont be the default
+
+
+[1/10/2024 7:37 PM] szybet
+like a default directory and coppied from there and gitignore file the changed one, something like that
+
+
+[1/10/2024 7:37 PM] szybet
+hmmm arduino framework + espriff framework is c but with many c++ things, its best of both worlds
+
+
+[1/10/2024 7:37 PM] szybet
+like you can write simple code but under the code is a rtos you can use
+
+
+[1/10/2024 7:38 PM] szybet
+and tasks, and many advanced functions
+
+
+[1/10/2024 7:38 PM] szybet
+but strings for example are cpp like which is cool
+
+
+[1/10/2024 7:38 PM] szybet
+or there are structs, classes, enums from cpp
+
+
+[1/10/2024 7:38 PM] kuratius
+config.h has a comment that says wifi is supposed to be disabled via pio instead of the define
+
+
+[1/10/2024 7:38 PM] kuratius
+is that right?
+
+
+[1/10/2024 7:38 PM] szybet
+wifi_tool
+
+
+[1/10/2024 7:38 PM] szybet
+yes, if you dont want it
+
+
+[1/10/2024 7:39 PM] szybet
+just launch vscode at this point
+
+
+[1/10/2024 7:39 PM] szybet
+you need to choose the default env
+
+
+[1/10/2024 7:40 PM] kuratius
+Environment           Status    Duration
+--------------------  --------  ------------
+ink_watchy_default    FAILED    00:00:42.975
+ink_watchy_wifi_tool  FAILED    00:00:36.018
+=============================================
+
+
+[1/10/2024 7:40 PM] kuratius
+does your project depend on vscode?
+
+
+[1/10/2024 7:40 PM] kuratius
+I disabled vault and wifi
+
+
+[1/10/2024 7:41 PM] kuratius
+and book
+
+
+[1/10/2024 7:41 PM] szybet
+um
+
+
+[1/10/2024 7:41 PM] szybet
+any errors?
+
+
+[1/10/2024 7:41 PM] szybet
+maybe you are missing something - again
+
+
+[1/10/2024 7:44 PM] kuratius
+I think it tried to build wifi_tool even though it's disabled
+
+
+[1/10/2024 7:45 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-B557E.png
+
+
+[1/10/2024 7:45 PM] szybet
+you need to choose the env
+
+
+[1/10/2024 7:45 PM] szybet
+also both failed
+
+
+[1/10/2024 7:45 PM] szybet
+dont do that, thats wrong
+
+
+[1/10/2024 7:45 PM] szybet
+show me the building logs...
+
+
+[1/10/2024 7:46 PM] kuratius
+sec
+
+
+[1/10/2024 7:47 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/buildlog-DEBE2.txt
+
+
+[1/10/2024 7:47 PM] szybet
+yea there is nothing
+
+
+[1/10/2024 7:47 PM] kuratius
+um
+
+
+[1/10/2024 7:47 PM] kuratius
+one sec
+
+
+[1/10/2024 7:47 PM] kuratius
+it didnt write stderr
+
+
+[1/10/2024 7:47 PM] szybet
+launch vscode xD
+
+
+[1/10/2024 7:48 PM] kuratius
+I dont like microsoft
+
+
+[1/10/2024 7:48 PM] kuratius
+and vscode is heavy
+
+
+[1/10/2024 7:48 PM] szybet
+https://github.com/VSCodium/vscodium
+
+
+[1/10/2024 7:51 PM] kuratius
+>You need at least 2023-09-01 for xxd version to run
+
+would change this to "you need xxd version 2023-09-01 or later to run generate.sh"
+
+
+[1/10/2024 7:51 PM] szybet
+pull request welcome
+
+
+[1/10/2024 8:03 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/buildlog-75A86.txt
+
+
+[1/10/2024 8:05 PM] szybet
+your image generation is broken
+
+
+[1/10/2024 8:05 PM] kuratius
+in what sense?
+
+
+[1/10/2024 8:05 PM] szybet
+it doesnt work
+
+
+[1/10/2024 8:05 PM] szybet
+;D
+
+
+[1/10/2024 8:05 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-AB262.png
+
+
+[1/10/2024 8:06 PM] kuratius
+does this look wrong?
+
+
+[1/10/2024 8:06 PM] kuratius
+wait
+
+
+[1/10/2024 8:06 PM] szybet
+echo "unsigned char " >>images.h
+
+
+[1/10/2024 8:06 PM] szybet
+add const
+
+
+[1/10/2024 8:06 PM] szybet
+horrible formatting
+
+
+[1/10/2024 8:06 PM] kuratius
+I know right 😄
+
+
+[1/10/2024 8:07 PM] szybet
+.
+
+
+[1/10/2024 8:07 PM] szybet
+1. make it work
+2. make it look the same
+3. make it in a function
+4. make it work with my xxd, it should already
+
+then i will accept the pullrequest
+
+
+[1/10/2024 8:08 PM] kuratius
+the pull request I did was for the readme
+
+
+[1/10/2024 8:08 PM] kuratius
+but eh
+
+
+[1/10/2024 8:08 PM] szybet
+the readme is fine
+
+
+[1/10/2024 8:08 PM] szybet
+im talking about this one
+
+
+[1/10/2024 8:08 PM] szybet
+about xxd
+
+
+[1/10/2024 8:09 PM] kuratius
+built successfully
+
+
+[1/10/2024 8:09 PM] szybet
+flash it
+
+
+[1/10/2024 8:09 PM] szybet
+¯\_(ツ)_/¯
+
+
+[1/10/2024 8:12 PM] kuratius
+done
+
+
+[1/10/2024 8:12 PM] kuratius
+vibrates when I press buttons
+
+
+[1/10/2024 8:12 PM] kuratius
+and has your menus
+
+
+[1/10/2024 8:12 PM] szybet
+yes
+
+
+[1/10/2024 8:13 PM] szybet
+as you can see the watchface is incomplete
+
+
+[1/10/2024 8:14 PM] szybet
+well, you can live with that, expand it or use other firmwares
+
+
+[1/10/2024 8:14 PM] kuratius
+is the tiny thing in the top right a new battery icon?
+
+
+[1/10/2024 8:15 PM] szybet
+???
+
+
+[1/10/2024 8:15 PM] szybet
+?????
+
+
+[1/10/2024 8:15 PM] kuratius
+below the clock
+
+
+[1/10/2024 8:15 PM] kuratius
+sec
+
+
+[1/10/2024 8:15 PM] szybet
+the second progress bar is a battery icon
+
+
+[1/10/2024 8:15 PM] szybet
+the square is not implemented, in it should be the number of the month
+
+
+[1/10/2024 8:16 PM] kuratius
+20:16
+WEDNE                      ^LITTLE SQUARE
+10 JAN
+
+
+[1/10/2024 8:17 PM] szybet
+yea answered that
+
+
+[1/10/2024 8:17 PM] szybet
+nope its not
+
+
+[1/10/2024 8:21 PM] szybet
+you can create your own watchface in my firmware too and just ifdef it
+but you would need to create a system when to generate which images / fonts
+
+
+[1/10/2024 8:22 PM] kuratius
+grocery list modules that can be updated via a webinterface is probably nice
+
+
+[1/10/2024 8:22 PM] kuratius
+can actually use your ebook reader for that
+
+
+[1/10/2024 8:22 PM] kuratius
+come to think of it
+
+
+[1/10/2024 8:22 PM] kuratius
+better usecase anyway xD
+
+
+[1/10/2024 8:22 PM] szybet
+this is a cool idea
+
+
+[1/10/2024 8:23 PM] szybet
+be free to implement it via web interface
+
+
+[1/10/2024 8:37 PM] kuratius
+arduino ide compile times are horrendous
+
+
+[1/10/2024 8:37 PM] kuratius
+wtf
+
+
+[1/10/2024 8:37 PM] kuratius
+trying one of the watchy examples atm
+
+
+[1/10/2024 8:38 PM] szybet
+you are compiling the whole arduino framework
+
+
+[1/10/2024 8:38 PM] szybet
+soooo yea
+
+
+[1/10/2024 8:53 PM] kuratius
+Is there a tiny bit of plastic in the left bottom corner or is my screen broken?
+
+
+[1/10/2024 9:05 PM] szybet
+there is
+
+
+[1/10/2024 9:05 PM] szybet
+a bit of protective foil
+
+
+[1/10/2024 9:06 PM] szybet
+you can leave it for a bit more protection or pull it off which makes more sense because einks are not reflective
+
+
+[1/11/2024 7:46 PM] kuratius
+Can esp32s play audio via bluetooth?
+
+
+[1/11/2024 7:46 PM] kuratius
+probably not a good idea because of storage
+
+
+[1/11/2024 7:46 PM] kuratius
+but
+
+
+[1/11/2024 7:46 PM] kuratius
+https://github.com/pschatzmann/ESP32-A2DP
+
+{Embed}
+https://github.com/pschatzmann/ESP32-A2DP
+GitHub - pschatzmann/ESP32-A2DP: A Simple ESP32 Bluetooth A2DP Libr...
+A Simple ESP32 Bluetooth A2DP Library (to implement a Music Receiver or Sender) that supports Arduino, PlatformIO and Espressif IDF - GitHub - pschatzmann/ESP32-A2DP: A Simple ESP32 Bluetooth A2DP ...
+/mnt/data/projects/git/conversations/media/ESP32-A2DP-FBEC0
+
+
+[1/11/2024 7:47 PM] kuratius
+maybe on something that has an sd card slot
+
+
+[1/11/2024 8:13 PM] szybet
+PROPABLY CAN
+
+
+[1/11/2024 8:13 PM] szybet
+90%
+
+
+[1/11/2024 8:13 PM] szybet
+i found something more awesome
+
+
+[1/11/2024 8:13 PM] szybet
+https://github.com/ckcr4lyf/EvilAppleJuice-ESP32
+
+{Embed}
+https://github.com/ckcr4lyf/EvilAppleJuice-ESP32
+GitHub - ckcr4lyf/EvilAppleJuice-ESP32: Spam Apple Proximity Messag...
+Spam Apple Proximity Messages via an ESP32. Contribute to ckcr4lyf/EvilAppleJuice-ESP32 development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/EvilAppleJuice-ESP32-82501
+
+
+[1/11/2024 8:13 PM] szybet
+FUCK APPLE HJAHAHAHAHA
+
+
+[1/11/2024 8:17 PM] szybet
+https://github.com/atomic14/esp32-walkie-talkie
+
+{Embed}
+https://github.com/atomic14/esp32-walkie-talkie
+GitHub - atomic14/esp32-walkie-talkie: A Walkie-Talkie based around...
+A Walkie-Talkie based around the ESP32 using UDP broadcast or ESP-NOW - GitHub - atomic14/esp32-walkie-talkie: A Walkie-Talkie based around the ESP32 using UDP broadcast or ESP-NOW
+/mnt/data/projects/git/conversations/media/esp32-walkie-talkie-0BE4B
+
+
+[1/11/2024 8:17 PM] szybet
+here is something for you
+
+
+[1/11/2024 8:25 PM] szybet
+https://github.com/RapierXbox/ESP32-Sour-Apple
+
+{Embed}
+https://github.com/RapierXbox/ESP32-Sour-Apple
+GitHub - RapierXbox/ESP32-Sour-Apple: Crashes iOS 17 Devices using ...
+Crashes iOS 17 Devices using a ESP32 or a RPi. Contribute to RapierXbox/ESP32-Sour-Apple development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/ESP32-Sour-Apple-30DB4
+
+
+[1/11/2024 8:25 PM] szybet
+o h n o
+
+
+[1/11/2024 8:28 PM] szybet
+https://github.com/EUA/ESP32_LogicAnalyzer
+
+{Embed}
+https://github.com/EUA/ESP32_LogicAnalyzer
+GitHub - EUA/ESP32_LogicAnalyzer: ESP32 Logic Analyzer
+ESP32 Logic Analyzer. Contribute to EUA/ESP32_LogicAnalyzer development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/ESP32_LogicAnalyzer-57D61
+
+
+[1/11/2024 8:28 PM] szybet
+huh
+
+
+[1/11/2024 8:31 PM] szybet
+https://github.com/Bellafaire/ESP32-Smart-Watch
+
+{Embed}
+https://github.com/Bellafaire/ESP32-Smart-Watch
+GitHub - Bellafaire/ESP32-Smart-Watch: An open source smartwatch ba...
+An open source smartwatch based on the ESP32 compatible with the Arduino IDE.  - GitHub - Bellafaire/ESP32-Smart-Watch: An open source smartwatch based on the ESP32 compatible with the Arduino IDE.
+/mnt/data/projects/git/conversations/media/ESP32-Smart-Watch-2A652
+
+
+[1/11/2024 8:45 PM] szybet
+https://github.com/jkirsons/doom-espidf
+
+{Embed}
+https://github.com/jkirsons/doom-espidf
+GitHub - jkirsons/doom-espidf: Doom on ESP32
+Doom on ESP32. Contribute to jkirsons/doom-espidf development by creating an account on GitHub.
+
+
+[1/11/2024 8:49 PM] szybet
+https://github.com/hackffm/ESP32_BadApple
+
+{Embed}
+https://github.com/hackffm/ESP32_BadApple
+GitHub - hackffm/ESP32_BadApple: Bad Apple Video on ESP32 with SSD1...
+Bad Apple Video on ESP32 with SSD1306 OLED. Contribute to hackffm/ESP32_BadApple development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/ESP32_BadApple-51C0C
+
+
+[1/12/2024 12:27 AM] kuratius
+Awesome
+
+
+[1/12/2024 12:27 AM] kuratius
+Can be combined with Bluetooth audio
+
+
+[1/12/2024 12:27 AM] kuratius
+Super nice
+
+
+[1/12/2024 12:32 AM] kuratius
+Actually
+
+
+[1/12/2024 12:32 AM] kuratius
+Could go further
+
+
+[1/12/2024 12:32 AM] kuratius
+Mumble client maybe
+
+
+[1/12/2024 12:32 AM] kuratius
+lol
+
+
+[1/12/2024 12:33 AM] kuratius
+Depends on dependencies
+
+
+[1/14/2024 4:47 PM] kuratius
+btw shipping on my watchy says it's a v1.1
+
+
+[1/14/2024 4:56 PM] szybet
+idk
+
+
+[1/14/2024 4:56 PM] szybet
+send me a pic of the hardware
+
+
+[1/14/2024 4:56 PM] szybet
+or run my firmware and enter general debug menu
+
+
+[1/14/2024 4:56 PM] szybet
+that will tell you the version
+
+
+[1/14/2024 5:00 PM] kuratius
+your menu says 2.0
+
+
+[1/14/2024 5:00 PM] kuratius
+weird
+
+
+[1/14/2024 5:00 PM] kuratius
+shipping manifest still says v1.1
+
+
+[1/14/2024 5:01 PM] kuratius
+what is the display in the debug menu based on?
+
+
+[1/14/2024 5:01 PM] kuratius
+does it literally read 2.0 from the chip or is it an interpretation of some other value?
+
+
+[1/14/2024 5:03 PM] kuratius
+also I think your suggestion about getting a better case is good, with the current one the lio battery kind of flops around and it isnt protected against punctures
+
+
+[1/14/2024 6:43 PM] szybet
+RTC chip
+
+
+[1/14/2024 6:43 PM] szybet
+RTC chip
+
+
+[1/14/2024 6:43 PM] szybet
+the current one is a placeholder for "can be programmed safely until the new case arrived"
+
+
+[1/16/2024 8:17 PM] szybet
+@Kuratius thanks for the pull request but:
+1. make it as a function intead of 10 lines
+2. in vault generation xxd is  also used - idk if it will work
+
+
+[1/16/2024 8:17 PM] kuratius
+I also pushed a commit that disables vault
+
+
+[1/16/2024 8:17 PM] kuratius
+so
+
+
+[1/16/2024 8:23 PM] szybet
+thats... not a solution
+
+
+[1/16/2024 8:23 PM] kuratius
+yeah but it'll result in less complaints until someone comes who decides they need vault
+
+
+[1/16/2024 8:27 PM] kuratius
+also do you want this as a function you can use like the original xxd or do you just mean so there's less lines?
+
+
+[1/16/2024 8:27 PM] kuratius
+I reduced it to 3 echos for now, can go to 2
+
+
+[1/16/2024 8:27 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-C5E67.png
+
+
+[1/16/2024 8:33 PM] kuratius
+@Szybet what call signature do you want?
+
+
+[1/16/2024 8:33 PM] szybet
+write a bash function that does those echoes
+
+
+[1/16/2024 8:33 PM] szybet
+just cleaner code
+
+
+[1/16/2024 8:34 PM] szybet
+you mean function name? idk whatever really - xxd_legacy_wrapper
+
+
+[1/16/2024 8:34 PM] szybet
+or smth like that
+
+
+[1/16/2024 8:34 PM] szybet
+xxd_legacy
+
+
+[1/16/2024 8:34 PM] szybet
+your decission I won't be picky about that
+
+
+[1/16/2024 8:39 PM] kuratius
+call signature includes arguments, but ok then I'll do it without
+
+
+[1/16/2024 8:40 PM] szybet
+do as you like
+
+
+[1/16/2024 8:40 PM] kuratius
+check pr
+
+
+[1/16/2024 8:42 PM] szybet
+i had in mind that you call a function instead of xxd in after convert etc
+
+
+[1/16/2024 8:42 PM] szybet
+this doesnt make really much sense now
+
+
+[1/16/2024 8:43 PM] kuratius
+that's why I initially didnt do it, waking a function that runs exactly once didnt make much sense to me
+
+
+[1/16/2024 8:43 PM] szybet
+or maybe create a script for easier stdout collection
+
+
+[1/16/2024 8:43 PM] kuratius
+because either you need to jump back and forth when reading this code
+
+
+[1/16/2024 8:43 PM] kuratius
+or you have extra lines for a function that gets redefined every loop iteration
+
+
+[1/16/2024 8:43 PM] szybet
+in vault, where i implement it or in other future places it will be used more
+
+
+[1/16/2024 8:44 PM] kuratius
+and it's also why I asked you for the arguments you want
+
+
+[1/16/2024 8:44 PM] kuratius
+call signature
+
+
+[1/16/2024 8:44 PM] szybet
+i misunderstood, sorry
+
+
+[1/16/2024 8:44 PM] szybet
+maybe a script in a seperate file
+
+
+[1/16/2024 8:44 PM] szybet
+would be easier to use in other files
+
+
+[1/16/2024 10:17 PM] kuratius
+@Szybet
+
+
+[1/16/2024 10:17 PM] kuratius
+where do you want the function?
+
+
+[1/16/2024 10:17 PM] kuratius
+resources or src?
+
+
+[1/16/2024 10:17 PM] kuratius
+resources/images?
+
+
+[1/16/2024 10:17 PM] szybet
+resources i think
+
+
+[1/16/2024 10:21 PM] kuratius
+aah fuck
+
+
+[1/16/2024 10:21 PM] kuratius
+I didnt add the last argument to images.h
+
+
+[1/16/2024 10:21 PM] kuratius
+as in
+
+
+[1/16/2024 10:21 PM] kuratius
+I didnt replace images.h with $4
+
+
+[1/16/2024 10:21 PM] szybet
+you still dont understand
+dont replace all the convert stuff etc with that function, only xxd so it can be called instead of 
+```
+stuff convert or smth | xxd
+```
+and this doesnt work for you
+```
+stuff convert or smth maybe even vault | xxd_legacy
+```
+this will
+
+
+[1/16/2024 10:21 PM] kuratius
+one sec
+
+
+[1/16/2024 10:21 PM] szybet
+this will make it modular and better
+
+
+[1/16/2024 11:23 PM] kuratius
+where does your bash script even copy from resources/images to defines?
+
+
+[1/16/2024 11:28 PM] szybet
+the script creates images.h
+
+
+[1/16/2024 11:28 PM] szybet
+then moves it
+
+
+[1/16/2024 11:43 PM] kuratius
+you should probably do that in the main script and not a subscript
+
+
+[1/16/2024 11:43 PM] kuratius
+like whaaat
+
+
+[1/16/2024 11:44 PM] kuratius
+anyway
+
+
+[1/16/2024 11:44 PM] kuratius
+Ah, I thought you were doing all the copying in the last script
+
+
+[1/16/2024 11:54 PM] kuratius
+maybe the imagedef belongs into a function argument
+
+
+[1/16/2024 11:55 PM] kuratius
+you figure it out, you want to use it
+
+
+[1/16/2024 11:57 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-5FEE1.png
+
+
+[1/16/2024 11:57 PM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-7F1B2.png
+
+
+[1/16/2024 11:58 PM] kuratius
+or just moved out of the function entirely
+
+
+[1/17/2024 12:04 AM] kuratius
+maybe add documentation to the meanining of $1 and $2
+
+
+[1/17/2024 12:16 AM] szybet
+Still wrong...
+Dont make any specific things in that function regarding images. Just do the thing thaf newer xxd does
+
+Accept stdin and output stdout
+No writing to files
+
+
+[1/17/2024 12:16 AM] szybet
+Im talking about this image
+
+
+[1/17/2024 12:16 AM] szybet
+Idk what changes have you made later
+
+
+[1/17/2024 12:58 AM] kuratius
+This is better than your sed nonsense at least
+
+
+[1/17/2024 12:59 AM] kuratius
+This accepts stdin
+
+
+[1/17/2024 12:59 AM] kuratius
+And it outputs to stdout
+
+
+[1/17/2024 1:02 AM] kuratius
+If you want the last line outside just move it, I'm not going to read your mind. It already does what you need, which is changing the names of the array and the length variable using argument1 and 2 to the wrapper and it takes input from regular xxd via stdin
+
+
+[1/17/2024 1:02 AM] kuratius
+This is exactly what you need
+
+
+[1/17/2024 1:04 AM] kuratius
+You can move the call to xxd to the inside of the function if you're feeling funny but then passing parameters gets annoying because you have to pass them as a function argument.
+
+
+[1/17/2024 1:08 AM] kuratius
+Also I think technically array sizes should be size_t because some platforms can end up with 16 bit ints?
+
+
+[1/17/2024 1:08 AM] kuratius
+You don't want your code to be broken by that
+
+
+[1/17/2024 1:10 AM] kuratius
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Screenshot_20240117-010954_Firefox-C0C11.png
+
+
+[1/17/2024 1:11 AM] kuratius
+Lol should probably open an issue on xxd repo about that
+
+
+[1/17/2024 1:12 AM] kuratius
+Vim Devs don't follow the C standard, rofl
+
+
+[1/17/2024 1:13 AM] kuratius
+ima check their source code and write a prof at my uni
+
+
+[1/17/2024 1:16 AM] kuratius
+https://github.com/vim/vim/blob/master/src/xxd/xxd.c
+
+{Embed}
+https://github.com/vim/vim/blob/master/src/xxd/xxd.c
+vim/src/xxd/xxd.c at master · vim/vim
+The official Vim repository. Contribute to vim/vim development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/vim-1D7FD
+
+
+[1/17/2024 1:25 AM] kuratius
+The vim codebase is funny lol print or die
+
+
+[1/17/2024 2:02 AM] kuratius
+Apparently the code is fairly small, you could probably just include the .C file and compile it lol
+
+
+[1/17/2024 2:03 AM] kuratius
+Maybe clone the vim repo or this folder from the repo and compile
+
+
+[1/17/2024 2:04 AM] kuratius
+Then we don't have to argue about weird hacks to add the functionality you want and generate.sh can still run without modification on older systems
+
+
+[1/17/2024 2:04 AM] kuratius
+Just assumes someone has a C compiler I suppose
+
+
+[1/17/2024 11:11 AM] szybet
+will look into it later
+
+
+[1/17/2024 6:12 PM] szybet
+```
+
+xxd_wrapper(){
+
+    input_data=$(cat -)
+    echo -e -n "const unsigned char  ${1} [] = {\n" 
+
+    echo "$input_data"
+    echo -e "};\nconst unsigned int ${1}d =(sizeof($1)/sizeof(${1}[0])) ;\n"
+
+    echo -n -e "const ImageDef ${1}Pack = {${1}, ${2}_WIDTH, ${2}_HEIGHT};\n" 
+
+
+}
+
+```
+nothing image dependent, nothing - to be able to use it from vault too...
+
+
+[1/17/2024 6:12 PM] szybet
+accept an argument for the variable name
+
+
+[1/17/2024 6:13 PM] szybet
+well maybe `    input_data=$(cat -)` does that
+
+
+[1/17/2024 6:13 PM] kuratius
+Remove the last line
+
+
+[1/17/2024 6:13 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-9C6BF.png
+
+
+[1/17/2024 6:13 PM] szybet
+github formats it weirdly?
+
+
+[1/17/2024 6:13 PM] kuratius
+Arguments are passed via argument position
+
+
+[1/17/2024 6:14 PM] szybet
+ye i see i see
+
+
+[1/17/2024 6:14 PM] szybet
+just the imagedef thing
+
+
+[1/17/2024 6:14 PM] kuratius
+$1 is the first argument etc
+
+
+[1/17/2024 6:14 PM] szybet
+repair it and i will test it for the newer xxd
+
+
+[1/17/2024 6:15 PM] kuratius
+Also like I said int is the wrong type for an array size
+
+
+[1/17/2024 6:15 PM] kuratius
+Can I change that?
+
+
+[1/17/2024 6:15 PM] szybet
+yea sure
+
+
+[1/17/2024 6:15 PM] szybet
+whatever you like
+
+
+[1/17/2024 6:57 PM] kuratius
+@Szybet check pull request
+
+
+[1/17/2024 7:59 PM] szybet
+looks good
+
+
+[1/17/2024 7:59 PM] szybet
+will test it
+
+
+[1/18/2024 1:04 AM] szybet
+improved a few things
+
+
+[1/18/2024 1:04 AM] szybet
+it should work
+
+
+[1/18/2024 1:04 AM] szybet
+will recheck tommorow and fix a few things too
+
+
+[1/18/2024 2:02 AM] kuratius
+shouldn't this be cat - ?     converted_data=$(cat | xxd $all_args)
+
+
+[1/18/2024 2:07 AM] kuratius
+oh and hey my pull request got accepted
+
+
+[1/18/2024 2:38 AM] kuratius
+Does the nullbyte issue only happen if you save as a variable directly?
+
+
+[1/18/2024 2:40 AM] kuratius
+I remember I ran into it, but forgot about it because my version used xxd's output as input, so it never gets fed a nullbyte
+
+
+[1/18/2024 2:41 AM] kuratius
+my priority was more avoiding having to write an argument parser in bash
+
+
+[1/18/2024 5:18 AM] tux_linux
+nice
+
+
+[1/18/2024 5:23 AM] tux_linux
+https://github.com/vim/vim/issues/2
+a bit hilarious to see how this has been left open for almost 10 years now
+
+{Embed}
+https://github.com/vim/vim/issues/2
+Handle the offset for the end of a three-piece comment ignored · Is...
+:help format-comments mentions that it is possible to specify an offset for the end of a three-piece comment: {digits} When together with 's' or 'e': add {digit} amount of offset to...
+/mnt/data/projects/git/conversations/media/2-A87AB
+
+
+[1/18/2024 6:33 AM] kuratius
+Also sqfmi starred the InkWatchy repo, apparently
+
+
+[1/18/2024 9:54 AM] szybet
+Yes
+
+
+[1/18/2024 9:54 AM] szybet
+Idk works now
+
+
+[1/18/2024 9:55 AM] szybet
+Huh
+
+
+[1/18/2024 5:10 PM] szybet
+@Kuratius i have made a template system, the next git pull will delete your config if you changed anything - after that it will be personal and not repo dependent
+
+
+[1/19/2024 4:30 AM] kuratius
+Typo in readme just=>adjust
+
+{Reactions}
+👍 
+
+[1/19/2024 9:46 PM] kuratius
+Is this relevant?
+https://github.com/ghaerr/elks
+
+{Embed}
+https://github.com/ghaerr/elks
+GitHub - ghaerr/elks: Embeddable Linux Kernel Subset - Linux for 8086
+Embeddable Linux Kernel Subset - Linux for 8086. Contribute to ghaerr/elks development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/elks-1DE09
+
+
+[1/19/2024 9:48 PM] kuratius
+https://m.youtube.com/watch?v=Tr2yMjrgP8o
+
+{Embed}
+Fabrizio Di Vittorio
+https://www.youtube.com/watch?v=Tr2yMjrgP8o
+IBM PC on ESP32 with FabGL - Part VI (Linux ELKS)
+Emulating an IBM PC with ESP32 (with PSRAM and SDCARD). No other modules required (video, audio, keyboard, mouse and sdcard fully handled by the ESP32).
+
+How to install: https://youtu.be/upgogkPwG6E
+Part I: https://youtu.be/3I1U2nEoxIQ (FreeDOS + GWBasic + QBASIC)
+Part II: https://youtu.be/eM4TYgdEDlo (FreeDOS + DOS Developing Tools)
+Part III: h...
+/mnt/data/projects/git/conversations/media/maxresdefault-18330.jpg
+
+
+[1/19/2024 9:58 PM] kuratius
+https://github.com/jart/cosmopolitan
+
+{Embed}
+https://github.com/jart/cosmopolitan
+GitHub - jart/cosmopolitan: build-once run-anywhere c library
+build-once run-anywhere c library. Contribute to jart/cosmopolitan development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/cosmopolitan-28746
+
+
+[1/19/2024 9:58 PM] kuratius
+Neat
+
+
+[1/19/2024 10:02 PM] szybet
+Cool things but i dont see sense in it as for a "watch"
+
+
+[1/19/2024 10:02 PM] kuratius
+Yeah but I like knowing this exists
+
+
+[1/19/2024 10:03 PM] kuratius
+And maybe we will happen upon something it has a use for idk
+
+
+[1/30/2024 3:54 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-8D865.png
+
+
+[1/30/2024 3:54 PM] szybet
+weird, no idea
+
+
+[1/31/2024 11:43 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-57F81.png
+
+
+[1/31/2024 11:43 PM] szybet
+@Kuratius huh, you looked for adding such things
+
+
+[1/31/2024 11:43 PM] szybet
+decentralised network
+
+
+[2/1/2024 1:26 PM] kuratius
+Amazing
+
+
+[2/3/2024 12:30 PM] kuratius
+https://github.com/atomic14/diy-esp32-epub-reader
+
+{Embed}
+https://github.com/atomic14/diy-esp32-epub-reader
+GitHub - atomic14/diy-esp32-epub-reader: An ESP32 e-reader
+An ESP32 e-reader. Contribute to atomic14/diy-esp32-epub-reader development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/9ee99288-af65-4a80-b7e3-8da8d4511bd1-443E1
+
+
+[2/3/2024 12:30 PM] kuratius
+(not for me but you may like it)
+
+
+[2/4/2024 2:21 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-36CAF.png
+
+
+[3/28/2024 2:49 PM] kuratius
+Description of waveforms in the watchy controller and commands to upload custom LUTs
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/SSD1681V0.13_Spec-0E0CC.pdf
+
+
+[3/28/2024 2:49 PM] szybet
+it would be huge if we would be able to show images on the watchy
+
+
+[3/28/2024 2:54 PM] kuratius
+The greyscale quantization issue on the badger needs to be solved first, as the driver for the watchy would use the same techniques
+
+
+[3/28/2024 2:54 PM] kuratius
+https://github.com/antirez/uc8151_micropython/issues/1
+
+{Embed}
+https://github.com/antirez/uc8151_micropython/issues/1
+Check if gray level interpolation can be made more accurate · Issue...
+9names/uc8151-rs#5 In this issue I wrote down the equation of motion for eink particles, if you have a photodiode you may be able to to do the curve fit to get the grayscale interpolation right. I ...
+/mnt/data/projects/git/conversations/media/1-A65A0
+
+
+[3/28/2024 2:59 PM] kuratius
+Also I'm like 50 % sure they actually meant to take this datasheet down and reupload a censored version
+
+
+[3/28/2024 2:59 PM] kuratius
+as it's not available from their website anymore without using some trickery
+
+
+[3/28/2024 3:00 PM] szybet
+😂
+
+
+[3/29/2024 4:13 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Kooha-2024-03-29-15-55-48-80812.webm
+
+
+[3/29/2024 5:15 PM] tux_linux
+Readed->Read
+Irregular verb
+
+
+[3/29/2024 5:15 PM] tux_linux
+looks great otherwise
+
+
+[3/29/2024 5:17 PM] szybet
+I have readed a book
+
+
+[3/29/2024 5:17 PM] szybet
+I have...
+
+
+[3/29/2024 5:17 PM] szybet
+um
+
+
+[3/29/2024 5:18 PM] szybet
+yea
+
+
+[3/29/2024 6:17 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Kooha-2024-03-29-18-16-13-29A3C.webm
+
+
+[3/29/2024 6:18 PM] szybet
+https://tenor.com/view/upgrades-robots-gif-21291099
+
+{Embed}
+https://tenor.com/view/upgrades-robots-gif-21291099
+/mnt/data/projects/git/conversations/media/upgrades-robots-3501C.png
+
+
+[3/29/2024 8:15 PM] szybet
+https://github.com/Szybet/watchy-scom
+
+{Embed}
+https://github.com/Szybet/watchy-scom
+GitHub - Szybet/watchy-scom
+Contribute to Szybet/watchy-scom development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/watchy-scom-D96BA
+
+
+[3/29/2024 8:15 PM] szybet
+speeeed
+
+
+[3/30/2024 2:30 PM] tux_linux
+do you know scom is one letter away from a much worse word?
+
+
+[3/30/2024 2:36 PM] szybet
+😂
+
+
+[3/30/2024 2:36 PM] szybet
+not my problem
+
+
+[3/30/2024 3:37 PM] kuratius
+"Tenno Scoom!"
+
+
+==============================================================
+Exported 644 message(s)
+==============================================================

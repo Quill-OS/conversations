@@ -1,0 +1,483 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / porting / Kobo Elipsa (N604)
+==============================================================
+
+[6/14/2022 11:22 PM] tux_linux
+@djhardrich please post a boot log from serial when you can!
+
+
+[6/14/2022 11:24 PM] djhardrich
+Sure thing; that may take a few days to find the serial pins (unless you know of a way to force serial over the otg port)
+
+{Reactions}
+👍 
+
+[6/14/2022 11:26 PM] szybet
+isin't it labeled?
+
+
+[6/14/2022 11:26 PM] szybet
+rx tx
+
+
+[6/14/2022 11:26 PM] djhardrich
+Haven’t popped it open yet to check tbh, shouldn’t be too hard to find
+
+
+[6/14/2022 11:26 PM] szybet
+the nia is a decently new device and has them labeled
+
+{Reactions}
+❤️ 
+
+[6/14/2022 11:27 PM] tux_linux
+The Nia is not on a sunxi SoC
+but maybe
+
+
+[6/14/2022 11:27 PM] tux_linux
+https://fcc.report/FCC-ID/NOIKBN604
+
+
+[6/14/2022 11:29 PM] djhardrich
+I’d be -shocked- if the pins on the left side of that board aren’t serial
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_4660-C6DB9.png
+
+
+[6/14/2022 11:30 PM] szybet
+it looks exactly like that on the nia
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/unknown-6FDA2.png
+
+
+[6/14/2022 11:30 PM] szybet
+so nice
+
+{Reactions}
+❤️ 
+
+[6/14/2022 11:31 PM] tux_linux
+they probably are
+
+
+[6/14/2022 11:31 PM] szybet
+what is this site
+
+
+[6/14/2022 11:32 PM] djhardrich
+FCC Testing (US RF/electronic certifications)
+
+
+[6/14/2022 11:32 PM] szybet
+thats such a cool website
+
+
+[6/14/2022 11:33 PM] djhardrich
+And it’s posted right after certification, which is usually a few months before products launch 😉
+
+
+[6/14/2022 11:37 PM] the.mightydill
+Wait the Elipsa has a MicroSD??
+
+
+[6/14/2022 11:37 PM] djhardrich
+HOLY CRAP UNPOPULATED? I see that too
+
+
+[6/14/2022 11:38 PM] tux_linux
+where
+
+
+[6/14/2022 11:38 PM] the.mightydill
+Wait no wait
+
+
+[6/14/2022 11:38 PM] the.mightydill
+Emmc or MicroSD?
+
+
+[6/14/2022 11:38 PM] djhardrich
+Unless that’s fpc connector for ribbon for screen
+
+
+[6/14/2022 11:38 PM] tux_linux
+probably
+
+
+[6/14/2022 11:39 PM] tux_linux
+though it's a small connector
+usually they are bigger
+
+
+[6/14/2022 11:39 PM] the.mightydill
+I'm sorry I'm just confused
+
+
+[6/14/2022 11:39 PM] djhardrich
+has 32gb emmc but that white connector in blurryvision has my interest
+
+
+[6/14/2022 11:39 PM] the.mightydill
+Oh ok
+
+
+[6/14/2022 11:39 PM] tux_linux
+http://www.martgreat.com/kobo-elipsa-micro-sd-card-reader.html ?
+
+
+[6/14/2022 11:39 PM] djhardrich
+Yeah exactly, it -does- look like a low-footprint microsd
+
+
+[6/14/2022 11:39 PM] tux_linux
+yeah
+
+
+[6/14/2022 11:40 PM] djhardrich
+They (martgreat) sell all kinds of otg stuff for the elipsa but I have the other microsd/usbc adapter they sell and can confirm no power over vbus, they don’t work (unless externally powered? Will know in 2 days)
+
+
+[6/14/2022 11:40 PM] the.mightydill
+Shouldn't that be for most, if not all, Kobos?
+
+
+[6/14/2022 11:40 PM] the.mightydill
+Or does only the Elipsa have OTG?
+
+
+[6/14/2022 11:41 PM] tux_linux
+microSD ought not to take that much power
+
+
+[6/14/2022 11:41 PM] djhardrich
+I’ll run a dmesg really fast but pretty positive it doesn’t enumerate without external power
+
+
+[6/14/2022 11:43 PM] szybet
+if you enable usb otg via kernel options it will propably output something like this:
+```
+usb 1-1: new high-speed USB device number 89 using ci_hdrc
+usb 1-1: new high-speed USB device number 91 using ci_hdrc
+usb 1-1: new high-speed USB device number 93 using ci_hdrc
+usb 1-1: new high-speed USB device number 94 using ci_hdrc
+usb 1-1: new high-speed USB device number 95 using ci_hdrc
+usb 1-1: new high-speed USB device number 96 using ci_hdrc
+usb 1-1: new high-speed USB device number 97 using ci_hdrc
+usb 1-1: new high-speed USB device number 98 using ci_hdrc
+usb 1-1: new high-speed USB device number 99 using ci_hdrc
+```
+
+
+[6/14/2022 11:43 PM] szybet
+im really sure about that
+
+
+[6/14/2022 11:44 PM] djhardrich
+```
+papyrus: i2c pwr req: 1
+papyrus_hw_power_req(): XON=1
+papyrus_hw_power_req() OPMODE=0xe0
+papyrus: i2c pwr req: 1
+papyrus_hw_power_req(): XON=1
+daymode XON OFF after 2750000 us
+papyrus: i2c pwr req: 0
+papyrus_hw_power_req() VPDD_LEN=0x0
+papyrus_hw_power_req() OPMODE=0x60
+PMU: mainFlowOfLowVoltage :     Noxx : cc_delta_cap is -9, cc_delta_cap_now is 85, last_cc_delta_cap is 93
+PMU: mainFlowOfLowVoltage :     Noxx : temp_cc_delta_cap is -1, after temp_cc_delta_cap_mas is -553, cc_cap_mas 84797
+PMU: mainFlowOfLowVoltage :     No9 :Cap is 5160 , low_rate is 47, dsoc is 4053, capnow is 5110, capzero is 0, delta cc is -4, delta cc ori is -9
+PMU: mainFlowOfLowVoltage :     No10 :temp_mas is -781, offset_mas is -228, value is -423, final value is -4
+PMU : set_current_time2register : second is 1655242985, hour is 459789
+PMU:STATUS= 7: IBAT= -263: VSYS= 3773500: VBAT= 3783500: DSOC= 4053: RSOC= 4000: cc_delta=93: rrf= 0
+PMU: ricoh61x_irq: irq=31,gpio=0,int_ir_sys=0x40
+PMU: ricoh61x_irq: master_int=0x20
+IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+RTW: rtl8821c_fillh2ccmd(wlan0): id=0x42 buf= 0x00 0x00 0x28 0x04 0x00 0x00 0x04
+RTW: [H2C] - 42 00 00 28  04 00 00 04
+[P15USB30216C] SET OVP / OPEN OTG_5V  1
+ Enable/Active state
+ Enable Try.SNK supported
+ Disable Accessory Detection
+ Charging control : Default current mode
+ Dual Role 2(DRP) where Try.SRC or Try.SNK
+ VBUS not detected
+ Charging :Standby
+ Attatched Port : Device
+ CC1 makes connection
+```
+
+
+[6/14/2022 11:44 PM] djhardrich
+Looks like I need to enable via kernel options; is there a userspace way to toggle that that I’m forgetting?
+
+
+[6/14/2022 11:45 PM] tux_linux
+use
+\```
+hello
+\```
+
+
+[6/14/2022 11:45 PM] tux_linux
+```
+hello
+```
+
+
+[6/14/2022 11:45 PM] djhardrich
+For clarity there’s the adapter etc
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/63101A5F-832C-45CE-8633-6F55130BC71D-172EB.jpg
+
+
+[6/14/2022 11:45 PM] tux_linux
+i don't think so, your only option would be the kernel
+but maybe you can compile it as a module
+
+
+[6/14/2022 11:46 PM] djhardrich
+hello: command not found
+
+
+[6/14/2022 11:46 PM] szybet
+if its the same chip as on the nia:
+```
+mount -t debugfs none /sys/kernel/debug
+echo host > /sys/kernel/debug/ci_hdrc.0/role
+```
+
+
+[6/14/2022 11:46 PM] tux_linux
+i mean, to display code blocks
+
+
+[6/14/2022 11:46 PM] djhardrich
+Ohhhhhh triple got it
+
+{Reactions}
+👍 
+
+[6/14/2022 11:47 PM] tux_linux
+e.g., from my nightmare of rewriting unshare to make it work on kobo
+```
+execve("./unshare", ["./unshare", "/bin/ls"], 0x7ffd52055818 /* 17 vars */) = 0
+brk(NULL)                               = 0x185b000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd7a8e08f0) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=90291, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 90291, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7ff55dbf4000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 \21\4\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0@\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 80, 848) = 80
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\315?\345\263)@\226\221\250$q/k\0235\211"..., 68, 928) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2385664, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ff55dbf2000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2133552, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7ff55d9e9000
+mmap(0x7ff55da11000, 1531904, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7ff55da11000
+mmap(0x7ff55db87000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19e000) = 0x7ff55db87000
+mmap(0x7ff55dbdf000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f5000) = 0x7ff55dbdf000
+mmap(0x7ff55dbe5000, 52784, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7ff55dbe5000
+```
+
+{Reactions}
+👍 
+
+[6/14/2022 11:47 PM] djhardrich
+Just learned something new/useful 😂
+
+{Reactions}
+👍 
+
+[6/14/2022 11:49 PM] djhardrich
+Nope, it’s not freescale like nia and iirc that’s the freescale imx way to set that (ci_hdrc); Elipsa has more in common with Sage
+
+
+[6/14/2022 11:50 PM] djhardrich
+before I start taking things apart, want me to do a clean boot and post dmesg just for more general info? I’ll be doing a small casemod to keep serial exposed so I have one with easy serial access
+
+
+[6/14/2022 11:52 PM] tux_linux
+Do a clean boot when you have serial
+
+{Reactions}
+👍 
+
+[6/14/2022 11:52 PM] tux_linux
+And post the list of U-Boot commands too
+
+
+[6/14/2022 11:52 PM] tux_linux
+`ums` will be useful if it is there
+
+{Reactions}
+👍 
+
+[6/15/2022 1:34 PM] ninuje
+I assume the usual sunxi download mode is accessibke somehow, but good luck because sunxi ;p (and that specific SoC (B300) being hilariously undocumented)
+
+{Reactions}
+👍 
+
+[6/15/2022 1:34 PM] ninuje
+Also, kernel sources are s'ightly out of date
+
+
+[6/15/2022 1:35 PM] ninuje
+Bit much less so that the sage's
+
+
+[6/15/2022 1:55 PM] tux_linux
+As always
+
+
+[6/15/2022 2:31 PM] szybet
+Create another github issue
+
+
+[6/15/2022 2:31 PM] szybet
+That will do nothing :p
+
+{Reactions}
+😁 
+
+[6/16/2022 10:36 PM] djhardrich
+Update: had to order new tools to open the case (lost mine in the pile of electronics 🤣), shows up tomorrow…. Power Y splitter came and works with rm2 after changing module flags to set otg to host; does -not- work with elipsa out of the box, so either a kernel rebuild with otg turned on, or a sunxi-specific flag to turn on otg host is required
+
+
+[6/17/2022 7:47 AM] djhardrich
+Got OTG enabled on Elipsa, enumerates device then eventually crashes..
+```
+echo 1 > /sys/bus/platform/devices/usbc0/otg_role
+
+```
+
+
+[6/17/2022 9:59 AM] szybet
+How it crashes? Logs?
+
+
+[6/17/2022 10:02 AM] djhardrich
+Reboots itself after a relatively-short period of time, trying to scrape logs.. Strangely, cat’ing /dev/hidraw0/1 didn’t get me any output when pressing keys (0 was what was assigned to keyboard according to dmesg).
+
+
+[6/17/2022 10:11 AM] djhardrich
+Stock fw doesn’t seem to be saving  anything to /var/log (which exists). Got some keyboard input, joy for about 2mins and reboot
+
+
+[6/17/2022 10:27 AM] djhardrich
+An aside: manually pairing/trusting trackball and keyboard with bluetoothctl -does- seem to be stable/persistent across reboots. Much more stable than pairing in Settings, I’m guessing it doesn’t do the extra step of trusting the devices
+
+
+[6/17/2022 12:13 PM] ninuje
+It logs to a ring buffer, so no persistence
+
+
+[6/17/2022 12:14 PM] ninuje
+`logread`
+
+
+[6/17/2022 12:14 PM] ninuje
+You might need to enable some more verbose logs in nickel's dev menu
+
+
+[6/17/2022 12:14 PM] ninuje
+(search for devmodeon in nickel, it then pops up in the Settings in device info IIRC)
+
+
+[6/17/2022 12:15 PM] ninuje
+Might want to run `klogd` first so you get interleaved kernel logging with timestamps
+
+
+[6/17/2022 12:15 PM] ninuje
+Because old kernel with crappy printk
+
+
+[6/17/2022 7:18 PM] tux_linux
+Aren't they encrypted?
+
+
+[6/17/2022 7:18 PM] tux_linux
+Or, is there a way to decrypt them?
+I want to know!!
+
+
+[6/17/2022 7:35 PM] ninuje
+they're encrypted on disk
+
+
+[6/17/2022 7:35 PM] ninuje
+not in the syslog
+
+
+[6/17/2022 7:35 PM] tux_linux
+oh
+
+
+[6/17/2022 7:35 PM] tux_linux
+nice
+
+
+[6/19/2022 4:33 PM] djhardrich
+Boot log via uart, can get autoboot to stop but can't seem to get terminal output for uboot commands. Log too big to paste as a code block
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/elipsabootlog-0DF5E.txt
+
+
+[6/19/2022 6:47 PM] tux_linux
+Seems to be using boot0 which then loads U-Boot https://linux-sunxi.org/Boot0
+Also seems to have an initrd
+This is the strangest Kobo device I've seen yet
+
+{Embed}
+https://linux-sunxi.org/Boot0
+Boot0
+
+
+[6/19/2022 6:48 PM] tux_linux
+So boot sequence does
+PWRON -> BROM/boot0 -> U-Boot -> kernel -> initrd -> nickel
+
+
+[6/19/2022 6:48 PM] tux_linux
+Thanks for the log
+Very interesting
+
+
+[6/19/2022 7:20 PM] tux_linux
+You might want to start documenting things on the Wiki like for the PRS-T1 page (by NonaSuomy) https://inkbox.ddns.net/wiki/index.php?title=Sony_PRS-T1
+Experiment around a bit, try to get U-Boot to let you a shell, try to trigger download mode, etc. You can write a lot of things there if you find it's useful
+https://inkbox.ddns.net/wiki/index.php?title=Kobo_Elipsa
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=Sony_PRS-T1
+Index.php
+
+
+[6/19/2022 7:23 PM] szybet
+some porting resources are also here
+https://github.com/Szybet/kobo-nia-audio
+https://github.com/Szybet/kobo-nia-audio/blob/main/inkbox.md
+
+
+[6/19/2022 7:23 PM] tux_linux
+Yeah, it's a good place to have an idea of what you will eventually be doing @djhardrich
+
+
+[6/19/2022 7:25 PM] tux_linux
+Some things like kernel load sector will likely not be relevant though
+
+
+==============================================================
+Exported 86 message(s)
+==============================================================

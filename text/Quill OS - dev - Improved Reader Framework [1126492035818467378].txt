@@ -1,0 +1,3665 @@
+==============================================================
+Guild: Quill OS
+Channel: Development / dev / Improved Reader Framework
+==============================================================
+
+[7/6/2023 2:37 PM] tux_linux
+Hello
+
+
+[7/27/2023 11:23 AM] szybet
+https://github.com/ArtifexSoftware/mupdf/blob/312c455d8af5f117984de8cec44c2b845c4b5c85/source/tools/muconvert.c#L203C4-L203C9
+
+{Embed}
+https://github.com/ArtifexSoftware/mupdf/blob/312c455d8af5f117984de8cec44c2b845c4b5c85/source/tools/muconvert.c
+mupdf/source/tools/muconvert.c at 312c455d8af5f117984de8cec44c2b845...
+mupdf mirror. Contribute to ArtifexSoftware/mupdf development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/mupdf-D60A9
+
+
+[7/27/2023 11:23 AM] szybet
+easy patch to get the number of pages
+
+
+[7/27/2023 12:16 PM] szybet
+newest mutool cross compiled without any issues
+
+
+[7/27/2023 12:16 PM] szybet
+what was your problem lol
+
+
+[7/27/2023 3:24 PM] tux_linux
+It was 2021
+
+
+[7/27/2023 3:24 PM] tux_linux
+I was 15
+
+
+[7/27/2023 4:14 PM] szybet
+https://tenor.com/view/yeah-that-makes-sense-mario-nodding-understandable-understood-gif-17935692
+
+{Embed}
+https://tenor.com/view/yeah-that-makes-sense-mario-nodding-understandable-understood-gif-17935692
+/mnt/data/projects/git/conversations/media/yeah-that-makes-sense-mario-DDE59.png
+
+
+[7/27/2023 5:46 PM] tux_linux
+can we try to use it as a library directly?
+
+
+[7/27/2023 5:46 PM] tux_linux
+also maybe we should check out the git repo to a proper release tag
+
+
+[7/27/2023 5:47 PM] tux_linux
+https://github.com/ArtifexSoftware/mupdf/commit/e32a0e27163cccc98eb4b509ea1493cdac8b4930
+like this one
+
+{Embed}
+https://github.com/ArtifexSoftware/mupdf/commit/e32a0e27163cccc98eb4b509ea1493cdac8b4930
+Update version number and CHANGES. · ArtifexSoftware/mupdf@e32a0e2
+/mnt/data/projects/git/conversations/media/e32a0e27163cccc98eb4b509ea1493cdac8b4930-85188
+
+
+[7/27/2023 6:13 PM] szybet
+yes sure
+
+
+[7/27/2023 6:13 PM] szybet
+https://github.com/ArtifexSoftware/mupdf/tree/1.22.2
+
+{Embed}
+https://github.com/ArtifexSoftware/mupdf/tree/1.22.2
+GitHub - ArtifexSoftware/mupdf at 1.22.2
+mupdf mirror. Contribute to ArtifexSoftware/mupdf development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/mupdf-D60A9
+
+
+[7/27/2023 6:13 PM] szybet
+idk if i care enough to use it
+
+
+[7/27/2023 6:20 PM] tux_linux
+it will be faster, probably
+
+
+[7/27/2023 6:20 PM] szybet
+i dont think so
+
+
+[7/27/2023 6:20 PM] szybet
+even if, a bit
+
+
+[7/29/2023 6:59 PM] szybet
+libre translate works great self hosted, even on normal hardware
+
+
+[7/29/2023 6:59 PM] szybet
+i will make one for myself to use
+
+
+[7/29/2023 7:00 PM] szybet
+if donations / users will want, we could make a public one for inkbox to use
+
+
+[7/29/2023 7:03 PM] szybet
+because api key is needed
+
+
+[7/30/2023 6:25 PM] szybet
+mutool compiled without propbly only on latest master
+
+
+[7/30/2023 6:25 PM] szybet
+so we are lucky
+
+
+[7/30/2023 8:50 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/Peek_2023-07-30_20-49-17078.gif
+
+
+[7/30/2023 8:50 PM] szybet
+https://youtu.be/dfHrXsGJ8mo
+
+{Embed}
+Shaun's Shitposts
+https://www.youtube.com/watch?v=dfHrXsGJ8mo
+Team Fortress 2 - Dear God
+THERE'S MORE
+/mnt/data/projects/git/conversations/media/maxresdefault-70B4B.jpg
+
+
+[7/30/2023 11:43 PM] kuratius
+https://github.com/konn/pandoc-japanese-filters
+
+{Embed}
+https://github.com/konn/pandoc-japanese-filters
+GitHub - konn/pandoc-japanese-filters: Pandoc filters to treat Japa...
+Pandoc filters to treat Japanese-specific markups. Contribute to konn/pandoc-japanese-filters development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/pandoc-japanese-filters-36BB3
+
+
+[7/31/2023 12:25 AM] szybet
+Well fuck i will go full with this
+
+
+[7/31/2023 12:26 AM] szybet
+I will support all formats provided by mutool ( apart from pdf, epub and html which i will hack into html, the others will be experimental )
+
+
+[7/31/2023 12:26 AM] szybet
+And i will use mutool directly by using convert code
+
+
+[7/31/2023 12:28 AM] kuratius
+sorry, what do you mean?
+
+
+[7/31/2023 12:29 AM] szybet
+And as for highlights:
+Select text as before
+A small button will appear with options icon
+Then on the bottom will appear a dialog with options to highlight, translate, and dictionary if its only one word
+
++ i will repair selection by selecting whole words if they are cutted
++ 2 arrows to add to the selection
+
+This is my plan for now
+
+
+[7/31/2023 12:29 AM] szybet
+To nicolas, i said before i will support only epubs
+
+
+[7/31/2023 12:30 AM] szybet
+As it turns out, it will be not painfull to support others because at the end of the day I only use html or images inside
+
+
+[7/31/2023 12:30 AM] kuratius
+btw, can you add this line to whatever html renderer you usually use and check if it renders correctly?  ```  <ruby>両人<rp>（</rp><rt>ふたり</rt><rp>）</rp></ruby>```
+
+
+[7/31/2023 12:32 AM] szybet
+And to the conclusion of my loud minds: i will share it, make it open source if you @tux-linux wont after remove any logs, any comments or change them to make them contain any less informations
+
+Its just frustrating for me
+
+
+[7/31/2023 12:33 AM] szybet
+Tldr it wont, i didnt check but i promise you
+
+Qt html renderer has even problems with basic css, doesnt have any js at default. I dont need to check for rubby... But i will google it...
+
+
+[7/31/2023 12:33 AM] szybet
+Its still better than using svg like plato lol
+
+
+[7/31/2023 12:35 AM] szybet
+Qt webkit supports it, but we cant  use it :/
+
+
+[7/31/2023 12:37 AM] kuratius
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
+
+{Embed}
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ruby
+: The Ruby Annotation element - HTML: HyperText Markup Language | MDN
+The  HTML element represents small annotations that are rendered above, below, or next to base text, usually used for showing the pronunciation of East Asian characters. It can also be used for annotating other kinds of text, but this usage is less common.
+/mnt/data/projects/git/conversations/media/mdn-social-share.cd6c4a5a-7DC89.png
+
+
+[7/31/2023 12:37 AM] kuratius
+should be part of the html standard
+
+
+[7/31/2023 12:38 AM] kuratius
+I dont think it's js
+
+
+[7/31/2023 12:38 AM] szybet
+Qt text edit supports only part of html4 standard
+
+
+[7/31/2023 12:38 AM] szybet
+Dont expect much
+
+
+[7/31/2023 9:32 PM] szybet
+@tux-linux answer, im dead serious about this
+i wont push any commits of my work if you wont agree
+
+
+[7/31/2023 11:58 PM] tux_linux
+Well, unless your logs are printing each page contents each time it's formatted differently I will not remove them. I will correct spelling errors if there are
+
+
+[8/1/2023 12:00 AM] szybet
+You can comment them
+
+
+[8/1/2023 12:00 AM] szybet
+No problem with that
+
+
+[8/1/2023 12:00 AM] tux_linux
+Yes, they will be commented
+
+
+[8/1/2023 12:00 AM] tux_linux
+Like the database contents logs
+
+
+[8/1/2023 12:03 AM] szybet
+Well but for our sanity leave things related to mupdf
+
+From today:
+Like you choosed a automatic format selector in the future, 5 lines below? Quess what no luck with that, we will segfault on this code related to css for no reason, and this code works with mutool convert and you wil accept it haha😬😬
+
+
+[8/1/2023 12:04 AM] tux_linux
+I don't understand
+
+
+[8/1/2023 12:04 AM] szybet
+Me too, me too...
+
+
+[8/1/2023 5:48 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-D799B.png
+
+
+[8/1/2023 5:48 PM] szybet
+this code was faster than qt gui and eink
+
+
+[8/1/2023 5:48 PM] szybet
+i only saw one page
+
+
+[8/1/2023 5:48 PM] tux_linux
+you will use qdebug everywhere?
+
+
+[8/1/2023 5:49 PM] szybet
+no, inkbox will use qdebug everywhere in the future
+
+
+[8/1/2023 5:49 PM] szybet
+so i start
+
+
+[8/1/2023 5:49 PM] tux_linux
+also can you name your class reader instead of toreader
+
+
+[8/1/2023 5:49 PM] szybet
+also, i would die trying to dump qbytearray for example
+
+
+[8/1/2023 5:49 PM] szybet
+nope, toreader stays
+
+
+[8/1/2023 5:49 PM] tux_linux
+why
+
+
+[8/1/2023 5:49 PM] szybet
+why not
+
+
+[8/1/2023 5:49 PM] tux_linux
+why not
+
+
+[8/1/2023 5:49 PM] szybet
+the old reader will be archived and not used
+
+
+[8/1/2023 5:49 PM] tux_linux
+then just delete it
+
+
+[8/1/2023 5:50 PM] szybet
+so leave it and dont make conflicts
+
+
+[8/1/2023 5:50 PM] tux_linux
+no
+
+
+[8/1/2023 5:50 PM] tux_linux
+its worthless
+
+
+[8/1/2023 5:50 PM] tux_linux
+it will bloat it
+you dont want that
+
+
+[8/1/2023 5:50 PM] szybet
+nope, just as bash based IPD, its bad code but shows the capability of qt in this example
+
+
+[8/1/2023 5:50 PM] szybet
+dump it into old folder
+
+
+[8/1/2023 5:50 PM] szybet
+and leave it
+
+
+[8/1/2023 5:51 PM] tux_linux
+for pdf do we use toreader or not
+
+
+[8/1/2023 5:51 PM] szybet
+if for any reason i will want to go back and try both of them, compare there will not be problems with naming
+
+
+[8/1/2023 5:51 PM] szybet
+we do
+
+
+[8/1/2023 5:51 PM] tux_linux
+and png
+
+
+[8/1/2023 5:52 PM] szybet
+we do
+
+
+[8/1/2023 5:52 PM] szybet
+at this point why not
+
+
+[8/1/2023 5:52 PM] tux_linux
+well, thats why i want it to be named reader
+
+
+[8/1/2023 5:52 PM] tux_linux
+and it should not be compiled
+
+
+[8/1/2023 5:52 PM] szybet
+no one will see it
+
+
+[8/1/2023 5:52 PM] szybet
+only we in code
+
+
+[8/1/2023 5:52 PM] tux_linux
+binary size
+
+
+[8/1/2023 5:53 PM] tux_linux
+also remember we will provide debug and release builds now in gui bundle
+
+
+[8/1/2023 5:53 PM] szybet
+not compiled, yes
+
+
+[8/1/2023 5:53 PM] szybet
+wasting space, no
+
+
+[8/1/2023 5:53 PM] szybet
+we can provide debug updates if thats a thing
+
+
+[8/1/2023 5:53 PM] tux_linux
+we already discussed that
+
+
+[8/1/2023 5:53 PM] szybet
+yea and i did dissagree
+
+
+[8/1/2023 5:56 PM] tux_linux
+well, yes, because library will launch `toreader`, so you will have to rewire it to launch `reader`
+
+
+[8/1/2023 5:56 PM] tux_linux
+also your reader will probably have so much changes that it will be impossible to rewire the old one back easily
+at this point just better to try out an older release
+
+
+[8/1/2023 5:57 PM] szybet
+do what you want, i dont care
+
+
+[8/1/2023 5:57 PM] szybet
+you will waste time renaming it, thats my problem
+
+
+[8/1/2023 5:57 PM] tux_linux
+well, maybe a sed thing will do
+
+
+[8/1/2023 5:57 PM] tux_linux
+`sed -i 's/toreader/reader/g' file.cpp`
+
+
+[8/1/2023 5:57 PM] tux_linux
+and a for loop
+
+
+[8/1/2023 5:57 PM] szybet
+propably not
+
+
+[8/1/2023 5:57 PM] tux_linux
+why
+
+
+[8/1/2023 5:57 PM] szybet
+reasons i dont trust it
+
+
+[8/1/2023 5:58 PM] tux_linux
+because
+
+
+[8/1/2023 5:59 PM] tux_linux
+```for f in $(find . -name '*.cpp' -or -name '*.h' -or -name '*.ui'); do sed -i 's/toreader/reader/g' "${f}"; done```
+
+
+[8/1/2023 5:59 PM] tux_linux
+this should do it
+
+
+[8/1/2023 6:16 PM] szybet
+anything else?
+
+
+[8/1/2023 6:17 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-B2AD3.png
+
+
+[8/1/2023 6:17 PM] tux_linux
+- warmth
+in english you don't have to put spaces after a parenthesis
+
+
+[8/1/2023 6:17 PM] szybet
+what is parenthesis lols
+
+
+[8/1/2023 6:18 PM] tux_linux
+( )
+
+
+[8/1/2023 6:18 PM] tux_linux
+`( yes, any image )` -> `(yes, any image)`
+
+
+[8/1/2023 6:18 PM] szybet
+my preference
+
+
+[8/1/2023 6:18 PM] tux_linux
+also start comments with a capital letter
+
+
+[8/1/2023 6:18 PM] tux_linux
+i would rather put margins like this `left, right, top, bottom`
+
+
+[8/1/2023 6:19 PM] szybet
+i went with most uses
+
+
+[8/1/2023 7:10 PM] szybet
+About button flies away
+
+
+[8/1/2023 7:10 PM] szybet
+and nightmode
+
+
+[8/1/2023 7:10 PM] szybet
+it will be managed using platform plugin, so no sense with it being there
+
+
+[8/1/2023 7:14 PM] tux_linux
+ok
+
+
+[8/1/2023 7:14 PM] tux_linux
+well, maybe you should leave the button there
+
+
+[8/1/2023 7:15 PM] szybet
+no
+
+
+[8/1/2023 7:15 PM] tux_linux
+.
+
+
+[8/1/2023 7:15 PM] tux_linux
+how will you turn it on
+
+
+[8/1/2023 7:16 PM] szybet
+it needs an app restart
+
+
+[8/1/2023 7:16 PM] tux_linux
+sad
+
+
+[8/1/2023 7:16 PM] szybet
+for 99%
+
+
+[8/1/2023 7:16 PM] szybet
+im not sure, but propably
+
+
+[8/1/2023 7:16 PM] tux_linux
+test it?
+
+
+[8/1/2023 7:16 PM] tux_linux
+maybe it only needs a screen refresh
+
+
+[8/1/2023 7:16 PM] szybet
+i didnt added it yet lol
+
+
+[8/1/2023 7:17 PM] szybet
+maybe i will add it back
+
+
+[8/1/2023 7:17 PM] szybet
+we will see
+
+
+[8/1/2023 7:17 PM] tux_linux
+ok
+
+
+[8/1/2023 7:38 PM] szybet
+compare
+```
+            qDebug() << "Failed to open recent books database file for reading at" << recentBooksDatabase.fileName();
+
+```
+```
+            QString function = __func__; log(function + ": Failed to open recent books database file for reading at '" + recentBooksDatabase.fileName() + "'", className);
+```
+
+
+[8/1/2023 7:39 PM] tux_linux
+where are my `'`
+
+
+[8/1/2023 7:39 PM] szybet
+https://youtu.be/sg3UqQZXnBc
+
+{Embed}
+QUOTE NATION
+https://www.youtube.com/watch?v=sg3UqQZXnBc
+GONE...REDUCED TO ATOMS
+Thanos "Gone...Reduced To Atoms"
+
+Avengers: Endgame
+Opening Thanos Death Scene
+All copyright belongs to their respective owners. 
+
+Thank You For Watching!
+Please Smash The Like, Comment Down Below, and Subscribe To The Channel!
+I Love You Guys!
+- Quote Nation
+/mnt/data/projects/git/conversations/media/sddefault-FCD76.jpg
+
+
+[8/1/2023 7:40 PM] tux_linux
+no
+
+
+[8/1/2023 7:53 PM] szybet
+you can add it later
+
+
+[8/1/2023 7:54 PM] szybet
+qdebug sometimes adds such brackets
+
+
+[8/1/2023 9:59 PM] szybet
+the code that enabled me to use html format from mutool one year ago isin't needed now, they changed it...
+
+
+[8/1/2023 9:59 PM] szybet
+idk if its lucky
+
+
+[8/1/2023 9:59 PM] szybet
+i lost so much time on it
+
+
+[8/1/2023 10:00 PM] tux_linux
+Ok
+
+
+[8/1/2023 10:00 PM] tux_linux
+Good?
+
+
+[8/1/2023 10:01 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/message-97DD7.txt
+
+
+[8/1/2023 10:01 PM] szybet
+so much code
+
+
+[8/1/2023 10:01 PM] szybet
+so much wasted
+
+
+[8/1/2023 10:01 PM] szybet
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+
+{Embed}
+https://tenor.com/view/crying-emoji-dies-gif-21956120
+/mnt/data/projects/git/conversations/media/crying-emoji-dies-70A6D.png
+
+
+[8/1/2023 10:02 PM] tux_linux
+Why is this rust code
+
+
+[8/1/2023 10:02 PM] szybet
+https://tenor.com/view/lol-laughing-haha-hahahaha-haha-emoji-gif-26160340
+
+{Embed}
+https://tenor.com/view/lol-laughing-haha-hahahaha-haha-emoji-gif-26160340
+/mnt/data/projects/git/conversations/media/lol-laughing-14626.png
+
+
+[8/1/2023 10:02 PM] szybet
+ereader-dev lib
+
+
+[8/1/2023 10:03 PM] szybet
+you though i will be messing with html with cpp? heresy
+
+
+[8/1/2023 10:03 PM] szybet
+i still use it for other things so it stays
+
+
+[8/1/2023 10:07 PM] tux_linux
+Ok
+
+
+[8/1/2023 10:29 PM] szybet
+dropping support for seconds in clock
+
+
+[8/1/2023 10:29 PM] szybet
+are you insane? its eink, it will make a hole in the screen
+
+
+[8/1/2023 10:31 PM] tux_linux
+No problem
+
+
+[8/1/2023 10:46 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-E2AD5.png
+
+
+[8/1/2023 10:46 PM] szybet
+added a fiew
+
+
+[8/1/2023 10:46 PM] szybet
+fiev
+
+
+[8/1/2023 10:46 PM] szybet
+idk fief
+
+
+[8/1/2023 10:48 PM] tux_linux
+few
+
+
+[8/1/2023 10:49 PM] tux_linux
+Why don't you use enum for format
+
+
+[8/1/2023 10:49 PM] szybet
+i will save it to a file
+
+
+[8/1/2023 10:49 PM] tux_linux
+screenBrightness
+screenWarmth
+Maybe
+
+
+[8/1/2023 10:49 PM] szybet
+and saving enums is possible, but hard - also whats the point if they will be strings anyway
+
+
+[8/1/2023 10:50 PM] tux_linux
+What does loadHighlightsSlow do
+
+
+[8/1/2023 10:50 PM] szybet
+it will give the html text to the other thread and it will check for highlights + some rust magic - it will take a few seconds until they appear but it will not block showing the text in the first place
+
+
+[8/1/2023 10:57 PM] tux_linux
+Will we have to deal with missing text and cut text and scroll bars ever again
+
+
+[8/1/2023 10:58 PM] szybet
+i will post a demo today
+
+
+[8/1/2023 10:58 PM] szybet
+i plan at least
+
+
+[8/1/2023 10:58 PM] szybet
+we will see
+
+
+[8/1/2023 10:58 PM] szybet
+hehe
+
+
+[8/1/2023 10:59 PM] tux_linux
+Ok
+I hope
+
+
+[8/2/2023 9:32 AM] szybet
+reminder for me: add option to "skip empty pages"
+
+
+[8/2/2023 9:32 AM] szybet
+because mupdf and friends
+
+
+[8/2/2023 9:54 AM] szybet
+also: try to not make the qobject a child
+
+
+[8/2/2023 9:54 AM] szybet
+and thread
+
+
+[8/2/2023 10:19 AM] szybet
+they embed images in base64, awesome
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-607D6.png
+
+
+[8/2/2023 1:38 PM] szybet
+yea and: default value button
+
+
+[8/2/2023 1:39 PM] tux_linux
+?
+
+
+[8/2/2023 1:39 PM] szybet
+restore defaults
+
+
+[8/2/2023 1:47 PM] tux_linux
+is this a json file
+
+
+[8/2/2023 1:47 PM] szybet
+nope
+
+
+[8/2/2023 1:47 PM] szybet
+invidual files
+
+
+[8/2/2023 1:47 PM] szybet
+like ip
+
+
+[8/2/2023 1:47 PM] szybet
+d
+
+
+[8/2/2023 1:47 PM] szybet
+ipd
+
+
+[8/2/2023 1:47 PM] tux_linux
+why not use json
+
+
+[8/2/2023 1:48 PM] szybet
+ipd will have problems read it for screensaver
+
+
+[8/2/2023 1:48 PM] tux_linux
+what
+
+
+[8/2/2023 1:48 PM] szybet
+future
+
+
+[8/2/2023 1:48 PM] tux_linux
+what will you do with it
+
+
+[8/2/2023 1:49 PM] szybet
+for now nothing
+
+
+[8/2/2023 1:49 PM] tux_linux
+in the future then
+
+
+[8/2/2023 1:51 PM] tux_linux
+?
+
+
+[8/2/2023 1:51 PM] szybet
+ye
+
+
+[8/2/2023 1:52 PM] tux_linux
+what will you do with it in the future
+
+
+[8/2/2023 1:52 PM] szybet
+screen saver
+
+
+[8/2/2023 1:52 PM] szybet
+showing thumbnail
+
+
+[8/2/2023 1:53 PM] tux_linux
+you can't just save each setting as json and put thumbnail as a separate file in the same folder?
+
+
+[8/2/2023 1:53 PM] szybet
+no, tittle could be needed to
+
+
+[8/2/2023 1:53 PM] szybet
+just stop, i dont want json
+
+
+[8/2/2023 1:54 PM] szybet
+i can go with .ini QSettings file if you want
+
+
+[8/2/2023 1:54 PM] tux_linux
+why did you program whole user apps with json
+
+
+[8/2/2023 1:54 PM] tux_linux
+no
+
+
+[8/2/2023 1:54 PM] szybet
+its easier to make and read then json
+
+
+[8/2/2023 1:54 PM] tux_linux
+why use different things
+
+
+[8/2/2023 1:54 PM] szybet
+because i needed structured data?
+
+
+[8/2/2023 1:54 PM] szybet
+now i dont
+
+
+[8/2/2023 1:55 PM] tux_linux
+still less overhead than reading one file per setting
+
+
+[8/2/2023 1:55 PM] szybet
+ok, ini files then
+
+
+[8/2/2023 1:55 PM] szybet
+with qsetting
+
+
+[8/2/2023 1:56 PM] tux_linux
+no, lets be consistent
+
+
+[8/2/2023 1:56 PM] tux_linux
+i want to make global settings app with json too
+
+
+[8/2/2023 1:56 PM] szybet
+ok, ini files then
+
+
+[8/2/2023 1:56 PM] szybet
+what global settings again
+
+
+[8/2/2023 1:56 PM] tux_linux
+?
+
+
+[8/2/2023 1:56 PM] tux_linux
+settings app
+
+
+[8/2/2023 1:56 PM] szybet
+i do it
+
+
+[8/2/2023 1:56 PM] szybet
+oh
+
+
+[8/2/2023 1:56 PM] tux_linux
+no, i do it
+
+
+[8/2/2023 1:57 PM] szybet
+for all things?
+
+
+[8/2/2023 1:57 PM] tux_linux
+yes
+
+
+[8/2/2023 1:57 PM] tux_linux
+```
+build@inkbox ~/i/i/src (master)> rg ".config/" | wc
+    228     863   22080
+build@inkbox ~/i/i/src (master)>
+```
+it's going to be a nightmare but whatever
+
+
+[8/2/2023 1:57 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-1892A.png
+
+
+[8/2/2023 1:58 PM] szybet
+ini files
+
+
+[8/2/2023 1:58 PM] szybet
+look sanki
+
+
+[8/2/2023 1:58 PM] tux_linux
+json is good
+
+
+[8/2/2023 1:58 PM] szybet
+fuck no
+
+
+[8/2/2023 1:58 PM] tux_linux
+also settings will need structuration
+
+
+[8/2/2023 1:58 PM] szybet
+no
+
+
+[8/2/2023 1:58 PM] szybet
+ini files
+
+
+[8/2/2023 1:58 PM] szybet
+look up sanki
+
+
+[8/2/2023 1:58 PM] tux_linux
+i am not sanki
+
+
+[8/2/2023 1:58 PM] szybet
+i can save whole structure, all settings, many lists, vectors with one line
+
+
+[8/2/2023 1:59 PM] szybet
+with qsettings
+
+
+[8/2/2023 1:59 PM] szybet
+its qt native
+
+
+[8/2/2023 1:59 PM] tux_linux
+json too
+
+
+[8/2/2023 1:59 PM] szybet
+ini more
+
+
+[8/2/2023 2:00 PM] tux_linux
+no
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-4ECC6.png
+
+
+[8/2/2023 2:00 PM] szybet
+https://www.reddit.com/r/QtFramework/comments/i014yy/what_is_the_best_approach_to_save_and_restore/
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-E5F19.png
+
+{Embed}
+https://www.reddit.com/r/QtFramework/comments/i014yy/what_is_the_best_approach_to_save_and_restore/
+r/QtFramework - What is the best approach to save and restore widge...
+5 votes and 5 comments so far on Reddit
+
+
+[8/2/2023 2:00 PM] szybet
+ini file is just key=value
+
+
+[8/2/2023 2:01 PM] szybet
+perfect for us
+
+
+[8/2/2023 2:01 PM] szybet
+we dont need qjson structured readable data
+
+
+[8/2/2023 2:01 PM] szybet
+we want easy of use
+
+
+[8/2/2023 2:01 PM] szybet
+so qsettings are better
+
+
+[8/2/2023 2:01 PM] szybet
+all qt apps i ported, looked up use qsettings
+
+
+[8/2/2023 2:01 PM] tux_linux
+yea of course we don't
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-6F954.png
+
+
+[8/2/2023 2:01 PM] szybet
+json will be pain to read from ipd
+
+
+[8/2/2023 2:02 PM] szybet
+ini
+
+
+[8/2/2023 2:02 PM] szybet
+ini
+
+
+[8/2/2023 2:02 PM] szybet
+ini
+
+
+[8/2/2023 2:03 PM] szybet
+inkaudio uses ini already
+
+
+[8/2/2023 2:05 PM] szybet
+from plain cpp, easy to use too
+
+
+[8/2/2023 2:05 PM] szybet
+no libraries
+
+
+[8/2/2023 2:05 PM] tux_linux
+what will you do in ipd
+
+
+[8/2/2023 2:06 PM] szybet
+redesign it to ini too
+
+
+[8/2/2023 2:07 PM] tux_linux
+https://stackoverflow.com/a/51842082
+ok
+
+{Embed}
+https://stackoverflow.com/a/51842082
+Having hierarchical groups in ini file for QSettings
+I am using QSettings to make changes in my GUI.
+Currently I have understood how to use QSetting for basic key=value pairs.
+
+[button]
+  enable = 1
+But I want to have hierarchical groups. Something ...
+/mnt/data/projects/git/conversations/media/apple-touch-icon%402-C50E4.png
+
+
+[8/2/2023 2:08 PM] szybet
+you can do that
+
+
+[8/2/2023 2:08 PM] szybet
+but its not needed
+
+
+[8/2/2023 2:08 PM] szybet
+in json oob you have { } at start
+
+
+[8/2/2023 2:08 PM] szybet
+so ini ini ini
+
+
+[8/2/2023 2:08 PM] tux_linux
+?
+
+
+[8/2/2023 2:09 PM] szybet
+hererchical savings
+
+
+[8/2/2023 2:09 PM] tux_linux
+.
+
+
+[8/2/2023 2:09 PM] szybet
+i dont see any reason to make it a tree
+
+
+[8/2/2023 2:09 PM] szybet
+but sure if you want
+
+
+[8/2/2023 2:09 PM] szybet
+still, ini
+
+
+[8/2/2023 2:09 PM] tux_linux
+reduce confusion?
+
+
+[8/2/2023 2:09 PM] szybet
+sure
+
+
+[8/2/2023 2:09 PM] szybet
+¯\_(ツ)_/¯
+
+
+[8/2/2023 2:13 PM] szybet
+also as for settings:
+1. you can unify styles between xorg, ipd and system
+2. you could split system into many "tabs" like ipd and xorg - more touch friendly, modular, no scroll bar
+3. use sanki stylesheet for newer widgets, spinbox checkbox
+
+
+[8/2/2023 2:13 PM] tux_linux
+yea
+
+
+[8/2/2023 10:39 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/VID_20230802_223906-9010F.mp4
+
+
+[8/2/2023 10:40 PM] szybet
+Someeeething like that woth option to disable flashing
+
+
+[8/3/2023 12:56 PM] szybet
+https://github.com/arcan1s/qtadds-fontdialog/blob/master/fontdialog.h
+
+{Embed}
+https://github.com/arcan1s/qtadds-fontdialog/blob/master/fontdialog.h
+qtadds-fontdialog/fontdialog.h at master · arcan1s/qtadds-fontdialog
+Font dialog which provides a font color settings. Contribute to arcan1s/qtadds-fontdialog development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/qtadds-fontdialog-B00AD
+
+
+[8/3/2023 1:04 PM] szybet
+https://code.qt.io/cgit/qt/qtbase.git/tree/src/widgets/dialogs/qfontdialog.cpp?h=dev
+
+
+[8/3/2023 2:56 PM] tux_linux
+why is there a scrollbar at the end
+
+
+[8/3/2023 2:57 PM] szybet
+i send 3 demos
+
+
+[8/3/2023 2:57 PM] szybet
+this is the first one
+
+
+[8/3/2023 2:57 PM] tux_linux
+ok
+
+
+[8/3/2023 2:57 PM] szybet
+on matrix the last one, watch it
+
+
+[8/3/2023 2:57 PM] tux_linux
+ok
+
+
+[8/3/2023 9:04 PM] szybet
+https://github.com/yeslogic/allsorts
+https://www.princexml.com/
+
+{Embed}
+https://github.com/yeslogic/allsorts
+GitHub - yeslogic/allsorts: Font parser, shaping engine, and subset...
+Font parser, shaping engine, and subsetter implemented in Rust - GitHub - yeslogic/allsorts: Font parser, shaping engine, and subsetter implemented in Rust
+/mnt/data/projects/git/conversations/media/allsorts-8841D
+
+{Embed}
+https://www.princexml.com/
+Prince - Convert HTML to PDF with CSS
+Convert HTML documents to PDF. Beautiful printing with CSS. Support for JavaScript and SVG.
+
+
+[8/3/2023 9:24 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230803_212336-6A108.jpg
+
+
+[8/3/2023 9:26 PM] szybet
+https://doc.qt.io/qt-6/qtextimageformat.html#details
+
+{Embed}
+https://doc.qt.io/qt-6/qtextimageformat.html
+The QTextImageFormat class provides formatting information for images in a
+
+
+[8/3/2023 9:26 PM] szybet
+awesome
+
+
+[8/3/2023 9:29 PM] szybet
+https://doc.qt.io/qt-5/qimagereader.html#details
+
+
+[8/3/2023 9:29 PM] szybet
+awesome
+
+
+[8/3/2023 10:06 PM] tux_linux
+for html to pdf there is already htmldoc
+
+
+[8/3/2023 10:06 PM] tux_linux
+cf. https://github.com/Kobo-InkBox/rootfs/blob/master/usr/local/bin/generate_system_report.sh
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/master/usr/local/bin/generate_system_report.sh
+rootfs/usr/local/bin/generate_system_report.sh at master · Kobo-Ink...
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/rootfs-08054
+
+
+[8/3/2023 10:07 PM] szybet
+i was just exploring options
+
+{Reactions}
+👍 
+
+[8/4/2023 4:35 PM] szybet
+i wont be able to work on it today
+
+
+[8/4/2023 4:35 PM] szybet
+sad, i had a combo of 5 days
+
+
+[8/4/2023 4:35 PM] szybet
+you could in the meantime describe if highlights ( selecting text ) the button selector etc was hacky or solid code
+
+
+[8/4/2023 4:48 PM] tux_linux
+what?
+
+
+[8/4/2023 4:48 PM] tux_linux
+solid code
+
+
+[8/4/2023 4:50 PM] tux_linux
+https://github.com/Kobo-InkBox/inkbox/blob/02543229fe85ecdafa9c2440311532a477cc1ac3/src/reader/reader.cpp#L1682-L1740
+
+{Embed}
+https://github.com/Kobo-InkBox/inkbox/blob/02543229fe85ecdafa9c2440311532a477cc1ac3/src/reader/reader.cpp
+inkbox/src/reader/reader.cpp at 02543229fe85ecdafa9c2440311532a477c...
+An open-source, Qt-based eBook reader for Kobos (and other devices). - Kobo-InkBox/inkbox
+/mnt/data/projects/git/conversations/media/inkbox-F9015
+
+
+[8/4/2023 4:51 PM] tux_linux
+it only sometimes overflows the screen when the selection end is too close to it
+user can usually still manage to click the button to highlight it
+
+
+[8/4/2023 5:30 PM] szybet
+Explain further
+
+
+[8/5/2023 6:16 PM] szybet
+```
+[General]
+main="@Variant(\0\0\0\x7f\0\0\0!global::toreader::toreaderConfig\0\0\0\0\x1\0\0\0\0\0\0\0&\0S\0o\0u\0r\0\x63\0\x65\0 \0S\0\x65\0r\0i\0\x66\0 \0P\0r\0o\0,\0 \0\x39@(\0\0\0\0\0\0\xff\xff\xff\xff\x5\x1\0\x32\x10\0\0\0\t\0\0\0\x1\0\0\0\x4\0\0\0\t\0\0\0\t\0\0\0\t\0\0\0\t\0\0\0\0\0\0\0(\0\0\0(\0\0\x1\x18\0\0\x1\x18\x1\0\xff\xff\xff\xff\xff\xff\xff\xff\0\0\0\0\x3\x1\x1\x1\x1)"
+```
+
+
+[8/5/2023 6:16 PM] szybet
+this is how the file looks like
+
+
+[8/5/2023 6:16 PM] szybet
+this is a few lines of code to save an entire struct
+
+
+[8/5/2023 6:16 PM] szybet
+we could make it key:value
+
+
+[8/5/2023 6:17 PM] szybet
+but a lot code for what? we can just export this data thats needed
+
+
+[8/5/2023 6:18 PM] tux_linux
+can't it be compressed?
+
+
+[8/5/2023 6:18 PM] tux_linux
+qcompress
+
+
+[8/5/2023 6:18 PM] tux_linux
+i already use it for library
+
+
+[8/5/2023 6:18 PM] szybet
+fsadjlkfgbnsedakhjgnhbwsedkujfgnbsdkjh stop
+
+
+[8/5/2023 6:18 PM] tux_linux
+well if not too much data then not needed
+
+
+[8/5/2023 6:18 PM] tux_linux
+depends what goes in it
+
+
+[8/5/2023 6:19 PM] szybet
+you will save 2 Bytes of space for 300 ms of loading the the compress things
+
+
+[8/5/2023 8:18 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-BB573.png
+
+
+[8/5/2023 8:19 PM] szybet
+@tux-linux do you have time ( now ) to make the gui options UI
+
+
+[8/5/2023 8:19 PM] szybet
+in the reader
+
+
+[8/5/2023 8:19 PM] szybet
+because it's hard for me to figure out something normal
+
+
+[8/5/2023 8:20 PM] tux_linux
+There isn't a menu on the top of the screen like before? What does it look like when you read a book now
+
+
+[8/5/2023 8:20 PM] szybet
+what are you talking about
+
+
+[8/5/2023 8:20 PM] tux_linux
+Also will you implement page turn by swiping or not
+
+
+[8/5/2023 8:20 PM] tux_linux
+You deleted the old options panel?
+
+
+[8/5/2023 8:21 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-A47B4.png
+
+
+[8/5/2023 8:21 PM] szybet
+clicking
+
+
+[8/5/2023 8:21 PM] szybet
+swiping is stupid
+
+
+[8/5/2023 8:21 PM] szybet
+ugh... can i drop that?
+
+
+[8/5/2023 8:21 PM] tux_linux
+Well, no
+
+
+[8/5/2023 8:22 PM] tux_linux
+Clicking where
+
+
+[8/5/2023 8:22 PM] szybet
+right left side of the screen
+
+
+[8/5/2023 8:22 PM] tux_linux
+Ok so no more buttons at all on the bottom
+
+
+[8/5/2023 8:22 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-53D76.png
+
+
+[8/5/2023 8:23 PM] tux_linux
+Hmm ok
+
+
+[8/5/2023 8:23 PM] szybet
+i really do hate saying things again and again and again  and again  and again
+
+
+[8/5/2023 8:23 PM] szybet
+well yes or no
+
+
+[8/5/2023 8:23 PM] tux_linux
+I can't read everything
+
+
+[8/5/2023 8:23 PM] szybet
+well you should then
+
+
+[8/5/2023 8:24 PM] tux_linux
+Well even if I see it it doesn't mean that I register it
+
+
+[8/5/2023 8:24 PM] szybet
+just like gcc compiler lol
+
+
+[8/5/2023 8:24 PM] tux_linux
+If I take your branch it will work oob or not?
+
+
+[8/5/2023 8:24 PM] szybet
+it should?
+
+
+[8/5/2023 8:24 PM] szybet
+i just want the ui file
+
+
+[8/5/2023 8:25 PM] szybet
+i didnt pushed changes
+
+
+[8/5/2023 8:25 PM] szybet
+so maybe answer me finally, then i will
+
+
+[8/5/2023 8:25 PM] tux_linux
+It's more complicated probably
+
+
+[8/5/2023 8:25 PM] szybet
+yes i know, i just want the design
+
+
+[8/5/2023 8:26 PM] tux_linux
+Can you push them
+I have to implement a way of showing it too
+
+
+[8/5/2023 8:26 PM] szybet
+no
+
+
+[8/5/2023 8:26 PM] szybet
+you only design them
+
+
+[8/5/2023 8:26 PM] szybet
+i do the rest
+
+
+[8/5/2023 8:26 PM] tux_linux
+I can probably provide a prototype by 12am in your time
+
+
+[8/5/2023 8:27 PM] szybet
+nah then not
+
+
+[8/5/2023 8:27 PM] szybet
+i will figure it out by myself
+
+
+[8/5/2023 8:27 PM] tux_linux
+Font dialog implies size
+
+
+[8/5/2023 8:27 PM] tux_linux
+I said by 12am
+I will try to start it when I get home
+15m
+
+
+[8/5/2023 8:28 PM] szybet
+its still 4 hours?
+
+
+[8/5/2023 8:28 PM] tux_linux
+Probably 1h
+
+
+[8/5/2023 8:28 PM] szybet
+i will not wait anyway
+
+
+[8/5/2023 8:28 PM] szybet
+will draft a prototype then
+
+
+[8/5/2023 8:28 PM] tux_linux
+Then what's the point of asking
+
+
+[8/5/2023 8:28 PM] szybet
+you can adjust it later
+
+
+[8/5/2023 8:28 PM] szybet
+i asked "now"
+
+
+[8/5/2023 8:28 PM] tux_linux
+If I said 20m you would still not wait
+
+
+[8/5/2023 8:28 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-0D42A.png
+
+
+[8/5/2023 8:29 PM] szybet
+yes, 15 would be good
+
+
+[8/5/2023 8:29 PM] tux_linux
+I can't do it in 0s
+
+
+[8/5/2023 8:29 PM] szybet
+welp i just thought in 15 m
+
+
+[8/5/2023 8:29 PM] szybet
+whatever then, nevermind
+
+
+[8/5/2023 8:29 PM] tux_linux
+Brightness is managed by brightnessDialog
+
+
+[8/5/2023 8:29 PM] tux_linux
+I get home and start it
+
+
+[8/5/2023 8:29 PM] szybet
+no, i said nevermind
+
+
+[8/5/2023 8:30 PM] szybet
+do settings then
+
+
+[8/5/2023 8:30 PM] szybet
+well okay
+
+
+[8/5/2023 8:30 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-9C567.png
+
+
+[8/5/2023 8:30 PM] tux_linux
+Why does buttonsEnabled has to go in reader
+
+
+[8/5/2023 8:30 PM] tux_linux
+It will be in settings
+
+
+[8/5/2023 8:31 PM] tux_linux
+Why would user want to change this while he is reading a book
+
+
+[8/5/2023 8:31 PM] szybet
+well fair point
+
+
+[8/5/2023 8:31 PM] szybet
+i just thought that he would want to check it out in the reader
+
+
+[8/5/2023 8:31 PM] szybet
+not needed to jump arround
+
+
+[8/5/2023 8:31 PM] szybet
+your logic is better
+
+{Reactions}
+👍 
+
+[8/5/2023 8:32 PM] tux_linux
+Well, ok for sliders
+But in brightnessDialog
+Keep it at one place
+
+
+[8/5/2023 8:32 PM] tux_linux
+Also try to pull upstream before it becomes a mess
+
+
+[8/5/2023 8:32 PM] szybet
+yea sure
+
+
+[8/5/2023 8:32 PM] tux_linux
+If not done
+
+
+[8/5/2023 8:32 PM] szybet
+i did that a week ago
+
+
+[8/5/2023 8:32 PM] tux_linux
+It should be fine I think
+When was last commit
+
+
+[8/5/2023 8:33 PM] tux_linux
+Anyway
+
+
+[8/5/2023 8:33 PM] szybet
+it wasnt fine
+
+
+[8/5/2023 8:33 PM] tux_linux
+Welp
+
+
+[8/5/2023 8:33 PM] tux_linux
+Then merge
+
+
+[8/5/2023 8:33 PM] szybet
+i also merged
+
+
+[8/5/2023 8:33 PM] tux_linux
+Ouch
+
+
+[8/5/2023 8:34 PM] szybet
+you cant pull without merge
+
+
+[8/5/2023 8:34 PM] szybet
+whats the point
+
+
+[8/5/2023 8:34 PM] tux_linux
+Fast forward?
+
+
+[8/5/2023 8:34 PM] szybet
+the project would have conflicts
+
+
+[8/5/2023 8:34 PM] szybet
+😂
+
+
+[8/5/2023 8:34 PM] szybet
+like it worked
+
+
+[8/5/2023 8:34 PM] tux_linux
+I do it sometimes
+
+
+[8/5/2023 8:34 PM] tux_linux
+It works
+
+
+[8/5/2023 8:35 PM] tux_linux
+Probably not in cases where files you modified are also in last commits though
+
+
+[8/5/2023 11:20 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-771EF.png
+
+
+[8/5/2023 11:21 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/IMG_20230805_232055-DF1AF.jpg
+
+
+[8/5/2023 11:21 PM] szybet
+what the f&ck
+
+
+[8/5/2023 11:21 PM] szybet
+@tux-linux
+
+
+[8/5/2023 11:24 PM] tux_linux
+```
+ui->button->setFont(QFont("u001"));
+ui->button->setProperty("type", "borderless");
+ui->button->setText("");
+ui->button->setIcon(QIcon(":/resources/icon.png");
+```
+
+
+[8/5/2023 11:25 PM] szybet
+yea, and what?
+
+
+[8/5/2023 11:25 PM] szybet
+order is important?
+
+
+[8/5/2023 11:25 PM] szybet
+also no font when no text
+
+
+[8/5/2023 11:26 PM] tux_linux
+true, anyway
+
+
+[8/5/2023 11:26 PM] tux_linux
+order is probably not important
+in this case
+
+
+[8/5/2023 11:30 PM] szybet
+so what
+
+
+[8/5/2023 11:30 PM] szybet
+this makes no sense
+
+
+[8/5/2023 11:32 PM] tux_linux
+type borderless makes sense
+
+
+[8/5/2023 11:32 PM] szybet
+it doesnt
+
+
+[8/5/2023 11:32 PM] szybet
+work
+
+
+[8/6/2023 1:11 AM] tux_linux
+show it
+
+
+[8/6/2023 1:11 AM] szybet
+show what
+
+
+[8/6/2023 1:12 AM] tux_linux
+screenshot
+
+
+[8/6/2023 1:12 AM] tux_linux
+it should work
+
+
+[8/6/2023 1:12 AM] szybet
+are you serious
+
+
+[8/6/2023 1:12 AM] tux_linux
+did you try it
+
+
+[8/6/2023 1:13 AM] szybet
+its your code
+
+
+[8/6/2023 1:13 AM] szybet
+i coppied it
+
+
+[8/6/2023 1:13 AM] szybet
+IT WORKS FOR HALF THE BUTTONS
+
+
+[8/6/2023 1:13 AM] tux_linux
+show
+
+
+[8/6/2023 1:13 AM] tux_linux
+its the same thing?
+
+
+[8/6/2023 1:13 AM] szybet
+yes?
+
+
+[8/6/2023 1:16 AM] tux_linux
+did you push the code? can i see it?
+
+
+[8/6/2023 1:16 AM] tux_linux
+or you didnt change it
+
+
+[8/6/2023 1:17 AM] szybet
+i will push it
+
+
+[8/6/2023 1:17 AM] szybet
+tldr you do the GUI
+
+
+[8/6/2023 1:17 AM] szybet
+or i will do it at the very end
+
+
+[8/6/2023 1:17 AM] tux_linux
+ok
+
+
+[8/6/2023 1:18 AM] szybet
+if you want to commit to my branch then dont change anything other the ui thing - and dont change ui names
+
+
+[8/6/2023 1:19 AM] szybet
+and dont repair things you dont like - you will do it later
+
+
+[8/6/2023 1:19 AM] szybet
+otherwise i will discard your commit
+
+
+[8/6/2023 1:19 AM] tux_linux
+i will have to change other things than ui file
+
+
+[8/6/2023 1:19 AM] tux_linux
+just to make buttons look normal
+
+
+[8/6/2023 1:19 AM] szybet
+there are a few ui functions specifically
+
+
+[8/6/2023 1:19 AM] szybet
+i dont expect you to touch anything else
+
+
+[8/6/2023 1:19 AM] szybet
+i pushed the latest changes
+
+
+[8/6/2023 1:20 AM] tux_linux
+well, i will probably implement the code for launching brightness dialog and quit window
+not really much otherwise
+
+
+[8/6/2023 1:20 AM] tux_linux
+ok thanks
+
+
+[8/6/2023 1:20 AM] szybet
+well whatever
+
+
+[8/6/2023 7:09 PM] szybet
+`Index of start is: 1036`
+
+
+[8/6/2023 7:09 PM] szybet
+i have no idea hwo to manage many occurences of identical text
+
+
+[8/6/2023 7:09 PM] szybet
+very unlikely, but still
+
+
+[8/6/2023 7:10 PM] tux_linux
+what?
+
+
+[8/6/2023 7:10 PM] szybet
+we do not support repeating texts in poems lol
+
+
+[8/6/2023 7:10 PM] tux_linux
+in the same page?
+
+
+[8/6/2023 7:10 PM] szybet
+ye
+
+
+[8/6/2023 7:11 PM] tux_linux
+give an example please
+
+
+[8/6/2023 7:11 PM] szybet
+```
+this is a poem
+it's a stupid poem
+does it freeze in the middle?
+it's a stupid poem
+it's a stupid poem
+it's a stupid poem
+No it doesn't
+end of the journey
+```
+
+
+[8/6/2023 7:12 PM] szybet
+you select the first `it's a stupid poem`
+
+
+[8/6/2023 7:12 PM] szybet
+and all of them will be highlighted
+
+
+[8/6/2023 7:12 PM] szybet
+propably not because html formatting
+
+
+[8/6/2023 7:12 PM] szybet
+but `still` it could be an issue sometimes
+
+
+[8/6/2023 7:13 PM] tux_linux
+why would they all be highlighted?
+
+
+[8/6/2023 7:13 PM] szybet
+how can i know in code which one was highlighted?
+
+
+[8/6/2023 7:13 PM] szybet
+even qt doesnt know that
+even qt with replace() would do it but thats another topic
+
+
+[8/6/2023 7:13 PM] tux_linux
+no, replace will probably mess formatting
+
+
+[8/6/2023 7:14 PM] szybet
+just an example
+
+
+[8/6/2023 7:14 PM] tux_linux
+can you give an html example of a page
+
+
+[8/6/2023 7:14 PM] szybet
+```html
+<html>
+this is a poem<br>
+it's a stupid poem<br>
+does it freeze in the middle?<br>
+it's a stupid poem<br>
+it's a stupid poem<br>
+it's a stupid poem<br>
+No it doesn't<br>
+end of the journey<br>
+</html>
+```
+
+
+[8/6/2023 7:14 PM] szybet
+lol
+
+
+[8/6/2023 7:14 PM] tux_linux
+no, mupdf example
+
+
+[8/6/2023 7:14 PM] tux_linux
+its different
+
+
+[8/6/2023 7:14 PM] szybet
+i dont have one
+
+
+[8/6/2023 7:15 PM] tux_linux
+then how can you be programming this
+
+
+[8/6/2023 7:15 PM] szybet
+it would be diffrent, html formatting would differ so this issue would not accour
+
+in 99.9% of times
+
+
+[8/6/2023 7:15 PM] tux_linux
+diff e rent
+occur
+
+
+[8/6/2023 7:15 PM] szybet
+i dont have one with an example of duplicates
+
+
+[8/6/2023 7:15 PM] tux_linux
+well, does this one still look like what you are getting now? https://github.com/Szybet/libreader-rs/blob/main/example.html
+
+{Embed}
+https://github.com/Szybet/libreader-rs/blob/main/example.html
+libreader-rs/example.html at main · Szybet/libreader-rs
+Library in rust for inkbox binary. Contribute to Szybet/libreader-rs development by creating an account on GitHub.
+/mnt/data/projects/git/conversations/media/libreader-rs-C0EEB
+
+
+[8/6/2023 7:16 PM] szybet
+yes
+
+
+[8/6/2023 7:16 PM] tux_linux
+ok
+
+
+[8/6/2023 7:16 PM] szybet
+thats not the point im trying to make
+
+
+[8/6/2023 7:16 PM] tux_linux
+what point are you trying to make
+
+
+[8/6/2023 7:17 PM] szybet
+.
+
+
+[8/6/2023 7:17 PM] tux_linux
+are spans removed by your rust lib or no
+
+
+[8/6/2023 7:17 PM] szybet
+no
+
+
+[8/6/2023 7:17 PM] szybet
+they are not
+
+
+[8/6/2023 7:18 PM] tux_linux
+do you get the full html book then read parts of it to display pages?
+
+
+[8/6/2023 7:18 PM] szybet
+nope
+
+
+[8/6/2023 7:18 PM] szybet
+i load only whats needed
+
+
+[8/6/2023 7:18 PM] szybet
+thats the point... XD
+
+
+[8/6/2023 7:18 PM] tux_linux
+ok, what if you change the font size
+
+
+[8/6/2023 7:18 PM] szybet
+css style will change
+
+
+[8/6/2023 7:18 PM] tux_linux
+do you resize page size too or not
+
+
+[8/6/2023 7:19 PM] szybet
+via calibration?
+
+
+[8/6/2023 7:19 PM] tux_linux
+yes
+
+
+[8/6/2023 7:19 PM] szybet
+yes?
+
+
+[8/6/2023 7:19 PM] tux_linux
+then why is this page number still valid
+
+
+[8/6/2023 7:19 PM] szybet
+oh i see for what you are going
+
+
+[8/6/2023 7:19 PM] szybet
+its not. i said nothing about page number
+
+
+[8/6/2023 7:19 PM] tux_linux
+well, just an edge case, what if you are on page 899 out of 902, you reduce font size
+segfault
+
+
+[8/6/2023 7:20 PM] szybet
+this will complicate things but still achievable
+
+
+[8/6/2023 7:20 PM] tux_linux
+what are you thinking about
+
+
+[8/6/2023 7:21 PM] szybet
+i cannot save html, i will need to do those calculations all the time
+
+
+[8/6/2023 7:21 PM] szybet
+oh god it complicates things
+
+
+[8/6/2023 7:21 PM] tux_linux
+what were you doing
+
+
+[8/6/2023 7:21 PM] tux_linux
+what does save html mean
+
+
+[8/6/2023 7:22 PM] szybet
+finding plain text in html code
+
+
+[8/6/2023 7:22 PM] szybet
+saving html code
+
+
+[8/6/2023 7:22 PM] tux_linux
+ouch
+
+
+[8/6/2023 7:22 PM] tux_linux
+so half is cut somewhere
+
+
+[8/6/2023 7:23 PM] tux_linux
+can we afford to duplicate books?
+
+
+[8/6/2023 7:23 PM] tux_linux
+no nvm
+
+
+[8/6/2023 7:23 PM] tux_linux
+well, even my system didn't support that
+
+
+[8/6/2023 7:23 PM] tux_linux
+each highlight would need a specific id with start and end tags
+
+
+[8/6/2023 7:23 PM] tux_linux
+its impossible
+
+
+[8/6/2023 7:24 PM] szybet
+maybe editing the epubs directly
+
+
+[8/6/2023 7:24 PM] tux_linux
+bad
+
+
+[8/6/2023 7:24 PM] tux_linux
+also, you have to compress it afterwards
+
+
+[8/6/2023 7:25 PM] tux_linux
+there are unwanted margins between menus and text browser there
+
+
+[8/6/2023 7:25 PM] tux_linux
+random find
+
+
+[8/6/2023 7:25 PM] szybet
+fixed already
+
+
+[8/6/2023 7:25 PM] tux_linux
+ok
+
+
+[8/6/2023 7:26 PM] tux_linux
+we would need chatgpt ai in ereader
+
+
+[8/6/2023 7:26 PM] tux_linux
+maybe we could train a small ai to do only that
+probably too much for the hw anyway
+
+
+[8/6/2023 7:27 PM] szybet
+i already figured that
+
+
+[8/6/2023 7:27 PM] tux_linux
+well, it also needs to be online all the time
+so, bad
+
+
+[8/6/2023 7:27 PM] tux_linux
+also, its not open source
+
+
+[8/6/2023 7:28 PM] szybet
+for duplication there is no answer
+
+for highlights - if the page reflows,  and half the text is cutted off, i will try to show it on the next page
+
+
+[8/6/2023 7:28 PM] szybet
+for sure i will show the half
+
+
+[8/6/2023 7:28 PM] szybet
+that im sure
+
+
+[8/6/2023 7:29 PM] tux_linux
+how will you show the half
+
+
+[8/6/2023 7:29 PM] tux_linux
+if text is not reflowed
+
+
+[8/6/2023 7:29 PM] tux_linux
+if its just opened like that
+
+
+[8/6/2023 7:29 PM] tux_linux
+how can you know
+
+
+[8/6/2023 7:29 PM] szybet
+what?
+
+
+[8/6/2023 7:30 PM] tux_linux
+you open the book on page 1. there is a highlight saying 'random hi'. 'random' is on page 1, 'hi' is on page 2. how can you know you have to highlight 'random'?
+
+
+[8/6/2023 7:31 PM] szybet
+if i have such highligt, and the rest cutted off at the end of the html page, i can detect that
+
+
+[8/6/2023 7:31 PM] tux_linux
+how
+
+
+[8/6/2023 7:31 PM] tux_linux
+you just opened the book. the only highlight reference is in Highlights.db
+
+
+[8/6/2023 7:31 PM] tux_linux
+you don't know what is on page 2
+
+
+[8/6/2023 7:34 PM] tux_linux
+maybe a solution would be to load 3 pages at a time, previous (except if you are at first page), current and next, virtually merge them in one string, then if it detects there is the highlight scattered in two pages, it highlights it on the current page.
+
+
+[8/6/2023 7:34 PM] tux_linux
+also it will have to go through a lot of html tags to find the missing part of the highlight
+
+
+[8/6/2023 7:35 PM] tux_linux
+and if highlight somehow spans over more than 3 pages, reader is probably a bit crazy and we don't care about it
+
+
+[8/6/2023 7:37 PM] szybet
+sounds like performance issues with extra steps
+
+
+[8/6/2023 7:37 PM] tux_linux
+you load 3 pages at a time instead of one
+
+
+[8/6/2023 7:37 PM] szybet
+and i dont care?
+
+
+[8/6/2023 7:37 PM] tux_linux
+how much time does loading one page take
+
+
+[8/6/2023 7:37 PM] tux_linux
+well, yes, how can you know you have to highlight it otherwise
+
+
+[8/6/2023 7:38 PM] szybet
+i just will
+
+
+[8/6/2023 7:38 PM] tux_linux
+how
+
+
+[8/6/2023 7:38 PM] tux_linux
+like
+
+
+[8/6/2023 7:38 PM] szybet
+if your page ends with `random` and the other one too then im sorry about that lol
+
+
+[8/6/2023 7:38 PM] tux_linux
+if the page ends with r
+
+
+[8/6/2023 7:38 PM] tux_linux
+you highlight it too?
+
+
+[8/6/2023 7:39 PM] tux_linux
+or it ends with `ran`
+
+
+[8/6/2023 7:39 PM] szybet
+mupdf doesnt cut off characters in words
+
+
+[8/6/2023 7:39 PM] tux_linux
+well, let's say `ran`
+
+
+[8/6/2023 7:39 PM] szybet
+only spaces between words
+
+
+[8/6/2023 7:39 PM] szybet
+mupdf doesnt give me half words
+
+
+[8/6/2023 7:39 PM] tux_linux
+ran is a word
+
+
+[8/6/2023 7:39 PM] tux_linux
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-B0F27.png
+
+
+[8/6/2023 7:40 PM] szybet
+i dont care
+
+
+[8/6/2023 7:40 PM] szybet
+i look for a whole word random
+
+
+[8/6/2023 7:40 PM] szybet
+you can select half words
+
+
+[8/6/2023 7:40 PM] tux_linux
+it makes no sense
+
+
+[8/6/2023 7:40 PM] szybet
+i will force the user to highlight whole words, you can highlight ran in random
+
+
+[8/6/2023 7:40 PM] szybet
+just whole random
+
+
+[8/6/2023 7:41 PM] tux_linux
+if your highlight something and it starts with `I`, you will highlight it in every page that finishes with `I`?
+
+
+[8/6/2023 7:42 PM] szybet
+yes
+
+
+[8/6/2023 7:42 PM] tux_linux
+seriously
+
+
+[8/6/2023 7:42 PM] tux_linux
+.
+
+
+[8/6/2023 7:42 PM] szybet
+stop, loading pages not so much, working on a lot of memory does
+
+
+[8/6/2023 7:42 PM] szybet
+any better solution?
+
+
+[8/6/2023 7:43 PM] tux_linux
+what on memory
+
+
+[8/6/2023 7:43 PM] tux_linux
+.
+
+
+[8/6/2023 7:43 PM] szybet
+i could maybe look up  the next page only
+
+
+[8/6/2023 7:43 PM] tux_linux
+it's literally probably only 30kb more
+
+
+[8/6/2023 7:43 PM] szybet
+without merging and anything, just check if the page starts with that word
+
+
+[8/6/2023 7:43 PM] tux_linux
+what happens when user goes back
+
+
+[8/6/2023 7:44 PM] szybet
+what problem do you see
+
+
+[8/6/2023 7:44 PM] tux_linux
+well, yes, it could work
+
+
+[8/6/2023 7:45 PM] tux_linux
+page contains part of highlight called "hi", because you told reader to highlight it since highlight started on previous page.
+user clicks on next button. he then realises he hasn't understand the last page correctly. he goes back. "hi" isn't highlighted anymore.
+
+
+[8/6/2023 7:45 PM] szybet
+why isint it?...
+
+
+[8/6/2023 7:45 PM] tux_linux
+think
+
+
+[8/6/2023 7:46 PM] tux_linux
+you don't check for the previous page
+
+
+[8/6/2023 7:46 PM] tux_linux
+you only move forward
+
+
+[8/6/2023 7:46 PM] tux_linux
+and you reset what has to be highlighted every page turn
+
+
+[8/6/2023 7:46 PM] tux_linux
+so it can't know what to do when you go back
+
+
+[8/6/2023 7:47 PM] tux_linux
+since you only check for the next page
+
+
+[8/6/2023 7:47 PM] szybet
+in your logic, how was hi higlighted in the first place?...
+
+
+[8/6/2023 7:50 PM] tux_linux
+when was user on page 0, it contained start of highlight that said 'random hi'. random was on page 0, hi was on page 1.
+user clicks next button. text changes and hi is highlighted because you checked page 1 while on page 0 to see if highlight was continuing there.
+you continue, you are now on page 2. there is nothing to highlight there. you decide to go back to page 1. nothing is highlighted because you didn't check page 0
+
+
+[8/6/2023 7:52 PM] szybet
+cant you just say that if you jump arround pages the first words wont be highlighted because the previous page was never loaded?
+
+yes i do understand the problem now
+
+the solution is to check for highliths the second time, but this time reading backwards :D
+
+
+[8/6/2023 7:52 PM] tux_linux
+well, then check 3 pages, yes
+
+
+[8/6/2023 7:52 PM] tux_linux
+it has to be implemented with go to page too
+
+
+[8/6/2023 7:53 PM] szybet
+i treat every page change as go to page without dependiecies from where it came from
+
+
+[8/6/2023 7:53 PM] tux_linux
+also please ensure that highlighting doesn't mess up formatting, i had a nightmare with that last year
+
+
+[8/6/2023 7:53 PM] tux_linux
+good
+
+
+[8/6/2023 7:55 PM] szybet
+you could at least dont ignore me and post to distrowatch
+
+
+[8/6/2023 7:55 PM] tux_linux
+you really have hope?
+
+
+[8/6/2023 7:55 PM] szybet
+you dont need hope to try>?
+
+
+[8/6/2023 7:56 PM] tux_linux
+we wrote to two youtubers and pinenote project already
+
+
+[8/6/2023 7:56 PM] szybet
+fuck youtubers
+
+
+[8/6/2023 7:56 PM] szybet
+pinenote well thats how the company works
+
+
+[8/6/2023 8:01 PM] szybet
+```
+The waiting list gives a new project time to mature. Given that a large number of newly created distributions don't survive beyond the first year of their existence, it gives the new project time to set up a proper infrastructure, including forums, mailing lists, documentation, bug tracking databases, etc. This normally takes some time, but once the project shows the commitment to putting these in place, their chances of listing on DistroWatch will increase exponentially. Nevertheless, be prepared for a year-long wait. 
+```
+
+
+[8/6/2023 8:02 PM] szybet
+well nevermind then
+
+
+[8/6/2023 8:02 PM] szybet
+```
+ There are exceptions. For example, we usually do not include coverage for embedded distributions or very niche specialist distributions as they can be difficult to track and/or test without special hardware. ```
+
+
+[8/6/2023 8:02 PM] szybet
+freaking lol
+
+
+[8/6/2023 8:14 PM] tux_linux
+how will you save highlights to database
+
+
+[8/6/2023 8:14 PM] tux_linux
+in plain text or html fragments
+
+
+[8/6/2023 8:15 PM] szybet
+plai
+
+
+[8/6/2023 8:15 PM] szybet
+n
+
+
+[8/6/2023 8:15 PM] tux_linux
+ok, then you have a problem
+
+
+[8/6/2023 8:15 PM] szybet
+?
+
+
+[8/6/2023 8:15 PM] tux_linux
+1. text is `<i>hi <b>there</b></i>`
+2. user highlights `hi there`
+3. how can you find it back
+
+
+[8/6/2023 8:16 PM] szybet
+//pub fn find_original(originalCode: &mut String, )
+
+// Finds plain text in html code even if there are tags between it, and outputs the text in the html code that contains those tags
+pub fn find_text_in_html_code(plain_text: String, html_code: String) -> String {
+    let mut text = convert_plain_to_html(plain_text);
+    let mut start: usize = 0;
+    let mut end: usize;
+    let mut list_start: Vec<usize> = Vec::new();
+    let mut list_latest: Vec<usize> = Vec::new();
+    let mut conflict: bool = false;
+    // Looking for start
+    for word in text.split("&#x20;") {
+        // HTML space
+        //println!("the word: {}", word);
+        let index: Vec<(usize, &str)> = html_code.match_indices(word).collect();
+        if index.len() > 1 {
+            for num in index {
+                if conflict == false {
+                    list_start.push(num.0);
+                } else {
+                    list_latest.push(num.0);
+                }
+            }
+            conflict = true;
+        } else {
+            if conflict == false {
+                start = index.first().unwrap().0;
+            } else {
+                // The nearest in start? to the left
+                let final_index = index.first().unwrap().0;
+                let mut smallest_diffrence = 99999;
+                for position in list_start.clone() {
+                    let calc = final_index - position;
+                    if calc < smallest_diffrence {
+                        smallest_diffrence = calc;
+                    }
+                }
+                start = smallest_diffrence;
+            }
+            conflict = false;
+            break;
+        }
+    }
+    if conflict == true {
+        println!("There are many duplicate texts...");
+        start = list_start.first().unwrap().clone();
+        conflict = false;
+    }
+    println!("Index of start is: {}", start);
+
+
+[8/6/2023 8:16 PM] szybet
+like that
+
+
+[8/6/2023 8:16 PM] szybet
+i already talked about it
+
+
+[8/6/2023 8:16 PM] tux_linux
+how can you highlight it back after
+
+
+[8/6/2023 8:16 PM] tux_linux
+finding it is only one thing
+
+
+[8/6/2023 8:16 PM] szybet
+?
+
+
+[8/6/2023 8:17 PM] szybet
+easy jumping arroound and detecting html code
+
+
+[8/6/2023 8:17 PM] tux_linux
+this returns position of the highlight?
+
+
+[8/6/2023 8:17 PM] tux_linux
+around
+
+
+[8/6/2023 8:18 PM] szybet
+yes
+
+
+[8/6/2023 8:18 PM] tux_linux
+d i f f e r e n c e
+
+
+[8/6/2023 8:19 PM] szybet
+hah...
+
+
+[8/6/2023 8:21 PM] tux_linux
+does it return end too
+
+
+[8/6/2023 8:21 PM] szybet
+when i will do it, yes
+
+
+[8/6/2023 8:21 PM] tux_linux
+ok, it returns start and end in html page that is shown on the text browser?
+
+
+[8/6/2023 8:21 PM] tux_linux
+also note that mupdf html != text browser html
+
+
+[8/6/2023 8:21 PM] szybet
+yes
+
+
+[8/6/2023 8:22 PM] tux_linux
+ok
+
+
+[8/6/2023 8:22 PM] tux_linux
+good
+
+
+[8/7/2023 11:56 PM] szybet
+```
+thread 'test_highlight_html_code' panicked at 'assertion failed: self.is_char_boundary(idx)', /rustc/84c898d65adf2f39a5a98507f1fe0ce10a2b8dbc/library/alloc/src/string.rs:1579:9
+```
+
+
+[8/7/2023 11:57 PM] szybet
+https://tenor.com/view/star-wars-kylo-ren-traitor-betrayer-betrayed-gif-25293273
+
+{Embed}
+https://tenor.com/view/star-wars-kylo-ren-traitor-betrayer-betrayed-gif-25293273
+/mnt/data/projects/git/conversations/media/star-wars-kylo-ren-5859F.png
+
+
+[8/7/2023 11:58 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-196EC.png
+
+
+[8/7/2023 11:58 PM] szybet
+no idea
+
+
+[8/9/2023 5:19 PM] tux_linux
+did you find why it was crashing
+
+
+[8/9/2023 5:39 PM] szybet
+Ye
+
+
+[8/9/2023 5:40 PM] tux_linux
+good
+
+
+[8/10/2023 12:23 AM] szybet
+Rust string handling at low level is bad
+
+
+[8/10/2023 12:23 AM] szybet
+They went too ambitious
+
+
+[8/10/2023 12:24 AM] szybet
+Or just are stupid, hard to tell
+
+
+[8/10/2023 12:24 AM] szybet
+Tldr i need to rewrite most basic functions
+
+
+[8/10/2023 12:24 AM] szybet
+Like find, insert
+
+
+[8/10/2023 4:08 AM] kuratius
+from my experience with std it's cause they're stupid
+getting a string from user input is absurdly complicated and doesnt have good examples, I searched forever until I found a working one when I did a damage calc in rust
+
+max/min functions don't work on floats
+etc etc
+all of these are problems go's std doesnt have
+
+so I think rust devs are just stupid
+
+
+[8/10/2023 7:57 AM] szybet
+well but your issues are not real
+
+
+[8/10/2023 7:58 AM] szybet
+https://tenor.com/view/annoyed-disappointed-mad-upset-gif-26051038
+
+{Embed}
+https://tenor.com/view/annoyed-disappointed-mad-upset-gif-26051038
+/mnt/data/projects/git/conversations/media/annoyed-disappointed-AA8BF.png
+
+
+[8/10/2023 7:59 AM] kuratius
+try std::cmp::max 
+It's cause they use an oudated floating point standard from a decade ago
+
+
+[8/10/2023 8:00 AM] kuratius
+the standard lib just isn't good, is what I'm saying, and they dont seem to want to fix it
+
+
+[8/10/2023 8:01 AM] kuratius
+eventually you'll end up with 1000 dependency crates like most rust projects, or you implement a lot yourself
+
+
+[8/10/2023 8:01 AM] szybet
+https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=d76a86e9f5530fa76526076a8ef5a50f
+
+{Embed}
+https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=d76a86e9f5530fa76526076a8ef5a50f
+Rust Playground
+A browser interface to the Rust compiler to experiment with the language
+
+
+[8/10/2023 8:01 AM] szybet
+well you are right with that
+
+
+[8/10/2023 8:02 AM] szybet
+well its for compability with previous versions propably
+
+
+[8/10/2023 8:02 AM] szybet
+https://doc.rust-lang.org/nightly/std/primitive.f64.html#method.maximum
+
+{Embed}
+https://doc.rust-lang.org/nightly/std/primitive.f64.html
+f64 - Rust
+A 64-bit floating point type (specifically, the “binary64” type defined in IEEE 754-2008).
+
+
+[8/10/2023 8:02 AM] szybet
+there is already a nightly alternative
+
+
+[8/10/2023 8:03 AM] szybet
+go, python also work like that
+
+
+[8/10/2023 8:03 AM] kuratius
+rust has editions
+
+
+[8/10/2023 8:05 AM] kuratius
+rust has editions to fix that
+
+
+[8/10/2023 8:06 AM] szybet
+still
+
+
+[8/10/2023 8:06 AM] szybet
+compability over everything
+
+
+[8/10/2023 8:06 AM] szybet
+i can still run my gui program from 2019 using the latest nightly
+
+
+[8/10/2023 8:21 AM] kuratius
+you'd end up with less if the standard library was good, basically
+
+
+[8/10/2023 8:21 AM] szybet
+¯\_(ツ)_/¯
+
+
+[8/13/2023 11:50 PM] szybet
+I already crafted 2 prototypes of highlighting that have so massive issues that i decide to go a diffrent route...
+
+
+[8/13/2023 11:51 PM] szybet
+https://tenor.com/view/mood-oh-no-stressed-problematic-gif-16076452
+
+{Embed}
+https://tenor.com/view/mood-oh-no-stressed-problematic-gif-16076452
+/mnt/data/projects/git/conversations/media/mood-oh-no-79BE3.png
+
+
+[8/14/2023 12:02 AM] tux_linux
+What is that different route
+
+
+[8/14/2023 12:02 AM] szybet
+replace
+
+over bytes
+
+regex now
+
+
+[8/14/2023 12:03 AM] tux_linux
+Weren't we already doing that?
+
+
+[8/14/2023 12:03 AM] szybet
+doing what
+
+
+[8/14/2023 12:03 AM] tux_linux
+Regex how
+
+
+[8/14/2023 12:03 AM] szybet
+idk yet
+
+
+[8/14/2023 12:03 AM] tux_linux
+Ok
+
+
+[8/14/2023 11:04 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-746B7.png
+
+
+[8/14/2023 11:05 PM] szybet
+```regex```
+
+
+[8/14/2023 11:21 PM] tux_linux
+what is this
+
+
+[8/14/2023 11:22 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/d859ac01014766a80c35f3cf7094327e-2ABA4.png
+
+
+[8/14/2023 11:22 PM] tux_linux
+what is this ad
+
+
+[8/15/2023 10:41 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-4AB3A.png
+
+
+[8/15/2023 10:43 PM] szybet
+i catched enough edge cases, providing tests is the only reasonable solution for me to ignore my inner regex hate to solve them
+
+
+[8/15/2023 10:43 PM] tux_linux
+Ok
+It works roughly?
+
+
+[8/15/2023 10:44 PM] szybet
+its "fine"
+
+
+[8/15/2023 10:44 PM] tux_linux
+Meaning
+
+
+[8/15/2023 10:44 PM] szybet
+i have concerns about performance and about many edge cases
+
+{Reactions}
+👍 
+
+[8/15/2023 10:44 PM] tux_linux
+Did you handle multiple pages
+
+
+[8/15/2023 10:45 PM] szybet
+almost
+
+
+[8/15/2023 10:45 PM] tux_linux
+Ok?
+
+
+[8/15/2023 10:45 PM] szybet
+you provide it the previous, current, next page and a list of highlights and it searches
+
+
+[8/15/2023 10:45 PM] tux_linux
+Ok
+What's the problem
+
+
+[8/15/2023 10:46 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-336CE.png
+
+
+[8/15/2023 10:46 PM] tux_linux
+Well so it works then
+
+
+[8/15/2023 10:46 PM] szybet
+with only one book
+
+
+[8/15/2023 10:46 PM] szybet
+yes
+
+
+[8/15/2023 10:46 PM] szybet
+i didnt tested more
+
+
+[8/15/2023 10:46 PM] tux_linux
+?
+
+
+[8/15/2023 10:46 PM] tux_linux
+Ok
+
+
+[8/15/2023 10:46 PM] tux_linux
+Well maybe try some from Gutenberg
+
+
+[8/15/2023 10:46 PM] szybet
+as i said: tests are needed
+
+
+[8/15/2023 10:46 PM] szybet
+gutenberg is txt
+
+
+[8/15/2023 10:46 PM] tux_linux
+No?
+
+
+[8/15/2023 10:48 PM] szybet
+ugh, still, no
+I will fix issues for my books obviously
+
+otherwise i need pull requests for tests, files and ready to use rust integration tests
+*thats the point*
+
+
+[8/15/2023 10:49 PM] tux_linux
+Why
+
+
+[8/15/2023 10:49 PM] tux_linux
+Just download some from online library
+
+
+[8/15/2023 10:49 PM] tux_linux
+They often follow Epub standard very well afaik
+
+
+[8/15/2023 10:49 PM] szybet
+i have enough work and limited time
+
+
+[8/15/2023 10:50 PM] tux_linux
+Well ok
+Maybe it would be good to see with just one different book if it still works, even if it's not a Gutenberg one
+
+
+[8/15/2023 10:50 PM] szybet
+> I will fix issues for my books obviously
+
+
+[8/15/2023 10:50 PM] tux_linux
+Good
+
+
+[8/15/2023 10:51 PM] tux_linux
+Thanks
+
+
+[8/16/2023 10:57 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-74296.png
+
+
+[8/16/2023 10:57 PM] tux_linux
+Dark mode?
+
+
+[8/16/2023 10:57 PM] szybet
+freaking finally
+
+
+[8/16/2023 10:57 PM] tux_linux
+How do you handle page turns
+
+
+[8/16/2023 10:57 PM] szybet
+this is my browser
+
+
+[8/16/2023 10:57 PM] tux_linux
+Ah
+
+
+[8/16/2023 10:57 PM] tux_linux
+Ok
+
+
+[8/16/2023 10:58 PM] tux_linux
+What is your picture for
+
+
+[8/16/2023 10:59 PM] szybet
+~~Self documenting my progress for my own happiness~~ simple 3 highlights applied where 2 of them are cutted off
+
+{Reactions}
+👍 
+
+[8/16/2023 11:00 PM] tux_linux
+Ok, is there a way that you can put background-color attributes to letters instead of making them bold?  Probably a simple modification?
+
+
+[8/16/2023 11:00 PM] szybet
+ye of course
+
+
+[8/16/2023 11:00 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-816AE.png
+
+
+[8/16/2023 11:00 PM] tux_linux
+Ok, in old inkbox code there was already a color
+
+
+[8/16/2023 11:00 PM] tux_linux
+Hex
+
+
+[8/16/2023 11:01 PM] tux_linux
+Hang on
+
+
+[8/16/2023 11:01 PM] szybet
+just provide the tags
+
+
+[8/16/2023 11:01 PM] szybet
+i could search them by myself btw
+
+
+[8/16/2023 11:01 PM] szybet
+also, what about clara / kindle image ~~just asking dont roast me like last time~~
+
+
+[8/16/2023 11:02 PM] tux_linux
+htmlText.replace(highlight, "<span style=\" background-color:#bbbbbb;\">" + highlight + "</span>");
+
+
+[8/16/2023 11:02 PM] tux_linux
+Clara image is stalled probably
+Kindle image is me not taking enough time to do it
+
+
+[8/16/2023 11:03 PM] szybet
+i will make it maybe not span, but some other tag for reasons
+
+
+[8/16/2023 11:03 PM] tux_linux
+Well, if it works fine
+
+
+[8/16/2023 11:03 PM] szybet
+stalled on what
+
+
+[8/16/2023 11:03 PM] szybet
+clara
+
+
+[8/16/2023 11:03 PM] tux_linux
+Does the highlights browser still work in reader
+
+
+[8/16/2023 11:03 PM] tux_linux
+epdc
+
+
+[8/16/2023 11:04 PM] szybet
+oof
+
+
+[8/16/2023 11:04 PM] tux_linux
+oof for what
+
+
+[8/16/2023 11:04 PM] szybet
+idk depends
+still, not today
+
+
+[8/16/2023 11:04 PM] szybet
+clara
+
+{Reactions}
+👍 
+
+[8/16/2023 11:04 PM] tux_linux
+Well, ok, something to think about doing soon
+
+
+[8/17/2023 9:52 PM] szybet
+```
+**/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/inkbox-build/inkbox/inkbox-toreader/libs/libreader-rs/lib//libreader_rs.a(std-8572ed999dc5ed55.std.20d1edb01bccf264-cgu.0.rcgu.o): in function `std::sys::unix::net::Socket::accept::{{closure}}':
+/rustc/03a119b0b0e310d22d94399b24ed030056050f13/library/std/src/sys/unix/net.rs:227: warning: warning: accept4 is not implemented and will always fail
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/inkbox-build/inkbox/inkbox-toreader/libs/libreader-rs/lib//libreader_rs.a(std-8572ed999dc5ed55.std.20d1edb01bccf264-cgu.0.rcgu.o): undefined reference to symbol 'clock_gettime@@GLIBC_2.4'
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot//lib/librt.so.1: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status**
+```
+
+
+[8/17/2023 9:53 PM] szybet
+https://youtu.be/dfHrXsGJ8mo
+
+{Embed}
+Shaun's Shitposts
+https://www.youtube.com/watch?v=dfHrXsGJ8mo
+Team Fortress 2 - Dear God
+THERE'S MORE
+/mnt/data/projects/git/conversations/media/maxresdefault-70B4B.jpg
+
+
+[8/17/2023 10:54 PM] szybet
+I will not support unsetting a selection by selecting it once more
+
+
+[8/17/2023 10:55 PM] tux_linux
+Why
+
+
+[8/17/2023 10:56 PM] szybet
+will be a mess
+
+
+[8/17/2023 10:56 PM] szybet
+discord
+
+
+[8/17/2023 10:56 PM] szybet
+helo
+
+
+[8/17/2023 10:56 PM] kuratius
+If you know where the selection is, isnt tapping on that area on the screen and opening a menu enough?
+
+
+[8/17/2023 10:56 PM] szybet
+will be a mess
+
+
+[8/17/2023 10:57 PM] tux_linux
+Well what is this supposed to tell me
+
+
+[8/17/2023 10:57 PM] szybet
+rust is stupid
+
+
+[8/17/2023 10:57 PM] szybet
+solved
+
+
+[8/17/2023 10:57 PM] kuratius
+what exactly do you mean by selection in this context?
+
+
+[8/17/2023 10:57 PM] szybet
+maybe? i think html & friends like mupdf will cause problems
+
+
+[8/17/2023 10:57 PM] tux_linux
+Well ok then why will unhigjlight by selection be unsupported
+
+
+[8/17/2023 10:58 PM] kuratius
+text selection/highlighting?
+
+
+[8/17/2023 10:58 PM] tux_linux
+Try it?
+
+
+[8/17/2023 10:58 PM] szybet
+@tux-linux explain it to @Kuratius
+
+
+[8/17/2023 10:58 PM] szybet
+i first think
+
+
+[8/17/2023 10:58 PM] tux_linux
+Well, try
+
+
+[8/17/2023 10:58 PM] tux_linux
+If you can put spans around every letter you should be able to remove them too
+
+
+[8/17/2023 10:58 PM] szybet
+
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/image-8E0E4.png
+
+
+[8/17/2023 10:58 PM] tux_linux
+No?
+
+
+[8/17/2023 10:59 PM] szybet
+i cant do something like that
+
+
+[8/17/2023 11:00 PM] szybet
+it would be hell of detecting if this plain text exists in a highlight and is full or not
+
+
+[8/17/2023 11:00 PM] szybet
+maybe in the future
+
+
+[8/17/2023 11:00 PM] szybet
+too much mess for now for me
+
+
+[8/17/2023 11:00 PM] szybet
+its not that simple
+
+
+[8/17/2023 11:03 PM] kuratius
+how do you store highlights? treat the book as a char array and store the index of the higlight start and end?
+
+
+[8/17/2023 11:03 PM] szybet
+do you know how epubs work?
+
+
+[8/17/2023 11:03 PM] kuratius
+I know they're a bunch of html in a zip file?
+
+
+[8/17/2023 11:04 PM] szybet
+yes, and now mupdf splits them to smaller very specific formatted html files
+
+
+[8/17/2023 11:04 PM] szybet
+depending on screen size, font
+
+
+[8/17/2023 11:04 PM] szybet
+this would not work, tldr
+
+
+[8/17/2023 11:05 PM] kuratius
+how do you highlight then? do you edit the html file?
+
+
+[8/17/2023 11:06 PM] szybet
+the small one, yes
+
+
+[8/17/2023 11:06 PM] szybet
+also its not a file its a string now
+
+
+[8/17/2023 11:07 PM] kuratius
+are highlights searchable that way?
+
+
+[8/17/2023 11:07 PM] szybet
+what do you mean
+
+
+[8/17/2023 11:07 PM] kuratius
+kindle allows exporting highlights & there is a menu that shows all the highlights and lets you jump to them, like a list of bookmarks
+
+
+[8/17/2023 11:08 PM] szybet
+if they edit the book directly then its possible
+
+
+[8/17/2023 11:08 PM] szybet
+or some other engine
+
+
+[8/17/2023 11:08 PM] szybet
+or just store the prerendered page somewhere
+
+
+[8/17/2023 11:09 PM] szybet
+so changing fonts takes longer
+
+
+[8/17/2023 11:09 PM] kuratius
+does koreader have highlights?
+
+
+[8/17/2023 11:09 PM] szybet
+dont expect a 19 year old hobby programer to be as good as one of the wealthiest companies in the world
+
+
+[8/17/2023 11:09 PM] szybet
+yep
+
+
+[8/17/2023 11:10 PM] kuratius
+then probably NiluJe knows how to do it properly
+
+
+[8/17/2023 11:10 PM] szybet
+even if, i use qt
+
+
+[8/17/2023 11:10 PM] szybet
+also what do you mean as properly?
+
+
+[8/19/2023 8:49 AM] szybet
+I will not implement dictionary
+
+
+[8/19/2023 8:49 AM] szybet
+We would need an api to wikipedia to make it at least somewhat good
+
+
+[8/20/2023 2:57 PM] tux_linux
+well, we need a dictionary
+
+
+[8/20/2023 2:57 PM] tux_linux
+offline too
+
+
+[8/20/2023 2:57 PM] szybet
+you add it then
+
+
+[8/20/2023 2:57 PM] tux_linux
+i will do it if you don't
+
+
+[8/20/2023 2:57 PM] szybet
+good
+
+
+[8/20/2023 2:58 PM] szybet
+¯\_(ツ)_/¯
+
+
+[8/20/2023 5:29 PM] szybet
+no highlighting when image is on the screen
+
+
+[8/20/2023 5:29 PM] szybet
+for nor at least
+
+
+[8/20/2023 5:30 PM] szybet
+base64 makes my code go insane
+
+
+[8/20/2023 6:53 PM] szybet
+latest commit enables you that, create a button like translate and the rest is history
+
+
+[8/20/2023 6:59 PM] tux_linux
+?
+
+
+[8/20/2023 6:59 PM] tux_linux
+base64?
+
+
+[8/20/2023 6:59 PM] tux_linux
+Oh
+
+
+[8/20/2023 7:30 PM] szybet
+now
+
+
+[8/20/2023 7:38 PM] tux_linux
+Also wdym exact
+
+
+[8/20/2023 7:39 PM] szybet
+if you want to do that now
+
+
+[8/20/2023 7:39 PM] tux_linux
+I will wait for you to be done
+
+
+[9/17/2023 2:31 AM] dandelionkoi
+i saw the posts about distrowatch, i've been searching for something like inkbox for so long.  i don't remember exactly the path of the rabbit trail i took to find it, but it took a long time to find for how much looking i've been doing.  is help promoting inkbox wanted?
+
+
+[9/17/2023 2:35 AM] tux_linux
+Well, of course, but embedded systems distros don't qualify for distrowatch
+
+
+[9/17/2023 3:05 AM] dandelionkoi
+i thought "usually",  can't hurt to ask, right?
+
+
+[9/17/2023 3:05 AM] dandelionkoi
+i've been talking up the project, to my family, friends, and the esperanto telegram community
+
+
+[9/17/2023 3:07 AM] dandelionkoi
+i also sent a tip to hackaday, as they were somewhere near the start of the rabbit trail that led me to you, and i submitted a tip to goodereader, too
+
+
+[9/17/2023 3:08 AM] dandelionkoi
+just a, "hey, i just found this.  i find it super interesting.  i'm submitting a tip because maybe you'll find it super interesting, too" kind of message
+
+
+[9/17/2023 3:21 AM] tux_linux
+Well , thanks
+
+
+[2/4/2024 7:50 PM] szybet
+https://doc.qt.io/qt-5/qtpdf-index.html
+
+
+==============================================================
+Exported 810 message(s)
+==============================================================

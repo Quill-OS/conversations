@@ -1,0 +1,1009 @@
+==============================================================
+Guild: Quill OS
+Channel: Quill OS / hosting
+==============================================================
+
+[2/16/2021 1:13 AM] ferminolaiz
+@tux-linux maybe we can keep the discussion about CI here
+
+
+[2/16/2021 1:13 AM] tux_linux
+ok
+
+
+[2/16/2021 1:13 AM] ferminolaiz
+For the record the idea is to have a gitea/gitlab instance on the new server and set up a CI worker that builds the images and publishes them for us
+
+
+[2/16/2021 1:14 AM] ferminolaiz
+So we don't have to upload the full images and just push the updates to git
+
+
+[2/16/2021 1:14 AM] tux_linux
+ok it's just me and myself, but
+the thing is *I love hosting a Git server on a 20-year old thin client*
+
+
+[2/16/2021 1:14 AM] ferminolaiz
+weeeell
+
+
+[2/16/2021 1:14 AM] ferminolaiz
+hahahahaha
+
+
+[2/16/2021 1:14 AM] tux_linux
+*it makes it useful*
+
+
+[2/16/2021 1:14 AM] ferminolaiz
+that is true
+
+
+[2/16/2021 1:15 AM] tux_linux
+but yeah I understand what you mean
+
+
+[2/16/2021 1:15 AM] ferminolaiz
+I'll try some stuff around and we can see if it works
+
+
+[2/16/2021 1:15 AM] ferminolaiz
+And if it works well and you like it, well then
+
+
+[2/16/2021 1:15 AM] tux_linux
+but if we have to switch, then we'll switch
+
+
+[2/16/2021 1:15 AM] ferminolaiz
+I'm the same way with a lot of stuff so don't even worry hahaha
+
+
+[2/16/2021 1:16 AM] tux_linux
+it'd be even better if we got a real Kobo port forwarded
+
+
+[2/16/2021 1:16 AM] tux_linux
+that really would give it a purpose
+
+
+[2/16/2021 1:17 AM] tux_linux
+we could say "Proudly hosted on a Kobo Glo HD"
+people would be like *huh*
+
+
+[2/16/2021 1:27 AM] ferminolaiz
+hahahaha
+
+
+[2/16/2021 1:28 AM] ferminolaiz
+Hm... I'm sort of thinking...
+
+
+[2/16/2021 1:28 AM] ferminolaiz
+This would be insane
+
+
+[2/16/2021 1:28 AM] ferminolaiz
+BUT
+
+
+[2/16/2021 1:28 AM] ferminolaiz
+And yes, it is totally insane
+
+
+[2/16/2021 1:28 AM] ferminolaiz
+But a cool thing to do would be
+
+
+[2/16/2021 1:28 AM] tux_linux
+only thing would be to hook up a real hard drive to it since SD cards wear out quickly
+
+
+[2/16/2021 1:29 AM] ferminolaiz
+With the GitHub student pack you can get a full year of accomodation for a 1U server
+
+
+[2/16/2021 1:29 AM] tux_linux
+what's that?
+
+
+[2/16/2021 1:29 AM] ferminolaiz
+A rackable server
+
+
+[2/16/2021 1:29 AM] ferminolaiz
+So you send the server and they put it in their datacenters
+
+
+[2/16/2021 1:29 AM] ferminolaiz
+So if we get a 1U server case we could put inside some kobos and a couple more things
+
+
+[2/16/2021 1:29 AM] tux_linux
+hahahhaha
+
+
+[2/16/2021 1:30 AM] ferminolaiz
+It would be probably insane and they would complain, for sure
+
+
+[2/16/2021 1:30 AM] tux_linux
+that would truly be insane
+
+
+[2/16/2021 1:30 AM] ferminolaiz
+But it would be legendary
+
+
+[2/16/2021 1:30 AM] tux_linux
+of course
+
+
+[2/16/2021 1:30 AM] tux_linux
+they'd open the box
+*what?*
+*wait.... did they really sent us an... eReader?*
+a couple of emails later
+*oh it's running Linux!*
+
+
+[2/16/2021 1:31 AM] ferminolaiz
+hahahahaha
+
+
+[2/16/2021 1:31 AM] ferminolaiz
+If it's nice enough they might accept it
+
+
+[2/16/2021 1:31 AM] ferminolaiz
+But we would need a raspi for networking
+
+
+[2/16/2021 1:31 AM] tux_linux
+well USBnetwork somehow
+
+
+[2/16/2021 1:31 AM] ferminolaiz
+Then a wifi dongle to broadcast the signal to the kobos
+
+
+[2/16/2021 1:31 AM] ferminolaiz
+Or usb, yeap
+
+
+[2/16/2021 1:31 AM] ferminolaiz
+And some way to access it in case everything goes wrong hahahaha
+
+
+[2/16/2021 1:32 AM] tux_linux
+yep
+which is very likely to happen
+
+
+[2/16/2021 1:32 AM] tux_linux
+I've seen some Kobos randomly rebooting when using Xorg, just they had no reason at all, they just decided to reboot because... well idk
+
+
+[4/23/2021 6:48 PM] the.mightydill
+well... you succeeded ;p
+
+
+[4/24/2021 2:44 AM] pgaskin
+That sounds easy enough
+
+
+[4/24/2021 2:45 AM] pgaskin
+I'm assuming you aren't currently building the images by hand, or that you're at least starting fresh each time
+
+
+[4/24/2021 2:51 AM] tux_linux
+Yes, I'm currently building inkbox/kobox images by hand, and I (of course) start fresh every time, otherwise I would feel that it's not 'clean' or something like that...
+The thing is that a lot of things get added over time and if I have some helper scripts to automatically create an update package for each device when I want to (it compresses, mksquashfs, openssl sign, etc.), some changes in the rootfs like X11 integration that will be out in v1.5 are incredibly difficult to put together for the upgrade to be actually seamless and to work.
+I don't know if I'm quoting an existing citation, but I feel sometimes that the most difficult part in implementing new features in an OS like that is not developing them, but actually making the update package that the user will use.
+
+
+[4/24/2021 2:51 AM] pgaskin
+Do you do it completely from scratch?
+
+
+[4/24/2021 2:52 AM] tux_linux
+The updates or the images?
+
+
+[4/24/2021 2:52 AM] pgaskin
+The builds
+
+
+[4/24/2021 2:52 AM] pgaskin
+As in, no buildroot or anything
+
+
+[4/24/2021 2:59 AM] tux_linux
+Boot process is as follows:
+- Kernel
+- Initrd (with busybox static binary for recovery purposes) which waits for a power button event, and if there is, "boots" to the second partition (recovery) by chrooting and mounting appropriate filesystems. (mmcblk0p2)
+- Rootfs: Alpine 3.10 rootfs, fully bootable natively, but now I just chroot into it like the diags partition. (mmcblk0p3)
+- Multiple chroots for various services: one for Xorg (Alpine 3.10), one for VNC/X11 touch input (Debian 8), and one for InkBox itself which runs a 2015 buildroot build since the glibc version supports the kernel correctly (2.6.35.3)
+- Updates in the isa format are actually squashfs-compressed folders (usually in XZ, where possible) and are mounted via squashFUSE on boot. An extensions system for X11 allows seamless add/delete operations for extensions, e.g., netsurf.isa is an extension (which is like a mini root with the program and its deps), and the initrd detects it on boot and merges it (unionfs-fuse) with the main X.org rootfs, also a Squashfs, but overlayfs-fuse mounted so it can be writeable.
+
+I hope I did not lose you...
+
+
+[4/24/2021 3:00 AM] pgaskin
+Have you considered using namespaces rather than chroots?
+
+
+[4/24/2021 3:01 AM] pgaskin
+Squashfs is nice
+
+
+[4/24/2021 3:01 AM] pgaskin
+You don't need FUSE for it, though
+
+
+[4/24/2021 3:01 AM] tux_linux
+Haven't ever heard of it lol...
+
+
+[4/24/2021 3:01 AM] tux_linux
+Yes, because 2.6.35.3 kernel doesn't support XZ compressed ones
+
+
+[4/24/2021 3:01 AM] tux_linux
+So FUSE became handy
+
+
+[4/24/2021 3:01 AM] pgaskin
+Extensions remind me of systemd extensions
+
+
+[4/24/2021 3:02 AM] tux_linux
+to grasp a better undestanding of the mount process, maybe...
+
+{Attachments}
+/mnt/data/projects/git/conversations/media/PXL_20210418_033103837-045D2.jpg
+
+
+[4/24/2021 3:02 AM] pgaskin
+But based on what you said, your layout is more like Nix or Gobo
+
+
+[4/24/2021 3:03 AM] pgaskin
+Oh, you use overlayfs
+
+
+[4/24/2021 3:03 AM] tux_linux
+yes, it's a giant mess of squashfuse, unionfs and overlayfs
+
+
+[4/24/2021 3:03 AM] tux_linux
+but the initrd does its job and it works better than I expected
+like, just drag'n'drop the extension and the contents of it gets merged automatically at next boot
+
+
+[4/24/2021 3:04 AM] pgaskin
+Yep
+
+
+[4/24/2021 3:04 AM] pgaskin
+Note that you're pretty much on the path to reimplementing containers or reimplementing nixos
+
+
+[4/24/2021 3:04 AM] tux_linux
+the drawing was actually for me to undestand how to do it ;p
+
+
+[4/24/2021 3:05 AM] pgaskin
+A container runtime would probably be too heavy, though, so you'd probably want to continue doing it manually
+
+
+[4/24/2021 3:05 AM] pgaskin
+You might want to consider using nixos as a base, though
+
+
+[4/24/2021 3:06 AM] tux_linux
+That's `df -h`, just looks awful
+```
+kobo:/home/user# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/mmcblk0p3  2.9G  2.0G  751M  73% /
+/dev/mmcblk0p1   29M  2.9M   25M  11% /boot
+/dev/loop7      1.0M  1.0M     0 100% /opt/root
+/dev/loop6      1.0M  1.0M     0 100% /opt/key
+devtmpfs         10M     0   10M   0% /dev
+tmpfs           125M   12K  125M   1% /tmp
+squashfuse       52M   52M     0 100% /opt/X11/base/rootfs
+squashfuse      102M  102M     0 100% /opt/X11/vnc-touch
+squashfuse       11M   11M     0 100% /opt/X11/extensions/adwaita-icons
+squashfuse       11M   11M     0 100% /opt/X11/extensions/netsurf
+squashfuse       61M   61M     0 100% /opt/X11/extensions/python3-onboard
+squashfuse      2.0M  2.0M     0 100% /opt/X11/extensions/ssh
+unionfs          84M   84M     0 100% /opt/X11/extensions/merged
+unionfs         136M  136M     0 100% /opt/X11/merged
+fuse-overlayfs  2.9G  2.0G  751M  73% /xorg
+tmpfs           125M     0  125M   0% /xorg/tmp
+tmpfs           125M     0  125M   0% /xorg/run
+tmpfs           125M     0  125M   0% /xorg/dev/shm
+tmpfs           125M     0  125M   0% /opt/X11/vnc-touch/tmp
+tmpfs           125M     0  125M   0% /opt/X11/vnc-touch/run
+tmpfs           125M     0  125M   0% /opt/X11/vnc-touch/dev/shm
+tmpfs            25M   68K   25M   1% /run
+shm             125M     0  125M   0% /dev/shm
+/dev/loop0      253M  8.1M  244M   4% /kobo/mnt/onboard/onboard
+squashfuse       75M   75M     0 100% /opt/isa
+squashfuse       11M   11M     0 100% /kobo/mnt/onboard/.adds/inkbox
+squashfuse       35M   35M     0 100% /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo
+squashfuse       31M   31M     0 100% /kobo/mnt/onboard/.adds/Python-3.9.2
+tmpfs           125M   16K  125M   1% /kobo/tmp
+tmpfs           125M     0  125M   0% /kobo/run
+tmpfs           125M     0  125M   0% /kobo/inkbox
+kobo:/home/user# 
+```
+
+
+[4/24/2021 3:06 AM] tux_linux
+I'll look into it
+
+
+[4/24/2021 3:07 AM] pgaskin
+Not too bad, but beware of the overhead from all the FUSE layers
+
+
+[4/24/2021 3:07 AM] pgaskin
+And if not, at least use some ideas from it
+
+
+[4/24/2021 3:07 AM] tux_linux
+What does that do?
+
+
+[4/24/2021 3:08 AM] pgaskin
+FUSE requires a lot of userspace copying and context switching
+
+
+[4/24/2021 3:09 AM] pgaskin
+Oh, and if you want to do everything manually
+
+
+[4/24/2021 3:09 AM] tux_linux
+Well, idle, CPU is at ~1.3% of usage
+
+
+[4/24/2021 3:09 AM] pgaskin
+The first thing I suggest you work on is a packaging tool which has an input similar to Alpine or Arch
+
+
+[4/24/2021 3:09 AM] pgaskin
+I'm mostly talking about overhead for many small writes/reads, or for large writes through multiple layers
+
+
+[4/24/2021 3:10 AM] tux_linux
+Ah ok
+
+
+[4/24/2021 3:10 AM] tux_linux
+Packaging tool; you mean something to "package" the rootfs? or the extensions?
+
+
+[4/24/2021 3:11 AM] tux_linux
+`apk` sure is very handy when I need some quick native compilation
+
+
+[4/24/2021 3:11 AM] pgaskin
+The extensions
+
+
+[4/24/2021 3:11 AM] tux_linux
+Ah
+
+
+[4/24/2021 3:11 AM] pgaskin
+The rootfs will come naturally from that
+
+
+[4/24/2021 3:11 AM] tux_linux
+Well, currently, I `apk fetch` the packages (they're tar archives), then untar all of them in a directory, then mksquashfs and there you go
+
+
+[4/24/2021 3:16 AM] tux_linux
+Also, not that I'm in a desperate need of testers, but I saw you had a Mini, feel free to test InkBox on it if you have time (and if you want, of course)! 
+
+You can also enable USBNet for SSH root access (after factory reset--allow root, then Diags -> Flags -> Enable USBNet), and the Kobo's IP will be 192.168.2.2
+
+
+[2/6/2022 10:44 AM] anovella
+Hi, maybe this is not the best place to ask this, but I think you would know that better than anyone else. Currently I have a clara HD with original soft, battery is discharging unconsistently when it's not in use. I rode somewhere that cases that turn on the screen can be a source of problems. The question is, you know any way of log this screen on events? If I see that multiple screen on occurs while I'm sleeping that will be the problem for sure.
+
+
+[2/6/2022 10:46 AM] anovella
+Aditional info, it can be one day to other at 80%, I read till 78%, well, the next day randomly it can be at 78% or 50%. Wifi is off all the time.
+
+
+[2/6/2022 3:54 PM] tux_linux
+What do you mean by "screen on events"?
+
+
+[2/6/2022 3:57 PM] anovella
+I would like to log when the screen is turned on, or the magnetic switch for the case
+
+
+[2/6/2022 4:15 PM] tux_linux
+when the device wakes from sleep?
+
+
+[2/6/2022 4:18 PM] anovella
+Yes
+
+
+[2/6/2022 4:19 PM] tux_linux
+Maybe is it already logged by Nickel
+
+
+[2/6/2022 4:19 PM] tux_linux
+Let me check
+
+
+[2/6/2022 4:19 PM] anovella
+Sorry if I don't explain well on english
+
+
+[2/6/2022 4:19 PM] anovella
+Thank you very much
+
+
+[2/6/2022 4:20 PM] anovella
+But I don't use nickle apps :( is that a problem?
+
+
+[2/6/2022 4:20 PM] tux_linux
+you're using koreader?
+
+
+[2/6/2022 4:26 PM] anovella
+No, just default reader
+
+
+[2/6/2022 4:26 PM] tux_linux
+that is nickel
+
+
+[2/6/2022 4:27 PM] anovella
+The os that comes with kobo after buy it is nickel?
+
+
+[2/6/2022 4:27 PM] tux_linux
+yeah
+
+
+[2/6/2022 4:27 PM] tux_linux
+Well, Nickel is the binary that contains the main UI
+
+
+[2/6/2022 4:27 PM] anovella
+Thats great
+
+
+[2/6/2022 4:27 PM] tux_linux
+There's also `pickel`, `sickel`, `hindenburg`, etc.
+
+
+[2/6/2022 4:28 PM] tux_linux
+plus some standard Linux utilities
+
+
+[2/6/2022 4:28 PM] anovella
+So I can check times the screen wakes from sleep using ssh?
+
+
+[2/6/2022 4:29 PM] tux_linux
+That's what I'm trying to see right now
+
+
+[2/6/2022 4:29 PM] anovella
+Thanks
+
+
+[2/6/2022 4:30 PM] tux_linux
+Actually, you can't directly
+
+
+[2/6/2022 4:31 PM] tux_linux
+But if you look in `dmesg` for messages like this:
+```PM: resume of devices complete after 361.239 msecs
+PM: Finishing wakeup.```
+That tells you the device has finished waking from sleep
+
+
+[2/6/2022 4:32 PM] tux_linux
+Or, if you connect to Wi-Fi, you can check when `dhcpcd` restarts itself. But that is less precise, since Nickel can disable Wi-Fi too
+
+
+[2/6/2022 4:32 PM] anovella
+Wow I think the dmesg is what I was looking for
+
+
+[2/6/2022 4:32 PM] tux_linux
+But dmesg gets overwritten at some point
+
+
+[2/6/2022 4:33 PM] tux_linux
+by other useless things
+
+
+[2/6/2022 4:33 PM] anovella
+Doing grep on that could check some wakeups
+
+
+[2/6/2022 6:44 PM] ninuje
+Running `klogd` first will send it to the syslog, which you can read with `logread`
+
+
+[2/6/2022 6:45 PM] ninuje
+That'll net you timestamps, which are generally helpful
+
+
+[2/6/2022 6:45 PM] tux_linux
+oh
+
+
+[2/6/2022 6:45 PM] tux_linux
+that's awesome
+
+
+[2/6/2022 6:45 PM] ninuje
+Keep in mind that the PM stuff may actually be logged only on *resume*
+
+
+[2/6/2022 6:45 PM] tux_linux
+I think it's what he wants to know
+
+
+[2/6/2022 6:46 PM] ninuje
+So, caveat emptor for this particular bit of messaging
+
+
+[8/13/2022 5:23 AM] tux_linux
+Re-reading this ooooold discussion, we actually do now :
+https://inkbox.ddns.net/wiki/index.php?title=InkBox_GUI_user_apps
+https://github.com/Kobo-InkBox/rootfs/blob/master/etc/init.d/gui_apps
+https://github.com/Kobo-InkBox/unshare-inkbox
+
+{Embed}
+https://inkbox.ddns.net/wiki/index.php?title=InkBox_GUI_user_apps
+Index.php
+
+{Embed}
+https://github.com/Kobo-InkBox/rootfs/blob/master/etc/init.d/gui_apps
+rootfs/gui_apps at master · Kobo-InkBox/rootfs
+InkBox OS root filesystem. Contribute to Kobo-InkBox/rootfs development by creating an account on GitHub.
+
+{Embed}
+https://github.com/Kobo-InkBox/unshare-inkbox
+GitHub - Kobo-InkBox/unshare-inkbox: GNU 'unshare' implementation u...
+GNU 'unshare' implementation using clone() syscall instead of unshare() - GitHub - Kobo-InkBox/unshare-inkbox: GNU 'unshare' implementation using clone() syscall instead of unshare()
+/mnt/data/projects/git/conversations/media/unshare-inkbox-7842D
+
+
+[2/3/2024 4:08 AM] tux_linux
+test
+
+
+[2/3/2024 4:08 AM] tux_linux
+ok, good, didnt relay this one
+
+
+[3/14/2024 8:32 PM] xsf_nrg_4fr
+Hey there folks, I have noticed that the webhosting of this project is a little bit wonky, with a DDNS.net account pointing to someone's home-lab server. I have the resources at my fingertips to be able to setup a properly hosted LAMP server for the project, if that would help out in the community efforts to grow the project.
+
+{Reactions}
+👍 
+
+[3/14/2024 8:41 PM] szybet
+That would be very cool
+
+
+[3/14/2024 8:41 PM] xsf_nrg_4fr
+I would be happy to do that
+
+
+[3/14/2024 8:41 PM] szybet
+home-lab server isn't really the biggest issue here, the domain name is
+
+
+[3/14/2024 8:42 PM] xsf_nrg_4fr
+How does InkBox.app sound? I had noticed that you are perhaps trying to do a name/rebranding though
+
+
+[3/14/2024 8:42 PM] szybet
+sounds good but yea, we are looking into that
+
+
+[3/14/2024 8:42 PM] szybet
+in a week we should know the final name I think
+
+
+[3/14/2024 8:43 PM] xsf_nrg_4fr
+well, maybe after you all decide on a possible name change, then I can secure a domain - and host it
+
+
+[3/14/2024 8:43 PM] xsf_nrg_4fr
+this is a great project by the way
+
+
+[3/14/2024 8:44 PM] szybet
+Do you have the resources for it?
+We didn't cared for the domain name because at first glance, a year of domain name holding is the amount of money to buy another device to port inkbox to it
+
+
+[3/14/2024 8:44 PM] szybet
+thanks
+
+
+[3/14/2024 8:45 PM] xsf_nrg_4fr
+I have a series of websites that are somewhat latent, with a multisite hosting, and I would be more than happy to do that for you... so yeah - I pretty much DO have the resources for it
+
+
+[3/14/2024 8:46 PM] szybet
+very cool, thanks
+
+
+[3/14/2024 8:46 PM] xsf_nrg_4fr
+while I have your attention (on a decidedly different topic from hosting though): I am trying to access the full mico SD card on my InkBox install - and having the hell of a time with it...  I am running a Windows install, but also have access to a Linux box
+
+
+[3/14/2024 8:47 PM] szybet
+I started designing a new website with Publii lately
+
+
+[3/14/2024 8:48 PM] szybet
+Hmm access in which way? SD card over USB? or just to upload books?
+
+
+[3/14/2024 8:48 PM] szybet
+or over network in any way?
+
+
+[3/14/2024 8:48 PM] xsf_nrg_4fr
+from my PC connected via USB - it is a rather large SD card, but it only shows as 510 MB
+
+
+[3/14/2024 8:49 PM] szybet
+what device do you have?
+
+
+[3/14/2024 8:49 PM] szybet
+also lets go to #quill
+
+
+[3/14/2024 8:50 PM] xsf_nrg_4fr
+NIA
+
+
+[3/25/2024 4:01 PM] xsf_nrg_4fr
+I've gone ahead and registered & also pointed the DNS settings to my server for the domain of https://quill-os.org
+
+
+[3/25/2024 4:01 PM] tux_linux
+great
+my school blocks the domain
+
+
+[3/25/2024 4:01 PM] tux_linux
+lmao
+
+
+[3/25/2024 4:02 PM] xsf_nrg_4fr
+It's currently got an instance of GitHub pages running on it
+
+
+[3/25/2024 4:02 PM] xsf_nrg_4fr
+Weird
+
+
+[3/25/2024 4:02 PM] szybet
+give it time
+
+
+[3/25/2024 4:02 PM] tux_linux
+no, my school firewall blocks like everything
+
+
+[3/25/2024 4:02 PM] tux_linux
+even inkbox.ddns.net
+
+
+[3/25/2024 4:02 PM] szybet
+fucking idiots haha
+
+
+[3/25/2024 4:02 PM] szybet
+get a vpn to your home
+
+
+[3/25/2024 4:02 PM] tux_linux
+strangely i can still access discord here
+
+
+[3/25/2024 4:03 PM] leo_chrom
+Me too
+
+
+[3/25/2024 4:03 PM] tux_linux
+given 1mb/s uplink speed probably wouldnt be that great
+
+
+[3/25/2024 4:04 PM] szybet
+500 Kb/S is fine for code server
+
+
+[3/25/2024 4:39 PM] xsf_nrg_4fr
+https://pages.github.com/ That is the software running on my dedicated web-server
+Someone will need the back-end login credentials... which I will gladly provide via direct message or email or something
+
+{Embed}
+https://pages.github.com/
+GitHub Pages
+Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.
+
+
+[3/25/2024 4:47 PM] szybet
+I ( or smn ) will create a website with Publii, then we will upload it
+
+
+[3/25/2024 5:25 PM] xsf_nrg_4fr
+brilliant
+
+
+[3/25/2024 5:25 PM] xsf_nrg_4fr
+that is much easier
+
+
+[3/25/2024 5:25 PM] xsf_nrg_4fr
+... for me at least
+
+
+[4/2/2024 9:02 PM] m8torr
+Why not host the site on Oracle Cloud? It has an Always Free Tier account, you get 4 ARM vCPUs, 24GB of memory and 200GB storage
+
+
+[4/2/2024 9:02 PM] szybet
+Xsf will host it for us
+
+
+[4/2/2024 9:02 PM] szybet
+This will probably require to attach a credit card
+
+
+[4/2/2024 9:03 PM] szybet
+The problem always was domain name not hosting
+
+
+[4/2/2024 9:03 PM] tux_linux
+are you kidding
+
+
+[4/2/2024 9:03 PM] m8torr
+It does, but the benefit of the Free Tier, is that it doesn’t let it charge anything
+
+
+[4/2/2024 9:03 PM] tux_linux
+then i sign up
+
+
+[4/2/2024 9:03 PM] szybet
+I mean if you want you can have a third mirror
+
+
+[4/2/2024 9:03 PM] tux_linux
+24gb of ram
+
+
+[4/2/2024 9:03 PM] tux_linux
+thats insane
+
+
+[4/2/2024 9:04 PM] tux_linux
+my home server has 24gb of ram
+
+
+[4/2/2024 9:04 PM] szybet
+I doubt in these specs
+
+
+[4/2/2024 9:04 PM] m8torr
+You can split it in 4 VMs
+
+
+[4/2/2024 9:04 PM] tux_linux
+can you just have 1 vm
+
+
+[4/2/2024 9:04 PM] m8torr
+I host my personal minecraft servers in there
+
+
+[4/2/2024 9:04 PM] m8torr
+Yes, you can have 1VM with everything allocated to it
+
+
+[4/2/2024 9:05 PM] szybet
+https://www.reddit.com/r/homelab/comments/m04lgs/oracle_cloud_free_tier_whats_the_catch/
+
+{Embed}
+https://www.reddit.com/r/homelab/comments/m04lgs/oracle_cloud_free_tier_whats_the_catch/
+From the homelab community on Reddit
+Explore this post and more from the homelab community
+/mnt/data/projects/git/conversations/media/m04lgs-827CC
+
+
+[4/2/2024 9:05 PM] szybet
+Third mirror then
+
+
+[4/2/2024 9:05 PM] tux_linux
+good
+
+
+[4/2/2024 9:05 PM] tux_linux
+im signing up
+
+
+[4/2/2024 9:05 PM] szybet
+Idk why we need it tho
+
+
+[4/2/2024 9:05 PM] szybet
+2 were fine
+
+
+[4/2/2024 9:05 PM] tux_linux
+maybe a gitlab server
+
+
+[4/2/2024 9:05 PM] tux_linux
+we can move it there
+
+
+[4/2/2024 9:05 PM] tux_linux
+will be faster
+
+
+[4/2/2024 9:05 PM] szybet
+I still prefer github
+
+
+[4/2/2024 9:06 PM] szybet
+gitlab has a fucked up ui
+
+
+[4/2/2024 9:06 PM] tux_linux
+you hate microsoft
+
+
+[4/2/2024 9:06 PM] tux_linux
+or gitea at this point
+
+
+[4/2/2024 9:06 PM] tux_linux
+oh
+
+
+[4/2/2024 9:06 PM] szybet
+At least they do reasonable ui
+
+
+[4/2/2024 9:06 PM] tux_linux
+cgit
+
+
+[4/2/2024 9:06 PM] tux_linux
+lmao
+
+
+[4/2/2024 9:06 PM] szybet
+Bruh
+
+
+[4/2/2024 9:06 PM] szybet
+Get gitlab and i will do ci cd at one point in it
+
+
+[4/2/2024 9:06 PM] tux_linux
+ok
+
+
+[4/2/2024 9:06 PM] szybet
+Thats a good idea
+
+
+[4/2/2024 9:06 PM] tux_linux
+i will put it and give you ssh access when its done
+
+
+[4/2/2024 9:07 PM] szybet
+If you setup gitlab right i wont need to
+
+
+[4/2/2024 9:07 PM] szybet
+Well thanks man for the tip
+
+
+[4/2/2024 9:08 PM] tux_linux
+yea
+
+
+[4/2/2024 10:20 PM] zoli111
+do you want to move the repos to gitlab or the downloads or just the site?
+
+
+[4/2/2024 10:21 PM] tux_linux
+no, i have this server at inkbox.ddns.net/git
+
+
+[4/2/2024 10:21 PM] tux_linux
+its slow
+
+
+[4/2/2024 10:21 PM] tux_linux
+could be better on a vps
+
+
+[4/2/2024 10:21 PM] tux_linux
+but oracle doesnt like my credit card for some reason
+
+
+[4/2/2024 10:22 PM] tux_linux
+i filed a support request
+
+
+[4/2/2024 10:22 PM] zoli111
+I see
+
+
+[4/2/2024 10:23 PM] zoli111
+it's like a mirror?
+
+
+[4/2/2024 10:24 PM] tux_linux
+yes
+
+
+[4/2/2024 10:24 PM] tux_linux
+incomplete
+
+
+[4/2/2024 10:24 PM] tux_linux
+but most important repos are in it
+
+
+[4/2/2024 10:40 PM] szybet
+Its for "i wont contribute to closed source repo provider" person if it ever shows up, then we can sync them up properly
+
+
+[4/2/2024 10:40 PM] szybet
+For the same reason matrix exists
+
+
+[4/2/2024 10:41 PM] szybet
+"i wont contribute unless there is a proper open source way to communicate" kind of person
+
+
+[4/2/2024 11:49 PM] m8torr
+it does for every credit card, thay are forcing to contact support to prevent automated sign ups
+
+{Reactions}
+😂 
+
+[4/2/2024 11:49 PM] tux_linux
+Great design
+
+
+[4/2/2024 11:49 PM] m8torr
+one thing to note, is once you choose a region, you cannot change that
+
+
+==============================================================
+Exported 226 message(s)
+==============================================================
