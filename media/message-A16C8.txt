@@ -1,0 +1,532 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.1.15-inkbox-n306c (szybet@hyperbookszyb) (gcc version 4.9.4 (crosstool-NG 1.23.0.72-23ba174 - NiLuJe) ) #1 SMP PREEMPT Sun Jul 23 16:54:39 CEST 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: Freescale i.MX6 ULL DDR3 NTX Board
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] On node 0 totalpages: 65280
+[    0.000000] free_area_init_node: node 0, pgdat 80f789c0, node_mem_map 8fbf7000
+[    0.000000]   Normal zone: 508 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 65024 pages, LIFO batch:15
+[    0.000000]   HighMem zone: 256 pages, LIFO batch:0
+[    0.000000] PERCPU: Embedded 12 pages/cpu @8fbd0000 s16652 r8192 d24308 u49152
+[    0.000000] pcpu-alloc: s16652 r8192 d24308 u49152 alloc=12*4096
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772
+[    0.000000] Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ramfs roott
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 242416K/261120K available (5767K kernel code, 254K rwdata, 2256K rodata, 7532K init, 390K bss, 18704K reserved, 0K cma-reserved, 1024K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0x90000000 - 0xff000000   (1776 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .text : 0x80008000 - 0x807de214   (8025 kB)
+[    0.000000]       .init : 0x807df000 - 0x80f3a000   (7532 kB)
+[    0.000000]       .data : 0x80f3a000 - 0x80f79aa0   ( 255 kB)
+[    0.000000]        .bss : 0x80f7c000 - 0x80fddb50   ( 391 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Additional per-CPU info printed with stalls.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] mxc_clocksource_init 24000000
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000015] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000053] clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.002837] Console: colour dummy device 80x30
+[    0.002881] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.002915] pid_max: default: 32768 minimum: 301
+[    0.003134] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.003162] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.004283] CPU: Testing write buffer coherency: ok
+[    0.004761] /cpus/cpu@0 missing clock-frequency property
+[    0.004803] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.004914] Setting up static identity map for 0x80008280 - 0x800082d8
+[    0.041183] Brought up 1 CPUs
+[    0.041222] SMP: Total of 1 processors activated (48.00 BogoMIPS).
+[    0.041241] CPU: All CPU(s) started in SVC mode.
+[    0.042305] devtmpfs: initialized
+[    0.058486] device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"
+[    0.066384] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.067297] clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.068175] pinctrl core: initialized pinctrl subsystem
+[    0.071031] NET: Registered protocol family 16
+[    0.072007] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.100746] cpuidle: using governor ladder
+[    0.130813] cpuidle: using governor menu
+[    0.173340] ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=t
+[    0.173386] hwcfg_size_setup() hwcfg_szie=110
+[    0.173421] ***_MemoryRequest:49: request memory region! addr=8ffffe00, len=110***
+[    0.173477] hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51
+[    0.173505] boot_port_setup() boot_port=1
+[    0.173529] ntxfw_size_setup() ntxfw_size=1034
+[    0.173558] ***_MemoryRequest:49: request memory region! addr=8ff71400, len=1034***
+[    0.173607] ntxfw[0],"E60U22A0_2fl_hdr_200520",type=0x6,sz=16
+[    0.173630] lm3630fl dual color table : 1 temperatures ,c1_pwr=0x0,c2_pwr=0x0
+[    0.173662] ntxfw[1],"E60U22A0_2fl_tab_200520",type=0x7,sz=844
+[    0.173695] ntxfw_p_setup() ntxfw_p=8ff71400,vaddr=9007c400,size=1034,name="E60U22A1",ver=0.0.0.0,items=2
+[    0.174213] No ATAGs?
+[    0.174281] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.174305] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.178347] imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+[    0.178954] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    0.207912] mxs-dma 1804000.dma-apbh: initialized
+[    0.212315] PMU: ricoh61x_i2c_init:
+[    0.212842] PMU: rohmbd71828_i2c_init:
+[    0.213699] SCSI subsystem initialized
+[    0.214507] usbcore: registered new interface driver usbfs
+[    0.214689] usbcore: registered new interface driver hub
+[    0.214935] usbcore: registered new device driver usb
+[    0.219184] sy7636_probe calling
+[    0.219250] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78
+[    0.219286] sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1
+[    0.221338] sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89
+[    0.221367] sy7636_detect calling
+[    0.228780] sy7636_detect():opmode=0x0
+[    0.228802] sy7636_detect success
+[    0.229453] sy7636 0-0062: PMIC SY7636 for eInk display
+[    0.229476] sy7636_probe success
+[    0.229540] i2c i2c-0: IMX I2C adapter registered
+[    0.229576] i2c i2c-0: can't use DMA
+[    0.231101] PMU: bd71828_i2c_probe begin 
+[    0.231147] bd71828 3-004b: bd71828_i2c_probe chip_type 6 
+[    0.231189] bd71828 irq gpio 129
+[    0.231235] bd71828 3-004b: PMIC ROHM_CHIP_TYPE_BD71828 IRQ ID :a2, trigger type 0
+[    0.232577] bd71828 3-004b: PMIC ROHM_CHIP_TYPE_BD71828 PMIC ID 0x00 :22
+[    0.234128] bd71828 3-004b: PMIC ROHM_CHIP_TYPE_BD71828 PMIC OTP ID 0x00 :eb
+[    0.254438] PMU: bd71828_i2c_probe end 
+[    0.254522] i2c i2c-3: IMX I2C adapter registered
+[    0.254562] i2c i2c-3: can't use DMA
+[    0.254882] pps_core: LinuxPPS API ver. 1 registered
+[    0.254906] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.254989] PTP clock support registered
+[    0.255095] PMU: bd71827_battery_init
+[    0.255370] PMU: bd71827_power_probe begin 
+[    0.255422] dt_get_rsens() RSENS dts property 21000000
+[    0.255440] RSENS prop found 21000000
+[    0.255459] Setting curr-factor to 476
+[    0.255485] bd71827-power bd71827-power: battery_cycle = 0
+[    0.255503] bd71827_set_battery_parameters: Battery 16 
+[    0.255524] PMU : bd71827_set_battery_parameters : new table
+[    0.255544] PMU : bd71827_set_battery_parameters : ocv_table 0 is 4200 mv
+[    0.255562] PMU : bd71827_set_battery_parameters : ocv_table 1 is 4171 mv
+[    0.255582] PMU : bd71827_set_battery_parameters : ocv_table 2 is 4117 mv
+[    0.255600] PMU : bd71827_set_battery_parameters : ocv_table 3 is 4074 mv
+[    0.255619] PMU : bd71827_set_battery_parameters : ocv_table 4 is 4015 mv
+[    0.255638] PMU : bd71827_set_battery_parameters : ocv_table 5 is 3976 mv
+[    0.255657] PMU : bd71827_set_battery_parameters : ocv_table 6 is 3944 mv
+[    0.255675] PMU : bd71827_set_battery_parameters : ocv_table 7 is 3910 mv
+[    0.255694] PMU : bd71827_set_battery_parameters : ocv_table 8 is 3867 mv
+[    0.255713] PMU : bd71827_set_battery_parameters : ocv_table 9 is 3830 mv
+[    0.255732] PMU : bd71827_set_battery_parameters : ocv_table 10 is 3805 mv
+[    0.256920] bd71827-power bd71827-power: Power-on-reset off
+[    0.258286] bd71827-power bd71827-power: bd71827_init_hardware() battery through_voltage = 3264000
+[    0.259046] bd71827-power bd71827-power: Temperature = 33
+[    0.261744] bd71827-power bd71827-power: Current second 1690136692
+[    0.261774] bd71827-power bd71827-power: Last power off second 1690103836
+[    0.261799] bd71827-power bd71827-power: Till HBNT over 15 dsys to relax check
+[    0.263752] bd71827-power bd71827-power: bd71827_init_hardware() coulomb_cnt = 99988118
+[    0.768280] bd71827-power bd71827-power: VM_OCV_3 = 4098000
+[    0.769522] bd71827-power bd71827-power: bd71827_init_hardware() sorg = 92, soc_cal = 92, voltage 4098000, soc 92, charge 1, dc 1
+[    0.771917] bd71827-power bd71827-power: bd71827_init_hardware() CC_CCNTD = 99988118
+[    0.771946] bd71827-power bd71827-power: bd71827_init_hardware() pwr->soc = 92
+[    0.771973] bd71827-power bd71827-power: bd71827_init_hardware() pwr->clamp_soc = 92
+[    0.775405] bd71827_power_probe modify the OTP config for battery temperature
+[    0.956851] PMU: bd71827_power_probe end 
+[    0.960625] MIPI CSI2 driver module loaded
+[    0.961290] Advanced Linux Sound Architecture Driver Initialized.
+[    0.964935] PMU: bd71828_regulator_init
+[    0.965177] PMU: bd71828_regulator_probe begin 
+[    1.002908] [bd71828_regulator_probe-MX6SLL]...turn-off none used
+[    1.005728] PMU: bd71828_regulator_probe end 
+[    1.005896] PMU: ricoh61x_regulator_init
+[    1.006845] sy7636-pmic sy7636-pmic: num_regulators 4
+[    1.006971] sy7636-pmic sy7636-pmic: on_delay1=0x2
+[    1.007001] sy7636-pmic sy7636-pmic: on_delay2=0x2
+[    1.007029] sy7636-pmic sy7636-pmic: on_delay3=0x2
+[    1.007055] sy7636-pmic sy7636-pmic: on_delay4=0x2
+[    1.007082] sy7636-pmic sy7636-pmic: failed to get vddh_ext property
+[    1.007108] sy7636-pmic sy7636-pmic: failed to get vpdd_len property
+[    1.007132] sy7636-pmic sy7636-pmic: failed to get vp_ext property
+[    1.007156] sy7636-pmic sy7636-pmic: failed to get vee_ext property
+[    1.007181] sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+[    1.007206] sy7636-pmic sy7636-pmic: failed to get VPDD property,default will be 0x2
+[    1.007235] sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944602516
+[    1.007305] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    1.007349] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    1.007396] sy7636_regulator_probe(1088): SY7636@8c17b800
+[    1.007418] sy7636_regulator_probe():initial vcom=-2500000uV
+[    1.007418]  _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    1.013657] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    1.015086] sy7636_get_temperature():temperature = 0,reg=0x0
+[    1.015941] sy7636_get_temperature():temperature = 0,reg=0x0
+[    1.016766] PMU: bd718x7_rtc_init
+[    1.017027] PMU: bd70528_probe begin 
+[    1.025048] bd70528-rtc bd71828-rtc: rtc core: registered bd70528 as rtc0
+[    1.037334] PMU: bd70528_probe end 
+[    1.038880] Switched to clocksource mxc_timer1
+[    1.064595] NET: Registered protocol family 2
+[    1.066056] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    1.066145] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+[    1.066235] TCP: Hash tables configured (established 2048 bind 2048)
+[    1.066370] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    1.066430] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    1.066861] NET: Registered protocol family 1
+[    3.779683] bd71827-power bd71827-power: DCIN_STAT CHANGED from 0x0 to 0x1
+[    3.794744] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4199000,vmin=4104000),vsys(v=4225000,vmin=4105000),curr=800156(avg=948192),cc=100025788,dcap=1648,fcap=1646
+[    3.795647] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=0,dcin=1
+[    3.795680] udc-core: couldn't find an available UDC - added [chargedetect] to list of pending drivers
+[    4.889004] check_usb_state_by_ep() check usb ep 1000ms times out !!
+[    4.889055] bd71827-power bd71827-power: changeToDCPMode
+[    4.889086] bd71827-power bd71827-power: setCurrentLimit() set current limit 2000 mA
+[    4.889645] bd71827-power bd71827-power: setChargeCurrent() set charge current 1000 mA
+[    5.091362] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=1
+[    5.091401] drivers/input/misc/usb_plug.c(56):skip usb_plug_handler() when mxc_usbplug not exist !
+[    5.990501] imx rpmsg driver is registered.
+[    5.992829] Bus freq driver module loaded
+[    5.995097] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    6.016369] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    6.017175] fuse init (API version 7.23)
+[    6.024094] bounce: pool size: 64 pages
+[    6.024149] io scheduler noop registered
+[    6.024185] io scheduler deadline registered
+[    6.024303] io scheduler cfq registered (default)
+[    6.025312] imx-weim 21b8000.weim: Driver registered.
+[    6.030779] lm3630a_bl_parse_dt pchip=8c1e5910,hwen_gpio 91
+[    6.030814] invalid gpio: -2
+[    6.030834] lm3630a_bl_parse_dt pchip=8c1e5910,pwr_on_gpio -2
+[    6.043000] lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+[    6.045610] imx-sdma 20ec000.sdma: no event needs to be remapped
+[    6.045829] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    6.053760] imx-sdma 20ec000.sdma: initialized
+[    6.213785] imx-uart 2020000.serial: could not get sleep state
+[    6.213954] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+[    6.343521] console [ttymxc0] enabled
+[    6.345499] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+[    6.383341] imx-rng 2284000.rngb: iMX RNG Registered.
+[    6.384028] imx sema4 driver is registered.
+[    6.384228] [drm] Initialized drm 1.1.0 20060810
+[    6.385539] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    6.411768] brd: module loaded
+[    6.425329] loop: module loaded
+[    6.428762] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    6.428805] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    6.429558] usbcore: registered new interface driver usb-storage
+[    6.432189] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    6.433943] 2184000.usb supply vbus not found, using dummy regulator
+[    6.441111] mousedev: PS/2 mouse device common for all mice
+[    6.443122] input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[    6.443761] [elan] elan_ktf_ts_init driver version 0x0005: Integrated 2, 5, and 10 fingers together and auto-mapping resolution
+[    6.700401] [elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[    6.701926] [__elan_touch_init-367] firmware version 52 01 2C 31 (12C3)
+[    6.703419] [__elan_touch_init-374] firmware ID 52 F1 B5 01 (1B50)
+[    6.704929] [__elan_touch_init-406] boot code version  52 05 56 81
+[    6.704949] [boot_code]:5568
+[    6.706431] [__elan_touch_init-418] x resolution: 1436 
+[    6.707912] [__elan_touch_init-423] y resolution: 1920 
+[    6.708510] input: elan-touch as /devices/virtual/input/input1
+[    6.709935] elan ts starts in interrupt mode.
+[    6.710129] elan_touch_init(1894)
+[    6.710442] cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+[    6.713509] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+[    6.713862] i2c /dev entries driver
+[    6.715181] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021db0 ntx_machine_poweroff
+[    6.725720] syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+[    6.726047] PMU: ricoh61x_battery_init
+[    6.726824] sy7636_sensor_probe starting
+[    6.727157] sy7636_sensor_probe success
+[    6.730717] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    6.731106] PMIC != RC5T619, need to feed watchdog
+[    6.731127] watchdog_feeder_init
+[    6.731641] watchdog device ready !!
+[    6.731670] watchdog feeding_interval = 57000 ms
+[    6.732525] sdhci: Secure Digital Host Controller Interface driver
+[    6.732550] sdhci: Copyright(c) Pierre Ossman
+[    6.732587] sdhci-pltfm: SDHCI platform and OF driver helper
+[    6.735360] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    6.735486] sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+[    6.736960] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    6.738779] led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+[    6.779118] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    6.780331] /soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+[    6.780690] sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+[    6.780725] sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+[    6.783673] led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+[    6.804851] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207000,vmin=4123500),vsys(v=4306000,vmin=4165500),curr=951048(avg=948192),cc=100058174,dcap=1648,fcap=1646
+[    6.830039] mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+[    6.841114] led_classdev_register():led_cdev->name=GLED,name=GLED
+[    6.842141] usbcore: registered new interface driver usbhid
+[    6.842165] usbhid: USB HID core driver
+[    6.846363] usbcore: registered new interface driver snd-usb-audio
+[    6.864452] fsl-asrc 2034000.asrc: driver registered
+[    6.868101] NET: Registered protocol family 17
+[    6.868183] lib80211: common routines for IEEE802.11 drivers
+[    6.868206] lib80211_crypt: registered algorithm 'NULL'
+[    6.868244] lib80211_crypt: registered algorithm 'WEP'
+[    6.868280] lib80211_crypt: registered algorithm 'CCMP'
+[    6.868316] lib80211_crypt: registered algorithm 'TKIP'
+[    6.872208] ntx_wifi_bt_power_init() : done 
+[    6.872232] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[    6.872241] Wifi / BT power control 0
+[    6.872250] Wifi already off.
+[    6.872284] wifi 3v3 power off
+[    6.872295] _ntx_wifi_bt_power_ctrl() : done 
+[    6.891777] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(8243):EPD 1024x758 
+[    6.891814] imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+[    6.894928] imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+[    6.897054] mmc0: host does not support reading read-only switch, assuming write-enable
+[    6.910008] mmc0: new high speed SDHC card at address 0001
+[    6.918960] mmcblk0: mmc0:0001 SD 15.0 GiB 
+[    6.920369]  mmcblk0: p1 p2 p3 p4
+[    6.925345] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    6.925389] waveform_size_setup() wf_size=582529
+[    6.925405] ***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+[    6.925462] waveform_p_setup() wf_p=8ff71a00,vaddr=91000a00,size=582529
+[    6.925863] mxc_epdc_fb_init_hw(7960)
+[    6.925914] [epdc_firmware_work_func]:fw p=91000a00,size=582529,fb_data@8d1f2000,pdata=80f4fea0
+[    6.925925] mxc_epdc_fb_fw_handler(7404),fw=8c197ee8
+[    6.925934] mxc_epdc_fb_fw_handler(): fw p=91000a00,size=582529
+[    6.925958] advance waveform awv : 1 
+[    6.926000] imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+[    6.926014] imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R427_AD7E21_ED060XH7U4_VB3300-FOC_TC
+[    6.926027] imx_epdc_v2_fb 228c000.epdc: Waveform file does not support advanced algorithms
+[    6.926077] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[    6.928996] EPD QOS_WR 0x7, QOS_RD 0x7
+[    6.929035] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+[    6.929047] fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfeef=>-273 10mV,-2730000 uV
+[    6.929067] drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(2067):k_fake_s1d13522_init,DisplayResolution=1
+[    6.946768] Hall:do-not-wakeup-hibernation=0
+[    6.960042] _sy7636_vcom_get_voltage() : vcom=-2730000uV
+[    6.993106] input: bd71828-pwrkey as /devices/platform/soc/2100000.aips-bus/21f8000.i2c/i2c-3/3-004b/bd71828-pwrkey/input/input2
+[    6.994816] bd70528-rtc bd71828-rtc: setting system clock to 2023-07-23 18:24:59 UTC (1690136699)
+[    7.008168] TMST_SY7636: disabling
+[    7.019640] SD1_SPWR: disabling
+[    7.019662] vref-3v3: disabling
+[    7.020022] ALSA device list:
+[    7.020035]   No soundcards found.
+[    7.020136] sy7636_get_temperature():temperature = 31,reg=0x1f
+[    7.032025] Freeing unused kernel memory: 7532K (807df000 - 80f3a000)
+[    8.609483] imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+[    9.553688] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[    9.783585] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[    9.791637] random: tr urandom read with 58 bits of entropy available
+[    9.816544] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4209333,vmin=4153666),vsys(v=4333333,vmin=4239000),curr=941528(avg=948192),cc=100097198,dcap=1648,fcap=1646
+[   12.709209] usb plugged 0x21
+[   12.829425] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4210500,vmin=4168750),vsys(v=4347000,vmin=4276000),curr=932008(avg=948192),cc=100135814,dcap=1648,fcap=1646
+[   15.848364] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4211200,vmin=4177800),vsys(v=4355000,vmin=4298200),curr=924868(avg=948192),cc=100174110,dcap=1648,fcap=1646
+[   15.925335] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   15.960881] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   18.858486] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4211666,vmin=4183833),vsys(v=4360500,vmin=4313000),curr=921060(avg=948192),cc=100212242,dcap=1648,fcap=1646
+[   21.321728] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[   21.865547] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4212000,vmin=4188142),vsys(v=4364142,vmin=4323428),curr=918204(avg=948192),cc=100250206,dcap=1648,fcap=1646
+[   24.872830] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4212250,vmin=4191375),vsys(v=4367000,vmin=4331250),curr=918680(avg=948192),cc=100288186,dcap=1648,fcap=1646
+[   25.349959] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: 
+[   25.368383] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: 
+[   26.005197] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   26.012908] squashfs: SQUASHFS error: unable to read xattr id index table
+[   27.882876] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4212444,vmin=4193888),vsys(v=4369333,vmin=4337444),curr=915824(avg=948192),cc=100325990,dcap=1648,fcap=1646
+[   30.892775] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4212500,vmin=4195800),vsys(v=4371100,vmin=4342400),curr=909636(avg=948192),cc=100363610,dcap=1648,fcap=1646
+[   33.148951] random: nonblocking pool is initialized
+[   33.915965] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4214000,vmin=4206800),vsys(v=4387400,vmin=4370600),curr=904876(avg=948192),cc=100401060,dcap=1648,fcap=1646
+[   36.931159] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4213900,vmin=4213900),vsys(v=4387400,vmin=4386700),curr=901544(avg=948192),cc=100438350,dcap=1648,fcap=1646
+[   39.419644] udevd[963]: starting version 3.2.9
+[   39.725439] udevd[964]: starting eudev-3.2.9
+[   39.942840] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213900),vsys(v=4387400,vmin=4386800),curr=899164(avg=948192),cc=100475528,dcap=1648,fcap=1646
+[   42.181339] configfs: exports duplicate symbol config_group_find_item (owned by kernel)
+[   42.274635] libcomposite: exports duplicate symbol usb_os_desc_prepare_interf_dir (owned by kernel)
+[   42.389482] u_ether: exports duplicate symbol gether_cleanup (owned by kernel)
+[   42.841637] usb_f_rndis: exports duplicate symbol rndis_add_hdr (owned by kernel)
+[   42.950759] using random self ethernet address
+[   42.950856] using random host ethernet address
+[   42.961837] usb0: HOST MAC 9e:42:54:e5:38:dc
+[   42.962496] usb0: MAC c2:61:da:52:c4:65
+[   42.962947] using random self ethernet address
+[   42.963022] using random host ethernet address
+[   42.963322] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[   42.963347] g_ether gadget: g_ether ready
+[   42.971251] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213900),vsys(v=4387400,vmin=4386800),curr=896308(avg=948192),cc=100512586,dcap=1648,fcap=1646
+[   45.983226] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213800),vsys(v=4387400,vmin=4386800),curr=893452(avg=948192),cc=100549520,dcap=1648,fcap=1646
+[   49.005304] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213700),vsys(v=4387400,vmin=4386700),curr=891072(avg=948192),cc=100586362,dcap=1648,fcap=1646
+[   52.028748] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213600),vsys(v=4387500,vmin=4386800),curr=887264(avg=948192),cc=100623068,dcap=1648,fcap=1646
+[   55.036041] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213500),vsys(v=4387500,vmin=4386900),curr=886312(avg=833952),cc=100659690,dcap=1648,fcap=1646
+[   58.045450] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213400),vsys(v=4387400,vmin=4386900),curr=883932(avg=833952),cc=100696244,dcap=1648,fcap=1646
+[   61.053103] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213900,vmin=4213400),vsys(v=4387500,vmin=4386900),curr=880124(avg=833952),cc=100732642,dcap=1648,fcap=1646
+[   63.536780] udevd[1457]: starting version 3.2.9
+[   64.069952] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213800,vmin=4213300),vsys(v=4387500,vmin=4386900),curr=878220(avg=833952),cc=100768960,dcap=1648,fcap=1646
+[   64.072709] udevd[1458]: starting eudev-3.2.9
+[   64.939909] udevd[1472]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/enabled} for writing: Permission denied
+[   64.992761] udevd[1472]: error opening ATTR{/sys/devices/platform/ntx_event0/input/input0/event0/authorized} for writing: Permission denied
+[   65.899502] udevd[1477]: error opening ATTR{/sys/devices/virtual/input/input1/event1/enabled} for writing: Permission denied
+[   65.944786] udevd[1477]: error opening ATTR{/sys/devices/virtual/input/input1/event1/authorized} for writing: Permission denied
+[   67.099897] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213700,vmin=4213200),vsys(v=4387600,vmin=4386800),curr=876316(avg=833952),cc=100805186,dcap=1648,fcap=1646
+[   70.125446] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213600,vmin=4213100),vsys(v=4387500,vmin=4386800),curr=874412(avg=833952),cc=100841344,dcap=1648,fcap=1646
+[   73.147556] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213500,vmin=4213000),vsys(v=4387400,vmin=4386800),curr=871080(avg=833952),cc=100877298,dcap=1648,fcap=1646
+[   76.152887] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213400,vmin=4213000),vsys(v=4387500,vmin=4386800),curr=870128(avg=833952),cc=100913276,dcap=1648,fcap=1646
+[   79.163822] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213300,vmin=4213000),vsys(v=4387400,vmin=4386900),curr=867748(avg=833952),cc=100949148,dcap=1648,fcap=1646
+[   82.172953] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213200,vmin=4213000),vsys(v=4387500,vmin=4386900),curr=865844(avg=833952),cc=100984928,dcap=1648,fcap=1646
+[   85.182861] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213100,vmin=4213000),vsys(v=4387500,vmin=4386900),curr=862988(avg=833952),cc=101020604,dcap=1648,fcap=1646
+[   88.193017] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387600,vmin=4386900),curr=860608(avg=833952),cc=101056176,dcap=1648,fcap=1646
+[   91.202863] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387500,vmin=4386900),curr=859180(avg=833952),cc=101091684,dcap=1648,fcap=1646
+[   94.212975] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387400,vmin=4386900),curr=856800(avg=833952),cc=101127096,dcap=1648,fcap=1646
+[   97.222973] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387300,vmin=4387000),curr=854896(avg=833952),cc=101162444,dcap=1648,fcap=1646
+[  100.243916] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387300,vmin=4387000),curr=852516(avg=833952),cc=101197704,dcap=1648,fcap=1646
+[  103.252950] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387300,vmin=4387000),curr=851088(avg=833952),cc=101232872,dcap=1648,fcap=1646
+[  106.262937] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387200,vmin=4387000),curr=849184(avg=833952),cc=101267972,dcap=1648,fcap=1646
+[  107.630135] sy7636_get_temperature():temperature = 31,reg=0x1f
+[  109.286292] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387200,vmin=4387000),curr=847280(avg=833952),cc=101303000,dcap=1648,fcap=1646
+[  111.015768] [_lm3630a_set_FL-1123] led A c=12,b=4, led B c=0,b=0
+[  111.059345] [_lm3630a_set_FL-1123] led A c=31,b=3, led B c=0,b=0
+[  111.099460] [_lm3630a_set_FL-1123] led A c=31,b=11, led B c=0,b=0
+[  111.139625] [_lm3630a_set_FL-1123] led A c=31,b=14, led B c=0,b=0
+[  111.180274] [_lm3630a_set_FL-1123] led A c=31,b=16, led B c=0,b=0
+[  111.220890] [_lm3630a_set_FL-1123] led A c=31,b=18, led B c=0,b=0
+[  111.261404] [_lm3630a_set_FL-1123] led A c=31,b=20, led B c=0,b=0
+[  111.302075] [_lm3630a_set_FL-1123] led A c=31,b=25, led B c=0,b=0
+[  111.342791] [_lm3630a_set_FL-1123] led A c=31,b=30, led B c=0,b=0
+[  111.383469] [_lm3630a_set_FL-1123] led A c=31,b=36, led B c=0,b=0
+[  111.424103] [_lm3630a_set_FL-1123] led A c=31,b=39, led B c=0,b=0
+[  111.465896] [_lm3630a_set_FL-1123] led A c=31,b=43, led B c=0,b=0
+[  111.508460] [_lm3630a_set_FL-1123] led A c=31,b=47, led B c=0,b=0
+[  111.549490] [_lm3630a_set_FL-1123] led A c=31,b=50, led B c=0,b=0
+[  111.590172] [_lm3630a_set_FL-1123] led A c=31,b=53, led B c=0,b=0
+[  111.630793] [_lm3630a_set_FL-1123] led A c=31,b=59, led B c=0,b=0
+[  111.671353] [_lm3630a_set_FL-1123] led A c=31,b=64, led B c=0,b=0
+[  111.712035] [_lm3630a_set_FL-1123] led A c=31,b=71, led B c=0,b=0
+[  111.752747] [_lm3630a_set_FL-1123] led A c=31,b=79, led B c=0,b=0
+[  111.793385] [_lm3630a_set_FL-1123] led A c=31,b=86, led B c=0,b=0
+[  111.834063] [_lm3630a_set_FL-1123] led A c=31,b=92, led B c=0,b=0
+[  111.874657] [_lm3630a_set_FL-1123] led A c=31,b=98, led B c=0,b=0
+[  111.915316] [_lm3630a_set_FL-1123] led A c=31,b=102, led B c=0,b=0
+[  111.955929] [_lm3630a_set_FL-1123] led A c=31,b=108, led B c=0,b=0
+[  111.996502] [_lm3630a_set_FL-1123] led A c=31,b=109, led B c=0,b=0
+[  112.038274] [_lm3630a_set_FL-1123] led A c=31,b=113, led B c=0,b=0
+[  112.081146] [_lm3630a_set_FL-1123] led A c=31,b=114, led B c=0,b=0
+[  112.121869] [_lm3630a_set_FL-1123] led A c=31,b=117, led B c=0,b=0
+[  112.162580] [_lm3630a_set_FL-1123] led A c=31,b=119, led B c=0,b=0
+[  112.203369] [_lm3630a_set_FL-1123] led A c=31,b=121, led B c=0,b=0
+[  112.244007] [_lm3630a_set_FL-1123] led A c=31,b=123, led B c=0,b=0
+[  112.305935] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4213000),vsys(v=4387200,vmin=4387000),curr=843472(avg=833952),cc=101337900,dcap=1648,fcap=1646
+[  115.319086] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4212900),vsys(v=4387200,vmin=4386900),curr=842996(avg=833952),cc=101372696,dcap=1648,fcap=1646
+[  118.339503] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4212900),vsys(v=4387200,vmin=4387000),curr=837760(avg=862988),cc=101407332,dcap=1648,fcap=1646
+[  121.355560] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4212800),vsys(v=4387300,vmin=4387100),curr=835380(avg=862988),cc=101441868,dcap=1648,fcap=1646
+[  124.369635] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4213000,vmin=4212700),vsys(v=4387400,vmin=4387200),curr=833000(avg=862988),cc=101476316,dcap=1648,fcap=1646
+[  126.218788] bd71827-power bd71827-power: 
+[  126.218788] ~~~DCIN removed
+[  126.218988] bd71827-power bd71827-power: changeToNoneMode
+[  126.219048] bd71827-power bd71827-power: setCurrentLimit() set current limit 50 mA
+[  126.219761] bd71827-power bd71827-power: setChargeCurrent() set charge current 100 mA
+[  126.321986] usb unplugged
+[  127.369710] bd71827-power bd71827-power: DCIN_STAT CHANGED from 0x1 to 0x0
+[  127.392529] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,2),v=4202800,vmin=4202500),vsys(v=4359500,vmin=4359200),curr=38080(avg=862988),cc=101499742,dcap=1648,fcap=1646
+[  128.609485] 
+[  128.609485] Bus freq set to 24000000 start...
+[  128.609772] 
+[  128.609772] Bus freq set to 24000000 done...
+[  128.836227] 
+[  128.836227] Bus freq set to 400000000 start...
+[  128.836547] 
+[  128.836547] Bus freq set to 400000000 done...
+[  130.405205] bd71827-power bd_work_callback():soc(c=93,v=100,clamp_soc=93),vbat(stat=(32,2),v=4191600,vmin=4190700),vsys(v=4330500,vmin=4329200),curr=-146608(avg=-862988),cc=101491778,dcap=1648,fcap=1646
+[  131.529921] 
+[  131.529921] Bus freq set to 24000000 start...
+[  131.530200] 
+[  131.530200] Bus freq set to 24000000 done...
+[  131.606194] 
+[  131.606194] Bus freq set to 400000000 start...
+[  131.606486] 
+[  131.606486] Bus freq set to 400000000 done...
+[  133.019782] 
+[  133.019782] Bus freq set to 24000000 start...
+[  133.020075] 
+[  133.020075] Bus freq set to 24000000 done...
+[  133.105671] 
+[  133.105671] Bus freq set to 400000000 start...
+[  133.105969] 
+[  133.105969] Bus freq set to 400000000 done...
+[  133.413391] bd71827-power bd_work_callback():soc(c=93,v=100,clamp_soc=93),vbat(stat=(32,2),v=4180700,vmin=4179800),vsys(v=4301900,vmin=4300600),curr=-109480(avg=-862988),cc=101487208,dcap=1648,fcap=1646
+[  134.019659] 
+[  134.019659] Bus freq set to 24000000 start...
+[  134.019942] 
+[  134.019942] Bus freq set to 24000000 done...
+[  134.605216] 
+[  134.605216] Bus freq set to 400000000 start...
+[  134.605503] 
+[  134.605503] Bus freq set to 400000000 done...
+[  135.529503] 
+[  135.529503] Bus freq set to 24000000 start...
+[  135.529787] 
+[  135.529787] Bus freq set to 24000000 done...
+[  136.104815] 
+[  136.104815] Bus freq set to 400000000 start...
+[  136.105113] 
+[  136.105113] Bus freq set to 400000000 done...
+[  136.423354] bd71827-power bd_work_callback():soc(c=93,v=100,clamp_soc=93),vbat(stat=(32,2),v=4169900,vmin=4168600),vsys(v=4273500,vmin=4271700),curr=-45696(avg=-862988),cc=101482496,dcap=1648,fcap=1646
+[  137.019723] 
+[  137.019723] Bus freq set to 24000000 start...
+[  137.019999] 
+[  137.019999] Bus freq set to 24000000 done...
+[  137.037275] 
+[  137.037275] Bus freq set to 400000000 start...
+[  137.037548] 
+[  137.037548] Bus freq set to 400000000 done...
+[  138.379467] 
+[  138.379467] Bus freq set to 24000000 start...
+[  138.379746] 
+[  138.379746] Bus freq set to 24000000 done...
+[  138.606081] 
+[  138.606081] Bus freq set to 400000000 start...
+[  138.606377] 
+[  138.606377] Bus freq set to 400000000 done...
+[  139.439442] bd71827-power bd_work_callback():soc(c=93,v=100,clamp_soc=93),vbat(stat=(32,2),v=4158000,vmin=4156700),vsys(v=4243800,vmin=4242000),curr=-106148(avg=-862988),cc=101477116,dcap=1648,fcap=1646
+[  141.019553] 
+[  141.019553] Bus freq set to 24000000 start...
+[  141.019838] 
+[  141.019838] Bus freq set to 24000000 done...
+[  141.041767] 
+[  141.041767] Bus freq set to 400000000 start...
+[  141.042045] 
+[  141.042045] Bus freq set to 400000000 done...
+[  142.459400] bd71827-power bd_work_callback():soc(c=93,v=94,clamp_soc=93),vbat(stat=(32,2),v=4146300,vmin=4145000),vsys(v=4214400,vmin=4212700),curr=-107100(avg=-862988),cc=101472692,dcap=1648,fcap=1646
+[  142.519550] 
+[  142.519550] Bus freq set to 24000000 start...
+[  142.519830] 
+[  142.519830] Bus freq set to 24000000 done...
+[  142.525599] 
+[  142.525599] Bus freq set to 400000000 start...
+[  142.525771] 
+[  142.525771] Bus freq set to 400000000 done...
+[  143.519616] 
+[  143.519616] Bus freq set to 24000000 start...
+[  143.519893] 
+[  143.519893] Bus freq set to 24000000 done...
+[  144.104675] 
+[  144.104675] Bus freq set to 400000000 start...
+[  144.104981] 
+[  144.104981] Bus freq set to 400000000 done...
+[  144.479975] bd71827-power bd71827-power: 
+[  144.479975] ~~~DCIN inserted
+[  144.480004] bd71827-power bd71827-power: changeToSDPMode
+[  144.480018] bd71827-power bd71827-power: setCurrentLimit() set current limit 500 mA
+[  144.480468] bd71827-power bd71827-power: setChargeCurrent() set charge current 500 mA
+[  144.679689] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=2,dcin=1
+[  144.679717] udc-core: couldn't find an available UDC - added [chargedetect] to list of pending drivers
+[  144.679728] check_usb_state_by_ep()  usb_state = 1 !!
+[  144.679741] bd71827-power bd71827-power: changeToSDPMode
+[  144.679754] bd71827-power bd71827-power: setCurrentLimit() set current limit 500 mA
+[  144.680262] bd71827-power bd71827-power: setChargeCurrent() set charge current 500 mA
+[  144.882599] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=2
+[  144.882728] usb plugged 0x1
+[  144.918315] g_ether gadget: high-speed config #1: CDC Ethernet (ECM)
+[  145.459965] bd71827-power bd71827-power: DCIN_STAT CHANGED from 0x0 to 0x1
+[  145.486315] bd71827-power bd_work_callback():soc(c=93,v=94,clamp_soc=93),vbat(stat=(32,1),v=4135600,vmin=4133300),vsys(v=4213800,vmin=4183200),curr=-59024(avg=-862988),cc=101468686,dcap=1648,fcap=1646
+[  148.499268] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4134300,vmin=4130200),vsys(v=4201400,vmin=4167200),curr=860132(avg=862988),cc=101501518,dcap=1648,fcap=1646
+[  151.536641] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4133300,vmin=4128900),vsys(v=4189100,vmin=4154300),curr=857276(avg=862988),cc=101536862,dcap=1648,fcap=1646
+[  154.549612] bd71827-power bd_work_callback():soc(c=93,v=93,clamp_soc=93),vbat(stat=(32,1),v=4132400,vmin=4128000),vsys(v=4176900,vmin=4142000),curr=858704(avg=862988),cc=101572326,dcap=1648,fcap=1646
+[  157.568622] bd71827-power bd_work_callback():soc(c=94,v=94,clamp_soc=94),vbat(stat=(32,1),v=4141900,vmin=4137300),vsys(v=4194100,vmin=4157900),curr=862988(avg=862988),cc=101607842,dcap=1648,fcap=1646

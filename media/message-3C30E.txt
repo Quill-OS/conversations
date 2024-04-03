@@ -1,0 +1,879 @@
+nicolas@archlinux-t450 ~/D/inkbox-git> ssh -oUserKnownHostsFile=/dev/null -oGlobalKnownHostsFile=/dev/null root@192.168.3.2
+The authenticity of host '192.168.3.2 (192.168.3.2)' can't be established.
+ED25519 key fingerprint is SHA256:lU7osa3DIJydkeH6Dyno0yaTiOBeT+xti097opyXK4Q.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.3.2' (ED25519) to the list of known hosts.
+root@192.168.3.2's password: 
+Welcome to InkBox OS!
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+kobo:~# chroot /kobo
+kobo:/# cd /mnt/onboard/.adds/innkbox
+/bin/ash: cd: can't cd to /mnt/onboard/.adds/innkbox
+kobo:/# cd /mnt/onboard/.adds/inkbox
+kobo:/mnt/onboard/.adds/inkbox# killall inkbox inkbox-bin; QT_QPA_PLATFORM=kobo:keyboard:debug ./inkbox
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+Motion debug enabled. Debug information for screen and mouse will be printed
+Motion debug enabled. Debug information for screen and mouse will be printed
+[FBInk] Unidentified Kobo device code (40)!
+[FBInk] Detected a Kobo Unknown! (40 => ?? @ Mark ?)
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 167 dpi
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM (Default) base glyph size: 8x8)
+[FBInk] Line length: 67 cols, Page size: 90 rows
+[FBInk] Horizontal fit is perfect!
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Updating bitdepth from 8bpp to 8bpp
+Updating grayscale value from 1 to 1
+Updating rotation from 3 (Counter Clockwise, 270°) to 3 (Counter Clockwise, 270°)
+Bitdepth is now 8bpp (grayscale: 1) @ rotate: 3 (Counter Clockwise, 270°)
+Screen info: 1072 1448 rotation: 3 rotation canonical: 0 bpp: 8
+Allocated screen buffer. Stride: 1088 buffer size: 6782976
+device: "alyssum" 340 
+ screen: 1072 1448 dpi: 300
+libinput not found, device hot-plugging disabled
+tslib not found
+Additional input libraries aren't available: hot-plugging unavailable; using evdev
+Created instance of QEvdevKeyboardManager
+WARNING: Additional command line arguments may be required for input. Please read the documentation.
+kobofb: Finished initialization.
+qUncompress: Input data is corrupted
+execve("/mnt/onboard/.adds/inkbox/2048-bin", ["/mnt/onboard/.adds/inkbox/2048-b"...], 0x7e954cf0 /* 20 vars */) = 0
+brk(NULL)                               = 0x2e000
+uname({sysname="Linux", nodename="kobo", ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2aacb000
+open("/lib/invert_screen.so", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\220\24\0\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=32229, ...}) = 0
+mmap2(NULL, 89684, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2ab01000
+mprotect(0x2ab06000, 65536, PROT_NONE)  = 0
+mmap2(0x2ab16000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x5000) = 0x2ab16000
+close(8)                                = 0
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/neon/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/neon/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/neon/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/neon", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/v7l", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/neon/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/neon/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/neon/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/neon", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/tls", Updating bitdepth from 8bpp to 8bpp
+Updating grayscale value from 1 to 1
+Updating rotation from 3 (Counter Clockwise, 270°) to 3 (Counter Clockwise, 270°)
+0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/neon/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/neon/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/neon/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/neon", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/v7l", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/neon/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/neon/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/neon/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/neon", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/vfp/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/vfp", 0x7e9d4360) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\350|\17\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=4850056, ...}) = 0
+mmap2(NULL, 4914964, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2abb9000
+mprotect(0x2b03c000, 65536, PROT_NONE)  = 0
+mmap2(0x2b04c000, 118784, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x483000) = 0x2b04c000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libQt5Gui.so.5", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0H+\n\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=4482212, ...}) = 0
+mmap2(NULL, 4568092, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2b069000
+mprotect(0x2b4a1000, 65536, PROT_NONE)  = 0
+mmap2(0x2b4b1000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x438000) = 0x2b4b1000
+mmap2(0x2b4bf000, 21532, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x2b4bf000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libQt5Core.so.5", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0x\3\10\0004\0\0\0"..., 512) = 512
+lseek(8, 5116336, SEEK_SET)             = 5116336
+read(8, "\4\0\0\0\20\0\0\0\1\0\0\0GNU\0\0\0\0\0\2\0\0\0\6\0\0\0\34\0\0\0", 32) = 32
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2ab39000
+fstat64(8, {st_mode=S_IFREG|0755, st_size=5168060, ...}) = 0
+mmap2(NULL, 5245392, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2b4c5000
+mprotect(0x2b9a7000, 61440, PROT_NONE)  = 0
+mmap2(0x2b9b6000, 53248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x4e1000) = 0x2b9b6000
+mmap2(0x2b9c3000, 10704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x2b9c3000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 8
+fstat64(8, {st_mode=S_IFREG|0644, st_size=1107, ...}) = 0
+mmap2(NULL, 1107, PROT_READ, MAP_PRIVATE, 8, 0) = 0x2aaee000
+close(8)                                = 0
+open("/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\344H\0\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=122897, ...}) = 0
+mmap2(NULL, 127568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2b9c6000
+mprotect(0x2b9db000, 28672, PROT_NONE)  = 0
+mmap2(0x2b9e2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x14000) = 0x2b9e2000
+mmap2(0x2b9e4000, 4688, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x2b9e4000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\271\7\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=1385008, ...}) = 0
+mmap2(NULL, 1457684, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2b9e6000
+mprotect(0x2bb31000, 65536, PROT_NONE)  = 0
+mmap2(0x2bb41000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x14b000) = 0x2bb41000
+mmap2(0x2bb48000, 7700, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x2bb48000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0<\0\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=435632, ...}) = 0
+mmap2(NULL, 467088, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2bb4a000
+mprotect(0x2bbb4000, 28672, PROT_NONE)  = 0
+mmap2(0x2bbbb000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x69000) = 0x2bbbb000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\270\315\0\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0644, st_size=114072, ...}) = 0
+mmap2(NULL, 145572, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2ab3a000
+mprotect(0x2ab56000, 28672, PROT_NONE)  = 0
+mmap2(0x2ab5d000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x1b000) = 0x2ab5d000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/neon/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/neon/vfp", 0x7e9d42b8) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/neon/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/neon", 0x7e9d42b8) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/vfp", 0x7e9d42b8)  = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l", 0x7e9d42b8)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/neon/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/neon/vfp", 0x7e9d42b8) = -1 ENOENT (No such file or directory)
+open("/lib/tls/neon/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/neon", 0x7e9d42b8)     = -1 ENOENT (No such file or directory)
+open("/lib/tls/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/vfp", 0x7e9d42b8)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls", 0x7e9d42b8)          = -1 ENOENT (No such file or directory)
+open("/lib/v7l/neon/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/neon/vfp", 0x7e9d42b8) = -1 ENOENT (No such file or directory)
+open("/lib/v7l/neon/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/neon", 0x7e9d42b8)     = -1 ENOENT (No such file or directory)
+open("/lib/v7l/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/vfp", 0x7e9d42b8)      = -1 ENOENT (No such file or directory)
+open("/lib/v7l/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l", 0x7e9d42b8)          = -1 ENOENT (No such file or directory)
+open("/lib/neon/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/neon/vfp", 0x7e9d42b8)     = -1 ENOENT (No such file or directory)
+open("/lib/neon/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/neon", 0x7e9d42b8)         = -1 ENOENT (No such file or directory)
+open("/lib/vfp/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/vfp", 0x7e9d42b8)          = -1 ENOENT (No such file or directory)
+open("/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10o\1\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=1226300, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2ab17000
+mmap2(NULL, 1262952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2bbbd000
+mprotect(0x2bce5000, 28672, PROT_NONE)  = 0
+mmap2(0x2bcec000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x127000) = 0x2bcec000
+mmap2(0x2bcef000, 9576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x2bcef000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0,\t\0\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=9648, ...}) = 0
+mmap2(NULL, 41144, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2ab18000
+mprotect(0x2ab1a000, 28672, PROT_NONE)  = 0
+mmap2(0x2ab21000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x1000) = 0x2ab21000
+close(8)                                = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = 8
+read(8, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\27\0\0004\0\0\0"..., 512) = 512
+fstat64(8, {st_mode=S_IFREG|0755, st_size=26480, ...}) = 0
+mmap2(NULL, 57872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 8, 0) = 0x2ab25000
+mprotect(0x2ab2b000, 28672, PROT_NONE)  = 0
+mmap2(0x2ab32000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 8, 0x5000) = 0x2ab32000
+close(8)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2aad9000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2bcf2000
+set_tls(0x2bcf24c0)                     = 0
+mprotect(0x2bcec000, 8192, PROT_READ)   = 0
+mprotect(0x2b9e2000, 4096, PROT_READ)   = 0
+mprotect(0x2ab32000, 4096, PROT_READ)   = 0
+mprotect(0x2ab21000, 4096, PROT_READ)   = 0
+mprotect(0x2bbbb000, 4096, PROT_READ)   = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2bd90000
+mprotect(0x2bb41000, 20480, PROT_READ)  = 0
+mprotect(0x2b9b6000, 32768, PROT_READ)  = 0
+mprotect(0x2b4b1000, 32768, PROT_READ)  = 0
+mprotect(0x2b04c000, 86016, PROT_READ)  = 0
+mprotect(0x2c000, 4096, PROT_READ)      = 0
+mprotect(0x2abb7000, 4096, PROT_READ)   = 0
+munmap(0x2aaee000, 1107)                = 0
+set_tid_address(0x2bcf2068)             = 13545
+set_robust_list(0x2bcf2070, 12)         = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x2b9ca248, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x2bbe9a80}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x2b9ca32c, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x2bbe9a80}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+ugetrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+brk(NULL)                               = 0x2e000
+brk(0x53000)                            = 0x53000
+futex(0x2ab220ac, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+pipe2([8, 9], O_CLOEXEC)                = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x2bcf2068) = 13546
+close(9)                                = 0
+fcntl64(8, F_SETFD, 0)                  = 0
+fstat64(8, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2aad1000
+read(8, "alyssum\n", 4096)              = 8
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=13546, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+close(8)                                = 0
+wait4(13546, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 13546
+munmap(0x2aad1000, 4096)                = 0
+open("/dev/fb0", O_RDWRBitdepth is now 8bpp (grayscale: 1) @ rotate: 3 (Counter Clockwise, 270°)
+)                = 8
+ioctl(8, FBIOGET_FSCREENINFO, 0x2ab162f8) = 0
+ioctl(8, FBIOGET_VSCREENINFO, 0x2ab16258) = 0
+mmap2(NULL, 6782976, PROT_READ|PROT_WRITE, MAP_SHARED, 8, 0) = 0x2bd91000
+unlink("/tmp/invertScreen")             = 0
+mknod("/tmp/invertScreen", S_IFIFO|0600) = 0
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x2c4fa000
+mprotect(0x2c4fa000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x2ccf8f58, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[13549], tls=0x2ccf98e0, child_tidptr=0x2ccf9488) = 13549
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x2cd65000
+mprotect(0x2cd65000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x2d563f58, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[13550], tls=0x2d5648e0, child_tidptr=0x2d564488) = 13550
+open("/mnt/onboard/.kobo/nightmode.ini", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(2, "iniparser: cannot open /mnt/onbo"..., 56iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+) = 56
+stat64("/mnt/onboard/.kobo/nightmode.ini", 0x7e9d4b90) = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGINT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x2bbe9a70}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x2bbe9a70}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+clone(child_stack=NULL, flags=CLONE_PARENT_SETTID|SIGCHLD, parent_tid=[13551]) = 13551
+wait4(13551, kobo:/mnt/onboard/.adds/inkbox# cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 13551
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x2bbe9a70}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x2bbe9a70}, NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+clock_gettime(CLOCK_REALTIME, {tv_sec=1677892637, tv_nsec=602416562}) = 0
+futex(0x2bb48708, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bb4870c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+geteuid32()                             = 0
+getuid32()                              = 0
+futex(0x2b9c30c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/locale/C/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 13
+read(13, "\236\245\267%", 4)            = 4
+access("/proc/13545/exe", F_OK)         = 0
+lstat64("/proc/13545/exe", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+lstat64("/proc", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat64("/proc/13545", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat64("/proc/13545/exe", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+readlink("/proc/13545/exe", "/mnt/onboard/.adds/inkbox/2048-b"..., 4095) = 34
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard/.adds", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/inkbox", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/inkbox/2048-bin", {st_mode=S_IFREG|0755, st_size=83124, ...}) = 0
+access("/mnt/onboard/.adds/inkbox/qt.conf", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib", F_OK) = 0
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins", F_OK) = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard/.adds", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard/.adds", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/inkbox", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+access("/mnt/onboard/.adds/inkbox", F_OK) = 0
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/.", F_OK) = 0
+openat(AT_FDCWD, "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 14
+getdents64(14, 0x36bf0 /* 2 entries */, 32768) = 64
+getdents64(14, 0x36bf0 /* 0 entries */, 32768) = 0
+close(14)                               = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard/.adds", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so", {st_mode=S_IFREG|0755, st_size=943976, ...}) = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 14
+fstat64(14, {st_mode=S_IFREG|0755, st_size=943976, ...}) = 0
+fstat64(14, {st_mode=S_IFREG|0755, st_size=943976, ...}) = 0
+mmap2(NULL, 943976, PROT_READ, MAP_SHARED, 14, 0) = 0x2d5c6000
+close(14)                               = 0
+munmap(0x2d5c6000, 943976)              = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/onboard/.adds", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so", {st_mode=S_IFREG|0755, st_size=814452, ...}) = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 14
+fstat64(14, {st_mode=S_IFREG|0755, st_size=814452, ...}) = 0
+fstat64(14, {st_mode=S_IFREG|0755, st_size=814452, ...}) = 0
+mmap2(NULL, 814452, PROT_READ, MAP_SHARED, 14, 0) = 0x2c409000
+close(14)                               = 0
+munmap(0x2c409000, 814452)              = 0
+access("/mnt/onboard/.adds/inkbox/platforms/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/onboard/.adds/inkbox/qt.conf", F_OK) = -1 ENOENT (No such file or directory)
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so", O_RDONLY|O_CLOEXEC) = 14
+read(14, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p_\1\0004\0\0\0"..., 512) = 512
+fstat64(14, {st_mode=S_IFREG|0755, st_size=943976, ...}) = 0
+mmap2(NULL, 1008704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 14, 0) = 0x2d565000
+mprotect(0x2d646000, 61440, PROT_NONE)  = 0
+mmap2(0x2d655000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 14, 0xe0000) = 0x2d655000
+close(14)                               = 0
+mprotect(0x2d655000, 20480, PROT_READ)  = 0
+access("/bin/kobo_config.sh", F_OK)     = 0
+pipe2([14, 15], O_CLOEXEC)              = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x2bcf2068) = 13556
+close(15)                               = 0
+fcntl64(14, F_SETFD, 0)                 = 0
+fstat64(14, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2ab5e000
+read(14, "alyssum\n", 4096)             = 8
+read(14, "", 4096)                      = 0
+close(14)                               = 0
+wait4(13556, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 13556
+munmap(0x2ab5e000, 4096)                = 0
+pipe2([14, 15], O_CLOEXEC)              = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x2bcf2068) = 13559
+close(15)                               = 0
+fcntl64(14, F_SETFD, 0)                 = 0
+fstat64(14, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2ab6d000
+read(14, "340\n", 4096)                 = 4
+read(14, "", 4096)                      = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=13559, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+close(14)                               = 0
+wait4(13559, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 13559
+munmap(0x2ab6d000, 4096)                = 0
+access("/dev/fb0", F_OK)                = 0
+access("/dev/fb0", F_OK)                = 0
+access("/dev/fb0", R_OK|W_OK)           = 0
+open("/dev/fb0", O_RDWR|O_LARGEFILE|O_CLOEXEC) = 14
+ioctl(14, FBIOGET_VSCREENINFO, 0x7e9d4770) = 0
+close(14)                               = 0
+eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK)   = 14
+mmap2(NULL, 65536, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2aada000
+mprotect(0x2aada000, 65536, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
+cacheflush(0x2aae9bc8, 0x2aae9e5c, 0)   = 0
+cacheflush(0x2aae95d0, 0x2aae996a, 0)   = 0
+cacheflush(0x2aae9088, 0x2aae938a, 0)   = 0
+cacheflush(0x2aae8de8, 0x2aae8f84, 0)   = 0
+cacheflush(0x2aae8a78, 0x2aae8c98, 0)   = 0
+cacheflush(0x2aae8780, 0x2aae8944, 0)   = 0
+cacheflush(0x2aae83a8, 0x2aae8610, 0)   = 0
+cacheflush(0x2aae7bf0, 0x2aae8068, 0)   = 0
+cacheflush(0x2aae7528, 0x2aae78cc, 0)   = 0
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib", F_OK) = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/qtlogging.ini", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/root/.config/QtProject/qtlogging.ini", 0x7e9d46d8) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/QtProject/qtlogging.ini", 0x7e9d46d8) = -1 ENOENT (No such file or directory)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=2267, tv_nsec=784597939}) = 0
+write(2, "Motion debug enabled. Debug info"..., 77Motion debug enabled. Debug information for screen and mouse will be printed
+) = 77
+write(2, "Motion debug enabled. Debug info"..., 77Motion debug enabled. Debug information for screen and mouse will be printed
+) = 77
+open("/dev/fb0", O_RDWR|O_CLOEXEC)      = 15
+open("/mnt/onboard/.kobo/version", O_RDONLY|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0644, st_size=89, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2d65c000
+read(16, "N705362002807,2.6.35.3,4.26.1670"..., 1048576) = 89
+read(16, "", 1048576)                   = 0
+close(16)                               = 0
+munmap(0x2d65c000, 1048576)             = 0
+write(2, "[FBInk] Unidentified Kobo device"..., 44[FBInk] Unidentified Kobo device code (40)!
+) = 44
+write(2, "[FBInk] Detected a Kobo Unknown!"..., 53[FBInk] Detected a Kobo Unknown! (40 => ?? @ Mark ?)
+) = 53
+write(2, "[FBInk] Clock tick frequency app"..., 50[FBInk] Clock tick frequency appears to be 100 Hz
+) = 50
+write(2, "[FBInk] Screen density set to 16"..., 38[FBInk] Screen density set to 167 dpi
+) = 38
+ioctl(15, FBIOGET_VSCREENINFO, 0x2d65b2dc) = 0
+write(2, "[FBInk] Variable fb info: 1072x1"..., 83[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+) = 83
+ioctl(15, FBIOGET_FSCREENINFO, 0x2d65b248) = 0
+write(2, "[FBInk] Fixed fb info: ID is \"mx"..., 102[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+) = 102
+write(2, "[FBInk] Canonical rotation: 0 (U"..., 45[FBInk] Canonical rotation: 0 (Upright, 0°)
+) = 45
+write(2, "[FBInk] Fontsize set to 16x16 (I"..., 67[FBInk] Fontsize set to 16x16 (IBM (Default) base glyph size: 8x8)
+) = 67
+write(2, "[FBInk] Line length: 67 cols, Pa"..., 49[FBInk] Line length: 67 cols, Page size: 90 rows
+) = 49
+write(2, "[FBInk] Horizontal fit is perfec"..., 35[FBInk] Horizontal fit is perfect!
+) = 35
+write(2, "[FBInk] Vertical fit isn't perfe"..., 67[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+) = 67
+write(2, "[FBInk] Pen colors set to #00000"..., 84[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+) = 84
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x5), ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2aaea000
+write(1, "Updating bitdepth from 8bpp to 8"..., 36Updating bitdepth from 8bpp to 8bpp
+) = 36
+write(1, "Updating grayscale value from 1 "..., 37Updating grayscale value from 1 to 1
+) = 37
+write(1, "Updating rotation from 3 (Counte"..., 84Updating rotation from 3 (Counter Clockwise, 270°) to 3 (Counter Clockwise, 270°)
+) = 84
+ioctl(15, FBIOPUT_VSCREENINFO, 0x7e9d4690) = 0
+ioctl(8, FBIOGET_FSCREENINFO, 0x2ab162f8) = 0
+ioctl(8, FBIOGET_VSCREENINFO, 0x2ab16258) = 0
+write(1, "Bitdepth is now 8bpp (grayscale:"..., 75Bitdepth is now 8bpp (grayscale: 1) @ rotate: 3 (Counter Clockwise, 270°)
+) = 75
+ioctl(15, FBIOGET_VSCREENINFO, 0x2d65b2dc) = 0
+write(2, "Screen info: 1072 1448 rotation:"..., 64Screen info: 1072 1448 rotation: 3 rotation canonical: 0 bpp: 8
+) = 64
+mmap2(NULL, 6782976, PROT_READ|PROT_WRITE, MAP_SHARED, 15, 0) = 0x2d65c000
+write(2, "Allocated screen buffer. Stride:"..., 59Allocated screen buffer. Stride: 1088 buffer size: 6782976
+) = 59
+ioctl(15, FBIOGET_VSCREENINFO, 0x7e9d47f8) = 0
+mmap2(NULL, 1552384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2dd58000
+write(14, "\1\0\0\0\0\0\0\0", 8)        = 8
+cacheflush(0x2aae9c68, 0x2aae9eae, 0)   = 0
+cacheflush(0x2aae9498, 0x2aae9918, 0)   = 0
+cacheflush(0x2aae8dc0, 0x2aae9164, 0)   = 0
+cacheflush(0x2aae8a20, 0x2aae8c6e, 0)   = 0
+cacheflush(0x2aae8208, 0x2aae86ae, 0)   = 0
+cacheflush(0x2aae7af0, 0x2aae7eb2, 0)   = 0
+cacheflush(0x2aae7740, 0x2aae799a, 0)   = 0
+cacheflush(0x2aae6ee0, 0x2aae73ac, 0)   = 0
+cacheflush(0x2aae6788, 0x2aae6b68, 0)   = 0
+cacheflush(0x2aae63d8, 0x2aae6632, 0)   = 0
+cacheflush(0x2aae5b78, 0x2aae6044, 0)   = 0
+cacheflush(0x2aae5420, 0x2aae5800, 0)   = 0
+cacheflush(0x2aae5048, 0x2aae52bc, 0)   = 0
+cacheflush(0x2aae4718, 0x2aae4c56, 0)   = 0
+cacheflush(0x2aae3f08, 0x2aae4342, 0)   = 0
+cacheflush(0x2aae3b30, 0x2aae3da4, 0)   = 0
+cacheflush(0x2aae3200, 0x2aae373e, 0)   = 0
+cacheflush(0x2aae29f0, 0x2aae2e2a, 0)   = 0
+cacheflush(0x2aae25e8, 0x2aae2882, 0)   = 0
+cacheflush(0x2aae1ba0, 0x2aae2184, 0)   = 0
+cacheflush(0x2aae1298, 0x2aae174a, 0)   = 0
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x2ded3000
+mprotect(0x2ded3000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x2e6d1f58, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[13562], tls=0x2e6d28e0, child_tidptr=0x2e6d2488) = 13562
+write(2, "device: \"alyssum\" 340 \n screen: "..., 51device: "alyssum" 340 
+ screen: 1072 1448 dpi: 300
+) = 51
+write(2, "libinput not found, device hot-p"..., 49libinput not found, device hot-plugging disabled
+) = 49
+write(2, "tslib not found\n", 16tslib not found
+)       = 16
+write(2, "Additional input libraries aren'"..., 83Additional input libraries aren't available: hot-plugging unavailable; using evdev
+) = 83
+openat(AT_FDCWD, "/dev/input", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 16
+getdents64(16, 0x3a930 /* 6 entries */, 32768) = 168
+getdents64(16, 0x3a930 /* 0 entries */, 32768) = 0
+close(16)                               = 0
+open("/dev/input/event0", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 16
+ioctl(16, EVIOCGBIT(EV_ABS, 12), [])    = 8
+ioctl(16, EVIOCGBIT(EV_KEY, 100), [KEY_H KEY_F1 KEY_POWER]) = 96
+ioctl(16, EVIOCGBIT(EV_REL, 4), [])     = 4
+close(16)                               = 0
+open("/dev/input/event1", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 16
+ioctl(16, EVIOCGBIT(EV_ABS, 12), [ABS_X ABS_Y ABS_HAT0X ABS_HAT0Y ...]) = 8
+ioctl(16, EVIOCGBIT(EV_KEY, 100), [BTN_2 BTN_NORTH BTN_WEST BTN_TOUCH]) = 96
+ioctl(16, EVIOCGBIT(EV_REL, 4), [])     = 4
+close(16)                               = 0
+open("/dev/input/mice", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 16
+ioctl(16, EVIOCGBIT(EV_ABS, 12), 0x7e9d470c) = -1 ENOTTY (Not a tty)
+ioctl(16, EVIOCGBIT(EV_KEY, 100), 0x7e9d4730) = -1 ENOTTY (Not a tty)
+ioctl(16, EVIOCGBIT(EV_REL, 4), 0x7e9d4700) = -1 ENOTTY (Not a tty)
+close(16)                               = 0
+open("/dev/input/mouse0", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 16
+ioctl(16, EVIOCGBIT(EV_ABS, 12), 0x7e9d470c) = -1 ENOTTY (Not a tty)
+ioctl(16, EVIOCGBIT(EV_KEY, 100), 0x7e9d4730) = -1 ENOTTY (Not a tty)
+ioctl(16, EVIOCGBIT(EV_REL, 4), 0x7e9d4700) = -1 ENOTTY (Not a tty)
+close(16)                               = 0
+write(2, "Created instance of QEvdevKeyboa"..., 42Created instance of QEvdevKeyboardManager
+) = 42
+write(2, "WARNING: Additional command line"..., 101WARNING: Additional command line arguments may be required for input. Please read the documentation.
+) = 101
+write(2, "kobofb: Finished initialization."..., 33kobofb: Finished initialization.
+) = 33
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=2267, tv_nsec=957166981}) = 0
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/styles/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/onboard/.adds/inkbox/styles/.", F_OK) = -1 ENOENT (No such file or directory)
+gettimeofday({tv_sec=1677892637, tv_usec=936677}, NULL) = 0
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/accessible/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/onboard/.adds/inkbox/accessible/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/accessiblebridge/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/onboard/.adds/inkbox/accessiblebridge/.", F_OK) = -1 ENOENT (No such file or directory)
+brk(0x74000)                            = 0x74000
+brk(0x73000)                            = 0x73000
+write(2, "QLayout: Attempting to add QLayo"..., 83QLayout: Attempting to add QLayout "" to QGameBoard "", which already has a layout
+) = 83
+write(2, "QLayout: Attempting to add QLayo"..., 83QLayout: Attempting to add QLayout "" to QGameBoard "", which already has a layout
+) = 83
+access("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib", F_OK) = 0
+stat64("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+openat(AT_FDCWD, "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 16
+getdents64(16, 0x618e8 /* 48 entries */, 32768) = 2032
+cacheflush(0x2aae9d58, 0x2aae9ef0, 0)   = 0
+cacheflush(0x2aae99a0, 0x2aae9bee, 0)   = 0
+cacheflush(0x2aae96d0, 0x2aae9876, 0)   = 0
+cacheflush(0x2aae9428, 0x2aae95c0, 0)   = 0
+cacheflush(0x2aae9070, 0x2aae92be, 0)   = 0
+cacheflush(0x2aae8da0, 0x2aae8f46, 0)   = 0
+cacheflush(0x2aae8af0, 0x2aae8c8e, 0)   = 0
+cacheflush(0x2aae8738, 0x2aae8986, 0)   = 0
+cacheflush(0x2aae8468, 0x2aae860e, 0)   = 0
+cacheflush(0x2aae81b8, 0x2aae8356, 0)   = 0
+cacheflush(0x2aae7e00, 0x2aae804e, 0)   = 0
+cacheflush(0x2aae7b30, 0x2aae7cd6, 0)   = 0
+cacheflush(0x2aae7880, 0x2aae7a1e, 0)   = 0
+cacheflush(0x2aae74c8, 0x2aae7716, 0)   = 0
+cacheflush(0x2aae71f8, 0x2aae739e, 0)   = 0
+getdents64(16, 0x618e8 /* 0 entries */, 32768) = 0
+close(16)                               = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Chivo-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=54612, ...}) = 0
+mmap2(NULL, 54612, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2aaac000
+close(16)                               = 0
+munmap(0x2aaac000, 54612)               = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-Black.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=294396, ...}) = 0
+mmap2(NULL, 294396, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 294396)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=293448, ...}) = 0
+mmap2(NULL, 293448, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 293448)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-ExtraBold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=294072, ...}) = 0
+mmap2(NULL, 294072, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 294072)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-ExtraLight.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=288400, ...}) = 0
+mmap2(NULL, 288400, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 288400)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-Light.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=288088, ...}) = 0
+mmap2(NULL, 288088, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 288088)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-Medium.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=292140, ...}) = 0
+mmap2(NULL, 292140, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 292140)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=287928, ...}) = 0
+mmap2(NULL, 287928, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 287928)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-SemiBold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=293028, ...}) = 0
+mmap2(NULL, 293028, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 293028)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-Thin.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=288568, ...}) = 0
+mmap2(NULL, 288568, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 288568)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-VariableFont_slnt,wght.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=748068, ...}) = 0
+mmap2(NULL, 748068, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2c409000
+close(16)                               = 0
+munmap(0x2c409000, 748068)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/LibertinusSerif-Bold.otf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=427632, ...}) = 0
+mmap2(NULL, 427632, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+brk(0x94000)                            = 0x94000
+brk(0x8f000)                            = 0x8f000
+munmap(0x2bcf3000, 427632)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/LibertinusSerif-Italic.otf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=440024, ...}) = 0
+mmap2(NULL, 440024, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 440024)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/LibertinusSerif-Regular.otf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=298384, ...}) = 0
+mmap2(NULL, 298384, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 298384)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/LibreBaskerville-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=155428, ...}) = 0
+mmap2(NULL, 155428, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 155428)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/LibreBaskerville-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=172212, ...}) = 0
+mmap2(NULL, 172212, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 172212)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/LibreBaskerville-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=154676, ...}) = 0
+mmap2(NULL, 154676, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 154676)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/NotoMono-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=107848, ...}) = 0
+mmap2(NULL, 107848, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 107848)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/NotoSansMono-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=352724, ...}) = 0
+mmap2(NULL, 352724, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 352724)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Black.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171072, ...}) = 0
+mmap2(NULL, 171072, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 171072)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-BlackItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=177120, ...}) = 0
+mmap2(NULL, 177120, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 177120)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=170348, ...}) = 0
+mmap2(NULL, 170348, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 170348)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-BoldItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=174520, ...}) = 0
+mmap2(NULL, 174520, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 174520)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=173516, ...}) = 0
+mmap2(NULL, 173516, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 173516)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Light.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=170012, ...}) = 0
+mmap2(NULL, 170012, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 170012)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-LightItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=176184, ...}) = 0
+mmap2(NULL, 176184, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 176184)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Medium.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171656, ...}) = 0
+mmap2(NULL, 171656, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 171656)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-MediumItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=176428, ...}) = 0
+mmap2(NULL, 176428, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 176428)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171272, ...}) = 0
+mmap2(NULL, 171272, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 171272)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-Thin.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171500, ...}) = 0
+mmap2(NULL, 171500, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab62000
+close(16)                               = 0
+munmap(0x2ab62000, 171500)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Roboto-ThinItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=175872, ...}) = 0
+mmap2(NULL, 175872, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 175872)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/RobotoMono-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=86908, ...}) = 0
+mmap2(NULL, 86908, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 86908)               = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/SourceSerifPro-Black.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=228660, ...}) = 0
+mmap2(NULL, 228660, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 228660)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/SourceSerifPro-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=229740, ...}) = 0
+mmap2(NULL, 229740, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 229740)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/SourceSerifPro-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=169568, ...}) = 0
+mmap2(NULL, 169568, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 169568)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/SourceSerifPro-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=226812, ...}) = 0
+mmap2(NULL, 226812, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 226812)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001-bol.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=114504, ...}) = 0
+mmap2(NULL, 114504, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 114504)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001-bolita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=128552, ...}) = 0
+mmap2(NULL, 128552, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 128552)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001-ita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=118468, ...}) = 0
+mmap2(NULL, 118468, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 118468)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001-reg.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=114136, ...}) = 0
+mmap2(NULL, 114136, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+munmap(0x2bcf3000, 114136)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001con-bol.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=117552, ...}) = 0
+mmap2(NULL, 117552, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 117552)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001con-bolita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=115720, ...}) = 0
+mmap2(NULL, 115720, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 115720)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001con-ita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=115348, ...}) = 0
+mmap2(NULL, 115348, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 115348)              = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001con-reg.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=115104, ...}) = 0
+mmap2(NULL, 115104, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+munmap(0x2ab5e000, 115104)              = 0
+brk(0x8e000)                            = 0x8e000
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/u001-reg.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=114136, ...}) = 0
+mmap2(NULL, 114136, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2ab5e000
+close(16)                               = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/NotoMono-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=107848, ...}) = 0
+mmap2(NULL, 107848, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2bcf3000
+close(16)                               = 0
+open("/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib/fonts/Inter-VariableFont_slnt,wght.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=748068, ...}) = 0
+mmap2(NULL, 748068, PROT_READ, MAP_PRIVATE, 16, 0) = 0x2c409000
+close(16)                               = 0
+brk(0xaf000)                            = 0xaf000
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0x34} ---
++++ killed by SIGSEGV +++
+Segmentation fault
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+Motion debug enabled. Debug information for screen and mouse will be printed
+Motion debug enabled. Debug information for screen and mouse will be printed
+[FBInk] Unidentified Kobo device code (40)!
+[FBInk] Detected a Kobo Unknown! (40 => ?? @ Mark ?)
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 167 dpi
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM (Default) base glyph size: 8x8)
+[FBInk] Line length: 67 cols, Page size: 90 rows
+[FBInk] Horizontal fit is perfect!
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Updating bitdepth from 8bpp to 8bpp
+Updating grayscale value from 1 to 1
+Updating rotation from 3 (Counter Clockwise, 270°) to 3 (Counter Clockwise, 270°)
+Bitdepth is now 8bpp (grayscale: 1) @ rotate: 3 (Counter Clockwise, 270°)
+Screen info: 1072 1448 rotation: 3 rotation canonical: 0 bpp: 8
+Allocated screen buffer. Stride: 1088 buffer size: 6782976
+device: "alyssum" 340 
+ screen: 1072 1448 dpi: 300
+libinput not found, device hot-plugging disabled
+tslib not found
+Additional input libraries aren't available: hot-plugging unavailable; using evdev
+Created instance of QEvdevKeyboardManager
+WARNING: Additional command line arguments may be required for input. Please read the documentation.
+kobofb: Finished initialization.
+qUncompress: Input data is corrupted

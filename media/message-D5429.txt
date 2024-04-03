@@ -1,0 +1,74 @@
+User
+is it possible in regex to give it text to select, and some pattern to ignore, which is inside the text?
+ChatGPT
+
+Yes, it is possible to use regex to select specific text while ignoring certain patterns inside that text. This can be achieved by using negative lookahead assertions in regex.
+
+Negative lookahead is a non-capturing group in regex that allows you to specify a pattern that should not be matched. It is represented by (?!pattern). When used in combination with other regex patterns, it allows you to ignore certain patterns while selecting the desired text.
+
+Here's an example to illustrate how you can use negative lookahead to achieve this:
+
+Let's say you have the following text:
+
+kotlin
+
+Hello, [ignore this] my name is [ignore this] John and I like [ignore this] programming.
+
+And you want to select only the text inside square brackets while ignoring the square brackets and their contents. You can use the following regex pattern:
+
+ruby
+
+\[(?:(?!\[.*?\]).)*?\]
+
+Explanation:
+
+    \[ and \] match the square brackets themselves.
+    (?: ... ) is a non-capturing group that groups the sub-patterns together.
+    (?!\[.*?\]) is the negative lookahead assertion that ensures we do not match another square bracket with any content inside it.
+    .*? matches any characters (except newline) in a non-greedy way, meaning it will match as little as possible.
+
+When you apply this regex pattern to the given text, it will match only the square brackets and their contents while ignoring the square brackets and content inside them:
+
+Matches:
+
+    [ignore this]
+    [ignore this]
+    [ignore this]
+
+You can use similar techniques to select desired text while ignoring specific patterns inside that text using regex with negative lookahead assertions. Keep in mind that regex can become complex quickly, so it's essential to carefully design and test your patterns.
+User
+No, you dont understand
+
+here is an example:
+<p>I wonder what was the problem</p><p><b>with the ducks</b></p>
+
+And i have only the text: I wonder what was the problem with the ducks
+
+how do i now with regex select the same text but in html code. I do not know where the html tags start and finish, i only have the pure text for reference
+ChatGPT
+
+Apologies for the misunderstanding. I understand now that you have the plain text and want to use regex to select the corresponding text within HTML code. In this case, it's challenging to achieve this with 100% accuracy using only regex, especially if the HTML structure can be more complex than the given example.
+
+However, if the HTML structure is relatively simple and consistent, you can make some assumptions to create a regex pattern that might work in many cases. Here's one way you could approach it:
+
+Assumptions:
+
+    The text you have is free of any HTML tags or special characters.
+    The HTML structure consists of nested tags like the provided example.
+    The HTML tags do not have attributes.
+
+Based on these assumptions, you can construct a regex pattern to find the corresponding text within HTML code:
+
+Regex Pattern:
+
+css
+
+(?<=<p>|<b>|<i>|<u>).*?((?=<\/p>)|(?=<\/b>)|(?=<\/i>)|(?=<\/u>))
+
+Explanation:
+
+    (?<=<p>|<b>|<i>|<u>): A positive lookbehind to check for the presence of the opening tags <p>, <b>, <i>, or <u> before the desired text.
+    .*?: Matches any characters (except newline) in a non-greedy way, meaning it will match as little as possible.
+    ((?=<\/p>)|(?=<\/b>)|(?=<\/i>)|(?=<\/u>)): A capturing group with alternatives using positive lookahead assertions to check for the presence of the corresponding closing tags </p>, </b>, </i>, or </u> after the desired text.
+
+Keep in mind that this regex pattern may not cover all possible variations of HTML structure, and HTML can be more complex than the example given. For more robust and reliable parsing of HTML, you should consider using an HTML parsing library like Beautiful Soup (Python) or Jsoup (Java) which can handle various HTML structures and provide better accuracy.

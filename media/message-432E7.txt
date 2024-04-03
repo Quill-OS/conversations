@@ -1,0 +1,30 @@
+kobo:/sys/bus/platform/devices# ls
+1804000.dma-apbh                      20e0000.iomuxc                        905000.sram
+2000000.aips-bus                      20e4000.iomuxc-gpr                    Vivante GCCore
+2000000.aips-bus:tempmon              20e8000.gpt                           a01000.interrupt-controller
+2000000.spba-bus                      20ec000.sdma                          alarmtimer
+2020000.serial                        20f0000.pwm                           ci_hdrc.0
+2034000.asrc                          20f4000.pwm                           gpio-keys
+2084000.pwm                           20f8000.pwm                           imx6q-cpufreq
+2088000.pwm                           20fc000.pwm                           leds
+208c000.pwm                           2100000.aips-bus                      ntx_bl
+2098000.gpt                           2184000.usb                           ntx_event0
+209c000.gpio                          2184800.usbmisc                       ntx_led
+20a0000.gpio                          2190000.usdhc                         pxp_v4l2
+20a4000.gpio                          2194000.usdhc                         reg-dummy
+20a8000.gpio                          21a0000.i2c                           regulators
+20ac000.gpio                          21ac000.romcp                         regulators:regulator@1
+20b0000.snvs                          21b0000.mmdc                          regulators:wifi_regulator
+20bc000.wdog                          21b8000.weim                          regulatory.0
+20c4000.ccm                           21bc000.ocotp-ctrl                    ricoh619-battery
+20c8000.anatop                        21cc000.pxp                           ricoh619-pwrkey
+20c8000.anatop:regulator-3p0@120      21ec000.serial                        ricoh61x-regulator
+20c8000.anatop:regulator-vddcore@140  21f8000.i2c                           rtc_ricoh619
+20c8000.anatop:regulator-vddsoc@140   2200000.aips-bus                      snd-soc-dummy
+20c9000.usbphy                        2280000.dcp                           soc
+20ca000.usbphy                        2284000.rngb                          soc:busfreq
+20cc000.snvs                          228c000.epdc                          sy7636-pmic
+20cc000.snvs:snvs-poweroff            2290000.iomuxc-snvs                   sy7636-sns
+20cc000.snvs:snvs-rtc-lp              2294000.snvs-gpr                      usb_plug
+20d8000.src                           900000.sram
+20dc000.gpc                           904000.sram

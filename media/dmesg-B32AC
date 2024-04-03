@@ -1,0 +1,240 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 5.16.0-inkbox (build@inkbox) (armv7l-linux-musleabihf-gcc (GCC) 10.2.1 20210227, GNU ld (GNU Binutils) 2.36.1) #1 SMP Wed Jul 26 13:06:13 EDT 2023
+[    0.000000] CPU: ARMv7 Processor [414fc091] revision 1 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Kobo Clara HD
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] cma: Reserved 64 MiB at 0x9a000000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x000000009fffffff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000009fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000009fffffff]
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] percpu: Embedded 16 pages/cpu s36140 r8192 d21204 u65536
+[    0.000000] pcpu-alloc: s36140 r8192 d21204 u65536 alloc=16*4096
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 130048
+[    0.000000] Kernel command line: console=ttymxc0,115200 quiet root=/dev/ram0 rdinit=/sbin/init rootfstype=ramfs
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 420172K/524288K available (8192K kernel code, 1527K rwdata, 3152K rodata, 9216K init, 6622K bss, 38580K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] trace event string verifier disabled
+[    0.000000] Running RCU self tests
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu:     RCU event tracing is enabled.
+[    0.000000] rcu:     RCU lockdep checking is enabled.
+[    0.000000] rcu:     RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] L2C-310 erratum 769419 enabled
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 full line of zeros enabled for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 16 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 256 kB
+[    0.000000] L2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76430001
+[    0.000000] random: get_random_bytes called from start_kernel+0x3f8/0x6a8 with crng_init=0
+[    0.000000] clk: failed to reparent pll4_audio_div to osc: -22
+[    0.000000] clk: failed to reparent pll4_audio_div to osc: -22
+[    0.000000] Switching to timer-based delay loop, resolution 15ns
+[    0.000001] sched_clock: 32 bits at 66MHz, resolution 15ns, wraps every 32537631224ns
+[    0.000028] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 28958491609 ns
+[    0.002082] Console: colour dummy device 80x30
+[    0.002146] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+[    0.002160] ... MAX_LOCKDEP_SUBCLASSES:  8
+[    0.002175] ... MAX_LOCK_DEPTH:          48
+[    0.002187] ... MAX_LOCKDEP_KEYS:        8192
+[    0.002202] ... CLASSHASH_SIZE:          4096
+[    0.002214] ... MAX_LOCKDEP_ENTRIES:     32768
+[    0.002226] ... MAX_LOCKDEP_CHAINS:      65536
+[    0.002239] ... CHAINHASH_SIZE:          32768
+[    0.002252]  memory used by lock dependency info: 4061 kB
+[    0.002264]  memory used for stack traces: 2112 kB
+[    0.002277]  per task-struct memory footprint: 1536 bytes
+[    0.002425] Calibrating delay loop (skipped), value calculated using timer frequency.. 132.00 BogoMIPS (lpj=660000)
+[    0.002464] pid_max: default: 32768 minimum: 301
+[    0.002854] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.002892] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.007615] CPU: Testing write buffer coherency: ok
+[    0.007829] CPU0: Spectre v2: using BPIALL workaround
+[    0.009049] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.013133] Setting up static identity map for 0x80100000 - 0x80100078
+[    0.014099] rcu: Hierarchical SRCU implementation.
+[    0.016174] smp: Bringing up secondary CPUs ...
+[    0.016201] smp: Brought up 1 node, 1 CPU
+[    0.016225] SMP: Total of 1 processors activated (132.00 BogoMIPS).
+[    0.016249] CPU: All CPU(s) started in SVC mode.
+[    0.019758] devtmpfs: initialized
+[    0.054674] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.056022] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.056110] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.059142] pinctrl core: initialized pinctrl subsystem
+[    0.066680] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.099741] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.106911] thermal_sys: Registered thermal governor 'step_wise'
+[    0.108034] cpuidle: using governor menu
+[    0.200486] No ATAGs?
+[    0.200964] hw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.
+[    0.201029] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.204996] debugfs: Directory 'dummy-iomuxc-gpr@20e4000' with parent 'regmap' already present!
+[    0.207009] imx6sll-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+[    0.313389] usbcore: registered new interface driver usbfs
+[    0.313787] usbcore: registered new interface driver hub
+[    0.314153] usbcore: registered new device driver usb
+[    0.321375] i2c i2c-0: IMX I2C adapter registered
+[    0.330492] i2c i2c-1: IMX I2C adapter registered
+[    0.338650] i2c i2c-2: IMX I2C adapter registered
+[    0.339932] pps_core: LinuxPPS API ver. 1 registered
+[    0.339962] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.340051] PTP clock support registered
+[    0.351306] clocksource: Switched to clocksource mxc_timer1
+[    0.698797] VFS: Disk quotas dquot_6.6.0
+[    0.699040] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.773605] NET: Registered PF_INET protocol family
+[    0.774713] IP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.778011] tcp_listen_portaddr_hash hash table entries: 256 (order: 1, 11264 bytes, linear)
+[    0.778126] TCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)
+[    0.778277] TCP bind hash table entries: 4096 (order: 5, 163840 bytes, linear)
+[    0.778918] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.779595] UDP hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.779757] UDP-Lite hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    0.780410] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.800859] Initialise system trusted keyrings
+[    0.813340] workingset: timestamp_bits=30 max_order=17 bucket_order=0
+[    0.867852] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.882581] fuse: init (API version 7.35)
+[    0.884930] Key type asymmetric registered
+[    0.885110] Asymmetric key parser 'x509' registered
+[    0.885983] io scheduler mq-deadline registered
+[    0.886019] io scheduler kyber registered
+[    0.964325] 2018000.serial: ttymxc3 at MMIO 0x2018000 (irq = 26, base_baud = 5000000) is a IMX
+[    0.974076] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 27, base_baud = 5000000) is a IMX
+[    1.021932] printk: console [ttymxc0] enabled
+[    1.082714] imx_rngc 21b4000.rng: Freescale RNGB registered (HW revision 2.129)
+[    1.091539] random: fast init done
+[    1.092502] random: crng init done
+[    1.197382] brd: module loaded
+[    1.264825] loop: module loaded
+[    1.266096] tps6518x_probe calling
+[    1.287232] tps6518x_detect calling
+[    1.315309] tps6518x_detect():revId=0x66
+[    1.315348] tps6518x_detect success
+[    1.316637] tps6518x 1-0068: PMIC TPS6518x for eInk display
+[    1.316669] tps6518x_probe success
+[    1.579716] libphy: Fixed MDIO Bus: probed
+[    1.591864] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.600324] cyttsp5_i2c_adapter 1-0024: cyttsp5_init: INIT CYTTSP r=0
+[    1.615826] cyttsp5_i2c_adapter 1-0024: cyttsp5_get_hid_descriptor_: failed to get HID descriptor length and version, rc=-6
+[    1.641837] cyttsp5_i2c_adapter 1-0024: cyttsp5_startup_: Error on getting HID descriptor r=-6
+[    1.862005] cyttsp5_i2c_adapter 1-0024: cyttsp5_xres: RESET CYTTSP r=0
+[    1.862985] cyttsp5_i2c_adapter 1-0024: cyttsp5_read_input: Error getting report, r=-6
+[    1.992652] cyttsp5_i2c_adapter 1-0024: cyttsp5_startup_: Bootloader mode
+[    2.089204] cyttsp5_i2c_adapter 1-0024: cyttsp5_startup_: Operational mode
+[    2.089247] cyttsp5_i2c_adapter 1-0024: cyttsp5_startup_: Reading report descriptor
+[    2.253977] cyttsp5_i2c_adapter 1-0024: cyttsp5 Protocol Version: 1.6
+[    2.274685] input: cyttsp5_mt as /devices/platform/soc/2100000.bus/21a4000.i2c/i2c-1/1-0024/input/input0
+[    2.279554] i2c_dev: i2c /dev entries driver
+[    2.316765] sdhci: Secure Digital Host Controller Interface driver
+[    2.316795] sdhci: Copyright(c) Pierre Ossman
+[    2.316811] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.342885] sdhci-esdhc-imx 2198000.mmc: allocated mmc-pwrseq
+[    2.367871] usbcore: registered new interface driver usbhid
+[    2.367904] usbhid: USB HID core driver
+[    2.381829] mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+[    2.408055] NET: Registered PF_INET6 protocol family
+[    2.424914] mmc1: SDHCI controller on 2198000.mmc [2198000.mmc] using ADMA
+[    2.429856] Segment Routing with IPv6
+[    2.429994] In-situ OAM (IOAM) with IPv6
+[    2.430208] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.433077] sdhci-esdhc-imx 2198000.mmc: card claims to support voltages below defined range
+[    2.442018] mmc0: host does not support reading read-only switch, assuming write-enable
+[    2.445947] NET: Registered PF_PACKET protocol family
+[    2.481909] mmc1: new high speed SDIO card at address 0001
+[    2.513986] Registering SWP/SWPB emulation handler
+[    2.516998] Loading compiled-in X.509 certificates
+[    2.534835] mmc0: new ultra high speed SDR104 SDXC card at address 0001
+[    2.540700] mmcblk0: mmc0:0001 EC2QT 59.6 GiB
+[    2.573168]  mmcblk0: p1 p2 p3 p4
+[    2.882924] imx_thermal 20c8000.anatop:temperature-sensor: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+[    2.887419] input: gpio-keys as /devices/platform/gpio-keys/input/input1
+[    2.890639] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.142302] imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+[    4.142760] imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+[    4.158492] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.159776] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    4.159829] cfg80211: failed to load regulatory.db
+[    4.188337] Freeing unused kernel image (initmem) memory: 9216K
+[    4.192449] Run /sbin/init as init process
+[    4.192482]   with arguments:
+[    4.192494]     /sbin/init
+[    4.192507]   with environment:
+[    4.192518]     HOME=/
+[    4.192529]     TERM=linux
+[   12.605668] rn5t618-power rn5t618-power: Fuel gauge not enabled, enabling now
+[   12.605703] rn5t618-power rn5t618-power: Expect imprecise results
+[   12.611566] thermal thermal_zone1: binding zone imx_thermal_zone with cdev rn5t618-battery failed:-11
+[   12.621026] thermal thermal_zone1: binding zone imx_thermal_zone with cdev rn5t618-battery failed:-11
+[   12.690086] tps6518x-regulator tps6518x-regulator: tps6518x_regulator_probe(622): revID=102,6518x@d1cfbc2a wakeup gpio685b2c8d=1
+[   12.693325] _tps6518x_vcom_get_voltage() : vcom=2400000uV
+[   12.700774] _tps6518x_vcom_get_voltage() : vcom=2400000uV
+[   12.704483] _tps6518x_vcom_get_voltage() : vcom=2400000uV
+[   12.715187] tps6518x_setup_timings():upseq=>0xe1,0x0,dwnseq=>0x1e,0xe0
+[   12.736672] imx_epdc_v2_fb 20f4000.epdc: No qos phandle specified. Ignored.
+[   12.740562] imx_epdc_v2_fb 20f4000.epdc: resolution 1448x1072, bpp 16
+[   12.754298] imx_epdc_v2_fb 20f4000.epdc: EPDC version = 30
+[   12.854416] _tps6518x_vcom_get_voltage() : vcom=2400000uV
+[   12.859606] Console: switching to colour frame buffer device 181x67
+[   12.872562] imx_epdc_v2_fb 20f4000.epdc: Direct firmware load for imx/epdc/epdc_PENG060D.fw failed with error -2
+[   12.878451] imx_epdc_v2_fb 20f4000.epdc:  --- Extra Waveform Data length: 29 bytes---
+[   12.878553] imx_epdc_v2_fb 20f4000.epdc:      Extra Waveform Data: 320_R217_AJ0801_ED060KH6C1_TC
+[   12.906781] imx_epdc_v2_fb 20f4000.epdc: Unable to get an accurate EPDC pix clkdesired = 80000000, actual = 72605042
+[   12.950150] lm3630a_bl 0-0036: LM3630A backlight register OK.
+[   12.966186] _tps6518x_vcom_get_voltage() : vcom=2400000uV
+[   12.976367] rc5t619-rtc rc5t619-rtc: registered as rtc0
+[   12.977573] rc5t619-rtc rc5t619-rtc: hctosys: unable to read the hardware clock
+[   13.022241] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: . Quota mode: none.
+[   13.384834] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: . Quota mode: none.
+[   19.496522] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: . Quota mode: none.
+[   19.547470] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: . Quota mode: none.
+[   25.277078] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null). Quota mode: none.
+[   28.535791] loop1: detected capacity change from 0 to 7600
+[   29.167861] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: . Quota mode: none.
+[   29.225736] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: . Quota mode: none.
+[   30.065738] loop7: detected capacity change from 0 to 8
+[   30.135548] loop6: detected capacity change from 0 to 8
+[   30.205255] loop5: detected capacity change from 0 to 2408
+[   30.916063] loop4: detected capacity change from 0 to 112
+[   34.412615] SD3_SPWR: disabling
+[   34.412799] LDO1: disabling
+[   34.414333] LDO4: disabling
+[   34.415325] LDO9: disabling
+[   34.418242] LDO10: disabling
+[   34.419519] LDORTC1: disabling
+[   49.817395] udevd[914]: starting version 3.2.9
+[   50.205190] udevd[915]: starting eudev-3.2.9
+[   55.516498] using random self ethernet address
+[   55.516583] using random host ethernet address
+[   55.516606] using host ethernet address: a6:9a:1a:9c:8f:4d
+[   55.516658] using self ethernet address: b2:6a:87:39:33:82
+[   55.534484] usb0: HOST MAC a6:9a:1a:9c:8f:4d
+[   55.534521] usb0: MAC b2:6a:87:39:33:82
+[   55.535924] using random self ethernet address
+[   55.535961] using random host ethernet address
+[   55.537138] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[   55.537169] g_ether gadget: g_ether ready
+[   55.920164] IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+[   58.668651] loop0: detected capacity change from 0 to 524288
+[   59.039661] squashfs: Unknown parameter 'uid'
+[   59.098876] FAT-fs (loop0): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[   89.106889] udevd[1401]: starting version 3.2.9
+[   89.336892] udevd[1402]: starting eudev-3.2.9
+[   90.606293] udevd[1413]: error opening ATTR{/sys/devices/platform/gpio-keys/input/input1/event1/enabled} for writing: Permission denied
+[   90.664719] udevd[1413]: error opening ATTR{/sys/devices/platform/gpio-keys/input/input1/event1/authorized} for writing: Permission denied
+[   92.055384] udevd[1417]: error opening ATTR{/sys/devices/platform/soc/2100000.bus/21a4000.i2c/i2c-1/1-0024/input/input0/event0/enabled} for writing: Permission denied
+[   92.239267] udevd[1417]: error opening ATTR{/sys/devices/platform/soc/2100000.bus/21a4000.i2c/i2c-1/1-0024/input/input0/event0/authorized} for writing: Permission denied

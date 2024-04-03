@@ -1,0 +1,98 @@
+```
+U-Boot 2009.08-dirty (Feb 17 2024 - 11:33:54)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 266666666Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Board: MX50 RDP board
+Boot Reason: [POR]
+Boot Device: SD
+I2C:   ready
+DRAM:  512 MB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+In:    serial
+Out:   serial
+Err:   serial
+[_get_sd_number] g_sd_number:2
+
+MMC read: dev # 2, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 1024, count 1 partition # 0 ... 
+1 blocks read: OK
+PCB ID is 41
+ESDin=0,UPGKey=-1,PWRKey=0
+ram p=70000000,size=536870912
+
+MMC read: dev # 2, block # 14335, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 14336, count 1900 partition # 0 ... 
+1900 blocks read: OK
+
+MMC read: dev # 2, block # 18431, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+
+MMC read: dev # 2, block # 45055, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+Kernel RAM visiable size=511M->511M
+init TPS65185 power ...
+Relock PLL1 to 1GHz ...
+mx50 pll1: 1000MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 250000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Hit any key to stop autoboot:  0 
+
+MMC read: dev # 2, block # 2047, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 2, block # 2048, count 8192 partition # 0 ... 
+8192 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   r?_#3028 Feb 17 12:33:26
+   Created:      2024-02-17  20:33:29 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1947024 Bytes =  1.9 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(179,1)
+[<8002a478>] (unwind_backtrace+0x0/0xec) from [<80299d88>] (panic+0x6c/0xe4)
+[<80299d88>] (panic+0x6c/0xe4) from [<80008dac>] (mount_block_root+0x254/0x2a4)
+[<80008dac>] (mount_block_root+0x254/0x2a4) from [<80008f7c>] (prepare_namespace+0x120/0x178)
+[<80008f7c>] (prepare_namespace+0x120/0x178) from [<800084a0>] (kernel_init+0x120/0x168)
+[<800084a0>] (kernel_init+0x120/0x168) from [<800269c0>] (kernel_thread_exit+0x0/0x8)
+```

@@ -1,0 +1,263 @@
+U-Boot 2016.03-00063-gb1f1e06 (Jul 23 2019 - 13:43:57 +0800)
+
+CPU:   Freescale i.MX6SLL rev1.1 996 MHz (running at 792 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 37C
+Reset cause: POR
+Board: MX6SLL LPDDR2 NTX
+I2C:   ready
+DRAM:  512 MiB
+__get_sd_number(),cfg23=0,cfg24=0 
+force_idle_bus: sda=1 scl=0 sda.gp=0x56 scl.gp=0x55
+MMC:   board_mmc_init() : isd=0 
+board_mmc_init() : wifi=2 
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=536870912
+switch to partitions #0, OK
+mmc0(part 0) is current device
+mmc read 0x9ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x9ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+RC5T619_regulator_init : VDD_SOC_IN : 1275000uV, VDD_ARM_IN : 1275000uV
+RC5T619_watchdog(1,32)
+ntx_hw_late_init()
+mmc read 0x9ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout: get partition:recoveryfs fail !!
+ntx_config_fastboot_layout():3 mbr partition added
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Net:   CPU Net Initialization Failed
+No ethernet found.
+Hit any key to stop autoboot:  0 
+switch to partitions #0, OK
+mmc0(part 0) is current device
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+Booting from mmc ...
+mmc read 0x83000000 0x505 0x1
+
+MMC read: dev # 0, block # 1285, count 1 ... 1 blocks read: OK
+dtb size = 35762@83000000
+mmc read 0x83000000 0x506 0x4b
+
+MMC read: dev # 0, block # 1286, count 75 ... 75 blocks read: OK
+
+ hwcfgp=9ffffe00,pcb=87,customer=9
+
+ntx_gpio_get_value(404) : error parameter ! null ptr !
+ESDin=0,UPGKey=0,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x9ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x9fd70000 0x3800 0x147f
+
+MMC read: dev # 0, block # 14336, count 5247 ... 5247 blocks read: OK
+mmc read 0x9fd6fe00 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x9fd6da00 0x406 0x13
+
+MMC read: dev # 0, block # 1030, count 19 ... 19 blocks read: OK
+Kernel RAM visiable size=509M->509M
+hwcfg rootfstype : 2
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x9ffffe00 hwcfg_sz=110 waveform_p=0x9fd70000 waveform_sz=2686291 ntxfw_p=0x9fd6da00 ntxfw_sz=9474 mem=509M boot_port=0 rootfstype=ext4 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x38d6c8 ]
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Using Device Tree in place at 83000000, end 8300bbb1
+
+Starting kernel ...
+
+[    0.351679] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.351700] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    1.236543] [cyttsp5_hid_output_read_manufacture_data_] manufacture :Mutto 
+[    1.257535] kx122 0-001e: Unable to read property x-map. Use default 0.
+[    1.264239] kx122 0-001e: Unable to read property y-map. Use default 1.
+[    1.270872] kx122 0-001e: Unable to read property z-map. Use default 2.
+[    1.277532] kx122 0-001e: Unable to read property y-negate. Use default 0.
+[    1.284446] kx122 0-001e: Unable to read property z-negate. Use default 0.
+[    1.291335] kx122 0-001e: Unable to read property g-range. Use default 8g
+[    1.356101] kx122 0-001e: Failed to look up default state
+[    1.361534] [kx122_probe_2662] irq1:120 , gpio1:91 
+[    1.366682] [kx122_probe_2703] using irq1:120  
+[    1.371234] [kx122_probe_2735] g_range:8 
+[    1.391817] [kx122_probe_2768] using irq 
+[    1.396433] [kx122-CNTL1]:1 
+[    1.399909] [kx122-CNTL2]:3f 
+[    1.403499] [kx122-CNTL3]:98 
+[    1.407068] [KX122_TILT_ANGLE_LL]:11 
+[    1.441814] [kx122_probe_2815] success 
+[    1.448240] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 8001fcfc ntx_machine_poweroff
+[    1.458998] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[    1.673696] cpu cpu0: dev_pm_opp_get_opp_count: device OPP not found (-19)
+Linux kobo 4.1.15 #1 SMP PREEMPT Tue Dec 21 09:08:39 EST 2021 armv7l GNU/Linux
+InkBox Linux SPL kernel release 0.1 - Copyright (C) 2021 Nicolas Mailloux
+
+Hit any key to stop auto-boot ... \
+Waiting 5 seconds for any input event ...
+Terminated
+Booting default InkBox kernel ...
+[   12.976304] kexec: Starting new kernel
+[    0.000000] L2C-310: enabling full line of zeros but not enabled in Cortex-A9
+[    0.485937] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.486015] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    9.687523] [cyttsp5_hid_output_read_manufacture_data_] manufacture :Mutto 
+[    9.713701] kx122 0-001e: Unable to read property x-map. Use default 0.
+[    9.720551] kx122 0-001e: Unable to read property y-map. Use default 1.
+[    9.727324] kx122 0-001e: Unable to read property z-map. Use default 2.
+[    9.734026] kx122 0-001e: Unable to read property y-negate. Use default 0.
+[    9.741032] kx122 0-001e: Unable to read property z-negate. Use default 0.
+[    9.748044] kx122 0-001e: Unable to read property g-range. Use default 8g
+[    9.812724] kx122 0-001e: Failed to look up default state
+[    9.818368] [kx122_probe_2662] irq1:120 , gpio1:91 
+[    9.823885] [kx122_probe_2703] using irq1:120  
+[    9.828596] [kx122_probe_2735] g_range:8 
+[    9.846416] [kx122_probe_2768] using irq 
+[    9.851307] [kx122-CNTL1]:1 
+[    9.855036] [kx122-CNTL2]:3f 
+[    9.858950] [kx122-CNTL3]:98 
+[    9.862768] [KX122_TILT_ANGLE_LL]:11 
+[    9.906404] [kx122_probe_2815] success 
+[    9.917941] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021be8 ntx_machine_poweroff
+[    9.929491] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[   10.235973] cpu cpu0: dev_pm_opp_get_opp_count: device OPP not found (-19)
+Linux inkbox 4.1.15-inkbox #1 SMP PREEMPT Mon Jan 17 22:17:50 EST 2022 armv7l GNU/Linux
+InkBox OS, kernel build spB7hhvV
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+
+Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1: clean, 18/3840 files, 11566/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p5: clean, 11/128016 files, 26684/512000 blocks
+fsck.fat 4.2+git (2021-01-31)
+There are differences between boot sector and its backup.
+This is mostly harmless. Differences: (offset:original/backup)
+  65:01/00
+  Not automatically fixing this.
+Dirty bit is set. Fs was not properly unmounted and some data may be corrupt.
+ Automatically removing dirty bit.
+
+*** Filesystem was changed ***
+Writing changes.
+/dev/mmcblk0p3: 2259 files, 171769/523265 clusters
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4: recovering journal
+/dev/mmcblk0p4: clean, 1975/196608 files, 500724/786432 blocks
+
+(initrd) Hit any key to stop auto-boot ... 
+Security policy not enforced; root access permitted.
+dd: can't open '/recoveryfs-part/overlaymount-rootfs.squashfs': No such file or directory
+EXPRESS_VERIFICATION: overlaymount-rootfs.squashfs: checksum invalid!
+Verifying root filesystem's digital signature ...
+Done.
+
+Starting X11 windowing system ...
+Validating packages' digital signatures ...
+
+X.Org X Server 1.20.5
+X Protocol Version 11, Revision 0
+Build Operating System: Linux 5.4.34-0-lts armv8l Alpine Linux
+Current Operating System: Linux inkbox 4.1.15-inkbox #1 SMP PREEMPT Mon Jan 17 22:17:50 EST 2022 armv7l
+Kernel command line: console=ttymxc0,115200 rootwait rw quiet no_console_suspend hwcfg_p=0x9ffffe00 hwcfg_sz=110 waveform_p=0x9fd70000 waveform_sz=2686291 ntxfw_p=0x9fd6da00 ntxfw_sz=9474 mem=509M boot_port=0 rootfstype=ramfs root=/dev/ram0 rdinit=/sbin/init printk.time
+Build Date: 13 April 2021  04:46:44PM
+ 
+Current version of pixman: 0.38.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.0.log", Time: Sat Jan 22 17:38:43 2022
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Unsupported high keycode 372 for name <I372> ignored
+>                   X11 cannot support keycodes above 255.
+>                   This warning only shows for the first high keycode.
+> Internal error:   Could not resolve keysym XF86MonBrightnessCycle
+> Internal error:   Could not resolve keysym XF86RotationLockToggle
+Errors from xkbcomp are not fatal to the X server
+Done.
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15-inkbox (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ...
+ * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ...
+ [ ok ]
+ * Mounting debug filesystem ...
+ [ ok ]
+ * Mounting fuse control filesystem ...
+ [ ok ]
+ * Remounting devtmpfs on /dev ...
+ [ ok ]
+ * Mounting /dev/shm ...
+ [ ok ]
+ * Starting udev ...
+ [ ok ]
+ [ ok ]
+ * Mounting onboard storage filesystem ...
+ [ ok ]
+ * Splash screen ...
+ [ ok ]
+ * Starting USBNet ...
+ [ ok ]
+ * Starting battery watchdog ...
+ [ ok ]
+ * Starting evtest watch ...
+ [ ok ]
+[   86.550710] cyttsp5_i2c_adapter 1-0024: cyttsp5_core_rt_resume: Error on wake
+ * Setting hostname ...
+ [ ok ]
+ * Starting InkBox Daemon (ibxd) ...
+ [ ok ]
+ * Starting sleep timeout timer ...
+ [ ok ]
+Setting up watches.
+Watches established.
+ * Checking for available updates ...
+Update skipped or no update available, aborting ...
+ [ ok ]
+ * Waiting for a power button event to put the device to sleep ...
+ [ ok ]
+ * WARNING: wake_standby is already stopped
+Setting up watches.
+Watches established.
+ * Starting InkBox GUI ...
+ * WARNING: xorg is already stopped
+ * Starting InkBox Daemon (ibxd) ...
+ [ ok ]
+ [ ok ]
+
+Welcome to InkBox OS 1.8
+Kernel 4.1.15-inkbox on an armv7l (/dev/ttymxc0)
+
+kobo login: root
+Password: 
+Welcome to InkBox!
+login[1682]: root login on 'ttymxc0'
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+kobo:~# cat /opt/inkbox_device 
+n873
+kobo:~# cat /proc/version 
+Linux version 4.1.15-inkbox (build@inkbox) (gcc version 4.9.4 (crosstool-NG 1.23.0.72-23ba174 - NiLuJe) ) #1 SMP PREEMPT Mon Jan 17 22:17:50 EST 2022
+kobo:~# 

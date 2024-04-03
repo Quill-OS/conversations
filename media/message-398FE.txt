@@ -1,0 +1,101 @@
+```
+kobo:/mnt/onboard/.adds/inkbox# QT_DEBUG_PLUGINS=1 QT_QPA_PLATFORM=kobo ADDSPATH
+="/mnt/onboard/.adds/" QTPATH="${ADDSPATH}/qt-linux-5.15.2-kobo" LD_LIBRARY_PATH
+="${QTPATH}/lib:lib:" ./inkbox-bin
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "kobo"
+        ]
+    },
+    "archreq": 0,
+    "className": "KoboPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("kobo")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqlinuxfb.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqlinuxfb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "linuxfb"
+        ]
+    },
+    "archreq": 0,
+    "className": "QLinuxFbIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("linuxfb")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqminimal.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archreq": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("minimal")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqoffscreen.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archreq": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("offscreen")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/platforms" ...
+Cannot load library /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so: (libmtdev.so.1: cannot open shared object file: No such file or directory)
+QLibraryPrivate::loadPlugin failed on "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so" : "Cannot load library /mnt/onboard/.adds/qt-linux-5.15.2-kobo/p"
+qt.qpa.plugin: Could not load the Qt platform plugin "kobo" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: kobo, linuxfb, minimal, offscreen, vnc.
+
+Aborted
+kobo:/mnt/onboard/.adds/inkbox# 
+```

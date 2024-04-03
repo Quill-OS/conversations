@@ -1,0 +1,246 @@
+[root@kindle tmp]# /usr/local/sbin/kexec -l uImage --atags
+[root@kindle tmp]# /usr/local/sbin/kexec -e
+Starting new kernel
+Linux version 2.6.31-rt11-inkbox (build@inkbox) (gcc version 4.4.1 (Sourcery G++ Lite 2009q3-67) ) #2 Fri May 6 17:52:45 EDT 2022
+CPU: ARMv7 Processor [412fc085] revision 5 (ARMv7), cr=10c53c7f
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Machine: Amazon.com MX50 YOSHI Board
+Board ID and Serial Number driver for Lab126 boards version 1.0
+MX50 Board id - 00614011214201A0
+Memory policy: ECC disabled, Data cache writeback
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+Kernel command line: consoleblank=0 rootwait ro ip=off root=/dev/ram0 rootfstype=ramfs rdinit=/sbin/init eink=fslepdc video=mxcepdcfb:E60,bpp=8,x_mem=2M console=ttymxc0,115200
+PID hash table entries: 1024 (order: 10, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 256MB = 256MB total
+Memory: 248448KB available (3868K code, 376K data, 6996K init, 0K highmem)
+NR_IRQS:368
+MXC IRQ initialized
+cko2_set_rate, new divider=5
+MXC_Early serial console at MMIO 0x53fbc000 (options '115200')
+console [ttymxc0] enabled
+Console: colour dummy device 80x30
+Calibrating delay loop... 799.53 BogoMIPS (lpj=3997696)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+NET: Registered protocol family 16
+i.MX IRAM pool: 128 KB@0xd0840000
+CPU is i.MX50 Revision 1.1
+MXC GPIO hardware
+Configure EMI_CS1 for whitney 
+Using SDMA I.API
+MXC DMA API initialized
+bio: create slab <bio-0> at 0
+CSPI: mxc_spi-0 probed
+CSPI: mxc_spi-1 probed
+CSPI: mxc_spi-2 probed
+MXC I2C driver
+MXC I2C driver
+MXC I2C driver
+mc13892 Rev 2.1 FinVer 2 detected
+Setting ichrg to 1
+Device spi3.0 probed
+NET: Registered protocol family 2
+IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP reno registered
+NET: Registered protocol family 1
+LPMode driver module loaded
+Static Power Management for Freescale i.MX5
+PM driver module loaded
+sdram autogating driver module loaded
+Bus freq driver module loaded
+mxc_dvfs_core_probe
+DVFS driver module loaded
+i.MXC CPU frequency driver
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Registering unionfs 2.5.10 (for 2.6.31.14)
+fuse init (API version 7.12)
+msgmni has been set to 485
+alg: No test for stdrng (krng)
+io scheduler noop registered
+io scheduler anticipatory registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+papyrus 1-0048: PMIC PAPYRUS for eInk display
+Amazon MX35 Yoshi Power Button Driver
+Serial: MXC Internal UART driver
+mxcintuart.0: ttymxc0 at MMIO 0x53fbc000 (irq = 31) is a Freescale MXC
+console handover: boot [ttymxc0] -> real [ttymxc0]
+mxcintuart.1: ttymxc1 at MMIO 0x53fc0000 (irq = 32) is a Freescale MXC
+mxcintuart.2: ttymxc2 at MMIO 0x5000c000 (irq = 33) is a Freescale MXC
+mxcintuart.3: ttymxc3 at MMIO 0x53ff0000 (irq = 13) is a Freescale MXC
+loop: module loaded
+mxc_rtc mxc_rtc.0: rtc core: registered mxc_rtc as rtc0
+Probing mxc_rtc done
+mc13892 rtc probe start
+pmic_rtc pmic_rtc.1: rtc core: registered pmic_rtc as rtc1
+mc13892 rtc probe succeed
+i2c /dev entries driver
+MXC WatchDog Driver 2.0
+MXC Watchdog # 0 Timer: initial timeout 127 sec
+MXC Watchdog: Started 10000 millisecond watchdog refresh
+PMIC Character device: successfully loaded
+pmic_battery: probe of pmic_battery.1 failed with error -1
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+mxsdhci: MXC Secure Digital Host Controller Interface driver
+mxsdhci: MXC SDHCI Controller Driver. 
+mmc0: SDHCI detect irq 273 irq 2 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver. 
+mmc1: SDHCI detect irq 0 irq 3 INTERNAL DMA
+Registered led device: pmic_ledsr
+Registered led device: pmic_ledsg
+Registered led device: pmic_ledsb
+Advanced Linux Sound Architecture Driver Version 1.0.20.
+wm8962_i2c_probe
+wm8962 1-001a: customer id 0 revision D
+wm8962 1-001a: Syncing cache
+wm8962 1-001a: No BCLK rate configured
+mmc0: queuing CIS tuple 0x01 length 3
+input: WM8962 Beep Generator as /devices/virtual/i2c-adapter/i2c-1/1-001a/input/input0
+No device for DAI imx-ssi-1-0
+No device for DAI imx-ssi-1-1
+No device for DAI imx-ssi-2-0
+No device for DAI imx-ssi-2-1
+DMA Sound Buffers Allocated:UseIram=0 buf->addr=7e1c0000 buf->area=f9e27000 size=131072
+DMA Sound Buffers Allocated:UseIram=0 buf->addr=79fa0000 buf->area=f9e47000 size=131072
+asoc: WM8962 <-> imx-ssi-2-0 mapping ok
+mmc0: queuing CIS tuple 0x1a length 5
+mmc0: queuing CIS tuple 0x1b length 8
+mmc0: queuing CIS tuple 0x14 length 0
+mmc0: queuing CIS tuple 0x80 length 1
+mmc0: queuing CIS tuple 0x81 length 1
+mmc0: queuing CIS tuple 0x82 length 1
+mmc0: new high speed SDIO card at address 0001
+input: imx-yoshi Headset as /devices/platform/soc-audio.1/sound/card0/input1
+ALSA device list:
+  #0: imx-yoshi (WM8962)
+nf_conntrack version 0.5.0 (4096 buckets, 16384 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+NET: Registered protocol family 17
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+kernel: I perf:kernel:kernel_loaded=5.95 seconds:
+VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 2
+mxc_rtc mxc_rtc.0: setting system clock to 2022-05-06 21:57:48 UTC (1651874268)
+Freeing init memory: 6996K
+emmc: I def:mmcpartinfo:vendor=sandisk, ddr=1, host=mmc1:
+mmc1: new high speed MMC card at address 0001
+mmcblk0: mmc1:0001 SEM04G 3.68 GiB 
+ mmcblk0: p1 p2 p3 p4
+mount: mounting devtmpfs on /dev failed: No such device
+mount: mounting /dev/mmcblk0p1 on /mnt failed: No such file or directory
+umount: can't unmount /mnt: Invalid argument
+Linux inkbox 2.6.31-rt11-inkbox #2 Fri May 6 17:52:45 EDT 2022 armv7l GNU/Linux
+InkBox OS, kernel build DXbHl6jH, commit cfb9f89
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+
+Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+/usr/bin/fsck.ext4: No such file or directory while trying to open /dev/mmcblk0p1
+Possibly non-existent device?
+e2fsck 1.46.2 (28-Feb-2021)
+/usr/bin/fsck.ext4: No such file or directory while trying to open /dev/mmcblk0p2
+Possibly non-existent device?
+e2fsck 1.46.2 (28-Feb-2021)
+/usr/bin/fsck.ext4: No such file or directory while trying to open /dev/mmcblk0p3
+Possibly non-existent device?
+e2fsck 1.46.2 (28-Feb-2021)
+/usr/bin/fsck.ext4: No such file or directory while trying to open /dev/mmcblk0p4
+Possibly non-existent device?
+
+dd: can't open '/dev/mmcblk0': No such file or directory
+Generating device UID ...
+/opt/bin/uidgen: line 4: can't open /dev/urandom: no such file
+Done. UID:
+
+Flashing UID to MMC ...
+0+0 records in
+0+0 records out
+0 bytes (0B) copied, 0.000086 seconds, 0B/s
+Done.
+0+1 records in
+0+1 records out
+2 bytes (2B) copied, 0.000135 seconds, 14.5KB/s
+mount: mounting /dev/mmcblk0p1 on /mnt failed: No such file or directory
+umount: can't unmount /mnt: Invalid argument
+evtest: No such file or directory
+(initrd) Hit any key to stop auto-boot ... 
+
+inkbox login: wm8962_process_req
+root
+login[526]: root login on 'ttymxc0'
+~ # busyb
+-sh: busyb: not found
+~ # busybox
+BusyBox v1.32.1 (2021-04-25 22:27:23 EDT) multi-call binary.
+BusyBox is copyrighted by many authors between 1998-2015.
+Licensed under GPLv2. See source distribution for detailed
+copyright notices.
+
+Usage: busybox [function [arguments]...]
+   or: busybox --list[-full]
+   or: busybox --show SCRIPT
+   or: busybox --install [-s] [DIR]
+   or: function [arguments]...
+
+        BusyBox is a multi-call binary that combines many common Unix
+        utilities into a single executable.  Most people will create a
+        link to busybox for each function they wish to use and BusyBox
+        will act like whatever it was invoked as.
+
+Currently defined functions:
+        [, [[, acpid, add-shell, addgroup, adduser, adjtimex, ar, arch, arp,
+        arping, ash, awk, base64, basename, bc, beep, blkdiscard, blkid,
+        blockdev, bootchartd, brctl, bunzip2, bzcat, bzip2, cal, cat, chat,
+        chattr, chgrp, chmod, chown, chpasswd, chpst, chroot, chrt, chvt,
+        cksum, clear, cmp, comm, conspy, cp, cpio, crond, crontab, cryptpw,
+        cttyhack, cut, date, dc, dd, deallocvt, delgroup, deluser, depmod,
+        devmem, df, dhcprelay, diff, dirname, dmesg, dnsd, dnsdomainname,
+        dos2unix, du, dumpkmap, dumpleases, echo, ed, egrep, eject, env,
+        envdir, envuidgid, ether-wake, expand, expr, factor, fakeidentd,
+        fallocate, false, fatattr, fbset, fbsplash, fdflush, fdformat, fdisk,
+        fgconsole, fgrep, find, findfs, flock, fold, free, freeramdisk, fsck,
+        fsck.minix, fsfreeze, fstrim, fsync, ftpd, ftpget, ftpput, fuser,
+        getopt, getty, grep, groups, gunzip, gzip, halt, hd, hdparm, head,
+        hexdump, hexedit, hostid, hostname, httpd, hush, hwclock, i2cdetect,
+        i2cdump, i2cget, i2cset, i2ctransfer, id, ifconfig, ifdown, ifenslave,
+        ifplugd, ifup, inetd, init, insmod, install, ionice, iostat, ip,
+        ipaddr, ipcalc, ipcrm, ipcs, iplink, ipneigh, iproute, iprule,
+        iptunnel, kbd_mode, kill, killall, killall5, klogd, last, less, link,
+        linux32, linux64, linuxrc, ln, loadfont, loadkmap, logger, login,
+        logname, logread, losetup, lpd, lpq, lpr, ls, lsattr, lsmod, lsof,
+        lspci, lsscsi, lsusb, lzcat, lzma, lzop, lzopcat, makedevs, makemime,
+        man, md5sum, mdev, mesg, microcom, mim, mkdir, mkdosfs, mke2fs, mkfifo,
+        mkfs.ext2, mkfs.minix, mkfs.vfat, mknod, mkpasswd, mkswap, mktemp,
+        modinfo, modprobe, more, mount, mountpoint, mpstat, mt, mv, nameif,
+        nanddump, nandwrite, nbd-client, nc, netstat, nice, nl, nmeter, nohup,
+        nologin, nproc, nsenter, nslookup, ntpd, nuke, od, openvt, partprobe,
+        passwd, paste, patch, pgrep, pidof, ping, ping6, pipe_progress,
+        pivot_root, pkill, pmap, popmaildir, poweroff, powertop, printenv,
+        printf, ps, pscan, pstree, pwd, pwdx, raidautorun, rdate, rdev,
+        readahead, readlink, readprofile, realpath, reboot, reformime,
+        remove-shell, renice, reset, resize, resume, rev, rm, rmdir, rmmod,
+        route, rpm, rpm2cpio, rtcwake, run-init, run-parts, runlevel, runsv,
+        runsvdir, rx, script, scriptreplay, sed, sendmail, seq, setarch,
+        setconsole, setfattr, setfont, setkeycodes, setlogcons, setpriv,
+        setserial, setsid, setuidgid, sh, sha1sum, sha256sum, sha3sum,
+        sha512sum, showkey, shred, shuf, slattach, sleep, smemcap, softlimit,
+        sort, split, ssl_client, start-stop-daemon, stat, strings, stty, su,
+        sulogin, sum, sv, svc, svlogd, svok, swapoff, swapon, switch_root,
+        sync, sysctl, syslogd, tac, tail, tar, taskset, tc, tcpsvd, tee,
+        telnet, telnetd, test, tftp, tftpd, time, timeout, top, touch, tr,
+        traceroute, traceroute6, true, truncate, ts, tty, ttysize, tunctl,
+        tune2fs, ubiattach, ubidetach, ubimkvol, ubirename, ubirmvol, ubirsvol,
+        ubiupdatevol, udhcpc, udhcpc6, udhcpd, udpsvd, uevent, umount, uname,
+        unexpand, uniq, unix2dos, unlink, unlzma, unlzop, unshare, unxz,
+        uptime, users, usleep, uudecode, uuencode, vconfig, vi, vlock, volname,
+        w, wall, watch, watchdog, wc, wget, which, who, whoami, whois, xargs,
+        xxd, xz, xzcat, yes, zcat, zcip
+~ # 

@@ -1,0 +1,381 @@
+In file included from tools/../include/libfdt.h:54,
+                 from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+/usr/include/libfdt_env.h:27:30: error: conflicting types for ‘fdt64_t’; have ‘uint64_t’ {aka ‘long unsigned int’}
+   27 | typedef uint64_t FDT_BITWISE fdt64_t;
+      |                              ^~~~~~~
+In file included from <command-line>:
+././include/libfdt_env.h:19:16: note: previous declaration of ‘fdt64_t’ with type ‘fdt64_t’ {aka ‘long long unsigned int’}
+   19 | typedef __be64 fdt64_t;
+      |                ^~~~~~~
+In file included from ././include/libfdt_env.h:12,
+                 from <command-line>:
+/usr/include/libfdt_env.h:47:24: error: expected ‘)’ before ‘x’
+   47 | static inline uint32_t fdt32_to_cpu(fdt32_t x)
+      |                        ^~~~~~~~~~~~
+././include/compiler.h:66:16: error: expected ‘)’ before ‘&’ token
+   66 |         ((((x) & 0xff000000) >> 24) | \
+      |                ^
+././include/compiler.h:66:30: error: expected ‘)’ before ‘>>’ token
+   66 |         ((((x) & 0xff000000) >> 24) | \
+      |                              ^~
+././include/compiler.h:66:37: error: expected ‘)’ before ‘|’ token
+   66 |         ((((x) & 0xff000000) >> 24) | \
+      |                                     ^
+/usr/include/libfdt_env.h:51:23: error: expected ‘)’ before ‘x’
+   51 | static inline fdt32_t cpu_to_fdt32(uint32_t x)
+      |                       ^~~~~~~~~~~~
+././include/compiler.h:66:16: error: expected ‘)’ before ‘&’ token
+   66 |         ((((x) & 0xff000000) >> 24) | \
+      |                ^
+././include/compiler.h:66:30: error: expected ‘)’ before ‘>>’ token
+   66 |         ((((x) & 0xff000000) >> 24) | \
+      |                              ^~
+././include/compiler.h:66:37: error: expected ‘)’ before ‘|’ token
+   66 |         ((((x) & 0xff000000) >> 24) | \
+      |                                     ^
+/usr/include/libfdt_env.h:56:24: error: expected ‘)’ before ‘x’
+   56 | static inline uint64_t fdt64_to_cpu(fdt64_t x)
+      |                        ^~~~~~~~~~~~
+././include/compiler.h:71:16: error: expected ‘)’ before ‘&’ token
+   71 |         ((((x) & 0xff00000000000000##sfx) >> 56) | \
+      |                ^
+././include/compiler.h:71:43: error: expected ‘)’ before ‘>>’ token
+   71 |         ((((x) & 0xff00000000000000##sfx) >> 56) | \
+      |                                           ^~
+././include/compiler.h:71:50: error: expected ‘)’ before ‘|’ token
+   71 |         ((((x) & 0xff00000000000000##sfx) >> 56) | \
+      |                                                  ^
+/usr/include/libfdt_env.h:60:23: error: expected ‘)’ before ‘x’
+   60 | static inline fdt64_t cpu_to_fdt64(uint64_t x)
+      |                       ^~~~~~~~~~~~
+././include/compiler.h:71:16: error: expected ‘)’ before ‘&’ token
+   71 |         ((((x) & 0xff00000000000000##sfx) >> 56) | \
+      |                ^
+././include/compiler.h:71:43: error: expected ‘)’ before ‘>>’ token
+   71 |         ((((x) & 0xff00000000000000##sfx) >> 56) | \
+      |                                           ^~
+././include/compiler.h:71:50: error: expected ‘)’ before ‘|’ token
+   71 |         ((((x) & 0xff00000000000000##sfx) >> 56) | \
+      |                                                  ^
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:122:21: error: redefinition of ‘fdt_offset_ptr_w’
+  122 | static inline void *fdt_offset_ptr_w(void *fdt, int offset, int checklen)
+      |                     ^~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:136:21: note: previous definition of ‘fdt_offset_ptr_w’ with type ‘void *(void *, int,  int)’
+  136 | static inline void *fdt_offset_ptr_w(void *fdt, int offset, int checklen)
+      |                     ^~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:259:1: error: redefinition of ‘fdt_set_magic’
+  259 | fdt_set_hdr_(magic);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_magic’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:219:1: note: in expansion of macro ‘__fdt_set_hdr’
+  219 | __fdt_set_hdr(magic);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:260:1: error: redefinition of ‘fdt_set_totalsize’
+  260 | fdt_set_hdr_(totalsize);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_totalsize’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:220:1: note: in expansion of macro ‘__fdt_set_hdr’
+  220 | __fdt_set_hdr(totalsize);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:261:1: error: redefinition of ‘fdt_set_off_dt_struct’
+  261 | fdt_set_hdr_(off_dt_struct);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_off_dt_struct’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:221:1: note: in expansion of macro ‘__fdt_set_hdr’
+  221 | __fdt_set_hdr(off_dt_struct);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:262:1: error: redefinition of ‘fdt_set_off_dt_strings’
+  262 | fdt_set_hdr_(off_dt_strings);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_off_dt_strings’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:222:1: note: in expansion of macro ‘__fdt_set_hdr’
+  222 | __fdt_set_hdr(off_dt_strings);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:263:1: error: redefinition of ‘fdt_set_off_mem_rsvmap’
+  263 | fdt_set_hdr_(off_mem_rsvmap);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_off_mem_rsvmap’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:223:1: note: in expansion of macro ‘__fdt_set_hdr’
+  223 | __fdt_set_hdr(off_mem_rsvmap);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:264:1: error: redefinition of ‘fdt_set_version’
+  264 | fdt_set_hdr_(version);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_version’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:224:1: note: in expansion of macro ‘__fdt_set_hdr’
+  224 | __fdt_set_hdr(version);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:265:1: error: redefinition of ‘fdt_set_last_comp_version’
+  265 | fdt_set_hdr_(last_comp_version);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_last_comp_version’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:225:1: note: in expansion of macro ‘__fdt_set_hdr’
+  225 | __fdt_set_hdr(last_comp_version);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:266:1: error: redefinition of ‘fdt_set_boot_cpuid_phys’
+  266 | fdt_set_hdr_(boot_cpuid_phys);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_boot_cpuid_phys’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:226:1: note: in expansion of macro ‘__fdt_set_hdr’
+  226 | __fdt_set_hdr(boot_cpuid_phys);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:267:1: error: redefinition of ‘fdt_set_size_dt_strings’
+  267 | fdt_set_hdr_(size_dt_strings);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_size_dt_strings’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:227:1: note: in expansion of macro ‘__fdt_set_hdr’
+  227 | __fdt_set_hdr(size_dt_strings);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:268:1: error: redefinition of ‘fdt_set_size_dt_struct’
+  268 | fdt_set_hdr_(size_dt_struct);
+      | ^~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:214:28: note: previous definition of ‘fdt_set_size_dt_struct’ with type ‘void(void *, uint32_t)’ {aka ‘void(void *, unsigned int)’}
+  214 |         static inline void fdt_set_##name(void *fdt, uint32_t val) \
+      |                            ^~~~~~~~
+tools/../include/libfdt.h:228:1: note: in expansion of macro ‘__fdt_set_hdr’
+  228 | __fdt_set_hdr(size_dt_struct);
+      | ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:346:13: error: conflicting types for ‘fdt_get_string’; have ‘const char *(const void *, int,  int *)’
+  346 | const char *fdt_get_string(const void *fdt, int stroffset, int *lenp);
+      |             ^~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:934:5: note: previous declaration of ‘fdt_get_string’ with type ‘int(const void *, int,  const char *, const char **)’
+  934 | int fdt_get_string(const void *fdt, int node, const char *property,
+      |     ^~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:708:36: error: redefinition of ‘fdt_get_property_w’
+  708 | static inline struct fdt_property *fdt_get_property_w(void *fdt, int nodeoffset,
+      |                                    ^~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:516:36: note: previous definition of ‘fdt_get_property_w’ with type ‘struct fdt_property *(void *, int,  const char *, int *)’
+  516 | static inline struct fdt_property *fdt_get_property_w(void *fdt, int nodeoffset,
+      |                                    ^~~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:807:21: error: redefinition of ‘fdt_getprop_w’
+  807 | static inline void *fdt_getprop_w(void *fdt, int nodeoffset,
+      |                     ^~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:601:21: note: previous definition of ‘fdt_getprop_w’ with type ‘void *(void *, int,  const char *, int *)’
+  601 | static inline void *fdt_getprop_w(void *fdt, int nodeoffset,
+      |                     ^~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1310:19: error: redefinition of ‘fdt_setprop_inplace_u32’
+ 1310 | static inline int fdt_setprop_inplace_u32(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1057:19: note: previous definition of ‘fdt_setprop_inplace_u32’ with type ‘int(void *, int,  const char *, uint32_t)’ {aka ‘int(void *, int,  const char *, unsigned int)’}
+ 1057 | static inline int fdt_setprop_inplace_u32(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1345:19: error: redefinition of ‘fdt_setprop_inplace_u64’
+ 1345 | static inline int fdt_setprop_inplace_u64(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1092:19: note: previous definition of ‘fdt_setprop_inplace_u64’ with type ‘int(void *, int,  const char *, uint64_t)’ {aka ‘int(void *, int,  const char *, long unsigned int)’}
+ 1092 | static inline int fdt_setprop_inplace_u64(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1362:19: error: redefinition of ‘fdt_setprop_inplace_cell’
+ 1362 | static inline int fdt_setprop_inplace_cell(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1104:19: note: previous definition of ‘fdt_setprop_inplace_cell’ with type ‘int(void *, int,  const char *, uint32_t)’ {aka ‘int(void *, int,  const char *, unsigned int)’}
+ 1104 | static inline int fdt_setprop_inplace_cell(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1466:19: error: redefinition of ‘fdt_property_u32’
+ 1466 | static inline int fdt_property_u32(void *fdt, const char *name, uint32_t val)
+      |                   ^~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1170:19: note: previous definition of ‘fdt_property_u32’ with type ‘int(void *, const char *, uint32_t)’ {aka ‘int(void *, const char *, unsigned int)’}
+ 1170 | static inline int fdt_property_u32(void *fdt, const char *name, uint32_t val)
+      |                   ^~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1471:19: error: redefinition of ‘fdt_property_u64’
+ 1471 | static inline int fdt_property_u64(void *fdt, const char *name, uint64_t val)
+      |                   ^~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1175:19: note: previous definition of ‘fdt_property_u64’ with type ‘int(void *, const char *, uint64_t)’ {aka ‘int(void *, const char *, long unsigned int)’}
+ 1175 | static inline int fdt_property_u64(void *fdt, const char *name, uint64_t val)
+      |                   ^~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1478:19: error: redefinition of ‘fdt_property_cell’
+ 1478 | static inline int fdt_property_cell(void *fdt, const char *name, uint32_t val)
+      |                   ^~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1180:19: note: previous definition of ‘fdt_property_cell’ with type ‘int(void *, const char *, uint32_t)’ {aka ‘int(void *, const char *, unsigned int)’}
+ 1180 | static inline int fdt_property_cell(void *fdt, const char *name, uint32_t val)
+      |                   ^~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1677:19: error: redefinition of ‘fdt_setprop_u32’
+ 1677 | static inline int fdt_setprop_u32(void *fdt, int nodeoffset, const char *name,
+      |                   ^~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1330:19: note: previous definition of ‘fdt_setprop_u32’ with type ‘int(void *, int,  const char *, uint32_t)’ {aka ‘int(void *, int,  const char *, unsigned int)’}
+ 1330 | static inline int fdt_setprop_u32(void *fdt, int nodeoffset, const char *name,
+      |                   ^~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1712:19: error: redefinition of ‘fdt_setprop_u64’
+ 1712 | static inline int fdt_setprop_u64(void *fdt, int nodeoffset, const char *name,
+      |                   ^~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1365:19: note: previous definition of ‘fdt_setprop_u64’ with type ‘int(void *, int,  const char *, uint64_t)’ {aka ‘int(void *, int,  const char *, long unsigned int)’}
+ 1365 | static inline int fdt_setprop_u64(void *fdt, int nodeoffset, const char *name,
+      |                   ^~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1730:19: error: redefinition of ‘fdt_setprop_cell’
+ 1730 | static inline int fdt_setprop_cell(void *fdt, int nodeoffset, const char *name,
+      |                   ^~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1377:19: note: previous definition of ‘fdt_setprop_cell’ with type ‘int(void *, int,  const char *, uint32_t)’ {aka ‘int(void *, int,  const char *, unsigned int)’}
+ 1377 | static inline int fdt_setprop_cell(void *fdt, int nodeoffset, const char *name,
+      |                   ^~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1855:19: error: redefinition of ‘fdt_appendprop_u32’
+ 1855 | static inline int fdt_appendprop_u32(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1472:19: note: previous definition of ‘fdt_appendprop_u32’ with type ‘int(void *, int,  const char *, uint32_t)’ {aka ‘int(void *, int,  const char *, unsigned int)’}
+ 1472 | static inline int fdt_appendprop_u32(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1890:19: error: redefinition of ‘fdt_appendprop_u64’
+ 1890 | static inline int fdt_appendprop_u64(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1507:19: note: previous definition of ‘fdt_appendprop_u64’ with type ‘int(void *, int,  const char *, uint64_t)’ {aka ‘int(void *, int,  const char *, long unsigned int)’}
+ 1507 | static inline int fdt_appendprop_u64(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~
+In file included from include/image.h:52,
+                 from tools/aisimage.c:10:
+/usr/include/libfdt.h:1908:19: error: redefinition of ‘fdt_appendprop_cell’
+ 1908 | static inline int fdt_appendprop_cell(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~
+In file included from tools/fdt_host.h:11,
+                 from tools/imagetool.h:24,
+                 from tools/aisimage.c:8:
+tools/../include/libfdt.h:1519:19: note: previous definition of ‘fdt_appendprop_cell’ with type ‘int(void *, int,  const char *, uint32_t)’ {aka ‘int(void *, int,  const char *, unsigned int)’}
+ 1519 | static inline int fdt_appendprop_cell(void *fdt, int nodeoffset,
+      |                   ^~~~~~~~~~~~~~~~~~~
+make[1]: *** [scripts/Makefile.host:111: tools/aisimage.o] Błąd 1
+make[1]: *** Oczekiwanie na niezakończone zadania....
+  LDS     u-boot.lds
+make: *** [Makefile:1194: tools] Błąd 2

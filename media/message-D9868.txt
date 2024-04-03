@@ -1,0 +1,1329 @@
+/ # ./strace /etc/init.d/init
+execve("/etc/init.d/init", ["/etc/init.d/init"], [/* 9 vars */]) = 0
+set_tls(0x31bd8, 0x7c, 0x37, 0x7e840f5d, 0x31b68) = 0
+set_tid_address(0x31b64)                = 87
+access("/opt/device", F_OK)             = 0
+open("/opt/device", O_RDONLY|O_LARGEFILE) = 3
+brk(0)                                  = 0xe91000
+brk(0xe93000)                           = 0xe93000
+mmap2(0xe91000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xe91000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(3, 0, [5], SEEK_END)            = 0
+_llseek(3, 0, [5], SEEK_CUR)            = 0
+_llseek(3, 0, [0], SEEK_SET)            = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9c000
+readv(3, [{"n30", 3}, {"6\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 5
+_llseek(3, -1, [4], SEEK_CUR)           = 0
+close(3)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+mount("proc", "/proc", "proc", MS_NOSUID, "") = -1 EBUSY (Resource busy)
+mount("sysfs", "/sys", "sysfs", 0, "")  = -1 EBUSY (Resource busy)
+nanosleep({1, 0}, 0x7e840920)           = 0
+mount("devtmpfs", "/dev", "devtmpfs", 0, "") = -1 EBUSY (Resource busy)
+mount("tmpfs", "/tmp", "tmpfs", 0, "size=16M") = 0
+sethostname("inkbox", 6)                = 0
+socket(PF_INET, SOCK_DGRAM, IPPROTO_IP) = 3
+ioctl(3, SIOCSIFFLAGS, {ifr_name="lo", ifr_flags=IFF_UP}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=0, ws_col=0, ws_xpixel=0, ws_ypixel=0}) = 0
+writev(1, [{"Interface 'lo': flags set to 000"..., 33}, {".\n", 2}], 2Interface 'lo': flags set to 0001.
+) = 35
+uname({sysname="Linux", nodename="inkbox", ...}) = 0
+access("/opt/build_id", F_OK)           = 0
+open("/opt/build_id", O_RDONLY|O_LARGEFILE) = 4
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(4, 0, [9], SEEK_END)            = 0
+_llseek(4, 0, [9], SEEK_CUR)            = 0
+_llseek(4, 0, [0], SEEK_SET)            = 0
+readv(4, [{"Nks3MnH", 7}, {"S\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 9
+_llseek(4, -1, [8], SEEK_CUR)           = 0
+close(4)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+access("/opt/commit", F_OK)             = 0
+open("/opt/commit", O_RDONLY|O_LARGEFILE) = 4
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(4, 0, [8], SEEK_END)            = 0
+_llseek(4, 0, [8], SEEK_CUR)            = 0
+_llseek(4, 0, [0], SEEK_SET)            = 0
+readv(4, [{"478876", 6}, {"0\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 8
+_llseek(4, -1, [7], SEEK_CUR)           = 0
+close(4)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/flags", 0755)               = -1 EEXIST (File exists)
+access("/mnt/flags/DISPLAY_DEBUG", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/flags/USBNET_IP", F_OK)    = -1 ENOENT (No such file or directory)
+access("/mnt/flags/MOUNT_RW", F_OK)     = -1 ENOENT (No such file or directory)
+access("/mnt/flags/LOGIN_SHELL", F_OK)  = -1 ENOENT (No such file or directory)
+access("/mnt/flags/X11_START", F_OK)    = 0
+open("/mnt/flags/X11_START", O_RDONLY|O_LARGEFILE) = 4
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(4, 0, [5], SEEK_END)            = 0
+_llseek(4, 0, [5], SEEK_CUR)            = 0
+_llseek(4, 0, [0], SEEK_SET)            = 0
+readv(4, [{"fal", 3}, {"se\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 5
+_llseek(4, -1, [4], SEEK_CUR)           = 0
+close(4)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+writev(1, [{"", 0}, {"\n", 1}], 2
+)      = 1
+writev(1, [{"Linux inkbox #1 SMP PREEMPT Mon "..., 56}, {" GNU/Linux\n", 11}], 2Linux inkbox #1 SMP PREEMPT Mon Decx
+) = 67
+writev(1, [{"InkBox OS, kernel build Nks3MnHS"..., 48}, {"\n\n", 2}], 2InkBox OS, kernel build Nks3MnHS, commit 4780
+
+) = 50
+writev(1, [{"Copyright (C) 2021-2022 Nicolas "..., 66}, {"\n", 1}], 2Copyright (C) 2021-2022 Nicolas Mailloux <nico>
+) = 67
+writev(1, [{"\33[1m\33[32m * \33[0mChecking filesys"..., 40}, {"\n", 1}], 2 * Checking filesystems ...
+) = 41
+umount2("/mnt", 0)                      = 0
+writev(1, [{"", 0}, {"\n", 1}], 2
+)      = 1
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 90
+close(5)                                = 0
+read(4, "", 4)                          = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(90, e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1: clean, 20/3840 files, 2254/15360 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 90
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=90, si_uid=0, si_status=0, si_utime=1, si_stime=0} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 91
+close(5)                                = 0
+read(4, "", 4)                          = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(91, e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p2: clean, 430/128016 files, 48485/512000 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 91
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=91, si_uid=0, si_status=0, si_utime=2, si_stime=1} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 92
+close(5)                                = 0
+read(4, "", 4)                          = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(92, e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p3: clean, 1019/32768 files, 97684/131072 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 92
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=92, si_uid=0, si_status=0, si_utime=1, si_stime=0} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 93
+close(5)                                = 0
+read(4, "", 4)                          = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(93, e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4: clean, 28082/930240 files, 3227616/3715712 blocks
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 93
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=93, si_uid=0, si_status=0, si_utime=2, si_stime=1} ---
+writev(1, [{"", 0}, {"\n", 1}], 2
+)      = 1
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 96
+close(5)                                = 0
+read(4, "", 4)                          = 0
+close(4)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(96, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 96
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=96, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+access("/mnt/flags/DONT_BOOT", F_OK)    = -1 ENOENT (No such file or directory)
+access("/mnt/flags/ENCRYPT_LOCK", F_OK) = -1 ENOENT (No such file or directory)
+umount2("/mnt", 0)                      = 0
+writev(1, [{"(initrd) Hit ENTER to stop auto-"..., 41}, {NULL, 0}], 2(initrd) Hit ENTER to stop auto-boot ... ) = 41
+select(1, [0], NULL, NULL, {3, 0})      = 0 (Timeout)
+writev(1, [{"", 0}, {"\n", 1}], 2
+)      = 1
+writev(1, [{"", 0}, {"\n", 1}], 2
+)      = 1
+open("/dev/mmcblk0", O_RDONLY|O_LARGEFILE) = 4
+_llseek(4, 40894464, [40894464], SEEK_SET) = 0
+read(4, "rooted", 6)                    = 6
+close(4)                                = 0
+access("/opt/root", F_OK)               = 0
+open("/opt/root", O_RDONLY|O_LARGEFILE) = 4
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(4, 0, [7], SEEK_END)            = 0
+_llseek(4, 0, [7], SEEK_CUR)            = 0
+_llseek(4, 0, [0], SEEK_SET)            = 0
+readv(4, [{"roote", 5}, {"d\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 7
+_llseek(4, -1, [6], SEEK_CUR)           = 0
+close(4)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+writev(1, [{"\33[1m\33[33m * \33[0mDevice is rooted"..., 63}, {"\n", 1}], 2 * Device is rooted; not enforcing secury
+) = 64
+open("/dev/input/event0", O_RDONLY|O_NONBLOCK|O_LARGEFILE) = 4
+syscall_403(0, 0x7e840960, 0, 0x4, 0, 0x7e840e74) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 239760968}) = 0
+syscall_403(0, 0x7e840960, 0, 0x7e840960, 0, 0x7e840e74) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 240089843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 240555385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 241006635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 241436635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 241865760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 242330218}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 242774843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 243203676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 243626343}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 244052510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 244478885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 244908135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 245365593}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 245793843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 246223551}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 578648051}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 579862968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 580851885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 581854468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 582802135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 583739093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 584718718}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 585645968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 586576843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 587548426}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 588485676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 589568343}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 590527468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 591469635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 592443385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 593387968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 594325676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 595293885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 596221968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 929269051}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 931279635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 933165843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 935077676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 936963426}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 939035385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 941042010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 942952718}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 944787843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 946687926}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 948576135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 950622718}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 952488093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 954373301}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 956249676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 958074676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 960103468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 962016010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 963849760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054315, 965735885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 298527343}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 303796676}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 307359051}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 309463551}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 311358801}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 313280426}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 315188176}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 317014135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 319037218}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 320973593}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 322859385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 324700510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 326592010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 328472718}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 330448093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 332348801}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 334246385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 336074885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 337957260}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 339988426}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 722254551}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 723187510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 723960051}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 724685135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 725447885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 726172885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 726877051}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 727584385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 728333093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 729219135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 729975885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 730735926}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 731454718}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 732162801}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 732864301}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 733608218}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 734315551}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 735021093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054316, 735737135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 69612176}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 71629176}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 73564218}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 75475635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 77305510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 79499051}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 81448010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 83349093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 85185135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 87065926}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 89078801}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 90968926}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 92859468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 94738926}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 96567968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 98469635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 100515343}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 102363093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 104252760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 106134010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 503765135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 530671802}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 552689468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 574519052}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 586537635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 587020927}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 587476927}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 587914218}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 588353552}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 588843177}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 589338052}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 589785885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 590222843}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 590656385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 591092760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 591529010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 591957302}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 592412760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 592848635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 593270302}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 593693135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 594115135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 594541218}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 928194635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 928720093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 929248135}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 929706635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 930141802}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 930576510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 931032635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 931472718}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 931897635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 932321343}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 932752260}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 933173635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 933602760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 934056177}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 934487385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 934914885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 935340510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 935767468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054317, 936196468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 267404260}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 267891968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 268341052}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 269092343}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 271167052}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 273108468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 274973635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 276874885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 278878552}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 280792927}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 282710593}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 284600510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 286437260}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 288309177}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 290352552}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 292257385}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 294097510}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 295991052}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 297885635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 301693593}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 635433302}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 637412302}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 639607468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 641519093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 643445593}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 645333302}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 647162593}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 649185927}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 651130552}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 652976635}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 654875885}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 656767468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 658590093}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 660619968}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 662535010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 664426468}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 666269760}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 668152427}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 670200802}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054318, 672058010}) = 0
+read(4, 0x7e840ba0, 16)                 = -1 EAGAIN (Resource temporarily unavailable)
+syscall_403(0, 0x7e840960, 0, 0xffffffff, 0, 0) = -1 (errno 38)
+clock_gettime(CLOCK_REALTIME, {1672054319, 4103427}) = 0
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = 0
+access("/mnt/flags/DFL", F_OK)          = 0
+open("/mnt/flags/DFL", O_RDONLY|O_LARGEFILE) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(5, 0, [6], SEEK_END)            = 0
+_llseek(5, 0, [6], SEEK_CUR)            = 0
+_llseek(5, 0, [0], SEEK_SET)            = 0
+readv(5, [{"fals", 4}, {"e\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 6
+_llseek(5, -1, [5], SEEK_CUR)           = 0
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+access("/mnt/flags/BOOT_USB_DEBUG", F_OK) = 0
+open("/mnt/flags/BOOT_USB_DEBUG", O_RDONLY|O_LARGEFILE) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(5, 0, [6], SEEK_END)            = 0
+_llseek(5, 0, [6], SEEK_CUR)            = 0
+_llseek(5, 0, [0], SEEK_SET)            = 0
+readv(5, [{"fals", 4}, {"e\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 6
+_llseek(5, -1, [5], SEEK_CUR)           = 0
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+access("/mnt/flags/DIAGS_BOOT", F_OK)   = -1 ENOENT (No such file or directory)
+access("/mnt/flags/INITRD_DEBUG", F_OK) = 0
+open("/mnt/flags/INITRD_DEBUG", O_RDONLY|O_LARGEFILE) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+_llseek(5, 0, [5], SEEK_END)            = 0
+_llseek(5, 0, [5], SEEK_CUR)            = 0
+_llseek(5, 0, [0], SEEK_SET)            = 0
+readv(5, [{"tru", 3}, {"e\n\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1024}], 2) = 5
+_llseek(5, -1, [4], SEEK_CUR)           = 0
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+writev(1, [{"\33[1m\33[32m * \33[0mStarting init ra"..., 57}, {"\n", 1}], 2 * Starting init ramdisk USB debug framek
+) = 58
+mkdir("/dev", 0755)                     = -1 EEXIST (File exists)
+mkdir("/dev/pts", 0755)                 = 0
+mount("devpts", "/dev/pts", "devpts", 0, "") = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e8408c0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 103
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e8408c0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 104
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=103, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+umount2("/mnt", 0tcpsvd: listening on 0.0.0.0:21, starting
+)                      = 0
+writev(1, [{"\33[1m\33[32m * \33[0mBoot mode: Stand"..., 35}, {"\n", 1}], 2 * Boot mode: Standard
+) = 36
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = 0
+access("/mnt/flags/WILL_UPDATE", F_OK)  = -1 ENOENT (No such file or directory)
+umount2("/mnt", 0)                      = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 110
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(110, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 110
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=110, si_uid=0, si_status=0, si_utime=0, si_stime=1} ---
+nanosleep({2, 0}, 0x7e840920)           = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 127
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+nanosleep({2, 0}, 0x7e840920)           = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"0\n", 2}, {NULL, 0}], 2)   = 2
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"5\n", 2}, {NULL, 0}], 2)   = 2
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 152
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(152, Verifying root filesystem's digital signature ...
+Done.
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 152
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=152, si_uid=0, si_status=0, si_utime=1, si_stime=2} ---
+writev(1, [{"\33[1m\33[32m * \33[0mMounted root fil"..., 39}, {"\n", 1}], 2 * Mounted root filesystem
+) = 40
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"15\n", 3}, {NULL, 0}], 2)  = 3
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+mount("/dev/mmcblk0p1", "/mnt/boot", "ext4", 0, "") = 0
+mount("tmpfs", "/mnt/root", "tmpfs", 0, "size=8M") = 0
+open("/opt/passwd_root", O_RDONLY|O_LARGEFILE) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+open("/tmp/passwd", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 6
+ioctl(6, TIOCGWINSZ, 0x7e840920)        = -1 ENOTTY (Not a tty)
+read(5, "root:x:0:0:root:/root:/bin/ash\nb"..., 1024) = 1024
+read(5, "mail:/sbin/nologin\nntp:x:123:123"..., 1024) = 302
+writev(6, [{"root:x:0:0:root:/root:/bin/ash\nb"..., 1024}, {"m", 1}], 2) = 1025
+read(5, "", 1024)                       = 0
+close(5)                                = 0
+writev(6, [{"ail:/sbin/nologin\nntp:x:123:123:"..., 301}, {NULL, 0}], 2) = 301
+close(6)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+mount("/tmp/passwd", "/mnt/etc/passwd", 0x1ee00, MS_BIND, 0x1ee00) = 0
+mount("/dev/mmcblk0p4", "/mnt/opt/storage", "ext4", 0, "") = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/opt", 0755)                 = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage", 0755)         = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/config", 0755)  = -1 EEXIST (File exists)
+mount("/mnt/opt/storage/config", "/mnt/opt/config", 0x1ee00, MS_BIND, 0x1ee00) = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/opt", 0755)                 = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage", 0755)         = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/update", 0755)  = -1 EEXIST (File exists)
+mount("/mnt/opt/storage/update", "/mnt/opt/update", 0x1ee00, MS_BIND, 0x1ee00) = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/opt", 0755)                 = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage", 0755)         = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/X11", 0755)     = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/X11/rootfs", 0755) = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/X11/rootfs/work", 0755) = -1 EEXIST (File exists)
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/opt", 0755)                 = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage", 0755)         = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/X11", 0755)     = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/X11/rootfs", 0755) = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/X11/rootfs/write", 0755) = -1 EEXIST (File exists)
+mount("/mnt/opt/storage/X11/rootfs", "/mnt/opt/X11/rootfs", 0x1ee00, MS_BIND, 0x1ee00) = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"30\n", 3}, {NULL, 0}], 2)  = 3
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/opt", 0755)                 = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage", 0755)         = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/gui_rootfs", 0755) = -1 EEXIST (File exists)
+mount("/mnt/opt/storage/gui_rootfs", "/mnt/opt/gui_rootfs", 0x1ee00, MS_BIND, 0x1ee00) = 0
+mkdir("/mnt", 0755)                     = -1 EEXIST (File exists)
+mkdir("/mnt/opt", 0755)                 = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage", 0755)         = -1 EEXIST (File exists)
+mkdir("/mnt/opt/storage/ssh", 0755)     = -1 EEXIST (File exists)
+mount("/mnt/opt/storage/ssh", "/mnt/etc/ssh", 0x1ee00, MS_BIND, 0x1ee00) = 0
+open("/mnt/opt/storage/ssh/sshd_config", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+open("/tmp/sshd_config", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+writev(5, [{"PermitRootLogin yes\nSubsystem sf"..., 142}, {NULL, 0}], 2) = 142
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+mount("/tmp/sshd_config", "/mnt/etc/ssh/sshd_config", 0x1ee00, MS_BIND, 0x1ee00) = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"40\n", 3}, {NULL, 0}], 2)  = 3
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e8408e0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 536
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(536, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 536
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=536, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+mount("/dev/loop7", "/mnt/opt/root", "squashfs", MS_NOSUID|MS_NODEV|MS_NOEXEC, "") = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)       [  105.102046] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+         = 0
+clone(child_stack=0x7e8408e0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 551
+close(6)                                = [  105.121136] squashfs: SQUASHFS error: unable to read xattr id index tae
+0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(551, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 551
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=551, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+mount("/dev/loop6", "/mnt/opt/key", "squashfs", MS_NOSUID|MS_NODEV|MS_NOEXEC, "") = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e8408e0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 560
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(560, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 560
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=560, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+mount("/dev/loop5", "/mnt/lib/modules", "squashfs", MS_NOSUID|MS_NODEV|MS_NOEXEC, "") = 0
+writev(1, [{"\33[1m\33[32m * \33[0mMounted core Squ"..., 46}, {"\n", 1}], 2 * Mounted core SquashFS archives
+) = 47
+mount("/proc", "/mnt/proc", 0x1ee00, MS_BIND|MS_REC, 0x1ee00) = 0
+mount("/sys", "/mnt/sys", 0x1ee00, MS_BIND|MS_REC, 0x1ee00) = 0
+mount("/dev", "/mnt/dev", 0x1ee00, MS_BIND|MS_REC, 0x1ee00) = 0
+mount("tmpfs", "/mnt/tmp", "tmpfs", 0, "size=16M") = 0
+mount("tmpfs", "/mnt/var/log", "tmpfs", 0, "size=8M") = 0
+mount("tmpfs", "/mnt/opt/developer", "tmpfs", 0, "size=128K") = 0
+writev(1, [{"\33[1m\33[32m * \33[0mMounted essentia"..., 45}, {"\n", 1}], 2 * Mounted essential filesystems
+) = 46
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"45\n", 3}, {NULL, 0}], 2)  = 3
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+syscall_397(0xffffff9c, 0x1eb3c, 0, 0x7ff, 0x7e840780, 0x7e8408d8) = -1 (errno 38)
+stat64("/opt/firmware.sqsh", 0x7e840780) = -1 ENOENT (No such file or directory)
+open("/tmp/resolv.conf", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+mount("/tmp/resolv.conf", "/mnt/etc/resolv.conf", 0x1ee00, MS_BIND, 0x1ee00) = 0
+mount("tmpfs", "/mnt/var/db/dhcpcd", "tmpfs", MS_NOSUID|MS_NODEV|MS_NOEXEC, "size=512K") = 0
+open("/mnt/var/db/dhcpcd/duid", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+open("/mnt/opt/storage/dhcpcd_duid", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+mount("/mnt/opt/storage/dhcpcd_duid", "/mnt/var/db/dhcpcd/duid", 0x1ee00, MS_BIND, 0x1ee00) = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 564
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(564, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], 0, NULL) = 564
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=564, si_uid=0, si_status=127, si_utime=0, si_stime=0} ---
+access("/mnt/opt/developer/key/valid-key", F_OK) = -1 ENOENT (No such file or directory)
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 567
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(567, Verified OK
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 567
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=567, si_uid=0, si_status=0, si_utime=85, si_stime=14} ---
+writev(1, [{"\33[1m\33[31m * \33[0mGUI root filesys"..., 67}, {"\n", 1}], 2 * GUI root filesystem's digital signatu!
+) = 68
+writev(1, [{"\33[1m\33[31m * \33[0mAborting boot an"..., 46}, {"\n", 1}], 2 * Aborting boot and powering off
+) = 47
+open("/proc", O_RDONLY|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 5
+fcntl64(5, F_SETFD, FD_CLOEXEC)         = 0
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9a000
+getdents64(5, /* 73 entries */, 2048)   = 2040
+access("/proc./cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc../cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/procfb/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/procfs/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/procapm/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/procbus/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proccpu/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/procirq/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/procnet/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/procsys/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proctty/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/prockmsg/cmdline", F_OK)       = -1 ENOENT (No such file or directory)
+access("/procmisc/cmdline", F_OK)       = -1 ENOENT (No such file or directory)
+access("/procstat/cmdline", F_OK)       = -1 ENOENT (No such file or directory)
+access("/prociomem/cmdline", F_OK)      = -1 ENOENT (No such file or directory)
+access("/proclocks/cmdline", F_OK)      = -1 ENOENT (No such file or directory)
+access("/procswaps/cmdline", F_OK)      = -1 ENOENT (No such file or directory)
+access("/procasound/cmdline", F_OK)     = -1 ENOENT (No such file or directory)
+access("/proccrypto/cmdline", F_OK)     = -1 ENOENT (No such file or directory)
+access("/procdriver/cmdline", F_OK)     = -1 ENOENT (No such file or directory)
+access("/procmounts/cmdline", F_OK)     = -1 ENOENT (No such file or directory)
+access("/procuptime/cmdline", F_OK)     = -1 ENOENT (No such file or directory)
+access("/procvmstat/cmdline", F_OK)     = -1 ENOENT (No such file or directory)
+access("/proccmdline/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/proccpuinfo/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procdevices/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procioports/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procloadavg/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procmeminfo/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procmodules/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procsysvipc/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procversion/cmdline", F_OK)    = -1 ENOENT (No such file or directory)
+access("/procconsoles/cmdline", F_OK)   = -1 ENOENT (No such file or directory)
+access("/prockallsyms/cmdline", F_OK)   = -1 ENOENT (No such file or directory)
+access("/procsoftirqs/cmdline", F_OK)   = -1 ENOENT (No such file or directory)
+access("/proczoneinfo/cmdline", F_OK)   = -1 ENOENT (No such file or directory)
+access("/procbuddyinfo/cmdline", F_OK)  = -1 ENOENT (No such file or directory)
+access("/procconfig.gz/cmdline", F_OK)  = -1 ENOENT (No such file or directory)
+access("/procdiskstats/cmdline", F_OK)  = -1 ENOENT (No such file or directory)
+access("/procinterrupts/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/prockpagecount/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/prockpageflags/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procpartitions/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/proctimer_list/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procdevice-tree/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procexecdomains/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procfilesystems/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procvmallocinfo/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procpagetypeinfo/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/procself/cmdline", F_OK)       = -1 ENOENT (No such file or directory)
+access("/procthread-self/cmdline", F_OK) = -1 ENOENT (No such file or directory)
+access("/proc1/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc2/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc3/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc4/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc5/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc6/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc7/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc8/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc9/cmdline", F_OK)          = -1 ENOENT (No such file or directory)
+access("/proc10/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc11/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc12/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc13/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc14/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc15/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc16/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc17/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc18/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc19/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc20/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc21/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc22/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+getdents64(5, /* 46 entries */, 2048)   = 1104
+access("/proc23/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc24/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc43/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc44/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc45/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc46/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc47/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc48/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc49/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc50/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc51/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc52/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc53/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc54/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc55/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc56/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc57/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc58/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc59/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc60/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc61/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc62/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc63/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc64/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc65/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc79/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc85/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc87/cmdline", F_OK)         = -1 ENOENT (No such file or directory)
+access("/proc103/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc104/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc105/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc120/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc124/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc127/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc158/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc159/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc370/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc383/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc385/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc397/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc399/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc406/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc407/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc541/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc554/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+access("/proc561/cmdline", F_OK)        = -1 ENOENT (No such file or directory)
+getdents64(5, /* 0 entries */, 2048)    = 0
+close(5)                                = 0
+munmap(0x76f9a000, 8192)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e8408e0, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 622
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(622, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 622
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=622, si_uid=0, si_status=0, si_utime=3, si_stime=2} ---
+open("/mnt/boot/flags/X11_STARTED", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+writev(5, [{"false\n", 6}, {NULL, 0}], 2) = 6
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"50\n", 3}, {NULL, 0}], 2)  = 3
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"90\n", 3}, {NULL, 0}], 2)  = 3
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840918)      = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 668
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(668, 
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 668
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=668, si_uid=0, si_status=0, si_utime=5, si_stime=9} ---
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840910)        = -1 ENOTTY (Not a tty)
+writev(5, [{"100\n", 4}, {NULL, 0}], 2) = 4
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+nanosleep({0, 500000}, 0x7e840920)      = 0
+open("/run/progress_bar_fifo", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666) = 5
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+ioctl(5, TIOCGWINSZ, 0x7e840928)        = -1 ENOTTY (Not a tty)
+writev(5, [{"stop\n", 5}, {NULL, 0}], 2) = 5
+close(5)                                = 0
+munmap(0x76f9d000, 4096)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1031
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(1031, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1031
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1031, si_uid=0, si_status=0, si_utime=0, si_stime=1} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1037
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(1037, 0x7e84095c, 0, NULL)        = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=127, si_uid=0, si_status=0, si_utime=7, si_stime=19} ---
+wait4(1037,  [ ok ]
+ * Starting USBNet ... [ ok ]
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Starting InkBox Power Daemon (ipd) ... [ ok ]
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1037
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1037, si_uid=0, si_status=0, si_utime=10, si_stime=19} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1193
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(1193,  * Starting battery watchdog ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Checking for available updates ...Update skipped or no update available, aborting ...
+ [ ok ]
+ * Starting InkBox GUI ... * Starting InkBox Daemon (ibxd) ... [ ok ]
+fuse: bad mount point `/kobo/mnt/onboard/.adds/inkbox': No such file or directory
+mount: mounting /opt/config on /kobo/mnt/onboard/.adds/inkbox/.config failed: No such file or directory
+fuse: bad mount point `/kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo': No such file or directory
+Can't open squashfs image: No such file or directory
+mount: mounting /lib/qt5-plugins/libkobo.so.1 on /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/liby
+mount: mounting /usr/local/share/inkbox/stylesheets/eink-768x1024.qss on /kobo/mnt/onboard/.adds/inkbox/eink.qss fay
+ * Setting up GUI user applications
+mount: mounting /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/ on /data/onboard/.apps/Conway/Conway/system-lib/qt fay
+ * Failed to bind-mount system libraries at '/data/onboard/.apps/Conway/Conway/system-lib'.
+ [ !! ]
+ * Successfully set up application 'Conway'
+mount: mounting /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/ on /data/onboard/.apps/sanki/sanki/system-lib/qt faily
+ * Failed to bind-mount system libraries at '/data/onboard/.apps/sanki/sanki/system-lib'.
+ [ !! ]
+ * Successfully set up application 'sanki'
+ [ ok ]
+mount: mounting sysfs on /kobo/sys failed: No such file or directory
+mount: mounting proc on /kobo/proc failed: No such file or directory
+mount: mounting tmpfs on /kobo/tmp failed: No such file or directory
+mount: mounting tmpfs on /kobo/var/run failed: No such file or directory
+mount: mounting / on /kobo/external_root failed: No such file or directory
+mount: mounting /dev on /kobo/external_root/dev failed: No such file or directory
+mount: mounting /dev/pts on /kobo/external_root/dev/pts failed: No such file or directory
+mount: mounting /proc on /kobo/external_root/proc failed: No such file or directory
+mount: mounting /tmp on /kobo/external_root/tmp failed: No such file or directory
+mount: mounting /run on /kobo/external_root/run failed: No such file or directory
+mount: mounting /var on /kobo/external_root/var failed: No such file or directory
+mount: mounting /opt/isa on /kobo/external_root/opt/isa failed: No such file or directory
+mount: mounting /opt/root on /kobo/external_root/opt/root failed: No such file or directory
+mount: mounting /opt/update on /kobo/external_root/opt/update failed: No such file or directory
+mount: mounting /opt/storage on /kobo/external_root/opt/storage failed: No such file or directory
+mount: mounting /data/onboard on /kobo/external_root/data/onboard failed: No such file or directory
+mount: mounting /opt/bin/fbink/fbink on /kobo/external_root/opt/bin/fbink/fbink failed: No such file or directory
+mount: mounting /opt/inkbox_device on /kobo/opt/inkbox_device failed: No such file or directory
+mount: mounting /opt/inkbox_device on /kobo/external_root/opt/inkbox_device failed: No such file or directory
+mount: mounting /opt/X11/extensions_folders_list on /kobo/external_root/opt/X11/extensions_folders_list failed: No y
+mount: mounting /opt/X11/extensions_list on /kobo/external_root/opt/X11/extensions_list failed: No such file or diry
+mount: mounting /opt/X11/nographic_extensions_folders_list on /kobo/external_root/opt/X11/nographic_extensions_foldy
+mount: mounting /opt/X11/nographic_extensions_list on /kobo/external_root/opt/X11/nographic_extensions_list failed:y
+mount: mounting /boot on /kobo/external_root/boot failed: No such file or directory
+mount: mounting /lib/modules on /kobo/external_root/lib/modules failed: No such file or directory
+touch: cannot touch '/kobo/tmp/resolv.conf': No such file or directory
+mount: mounting /etc/resolv.conf on /kobo/tmp/resolv.conf failed: No such file or directory
+/usr/bin/inkbox.sh: line 9: can't create /kobo/tmp/first_launch_since_boot: nonexistent directory
+ [ ok ]
+chroot: failed to run command ‘/mnt/onboard/.adds/inkbox/inkbox.sh’: No such file or directory
+ * Loading modules ... [ ok ]
+ * Starting sshd ... [ ok ]
+ * Setting system clock using the hardware clock [UTC] ... [ ok ]
+ * Checking local filesystems  ... [ ok ]
+ * Remounting root filesystem read/write ... [ ok ]
+ * Remounting filesystems ... [ ok ]
+ * Mounting local filesystems ... [ ok ]
+ * Starting busybox syslog ... [ ok ]
+ * Starting busybox klogd ... [ ok ]
+[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1193
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1193, si_uid=0, si_status=0, si_utime=16, si_stime=44} ---
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+pipe2([5, 6], O_CLOEXEC)                = 0
+clone(child_stack=0x7e840920, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 1828
+close(6)                                = 0
+read(5, "", 4)                          = 0
+close(5)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+wait4(1828, 
+Welcome to InkBox OS 1.9
+Kernel 4.1.15 on armv7l (/dev/ttymxc0)
+
+kobo login: 

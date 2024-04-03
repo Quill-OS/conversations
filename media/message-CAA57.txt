@@ -1,0 +1,56 @@
+[{WIFEXITED(s) && WEXITSTATUS(s) == 123}], 0, NULL) = 526238
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=526238, si_uid=1002, si_status=123, si_utime=0, si_stime=0} ---
+clock_nanosleep(CLOCK_REALTIME, 0, {tv_sec=1, tv_nsec=0}, 0xffffddb65968) = 0
+mount("devtmpfs", "/dev", "devtmpfs", 0, "") = -1 EPERM (Operation not permitted)
+dup(2)                                  = 3
+fcntl(3, F_GETFL)                       = 0x402 (flags O_RDWR|O_APPEND)
+newfstatat(3, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(3, "Failed to mount /dev: Operation "..., 46Failed to mount /dev: Operation not permitted
+) = 46
+close(3)                                = 0
+mount("tmpfs", "/tmp", "tmpfs", 0, "size=16M") = -1 EPERM (Operation not permitted)
+dup(2)                                  = 3
+fcntl(3, F_GETFL)                       = 0x402 (flags O_RDWR|O_APPEND)
+newfstatat(3, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(3, "Failed to mount /tmp: Operation "..., 46Failed to mount /tmp: Operation not permitted
+) = 46
+close(3)                                = 0
+sethostname("inkbox", 6)                = -1 EPERM (Operation not permitted)
+socket(AF_INET, SOCK_DGRAM, IPPROTO_IP) = 3
+ioctl(3, SIOCSIFFLAGS, {ifr_name="lo", ifr_flags=IFF_UP}) = -1 EPERM (Operation not permitted)
+write(2, "Interface 'lo': Error: SIOCSIFFL"..., 68Interface 'lo': Error: SIOCSIFFLAGS failed: Operation not permitted
+) = 68
+close(3)                                = 0
+mount("/dev/mmcblk0p1", "/mnt", "ext4", 0, "") = -1 EPERM (Operation not permitted)
+write(2, "Failed to mount /mnt: Operation "..., 46Failed to mount /mnt: Operation not permitted
+) = 46
+mkdirat(AT_FDCWD, "/mnt", 0755)         = -1 EEXIST (File exists)
+mkdirat(AT_FDCWD, "/mnt/flags", 0755)   = -1 EACCES (Permission denied)
+faccessat(AT_FDCWD, "/mnt/flags/DISPLAY_DEBUG", F_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/mnt/flags/USBNET_IP", F_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/mnt/flags/MOUNT_RW", F_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/mnt/flags/LOGIN_SHELL", F_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/mnt/flags/X11_START", F_OK) = -1 ENOENT (No such file or directory)
+uname({sysname="Linux", nodename="inkbox", ...}) = 0
+faccessat(AT_FDCWD, "/opt/build_id", F_OK) = -1 ENOENT (No such file or directory)
+faccessat(AT_FDCWD, "/opt/commit", F_OK) = -1 ENOENT (No such file or directory)
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+write(1, "\n", 1
+)                       = 1
+write(1, "Linux inkbox #1 SMP PREEMPT_DYNA"..., 74Linux inkbox #1 SMP PREEMPT_DYNAMIC Fri Apr  7 10:32:52 MDT 202 GNU/Linux
+) = 74
+write(1, "InkBox OS, kernel build (null), "..., 47InkBox OS, kernel build (null), commit (null)
+
+) = 47
+write(1, "Copyright (C) 2021-2023 Nicolas "..., 67Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>
+) = 67
+writev(2, [{iov_base="double free or corruption (out)", iov_len=31}, {iov_base="\n", iov_len=1}], 2double free or corruption (out)
+) = 32
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffb468d000
+rt_sigprocmask(SIG_UNBLOCK, [ABRT], NULL, 8) = 0
+gettid()                                = 526237
+getpid()                                = 526237
+tgkill(526237, 526237, SIGABRT)         = 0
+--- SIGABRT {si_signo=SIGABRT, si_code=SI_TKILL, si_pid=526237, si_uid=1002} ---
++++ killed by SIGABRT (core dumped) +++
+fish: Job 1, 'strace ./init64' terminated by signal SIGABRT (Abort)

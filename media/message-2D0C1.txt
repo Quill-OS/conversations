@@ -1,0 +1,64 @@
+```
+kobo:~# for name in /sys/class/regulator/regulator.* ; do echo $(cat $name/name cat $na
+me/microvolts)  cat $name/state ; done 
+cat: cat: No such file or directory
+cat: /sys/class/regulator/regulator.0/microvolts: No such file or directory
+regulator-dummy cat /sys/class/regulator/regulator.0/state
+cat: cat: No such file or directory
+vdd3p0 3200000 cat /sys/class/regulator/regulator.1/state
+cat: cat: No such file or directory
+RICOH619_DC5 1800000 cat /sys/class/regulator/regulator.10/state
+cat: cat: No such file or directory
+RICOH619_LDO1 900000 cat /sys/class/regulator/regulator.11/state
+cat: cat: No such file or directory
+RICOH619_LDO2 900000 cat /sys/class/regulator/regulator.12/state
+cat: cat: No such file or directory
+RICOH619_LDO3 900000 cat /sys/class/regulator/regulator.13/state
+cat: cat: No such file or directory
+RICOH619_LDO4 900000 cat /sys/class/regulator/regulator.14/state
+cat: cat: No such file or directory
+RICOH619_LDO5 600000 cat /sys/class/regulator/regulator.15/state
+cat: cat: No such file or directory
+RICOH619_LDO6 600000 cat /sys/class/regulator/regulator.16/state
+cat: cat: No such file or directory
+RICOH619_LDO7 900000 cat /sys/class/regulator/regulator.17/state
+cat: cat: No such file or directory
+RICOH619_LDO8 1800000 cat /sys/class/regulator/regulator.18/state
+cat: cat: No such file or directory
+RICOH619_LDO9 900000 cat /sys/class/regulator/regulator.19/state
+cat: cat: No such file or directory
+cpu 1250000 cat /sys/class/regulator/regulator.2/state
+cat: cat: No such file or directory
+RICOH619_LDO10 900000 cat /sys/class/regulator/regulator.20/state
+cat: cat: No such file or directory
+RICOH619_LDORTC1 1700000 cat /sys/class/regulator/regulator.21/state
+cat: cat: No such file or directory
+RICOH619_LDORTC2 900000 cat /sys/class/regulator/regulator.22/state
+cat: cat: No such file or directory
+cat: /sys/class/regulator/regulator.23/microvolts: No such file or directory
+DISPLAY_SY7636 cat /sys/class/regulator/regulator.23/state
+cat: cat: No such file or directory
+cat: /sys/class/regulator/regulator.24/microvolts: No such file or directory
+VCOM_SY7636 cat /sys/class/regulator/regulator.24/state
+cat: cat: No such file or directory
+cat: /sys/class/regulator/regulator.25/microvolts: No such file or directory
+V3P3_SY7636 cat /sys/class/regulator/regulator.25/state
+cat: cat: No such file or directory
+TMST_SY7636 0 cat /sys/class/regulator/regulator.26/state
+cat: cat: No such file or directory
+vddsoc 1250000 cat /sys/class/regulator/regulator.3/state
+cat: cat: No such file or directory
+vref-3v3 3300000 cat /sys/class/regulator/regulator.4/state
+cat: cat: No such file or directory
+SD1_SPWR 3000000 cat /sys/class/regulator/regulator.5/state
+cat: cat: No such file or directory
+RICOH619_DC1 1400000 cat /sys/class/regulator/regulator.6/state
+cat: cat: No such file or directory
+RICOH619_DC2 600000 cat /sys/class/regulator/regulator.7/state
+cat: cat: No such file or directory
+RICOH619_DC3 600000 cat /sys/class/regulator/regulator.8/state
+cat: cat: No such file or directory
+RICOH619_DC4 1200000 cat /sys/class/regulator/regulator.9/state
+kobo:~# 
+
+```

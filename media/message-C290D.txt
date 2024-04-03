@@ -1,0 +1,73 @@
+Starting kernel ...
+
+[    0.004803] /cpus/cpu@0 missing clock-frequency property
+[    0.423749] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.423793] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    5.979285] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021c0
+8 ntx_machine_poweroff
+[    5.990423] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3
+.1.0.0-Solution1 2015/02/09
+[    6.057124] ==== calc_soc_by_voltageMethod E60U22 ====
+[    6.285853] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requeste
+d by 21f8000.i2c; cannot claim for gpio-keys
+[    6.301353] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    6.308463] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAM
+PER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    6.322797] gpio-keys gpio-keys: Error applying setting, reverse things back
+Interface 'lo': flags set to 0001.
+
+Linux inkbox #1 SMP PREEMPT Tue Jun 13 18:59:55 CEST 202 GNU/Linux
+InkBox OS, kernel build XAj3RPRH, commit 1c1678b
+
+Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+boot: clean, 21/3840 files, 2255/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 487381/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+rootfs: recovering journal
+rootfs: clean, 20/32768 files, 72863/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+user: recovering journal
+Setting free inodes count to 192681 (was 192693)
+Setting free blocks count to 186704 (was 186705)
+user: clean, 87/192768 files, 583190/769894 blocks
+
+0+1 records in
+0+1 records out
+256 bytes (256B) copied, 0.001849 seconds, 135.2KB/s
+(initrd) Hit ENTER to stop auto-boot ... 
+
+ * Device is rooted; not enforcing security policy
+ * Boot mode: Standard
+Verifying root filesystem's digital signature ...
+Done.
+ * Mounted root filesystem
+[   25.429462] squashfs: SQUASHFS error: Xattrs in filesystem, these will be ignored
+[   25.437180] squashfs: SQUASHFS error: unable to read xattr id index table
+ * Mounted core SquashFS archives
+ * Mounted essential filesystems
+Verified OK
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 4.1.15 (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Setting up eInk screen blanking recovery system ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/pts ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+ [ ok ]
+ * Starting USBNet ... * USB networking is disabled. Please set the USBNET_ENABLE flag and try 
+again.
+ [ ok ]
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem

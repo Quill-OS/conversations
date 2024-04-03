@@ -1,0 +1,245 @@
+
+
+U-Boot 2009.08-dirty-svn ( 7æ 16 2014 - 17:36:26)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 266666666Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Board: MX50 RDP board
+Boot Reason: [POR]
+Boot Device: SD
+I2C:   ready
+DRAM:  512 MB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+In:    serial
+Out:   serial
+Err:   serial
+[_get_sd_number] g_sd_number:2
+
+MMC read: dev # 2, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 1024, count 1 partition # 0 ... 
+1 blocks read: OK
+PCB ID is 41
+ESDin=0,UPGKey=-1,PWRKey=0
+ram p=70000000,size=536870912
+
+MMC read: dev # 2, block # 14335, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 2, block # 14336, count 13235 partition # 0 ... 
+13235 blocks read: OK
+
+MMC read: dev # 2, block # 18431, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+
+MMC read: dev # 2, block # 45055, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+Kernel RAM visiable size=505M->505M
+init TPS65185 power ...
+Relock PLL1 to 1GHz ...
+mx50 pll1: 1000MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 250000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Hit any key to stop autoboot:  0 
+
+MMC read: dev # 2, block # 2047, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 2, block # 2048, count 8192 partition # 0 ... 
+8192 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   r7862_#3032 Jan 9 13:37:40
+   Created:      2017-01-09   5:37:41 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    1953824 Bytes =  1.9 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.001783 seconds, 280.4KB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000165 seconds, 3.0MB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+cannot open /dev/null
+[PROGRESS_BAR-3009] No progess ...
+fsck.fat 4.1+git (2017-01-24)
+/dev/mmcblk0p3: 3933 files, 145006/829227 clusters
+
+kobo login: 1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000162 seconds, 3.0MB/s
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+sh: you need to specify whom to kill
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025238, nr 16, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025238
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025239, nr 15, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025239
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025240, nr 14, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025240
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025241, nr 13, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025241
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025244, nr 10, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025244
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025245, nr 9, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025245
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025246, nr 8, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025246
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025247, nr 7, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025247
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+epdfbdc_set_width_height(1439): new DCSize(3342336)>original DCSize(3317760) !
+mmcblk0: error -110 transferring data, sector 5025246, nr 8, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025246
+
+kobo login: 
+kobo login: mmcblk0: error -110 transferring data, sector 5025247, nr 7, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025247
+mmcblk0: error -110 transferring data, sector 5025238, nr 8, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025238
+mmcblk0: error -110 transferring data, sector 5025239, nr 7, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025239
+killall: dhcpcd: no process killed
+killall: wpa_supplicant: no process killed
+mmcblk0: error -110 transferring data, sector 5025240, nr 6, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025240
+mmcblk0: error -110 transferring data, sector 5025241, nr 5, card status 0x80900
+end_request: I/O error, dev mmcblk0, sector 5025241

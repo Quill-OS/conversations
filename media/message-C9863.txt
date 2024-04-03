@@ -1,0 +1,41 @@
+obo:/# echo 40 >  /sys/class/power_supply/battery/capacity 
+[ 2977.105103] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+[ 2977.113499] pgd = 8db90000
+[ 2977.116232] [00000000] *pgd=89b94831, *pte=00000000, *ppte=00000000
+[ 2977.122718] Internal error: Oops: 80000007 [#1] PREEMPT SMP ARM
+[ 2977.128656] Modules linked in: 8189fs(O) sdio_wifi_pwr g_ether
+[ 2977.134600] CPU: 0 PID: 1503 Comm: ash Tainted: G           O    4.1.15-inkbox-n306c #1
+[ 2977.142620] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+[ 2977.148821] task: 8ad70980 ti: 889f4000 task.ti: 889f4000
+[ 2977.154241] PC is at 0x0
+[ 2977.156804] LR is at power_supply_store_property+0x5c/0x6c
+[ 2977.162314] pc : [<00000000>]    lr : [<803ba43c>]    psr: 60030013
+[ 2977.162314] sp : 889f5eb8  ip : 8dbf5a80  fp : 00000000
+[ 2977.173812] r10: 00000000  r9 : 00beab40  r8 : 8dbf5e40
+[ 2977.179056] r7 : 889f5f88  r6 : 00000003  r5 : 8c181000  r4 : 80f6a9f0
+[ 2977.185602] r3 : 00000000  r2 : 889f5eb8  r1 : 0000002a  r0 : 8c181000
+[ 2977.192151] Flags: nZCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment user
+[ 2977.199305] Control: 10c53c7d  Table: 8db9006a  DAC: 00000015
+[ 2977.205069] Process ash (pid: 1503, stack limit = 0x889f4210)
+[ 2977.210832] Stack: (0x889f5eb8 to 0x889f6000)
+[ 2977.215212] 5ea0:                                                       00000028 00000028
+[ 2977.223418] 5ec0: 8dbf5a80 8dbf5e4c 00000003 8013d41c 00000000 00000000 00000000 863ad780
+[ 2977.231624] 5ee0: 8013d364 00beab40 889f5f88 8000f5c4 889f4000 00000000 00000000 800e9e24
+[ 2977.239829] 5f00: 00000000 8022e060 8d7f8c00 00000001 00000188 00000001 8000f5c4 889f4000
+[ 2977.248035] 5f20: 00000000 800ec058 00000020 80058c48 88533140 0000000b 00000003 80580c30
+[ 2977.256240] 5f40: 88533100 80103f10 88958840 863ad780 00000003 00beab40 889f5f88 8000f5c4
+[ 2977.264445] 5f60: 889f4000 800ea600 889f5f7c 80058c48 863ad780 863ad780 00beab40 00000003
+[ 2977.272649] 5f80: 8000f5c4 800eae18 00000000 00000000 00000001 00000000 00000001 00beab40
+[ 2977.280853] 5fa0: 00000004 8000f440 00000000 00000001 00000001 00beab40 00000003 00be74e0
+[ 2977.289058] 5fc0: 00000000 00000001 00beab40 00000004 0019244c 00000020 00000000 00000000
+[ 2977.297263] 5fe0: 00000000 7e87985c 00032053 00011c78 60030030 00000001 00000000 00000000
+[ 2977.305492] [<803ba43c>] (power_supply_store_property) from [<8013d41c>] (kernfs_fop_write+0xb8/0x19c)
+[ 2977.314838] [<8013d41c>] (kernfs_fop_write) from [<800e9e24>] (__vfs_write+0x20/0xdc)
+[ 2977.322703] [<800e9e24>] (__vfs_write) from [<800ea600>] (vfs_write+0x90/0x164)
+[ 2977.330046] [<800ea600>] (vfs_write) from [<800eae18>] (SyS_write+0x44/0x9c)
+[ 2977.337133] [<800eae18>] (SyS_write) from [<8000f440>] (ret_fast_syscall+0x0/0x3c)
+[ 2977.344730] Code: bad PC value
+[ 2977.349293] ---[ end trace 01430ff049cf8b50 ]---
+child caught signal: Segmentation fault
+
+Welcome to InkBox OS 2.0

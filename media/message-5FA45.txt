@@ -1,0 +1,29 @@
+nicolas@gentoo-ryzen ~/qt-bin> ls qt-linux-5.15.2-kobo/lib
+cmake/                          libQt5DeviceDiscoverySupport.a    libQt5NetworkAuth.prl         libQt5QmlModels.so.5.15@          libQt5QuickShapes.so.5.15@        libQt5ServiceSupport.la   libQt5WebChannel.so@
+libQt5AccessibilitySupport.a    libQt5DeviceDiscoverySupport.la   libQt5NetworkAuth.so@         libQt5QmlModels.so.5.15.2*        libQt5QuickShapes.so.5.15.2*      libQt5ServiceSupport.prl  libQt5WebChannel.so.5@
+libQt5AccessibilitySupport.la   libQt5DeviceDiscoverySupport.prl  libQt5NetworkAuth.so.5@       libQt5Qml.prl                     libQt5Quick.so@                   libQt5Sql.la              libQt5WebChannel.so.5.15@
+libQt5AccessibilitySupport.prl  libQt5EdidSupport.a               libQt5NetworkAuth.so.5.15@    libQt5Qml.so@                     libQt5Quick.so.5@                 libQt5Sql.prl             libQt5WebChannel.so.5.15.2*
+libQt5Bootstrap.a               libQt5EdidSupport.la              libQt5NetworkAuth.so.5.15.2*  libQt5Qml.so.5@                   libQt5Quick.so.5.15@              libQt5Sql.so@             libQt5Widgets.la
+libQt5Bootstrap.la              libQt5EdidSupport.prl             libQt5Network.la              libQt5Qml.so.5.15@                libQt5Quick.so.5.15.2*            libQt5Sql.so.5@           libQt5Widgets.prl
+libQt5Bootstrap.prl             libQt5EventDispatcherSupport.a    libQt5Network.prl             libQt5Qml.so.5.15.2*              libQt5QuickTemplates2.la          libQt5Sql.so.5.15@        libQt5Widgets.so@
+libQt5Charts.la                 libQt5EventDispatcherSupport.la   libQt5Network.so@             libQt5QmlWorkerScript.la          libQt5QuickTemplates2.prl         libQt5Sql.so.5.15.2*      libQt5Widgets.so.5@
+libQt5Charts.prl                libQt5EventDispatcherSupport.prl  libQt5Network.so.5@           libQt5QmlWorkerScript.prl         libQt5QuickTemplates2.so@         libQt5Svg.la              libQt5Widgets.so.5.15@
+libQt5Charts.so@                libQt5FbSupport.a                 libQt5Network.so.5.15@        libQt5QmlWorkerScript.so@         libQt5QuickTemplates2.so.5@       libQt5Svg.prl             libQt5Widgets.so.5.15.2*
+libQt5Charts.so.5@              libQt5FbSupport.la                libQt5Network.so.5.15.2*      libQt5QmlWorkerScript.so.5@       libQt5QuickTemplates2.so.5.15@    libQt5Svg.so@             libQt5Xml.la
+libQt5Charts.so.5.15@           libQt5FbSupport.prl               libQt5PacketProtocol.a        libQt5QmlWorkerScript.so.5.15@    libQt5QuickTemplates2.so.5.15.2*  libQt5Svg.so.5@           libQt5Xml.prl
+libQt5Charts.so.5.15.2*         libQt5FontDatabaseSupport.a       libQt5PacketProtocol.la       libQt5QmlWorkerScript.so.5.15.2*  libQt5QuickTest.la                libQt5Svg.so.5.15@        libQt5Xml.so@
+libQt5Concurrent.la             libQt5FontDatabaseSupport.la      libQt5PacketProtocol.prl      libQt5QuickControls2.la           libQt5QuickTest.prl               libQt5Svg.so.5.15.2*      libQt5Xml.so.5@
+libQt5Concurrent.prl            libQt5FontDatabaseSupport.prl     libQt5QmlDebug.a              libQt5QuickControls2.prl          libQt5QuickTest.so@               libQt5Test.la             libQt5Xml.so.5.15@
+libQt5Concurrent.so@            libQt5Gui.la                      libQt5QmlDebug.la             libQt5QuickControls2.so@          libQt5QuickTest.so.5@             libQt5Test.prl            libQt5Xml.so.5.15.2*
+libQt5Concurrent.so.5@          libQt5Gui.prl                     libQt5QmlDebug.prl            libQt5QuickControls2.so.5@        libQt5QuickTest.so.5.15@          libQt5Test.so@            libQt5Zlib.prl
+libQt5Concurrent.so.5.15@       libQt5Gui.so@                     libQt5QmlDevTools.a           libQt5QuickControls2.so.5.15@     libQt5QuickTest.so.5.15.2*        libQt5Test.so.5@          libqtfreetype.a
+libQt5Concurrent.so.5.15.2*     libQt5Gui.so.5@                   libQt5QmlDevTools.la          libQt5QuickControls2.so.5.15.2*   libQt5QuickWidgets.la             libQt5Test.so.5.15@       libqtfreetype.prl
+libQt5Core.la                   libQt5Gui.so.5.15@                libQt5QmlDevTools.prl         libQt5Quick.la                    libQt5QuickWidgets.prl            libQt5Test.so.5.15.2*     libqtlibpng.a
+libQt5Core.prl                  libQt5Gui.so.5.15.2*              libQt5Qml.la                  libQt5Quick.prl                   libQt5QuickWidgets.so@            libQt5ThemeSupport.a      libqtlibpng.prl
+libQt5Core.so@                  libQt5InputSupport.a              libQt5QmlModels.la            libQt5QuickShapes.la              libQt5QuickWidgets.so.5@          libQt5ThemeSupport.la     libqtterminalwidget.a
+libQt5Core.so.5@                libQt5InputSupport.la             libQt5QmlModels.prl           libQt5QuickShapes.prl             libQt5QuickWidgets.so.5.15@       libQt5ThemeSupport.prl    metatypes/
+libQt5Core.so.5.15@             libQt5InputSupport.prl            libQt5QmlModels.so@           libQt5QuickShapes.so@             libQt5QuickWidgets.so.5.15.2*     libQt5WebChannel.la       pkgconfig/
+libQt5Core.so.5.15.2*           libQt5NetworkAuth.la              libQt5QmlModels.so.5@         libQt5QuickShapes.so.5@           libQt5ServiceSupport.a            libQt5WebChannel.prl      Qt5Zlib.la
+nicolas@gentoo-ryzen ~/qt-bin> ls qt-linux-5.15.2-kobo/lib | grep dbus
+nicolas@gentoo-ryzen ~/qt-bin [0|1]> ls qt-linux-5.15.2-kobo/lib | grep DBus
+nicolas@gentoo-ryzen ~/qt-bin [0|1]>

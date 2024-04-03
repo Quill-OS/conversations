@@ -1,0 +1,41 @@
+From 8c833c9607c79befef699b3bf2e91575607c7d40 Mon Sep 17 00:00:00 2001
+From: Andreas Kemnade <andreas@kemnade.info>
+Date: Fri, 26 Aug 2022 21:03:42 +0000
+Subject: [PATCH] create /dev before creating devicenodes
+
+---
+ initrd/devnodes-bpi.txt | 1 +
+ initrd/devnodes-emu.txt | 1 +
+ initrd/devnodes-imx.txt | 1 +
+ 3 files changed, 3 insertions(+)
+
+diff --git a/initrd/devnodes-bpi.txt b/initrd/devnodes-bpi.txt
+index f85bd0a68a..e5c1c58ffb 100644
+--- a/initrd/devnodes-bpi.txt
++++ b/initrd/devnodes-bpi.txt
+@@ -1,3 +1,4 @@
++dir /dev 0755 0 0
+ nod dev/console 0620 0 0 c 5 1
+ nod dev/null 0666 0 0 c 1 3
+ nod dev/ttyAMA0 0660 0 0 c 204 64
+diff --git a/initrd/devnodes-emu.txt b/initrd/devnodes-emu.txt
+index f74c1f84f9..07c31e7b97 100644
+--- a/initrd/devnodes-emu.txt
++++ b/initrd/devnodes-emu.txt
+@@ -1,3 +1,4 @@
++dir /dev 0755 0 0
+ nod dev/console 0620 0 0 c 5 1
+ nod dev/null 0666 0 0 c 1 3
+ nod dev/ttyS0 0660 0 0 c 4 64
+diff --git a/initrd/devnodes-imx.txt b/initrd/devnodes-imx.txt
+index f3b713b472..d98e302dc5 100644
+--- a/initrd/devnodes-imx.txt
++++ b/initrd/devnodes-imx.txt
+@@ -1,3 +1,4 @@
++dir /dev 0755 0 0
+ nod dev/console 0620 0 0 c 5 1
+ nod dev/null 0666 0 0 c 1 3
+ nod dev/ttymxc0 0660 0 0 c 207 16
+-- 
+2.30.2
+

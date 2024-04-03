@@ -1,0 +1,292 @@
+[root@kobo inkbox]# QT_LOGGING_RULES=qt.qpa.input=true ./inkbox.sh
+killall: nickel: no process killed
+killall: sickel: no process killed
+killall: hindenburg: no process killed
+qt.qpa.input: evdevtouch: Adding device at /dev/input/event1
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+KoboKb: Attempting to capture input...
+device: "pixie" 340 
+ screen: 600 800 dpi: 200
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A  (single), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1200
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 1600
+qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: zForce-ir-touch
+qt.qpa.input: evdevtouch: Updating QInputDeviceManager device count: 1 touch devices, 0 pending handler(s)
+qt.qpa.input: EV_ABS MT_POS_Y 26
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 46
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.01625,0.961667)
+qt.qpa.input: Touchpoint raw position: QPointF(46,26)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(5.73375,764.372 8x8) normalized QPointF(0.01625,0.961667) press 0.0493164 vel QVector2D(0, 0) state 1
+qt.qpa.input: EV_ABS MT_POS_Y 27
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.016875,0.961667)
+qt.qpa.input: Touchpoint raw position: QPointF(46,27)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(6.10813,764.372 8x8) normalized QPointF(0.016875,0.961667) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.016875,0.961667)
+qt.qpa.input: Touchpoint raw position: QPointF(46,27)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(6.10813,764.372 8x8) normalized QPointF(0.016875,0.961667) press 0.0493164 vel QVector2D(0, 0) state 4
+qt.qpa.input: EV_ABS MT_POS_Y 28
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.0175,0.961667)
+qt.qpa.input: Touchpoint raw position: QPointF(46,28)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(6.4825,764.372 8x8) normalized QPointF(0.0175,0.961667) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 29
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.018125,0.961667)
+qt.qpa.input: Touchpoint raw position: QPointF(46,29)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(6.85687,764.372 8x8) normalized QPointF(0.018125,0.961667) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 30
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.01875,0.961667)
+qt.qpa.input: Touchpoint raw position: QPointF(46,30)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(7.23125,764.372 8x8) normalized QPointF(0.01875,0.961667) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_X 47
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.01875,0.960833)
+qt.qpa.input: Touchpoint raw position: QPointF(47,30)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(7.23125,763.706 8x8) normalized QPointF(0.01875,0.960833) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 31
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.019375,0.960833)
+qt.qpa.input: Touchpoint raw position: QPointF(47,31)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(7.60562,763.706 8x8) normalized QPointF(0.019375,0.960833) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.019375,0.960833)
+qt.qpa.input: Touchpoint raw position: QPointF(47,31)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(7.60562,763.706 8x8) normalized QPointF(0.019375,0.960833) press 0.0493164 vel QVector2D(0, 0) state 4
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.019375,0.960833)
+qt.qpa.input: Touchpoint raw position: QPointF(47,31)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(7.60562,763.706 8x8) normalized QPointF(0.019375,0.960833) press 0 vel QVector2D(0, 0) state 8
+qt.qpa.input: EV_ABS MT_POS_Y 46
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 756
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02875,0.37)
+qt.qpa.input: Touchpoint raw position: QPointF(756,46)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(13.2213,291.63 8x8) normalized QPointF(0.02875,0.37) press 0.0488281 vel QVector2D(0, 0) state 1
+qt.qpa.input: EV_ABS MT_POS_X 755
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02875,0.370833)
+qt.qpa.input: Touchpoint raw position: QPointF(755,46)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(13.2213,292.296 8x8) normalized QPointF(0.02875,0.370833) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_X 754
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02875,0.371667)
+qt.qpa.input: Touchpoint raw position: QPointF(754,46)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(13.2213,292.962 8x8) normalized QPointF(0.02875,0.371667) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 47
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.029375,0.371667)
+qt.qpa.input: Touchpoint raw position: QPointF(754,47)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(13.5956,292.962 8x8) normalized QPointF(0.029375,0.371667) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 46
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02875,0.371667)
+qt.qpa.input: Touchpoint raw position: QPointF(754,46)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(13.2213,292.962 8x8) normalized QPointF(0.02875,0.371667) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 41
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 756
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.025625,0.37)
+qt.qpa.input: Touchpoint raw position: QPointF(756,41)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(11.3494,291.63 8x8) normalized QPointF(0.025625,0.37) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.025625,0.37)
+qt.qpa.input: Touchpoint raw position: QPointF(756,41)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(11.3494,291.63 8x8) normalized QPointF(0.025625,0.37) press 0 vel QVector2D(0, 0) state 8
+qt.qpa.input: EV_ABS MT_POS_Y 563
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 767
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.351875,0.360833)
+qt.qpa.input: Touchpoint raw position: QPointF(767,563)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(206.773,284.306 8x8) normalized QPointF(0.351875,0.360833) press 0.0488281 vel QVector2D(0, 0) state 1
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.351875,0.360833)
+qt.qpa.input: Touchpoint raw position: QPointF(767,563)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(206.773,284.306 8x8) normalized QPointF(0.351875,0.360833) press 0.0493164 vel QVector2D(0, 0) state 4
+qt.qpa.input: EV_ABS MT_POS_Y 562
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.35125,0.360833)
+qt.qpa.input: Touchpoint raw position: QPointF(767,562)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(206.399,284.306 8x8) normalized QPointF(0.35125,0.360833) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_X 766
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.35125,0.361667)
+qt.qpa.input: Touchpoint raw position: QPointF(766,562)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(206.399,284.972 8x8) normalized QPointF(0.35125,0.361667) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 561
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.350625,0.361667)
+qt.qpa.input: Touchpoint raw position: QPointF(766,561)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(206.024,284.972 8x8) normalized QPointF(0.350625,0.361667) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 560
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.35,0.361667)
+qt.qpa.input: Touchpoint raw position: QPointF(766,560)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(205.65,284.972 8x8) normalized QPointF(0.35,0.361667) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_X 765
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.35,0.3625)
+qt.qpa.input: Touchpoint raw position: QPointF(765,560)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(205.65,285.638 8x8) normalized QPointF(0.35,0.3625) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 561
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.350625,0.3625)
+qt.qpa.input: Touchpoint raw position: QPointF(765,561)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(206.024,285.638 8x8) normalized QPointF(0.350625,0.3625) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 565
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.353125,0.3625)
+qt.qpa.input: Touchpoint raw position: QPointF(765,565)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(207.522,285.638 8x8) normalized QPointF(0.353125,0.3625) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.353125,0.3625)
+qt.qpa.input: Touchpoint raw position: QPointF(765,565)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(207.522,285.638 8x8) normalized QPointF(0.353125,0.3625) press 0 vel QVector2D(0, 0) state 8
+qt.qpa.input: EV_ABS MT_POS_Y 545
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 62
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.340625,0.948333)
+qt.qpa.input: Touchpoint raw position: QPointF(62,545)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(200.034,753.718 8x8) normalized QPointF(0.340625,0.948333) press 0.0493164 vel QVector2D(0, 0) state 1
+qt.qpa.input: EV_ABS MT_POS_X 61
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.340625,0.949167)
+qt.qpa.input: Touchpoint raw position: QPointF(61,545)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(200.034,754.384 8x8) normalized QPointF(0.340625,0.949167) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_X 58
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.340625,0.951667)
+qt.qpa.input: Touchpoint raw position: QPointF(58,545)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(200.034,756.382 8x8) normalized QPointF(0.340625,0.951667) press 0.0493164 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS MT_POS_Y 546
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 54
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.34125,0.955)
+qt.qpa.input: Touchpoint raw position: QPointF(54,546)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(200.409,759.045 8x8) normalized QPointF(0.34125,0.955) press 0.0488281 vel QVector2D(0, 0) state 2
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.34125,0.955)
+qt.qpa.input: Touchpoint raw position: QPointF(54,546)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(200.409,759.045 8x8) normalized QPointF(0.34125,0.955) press 0 vel QVector2D(0, 0) state 8
+^C
+[root@kobo inkbox]# 
+

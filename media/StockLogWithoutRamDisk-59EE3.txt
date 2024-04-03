@@ -1,0 +1,361 @@
+U-Boot 2009.08 (Dec 21 2011 - 14:48:38)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 160000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Board: MX50 ARM2 board
+Boot Reason: [POR]
+Boot Device: MMC
+I2C:   ready
+DRAM:  256 MB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+temperature 28
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+MMC set clock 50MHz
+In:    serial
+Out:   serial
+Err:   serial
+Net:   got MAC address from IIM: 00:00:00:00:00:00
+FEC0
+Hit any key to stop autoboot:  0
+
+MMC read: dev # 0, block # 2048, count 5120 partition # 0 ...
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+SD set clock 50MHz
+5120 blocks read: OK
+
+MMC read: dev # 0, block # 10240, count 600 partition # 0 ...
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x1
+imx_esdhc.c bus_width 0x4
+imx_esdhc.c bus_width 0x4
+SD set clock 50MHz
+600 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   Normal Kernel
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2288064 Bytes =  2.2 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Linux version 2.6.35.3 (hudson@devuntu5) (gcc version 4.4.0 (GCC) ) #1 PREEMPT Wed May 7 15:03:54 JST 2014
+CPU: ARMv7 Processor [412fc085] revision 5 (ARMv7), cr=10c53c7f
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Machine: Freescale MX50 ARM2 Board
+Ignoring unrecognised tag 0x54410008
+Memory policy: ECC disabled, Data cache writeback
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 63754
+Kernel command line: root=/dev/mmcblk0p1 rootfstype=ext4 rw rootwait init=/linuxrc console=ttymxc4,115200 bootdev=0 rawtable=0xF40000
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 251MB = 251MB total
+Memory: 249432k/249432k available, 7592k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xf9e00000 - 0xffe00000   (  96 MB)
+    vmalloc : 0x90000000 - 0xf4000000   (1600 MB)
+    lowmem  : 0x80000000 - 0x8fb00000   ( 251 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .init : 0x80008000 - 0x80025000   ( 116 kB)
+      .text : 0x80025000 - 0x80424000   (4092 kB)
+      .data : 0x80444000 - 0x804be700   ( 490 kB)
+SLUB: Genslabs=9, HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Hierarchical RCU implementation.
+        RCU-based detection of stalled CPUs is disabled.
+        Verbose stalled-CPUs detection is disabled.
+NR_IRQS:396
+MXC GPIO hardware
+MXC IRQ initialized
+You should not call the gpmi_set_parent
+MXC_Early serial console at MMIO 0x63f90000 (options '115200')
+bootconsole [ttymxc4] enabled
+Console: colour dummy device 80x30
+Mix log static memory : 7fe00000 - 7fffffff
+              address : 90400000
+  There is not the last log.
+Initialize a static memory for mix_logger.
+##### LOG START #####
+Calibrating delay loop... 799.53 BogoMIPS (lpj=3997696)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+regulator: core version 0.5
+NET: Registered protocol family 16
+i.MX IRAM pool: 128 KB@0x90040000
+CPU is i.MX50 Revision 1.1
+IR Power is LDO4
+ This is TPS65181.
+PWR3DET:power 3 detect
+FEC disable
+Using SDMA I.API
+MXC DMA API initialized
+IMX usb wakeup probe
+IMX usb wakeup probe
+bio: create slab <bio-0> at 0
+CSPI: mxc_spi-0 probed
+CSPI: mxc_spi-2 probed
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+wm831x 0-0034: WM8321 revision C
+wm831x 0-0034: Security key had non-zero value 1
+regulator: VCORE: 850 <--> 1100 mV at 1000 mV at 0 uA
+regulator: VPERI: 950 <--> 1250 mV at 1250 mV at 0 uA
+regulator: DCDC3: at 1800 mV
+regulator: DCDC4: at 2900 mV
+regulator: LDO1: 900 <--> 3300 mV at 1200 mV
+regulator: LDO2: 900 <--> 3300 mV at 1200 mV
+regulator: LDO3: 900 <--> 3300 mV at 2500 mV
+regulator: LDO4: 900 <--> 3300 mV at 3200 mV
+regulator: LDO5: 900 <--> 3300 mV at 2900 mV
+regulator: LDO6: 900 <--> 3300 mV at 2500 mV
+regulator: LDO7: 1000 <--> 3500 mV at 1800 mV
+regulator: LDO8: 1000 <--> 3500 mV at 2500 mV
+regulator: LDO9: 1000 <--> 3500 mV at 3100 mV
+regulator: LDO10: 1000 <--> 3500 mV at 3200 mV
+regulator: LDO11: 800 <--> 1550 mV at 1200 mV
+Advanced Linux Sound Architecture Driver Version 1.0.23.
+Switching to clocksource mxc_timer1
+mxsdhci: MXC Secure Digital Host Controller Interface driver
+mxsdhci: MXC SDHCI Controller Driver.
+SDHC:sdhci_set_power:slot pwr off
+mmc_detect_change: id=0
+mmc0: SDHCI detect irq 179 irq 1 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver.
+SDHC:sdhci_set_power:slot pwr on
+mmc_detect_change: id=1
+mmc1: SDHCI detect irq 0 irq 2 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver.
+mmc_detect_change: id=2
+mmc2: SDHCI detect irq 228 irq 3 INTERNAL DMA
+mxsdhci: MXC SDHCI Controller Driver.
+mmc_detect_change: id=3
+mmc3: SDHCI detect irq 0 irq 4 INTERNAL DMA
+NET: Registered protocol family 2
+IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+LPMode driver module loaded
+Static Power Management for Freescale i.MX5
+PM driver module loaded
+sdram autogating driver module loaded
+Bus freq driver module loaded
+mxc_dvfs_core_probe
+DVFS driver module loaded
+i.MXC CPU frequency driver
+DVFS PER driver module loaded
+ashmem: initialized
+msgmni has been set to 487
+alg: No test for stdrng (krng)
+cryptodev: driver loaded.
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+regulator: DISPLAY:
+regulator: VCOM: at 1250 mV
+regulator: V3P3_CTRL:
+regulator: PMIC_TEMP:
+regulator: PWR0_CTRL:
+regulator: PWR2_CTRL:
+regulator: VSYS_EPD:
+tps65180 1-0048: PMIC TPS6518x for eInk display
+SDHC:sdhci_set_power:slot pwr on
+mmc0: new high speed SDHC card at address 0007
+mmc_rescan:wake_lock_timeout (0)
+mmc_rescan:detect done(id=0)
+mmc2: new high speed MMC card at address 0001
+mmc_rescan:wake_lock_timeout (2)
+mmc_rescan:wifi:wake unlock (3)
+Serial: MXC Internal UART driver
+mxcuart register
+mxcintuart.2: ttymxc2 at MMIO 0x5000c000 (irq = 33) is a Freescale i.MX
+mxcintuart.3: ttymxc3 at MMIO 0x53ff0000 (irq = 13) is a Freescale i.MX
+mxcintuart.4: ttymxc4 at MMIO 0x63f90000 (irq = 86) is a Freescale i.MX
+console [ttymxc4] enabled, bootconsole disabled
+console [ttymxc4] enabled, bootconsole disabled
+mxcswuart register
+mxcintswuart.0: ttymxc0 at MMIO 0x53fbc000 (irq = 31) is a Freescale i.MX
+SSW:ssw port register 0
+mxcintswuart.1: ttymxc1 at MMIO 0x53fc0000 (irq = 32) is a Freescale i.MX
+SSW:ssw port register 1
+loop: module loaded
+FEC Ethernet Driver
+PPP generic driver version 2.4.2
+usbcore: registered new interface driver asix
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver net1080
+usbcore: registered new interface driver cdc_subset
+input: gpio-keys as /devices/platform/gpio-keys/input/input0
+irtp_init
+irtp_connect
+input: SONY IR Touchpanel as /devices/virtual/input/input1
+IRTP: register early_suspend
+input: wm831x_on as /devices/platform/imx-i2c.0/i2c-0/0-0034/wm831x-on/input/input2
+input: phxlit_vbus as /devices/platform/phxlit_vbus.0/input/input3
+phxlit_vbus phxlit_vbus.0: event(type 5 code 12)
+wm831x-rtc wm831x-rtc: rtc core: registered wm831x as rtc0
+mxc_rtc mxc_rtc.0: rtc core: registered mxc_rtc as rtc1
+using rtc device, wm831x, for alarms
+i2c /dev entries driver
+APM Battery Driver
+MXC WatchDog Driver 2.0
+MXC Watchdog # 0 Timer: initial timeout 60 sec
+mmcblk0: mmc0:0007 SD16G 14.4 GiB
+ mmcblk0: p1 p2 p3 < p5 p6 p7 p8 p9 p10 > p4
+Raw data table load
+mmcblk2: mmc2:0001 SEM02G 1.82 GiB
+BUG: recent printk recursion!
+<6> mmcblk2:
+logger: created 64K log 'log_main'
+logger: created 64K log 'log_events'
+logger: created 64K log 'log_radio'
+logger: created 64K log 'log_system'
+logger: created 2047K log 'log_mix'
+logger: created 64K log 'log_kernel'
+Past log manager.
+CS42L52: CODEC revision C1
+DMA Sound Buffers Allocated:UseIram=1 buf->addr=f8006000 buf->area=90046000 size=24576
+DMA Sound Buffers Allocated:UseIram=1 buf->addr=7e2d8000 buf->area=f9e01000 size=24576
+asoc: CS42L52 dai <-> imx-ssi-2-0 mapping ok
+ALSA device list:
+  #0: imx-3stack (CS42L52 codec)
+nf_conntrack version 0.5.0 (3897 buckets, 15588 max)
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+NET: Registered protocol family 17
+VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 2
+tps65180_vsys_enable : wait VSYS_EPD.
+regulator_init_complete: incomplete constraints, leaving PWR2_CTRL on
+regulator_init_complete: incomplete constraints, leaving PMIC_TEMP on
+epdc_progress_work_func start progress.
+regulator_init_complete: incomplete constraints, leaving LDO11 on
+regulator_init_complete: incomplete constraints, leaving LDO7 on
+regulator_init_complete: incomplete constraints, leaving LDO6 on
+regulator_init_complete: incomplete constraints, leaving LDO5 on
+regulator_init_complete: incomplete constraints, leaving LDO3 on
+regulator_init_complete: incomplete constraints, leaving LDO2 on
+regulator_init_complete: incomplete constraints, leaving LDO1 on
+input: sub_cpu_pwrbutton as /devices/platform/mxc_spi.2/spi3.2/sub_cpu_pwrbutton/input/input4
+wm831x-rtc wm831x-rtc: setting system clock to 2010-01-01 00:02:03 UTC (1262304123)
+EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:1.
+Freeing init memory: 116K
+EXT4-fs (mmcblk0p1): re-mounted. Opts: (null)
+>>> Rootfs : Diag (eMMC) <<<
+init started: BusyBox v1.15.0 ()
+starting pid 1187, tty '': '/etc/rc.d/rcS'
+Mounting /proc and /sys
+Starting the hotplug events dispatcher udevd
+Synthesizing initial hotplug events
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 1
+fsl-ehci fsl-ehci.1: irq 14, io base 0x53f80200
+fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Setting the hostname to localhost
+Mounting filesystems
+cp: recursion detected, omitting directory '/etc/hotplug/pci'
+cp: recursion detected, omitting directory '/etc/hotplug/usb'
+mount: mounting usbfs on /proc/bus/usb failed: No such file or directory
+chown: /home/user/.rhosts: Read-only file system
+chown: /home/user: Read-only file system
+chown: /home/user: Read-only file system
+bad magic number
+bad magic number
+epdc_progress_work_func end progress.
+gray level = 1
+left pos = 521
+top pos = 192
+width = 6
+height = 216
+/usr/local/sony/bin/bs: line 45:  2266 Terminated              cat ${INPUT_DEV} >${INPUTKEY}
+gray level = 0
+left pos = 521
+top pos = 192
+width = 6
+height = 216
+normal mode changed.
+flush error : /dev/pastlog
+starting pid 2359, tty '': '/etc/rc.d/rcS stop'
+Unmounting filesystems
+umount: rwfs busy - remounted read-only
+umount: tmpfs busy - remounted read-only
+chown: /home/user/.rhosts: Read-only file system
+chown: /home/user: Read-only file system
+chown: /home/user: Read-only file system
+cat: can't open '/proc/devices': No such file or directory
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes
+Requesting system reboot
+Restarting system.
+MXC Watchdog # 0 shutdown
+send send_reboot_request
+sub_main_spi_byte_write:239
+SPI_RCV_RDY didn't become low. Error!!!
+sub_main_spi_read error!!!
+Fail!! read_all_status_reg()
+sub_main_spi_byte_write:239
+SPI_RCV_RDY didn't become low. Error!!!
+sub_main_spi_read error!!!
+Fail!! read_all_status_reg()
+sub_main_spi_byte_write:239
+SPI_RCV_RDY didn't become low. Error!!!
+sub_main_spi_read error!!!

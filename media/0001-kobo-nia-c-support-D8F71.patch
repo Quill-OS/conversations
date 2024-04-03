@@ -1,0 +1,32 @@
+From aff2284b60fba4cba75c3baa2ff995818ff5e6cc Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Mon, 24 Jul 2023 20:05:22 +0200
+Subject: [PATCH] kobo nia c support
+
+---
+ src/functions.h | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/src/functions.h b/src/functions.h
+index 3a4a605..8d71435 100644
+--- a/src/functions.h
++++ b/src/functions.h
+@@ -410,6 +410,15 @@ namespace {
+                 batteryLevelInt = batteryLevel.toInt();
+                 batteryLevel.append("%");
+             }
++            else {
++                // It's for the Nia model c - but also its a more regular - default path, so make it the fallback
++                QString path = "/sys/class/power_supply/battery/capacity";
++                if(QFile::exists(path)) {
++                    batteryLevel = readFile(path).trimmed();
++                    batteryLevelInt = batteryLevel.toInt();
++                    batteryLevel.append("%");
++                }
++            }
+         }
+     }
+     void writeconfig(std::string file, std::string config) {
+-- 
+2.41.0
+

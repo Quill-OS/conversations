@@ -1,0 +1,28 @@
+[ 98%] Building CXX object tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/descendantqmltree.cpp.o
+[ 98%] Building CXX object tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/selectioninqmlwidget.cpp.o
+In file included from /usr/include/qt/QtQuick/qsggeometry.h:44,
+                 from /usr/include/qt/QtQuick/qsgnode.h:43,
+                 from /usr/include/qt/QtQuick/qsgrendererinterface.h:43,
+                 from /usr/include/qt/QtQuick/qquickwindow.h:44,
+                 from /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtQuickWidgets/qquickwidget.h:44,
+                 from /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtQuickWidgets/QQuickWidget:1,
+                 from /home/build/inkbox/neochat-fuck/kitemmodels/tests/proxymodeltestapp/selectioninqmlwidget.cpp:15:
+/usr/include/qt/QtGui/qopengl.h:141:13: fatal error: GL/gl.h: No such file or directory
+  141 | #   include <GL/gl.h>
+      |             ^~~~~~~~~
+compilation terminated.
+make[2]: *** [tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/build.make:328: tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/selectioninqmlwidget.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/home/build/inkbox/neochat-fuck/kitemmodels/tests/proxymodeltestapp/descendantqmltree.cpp: In constructor 'DescendantQmlTreeWidget::DescendantQmlTreeWidget(QWidget*)':
+/home/build/inkbox/neochat-fuck/kitemmodels/tests/proxymodeltestapp/descendantqmltree.cpp:35:5: error: 'QQuickWidget' was not declared in this scope
+   35 |     QQuickWidget *quickView = new QQuickWidget(splitter);
+      |     ^~~~~~~~~~~~
+/home/build/inkbox/neochat-fuck/kitemmodels/tests/proxymodeltestapp/descendantqmltree.cpp:35:19: error: 'quickView' was not declared in this scope
+   35 |     QQuickWidget *quickView = new QQuickWidget(splitter);
+      |                   ^~~~~~~~~
+/home/build/inkbox/neochat-fuck/kitemmodels/tests/proxymodeltestapp/descendantqmltree.cpp:35:35: error: expected type-specifier before 'QQuickWidget'
+   35 |     QQuickWidget *quickView = new QQuickWidget(splitter);
+      |                                   ^~~~~~~~~~~~
+make[2]: *** [tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/build.make:342: tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/descendantqmltree.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1435: tests/proxymodeltestapp/CMakeFiles/proxymodeltestapp.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

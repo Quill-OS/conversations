@@ -1,0 +1,77 @@
+kobo:/tmp/mnt/HDD/Project/Public/iwlist-formatter/inkbox-list-networks/target/armv7-unknown-linux-musleabihf/debug# strace ./inkbox-list-networks 
+execve("./inkbox-list-networks", ["./inkbox-list-networks"], 0x7e9f6ce0 /* 17 vars */) = 0
+mmap2(NULL, 248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2aaab000
+set_tls(0x2aaab078)                     = 0
+set_tid_address(0x233bf8)               = 2373
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x1acbd1}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x18d130, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x1acbd7}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x18d130, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x1acbd7}, NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x2aaac000
+mprotect(0x2aaac000, 4096, PROT_NONE)   = 0
+sigaltstack({ss_sp=0x2aaad000, ss_flags=0, ss_size=8192}, NULL) = 0
+brk(NULL)                               = 0x234000
+brk(0x235000)                           = 0x235000
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+open("/opt/inkbox_device", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0644, st_size=5, ...}) = 0
+_llseek(3, 0, [0], SEEK_CUR)            = 0
+read(3, "n613\n", 8)                    = 5
+read(3, "", 3)                          = 0
+close(3)                                = 0
+open("/dev/null", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+pipe2([6, 7], O_CLOEXEC)                = 0
+pipe2([8, 9], O_CLOEXEC)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7ed2c170, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 2374
+close(9)                                = 0
+read(8, "", 4)                          = 0
+close(8)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(3)                                = 0
+close(5)                                = 0
+close(7)                                = 0
+ioctl(4, FIONBIO, [1])                  = 0
+ioctl(6, FIONBIO, [1])                  = 0
+poll([{fd=4, events=POLLIN}, {fd=6, events=POLLIN}], 2, -1) = 2 ([{fd=4, revents=POLLHUP}, {fd=6, revents=POLLIN|POLLHUP}])
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2374, si_uid=0, si_status=255, si_utime=0, si_stime=0} ---
+read(4, "", 32)                         = 0
+ioctl(6, FIONBIO, [0])                  = 0
+read(6, "eth0      Interface doesn't supp", 32) = 32
+read(6, "ort scanning.\n\n", 32)        = 15
+read(6, "", 17)                         = 0
+close(6)                                = 0
+close(4)                                = 0
+wait4(2374, [{WIFEXITED(s) && WEXITSTATUS(s) == 255}], 0, NULL) = 2374
+brk(0x236000)                           = 0x236000
+brk(0x237000)                           = 0x237000
+getrandom(0x7ed239f0, 16, GRND_NONBLOCK) = -1 ENOSYS (Function not implemented)
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+read(3, "\364\340\5(4a'[c\207\225\310%\323\241\322", 16) = 16
+close(3)                                = 0
+brk(0x23a000)                           = 0x23a000
+brk(0x23d000)                           = 0x23d000
+brk(0x240000)                           = 0x240000
+brk(0x243000)                           = 0x243000
+brk(0x246000)                           = 0x246000
+open("/run/wifi_list_full", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+close(3)                                = 0
+open("/run/wifi_list_format", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+close(3)                                = 0
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
+munmap(0x2aaac000, 12288)               = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+kobo:/tmp/mnt/HDD/Project/Public/iwlist-formatter/inkbox-list-networks/target/armv7-unknown-linux-musleabihf/debug# cat /run/wifi_list_format 
+kobo:/tmp/mnt/HDD/Project/Public/iwlist-formatter/inkbox-list-networks/target/armv7-unknown-linux-musleabihf/debug# cat /run/wifi_list_full

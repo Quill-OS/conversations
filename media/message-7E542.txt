@@ -1,0 +1,89 @@
+uboot > bist
+
+
+U-Boot 2009.08-lab126 (Apr 04 2012 - 20:07:26)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 50000000Hz
+ipg per clock : 50000000Hz
+uart clock    : 24000000Hz
+cspi clock    : 54000000Hz
+ahb clock     : 100000000Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 200000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+MMC:  FSL_ESDHC: 0, FSL_ESDHC: 1
+Board: Whitney WFO
+Boot Reason: [POR]
+Boot Device: MMC
+Board Id: 00614011214201A0
+S/N: B01114082142063E
+I2C:   ready
+DRAM:  256 MB
+Using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+POST done in 1 ms
+Battery voltage: 4105 mV
+
+bist > help
+?       - alias for 'help'
+autoscr - DEPRECATED - use "source" command instead
+base    - print or set address offset
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootm   - boot application image from memory
+check   - perform MMC CRC32 check
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+diag    - perform board diagnostics
+echo    - echo args to console
+fail    - fail blink fail pattern on LED
+fastboot- Fastboot
+fstor   - File Storage
+go      - start application at address 'addr'
+halt    - halt board
+help    - print online help
+i2c     - I2C sub-system
+idme    - idme    - Set nv ram variables
+
+iminfo  - print header information for application image
+itest   - return true/false on integer compare
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+loopw   - infinite write loop on address range
+md      - memory display
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - mmcinfo <dev num>-- display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+ocotp   - OCOTP sub system
+panic   - panic halt
+pass    - pass blink pass pattern on LED
+pmic    - pmic    - PMIC utility commands
+
+printenv- print environment variables
+reset   - Perform RESET of the CPU
+run     - run commands in an environment variable
+setenv  - set environment variables
+sleep   - delay execution for some time
+source  - run script from memory
+sspi    - SPI utility commands
+version - print monitor version
+bist >

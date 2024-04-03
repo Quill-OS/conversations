@@ -1,0 +1,243 @@
+[root@kobo inkbox]# QT_LOGGING_RULES=qt.qpa.input=true ./inkbox.sh
+killall: nickel: no process killed
+killall: sickel: no process killed
+killall: hindenburg: no process killed
+qt.qpa.input: evdevtouch: Adding device at /dev/input/event1
+KoboKb: Attempting to capture input...
+device: "pixie" 340 
+ screen: 600 800 dpi: 200
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A  (single), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1200
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 1600
+qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: zForce-ir-touch
+qt.qpa.input: evdevtouch: Updating QInputDeviceManager device count: 1 touch devices, 0 pending handler(s)
+qt.qpa.input: EV_ABS MT_POS_Y 36
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 48
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.0225,0.96)
+qt.qpa.input: Touchpoint raw position: QPointF(48,36)
+qt.qpa.input: EV_ABS MT_POS_Y 37
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.023125,0.96)
+qt.qpa.input: Touchpoint raw position: QPointF(48,37)
+qt.qpa.input: EV_ABS MT_POS_Y 38
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02375,0.96)
+qt.qpa.input: Touchpoint raw position: QPointF(48,38)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02375,0.96)
+qt.qpa.input: Touchpoint raw position: QPointF(48,38)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02375,0.96)
+qt.qpa.input: Touchpoint raw position: QPointF(48,38)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02375,0.96)
+qt.qpa.input: Touchpoint raw position: QPointF(48,38)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: EV_ABS MT_POS_Y 46
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 757
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.02875,0.369167)
+qt.qpa.input: Touchpoint raw position: QPointF(757,46)
+qt.qpa.input: EV_ABS MT_POS_Y 47
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.029375,0.369167)
+qt.qpa.input: Touchpoint raw position: QPointF(757,47)
+qt.qpa.input: EV_ABS MT_POS_X 756
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.029375,0.37)
+qt.qpa.input: Touchpoint raw position: QPointF(756,47)
+qt.qpa.input: EV_ABS MT_POS_Y 48
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 755
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.03,0.370833)
+qt.qpa.input: Touchpoint raw position: QPointF(755,48)
+qt.qpa.input: EV_ABS MT_POS_Y 49
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.030625,0.370833)
+qt.qpa.input: Touchpoint raw position: QPointF(755,49)
+qt.qpa.input: EV_ABS MT_POS_X 754
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.030625,0.371667)
+qt.qpa.input: Touchpoint raw position: QPointF(754,49)
+qt.qpa.input: EV_ABS MT_POS_X 753
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.030625,0.3725)
+qt.qpa.input: Touchpoint raw position: QPointF(753,49)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.030625,0.3725)
+qt.qpa.input: Touchpoint raw position: QPointF(753,49)
+qt.qpa.input: EV_ABS MT_POS_X 752
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.030625,0.373333)
+qt.qpa.input: Touchpoint raw position: QPointF(752,49)
+qt.qpa.input: EV_ABS MT_POS_Y 47
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.029375,0.373333)
+qt.qpa.input: Touchpoint raw position: QPointF(752,47)
+qt.qpa.input: EV_ABS MT_POS_Y 37
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 756
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.023125,0.37)
+qt.qpa.input: Touchpoint raw position: QPointF(756,37)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.023125,0.37)
+qt.qpa.input: Touchpoint raw position: QPointF(756,37)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: EV_ABS MT_POS_Y 548
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 759
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.3425,0.3675)
+qt.qpa.input: Touchpoint raw position: QPointF(759,548)
+qt.qpa.input: EV_ABS MT_POS_X 758
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.3425,0.368333)
+qt.qpa.input: Touchpoint raw position: QPointF(758,548)
+qt.qpa.input: EV_ABS MT_POS_X 757
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.3425,0.369167)
+qt.qpa.input: Touchpoint raw position: QPointF(757,548)
+qt.qpa.input: EV_ABS MT_POS_X 760
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.3425,0.366667)
+qt.qpa.input: Touchpoint raw position: QPointF(760,548)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.3425,0.366667)
+qt.qpa.input: Touchpoint raw position: QPointF(760,548)
+qt.qpa.input: Contact Erase since state is released
+qt.qpa.input: EV_ABS MT_POS_Y 556
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 32
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 1 touchpoint pressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.3475,0.973333)
+qt.qpa.input: Touchpoint raw position: QPointF(32,556)
+qt.qpa.input: EV_ABS MT_POS_Y 555
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.346875,0.973333)
+qt.qpa.input: Touchpoint raw position: QPointF(32,555)
+qt.qpa.input: EV_ABS MT_POS_Y 554
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS MT_POS_X 33
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.34625,0.9725)
+qt.qpa.input: Touchpoint raw position: QPointF(33,554)
+qt.qpa.input: EV_ABS MT_POS_Y 553
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345625,0.9725)
+qt.qpa.input: Touchpoint raw position: QPointF(33,553)
+qt.qpa.input: EV_ABS MT_POS_X 34
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345625,0.971667)
+qt.qpa.input: Touchpoint raw position: QPointF(34,553)
+qt.qpa.input: EV_ABS MT_POS_Y 552
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345,0.971667)
+qt.qpa.input: Touchpoint raw position: QPointF(34,552)
+qt.qpa.input: EV_ABS MT_POS_X 35
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345,0.970833)
+qt.qpa.input: Touchpoint raw position: QPointF(35,552)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345,0.970833)
+qt.qpa.input: Touchpoint raw position: QPointF(35,552)
+qt.qpa.input: EV_ABS MT_POS_X 36
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345,0.97)
+qt.qpa.input: Touchpoint raw position: QPointF(36,552)
+qt.qpa.input: EV_ABS MT_POS_X 35
+qt.qpa.input: EV_ABS MT_POS_X Single Touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345,0.970833)
+qt.qpa.input: Touchpoint raw position: QPointF(35,552)
+qt.qpa.input: EV_ABS MT_POS_Y 553
+qt.qpa.input: EV_ABS MT_POS_Y Single touch
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345625,0.970833)
+qt.qpa.input: Touchpoint raw position: QPointF(35,553)
+qt.qpa.input: EV_ABS PRESSURE
+qt.qpa.input: EV_KEY
+qt.qpa.input: EV_KEY BTN_TOUCH 0 touchpoint released
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Touchpoint normal position: QPointF(0.345625,0.970833)
+qt.qpa.input: Touchpoint raw position: QPointF(35,553)
+qt.qpa.input: Contact Erase since state is released

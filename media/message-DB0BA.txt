@@ -1,0 +1,48 @@
+kobo:~# restart inkbox_gui
+ * Stopping InkBox GUI ...
+Terminated                                                                                                                                                                                    [ ok ]
+ * Starting InkBox GUI ...
+ * Starting InkBox Daemon (ibxd) ...                                                                                                                                                          [ ok ]
+ * Setting up GUI user applications
+ * Successfully set up application 'InkVT'
+ * Successfully set up application 'Maps'
+ * Successfully set up application 'QtFrotz'                                                                                                                                                  [ ok ]
+kobo:~#  * WARNING: sshd has already been started
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+Motion debug enabled. Debug information for screen and mouse will be printed
+[FBInk] Unidentified Kobo device code (40)!
+[FBInk] Detected a Kobo Unknown! (40 => ?? @ Mark ?)
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 167 dpi
+[FBInk] Variable fb info: 1072x1448, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 6782976 bytes & line length: 1088 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM (Default) base glyph size: 8x8)
+[FBInk] Line length: 67 cols, Page size: 90 rows
+[FBInk] Horizontal fit is perfect!
+[FBInk] Vertical fit isn't perfect, shifting rows down by 4 pixels
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Updating bitdepth from 8bpp to 8bpp
+Updating grayscale value from 1 to 1
+Updating rotation from 3 (Counter Clockwise, 270°) to 3 (Counter Clockwise, 270°)
+Bitdepth is now 8bpp (grayscale: 1) @ rotate: 3 (Counter Clockwise, 270°)
+Screen info: 1072 1448 rotation: 3 rotation canonical: 0 bpp: 8
+Allocated screen buffer. Stride: 1088 buffer size: 6782976
+device: "alyssum" 340 
+ screen: 1072 1448 dpi: 300
+kobofb: Finished initialization.
+03/03/2023 @ 18:37:34 | main: Running on device n437
+03/03/2023 @ 18:37:34 | main: Device has Wi-Fi capabilities
+03/03/2023 @ 18:37:37 | sleepThread: Sleep pipe thread active
+03/03/2023 @ 18:37:38 | sleepThread: Looking for messages in pipe
+03/03/2023 @ 18:37:43 | homePageWidget: Reading database
+03/03/2023 @ 18:37:43 | homePageWidget: Reading recent books database
+03/03/2023 @ 18:37:43 | homePageWidget: Setting up home page
+03/03/2023 @ 18:37:44 | homePageWidget: Reading pinned books database
+qUncompress: Input data is corrupted
+03/03/2023 @ 18:37:44 | MainWindow: Checking for available updates
+03/03/2023 @ 18:37:44 | MainWindow: checkForUpdate: No update available.
+03/03/2023 @ 18:37:45 | MainWindow: Showing USB Mass Storage dialog
+03/03/2023 @ 18:37:47 | MainWindow: Setting initial brightness to 50
+03/03/2023 @ 18:37:47 | functions: cinematicBrightness: Setting brightness to 50

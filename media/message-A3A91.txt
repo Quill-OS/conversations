@@ -1,0 +1,170 @@
+kobo:~# /tmp/touch_emulate power
+kobo:~# Mon Aug  1 00:19:33 2022 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Mon Aug  1 00:19:33 2022 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Mon Aug  1 00:19:34 2022 | watchdog: Watchdog event received
+Mon Aug  1 00:19:34 2022 | watchdog: Launching 'prepare' thread because of 'Nothing' sleep job
+Mon Aug  1 00:19:34 2022 | prepareSleep: Launching prepareSleep
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+[FBInk] Detected a Kobo Aura SE (375 => Star @ Mark 6)
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 212 dpi
+[FBInk] Variable fb info: 758x1024, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 1536 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 47 cols, Page size: 64 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Mon Aug  1 00:19:34 2022 | fbinkFunctions: FBInk was initialized successfully in screenshotFbink
+Mon Aug  1 00:19:34 2022 | fbinkFunctions: Screen dump done
+Mon Aug  1 00:19:34 2022 | pipeHandler: Sending message
+Mon Aug  1 00:19:34 2022 | configUpdate: inotify read up
+Mon Aug  1 00:19:34 2022 | configUpdate: inotify loop executed
+Mon Aug  1 00:19:34 2022 | configUpdate: inotify: Detected a modification event of name: fifo
+Mon Aug  1 00:19:34 2022 | configUpdate: All events read
+Mon Aug  1 00:19:35 2022 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: inkbox-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: oobe-inkbox-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: lockscreen-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: calculator-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: qreversi-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: 2048-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: scribble
+Mon Aug  1 00:19:35 2022 | appsFreeze: In app vector: lightmaps
+Mon Aug  1 00:19:35 2022 | appsFreeze: Found PID of inkbox-bin: 2198
+Mon Aug  1 00:19:35 2022 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of oobe-inkbox-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of lockscreen-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of calculator-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of qreversi-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of 2048-bin
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of scribble
+Mon Aug  1 00:19:35 2022 | appsFreeze: Couldn't find PID of lightmaps
+Mon Aug  1 00:19:35 2022 | appsFreeze: Freezing process with PID 2198
+Mon Aug  1 00:19:35 2022 | appsFreeze: Killing process with PID 2198 with signal 19
+[FBInk] Variable fb info: 758x1024, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 1536 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 47 cols, Page size: 64 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Mon Aug  1 00:19:35 2022 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Mon Aug  1 00:19:35 2022 | prepareSleep: Custom screensaver not found or an error occured; displaying normal message
+Mon Aug  1 00:19:35 2022 | fbinkFunctions: FBInk: Full screen refresh
+[FBInk] Variable fb info: 758x1024, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 1536 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 47 cols, Page size: 64 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Font `/etc/init.d/splash.d/fonts/resources/inter-b.ttf` loaded for style 'Regular'
+Mon Aug  1 00:19:37 2022 | functions: Wrote: "true" to: /tmp/sleep_standby
+Mon Aug  1 00:19:37 2022 | functions: Wrote: "true" to: /tmp/sleep_mode
+Mon Aug  1 00:19:37 2022 | functions: /sys/class/backlight/mxc_msp430_fl.0/brightness is: 10
+Mon Aug  1 00:19:37 2022 | functions: Wrote: "10" to: /tmp/savedBrightness
+Mon Aug  1 00:19:37 2022 | functions: /sys/class/backlight/mxc_msp430_fl.0/brightness is: 10
+Mon Aug  1 00:19:37 2022 | wifi: connectToWifiPid is 0
+Mon Aug  1 00:19:37 2022 | wifi: No need to collect zombie process
+Mon Aug  1 00:19:37 2022 | functions: /sys/class/net/eth0/operstate is: up
+Mon Aug  1 00:19:37 2022 | functions: /data/config/20-sleep_daemon/5-wifiReconnect is: true
+Mon Aug  1 00:19:37 2022 | functions: Wrote: "true" to: /run/was_connected_to_wifi
+Mon Aug  1 00:19:37 2022 | appsFreeze: Couldn't find PID of connect_to_network.sh
+Mon Aug  1 00:19:37 2022 | appsFreeze: Couldn't find PID of dhcpcd
+Mon Aug  1 00:19:37 2022 | appsFreeze: Found PID of wpa_supplicant: 2593
+Mon Aug  1 00:19:37 2022 | appsFreeze: Killing process with PID 2593
+Mon Aug  1 00:19:37 2022 | appsFreeze: Found PID of udhcpc: 2619
+Mon Aug  1 00:19:37 2022 | appsFreeze: Killing process with PID 2619
+Mon Aug  1 00:19:37 2022 | functions: Posix spawning /sbin/ifconfig
+Mon Aug  1 00:19:37 2022 | functions: Spawning without errors
+Mon Aug  1 00:19:37 2022 | functions: Spawned with PID: 2886
+Mon Aug  1 00:19:40 2022 | functions: Wrote: "false" to: /kobo/inkbox/remount
+Mon Aug  1 00:19:40 2022 | functions: Posix spawning /sbin/hwclock
+Mon Aug  1 00:19:40 2022 | functions: Spawning without errors
+Mon Aug  1 00:19:40 2022 | functions: Spawned with PID: 2888
+Mon Aug  1 00:19:40 2022 | usbnet: Disabling USB networking
+Mon Aug  1 00:19:40 2022 | usbnet: Can't unload module: arcotg_udc
+Mon Aug  1 00:19:40 2022 | usbnet: Can't unload module: g_ether
+Mon Aug  1 00:19:40 2022 | usbnet: Can't unload module: usb_f_rndis
+Mon Aug  1 00:19:40 2022 | usbnet: Can't unload module: usb_f_ecm_subset
+Mon Aug  1 00:19:40 2022 | usbnet: Can't unload module: usb_f_eem
+Mon Aug  1 00:19:40 2022 | usbnet: Can't unload module: usb_f_ecm
+Mon Aug  1 00:19:41 2022 | usbnet: Can't unload module: u_ether
+Mon Aug  1 00:19:41 2022 | usbnet: Can't unload module: libcomposite
+Mon Aug  1 00:19:41 2022 | usbnet: Can't unload module: configfs
+Mon Aug  1 00:19:41 2022 | prepareSleep: Exiting prepareSleep
+Mon Aug  1 00:19:41 2022 | watchdog: Launching watchdogNextStep request
+Mon Aug  1 00:19:41 2022 | watchdog: Launching goingSleep thread from request by watchdogNextStep
+Mon Aug  1 00:19:41 2022 | goingSleep: Started goSleep
+Mon Aug  1 00:19:42 2022 | goingSleep: Going to sleep now!
+Mon Aug  1 00:19:43 2022 | goingSleep: Trying suspend
+Mon Aug  1 00:19:44 2022 | configUpdate: inotify read up
+Mon Aug  1 00:19:44 2022 | configUpdate: Failed to read from buffer
+Mon Aug  1 00:19:44 2022 | configUpdate: All events read
+Mon Aug  1 00:19:44 2022 | undefined: Got back from suspend
+Mon Aug  1 00:19:44 2022 | goingSleep: Failed to suspend, kernel ring buffer errors:
+<3>[ 2586.249302] pm_op(): platform_pm_suspend+0x0/0x50 returns -1
+<3>[ 2586.249310] PM: Device imx_epdc_fb failed to suspend: error -1
+<3>[ 2586.249316] PM: Some devices failed to suspend
+
+Mon Aug  1 00:19:44 2022 | goingSleep: 
+status of writing to /sys/power/state: -1
+Mon Aug  1 00:19:47 2022 | goingSleep: Trying suspend
+Mon Aug  1 00:20:49 2022 | configUpdate: inotify read up
+Mon Aug  1 00:20:49 2022 | configUpdate: Failed to read from buffer
+Mon Aug  1 00:20:49 2022 | configUpdate: All events read
+Mon Aug  1 00:20:49 2022 | undefined: Got back from suspend
+Mon Aug  1 00:20:49 2022 | goingSleep: Stopping suspend attempts after 1 failed attempts
+Mon Aug  1 00:20:49 2022 | goingSleep: The device woke up because of a charger, but option '4 - chargerWakeUp' is disabled, so it will continue to wake up
+Mon Aug  1 00:20:49 2022 | goingSleep: Exiting goSleep
+Mon Aug  1 00:20:49 2022 | watchdog: Launching watchdogNextStep request
+Mon Aug  1 00:20:49 2022 | watchdog: Launching afterSleep thread from request by watchdogNextStep
+Mon Aug  1 00:20:49 2022 | afterSleep: Launching afterSleep
+Mon Aug  1 00:20:49 2022 | afterSleep: Returning from deep sleep
+Mon Aug  1 00:20:49 2022 | functions: Wrote: "false" to: /tmp/sleep_mode
+Mon Aug  1 00:20:49 2022 | functions: Posix spawning /sbin/hwclock
+Mon Aug  1 00:20:49 2022 | functions: Spawning without errors
+Mon Aug  1 00:20:49 2022 | functions: Spawned with PID: 2907
+[FBInk] Variable fb info: 758x1024, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 1536 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 47 cols, Page size: 64 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Mon Aug  1 00:20:49 2022 | appsFreeze: Unfreezing process with PID 2198
+Mon Aug  1 00:20:49 2022 | pipeHandler: Sending message
+Mon Aug  1 00:20:49 2022 | configUpdate: inotify read up
+Mon Aug  1 00:20:49 2022 | configUpdate: inotify loop executed
+[FBInk] Variable fb info: 758x1024, 16bpp @ rotation: 3 (Counter Clockwise, 270°)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 1536 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0°)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 47 cols, Page size: 64 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+Mon Aug  1 00:20:49 2022 | fbinkFunctions: FBInk: Full screen refresh
+Mon Aug  1 00:20:49 2022 | configUpdate: inotify: Detected a modification event of name: fifo
+Mon Aug  1 00:20:49 2022 | configUpdate: All events read
+Mon Aug  1 00:20:50 2022 | functions: /tmp/savedBrightness is: 10
+Mon Aug  1 00:20:51 2022 | afterSleep: Reconnecting to wifi because of option '5 - wifiReconnect'
+Mon Aug  1 00:20:51 2022 | functions: /run/was_connected_to_wifi is: true
+Mon Aug  1 00:20:53 2022 | functions: Posix spawning /sbin/ifconfig
+Mon Aug  1 00:20:53 2022 | functions: Spawning without errors
+Mon Aug  1 00:20:53 2022 | functions: Spawned with PID: 2911
+Mon Aug  1 00:20:54 2022 | functions: /data/config/17-wifi_connection_information/essid is: SentFromMyToaster-EXT
+Mon Aug  1 00:20:54 2022 | functions: /data/config/17-wifi_connection_information/passphrase is: pm750222mhpf760820
+Mon Aug  1 00:20:54 2022 | functions: Posix spawning /usr/local/bin/wifi/connect_to_network.sh
+Mon Aug  1 00:20:54 2022 | functions: Spawning without errors
+Mon Aug  1 00:20:54 2022 | functions: Spawned with PID: 2918
+Mon Aug  1 00:20:54 2022 | usbnet: Restoring USB networking
+ * USB networking is disabled. Please set the USBNET_ENABLE flag and try again.
+Mon Aug  1 00:20:55 2022 | functions: Output of command: "service usbnet start" is: "  * Starting USBNet ... [ ok ]
+ "
+Mon Aug  1 00:20:55 2022 | afterSleep: Exiting afterSleep
+Successfully initialized wpa_supplicant
+rfkill: Cannot get wiphy information
+ioctl[SIOCSIWAP]: Operation not permitted
+udhcpc: started, v1.34.1
+udhcpc: broadcasting discover
+udhcpc: broadcasting discover
+udhcpc: read error: Network is down, reopening socket
+udhcpc: bind: No such device
+DHCP request failed.
+kobo:~# 

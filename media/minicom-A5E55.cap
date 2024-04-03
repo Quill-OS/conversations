@@ -1,0 +1,284 @@
+inkbox:/# inkbox:/# fginkbox:/# cat /tmp/log inkbox:/# LD_LIBRARY_PATH=/mnt/onboard/.adds/qt-linux-5.15.2-kobo/lib:/lib/:/usr
+/lib QT_QPA_PLATFORM=kobo:debug QT_LOGGING_RULES=qt.qpa.input=true QT_DEBUG_PLUG
+INS=1 /mnt/onboard/.adds/inkbox/oobe-inkbox | tee /tmp/log
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms" ...
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "kobo"
+        ]
+    },
+    "archreq": 0,
+    "className": "KoboPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("kobo")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archreq": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("vnc")
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/platforms" ...
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so"
+qt.qpa.input: evdevtouch: Adding device at /dev/input/event1
+KoboKb: Attempting to capture input...
+device: "snow" 340 
+ screen: 1440 1080 dpi: 265
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/styles" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/styles" ...
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A  (multi), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1440
+qt.qpa.input: evdevtouch: overwriting touch x max: 1080
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 1080
+qt.qpa.input: evdevtouch: overwriting touch y max: 1440
+qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: zForce-ir-touch
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/accessiblebridge" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/accessiblebridge" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/iconengines" ...
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/iconengines/libqsvgicon.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/iconengines/libqsvgicon.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QIconEngineFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz",
+            "svg.gz"
+        ]
+    },
+    "archreq": 0,
+    "className": "QSvgIconPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("svg", "svgz", "svg.gz")
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/iconengines" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats" ...
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqgif.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqgif.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "gif"
+        ],
+        "MimeTypes": [
+            "image/gif"
+        ]
+    },
+    "archreq": 0,
+    "className": "QGifPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("gif")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqicns.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqicns.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "icns"
+        ],
+        "MimeTypes": [
+            "image/x-icns"
+        ]
+    },
+    "archreq": 0,
+    "className": "QICNSPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("icns")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqico.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqico.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "ico",
+            "cur"
+        ],
+        "MimeTypes": [
+            "image/vnd.microsoft.icon",
+            "image/vnd.microsoft.icon"
+        ]
+    },
+    "archreq": 0,
+    "className": "QICOPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("ico", "cur")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqjpeg.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqjpeg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "jpg",
+            "jpeg"
+        ],
+        "MimeTypes": [
+            "image/jpeg",
+            "image/jpeg"
+        ]
+    },
+    "archreq": 0,
+    "className": "QJpegPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("jpg", "jpeg")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqsvg.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqsvg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz"
+        ],
+        "MimeTypes": [
+            "image/svg+xml",
+            "image/svg+xml-compressed"
+        ]
+    },
+    "archreq": 0,
+    "className": "QSvgPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("svg", "svgz")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqtga.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqtga.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "tga"
+        ],
+        "MimeTypes": [
+            "image/x-tga"
+        ]
+    },
+    "archreq": 0,
+    "className": "QTgaPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("tga")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqtiff.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqtiff.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "tiff",
+            "tif"
+        ],
+        "MimeTypes": [
+            "image/tiff",
+            "image/tiff"
+        ]
+    },
+    "archreq": 0,
+    "className": "QTiffPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("tiff", "tif")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqwbmp.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqwbmp.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "wbmp"
+        ],
+        "MimeTypes": [
+            "image/vnd.wap.wbmp"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWbmpPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("wbmp")
+QFactoryLoader::QFactoryLoader() looking at "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqwebp.so"
+Found metadata in lib /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqwebp.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "webp"
+        ],
+        "MimeTypes": [
+            "image/webp"
+        ]
+    },
+    "archreq": 0,
+    "className": "QWebpPlugin",
+    "debug": false,
+    "version": 331520
+}
+
+
+Got keys from plugin meta data ("webp")
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/imageformats" ...
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqgif.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqicns.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqico.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqjpeg.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqsvg.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqtga[   77.299249] ntx_get_battery_vol : full !! 4200000
+.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqtiff.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqwbmp.so"
+loaded library "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/imageformats/libqwebp.so"
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/accessible" ...
+QFactoryLoader::QFactoryLoader() checking directory path "/mnt/onboard/.adds/inkbox/accessible" ...
+qt.qpa.input: evdevtouch: Updating QInputDeviceManager device count: 1 touch devices, 0 pending handler(s)
+^C
+inkbox:/# 

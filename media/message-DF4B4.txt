@@ -1,0 +1,74 @@
+kobo-nia:/etc/udev/rules.d$ sudo udevadm test /sys/bus/i2c/devices/1-0024/input/
+input0
+calling: test
+version 3.2.12
+This program is for debugging only, it does not run any program
+specified by a RUN key. It may show incorrect results, because
+some values may be different, or not available at a simulation run.
+
+ does not exist, please run udevadm hwdb --update
+Load module index
+timestamp of '/etc/udev/rules.d' changed
+Reading rules file: /usr/lib/udev/rules.d/10-dm.rules
+Reading rules file: /usr/lib/udev/rules.d/11-dm-lvm.rules
+Reading rules file: /usr/lib/udev/rules.d/11-dm-mpath.rules
+Reading rules file: /usr/lib/udev/rules.d/11-dm-parts.rules
+Reading rules file: /usr/lib/udev/rules.d/13-dm-disk.rules
+Reading rules file: /lib/udev/rules.d/20-tm2-touchkey-input.rules
+Reading rules file: /lib/udev/rules.d/20-tm2-touchkey-leds.rules
+Reading rules file: /lib/udev/rules.d/20-zinitix-input.rules
+Reading rules file: /lib/udev/rules.d/50-firmware.rules
+Reading rules file: /lib/udev/rules.d/50-udev-default.rules
+Reading rules file: /usr/lib/udev/rules.d/56-multipath.rules
+Reading rules file: /lib/udev/rules.d/60-autosuspend.rules
+Reading rules file: /lib/udev/rules.d/60-block.rules
+Reading rules file: /lib/udev/rules.d/60-cdrom_id.rules
+Reading rules file: /lib/udev/rules.d/60-drm.rules
+Reading rules file: /lib/udev/rules.d/60-evdev.rules
+Reading rules file: /lib/udev/rules.d/60-fido-id.rules
+Reading rules file: /lib/udev/rules.d/60-input-id.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-alsa.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-input.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-storage-tape.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-storage.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-v4l.rules
+Reading rules file: /lib/udev/rules.d/60-sensor.rules
+Reading rules file: /lib/udev/rules.d/60-serial.rules
+Reading rules file: /run/udev/rules.d/61-dev-root-link.rules
+Reading rules file: /lib/udev/rules.d/64-btrfs-dm.rules
+Reading rules file: /lib/udev/rules.d/64-btrfs-zoned.rules
+Reading rules file: /lib/udev/rules.d/64-btrfs.rules
+Reading rules file: /usr/lib/udev/rules.d/66-kpartx.rules
+Reading rules file: /usr/lib/udev/rules.d/68-del-part-nodes.rules
+Reading rules file: /usr/lib/udev/rules.d/69-dm-lvm.rules
+Reading rules file: /lib/udev/rules.d/70-camera.rules
+Reading rules file: /lib/udev/rules.d/70-joystick.rules
+Reading rules file: /lib/udev/rules.d/70-memory.rules
+Reading rules file: /lib/udev/rules.d/70-mouse.rules
+Reading rules file: /lib/udev/rules.d/70-power-switch.rules
+Reading rules file: /lib/udev/rules.d/70-touchpad.rules
+Reading rules file: /lib/udev/rules.d/70-uaccess.rules
+Reading rules file: /lib/udev/rules.d/71-seat.rules
+Reading rules file: /lib/udev/rules.d/73-seat-late.rules
+Reading rules file: /lib/udev/rules.d/75-net-description.rules
+Reading rules file: /lib/udev/rules.d/75-probe_mtd.rules
+Reading rules file: /lib/udev/rules.d/78-sound-card.rules
+Reading rules file: /lib/udev/rules.d/80-drivers.rules
+Reading rules file: /usr/lib/udev/rules.d/80-libinput-device-groups.rules
+Reading rules file: /lib/udev/rules.d/81-net-dhcp.rules
+Reading rules file: /lib/udev/rules.d/84-nm-drivers.rules
+Reading rules file: /lib/udev/rules.d/85-nm-unmanaged.rules
+Reading rules file: /lib/udev/rules.d/90-alsa-restore.rules
+Reading rules file: /usr/lib/udev/rules.d/90-feedbackd-regulator-haptic.rules
+Reading rules file: /usr/lib/udev/rules.d/90-libinput-fuzz-override.rules
+Reading rules file: /lib/udev/rules.d/90-nm-thunderbolt.rules
+Reading rules file: /usr/lib/udev/rules.d/90-pulseaudio.rules
+Reading rules file: /usr/lib/udev/rules.d/95-dm-notify.rules
+Reading rules file: /lib/udev/rules.d/95-upower-hid.rules
+Reading rules file: /lib/udev/rules.d/95-upower-wup.rules
+Reading rules file: /etc/udev/rules.d/99-ektf2232.rules
+rules contain 49152 bytes tokens (4096 * 12 bytes), 18717 bytes strings
+2850 strings (38027 bytes), 1929 de-duplicated (20232 bytes), 922 trie nodes used
+unable to open device '/sys/bus/i2c/devices/1-0024/input/input0'
+Unload module index
+kobo-nia:/etc/udev/rules.d$ 

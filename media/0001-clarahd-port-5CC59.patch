@@ -1,0 +1,42 @@
+From e8b955ea50aadec074291a90427371f9e11a85cc Mon Sep 17 00:00:00 2001
+From: alex <alex>
+Date: Tue, 10 Jan 2023 19:59:13 +0100
+Subject: [PATCH] clarahd port
+
+---
+ init.c | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+diff --git a/init.c b/init.c
+index 795d920..c0d7f6d 100644
+--- a/init.c
++++ b/init.c
+@@ -22,6 +22,25 @@ int main() {
+ 	mount("devtmpfs", "/dev", "devtmpfs", 0, "");
+ 	mount("tmpfs", "/tmp", "tmpfs", 0, "size=16M");
+ 
++	// Kobo Clara HD (N249) specific stuff
++	if(strstr(device, "n249")) {
++		// Unsquashing modules
++		{	
++			const char * arguments[] = { "/usr/bin/unsquashfs", "-d", "/lib/modules", "/opt/modules.sqsh", NULL }; run_command("/usr/bin/unsquashfs", arguments, true);
++		}
++		
++		// Put epdc.fw in the right place
++		mkpath("/lib/firmware/imx", 0755);
++		{	
++			const char * arguments[] = { "/usr/bin/unsquashfs", "-d", "/lib/firmware/imx/epdc", "/opt/firmware.sqsh", NULL }; run_command("/usr/bin/unsquashfs", arguments, true);
++		}
++		
++		// Load some modules
++		load_module("/lib/modules/5.16.0/kernel/drivers/hwmon/tps6518x-hwmon.ko", "");
++		load_module("/lib/modules/5.16.0/kernel/drivers/regulator/tps6518x-regulator.ko", "");
++		load_module("/lib/modules/5.16.0/kernel/drivers/video/fbdev/mxc/mxc_epdc_v2_fb.ko", "");
++	}
++
+ 	// Framebuffer (Kindle Touch-specific)
+ 	if(strstr(device, "kt")) {
+ 		// Unsquashing modules
+-- 
+2.39.0
+

@@ -1,0 +1,1359 @@
+diff --git a/apps.cpp b/apps.cpp
+index e22257d..2cddcb8 100644
+--- a/apps.cpp
++++ b/apps.cpp
+@@ -1,8 +1,14 @@
+ #include "apps.h"
+ #include "ui_apps.h"
+ #include "mainwindow.h"
++#include "userapps.h"
++
+ #include <QFile>
+ #include <QProcess>
++#include <QJsonParseError>
++#include <QJsonObject>
++#include <QJsonValue>
++#include <QJsonArray>
+ 
+ apps::apps(QWidget *parent) :
+     QWidget(parent),
+@@ -61,6 +67,14 @@ apps::apps(QWidget *parent) :
+         ui->lightmapsLaunchBtn->deleteLater();
+     }
+ 
++    ui->editUserAppsBtn->setProperty("type", "borderless");
++
++    // Refresh because Qt shows the scrollbar for one second then hides it, leaving a mark on the eInk screen
++    QTimer::singleShot(1750, this, SLOT(refreshScreenNative()));
++
++    jsonParseSuccess = parseJson();
++    showUserApps(false);
++
+     QFile stylesheetFile("/mnt/onboard/.adds/inkbox/eink.qss");
+     stylesheetFile.open(QFile::ReadOnly);
+     this->setStyleSheet(stylesheetFile.readAll());
+@@ -160,3 +174,174 @@ void apps::on_g2048LaunchBtn_clicked()
+ void apps::showToastNative(QString messageToDisplay) {
+     emit showToast(messageToDisplay);
+ }
++
++/*
++ * This function opens and reads the main GUI user applications' JSON file, parses and verifies its content to avoid issues in the future.
++*/
++bool apps::parseJson() {
++    // If the path changes, it is also used statically in showUserApps()
++    jsonFile.setFileName("/mnt/onboard/onboard/.apps/apps.json");
++    bool jsonCheckSuccess = true;
++
++    if(jsonFile.exists() == false) {
++        log("GUI user applications' main JSON file is missing, creating it", className);
++        jsonCheckSuccess = false;
++    }
++    else {
++        jsonFile.open(QIODevice::ReadOnly | QIODevice::Text);
++        QString fileRead = jsonFile.readAll();
++        jsonFile.close();
++
++        jsonDocument = QJsonDocument::fromJson(fileRead.toUtf8());
++        if(jsonDocument.isNull() == true) {
++            log("GUI user applications' main JSON file is invalid", className);
++            jsonCheckSuccess = false;
++        }
++        else {
++            QJsonObject jsonObject = jsonDocument.object();
++            if(jsonObject["list"].isArray() == true) {
++                QJsonArray jsonArray = jsonObject["list"].toArray();
++                for(QJsonValueRef refJsonObject: jsonArray) {
++                    if(refJsonObject.isObject()) {
++                        QJsonObject jsonMainObject = refJsonObject.toObject();
++                        if(jsonMainObject.size() == 9) {
++                            if(!jsonMainObject["Name"].isString()) {
++                                QString function = __func__; log(function + ": Invalid 'Name' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["Author"].isString()) {
++                                QString function = __func__; log(function + ": Invalid 'Author' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["AuthorContact"].isString()) {
++                                QString function = __func__; log(function + ": Invalid 'AuthorContact' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["Version"].isString()) {
++                                QString function = __func__; log(function + ": Invalid 'Version' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["IconPath"].isString()) {
++                                log("JSON: Invalid IconPath type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["ExecPath"].isString()) {
++                                QString function = __func__; log(function + ": Invalid 'ExecPath' type inside object", className);
++                                jsonCheckSuccess = false;
++                            }
++                            else {
++                                if(jsonMainObject["ExecPath"].toString().contains("..")) {
++                                    // Possible security risk
++                                    showToastNative("ERROR: 'ExecPath' has invalid path");
++                                    QString function = __func__; log(function + ": 'ExecPath' contains \"..\"", className);
++                                    jsonCheckSuccess = false;
++                                }
++                            }
++                            if(!jsonMainObject["Enabled"].isBool()) {
++                                QString function = __func__; log(function + ": Invalid 'Enabled' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["SupportedDevices"].isString()) {
++                                QString function = __func__; log(function + ": Invalid 'SupportedDevices' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            if(!jsonMainObject["RequiredFeatures"].isArray()) {
++                                QString function = __func__; log(function + ": Invalid 'RequiredFeatures' type inside object", className);
++                                jsonCheckSuccess = false;
++
++                            }
++                            else {
++                                QJsonArray jsonArray = jsonMainObject["RequiredFeatures"].toArray();
++                                for(QJsonValueRef refJsonObject: jsonArray) {
++                                    // https://doc.qt.io/qt-5/qjsonvalue.html#toInt
++                                    if(!refJsonObject.isDouble()) {
++                                        QString function = __func__; log(function + ": Array from 'RequiredFeatures' contains a wrong type", className);
++                                        jsonCheckSuccess = false;
++                                    }
++                                }
++                            }
++                        }
++                        else {
++                            QString function = __func__; QString message = function + ": An object inside list array has too many items (or not enough): ";
++                            message.append(QString::number(jsonMainObject.size()));
++                            log(message, className);
++                            jsonCheckSuccess = false;
++                        }
++                    }
++                    else {
++                        QString function = __func__; log(function + ": List array has an item of other type than object", className);
++                        jsonCheckSuccess = false;
++                    }
++                }
++            }
++        }
++    }
++    return jsonCheckSuccess;
++}
++
++void apps::on_editUserAppsBtn_clicked()
++{
++    if(userAppsSecondPage == false) {
++        userAppsSecondPage = true;
++
++        // Settings page
++        showUserApps(userAppsSecondPage);
++        emit showUserAppsEdit(userAppsSecondPage);
++    }
++    else {
++        userAppsSecondPage = false;
++        // Launch page
++
++        // It changed via updateJsonFileSlot, and now it writes it only once
++        jsonFile.open(QFile::WriteOnly | QFile::Text | QFile::Truncate);
++        jsonFile.write(jsonDocument.toJson());
++        jsonFile.flush();
++        jsonFile.close();
++
++        showUserApps(userAppsSecondPage);
++        emit showUserAppsEdit(userAppsSecondPage);
++
++        QTimer::singleShot(1000, this, SLOT(refreshScreenNative()));
++    }
++}
++
++void apps::showUserApps(bool ShowDisabledJson)
++{
++    emit clearAppsLayout();
++
++    if(jsonParseSuccess == true) {
++        QString function = __func__; log(function + ": JSON is valid", className);
++        QJsonArray jsonListArray = jsonDocument.object()["list"].toArray();
++            for(QJsonValueRef refJsonObject: jsonListArray) {
++                QJsonObject appInfo = refJsonObject.toObject();
++                if(appInfo["Enabled"].toBool() == true or ShowDisabledJson == true) {
++                    userapps * newUserApp = new userapps;
++                    newUserApp->provideInfo(appInfo);
++                    connect(this, SIGNAL(clearAppLayout()), newUserApp, SLOT(deleteLater()));
++                    connect(this, SIGNAL(showUserAppsEdit(bool)), newUserApp, SLOT(changePageEnabling(bool)));
++                    connect(this, SIGNAL(updateJsonFileSignal(QJsonDocument)), newUserApp, SLOT(updateJsonFileSlotUA(QJsonDocument)));
++                    connect(newUserApp, SIGNAL(updateJsonFileSignalUA(QJsonDocument)), this, SLOT(updateJsonFileSlot(QJsonDocument)));
++                    newUserApp->jsonDocument = jsonDocument;
++                    newUserApp->jsonFilePath = jsonFile.fileName();
++                    ui->verticalLayout_4UserApps->addWidget(newUserApp);
++                }
++            }
++    }
++    else {
++        QString function = __func__; log(function + ": JSON is invalid", className);
++        emit showToast("ERROR: Failed to parse 'apps.json'");
++    }
++}
++
++void apps::updateJsonFileSlot(QJsonDocument jsonDocumentFunc)
++{
++    jsonDocument = jsonDocumentFunc;
++    emit updateJsonFileSignal(jsonDocument);
++}
+diff --git a/apps.h b/apps.h
+index 44ed62a..aee4fa5 100644
+--- a/apps.h
++++ b/apps.h
+@@ -7,6 +7,8 @@
+ #include <koboxappsdialog.h>
+ #include <generaldialog.h>
+ 
++#include <QJsonDocument>
++
+ namespace Ui {
+ class apps;
+ }
+@@ -30,9 +32,13 @@ private slots:
+     void on_koboxAppsOpenButton_clicked();
+     void on_vncLaunchBtn_clicked();
+     void on_reversiLaunchBtn_clicked();
++    void on_editUserAppsBtn_clicked();
+     void refreshScreenNative();
+     void on_g2048LaunchBtn_clicked();
+     void showToastNative(QString messageToDisplay);
++    bool parseJson();
++    void showUserApps(bool showDisabledJson);
++    void updateJsonFileSlot(QJsonDocument jsonDocument);
+ 
+ private:
+     Ui::apps *ui;
+@@ -41,9 +47,17 @@ private:
+     koboxAppsDialog *koboxAppsDialogWindow;
+     generalDialog *generalDialogWindow;
+ 
++    QFile jsonFile;
++    QJsonDocument jsonDocument;
++    bool jsonParseSuccess = false;
++    bool userAppsSecondPage = false;
++
+ signals:
+     void refreshScreen();
+     void showToast(QString messageToDisplay);
++    void updateJsonFileSignal(QJsonDocument jsonDocument);
++    void clearAppsLayout();
++    void showUserAppsEdit(bool show);
+ };
+ 
+ #endif // APPS_H
+diff --git a/apps.ui b/apps.ui
+index 6af18ea..f6a35ab 100644
+--- a/apps.ui
++++ b/apps.ui
+@@ -6,8 +6,8 @@
+    <rect>
+     <x>0</x>
+     <y>0</y>
+-    <width>400</width>
+-    <height>321</height>
++    <width>430</width>
++    <height>544</height>
+    </rect>
+   </property>
+   <property name="windowTitle">
+@@ -28,303 +28,468 @@
+    </property>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+-     <item row="4" column="0">
+-      <layout class="QGridLayout" name="gridLayout_2">
+-       <property name="bottomMargin">
+-        <number>0</number>
+-       </property>
+-      </layout>
+-     </item>
+-     <item row="0" column="0">
+-      <widget class="QLabel" name="label">
+-       <property name="font">
+-        <font>
+-         <weight>75</weight>
+-         <bold>true</bold>
+-        </font>
+-       </property>
+-       <property name="text">
+-        <string>Apps</string>
++     <item row="6" column="0">
++      <widget class="QScrollArea" name="scrollArea">
++       <property name="frameShape">
++        <enum>QFrame::NoFrame</enum>
+        </property>
+-       <property name="alignment">
+-        <set>Qt::AlignCenter</set>
+-       </property>
+-      </widget>
+-     </item>
+-     <item row="2" column="0">
+-      <layout class="QGridLayout" name="gridLayout_3">
+-       <property name="bottomMargin">
+-        <number>0</number>
+-       </property>
+-       <item row="7" column="1">
+-        <widget class="QPushButton" name="calculatorLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="5" column="1">
+-        <widget class="QPushButton" name="calendarLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="8" column="0">
+-        <widget class="QLabel" name="label_2">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Light Maps</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="1" column="0">
+-        <widget class="QLabel" name="scribbleLabel">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Scribble</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="6" column="1">
+-        <widget class="QPushButton" name="savedWordsLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="3" column="0">
+-        <widget class="QLabel" name="reversiLabel">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Reversi</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="6" column="0">
+-        <widget class="QLabel" name="label_3">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Saved words</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="0" column="0">
+-        <widget class="QLabel" name="label_5">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>KoBox apps</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="5" column="0">
+-        <widget class="QLabel" name="calendarLabel">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Calendar</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="8" column="1">
+-        <widget class="QPushButton" name="lightmapsLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <italic>false</italic>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="3" column="1">
+-        <widget class="QPushButton" name="reversiLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="9" column="1">
+-        <widget class="QPushButton" name="vncLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="0" column="1">
+-        <widget class="QPushButton" name="koboxAppsOpenButton">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Open</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="7" column="0">
+-        <widget class="QLabel" name="label_4">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Calculator</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="9" column="0">
+-        <widget class="QLabel" name="vncViewerLabel">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>VNC viewer</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="1" column="1">
+-        <widget class="QPushButton" name="scribbleLaunchBtn">
+-         <property name="font">
+-          <font>
+-           <family>Inter</family>
+-           <weight>75</weight>
+-           <italic>false</italic>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="4" column="1">
+-        <widget class="QPushButton" name="g2048LaunchBtn">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>Launch</string>
+-         </property>
+-        </widget>
+-       </item>
+-       <item row="4" column="0">
+-        <widget class="QLabel" name="g2048Label">
+-         <property name="font">
+-          <font>
+-           <weight>75</weight>
+-           <bold>true</bold>
+-          </font>
+-         </property>
+-         <property name="text">
+-          <string>2048</string>
+-         </property>
+-        </widget>
+-       </item>
+-      </layout>
+-     </item>
+-     <item row="3" column="0">
+-      <spacer name="verticalSpacer">
+-       <property name="orientation">
+-        <enum>Qt::Vertical</enum>
+-       </property>
+-       <property name="sizeHint" stdset="0">
+-        <size>
+-         <width>20</width>
+-         <height>40</height>
+-        </size>
+-       </property>
+-      </spacer>
+-     </item>
+-     <item row="1" column="0">
+-      <widget class="Line" name="line">
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+-        <number>3</number>
++        <number>0</number>
++       </property>
++       <property name="horizontalScrollBarPolicy">
++        <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+-       <property name="orientation">
+-        <enum>Qt::Horizontal</enum>
++       <property name="widgetResizable">
++        <bool>true</bool>
+        </property>
++       <widget class="QWidget" name="scrollAreaWidgetContents">
++        <property name="geometry">
++         <rect>
++          <x>0</x>
++          <y>0</y>
++          <width>428</width>
++          <height>542</height>
++         </rect>
++        </property>
++        <layout class="QVBoxLayout" name="verticalLayout_2">
++         <property name="spacing">
++          <number>6</number>
++         </property>
++         <property name="leftMargin">
++          <number>0</number>
++         </property>
++         <property name="topMargin">
++          <number>0</number>
++         </property>
++         <property name="rightMargin">
++          <number>0</number>
++         </property>
++         <property name="bottomMargin">
++          <number>0</number>
++         </property>
++         <item>
++          <layout class="QGridLayout" name="gridLayout_3">
++           <property name="rightMargin">
++            <number>11</number>
++           </property>
++           <property name="bottomMargin">
++            <number>6</number>
++           </property>
++           <property name="verticalSpacing">
++            <number>10</number>
++           </property>
++           <item row="3" column="0">
++            <widget class="QLabel" name="label_5">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>KoBox apps</string>
++             </property>
++            </widget>
++           </item>
++           <item row="12" column="0">
++            <widget class="QLabel" name="vncViewerLabel">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>VNC viewer</string>
++             </property>
++            </widget>
++           </item>
++           <item row="4" column="1">
++            <widget class="QPushButton" name="scribbleLaunchBtn">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <italic>false</italic>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="9" column="0">
++            <widget class="QLabel" name="label_3">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Saved words</string>
++             </property>
++            </widget>
++           </item>
++           <item row="4" column="0">
++            <widget class="QLabel" name="scribbleLabel">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Scribble</string>
++             </property>
++            </widget>
++           </item>
++           <item row="10" column="0">
++            <widget class="QLabel" name="label_4">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Calculator</string>
++             </property>
++            </widget>
++           </item>
++           <item row="8" column="1">
++            <widget class="QPushButton" name="calendarLaunchBtn">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="3" column="1">
++            <widget class="QPushButton" name="koboxAppsOpenButton">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Open</string>
++             </property>
++            </widget>
++           </item>
++           <item row="11" column="0">
++            <widget class="QLabel" name="label_2">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Light Maps</string>
++             </property>
++            </widget>
++           </item>
++           <item row="6" column="0">
++            <widget class="QLabel" name="reversiLabel">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Reversi</string>
++             </property>
++            </widget>
++           </item>
++           <item row="6" column="1">
++            <widget class="QPushButton" name="reversiLaunchBtn">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="9" column="1">
++            <widget class="QPushButton" name="savedWordsLaunchBtn">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="10" column="1">
++            <widget class="QPushButton" name="calculatorLaunchBtn">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="7" column="0">
++            <widget class="QLabel" name="g2048Label">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>2048</string>
++             </property>
++            </widget>
++           </item>
++           <item row="7" column="1">
++            <widget class="QPushButton" name="g2048LaunchBtn">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="12" column="1">
++            <widget class="QPushButton" name="vncLaunchBtn">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="11" column="1">
++            <widget class="QPushButton" name="lightmapsLaunchBtn">
++             <property name="font">
++              <font>
++               <family>Inter</family>
++               <weight>75</weight>
++               <italic>false</italic>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Launch</string>
++             </property>
++            </widget>
++           </item>
++           <item row="1" column="0" colspan="2">
++            <widget class="QLabel" name="label">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Built-in Apps</string>
++             </property>
++             <property name="alignment">
++              <set>Qt::AlignCenter</set>
++             </property>
++            </widget>
++           </item>
++           <item row="8" column="0">
++            <widget class="QLabel" name="calendarLabel">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>Calendar</string>
++             </property>
++            </widget>
++           </item>
++           <item row="2" column="0" colspan="2">
++            <widget class="Line" name="line">
++             <property name="frameShadow">
++              <enum>QFrame::Plain</enum>
++             </property>
++             <property name="lineWidth">
++              <number>3</number>
++             </property>
++             <property name="orientation">
++              <enum>Qt::Horizontal</enum>
++             </property>
++            </widget>
++           </item>
++          </layout>
++         </item>
++         <item>
++          <layout class="QHBoxLayout" name="horizontalLayout">
++           <property name="spacing">
++            <number>0</number>
++           </property>
++           <item>
++            <spacer name="horizontalSpacer">
++             <property name="orientation">
++              <enum>Qt::Horizontal</enum>
++             </property>
++             <property name="sizeHint" stdset="0">
++              <size>
++               <width>40</width>
++               <height>20</height>
++              </size>
++             </property>
++            </spacer>
++           </item>
++           <item>
++            <widget class="QLabel" name="label_6">
++             <property name="font">
++              <font>
++               <weight>75</weight>
++               <bold>true</bold>
++              </font>
++             </property>
++             <property name="text">
++              <string>User Apps</string>
++             </property>
++             <property name="alignment">
++              <set>Qt::AlignCenter</set>
++             </property>
++            </widget>
++           </item>
++           <item>
++            <spacer name="horizontalSpacer_3">
++             <property name="orientation">
++              <enum>Qt::Horizontal</enum>
++             </property>
++             <property name="sizeType">
++              <enum>QSizePolicy::Fixed</enum>
++             </property>
++             <property name="sizeHint" stdset="0">
++              <size>
++               <width>10</width>
++               <height>0</height>
++              </size>
++             </property>
++            </spacer>
++           </item>
++           <item>
++            <widget class="QPushButton" name="editUserAppsBtn">
++             <property name="sizePolicy">
++              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
++               <horstretch>0</horstretch>
++               <verstretch>0</verstretch>
++              </sizepolicy>
++             </property>
++             <property name="maximumSize">
++              <size>
++               <width>40</width>
++               <height>40</height>
++              </size>
++             </property>
++             <property name="text">
++              <string/>
++             </property>
++             <property name="icon">
++              <iconset theme="://resources/edit.png">
++               <normaloff>://resources/edit.png</normaloff>://resources/edit.png</iconset>
++             </property>
++             <property name="iconSize">
++              <size>
++               <width>34</width>
++               <height>34</height>
++              </size>
++             </property>
++            </widget>
++           </item>
++           <item>
++            <spacer name="horizontalSpacer_2">
++             <property name="orientation">
++              <enum>Qt::Horizontal</enum>
++             </property>
++             <property name="sizeHint" stdset="0">
++              <size>
++               <width>40</width>
++               <height>20</height>
++              </size>
++             </property>
++            </spacer>
++           </item>
++          </layout>
++         </item>
++         <item>
++          <widget class="Line" name="line_2">
++           <property name="frameShadow">
++            <enum>QFrame::Plain</enum>
++           </property>
++           <property name="lineWidth">
++            <number>3</number>
++           </property>
++           <property name="orientation">
++            <enum>Qt::Horizontal</enum>
++           </property>
++          </widget>
++         </item>
++         <item>
++          <layout class="QVBoxLayout" name="verticalLayout_4UserApps">
++           <property name="spacing">
++            <number>10</number>
++           </property>
++           <property name="rightMargin">
++            <number>11</number>
++           </property>
++          </layout>
++         </item>
++         <item>
++          <spacer name="verticalSpacer">
++           <property name="orientation">
++            <enum>Qt::Vertical</enum>
++           </property>
++           <property name="sizeType">
++            <enum>QSizePolicy::MinimumExpanding</enum>
++           </property>
++           <property name="sizeHint" stdset="0">
++            <size>
++             <width>0</width>
++             <height>0</height>
++            </size>
++           </property>
++          </spacer>
++         </item>
++        </layout>
++       </widget>
+       </widget>
+      </item>
+     </layout>
+diff --git a/eink.qrc b/eink.qrc
+index 0cf1bd9..5d6b3d4 100644
+--- a/eink.qrc
++++ b/eink.qrc
+@@ -74,5 +74,6 @@
+         <file>resources/clock.png</file>
+         <file>resources/eink-square-encfs.qss</file>
+         <file>resources/tzlist</file>
++	<file>resources/edit.png</file>
+     </qresource>
+ </RCC>
+diff --git a/functions.h b/functions.h
+index d2934b2..1504813 100644
+--- a/functions.h
++++ b/functions.h
+@@ -122,6 +122,13 @@ namespace global {
+     namespace logger {
+         inline bool status;
+     }
++    namespace userApps {
++       inline bool appCompabilityDialog;
++       inline QString appCompabilityText;
++       inline bool appCompabilityLastContinueStatus = true; // This is for RequiredFeatures to show only one dialog if 'Cancel' is clicked.
++       inline bool appInfoDialog;
++       inline bool launchApp;
++    }
+     inline QString systemInfoText;
+     inline bool forbidOpenSearchDialog;
+     inline bool isN705 = false;
+diff --git a/generaldialog.cpp b/generaldialog.cpp
+index 3d86b44..feafe74 100644
+--- a/generaldialog.cpp
++++ b/generaldialog.cpp
+@@ -13,6 +13,7 @@
+ #include <QStringListModel>
+ #include <QListView>
+ #include <QDateTime>
++#include <QTextEdit>
+ 
+ generalDialog::generalDialog(QWidget *parent) :
+     QDialog(parent),
+@@ -131,6 +132,7 @@ generalDialog::generalDialog(QWidget *parent) :
+     }
+     else if(global::usbms::usbmsDialog == true) {
+         usbmsDialog = true;
++        ui->stackedWidget->setCurrentIndex(0);
+         ui->okBtn->setText("Connect");
+         ui->cancelBtn->setText("Not now");
+         ui->bodyLabel->setText("<font face='u001'>Do you want to connect your device to a computer to manage books</font><font face='Inter'>?</font>");
+@@ -187,9 +189,34 @@ generalDialog::generalDialog(QWidget *parent) :
+         ui->bodyLabel->setText("<font face='u001'>New files have been found in 'encfs-dropbox'. Would you want to repack your encrypted storage</font><font face='Inter'>?</font>");
+         QTimer::singleShot(50, this, SLOT(adjust_size()));
+     }
++    else if(global::userApps::appCompabilityDialog == true) {
++            appCompabilityDialog = true;
++            global::userApps::appCompabilityLastContinueStatus = true;
++            ui->okBtn->setText("Launch");
++            ui->cancelBtn->setText("Cancel");
++            ui->bodyLabel->setText(global::userApps::appCompabilityText);
++            ui->headerLabel->setText("Compatibility warning");
++            QTimer::singleShot(50, this, SLOT(adjust_size()));
++    }
++    else if(global::userApps::appInfoDialog == true) {
++        appInfoDialog = true;
++        textwidgetWindow = new textwidget();
++
++        // https://stackoverflow.com/questions/4311352/how-do-you-get-a-widgets-children-in-qt magic
++        //QTextEdit* textEdit = textwidgetWindow->findChild<QTextEdit*>("textBrowser");
++        //textEdit->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
++        //textEdit->adjustSize();
++
++        ui->headerLabel->setText("App info");
++        ui->stackedWidget->setCurrentIndex(1);
++        ui->mainStackedWidget->insertWidget(1, textwidgetWindow);
++        ui->mainStackedWidget->setCurrentIndex(1);
++        yIncrease = 1.8;
++        QTimer::singleShot(50, this, SLOT(increaseSize()));
++    }
+     else {
+         // We shouldn't be there ;)
+-        ;
++        log("generalDialog launched without settings", className);
+     }
+ 
+     // Centering dialog
+@@ -248,6 +275,12 @@ void generalDialog::on_cancelBtn_clicked()
+         else if(global::encfs::repackDialog == true) {
+             global::encfs::repackDialog = false;
+         }
++        else if(global::userApps::appCompabilityDialog == true) {
++            global::userApps::launchApp = false;
++            global::userApps::appCompabilityLastContinueStatus = false;
++            global::userApps::appCompabilityText = "";
++                    global::userApps::appCompabilityDialog = false;
++        }
+         generalDialog::close();
+     }
+ }
+@@ -507,6 +540,13 @@ void generalDialog::on_okBtn_clicked()
+         string_writeconfig("/external_root/run/encfs_repack", "true");
+         quit_restart();
+     }
++    else if(global::userApps::appCompabilityDialog == true) {
++       global::userApps::launchApp = true;
++       global::userApps::appCompabilityText = "";
++       global::userApps::appCompabilityLastContinueStatus = true; // Not really necceserry, only if something fails horibly
++       global::userApps::appCompabilityDialog = false;
++       generalDialog::close();
++    }
+ }
+ void generalDialog::on_acceptBtn_clicked()
+ {
+@@ -533,6 +573,11 @@ void generalDialog::on_acceptBtn_clicked()
+         global::text::textBrowserDialog = false;
+     }
+ 
++    if(appInfoDialog == true) {
++        global::text::textBrowserContents = "";
++        global::userApps::appInfoDialog = false;
++    }
++
+     // We don't have any other option ;p
+     generalDialog::close();
+ }
+@@ -552,6 +597,7 @@ void generalDialog::restartSearchDialog() {
+ }
+ 
+ void generalDialog::setupKeyboardDialog() {
++    ui->stackedWidget->setCurrentIndex(0);
+     keyboardDialog = true;
+     ui->stackedWidget->setVisible(true);
+     if(global::keyboard::searchDialog == true) {
+@@ -732,3 +778,25 @@ void generalDialog::waitForGutenbergSearchDone() {
+         }
+     }
+ }
++
++void generalDialog::increaseSize()
++{
++    log("Resizing generalDialog", className);
++
++    ui->topStackedWidget->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
++    ui->mainStackedWidget->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
++    ui->stackedWidget->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
++
++    QRect screenGeometry = QGuiApplication::screens()[0]->geometry();
++    int wx = screenGeometry.width();
++
++    int x = wx - 25;
++    int y = this->height() * yIncrease;
++    this->setFixedWidth(x);
++    this->setFixedHeight(y);
++
++    ui->bodyLabel->sizePolicy().setVerticalPolicy(QSizePolicy::Expanding);
++    ui->bodyLabel->sizePolicy().setHorizontalPolicy(QSizePolicy::Expanding);
++
++    adjust_size();
++}
+diff --git a/generaldialog.h b/generaldialog.h
+index bb9bd24..1270521 100644
+--- a/generaldialog.h
++++ b/generaldialog.h
+@@ -32,6 +32,8 @@ public:
+     bool lowBatteryDialog = false;
+     bool usbmsDialog = false;
+     bool textBrowserDialog = false;
++    bool appCompabilityDialog = false;
++    bool appInfoDialog = false;
+     bool resetKoboxDialog = false;
+     bool keyboardDialog = false;
+     bool keypadDialog = false;
+@@ -49,6 +51,10 @@ public:
+     QString wifiPassphrase;
+     void setupKeyboardDialog();
+     void startVNC(QString server, QString password, QString port);
++    float yIncrease;
++
++public slots:
++    void increaseSize();
+ 
+ private slots:
+     void on_cancelBtn_clicked();
+diff --git a/inkbox.pro b/inkbox.pro
+index 000f92d..f41890e 100644
+--- a/inkbox.pro
++++ b/inkbox.pro
+@@ -48,6 +48,7 @@ SOURCES += \
+     textwidget.cpp \
+     toast.cpp \
+     usbms_splash.cpp \
++    userapps.cpp \
+     virtualkeyboard.cpp \
+     virtualkeypad.cpp \
+     wifidialog.cpp
+@@ -77,6 +78,7 @@ HEADERS += \
+     textwidget.h \
+     toast.h \
+     usbms_splash.h \
++    userapps.h \
+     virtualkeyboard.h \
+     virtualkeypad.h \
+     wifidialog.h
+@@ -105,6 +107,7 @@ FORMS += \
+     textwidget.ui \
+     toast.ui \
+     usbms_splash.ui \
++    userapps.ui \
+     virtualkeyboard.ui \
+     virtualkeypad.ui \
+     wifidialog.ui
+diff --git a/main.cpp b/main.cpp
+index fa64d7f..33e9666 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -27,6 +27,101 @@
+ #include <QTextStream>
+ #include <QRect>
+ #include <QScreen>
++#include <QDirIterator>
++
++#include <QJsonDocument>
++#include <QJsonParseError>
++#include <QJsonObject>
++#include <QJsonValue>
++#include <QJsonArray>
++
++void createMainJson()
++{
++    QDirIterator appsDir("/mnt/onboard/onboard/.apps", QDirIterator::NoIteratorFlags);
++    QFile newJsonFile = QFile{"/mnt/onboard/onboard/.apps/apps.json"};
++    QJsonDocument newJsonDocument;
++    QJsonArray array;
++
++    while (appsDir.hasNext())
++    {
++        QDir dir(appsDir.next());
++        if(dir.exists() == true) {
++            if(dir.path().split("/").last().contains(".") == false) {
++                QFile jsonSmall = QFile{dir.path() + "/app.json"};
++                if(jsonSmall.exists() == true) {
++                    jsonSmall.open(QIODevice::ReadOnly | QIODevice::Text);
++                    QString jsonString = jsonSmall.readAll();
++                    jsonSmall.close();
++
++                    QJsonDocument jsonSmallDoc = QJsonDocument::fromJson(jsonString.toUtf8());
++                    if(jsonSmallDoc["app"].isObject() == true) {
++                        QJsonObject jsonSmallMainObj = jsonSmallDoc["app"].toObject();
++                        array.append(jsonSmallMainObj);
++
++                    }
++                    else {
++                        log("Small JSON user application file is missing main object 'app'", "main");
++                    }
++
++                }
++                else {
++                    QString message = "User applications folder does not contain any 'app.json' file: ";
++                    message.append(jsonSmall.fileName());
++                    log(message, "main");
++                }
++            }
++        }
++    }
++    // https://forum.qt.io/topic/104791/how-i-can-create-json-format-in-qt/5
++    QJsonObject root;
++    root["list"] = array;
++    newJsonDocument.setObject(root);
++
++    newJsonFile.open(QFile::WriteOnly | QFile::Text | QFile::Truncate);
++    newJsonFile.write(newJsonDocument.toJson());
++    newJsonFile.flush();
++    newJsonFile.close();
++}
++
++void createSmallJsonFiles()
++{
++    QFile jsonFile = QFile{"/mnt/onboard/onboard/.apps/apps.json"};
++
++    jsonFile.open(QIODevice::ReadOnly | QIODevice::Text);
++    QString fileRead = jsonFile.readAll();
++    jsonFile.close();
++    QJsonDocument jsonDocument = QJsonDocument::fromJson(fileRead.toUtf8());
++
++    if(jsonDocument["list"].isArray() == true) {
++        QJsonArray jsonArray = jsonDocument["list"].toArray();
++        for(QJsonValueRef refJsonObject: jsonArray) {
++            QJsonObject jsonMainObject = refJsonObject.toObject();
++            QString appName = jsonMainObject["Name"].toString();
++
++            // This needs to be here and not at the beggining of this function because it is an iterator
++            QDirIterator appsDir("/mnt/onboard/onboard/.apps", QDirIterator::NoIteratorFlags);
++            while (appsDir.hasNext()) {
++                QDir dir(appsDir.next());
++                if(dir.exists() == true) {
++                    if(dir.path().split("/").last().toLower().contains(appName.toLower()) == true) {
++                        QJsonObject root;
++                        root["app"] = refJsonObject.toObject();;
++                        QJsonDocument newJsonDocument;
++                        newJsonDocument.setObject(root);
++
++                        QFile newSmallJson = QFile{dir.path() + "/" + "app.json"};
++
++                        newSmallJson.open(QIODevice::ReadWrite);
++                        QTextStream stream(&newSmallJson);
++                        stream << newJsonDocument.toJson() << Qt::endl;
++                        newSmallJson.flush();
++                        newSmallJson.close();
++                    }
++                }
++            }
++        }
++    }
++}
+ 
+ int main(int argc, char *argv[])
+ {
+diff --git a/settings.cpp b/settings.cpp
+index 5104761..21cb8a9 100644
+--- a/settings.cpp
++++ b/settings.cpp
+@@ -822,6 +822,10 @@ void settings::on_showSystemInfoBtn_clicked()
+     // Show a system info dialog
+     log("Showing system info dialog", className);
+     generalDialogWindow = new generalDialog();
++    if(global::deviceID == "n306\n") {
++        generalDialogWindow->yIncrease = 2.6;
++    }
++    generalDialogWindow->increaseSize();
+     generalDialogWindow->setAttribute(Qt::WA_DeleteOnClose);
+ }
+ 

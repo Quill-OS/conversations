@@ -1,0 +1,30 @@
+INSTALL /home/pmos/build/pkg/linux-kobo-clara-mainline/lib/modules/6.3.0/kernel/net/bridge/br_netfilter.ko
+  DEPMOD  /home/pmos/build/pkg/linux-kobo-clara-mainline/lib/modules/6.3.0
+make: *** [Makefile:226: __sub-make] Error 2
+> ERROR: linux-kobo-clara-mainline*: package failed
+> >>> ERROR: linux-kobo-clara-mainline: rootpkg failed
+> (098828) [16:01:23] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> (098828) [16:01:23] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+> (098828) [16:01:23] ERROR: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 CHOST=armv7 CBUILD=x86_64 SUDO_APK='abuild-apk --no-progress' HOME=/home/pmos abuild rootpkg
+> (098828) [16:01:23] See also: <https://postmarketos.org/troubleshooting>
+> (098828) [16:01:23] Traceback (most recent call last):
+>   File "/home/dk/pmbootstrap/pmb/__init__.py", line 63, in main
+>     getattr(frontend, args.action)(args)
+>   File "/home/dk/pmbootstrap/pmb/helpers/frontend.py", line 102, in build
+>     pmb.build.envkernel.package_kernel(args)
+>   File "/home/dk/pmbootstrap/pmb/build/envkernel.py", line 235, in package_kernel
+>     run_abuild(args, pkgname, arch, apkbuild_path, kbuild_out)
+>   File "/home/dk/pmbootstrap/pmb/build/envkernel.py", line 185, in run_abuild
+>     pmb.chroot.user(args, cmd, working_dir=build_path, env=env)
+>   File "/home/dk/pmbootstrap/pmb/chroot/user.py", line 26, in user
+>     return pmb.chroot.root(args, cmd, suffix, working_dir, output,
+>   File "/home/dk/pmbootstrap/pmb/chroot/root.py", line 83, in root
+>     return pmb.helpers.run_core.core(args, msg, cmd_sudo, None, output,
+>   File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 351, in core
+>     check_return_code(args, code, log_message)
+>   File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 221, in check_return_code
+>     raise RuntimeError(f"Command failed (exit code {str(code)}): " +
+> RuntimeError: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 CHOST=armv7 CBUILD=x86_64 SUDO_APK='abuild-apk --no-progress' HOME=/home/pmos abuild rootpkg
+> 
+> (100462) [16:08:52] % tail -n 60 -F /home/dk/.local/var/pmbootstrap/log.txt
+> (100462) [16:08:52] *** output passed to pmbootstrap stdout, not to this log ***

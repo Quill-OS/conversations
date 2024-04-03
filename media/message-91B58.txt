@@ -1,0 +1,222 @@
+Linux version 2.6.35.3-inkbox+ (nicolas@fedora) (gcc version 4.8.1 20130401 (prerelease) (crosstool-NG linaro-1.13.1-4.8-2013.04-20130417 - Linaro GCC 2013.04) ) #1 PREEMPT Fri Apr 15 17:54:23 EDT 2022
+CPU: ARMv7 Processor [412fc085] revision 5 (ARMv7), cr=10c53c7d
+CPU: VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+Machine: Freescale MX50 Reference Design Platform
+Ignoring unrecognised tag 0x54410009
+Memory policy: ECC disabled, Data cache writeback
+On node 0 totalpages: 65280
+free_area_init_node: node 0, pgdat 80adafc0, node_mem_map 80baf000
+  DMA zone: 192 pages used for memmap
+  DMA zone: 0 pages reserved
+  DMA zone: 24384 pages, LIFO batch:3
+  Normal zone: 318 pages used for memmap
+  Normal zone: 40386 pages, LIFO batch:7
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64770
+Kernel command line: console=ttymxc0,115200 rootwait rw lpj=3997696 root=/dev/ram0 rdinit=/sbin/init rootfstype=ramfs hwcfg_p=0x7ffffe00 hwcfg_sz=512 waveform_p=0x7ff12800 waveform_sz=972288 mem=255M selinux=0 printk.time
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Memory: 255MB = 255MB total
+[    0.000000] Memory: 246912k/246912k available, 14208k reserved, 0K highmem
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+[    0.000000]     DMA     : 0xf9e00000 - 0xffe00000   (  96 MB)
+[    0.000000]     vmalloc : 0x90000000 - 0xf4000000   (1600 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .init : 0x80008000 - 0x806e1000   (7012 kB)
+[    0.000000]       .text : 0x806e1000 - 0x80a85000   (3728 kB)
+[    0.000000]       .data : 0x80aa0000 - 0x80adbd20   ( 240 kB)
+[    0.000000] SLUB: Genslabs=11, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000]  RCU-based detection of stalled CPUs is disabled.
+[    0.000000]  Verbose stalled-CPUs detection is disabled.
+[    0.000000] NR_IRQS:368
+[    0.000000] MXC GPIO hardware
+[    0.000000] MXC IRQ initialized
+[    0.000000] MXC_Early serial console at MMIO 0x53fc0000 (options '115200')
+[    0.000000] bootconsole [ttymxc0] enabled
+[    0.000000] Console: colour dummy device 80x30
+[    1.981475] Calibrating delay loop (skipped) preset value.. 799.53 BogoMIPS (lpj=3997696)
+[    1.989753] pid_max: default: 32768 minimum: 301
+[    1.994446] Security Framework initialized
+[    1.998601] SELinux:  Disabled at boot.
+[    2.002488] Mount-cache hash table entries: 512
+[    2.007373] CPU: Testing write buffer coherency: ok
+[    2.012689] devtmpfs: initialized
+[    2.019986] regulator: core version 0.5
+[    2.024132] NET: Registered protocol family 16
+[    2.028686] i.MX IRAM pool: 128 KB@0x90040000
+[    2.034288] hwcfg_size_setup() hwcfg_szie=512
+[    2.038696] ***_MemoryRequest:1820: request memory region! addr=0x7ffffe00, len=512***
+[    2.038724] hwcfg_p_setup() hwcfg_p=7ffffe00,vaddr=9006ee00,size=512
+[    2.045189] hwcfg_p_setup() pcba="E60610" !!
+[    2.049505] CPU is i.MX50 Revision 1.1
+[    2.055052] [check_hardware_name-233] PCBA ID is 1
+[    2.063886] Using SDMA I.API
+[    2.066902] MXC DMA API initialized
+[    2.070947] IMX usb wakeup probe
+[    2.074302] the wakeup pdata is 0x80aad2b0
+[    2.074325] IMX usb wakeup probe
+[    2.077653] the wakeup pdata is 0x80aad364
+[    2.083531] bio: create slab <bio-0> at 0
+[    2.088279] regulator: DCDC_3V15: 3150 mV 
+[    2.093735] SCSI subsystem initialized
+[    2.098014] CSPI: mxc_spi-2 probed
+[    2.101875] usbcore: registered new interface driver usbfs
+[    2.107949] usbcore: registered new interface driver hub
+[    2.113471] usbcore: registered new device driver usb
+[    2.120841] PMIC Light driver loading...
+[    2.125013] mc13892 Rev 0.0 FinVer 0 detected
+[    2.129490] Initializing regulators for mx50 rdp.
+[    2.134627] regulator: SW1: 600 <--> 1375 mV at 600 mV 
+[    2.141061] PMIC ADC start probe
+[    2.141075] PMIC Light successfully loaded
+[    2.141552] Device spi3.0 probed
+[    2.145631] [msp430_probe-411] MSP430 firmware version B83A
+[    2.152117] Switching to clocksource mxc_timer1
+[    2.158439] NET: Registered protocol family 2
+[    2.163115] IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    2.170678] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    2.177946] TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+[    2.184516] TCP: Hash tables configured (established 8192 bind 8192)
+[    2.190937] TCP reno registered
+[    2.194110] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    2.200018] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    2.206469] NET: Registered protocol family 1
+[    6.918341] LPMode driver module loaded
+[    6.922219] Static Power Management for Freescale i.MX5
+[    6.927792] PM driver module loaded
+[    6.931453] sdram autogating driver module loaded
+[    6.936304] busfreq_probe: failed to get lp regulator
+[    6.936459] Bus freq driver module loaded
+[    6.940963] mxc_dvfs_core_probe
+[    6.944370] DVFS driver module loaded
+[    6.948136] i.MXC CPU frequency driver
+[    6.952285] DVFS PER driver module loaded
+[    6.957304] audit: initializing netlink socket (disabled)
+[    6.962788] type=2000 audit(4.960:1): initialized
+[    6.981161] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    6.987998] fuse init (API version 7.14)
+[    6.993083] msgmni has been set to 482
+[    6.999378] alg: No test for stdrng (krng)
+[    7.003810] cryptodev: driver loaded.
+[    7.007646] io scheduler noop registered
+[    7.011605] io scheduler deadline registered
+[    7.016006] io scheduler cfq registered (default)
+[    7.038231] Serial: MXC Internal UART driver
+[    7.042694] mxcintuart.0: ttymxc0 at MMIO 0x53fc0000 (irq = 32) is a Freescale i.MX
+[    7.050509] console [ttymxc0] enabled, bootconsole disabled
+[    7.062060] mxcintuart.1: ttymxc1 at MMIO 0x53fbc000 (irq = 31) is a Freescale i.MX
+[    7.070081] mxcintuart.2: ttymxc2 at MMIO 0x5000c000 (irq = 33) is a Freescale i.MX
+[    7.085602] brd: module loaded
+[    7.092671] loop: module loaded
+[    7.096204] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    7.206727] [arch/arm/plat-mxc/usb_common.c-343] usbh1_set_utmi_xcvr() 
+[    7.213354] fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+[    7.220022] fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 1
+[    7.256745] fsl-ehci fsl-ehci.1: irq 14, io base 0x53f80200
+[    7.276723] fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+[    7.283123] hub 1-0:1.0: USB hub found
+[    7.286933] hub 1-0:1.0: 1 port detected
+[    7.291562] MXC keypad loaded
+[    7.294888] input: mxckpd as /devices/virtual/input/input0
+[    7.301611] input: zForce-ir-touch as /devices/virtual/input/input1
+[    7.308419] [zForce_ir_touch_recv_data-116] command Activate (0) ...
+[    7.315356] mc13892 rtc probe start
+[    7.319225] pmic_rtc pmic_rtc.1: rtc core: registered pmic_rtc as rtc0
+[    7.325759] mc13892 rtc probe succeed
+[    7.329745] i2c /dev entries driver
+[    7.334128] [zForce_ir_touch_recv_data-121] command Resolution (0) ...
+[    7.341050] APM Battery Driver
+[    7.345061] [zForce_ir_touch_recv_data-134] command Frequency (0) ...
+[    7.352582] power_supply mc13892_charger: charger status: online
+[    7.359217] mxsdhci: MXC Secure Digital Host Controller Interface driver
+[    7.365969] mxsdhci: MXC SDHCI Controller Driver. 
+[    7.371531] mmc0: SDHCI detect irq 0 irq 1 INTERNAL DMA
+[    7.376848] mxsdhci: MXC SDHCI Controller Driver. 
+[    7.381968] mmc1: SDHCI detect irq 273 irq 2 INTERNAL DMA
+[    7.387436] mxsdhci: MXC SDHCI Controller Driver. 
+[    7.392598] mmc2: SDHCI detect irq 0 irq 3 INTERNAL DMA
+[    7.408322] Registered led device: pmic_ledsr
+[    7.408509] Registered led device: pmic_ledsg
+[    7.408706] Registered led device: pmic_ledsb
+[    7.410183] TCP cubic registered
+[    7.413421] NET: Registered protocol family 17
+[    7.417971] ------------[ cut here ]------------
+[    7.422612] WARNING: at fs/proc/generic.c:317 __xlate_proc_name+0xa0/0xb4()
+[    7.429598] name 'cpu/clocks'
+[    7.432566] Modules linked in:
+[    7.435661] [<806e6360>] (unwind_backtrace+0x0/0xe0) from [<8070e3e4>] (warn_slowpath_common+0x4c/0x64)
+[    7.445085] [<8070e3e4>] (warn_slowpath_common+0x4c/0x64) from [<8070e428>] (warn_slowpath_fmt+0x2c/0x3c)
+[    7.454677] [<8070e428>] (warn_slowpath_fmt+0x2c/0x3c) from [<807b7810>] (__xlate_proc_name+0xa0/0xb4)
+[    7.464015] [<807b7810>] (__xlate_proc_name+0xa0/0xb4) from [<807b787c>] (__proc_create+0x58/0x124)
+[    7.473085] [<807b787c>] (__proc_create+0x58/0x124) from [<807b7aa0>] (create_proc_entry+0x5c/0x90)
+[    7.482161] [<807b7aa0>] (create_proc_entry+0x5c/0x90) from [<80013318>] (mxc_setup_proc_entry+0x14/0x48)
+[    7.491760] [<80013318>] (mxc_setup_proc_entry+0x14/0x48) from [<806e1374>] (do_one_initcall+0x54/0x184)
+[    7.501265] [<806e1374>] (do_one_initcall+0x54/0x184) from [<80008a18>] (kernel_init+0xb0/0x160)
+[    7.510077] [<80008a18>] (kernel_init+0xb0/0x160) from [<806e2894>] (kernel_thread_exit+0x0/0x8)
+[    7.518897] ---[ end trace 00637760ea2e8624 ]---
+[    7.523517] Failed to create proc/cpu/clocks
+[    7.527799] VFP support v0.3: implementor 41 architecture 3 part 30 variant c rev 2
+[    7.637932] waveform_size_setup() wf_size=972288
+[    7.642591] ***_MemoryRequest:165: request memory region! addr=0x7ff12800, len=972288***
+[    7.642693] waveform_p_setup() wf_p=7ff12800,vaddr=90200800,size=972288
+[    7.666901] Console: switching to colour frame buffer device 100x37
+[    7.677765] [epdc_firmware_func]:fw p=90200800,size=972288
+[    7.705867] epdc_init_sequence(994) : epd_power_on request fail !
+[    7.734255] pmic_rtc pmic_rtc.1: setting system clock to 2022-05-01 00:30:22 UTC (1651365022)
+[    7.745495] Freeing init memory: 7012K
+[    7.865572] mmc0: new high speed SDHC card at address aaaa
+[    7.871558] mmcblk0: mmc0:aaaa SD32G 29.7 GiB 
+[    7.876271]  mmcblk0: p1 p2 p3 p4
+[    9.006729] S1D13522 regiseter 10(0xa) not support !
+[    9.011705] 
+[    9.011709] ==== [pvi_ioctl_Reset] 0x0a=0x0000====
+[    9.018004] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+[    9.025516] client0 ,addr=0x48,name=lm75-1
+[    9.029685] [PROGRESS_BAR-2654] No progess ...
+[   10.046748] ehci_fsl_bus_suspend, Host 1
+[   11.831291] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+[   12.736376] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+[   13.507004] usb plugged 1-4
+[   19.014322] lm75 temprature data = 0x1d0,29
+[   22.098640] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[   25.213207] <30>udevd[1238]: starting version 3.2.8
+[   25.253213] <30>udevd[1239]: starting eudev-3.2.8
+[   25.297382] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[   25.417047] Wifi / BT power control 1
+[   25.564838] 
+[   25.564847] Dongle Host Driver, version 5.90.113.2
+[   25.564852] Compiled in drivers/net/wireless/kobo_bcmdhd on Jul 15 2021 at 12:31:40
+[   25.990740] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[   25.997798] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[   26.004849] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[   26.013156] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[   26.021719] mmc2: queuing unknown CIS tuple 0x80 (8 bytes)
+[   26.028488] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[   26.036170] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[   26.043854] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[   26.077097] mmc2: new high speed SDIO card at address 0001
+[   26.087695] F1 signature read @0x18000000=0x1590a962
+[   26.095887] DHD: dongle ram size is set to 245760(orig 245760)
+[   26.138368] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[   26.330163] eth0: Broadcom Dongle Host Driver
+[   26.567267] CONSOLE: 
+[   26.569550] CONSOLE: RTE (SDIO-CDC) 5.90.113.2 on BCM43362 r0 @ 26.0/80.0/80.0MHz
+[   26.577055] CONSOLE: sdpcmdcdc0: Broadcom SDPCMD CDC driver
+[   26.582632] CONSOLE: reclaim section 0: Returned 34607 bytes to the heap
+[   26.589348] CONSOLE: wlc_attach_malloc: lmac=0 lmacproto=0 nokia=0
+[   26.595533] CONSOLE: wl0: Broadcom BCMa962 802.11 Wireless Controller 5.90.113.2
+[   26.602942] CONSOLE: reclaim section 1: Returned 32547 bytes to the heap
+[   26.609656] CONSOLE: sdpcmd_dpc: Enable
+[   28.117273] CONSOLE: 
+[   28.119559] CONSOLE: wl0: link up (wl0)
+[   28.123396] CONSOLE: wl0: wlc_send_bar: seq 0x0 tid 0
+[   36.282966] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[   41.153878] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+[   41.194223] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[   50.161081] EXT4-fs (loop2): mounted filesystem with ordered data mode. Opts: (null)
+[   50.348334] EXT4-fs (loop8): mounted filesystem with ordered data mode. Opts: (null)

@@ -1,0 +1,121 @@
+./HowTo: line 10: apt-get: command not found
+./HowTo: line 11: apt-get: command not found
+sed: can't read /media/LFSJane/LFSPkgBuildScripts/system/linuxheaders/linuxheaders.LFSBuild: No such file or directory
+sed: can't read /media/LFSJane/LFSPkgBuildScripts/kernel/kernel.LFSBuild: No such file or directory
+sed: can't read /media/LFSJane/LFSPkgBuildScripts/system/system-meta/system-LFSInit-meta.LFSBuild: No such file or directory
+mount: /media/LFSJane/: mount point does not exist.
+mount: /media/LFSJane//media/SkyNet/LFSSourceArchives/8.0: mount point does not exist.
+--2021-05-02 18:21:52--  https://github.com/KeithDHedger/LFSPkg/archive/master.zip
+Resolving github.com... failed: Temporary failure in name resolution.
+wget: unable to resolve host address ‘github.com’
+./HowTo: line 113: unzip: command not found
+rm: cannot remove 'LFSPkg-master': No such file or directory
+--2021-05-02 18:21:52--  https://github.com/KeithDHedger/LFSPkg/archive/master.zip
+Resolving github.com... failed: Temporary failure in name resolution.
+wget: unable to resolve host address ‘github.com’
+./LFSPkg.LFSBuild: line 40: unzip: command not found
+./LFSPkg.LFSBuild: line 41: pushd: LFSPkg-master: No such file or directory
+./LFSPkg.LFSBuild: line 42: ./LFSFunctions: No such file or directory
+make: *** No rule to make target 'install'.  Stop.
+./LFSPkg.LFSBuild: line 47: popd: directory stack empty
+mkdir: created directory '/ADMIN'
+./LFSPkg.LFSBuild: line 52: checketc: command not found
+./LFSPkg.LFSBuild: line 53: packageclean: command not found
+/LFSPkg /sources/LFSPkgBuilds/LFSPkgBuildScripts/admin/LFSPkg
+./LFSPkg.LFSBuild: line 56: lfspkg: command not found
+/sources/LFSPkgBuilds/LFSPkgBuildScripts/admin/LFSPkg
+./LFSPkg.LFSBuild: line 59: lfspkg: command not found
+./LFSPkg.LFSBuild: line 61: lfspkg: command not found
+rm: cannot remove 'LFSPkg-master': No such file or directory
+./HowTo: line 140: lfspkg: command not found
+'PkgVersions' -> '/sources/LFSPkgBuilds/LFSScripts/PkgVersions'
+./xorg-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./xfce4-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./doxygen.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./HowTo: line 249: cd: /Sources/LFSPkgBuilds/LFSPkgBuildScripts/print/cups: No such file or directory
+./HowTo: line 250: ./cups.LFSBuild: No such file or directory
+./gtk.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./gimp.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./printing-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./mm-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./development-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./HowTo: line 277: cd: /LFSPkgBuildScripts/desktop/desktop-meta: No such file or directory
+./HowTo: line 278: ./desktop-meta.LFSBuild: No such file or directory
+./HowTo: line 287: cd: /sources/LFSPkgBuildScripts/LFSPkgBuildScripts/desktop/chromium: No such file or directory
+./HowTo: line 288: ./chromium.LFSBuild: No such file or directory
+./icedtea-sound.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+(lfs chroot) root:/sources/LFSPkgBuilds/LFSScripts/SysVBuild# ifup enp5s0
+  *   Bringing up the enp5s0 interface...                              [  OK  ]
+  *   Starting dhcpcd on the enp5s0 interface...                       [  OK  ]
+(lfs chroot) root:/sources/LFSPkgBuilds/LFSScripts/SysVBuild# ./HowTo
+./HowTo: line 10: apt-get: command not found
+./HowTo: line 11: apt-get: command not found
+sed: can't read /media/LFSJane/LFSPkgBuildScripts/system/linuxheaders/linuxheaders.LFSBuild: No such file or directory
+sed: can't read /media/LFSJane/LFSPkgBuildScripts/kernel/kernel.LFSBuild: No such file or directory
+sed: can't read /media/LFSJane/LFSPkgBuildScripts/system/system-meta/system-LFSInit-meta.LFSBuild: No such file or directory
+mount: /media/LFSJane/: mount point does not exist.
+mount: /media/LFSJane//media/SkyNet/LFSSourceArchives/8.0: mount point does not exist.
+--2021-05-02 18:22:17--  https://github.com/KeithDHedger/LFSPkg/archive/master.zip
+Resolving github.com... 140.82.114.4
+Connecting to github.com|140.82.114.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/KeithDHedger/LFSPkg/zip/master [following]
+--2021-05-02 18:22:18--  https://codeload.github.com/KeithDHedger/LFSPkg/zip/master
+Resolving codeload.github.com... 140.82.114.10
+Connecting to codeload.github.com|140.82.114.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘LFSPkg.zip’
+
+LFSPkg.zip              [  <=>               ]  48.99K   129KB/s    in 0.4s    
+
+2021-05-02 18:22:19 (129 KB/s) - ‘LFSPkg.zip’ saved [50163]
+
+./HowTo: line 113: unzip: command not found
+rm: cannot remove 'LFSPkg-master': No such file or directory
+--2021-05-02 18:22:19--  https://github.com/KeithDHedger/LFSPkg/archive/master.zip
+Resolving github.com... 140.82.112.4
+Connecting to github.com|140.82.112.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/KeithDHedger/LFSPkg/zip/master [following]
+--2021-05-02 18:22:20--  https://codeload.github.com/KeithDHedger/LFSPkg/zip/master
+Resolving codeload.github.com... 140.82.112.10
+Connecting to codeload.github.com|140.82.112.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/zip]
+Saving to: ‘LFSPkg-0.4.23.zip’
+
+LFSPkg-0.4.23.zip       [  <=>               ]  48.99K   129KB/s    in 0.4s    
+
+2021-05-02 18:22:22 (129 KB/s) - ‘LFSPkg-0.4.23.zip’ saved [50163]
+
+./LFSPkg.LFSBuild: line 40: unzip: command not found
+./LFSPkg.LFSBuild: line 41: pushd: LFSPkg-master: No such file or directory
+./LFSPkg.LFSBuild: line 42: ./LFSFunctions: No such file or directory
+make: *** No rule to make target 'install'.  Stop.
+./LFSPkg.LFSBuild: line 47: popd: directory stack empty
+./LFSPkg.LFSBuild: line 52: checketc: command not found
+./LFSPkg.LFSBuild: line 53: packageclean: command not found
+/LFSPkg /sources/LFSPkgBuilds/LFSPkgBuildScripts/admin/LFSPkg
+./LFSPkg.LFSBuild: line 56: lfspkg: command not found
+/sources/LFSPkgBuilds/LFSPkgBuildScripts/admin/LFSPkg
+./LFSPkg.LFSBuild: line 59: lfspkg: command not found
+./LFSPkg.LFSBuild: line 61: lfspkg: command not found
+rm: cannot remove 'LFSPkg-master': No such file or directory
+./HowTo: line 140: lfspkg: command not found
+'PkgVersions' -> '/sources/LFSPkgBuilds/LFSScripts/PkgVersions'
+./xorg-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./xfce4-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./doxygen.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./HowTo: line 249: cd: /Sources/LFSPkgBuilds/LFSPkgBuildScripts/print/cups: No such file or directory
+./HowTo: line 250: ./cups.LFSBuild: No such file or directory
+./gtk.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./gimp.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./printing-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./mm-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./development-meta.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory
+./HowTo: line 277: cd: /LFSPkgBuildScripts/desktop/desktop-meta: No such file or directory
+./HowTo: line 278: ./desktop-meta.LFSBuild: No such file or directory
+./HowTo: line 287: cd: /sources/LFSPkgBuildScripts/LFSPkgBuildScripts/desktop/chromium: No such file or directory
+./HowTo: line 288: ./chromium.LFSBuild: No such file or directory
+./icedtea-sound.LFSBuild: line 3: /usr/share/LFSPkg/LFSFunctions: No such file or directory

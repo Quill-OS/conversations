@@ -1,0 +1,182 @@
+---- Building Kobo Nia (N306) kernel ----
+---- Building ROOT kernel for n306 ----
+  CLEAN   .
+  CLEAN   arch/arm/vdso
+  CLEAN   usr
+  CLEAN   .tmp_versions
+  CLEAN   scripts/basic
+  CLEAN   scripts/dtc
+  CLEAN   scripts/genksyms
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/arm/include/generated
+  CLEAN   .config .version
+---- Kernel build ID is: 6HB44yLl ----
+---- Kernel commit is: 930ae5d ----
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+drivers/input/misc/Kconfig:815:warning: leading whitespace ignored
+  CHK     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/bitsperlong.h
+  WRAP    arch/arm/include/generated/asm/cputime.h
+  WRAP    arch/arm/include/generated/asm/current.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm/include/generated/asm/errno.h
+  CHK     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/exec.h
+  UPD     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/ioctl.h
+  UPD     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/ipcbuf.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm/include/generated/asm/msgbuf.h
+  WRAP    arch/arm/include/generated/asm/param.h
+  WRAP    arch/arm/include/generated/asm/parport.h
+  WRAP    arch/arm/include/generated/asm/poll.h
+  WRAP    arch/arm/include/generated/asm/preempt.h
+  WRAP    arch/arm/include/generated/asm/resource.h
+  WRAP    arch/arm/include/generated/asm/rwsem.h
+  WRAP    arch/arm/include/generated/asm/scatterlist.h
+  WRAP    arch/arm/include/generated/asm/seccomp.h
+  WRAP    arch/arm/include/generated/asm/sections.h
+  WRAP    arch/arm/include/generated/asm/segment.h
+  WRAP    arch/arm/include/generated/asm/sembuf.h
+  WRAP    arch/arm/include/generated/asm/shmbuf.h
+  WRAP    arch/arm/include/generated/asm/serial.h
+  WRAP    arch/arm/include/generated/asm/siginfo.h
+  HOSTCC  scripts/basic/bin2c
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/sizes.h
+  WRAP    arch/arm/include/generated/asm/socket.h
+  WRAP    arch/arm/include/generated/asm/sockios.h
+  WRAP    arch/arm/include/generated/asm/termbits.h
+  WRAP    arch/arm/include/generated/asm/termios.h
+  WRAP    arch/arm/include/generated/asm/timex.h
+  WRAP    arch/arm/include/generated/asm/trace_clock.h
+  WRAP    arch/arm/include/generated/asm/unaligned.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  Generating include/generated/mach-types.h
+  HOSTCC  scripts/genksyms/genksyms.o
+  HOSTCC  scripts/dtc/dtc.o
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  SHIPPED scripts/genksyms/parse.tab.c
+  HOSTCC  scripts/dtc/fstree.o
+  CC      scripts/mod/devicetable-offsets.s
+  MKELF   scripts/mod/elfconfig.h
+  GEN     scripts/mod/devicetable-offsets.h
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  scripts/dtc/data.o
+  SHIPPED scripts/genksyms/lex.lex.c
+  SHIPPED scripts/genksyms/keywords.hash.c
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/kallsyms
+  HOSTLD  scripts/genksyms/genksyms
+  HOSTCC  scripts/conmakehash
+  HOSTLD  scripts/dtc/dtc
+  HOSTCC  scripts/sortextable
+  CC      kernel/bounds.s
+In file included from include/linux/kernel.h:11,
+                 from include/asm-generic/bug.h:13,
+                 from ./arch/arm/include/asm/bug.h:61,
+                 from include/linux/bug.h:4,
+                 from include/linux/page-flags.h:9,
+                 from kernel/bounds.c:9:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CHK     include/generated/bounds.h
+  UPD     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+In file included from include/linux/kernel.h:11,
+                 from include/linux/sched.h:17,
+                 from arch/arm/kernel/asm-offsets.c:14:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  HOSTLD  scripts/mod/modpost
+  CHK     include/generated/asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  HOSTCC  usr/gen_init_cpio
+  UPD     include/generated/compile.h
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from init/do_mounts.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/module.h:9,
+                 from init/main.c:15:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+  CC      arch/arm/vfp/vfpmodule.o
+In file included from include/linux/kernel.h:11,
+                 from include/linux/list.h:8,
+                 from include/linux/kobject.h:20,
+                 from include/linux/device.h:17,
+                 from include/linux/node.h:17,
+                 from include/linux/cpu.h:16,
+                 from arch/arm/vfp/vfpmodule.c:12:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/ccOYboeO.s: Assembler messages:
+/tmp/ccOYboeO.s:326: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccOYboeO.s:590: Error: selected processor does not support `isb ' in ARM mode
+/tmp/ccOYboeO.s:653: Error: selected processor does not support `isb ' in ARM mode
+make[1]: *** [scripts/Makefile.build:259: arch/arm/vfp/vfpmodule.o] Error 1
+make: *** [Makefile:947: arch/arm/vfp] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      init/do_mounts_rd.o
+  GEN     usr/initramfs_data.cpio.xz
+In file included from include/linux/kernel.h:11,
+                 from init/do_mounts_rd.c:11:
+include/linux/log2.h:22:1: warning: ignoring attribute ‘noreturn’ because it conflicts with attribute ‘const’ [-Wattributes]
+   22 | int ____ilog2_NaN(void);
+      | ^~~
+/tmp/ccegh9dS.s: Assembler messages:
+/tmp/ccegh9dS.s:957: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccegh9dS.s:1118: Error: selected processor does not support `cpsid i' in ARM mode
+/tmp/ccegh9dS.s:1161: Error: selected processor does not support `cpsie i' in ARM mode
+/tmp/ccegh9dS.s:1400: Error: selected processor does not support `cpsie i' in ARM mode
+make[1]: *** [scripts/Makefile.build:258: init/main.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:947: init] Error 2
+  AS      usr/initramfs_data.o
+  LD      usr/built-in.o
+---- There was an error during the build process, aborting... ----

@@ -1,0 +1,184 @@
+In file included from src/defines/defines.h:34,
+                 from src/functions.h:4,
+                 from src/functions.cpp:1:
+src/defines/images.h:6:33: error: 'acceptImg' was not declared in this scope
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+src/defines/images.h:6:33: note: suggested alternative: 'acceptImgPack'
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+                                 acceptImgPack
+src/defines/images.h:10:31: error: 'bookImg' was not declared in this scope
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+src/defines/images.h:10:31: note: suggested alternative: 'bookImgPack'
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+                               bookImgPack
+src/defines/images.h:14:32: error: 'crossImg' was not declared in this scope
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:14:32: note: suggested alternative: 'crossImgPack'
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+                                crossImgPack
+src/defines/images.h:18:32: error: 'debugImg' was not declared in this scope
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:18:32: note: suggested alternative: 'debugLog'
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+                                debugLog
+src/defines/images.h:22:36: error: 'watchfaceImg' was not declared in this scope
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+src/defines/images.h:22:36: note: suggested alternative: 'watchfaceImgPack'
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+                                    watchfaceImgPack
+src/defines/images.h:26:34: error: 'weatherImg' was not declared in this scope
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+src/defines/images.h:26:34: note: suggested alternative: 'weatherImgPack'
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+                                  weatherImgPack
+In file included from src/defines/defines.h:34,
+                 from src/hardware/RTC.h:3,
+                 from src/hardware/RTC.cpp:1:
+src/defines/images.h:6:33: error: 'acceptImg' was not declared in this scope
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+src/defines/images.h:6:33: note: suggested alternative: 'acceptImgPack'
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+                                 acceptImgPack
+src/defines/images.h:10:31: error: 'bookImg' was not declared in this scope
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+src/defines/images.h:10:31: note: suggested alternative: 'bookImgPack'
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+                               bookImgPack
+src/defines/images.h:14:32: error: 'crossImg' was not declared in this scope
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+In file included from src/defines/defines.h:34,
+                 from src/hardware/axc.h:4,
+                 from src/hardware/axc.cpp:1:
+src/defines/images.h:6:33: error: 'acceptImg' was not declared in this scope
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+src/defines/images.h:14:32: note: suggested alternative: 'crossImgPack'
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+                                crossImgPack
+src/defines/images.h:18:32: error: 'debugImg' was not declared in this scope
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:6:33: note: suggested alternative: 'acceptImgPack'
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+                                 acceptImgPack
+src/defines/images.h:10:31: error: 'bookImg' was not declared in this scope
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+src/defines/images.h:18:32: note: suggested alternative: 'debugLog'
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+                                debugLog
+src/defines/images.h:22:36: error: 'watchfaceImg' was not declared in this scope
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+src/defines/images.h:10:31: note: suggested alternative: 'bookImgPack'
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+                               bookImgPack
+src/defines/images.h:14:32: error: 'crossImg' was not declared in this scope
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:14:32: note: suggested alternative: 'crossImgPack'
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+                                crossImgPack
+src/defines/images.h:18:32: error: 'debugImg' was not declared in this scope
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:22:36: note: suggested alternative: 'watchfaceImgPack'
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+                                    watchfaceImgPack
+src/defines/images.h:26:34: error: 'weatherImg' was not declared in this scope
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+src/defines/images.h:18:32: note: suggested alternative: 'debugLog'
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+                                debugLog
+src/defines/images.h:22:36: error: 'watchfaceImg' was not declared in this scope
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+src/defines/images.h:26:34: note: suggested alternative: 'weatherImgPack'
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+                                  weatherImgPack
+src/defines/images.h:22:36: note: suggested alternative: 'watchfaceImgPack'
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+                                    watchfaceImgPack
+src/defines/images.h:26:34: error: 'weatherImg' was not declared in this scope
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+src/defines/images.h:26:34: note: suggested alternative: 'weatherImgPack'
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+                                  weatherImgPack
+In file included from src/defines/defines.h:34,
+                 from src/hardware/hardware.h:4,
+                 from src/hardware/battery.cpp:1:
+src/defines/images.h:6:33: error: 'acceptImg' was not declared in this scope
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+src/defines/images.h:6:33: note: suggested alternative: 'acceptImgPack'
+ const ImageDef acceptImgPack = {acceptImg, ACCEPT_IMG_WIDTH, ACCEPT_IMG_HEIGHT};
+                                 ^~~~~~~~~
+                                 acceptImgPack
+src/defines/images.h:10:31: error: 'bookImg' was not declared in this scope
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+src/defines/images.h:10:31: note: suggested alternative: 'bookImgPack'
+ const ImageDef bookImgPack = {bookImg, BOOK_IMG_WIDTH, BOOK_IMG_HEIGHT};
+                               ^~~~~~~
+                               bookImgPack
+src/defines/images.h:14:32: error: 'crossImg' was not declared in this scope
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:14:32: note: suggested alternative: 'crossImgPack'
+ const ImageDef crossImgPack = {crossImg, CROSS_IMG_WIDTH, CROSS_IMG_HEIGHT};
+                                ^~~~~~~~
+                                crossImgPack
+src/defines/images.h:18:32: error: 'debugImg' was not declared in this scope
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+src/defines/images.h:18:32: note: suggested alternative: 'debugLog'
+ const ImageDef debugImgPack = {debugImg, DEBUG_IMG_WIDTH, DEBUG_IMG_HEIGHT};
+                                ^~~~~~~~
+                                debugLog
+src/defines/images.h:22:36: error: 'watchfaceImg' was not declared in this scope
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+src/defines/images.h:22:36: note: suggested alternative: 'watchfaceImgPack'
+ const ImageDef watchfaceImgPack = {watchfaceImg, WATCHFACE_IMG_WIDTH, WATCHFACE_IMG_HEIGHT};
+                                    ^~~~~~~~~~~~
+                                    watchfaceImgPack
+src/defines/images.h:26:34: error: 'weatherImg' was not declared in this scope
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+src/defines/images.h:26:34: note: suggested alternative: 'weatherImgPack'
+ const ImageDef weatherImgPack = {weatherImg, WEATHER_IMG_WIDTH, WEATHER_IMG_HEIGHT};
+                                  ^~~~~~~~~~
+                                  weatherImgPack
+*** [.pio/build/InkWatchy/src/functions.cpp.o] Error 1
+*** [.pio/build/InkWatchy/src/hardware/axc.cpp.o] Error 1
+*** [.pio/build/InkWatchy/src/hardware/RTC.cpp.o] Error 1
+*** [.pio/build/InkWatchy/src/hardware/battery.cpp.o] Error 1

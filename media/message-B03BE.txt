@@ -1,0 +1,77 @@
+```
+string_checkconfig(".config/09-dpi/config");
+    if(checkconfig_str_val == "") {
+        ;
+    }
+    else {
+        int dpi_number = checkconfig_str_val.toInt();
+        // Checking if it's a Mini, Touch or a Glo
+        string_checkconfig_ro("/opt/inkbox_device");
+        if(checkconfig_str_val == "n705\n") {
+            if(dpi_number == 187) {
+                ui->uiScalingSlider->setValue(0);
+            }
+            if(dpi_number == 214) {
+                ui->uiScalingSlider->setValue(1);
+            }
+            if(dpi_number == 227) {
+                ui->uiScalingSlider->setValue(2);
+            }
+        }
+        else if(checkconfig_str_val == "n905\n") {
+            if(dpi_number == 160) {
+                ui->uiScalingSlider->setValue(0);
+            }
+            if(dpi_number == 187) {
+                ui->uiScalingSlider->setValue(1);
+            }
+            if(dpi_number == 200) {
+                ui->uiScalingSlider->setValue(2);
+            }
+        }
+        else if(checkconfig_str_val == "n613\n" or checkconfig_str_val == "n236\n" or checkconfig_str_val == "n306\n") {
+            if(dpi_number == 195) {
+                ui->uiScalingSlider->setValue(0);
+            }
+            if(dpi_number == 210) {
+                ui->uiScalingSlider->setValue(1);
+            }
+            if(dpi_number == 225) {
+                ui->uiScalingSlider->setValue(2);
+            }
+        }
+        else if(checkconfig_str_val == "n437\n") {
+            if(dpi_number == 275) {
+                ui->uiScalingSlider->setValue(0);
+            }
+            if(dpi_number == 290) {
+                ui->uiScalingSlider->setValue(1);
+            }
+            if(dpi_number == 305) {
+                ui->uiScalingSlider->setValue(2);
+            }
+        }
+        else if(checkconfig_str_val == "n873\n") {
+            if(dpi_number == 285) {
+                ui->uiScalingSlider->setValue(0);
+            }
+            if(dpi_number == 300) {
+                ui->uiScalingSlider->setValue(1);
+            }
+            if(dpi_number == 315) {
+                ui->uiScalingSlider->setValue(2);
+            }
+        }
+        else {
+            if(dpi_number == 187) {
+                ui->uiScalingSlider->setValue(0);
+            }
+            if(dpi_number == 214) {
+                ui->uiScalingSlider->setValue(1);
+            }
+            if(dpi_number == 227) {
+                ui->uiScalingSlider->setValue(2);
+            }
+        }
+    }
+```

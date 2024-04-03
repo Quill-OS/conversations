@@ -1,0 +1,225 @@
+etenv bootargs console=ttymxc0,115200
+Unknown command 'etenv' - try 'help'
+eBR-1A # etenv bootargs console=ttymxc0,115200
+Unknown command 'etenv' - try 'help'
+eBR-1A # setenv bootargs console=ttymxc0,115200
+eBR-1A # load_ntxkernel
+mmc read 0x80800000 0x800 0x2c00
+
+MMC read: dev # 0, block # 2048, count 11264 ... 11264 blocks read: OK
+eBR-1A # load mmc 0:1 0x80800000 zImage
+8015496 bytes read in 403 ms (19 MiB/s)
+eBR-1A # load mmc 0:1 0x83000000 imx6ull-kobo-nia.dtb
+30648 bytes read in 29 ms (1 MiB/s)
+eBR-1A #  bootz 0x80800000 - 0x83000000
+
+ hwcfgp=8ffffe00,pcb=81,customer=9
+
+ntx_gpio_get_value(406) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x1,BootESD=0,MenuKey=0
+mmc read 0x8ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x8ff71a00 0x3800 0x472
+
+MMC read: dev # 0, block # 14336, count 1138 ... 1138 blocks read: OK
+mmc read 0x8ff71800 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x8ff71400 0x406 0x3
+
+MMC read: dev # 0, block # 1030, count 3 ... 3 blocks read: OK
+Kernel RAM visiable size=255M->255M
+ntx_gpio_init():R [ERROR] GPIO group number error (0)!!
+ntx_gpio_init():B [ERROR] GPIO group number error (0)!!
+hwcfg rootfstype : 2
+hwcfg partition type : 2,bootmode=0
+ntx_prebootm : cmd=setenv bootargs ${bootargs}  hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+Kernel image @ 0x80800000 [ 0x000000 - 0x7a4e88 ]
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Using Device Tree in place at 83000000, end 8300a7b7
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.1.12-110132-gdcc53602183c-dirty (pi@raspberrypi) (arm-linux-gnueabihf-gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #1 SMP Tue Apr 18 23:49:46 CEST 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Kobo Nia
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] cma: Reserved 64 MiB at 0x8bc00000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x000000008fefffff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008fefffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000008fefffff]
+[    0.000000] percpu: Embedded 16 pages/cpu s36532 r8192 d20812 u65536
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 64770
+[    0.000000] Kernel command line: console=ttymxc0,115200 hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+[    0.000000] Unknown kernel command line parameters "quiet hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 boot_port=1", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 168104K/261120K available (11264K kernel code, 1862K rwdata, 3196K rodata, 1024K init, 6632K bss, 27480K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] trace event string verifier disabled
+[    0.000000] Running RCU self tests
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU lockdep checking is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000003] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000053] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.004688] Console: colour dummy device 80x30
+[    0.004863] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+[    0.004890] ... MAX_LOCKDEP_SUBCLASSES:  8
+[    0.004915] ... MAX_LOCK_DEPTH:          48
+[    0.004938] ... MAX_LOCKDEP_KEYS:        8192
+[    0.004960] ... CLASSHASH_SIZE:          4096
+[    0.004982] ... MAX_LOCKDEP_ENTRIES:     32768
+[    0.005004] ... MAX_LOCKDEP_CHAINS:      65536
+[    0.005026] ... CHAINHASH_SIZE:          32768
+[    0.005047]  memory used by lock dependency info: 4061 kB
+[    0.005072]  memory used for stack traces: 2112 kB
+[    0.005094]  per task-struct memory footprint: 1536 bytes
+[    0.005308] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.005377] pid_max: default: 32768 minimum: 301
+[    0.006829] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.006908] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.016123] CPU: Testing write buffer coherency: ok
+[    0.019551] CPU0: update cpu_capacity 1024
+[    0.019614] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.028589] Setting up static identity map for 0x80100000 - 0x80100078
+[    0.030540] rcu: Hierarchical SRCU implementation.
+[    0.030587] rcu: 	Max phase no-delay instances is 1000.
+[    0.034983] smp: Bringing up secondary CPUs ...
+[    0.035031] smp: Brought up 1 node, 1 CPU
+[    0.035073] SMP: Total of 1 processors activated (48.00 BogoMIPS).
+[    0.035112] CPU: All CPU(s) started in SVC mode.
+[    0.042302] devtmpfs: initialized
+[    0.126236] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.132132] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.132302] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.138510] pinctrl core: initialized pinctrl subsystem
+[    0.154695] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.166945] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.181580] thermal_sys: Registered thermal governor 'step_wise'
+[    0.182449] cpuidle: using governor menu
+[    0.182964] CPU identified as i.MX6ULL, silicon rev 1.1
+[    0.343120] No ATAGs?
+[    0.343875] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.343987] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.360731] imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+[    0.364872] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    3.310594] usbcore: registered new interface driver usbfs
+[    3.311322] usbcore: registered new interface driver hub
+[    3.311744] usbcore: registered new device driver usb
+[    3.327672] i2c i2c-0: IMX I2C adapter registered
+[    3.342901] i2c i2c-3: IMX I2C adapter registered
+[    3.345422] pps_core: LinuxPPS API ver. 1 registered
+[    3.345466] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    3.345633] PTP clock support registered
+[    3.367146] clocksource: Switched to clocksource mxc_timer1
+[    3.375563] VFS: Disk quotas dquot_6.6.0
+[    3.376042] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    3.482624] NET: Registered PF_INET protocol family
+[    3.484677] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    3.493334] tcp_listen_portaddr_hash hash table entries: 128 (order: 0, 5120 bytes, linear)
+[    3.493480] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    3.493593] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    3.493895] TCP bind hash table entries: 2048 (order: 5, 163840 bytes, linear)
+[    3.495500] TCP: Hash tables configured (established 2048 bind 2048)
+[    3.496512] UDP hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    3.496847] UDP-Lite hash table entries: 256 (order: 2, 24576 bytes, linear)
+[    3.499644] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    3.505453] RPC: Registered named UNIX socket transport module.
+[    3.505576] RPC: Registered udp transport module.
+[    3.505616] RPC: Registered tcp transport module.
+[    3.505650] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    3.522076] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    3.539500] Initialise system trusted keyrings
+[    3.541915] workingset: timestamp_bits=30 max_order=16 bucket_order=0
+[    3.623068] NFS: Registering the id_resolver key type
+[    3.623603] Key type id_resolver registered
+[    3.623720] Key type id_legacy registered
+[    3.624788] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    3.625042] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    3.627324] fuse: init (API version 7.37)
+[    3.630652] Key type asymmetric registered
+[    3.630978] Asymmetric key parser 'x509' registered
+[    3.632556] io scheduler mq-deadline registered
+[    3.632618] io scheduler kyber registered
+[    3.695213] imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+[    3.695802] imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+[    3.713066] mxs-dma 1804000.dma-apbh: initialized
+[    3.730823] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 200, base_baud = 5000000) is a IMX
+[    4.495395] printk: console [ttymxc0] enabled
+[    4.512150] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 201, base_baud = 5000000) is a IMX
+[    4.627958] imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+[    4.638756] random: crng init done
+[    4.883766] brd: module loaded
+[    5.033660] loop: module loaded
+[    5.305414] UDC core: g_ether: couldn't find an available UDC
+[    5.364148] snvs_rtc 20cc000.snvs:snvs-rtc-lp: registered as rtc0
+[    5.387593] snvs_rtc 20cc000.snvs:snvs-rtc-lp: setting system clock to 1970-01-01T00:00:00 UTC (0)
+[    5.409404] i2c_dev: i2c /dev entries driver
+[    5.487991] sdhci: Secure Digital Host Controller Interface driver
+[    5.494268] sdhci: Copyright(c) Pierre Ossman
+[    5.498888] sdhci-pltfm: SDHCI platform and OF driver helper
+[    5.602966] usbcore: registered new interface driver usbhid
+[    5.608944] usbhid: USB HID core driver
+[    5.627099] mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+[    5.635480] mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+[    5.696178] mmc0: host does not support reading read-only switch, assuming write-enable
+[    5.728190] mmc0: new high speed SDHC card at address aaaa
+[    5.734576] NET: Registered PF_INET6 protocol family
+[    5.782078] Segment Routing with IPv6
+[    5.792390] mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+[    5.797779] In-situ OAM (IOAM) with IPv6
+[    5.802175] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.859385] NET: Registered PF_PACKET protocol family
+[    5.865096] Key type dns_resolver registered
+[    5.895759]  mmcblk0: p1 p2 p3
+[    5.969325] Registering SWP/SWPB emulation handler
+[    5.987560] Loading compiled-in X.509 certificates
+[    6.384130] imx_usb 2184000.usb: No over current polarity defined
+[    6.428597] using random self ethernet address
+[    6.433290] using random host ethernet address
+[    6.442504] usb0: HOST MAC 06:9a:87:5b:7e:6f
+[    6.447065] usb0: MAC 6e:6b:9f:ad:6c:95
+[    6.467334] using random self ethernet address
+[    6.471857] using random host ethernet address
+[    6.487801] g_ether gadget.0: Ethernet Gadget, version: Memorial Day 2008
+[    6.494664] g_ether gadget.0: g_ether ready
+[    6.690056] imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+[    6.709529] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    6.722086] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    6.729281] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    6.743571] gpio-keys gpio-keys: Error applying setting, reverse things back
+[    6.751685] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    6.772331] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    6.781486] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    6.799781] cfg80211: failed to load regulatory.db
+[    6.815109] EXT4-fs (mmcblk0p1): INFO: recovery required on readonly filesystem
+[    6.823040] EXT4-fs (mmcblk0p1): write access will be enabled during recovery
+[    6.842996] EXT4-fs (mmcblk0p1): recovery complete
+[    6.881334] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Quota mode: none.
+[    6.895553] VFS: Mounted root (ext4 filesystem) readonly on device 179:1.
+[    6.911118] devtmpfs: error mounting -2
+[    6.919456] Freeing unused kernel image (initmem) memory: 1024K
+[    6.926726] Run /sbin/init as init process
+[    6.935439] Run /etc/init as init process
+[    6.940645] Run /bin/init as init process
+[    6.945407] Run /bin/sh as init process
+[    6.950312] Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/admin-guide/init.rst for guidance.
+[    6.964551] ---[ end Kernel panic - not syncing: No working init found.  Try passing init= option to kernel. See Linux Documentation/admin-guide/init.rst for guidance. ]---

@@ -1,0 +1,984 @@
+kobo:/# rc-service inkbox_gui restart -d
+
++ sourcex -e /etc/rc.conf
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/rc.conf ]
++ . /etc/rc.conf
++ rc_logger=YES
++ rc_tty_number=12
++ '[' -d /etc/rc.conf.d ]
++ _conf_d=/etc/init.d/../conf.d
++ _c=inkbox_gui
++ '[' -n inkbox_gui -a inkbox_gui '!=' inkbox_gui ]
++ unset _c
++ sourcex -e /etc/init.d/../conf.d/inkbox_gui.default
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/inkbox_gui.default ]
++ return 1
++ sourcex -e /etc/init.d/../conf.d/inkbox_gui
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/inkbox_gui ]
++ return 1
++ unset _conf_d
++ sourcex /lib/rc/sh/runit.sh
++ '[' /lib/rc/sh/runit.sh '=' -e ]
++ . /lib/rc/sh/runit.sh
++ sourcex /lib/rc/sh/s6.sh
++ '[' /lib/rc/sh/s6.sh '=' -e ]
++ . /lib/rc/sh/s6.sh
++ '[' -z  ]
++ s6_service_path=/var/svc.d/inkbox_gui
++ sourcex /lib/rc/sh/start-stop-daemon.sh
++ '[' /lib/rc/sh/start-stop-daemon.sh '=' -e ]
++ . /lib/rc/sh/start-stop-daemon.sh
++ sourcex /lib/rc/sh/supervise-daemon.sh
++ '[' /lib/rc/sh/supervise-daemon.sh '=' -e ]
++ . /lib/rc/sh/supervise-daemon.sh
++ extra_commands='healthcheck unhealthy '
++ sourcex /etc/init.d/inkbox_gui
++ '[' /etc/init.d/inkbox_gui '=' -e ]
++ . /etc/init.d/inkbox_gui
++ description='Starts InkBox GUI'
++ yesno 
++ '[' -z  ]
++ return 1
++ '[' stop '!=' status -a stop '!=' describe ]
++ '[' -n  ]
++ command -v cgroup_add_service
++ '[' cgroup_add_service '=' cgroup_add_service ]
++ grep -qs /sys/fs/cgroup /proc/1/mountinfo
++ cgroup_add_service
++ '[' -w '/sys/fs/cgroup/*/tasks' ]
++ openrc_cgroup=/sys/fs/cgroup/openrc
++ '[' -d /sys/fs/cgroup/openrc ]
++ command -v cgroup_set_limits
++ '[' cgroup_set_limits '=' cgroup_set_limits ]
++ cgroup_set_limits
++ local 'blkio='
++ '[' -n  ]
++ local 'cpu='
++ '[' -n  ]
++ local 'cpuacct='
++ '[' -n  ]
++ local 'cpuset='
++ '[' -n  ]
++ local 'devices='
++ '[' -n  ]
++ local 'hugetlb='
++ '[' -n  ]
++ local 'memory='
++ '[' -n  ]
++ local 'net_cls='
++ '[' -n  ]
++ local 'net_prio='
++ '[' -n  ]
++ local 'pids='
++ '[' -n  ]
++ return 0
++ command -v cgroup2_set_limits
++ '[' cgroup2_set_limits '=' cgroup2_set_limits ]
++ '[' stop '=' start ]
++ break
++ read _d
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _d
++ '[' 0 -ne 0 ]
++ unset _d
++ read _f
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _f
++ '[' 0 -ne 0 ]
++ unset _f
++ '[' -n  ]
++ '[' -n stop ]
++ '[' stop '=' depend ]
++ '[' describe '=' stop ]
++ '[' start '=' stop ]
++ '[' stop '=' stop ]
++ command -v stop
++ '[' stop '=' stop ]
++ yesno
++ '[' -z  ]
++ return 1
++ '[' cgroup_cleanup '=' stop ]
++ unset _cmd
++ verify_boot
++ '[' '!' -e /run/openrc/softlevel ]
++ return 0
++ command -v stop_pre
++ '['  '=' stop_pre ]
++ stop
++ ebegin 'Stopping InkBox GUI'
+ * Stopping InkBox GUI ...
++ killall -q inkbox inkbox-bin oobe-inkbox oobe-inkbox-bin lockscreen lockscreen-bin inkbox.sh scribble lightmaps cn
++ rc-service gui_apps stop
++ sourcex -e /etc/rc.conf
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/rc.conf ]
++ . /etc/rc.conf
++ rc_logger=YES
++ rc_tty_number=12
++ '[' -d /etc/rc.conf.d ]
++ _conf_d=/etc/init.d/../conf.d
++ _c=gui_apps
++ '[' -n gui_apps -a gui_apps '!=' gui_apps ]
++ unset _c
++ sourcex -e /etc/init.d/../conf.d/gui_apps.default
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/gui_apps.default ]
++ return 1
++ sourcex -e /etc/init.d/../conf.d/gui_apps
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/gui_apps ]
++ return 1
++ unset _conf_d
++ sourcex /lib/rc/sh/runit.sh
++ '[' /lib/rc/sh/runit.sh '=' -e ]
++ . /lib/rc/sh/runit.sh
++ sourcex /lib/rc/sh/s6.sh
++ '[' /lib/rc/sh/s6.sh '=' -e ]
++ . /lib/rc/sh/s6.sh
++ '[' -z  ]
++ s6_service_path=/var/svc.d/gui_apps
++ sourcex /lib/rc/sh/start-stop-daemon.sh
++ '[' /lib/rc/sh/start-stop-daemon.sh '=' -e ]
++ . /lib/rc/sh/start-stop-daemon.sh
++ sourcex /lib/rc/sh/supervise-daemon.sh
++ '[' /lib/rc/sh/supervise-daemon.sh '=' -e ]
++ . /lib/rc/sh/supervise-daemon.sh
++ extra_commands='healthcheck unhealthy '
++ sourcex /etc/init.d/gui_apps
++ '[' /etc/init.d/gui_apps '=' -e ]
++ . /etc/init.d/gui_apps
++ description='Sets InkBox GUI user apps up'
++ yesno 
++ '[' -z  ]
++ return 1
++ '[' stop '!=' status -a stop '!=' describe ]
++ '[' -n  ]
++ command -v cgroup_add_service
++ '[' cgroup_add_service '=' cgroup_add_service ]
++ grep -qs /sys/fs/cgroup /proc/1/mountinfo
++ cgroup_add_service
++ '[' -w '/sys/fs/cgroup/*/tasks' ]
++ openrc_cgroup=/sys/fs/cgroup/openrc
++ '[' -d /sys/fs/cgroup/openrc ]
++ command -v cgroup_set_limits
++ '[' cgroup_set_limits '=' cgroup_set_limits ]
++ cgroup_set_limits
++ local 'blkio='
++ '[' -n  ]
++ local 'cpu='
++ '[' -n  ]
++ local 'cpuacct='
++ '[' -n  ]
++ local 'cpuset='
++ '[' -n  ]
++ local 'devices='
++ '[' -n  ]
++ local 'hugetlb='
++ '[' -n  ]
++ local 'memory='
++ '[' -n  ]
++ local 'net_cls='
++ '[' -n  ]
++ local 'net_prio='
++ '[' -n  ]
++ local 'pids='
++ '[' -n  ]
++ return 0
++ command -v cgroup2_set_limits
++ '[' cgroup2_set_limits '=' cgroup2_set_limits ]
++ '[' stop '=' start ]
++ break
++ read _d
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _d
++ '[' 0 -ne 0 ]
++ unset _d
++ read _f
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _f
++ '[' 0 -ne 0 ]
++ unset _f
++ '[' -n  ]
++ '[' -n stop ]
++ '[' stop '=' depend ]
++ '[' describe '=' stop ]
++ '[' start '=' stop ]
++ '[' stop '=' stop ]
++ command -v stop
++ '[' stop '=' stop ]
++ yesno
++ '[' -z  ]
++ return 1
++ '[' cgroup_cleanup '=' stop ]
++ unset _cmd
++ verify_boot
++ '[' '!' -e /run/openrc/softlevel ]
++ return 0
++ command -v stop_pre
++ '['  '=' stop_pre ]
++ stop
++ sync
++ umount -l -f /kobo/mnt/onboard/onboard/.apps/Conway/Conway /kobo/mnt/onboard/onboard/.apps/feathernotes/feathernos
++ umount -l -f /data/onboard/.apps/Conway/Conway /data/onboard/.apps/feathernotes/feathernotes
++ return 0
++ command -v stop_post
++ '['  '=' stop_post ]
++ command -v cgroup_cleanup
++ '[' cgroup_cleanup '=' cgroup_cleanup ]
++ '[' stop '=' stop ]
++ yesno 
++ '[' -z  ]
++ return 1
++ command -v cgroup2_remove
++ '[' cgroup2_remove '=' cgroup2_remove ]
++ '[' stop '=' stop ]
++ cgroup2_remove
++ local cgroup_path rc_cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -z  ]
++ return 0
++ shift
++ continue 2
++ '[' -n  ]
++ exit 0
++ umount -l -f /kobo
++ umount -l -f /opt/isa
++ eend 0
+ [ ok ]
++ command -v stop_post
++ '['  '=' stop_post ]
++ command -v cgroup_cleanup
++ '[' cgroup_cleanup '=' cgroup_cleanup ]
++ '[' stop '=' stop ]
++ yesno 
++ '[' -z  ]
++ return 1
++ command -v cgroup2_remove
++ '[' cgroup2_remove '=' cgroup2_remove ]
++ '[' stop '=' stop ]
++ cgroup2_remove
++ local cgroup_path rc_cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -z  ]
++ return 0
++ shift
++ continue 2
++ '[' -n  ]
++ exit 0
++ sourcex -e /etc/rc.conf
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/rc.conf ]
++ . /etc/rc.conf
++ rc_logger=YES
++ rc_tty_number=12
++ '[' -d /etc/rc.conf.d ]
++ _conf_d=/etc/init.d/../conf.d
++ _c=inkbox_gui
++ '[' -n inkbox_gui -a inkbox_gui '!=' inkbox_gui ]
++ unset _c
++ sourcex -e /etc/init.d/../conf.d/inkbox_gui.default
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/inkbox_gui.default ]
++ return 1
++ sourcex -e /etc/init.d/../conf.d/inkbox_gui
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/inkbox_gui ]
++ return 1
++ unset _conf_d
++ sourcex /lib/rc/sh/runit.sh
++ '[' /lib/rc/sh/runit.sh '=' -e ]
++ . /lib/rc/sh/runit.sh
++ sourcex /lib/rc/sh/s6.sh
++ '[' /lib/rc/sh/s6.sh '=' -e ]
++ . /lib/rc/sh/s6.sh
++ '[' -z  ]
++ s6_service_path=/var/svc.d/inkbox_gui
++ sourcex /lib/rc/sh/start-stop-daemon.sh
++ '[' /lib/rc/sh/start-stop-daemon.sh '=' -e ]
++ . /lib/rc/sh/start-stop-daemon.sh
++ sourcex /lib/rc/sh/supervise-daemon.sh
++ '[' /lib/rc/sh/supervise-daemon.sh '=' -e ]
++ . /lib/rc/sh/supervise-daemon.sh
++ extra_commands='healthcheck unhealthy '
++ sourcex /etc/init.d/inkbox_gui
++ '[' /etc/init.d/inkbox_gui '=' -e ]
++ . /etc/init.d/inkbox_gui
++ description='Starts InkBox GUI'
++ yesno 
++ '[' -z  ]
++ return 1
++ '[' start '!=' status -a start '!=' describe ]
++ '[' -n  ]
++ command -v cgroup_add_service
++ '[' cgroup_add_service '=' cgroup_add_service ]
++ grep -qs /sys/fs/cgroup /proc/1/mountinfo
++ cgroup_add_service
++ '[' -w '/sys/fs/cgroup/*/tasks' ]
++ openrc_cgroup=/sys/fs/cgroup/openrc
++ '[' -d /sys/fs/cgroup/openrc ]
++ command -v cgroup_set_limits
++ '[' cgroup_set_limits '=' cgroup_set_limits ]
++ cgroup_set_limits
++ local 'blkio='
++ '[' -n  ]
++ local 'cpu='
++ '[' -n  ]
++ local 'cpuacct='
++ '[' -n  ]
++ local 'cpuset='
++ '[' -n  ]
++ local 'devices='
++ '[' -n  ]
++ local 'hugetlb='
++ '[' -n  ]
++ local 'memory='
++ '[' -n  ]
++ local 'net_cls='
++ '[' -n  ]
++ local 'net_prio='
++ '[' -n  ]
++ local 'pids='
++ '[' -n  ]
++ return 0
++ command -v cgroup2_set_limits
++ '[' cgroup2_set_limits '=' cgroup2_set_limits ]
++ '[' start '=' start ]
++ cgroup2_set_limits
++ local cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -d  ]
++ return 0
++ break
++ read _d
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _d
++ '[' 0 -ne 0 ]
++ unset _d
++ read _f
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _f
++ '[' 0 -ne 0 ]
++ unset _f
++ '[' -n  ]
++ '[' -n start ]
++ '[' start '=' depend ]
++ '[' describe '=' start ]
++ '[' start '=' start ]
++ command -v start
++ '[' start '=' start ]
++ yesno
++ '[' -z  ]
++ return 1
++ '[' cgroup_cleanup '=' start ]
++ unset _cmd
++ verify_boot
++ '[' '!' -e /run/openrc/softlevel ]
++ return 0
++ command -v start_pre
++ '['  '=' start_pre ]
++ start
++ ebegin 'Starting InkBox GUI'
+ * Starting InkBox GUI ...
++ cat /opt/inkbox_device
++ DEVICE=n306
++ EXIT_SIGN_FAILURE=0
++ rc-service xorg stop
++ umount -l -f /kobo
++ '[' n306 '!=' kt ]
++ fuse-overlayfs -o 'allow_other,lowerdir=/opt/gui_rootfs/read,upperdir=/opt/gui_rootfs/write,workdir=/opt/gui_rooto
++ rc-service ibxd restart
++ sourcex -e /etc/rc.conf
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/rc.conf ]
++ . /etc/rc.conf
++ rc_logger=YES
++ rc_tty_number=12
++ '[' -d /etc/rc.conf.d ]
++ _conf_d=/etc/init.d/../conf.d
++ _c=ibxd
++ '[' -n ibxd -a ibxd '!=' ibxd ]
++ unset _c
++ sourcex -e /etc/init.d/../conf.d/ibxd.default
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/ibxd.default ]
++ return 1
++ sourcex -e /etc/init.d/../conf.d/ibxd
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/ibxd ]
++ return 1
++ unset _conf_d
++ sourcex /lib/rc/sh/runit.sh
++ '[' /lib/rc/sh/runit.sh '=' -e ]
++ . /lib/rc/sh/runit.sh
++ sourcex /lib/rc/sh/s6.sh
++ '[' /lib/rc/sh/s6.sh '=' -e ]
++ . /lib/rc/sh/s6.sh
++ '[' -z  ]
++ s6_service_path=/var/svc.d/ibxd
++ sourcex /lib/rc/sh/start-stop-daemon.sh
++ '[' /lib/rc/sh/start-stop-daemon.sh '=' -e ]
++ . /lib/rc/sh/start-stop-daemon.sh
++ sourcex /lib/rc/sh/supervise-daemon.sh
++ '[' /lib/rc/sh/supervise-daemon.sh '=' -e ]
++ . /lib/rc/sh/supervise-daemon.sh
++ extra_commands='healthcheck unhealthy '
++ sourcex /etc/init.d/ibxd
++ '[' /etc/init.d/ibxd '=' -e ]
++ . /etc/init.d/ibxd
++ description='InkBox Daemon (ibxd) permits the execution of certain actions as an unpriviledged user and/or from a'
++ yesno 
++ '[' -z  ]
++ return 1
++ '[' stop '!=' status -a stop '!=' describe ]
++ '[' -n  ]
++ command -v cgroup_add_service
++ '[' cgroup_add_service '=' cgroup_add_service ]
++ grep -qs /sys/fs/cgroup /proc/1/mountinfo
++ cgroup_add_service
++ '[' -w '/sys/fs/cgroup/*/tasks' ]
++ openrc_cgroup=/sys/fs/cgroup/openrc
++ '[' -d /sys/fs/cgroup/openrc ]
++ command -v cgroup_set_limits
++ '[' cgroup_set_limits '=' cgroup_set_limits ]
++ cgroup_set_limits
++ local 'blkio='
++ '[' -n  ]
++ local 'cpu='
++ '[' -n  ]
++ local 'cpuacct='
++ '[' -n  ]
++ local 'cpuset='
++ '[' -n  ]
++ local 'devices='
++ '[' -n  ]
++ local 'hugetlb='
++ '[' -n  ]
++ local 'memory='
++ '[' -n  ]
++ local 'net_cls='
++ '[' -n  ]
++ local 'net_prio='
++ '[' -n  ]
++ local 'pids='
++ '[' -n  ]
++ return 0
++ command -v cgroup2_set_limits
++ '[' cgroup2_set_limits '=' cgroup2_set_limits ]
++ '[' stop '=' start ]
++ break
++ read _d
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _d
++ '[' 0 -ne 0 ]
++ unset _d
++ read _f
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _f
++ '[' 0 -ne 0 ]
++ unset _f
++ '[' -n  ]
++ '[' -n stop ]
++ '[' stop '=' depend ]
++ '[' describe '=' stop ]
++ '[' start '=' stop ]
++ '[' stop '=' stop ]
++ command -v stop
++ '[' stop '=' stop ]
++ yesno
++ '[' -z  ]
++ return 1
++ '[' cgroup_cleanup '=' stop ]
++ unset _cmd
++ verify_boot
++ '[' '!' -e /run/openrc/softlevel ]
++ return 0
++ command -v stop_pre
++ '['  '=' stop_pre ]
++ stop
++ echo ibxd_stop
++ command -v stop_post
++ '['  '=' stop_post ]
++ command -v cgroup_cleanup
++ '[' cgroup_cleanup '=' cgroup_cleanup ]
++ '[' stop '=' stop ]
++ yesno 
++ '[' -z  ]
++ return 1
++ command -v cgroup2_remove
++ '[' cgroup2_remove '=' cgroup2_remove ]
++ '[' stop '=' stop ]
++ cgroup2_remove
++ local cgroup_path rc_cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -z  ]
++ return 0
++ shift
++ continue 2
++ '[' -n  ]
++ exit 0
++ sourcex -e /etc/rc.conf
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/rc.conf ]
++ . /etc/rc.conf
++ rc_logger=YES
++ rc_tty_number=12
++ '[' -d /etc/rc.conf.d ]
++ _conf_d=/etc/init.d/../conf.d
++ _c=ibxd
++ '[' -n ibxd -a ibxd '!=' ibxd ]
++ unset _c
++ sourcex -e /etc/init.d/../conf.d/ibxd.default
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/ibxd.default ]
++ return 1
++ sourcex -e /etc/init.d/../conf.d/ibxd
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/ibxd ]
++ return 1
++ unset _conf_d
++ sourcex /lib/rc/sh/runit.sh
++ '[' /lib/rc/sh/runit.sh '=' -e ]
++ . /lib/rc/sh/runit.sh
++ sourcex /lib/rc/sh/s6.sh
++ '[' /lib/rc/sh/s6.sh '=' -e ]
++ . /lib/rc/sh/s6.sh
++ '[' -z  ]
++ s6_service_path=/var/svc.d/ibxd
++ sourcex /lib/rc/sh/start-stop-daemon.sh
++ '[' /lib/rc/sh/start-stop-daemon.sh '=' -e ]
++ . /lib/rc/sh/start-stop-daemon.sh
++ sourcex /lib/rc/sh/supervise-daemon.sh
++ '[' /lib/rc/sh/supervise-daemon.sh '=' -e ]
++ . /lib/rc/sh/supervise-daemon.sh
++ extra_commands='healthcheck unhealthy '
++ sourcex /etc/init.d/ibxd
++ '[' /etc/init.d/ibxd '=' -e ]
++ . /etc/init.d/ibxd
++ description='InkBox Daemon (ibxd) permits the execution of certain actions as an unpriviledged user and/or from a'
++ yesno 
++ '[' -z  ]
++ return 1
++ '[' start '!=' status -a start '!=' describe ]
++ '[' -n  ]
++ command -v cgroup_add_service
++ '[' cgroup_add_service '=' cgroup_add_service ]
++ grep -qs /sys/fs/cgroup /proc/1/mountinfo
++ cgroup_add_service
++ '[' -w '/sys/fs/cgroup/*/tasks' ]
++ openrc_cgroup=/sys/fs/cgroup/openrc
++ '[' -d /sys/fs/cgroup/openrc ]
++ command -v cgroup_set_limits
++ '[' cgroup_set_limits '=' cgroup_set_limits ]
++ cgroup_set_limits
++ local 'blkio='
++ '[' -n  ]
++ local 'cpu='
++ '[' -n  ]
++ local 'cpuacct='
++ '[' -n  ]
++ local 'cpuset='
++ '[' -n  ]
++ local 'devices='
++ '[' -n  ]
++ local 'hugetlb='
++ '[' -n  ]
++ local 'memory='
++ '[' -n  ]
++ local 'net_cls='
++ '[' -n  ]
++ local 'net_prio='
++ '[' -n  ]
++ local 'pids='
++ '[' -n  ]
++ return 0
++ command -v cgroup2_set_limits
++ '[' cgroup2_set_limits '=' cgroup2_set_limits ]
++ '[' start '=' start ]
++ cgroup2_set_limits
++ local cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -d  ]
++ return 0
++ break
++ read _d
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _d
++ '[' 0 -ne 0 ]
++ unset _d
++ read _f
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _f
++ '[' 0 -ne 0 ]
++ unset _f
++ '[' -n  ]
++ '[' -n start ]
++ '[' start '=' depend ]
++ '[' describe '=' start ]
++ '[' start '=' start ]
++ command -v start
++ '[' start '=' start ]
++ yesno
++ '[' -z  ]
++ return 1
++ '[' cgroup_cleanup '=' start ]
++ unset _cmd
++ verify_boot
++ '[' '!' -e /run/openrc/softlevel ]
++ return 0
++ command -v start_pre
++ '['  '=' start_pre ]
++ start
++ ebegin 'Starting InkBox Daemon (ibxd)'
+ * Starting InkBox Daemon (ibxd) ...
++ mkfifo /run/ibxd
++ umount /kobo/opt/ibxd -l -f
++ umount /xorg/opt/ibxd -l -f
++ touch /xorg/opt/ibxd
++ mount --bind /run/ibxd /kobo/opt/ibxd
++ mount --bind /run/ibxd /xorg/opt/ibxd
++ eend 0
++ true
+ [ ok ]
++ command -v start_post
++ '['  '=' start_post ]
++ command -v cgroup_cleanup
++ '[' cgroup_cleanup '=' cgroup_cleanup ]
++ '[' start '=' stop ]
++ command -v cgroup2_remove
++ '[' cgroup2_remove '=' cgroup2_remove ]
++ '[' start '=' stop ]
++ '[' -z  ]
++ cgroup2_remove
++ local cgroup_path rc_cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -z  ]
++ return 0
++ shift
++ continue 2
++ '[' -n  ]
++ exit 0
++ squashfuse /opt/update/update.isa /opt/isa
++ cat /opt/developer/key/valid-key
++ DEVMODE=
++ '['  '==' true ]
++ '[' /opt/isa/inkbox.isa '!=' /opt/isa/gui_rootfs.isa ]
++ openssl dgst -sha256 -verify /opt/key/public.pem -signature /opt/isa/inkbox.isa.dgst /opt/isa/inkbox.isa
++ '[' 0 '!=' 0 ]
++ '[' /opt/isa/qt.isa '!=' /opt/isa/gui_rootfs.isa ]
++ openssl dgst -sha256 -verify /opt/key/public.pem -signature /opt/isa/qt.isa.dgst /opt/isa/qt.isa
++ '[' 0 '!=' 0 ]
++ '['  '==' true ]
++ '[' 0 '==' 0 ]
++ squashfuse -o allow_other,nosuid /opt/isa/inkbox.isa /kobo/mnt/onboard/.adds/inkbox
++ mount --bind /opt/config /kobo/mnt/onboard/.adds/inkbox/.config
++ squashfuse -o allow_other,nosuid /opt/isa/qt.isa /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo
++ squashfuse -o allow_other,nosuid /opt/isa/python.isa /kobo/mnt/onboard/.adds/Python-3.9.2
+Can't open squashfs image: No such file or directory
++ '[' n306 '==' n437 ]
++ '[' n306 '==' kt ]
++ mount --bind /lib/qt5-plugins/libkobo.so.1 /kobo/mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkoboo
++ '[' n306 '==' n705 ]
++ '[' n306 '==' n905b ]
++ '[' n306 '==' n905c ]
++ '[' n306 '==' kt ]
++ '[' n306 '==' n613 ]
++ '[' n306 '==' n236 ]
++ '[' n306 '==' n306 ]
++ mount --bind /usr/local/share/inkbox/stylesheets/eink-768x1024.qss /kobo/mnt/onboard/.adds/inkbox/eink.qss
++ rc-service gui_apps restart
++ sourcex -e /etc/rc.conf
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/rc.conf ]
++ . /etc/rc.conf
++ rc_logger=YES
++ rc_tty_number=12
++ '[' -d /etc/rc.conf.d ]
++ _conf_d=/etc/init.d/../conf.d
++ _c=gui_apps
++ '[' -n gui_apps -a gui_apps '!=' gui_apps ]
++ unset _c
++ sourcex -e /etc/init.d/../conf.d/gui_apps.default
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/gui_apps.default ]
++ return 1
++ sourcex -e /etc/init.d/../conf.d/gui_apps
++ '[' -e '=' -e ]
++ shift
++ '[' -e /etc/init.d/../conf.d/gui_apps ]
++ return 1
++ unset _conf_d
++ sourcex /lib/rc/sh/runit.sh
++ '[' /lib/rc/sh/runit.sh '=' -e ]
++ . /lib/rc/sh/runit.sh
++ sourcex /lib/rc/sh/s6.sh
++ '[' /lib/rc/sh/s6.sh '=' -e ]
++ . /lib/rc/sh/s6.sh
++ '[' -z  ]
++ s6_service_path=/var/svc.d/gui_apps
++ sourcex /lib/rc/sh/start-stop-daemon.sh
++ '[' /lib/rc/sh/start-stop-daemon.sh '=' -e ]
++ . /lib/rc/sh/start-stop-daemon.sh
++ sourcex /lib/rc/sh/supervise-daemon.sh
++ '[' /lib/rc/sh/supervise-daemon.sh '=' -e ]
++ . /lib/rc/sh/supervise-daemon.sh
++ extra_commands='healthcheck unhealthy '
++ sourcex /etc/init.d/gui_apps
++ '[' /etc/init.d/gui_apps '=' -e ]
++ . /etc/init.d/gui_apps
++ description='Sets InkBox GUI user apps up'
++ yesno 
++ '[' -z  ]
++ return 1
++ '[' start '!=' status -a start '!=' describe ]
++ '[' -n  ]
++ command -v cgroup_add_service
++ '[' cgroup_add_service '=' cgroup_add_service ]
++ grep -qs /sys/fs/cgroup /proc/1/mountinfo
++ cgroup_add_service
++ '[' -w '/sys/fs/cgroup/*/tasks' ]
++ openrc_cgroup=/sys/fs/cgroup/openrc
++ '[' -d /sys/fs/cgroup/openrc ]
++ command -v cgroup_set_limits
++ '[' cgroup_set_limits '=' cgroup_set_limits ]
++ cgroup_set_limits
++ local 'blkio='
++ '[' -n  ]
++ local 'cpu='
++ '[' -n  ]
++ local 'cpuacct='
++ '[' -n  ]
++ local 'cpuset='
++ '[' -n  ]
++ local 'devices='
++ '[' -n  ]
++ local 'hugetlb='
++ '[' -n  ]
++ local 'memory='
++ '[' -n  ]
++ local 'net_cls='
++ '[' -n  ]
++ local 'net_prio='
++ '[' -n  ]
++ local 'pids='
++ '[' -n  ]
++ return 0
++ command -v cgroup2_set_limits
++ '[' cgroup2_set_limits '=' cgroup2_set_limits ]
++ '[' start '=' start ]
++ cgroup2_set_limits
++ local cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -d  ]
++ return 0
++ break
++ read _d
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _d
++ '[' 0 -ne 0 ]
++ unset _d
++ read _f
++ eval 'printf '"'"'%s\n'"'"' '
++ printf '%s\n'
++ '[' -n  ]
++ read _f
++ '[' 0 -ne 0 ]
++ unset _f
++ '[' -n  ]
++ '[' -n start ]
++ '[' start '=' depend ]
++ '[' describe '=' start ]
++ '[' start '=' start ]
++ command -v start
++ '[' start '=' start ]
++ yesno
++ '[' -z  ]
++ return 1
++ '[' cgroup_cleanup '=' start ]
++ unset _cmd
++ verify_boot
++ '[' '!' -e /run/openrc/softlevel ]
++ return 0
++ command -v start_pre
++ '['  '=' start_pre ]
++ start
++ einfo 'Setting up GUI user applications'
+ * Setting up GUI user applications
++ '[' '!' -d /data/onboard/.apps ]
++ cat /opt/developer/key/valid-key
++ devmode=
++ '['  '==' true ]
++ '[' '/data/onboard/.apps/*/*.isa' '!=' '/data/onboard/.apps/*/*.isa' ]
++ '['  '==' true ]
++ sleep 0.5
++ mount --rbind /data/onboard /kobo/mnt/onboard/onboard
++ eend 0
+ [ ok ]
++ command -v start_post
++ '['  '=' start_post ]
++ command -v cgroup_cleanup
++ '[' cgroup_cleanup '=' cgroup_cleanup ]
++ '[' start '=' stop ]
++ command -v cgroup2_remove
++ '[' cgroup2_remove '=' cgroup2_remove ]
++ '[' start '=' stop ]
++ '[' -z  ]
++ cgroup2_remove
++ local cgroup_path rc_cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -z  ]
++ return 0
++ shift
++ continue 2
++ '[' -n  ]
++ exit 0
++ mount -t sysfs sysfs /kobo/sys
++ mount -t proc proc /kobo/proc
++ mount -t tmpfs tmpfs -o 'size=128M' /kobo/tmp
++ mount -t tmpfs tmpfs -o 'size=128M' /kobo/var/run
++ mount --bind /dev /kobo/dev
++ mount --bind /dev/pts /kobo/dev/pts
++ mkdir -p /kobo/dev/ipd
++ mount --bind /run/ipd /kobo/dev/ipd
++ mount --bind / /kobo/external_root
++ mount --bind /dev /kobo/external_root/dev
++ mount --bind /dev/pts /kobo/external_root/dev/pts
++ mount --bind /proc /kobo/external_root/proc
++ mount --bind /tmp /kobo/external_root/tmp
++ mount --bind /run /kobo/external_root/run
++ mount --rbind /var /kobo/external_root/var
++ mount --bind /opt/isa /kobo/external_root/opt/isa
++ mount --bind /opt/root /kobo/external_root/opt/root
++ mount --bind /opt/update /kobo/external_root/opt/update
++ mount --bind /opt/storage /kobo/external_root/opt/storage
++ mount --bind /data/onboard /kobo/external_root/data/onboard
++ '[' '!' -e /kobo/opt/version ]
++ '[' '!' -e /kobo/bin/kobo_config.sh ]
++ '[' '!' -e /kobo/usr/share/zoneinfo ]
++ '[' '!' -e /kobo/etc/localtime ]
++ '[' '!' -e /data/config/19-timezone ]
++ '[' '!' -e /data/config/19-timezone/config ]
++ mount --bind /usr/share/zoneinfo /kobo/usr/share/zoneinfo
++ mount --bind /data/config/19-timezone/config /kobo/etc/localtime
++ mount --bind /opt/version /kobo/opt/version
++ mount --bind /bin/kobo_config.sh /kobo/bin/kobo_config.sh
++ mount --bind /opt/bin/fbink/fbink /kobo/external_root/opt/bin/fbink/fbink
++ '[' n306 '==' n905b ]
++ '[' n306 '==' n905c ]
++ mount --bind /opt/inkbox_device /kobo/opt/inkbox_device
++ mount --bind /opt/inkbox_device /kobo/external_root/opt/inkbox_device
++ mount --bind /opt/X11/extensions_folders_list /kobo/external_root/opt/X11/extensions_folders_list
++ mount --bind /opt/X11/extensions_list /kobo/external_root/opt/X11/extensions_list
++ mount --bind /opt/X11/nographic_extensions_folders_list /kobo/external_root/opt/X11/nographic_extensions_folders_t
++ mount --bind /opt/X11/nographic_extensions_list /kobo/external_root/opt/X11/nographic_extensions_list
++ mount --bind /boot /kobo/external_root/boot
++ mount --bind /lib/modules /kobo/external_root/lib/modules
++ touch /kobo/tmp/resolv.conf
++ mount --bind /etc/resolv.conf /kobo/tmp/resolv.conf
++ '[' n306 '==' n705 ]
++ '[' n306 '==' n905b ]
++ '[' n306 '==' n905c ]
++ '[' n306 '==' n613 ]
++ '[' n306 '==' n873 ]
++ '[' n306 '==' n236 ]
++ '[' n306 '==' n437 ]
++ '[' n306 '==' n306 ]
++ echo true
++ echo true
++ /usr/bin/inkbox.sh
++ eend 0
+ [ ok ]
++ command -v start_post
++ '['  '=' start_post ]
++ command -v cgroup_cleanup
++ '[' cgroup_cleanup '=' cgroup_cleanup ]
++ '[' start '=' stop ]
++ command -v cgroup2_remove
++ '[' cgroup2_remove '=' cgroup2_remove ]
++ '[' start '=' stop ]
++ '[' -z  ]
++ cgroup2_remove
++ local cgroup_path rc_cgroup_path
++ cgroup2_find_path
++ grep -qw cgroup2 /proc/filesystems
++ return 0
++ cgroup_path=
++ '[' -z  ]
++ return 0
++ shift
++ continue 2
++ '[' -n  ]
++ exit 0
+ * WARNING: sshd has already been started
+kobo:/# 
+kobo:/# iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+04/03/2023 @ 15:15:08 | main: Running on device n306
+04/03/2023 @ 15:15:08 | main: Device has Wi-Fi capabilities
+04/03/2023 @ 15:15:10 | sleepThread: Sleep pipe thread active
+04/03/2023 @ 15:15:11 | sleepThread: Looking for messages in pipe

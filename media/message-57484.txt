@@ -1,0 +1,143 @@
+```
+KoboDeviceDescriptor determineDevice()
+{
+    QString deviceName;
+    if(QFile::exists("/bin/kobo_config.sh")) {
+        deviceName = exec("/bin/kobo_config.sh 2>/dev/null");
+    }
+    else {
+        deviceName = std::getenv("DEVICE_CODENAME");
+    }
+    auto modelNumberStr = exec("cut -f 6 -d ',' /mnt/onboard/.kobo/version | sed -e 's/^[0-]*//'");
+    int modelNumber = modelNumberStr.toInt();
+
+    KoboDeviceDescriptor device;
+    if (deviceName == "trilogy")
+    {
+        if (modelNumber == 310)
+            device = KoboTrilogyAB;
+        else  // if (modelNumber == 320)
+            device = KoboTrilogyC;
+    }
+    else if (deviceName == "pixie")
+    {
+        device = KoboPixie;
+    }
+    else if (deviceName == "kraken")
+    {
+        device = KoboKraken;
+    }
+    else if (deviceName == "alyssum")
+    {
+        device = KoboAlyssum;
+    }
+    else if (deviceName == "pika")
+    {
+        device = KoboPika;
+    }
+    else if (deviceName == "phoenix")
+    {
+        device = KoboPhoenix;
+    }
+    else if (deviceName == "dragon")
+    {
+        device = KoboDragon;
+    }
+    else if (deviceName == "dahlia")
+    {
+        device = KoboDahlia;
+    }
+    else if (deviceName == "snow")
+    {
+        if (modelNumber == 374)
+            device = KoboSnow;
+        else  // if (modelNumber == 378)
+            device = KoboSnowRev2;
+    }
+    else if (deviceName == "daylight")
+    {
+        device = KoboDaylight;
+    }
+    else if (deviceName == "star")
+    {
+        if (modelNumber == 375)
+            device = KoboStar;
+        else  // if (modelNumber == 379)
+            device = KoboStarRev2;
+    }
+    else if (deviceName == "nova")
+    {
+        device = KoboNova;
+    }
+    else if (deviceName == "frost")
+    {
+        device = KoboFrost;
+    }
+    else if (deviceName == "storm")
+    {
+        device = KoboStorm;
+    }
+    else if (deviceName == "luna")
+    {
+        device = KoboLuna;
+    }
+    else if (deviceName == "europa")
+    {
+        device = KoboEuropa;
+    }
+    else
+    {
+        device = KoboTrilogyC;
+    }
+
+    QString fbDevice = QLatin1String("/dev/fb0");
+    if (!QFile::exists(fbDevice))
+        fbDevice = QLatin1String("/dev/graphics/fb0");
+    if (!QFile::exists(fbDevice))
+    {
+        qWarning("Unable to figure out framebuffer device. Specify it manually.");
+        // return false;
+    }
+
+    int mFbFd = -1;
+
+    if (access(fbDevice.toLatin1().constData(), R_OK | W_OK) == 0)
+        mFbFd = QT_OPEN(fbDevice.toLatin1().constData(), O_RDWR);
+
+    if (mFbFd == -1)
+    {
+        if (access(fbDevice.toLatin1().constData(), R_OK) == 0)
+            mFbFd = QT_OPEN(fbDevice.toLatin1().constData(), O_RDONLY);
+    }
+
+    // Open the device
+    if (mFbFd == -1)
+    {
+        qErrnoWarning(errno, "Failed to open framebuffer %s", qPrintable(fbDevice));
+        // return false;
+    }
+
+    fb_var_screeninfo vinfo;
+
+    if (ioctl(mFbFd, FBIOGET_VSCREENINFO, &vinfo))
+    {
+        qErrnoWarning(errno, "Error reading variable information");
+    }
+
+    QRect geometry = determineGeometry(vinfo);
+
+    auto mPhysicalSize = determinePhysicalSize(vinfo, geometry.size(), device.dpi);
+
+    device.width = geometry.width();
+    device.height = geometry.height();
+    device.physicalWidth = mPhysicalSize.width();
+    device.physicalHeight = mPhysicalSize.height();
+
+    device.modelName = deviceName;
+    device.modelNumber = modelNumber;
+
+    close(mFbFd);
+
+    return device;
+}
+```

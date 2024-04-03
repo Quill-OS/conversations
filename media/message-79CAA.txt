@@ -1,0 +1,212 @@
+[ 4125.151274] set front light level : 14
+[ 4125.152110] Set front light duty : 195
+[ 4125.198133] 
+[ 4125.198137] set front light level : 13
+[ 4125.198970] Set front light duty : 170
+[ 4125.264099] 
+[ 4125.264106] set front light level : 12
+[ 4125.265003] Set front light duty : 150
+[ 4125.332842] 
+[ 4125.332849] set front light level : 11
+[ 4125.333750] Set front light duty : 132
+[ 4125.399265] 
+[ 4125.399273] set front light level : 10
+[ 4125.400157] Set front light duty : 110
+[ 4125.465474] 
+[ 4125.465481] set front light level : 9
+[ 4125.466371] Set front light duty : 93
+[ 4125.534102] 
+[ 4125.534109] set front light level : 8
+[ 4125.535019] Set front light duty : 82
+[ 4125.600646] 
+[ 4125.600653] set front light level : 7
+[ 4125.601553] Set front light duty : 71
+[ 4125.666765] 
+[ 4125.666772] set front light level : 6
+[ 4125.667673] Set front light duty : 62
+[ 4125.735396] 
+[ 4125.735404] set front light level : 5
+[ 4125.736313] Set front light duty : 49
+[ 4125.801816] 
+[ 4125.801823] set front light level : 4
+[ 4125.802730] Set front light duty : 41
+[ 4125.867875] 
+[ 4125.867882] set front light level : 3
+[ 4125.868786] Set front light duty : 30
+[ 4125.936710] 
+[ 4125.936716] set front light level : 2
+[ 4125.937613] Set front light duty : 24
+[ 4126.002984] 
+[ 4126.002991] set front light level : 1
+[ 4126.003893] Set front light duty : 18
+[ 4126.069348] FL PWM off command
+[ 4126.232458] wl_iw_set_essid: join SSID=�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD� ch=2
+[ 4126.256368] wl_iw_set_essid: join SSID=�▒��N^���l�zl�Ԛr��a �g)�59 ch=2
+[ 4126.282893] wl_iw_detach thr:f9a terminated OK
+[ 4126.282939] wl_iw_bt_release thr:f9b terminated OK
+[ 4126.282978] dhd_detach thr:f9e terminated OK
+[ 4126.299334] dhd_detach thr:f9c terminated OK
+[ 4126.299416] dhd_detach thr:f9d terminated OK
+[ 4126.309413] remove wake up source irq 105
+[ 4126.310856] Wifi / BT power control 0
+[ 4126.329135] _ntx_wifi_power_ctrl() end.
+[ 4126.354488] Wifi / BT power control 0
+[ 4126.369105] _ntx_wifi_power_ctrl() end.
+[ 4126.836224] mmc_sdio_remove: postpone fn1
+[ 4126.840293] mmc_sdio_remove: remove fn2
+[ 4126.845517] mmc_sdio_remove: remove fn1 now
+[ 4126.850993] mmc2: card 0001 removed
+[ 4127.269117] [FL_off_func-1501]FL PWR off
+[ 4127.269144] [msp430_fl_enable-66] regulator off
+[ 4139.793803] cpufreq_save_default_governor():save policy "interactive"
+[ 4139.793885] cpufreq_set_governor():set policy "performance"
+[ 4139.793920] PM: Syncing filesystems ... done.
+[ 4139.817176] PM: Preparing system for mem sleep
+[ 4139.817922] Freezing user space processes ... freeze 1!!!!!!!!!!!!!!!!!!!!
+[ 4139.829140] (elapsed 0.01 seconds) done.
+[ 4139.829148] Freezing remaining freezable tasks ... (elapsed 0.01 seconds) done.
+[ 4139.849144] PM: Entering mem sleep
+[ 4139.849150] Suspending console(s) (use no_console_suspend to debug)
+[ 4139.849704] udc suspend begins
+[ 4139.849733] pm_op(): platform_pm_suspend+0x0/0x50 returns -16
+[ 4139.849742] PM: Device fsl-usb2-udc failed to suspend: error -16
+[ 4139.849748] PM: Some devices failed to suspend
+[ 4139.849864] PM: resume of devices complete after 0.106 msecs
+[ 4139.866229] PM: Finishing wakeup.
+[ 4139.866235] Restarting tasks ... done.
+[ 4139.883314] cpufreq_set_governor():set policy "interactive"
+[ 4139.883348] cpufreq_restore_default_governor():restore policy "interactive"
+[ 4141.037880] 
+[ 4141.037883] set front light level : 1
+[ 4141.038719] Set front light duty : 18
+[ 4141.149122] [msp430_fl_enable-66] regulator on
+[ 4141.427053] 
+[ 4141.427060] set front light level : 2
+[ 4141.427962] Set front light duty : 24
+[ 4141.496631] 
+[ 4141.496638] set front light level : 3
+[ 4141.497534] Set front light duty : 30
+[ 4141.563560] 
+[ 4141.563567] set front light level : 4
+[ 4141.564447] Set front light duty : 41
+[ 4141.629723] 
+[ 4141.629730] set front light level : 5
+[ 4141.630789] Set front light duty : 49
+[ 4141.699749] 
+[ 4141.699755] set front light level : 6
+[ 4141.700665] Set front light duty : 62
+[ 4141.765940] 
+[ 4141.765947] set front light level : 7
+[ 4141.766849] Set front light duty : 71
+[ 4141.832127] 
+[ 4141.832135] set front light level : 8
+[ 4141.833031] Set front light duty : 82
+[ 4141.900821] 
+[ 4141.900828] set front light level : 9
+[ 4141.901743] Set front light duty : 93
+[ 4141.967027] 
+[ 4141.967034] set front light level : 10
+[ 4141.967935] Set front light duty : 110
+[ 4142.034097] 
+[ 4142.034103] set front light level : 11
+[ 4142.035004] Set front light duty : 132
+[ 4142.102921] 
+[ 4142.102928] set front light level : 12
+[ 4142.103827] Set front light duty : 150
+[ 4142.169034] 
+[ 4142.169041] set front light level : 13
+[ 4142.169986] Set front light duty : 170
+[ 4142.235294] 
+[ 4142.235301] set front light level : 14
+[ 4142.236203] Set front light duty : 195
+[ 4142.303852] 
+[ 4142.303860] set front light level : 15
+[ 4142.304767] Set front light duty : 216
+[ 4142.443802] Wifi / BT power control 1
+[ 4142.499175] _ntx_wifi_power_ctrl() end.
+[ 4142.558173] Wifi / BT power control 1
+[ 4142.609177] _ntx_wifi_power_ctrl() end.
+[ 4142.610596] 
+[ 4142.610605] Dongle Host Driver, version 5.90.125.120.1
+[ 4142.610613] Compiled in drivers/net/wireless/bcmdhd on Jun 12 2022 at 21:32:42
+[ 4143.071639] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 4143.073295] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 4143.074947] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 4143.077892] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[ 4143.081171] mmc2: queuing unknown CIS tuple 0x80 (8 bytes)
+[ 4143.082492] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 4143.084788] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 4143.087093] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 4143.105760] mmc2: new high speed SDIO card at address 0001
+[ 4143.111022] dhd_customer_oob_irq_map: customer specific Host GPIO number is (127)
+[ 4143.111034] dhd_customer_oob_irq_map: customer specific Host GPIO irq number is (383)
+[ 4143.111332] [bcmsdh_probe-241] IRQ=383 Type=414 
+[ 4143.111458] F1 signature read @0x18000000=0x1591a962
+[ 4143.114437] DHD: dongle ram size is set to 245760(orig 245760)
+[ 4143.114645] wl_iw_attach thr:10ca started
+[ 4143.114686] wl_iw_bt_init thr:10cb started
+[ 4143.114727] dhd_attach thr:10cc started
+[ 4143.114766] dhd_attach thr:10cd started
+[ 4143.114799] dhd_attach thr:10ce started
+[ 4143.115419] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+[ 4143.158268] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[ 4143.400315] [bcmsdh_register_oob_intr-634] IRQ=383 Type=414 
+[ 4143.400362] add wake up source irq 105
+[ 4143.410363] Firmware up: op_mode=1, Broadcom Dongle Host Driver mac=78:45:61:50:d0:5e
+[ 4143.771431] Firmware version = wl0: Apr 11 2014 17:50:29 version 5.90.195.89.23 FWID 01-83cee08a
+[ 4145.566535] wl_iw_detach thr:10ca terminated OK
+[ 4145.566583] wl_iw_bt_release thr:10cb terminated OK
+[ 4145.566625] dhd_detach thr:10ce terminated OK
+[ 4145.579228] dhd_detach thr:10cc terminated OK
+[ 4145.579270] dhd_detach thr:10cd terminated OK
+[ 4145.589277] remove wake up source irq 105
+[ 4145.590071] Wifi / BT power control 0
+[ 4145.609106] _ntx_wifi_power_ctrl() end.
+[ 4145.641479] Wifi / BT power control 0
+[ 4145.659163] _ntx_wifi_power_ctrl() end.
+[ 4145.702541] Wifi / BT power control 1
+[ 4145.759177] _ntx_wifi_power_ctrl() end.
+[ 4145.817398] Wifi / BT power control 1
+[ 4145.869162] _ntx_wifi_power_ctrl() end.
+[ 4145.870321] bcmsdh_sdmmc: probe of mmc2:0001:1 failed with error -110
+[ 4145.871420] bcmsdh_sdmmc: probe of mmc2:0001:2 failed with error -110
+[ 4145.872823] 
+[ 4145.872831] Dongle Host Driver, version 5.90.125.120.1
+[ 4145.872839] Compiled in drivers/net/wireless/bcmdhd on Jun 12 2022 at 21:32:42
+[ 4146.116275] mmc_sdio_remove: postpone fn1
+[ 4146.120341] mmc_sdio_remove: remove fn2
+[ 4146.125539] mmc_sdio_remove: remove fn1 now
+[ 4146.130989] mmc2: card 0001 removed
+[ 4146.201529] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 4146.203186] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 4146.204838] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[ 4146.207786] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[ 4146.211065] mmc2: queuing unknown CIS tuple 0x80 (8 bytes)
+[ 4146.212386] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[ 4146.214685] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 4146.216980] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[ 4146.235620] mmc2: new high speed SDIO card at address 0001
+[ 4146.240813] dhd_customer_oob_irq_map: customer specific Host GPIO number is (127)
+[ 4146.240825] dhd_customer_oob_irq_map: customer specific Host GPIO irq number is (383)
+[ 4146.241122] [bcmsdh_probe-241] IRQ=383 Type=414 
+[ 4146.241248] F1 signature read @0x18000000=0x1591a962
+[ 4146.244236] DHD: dongle ram size is set to 245760(orig 245760)
+[ 4146.244448] wl_iw_attach thr:10e6 started
+[ 4146.244492] wl_iw_bt_init thr:10e7 started
+[ 4146.244536] dhd_attach thr:10e8 started
+[ 4146.244571] dhd_attach thr:10e9 started
+[ 4146.244604] dhd_attach thr:10ea started
+[ 4146.245206] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+[ 4146.287928] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[ 4146.530169] [bcmsdh_register_oob_intr-634] IRQ=383 Type=414 
+[ 4146.530215] add wake up source irq 105
+[ 4146.532687] Firmware up: op_mode=1, Broadcom Dongle Host Driver mac=78:45:61:50:d0:5e
+[ 4146.910671] Firmware version = wl0: Apr 11 2014 17:50:29 version 5.90.195.89.23 FWID 01-83cee08a
+[ 4148.634564] wl_iw_set_essid: join SSID= ch=0
+[ 4148.772684] Set ISCAN for wl_iw_iscan failed with 0
+[ 4154.150652] PMU FG_RESET : calc_capacity_2 : capacity 3576 init_pswr 35 cc_delta 76
+[ 4154.159016] PMU : set_current_time2register : second is 1658326224, hour is 460646
+[ 4154.169487] PMU calc_capacity_in_period 1%FACAP(54360)[mAs], cc_sum(41497)[mAs], cc_sum_dec(41497)
+[ 4154.169942] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(35), cc_delta(76)
+[ 4154.169971] PMU:STATUS= 4: IBAT= 316: VSYS= 3935500: VBAT= 3916900: DSOC= 3576: RSOC= 3576: cc_delta=76: rrf= 0
+[ 4162.605792] wl_iw_set_essid: join SSID=SentFromMyToaster-EXT ch=2

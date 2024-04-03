@@ -1,0 +1,155 @@
+From 882e93093516709edee4df582cab846975b859df Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Tue, 27 Sep 2022 12:00:52 +0200
+Subject: [PATCH] some changes
+
+---
+ src/homeWidget/mainwindow.cpp | 24 ++++++++++--------------
+ src/settings/settings.cpp     | 20 ++++++++------------
+ src/settings/settings.h       |  5 +----
+ src/settings/settings.ui      |  2 +-
+ 4 files changed, 20 insertions(+), 31 deletions(-)
+
+diff --git a/src/homeWidget/mainwindow.cpp b/src/homeWidget/mainwindow.cpp
+index 3cf70e2..b2c5c8c 100644
+--- a/src/homeWidget/mainwindow.cpp
++++ b/src/homeWidget/mainwindow.cpp
+@@ -346,11 +346,9 @@ MainWindow::MainWindow(QWidget *parent)
+     }
+ 
+     // Update checking
+-    QString checkUpdatesPath = ".config/23-updates/check-updates";
+-    QFile checkUpdatesConfig = QFile(checkUpdatesPath);
+-    if(checkUpdatesConfig.exists() == false)
+-    {
+-        writeFile(checkUpdatesPath, "true");
++    QString checkUpdatesPath = ".config/23-updates/check";
++    if(QFile(checkUpdatesPath).exists() == false) {
++        string_writeconfig(checkUpdatesPath.toStdString(), "true");
+     }
+     if(checkconfig(checkUpdatesPath) == true) {
+         log("Checking for updates", className);
+@@ -360,17 +358,15 @@ MainWindow::MainWindow(QWidget *parent)
+         QTimer::singleShot(1000, this, SLOT(checkForOtaUpdate()));
+     }
+     else {
+-        log("Not launching updater because of .config/23-updates/check-updates", className);
++        log("Not launching updater because of '23-updates/check'", className);
+     }
+ 
+     // USB mass storage prompt
+-    QString showUSBPromtPath = ".config/22-usb/show-dialog";
+-    QFile showUSBPromtFile = QFile(showUSBPromtPath);
+-    if(showUSBPromtFile.exists() == false)
+-    {
+-        writeFile(showUSBPromtPath, "true");
++    QString showUSBPromptPath = ".config/22-usb/show-dialog";
++    if(QFile(showUSBPromptPath).exists() == false) {
++        string_writeconfig(showUSBPromptPath.toStdString(), "true");
+     }
+-    if(checkconfig(showUSBPromtPath) == true) {
++    if(checkconfig(showUSBPromptPath) == true) {
+         QTimer *usbmsPrompt = new QTimer(this);
+         usbmsPrompt->setInterval(500);
+         connect(usbmsPrompt, &QTimer::timeout, [&]() {
+@@ -1006,12 +1002,12 @@ void MainWindow::checkForOtaUpdate() {
+             unsigned long syncEpoch = checkconfig_str_val.toULong();
+             unsigned long allowSyncEpoch = syncEpoch + 86400;
+             if(currentEpoch > allowSyncEpoch) {
+-                log("Launching OTA update process", className);
++                log("Launching OTA updater process", className);
+                 launchOtaUpdater();
+             }
+         }
+         else {
+-            log("Launching OTA update process", className);
++            log("Launching OTA updater process", className);
+             launchOtaUpdater();
+         }
+     }
+diff --git a/src/settings/settings.cpp b/src/settings/settings.cpp
+index d314088..1ccfade 100644
+--- a/src/settings/settings.cpp
++++ b/src/settings/settings.cpp
+@@ -107,11 +107,11 @@ settings::settings(QWidget *parent) :
+     if(checkconfig(".config/05-quote/config") == true) {
+         ui->quoteCheckBox->click();
+     }
+-    if(checkconfig(".config/23-updates/check-updates") == true) {
++    if(checkconfig(".config/23-updates/check") == true) {
+         ui->updateCheckingCheckbox->click();
+     }
+     if(checkconfig(".config/22-usb/show-dialog") == true) {
+-        ui->showUSBPromtCheckBox->click();
++        ui->showUSBPromptCheckBox->click();
+     }
+ 
+     if(global::deviceID == "n705\n" or global::deviceID == "n905\n" or global::deviceID == "n613\n" or global::deviceID == "n236\n" or global::deviceID == "n437\n" or global::deviceID == "n306\n") {
+@@ -1121,27 +1121,23 @@ void settings::on_updateCheckingCheckbox_toggled(bool checked)
+     QString settingString = "Check for updates";
+     if(checked == true) {
+         logEnabled(settingString, className);
+-        checked_box = true;
+-        writeconfig(".config/23-updates/check-updates", "true");
++        string_writeconfig(".config/23-updates/check", "true");
+     }
+     else {
+         logDisabled(settingString, className);
+-        checked_box = false;
+-        writeconfig(".config/23-updates/check-updates", "false");
++        string_writeconfig(".config/23-updates/check", "false");
+     }
+ }
+ 
+-void settings::on_showUSBPromtCheckBox_toggled(bool checked)
++void settings::on_showUSBPromptCheckBox_toggled(bool checked)
+ {
+-    QString settingString = "Show usb promt";
++    QString settingString = "Show usb prompt";
+     if(checked == true) {
+         logEnabled(settingString, className);
+-        checked_box = true;
+-        writeconfig(".config/22-usb/show-dialog", "true");
++        string_writeconfig(".config/22-usb/show-dialog", "true");
+     }
+     else {
+         logDisabled(settingString, className);
+-        checked_box = false;
+-        writeconfig(".config/22-usb/show-dialog", "false");
++        string_writeconfig(".config/22-usb/show-dialog", "false");
+     }
+ }
+diff --git a/src/settings/settings.h b/src/settings/settings.h
+index 561fdb7..646e4d2 100644
+--- a/src/settings/settings.h
++++ b/src/settings/settings.h
+@@ -75,12 +75,9 @@ private slots:
+     void on_pageSizeHeightIncBtn_clicked();
+     void on_pageSizeWidthDecBtn_clicked();
+     void on_pageSizeWidthIncBtn_clicked();
+-
+     void on_localLibraryShowFoldersCheckBox_toggled(bool checked);
+-
+     void on_updateCheckingCheckbox_toggled(bool checked);
+-
+-    void on_showUSBPromtCheckBox_toggled(bool checked);
++    void on_showUSBPromptCheckBox_toggled(bool checked);
+ 
+ signals:
+     void showToast(QString messageToDisplay);
+diff --git a/src/settings/settings.ui b/src/settings/settings.ui
+index e0b6ee6..529f851 100644
+--- a/src/settings/settings.ui
++++ b/src/settings/settings.ui
+@@ -664,7 +664,7 @@
+                 </widget>
+                </item>
+                <item row="26" column="0">
+-                <widget class="QCheckBox" name="showUSBPromtCheckBox">
++                <widget class="QCheckBox" name="showUSBPromptCheckBox">
+                  <property name="text">
+                   <string>Show USB connection dialog</string>
+                  </property>
+-- 
+2.37.3
+

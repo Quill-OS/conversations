@@ -1,0 +1,124 @@
+kindle:/# env -i DEVICE="${DEVICE}" PATH="/app-bin:/system-bin" /usr/bin/strace /usr/sbin/chroot /data/onboard/.apps/InkVT/InkVT "/app-bin/InkVT-kindle" -c /system-bin/sh --osk -f vga --no-timeout
+execve("/usr/sbin/chroot", ["/usr/sbin/chroot", "/data/onboard/.apps/InkVT/InkVT", "/app-bin/InkVT-kindle", "-c", "/system-bin/sh", "--osk", "-f", "vga", "--no-timeout"], 0xbeb52e90 /* 2 vars */) = 0
+set_tls(0x4008a388)                     = 0
+set_tid_address(0x4008af3c)             = 3763
+brk(NULL)                               = 0x2a0e8000
+brk(0x2a0ea000)                         = 0x2a0ea000
+mmap2(0x2a0e8000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x2a0e8000
+open("/etc/ld-musl-armhf.path", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libacl.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+statx(3, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_BASIC_STATS, 0xbee81798) = -1 ENOSYS (Function not implemented)
+fstat64(3, {st_mode=S_IFREG|0755, st_size=17616, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0h\22\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 86016, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x4008b000
+mmap2(0x4009e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x3000) = 0x4009e000
+close(3)                                = 0
+open("/lib/libattr.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+statx(3, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_BASIC_STATS, 0xbee81798) = -1 ENOSYS (Function not implemented)
+fstat64(3, {st_mode=S_IFREG|0755, st_size=13480, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\320\r\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 81920, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x400a0000
+mmap2(0x400b2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x2000) = 0x400b2000
+close(3)                                = 0
+mprotect(0x4009e000, 4096, PROT_READ)   = 0
+mprotect(0x400b2000, 4096, PROT_READ)   = 0
+mprotect(0x2a0d0000, 24576, PROT_READ)  = 0
+prctl(PR_SET_NAME, "/usr/sbin/chroo"...) = 0
+prctl(PR_SET_KEEPCAPS, 3202883414)      = -1 EINVAL (Invalid argument)
+mmap2(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40079000
+statx(AT_FDCWD, "/data", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_BASIC_STATS, 0xbee81b00) = -1 ENOSYS (Function not implemented)
+lstat64("/data", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+statx(AT_FDCWD, "/data/onboard", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_BASIC_STATS, 0xbee81b00) = -1 ENOSYS (Function not implemented)
+lstat64("/data/onboard", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+statx(AT_FDCWD, "/data/onboard/.apps", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_BASIC_STATS, 0xbee81b00) = -1 ENOSYS (Function not implemented)
+lstat64("/data/onboard/.apps", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+statx(AT_FDCWD, "/data/onboard/.apps/InkVT", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_BASIC_STATS, 0xbee81b00) = -1 ENOSYS (Function not implemented)
+lstat64("/data/onboard/.apps/InkVT", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+statx(AT_FDCWD, "/data/onboard/.apps/InkVT/InkVT", AT_STATX_SYNC_AS_STAT|AT_SYMLINK_NOFOLLOW, STATX_BASIC_STATS, 0xbee81b00) = -1 ENOSYS (Function not implemented)
+lstat64("/data/onboard/.apps/InkVT/InkVT", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+munmap(0x40079000, 16384)               = 0
+chroot("/data/onboard/.apps/InkVT/InkVT") = 0
+chdir("/")                              = 0
+execve("/app-bin/InkVT-kindle", ["/app-bin/InkVT-kindle", "-c", "/system-bin/sh", "--osk", "-f", "vga", "--no-timeout"], 0xbee81e9c /* 2 vars */) = 0
+uname({sysname="Linux", nodename="kindle", ...}) = 0
+brk(NULL)                               = 0x232000
+brk(0x232d14)                           = 0x232d14
+set_tls(0x2324c0)                       = 0
+brk(0x253d14)                           = 0x253d14
+brk(0x254000)                           = 0x254000
+open("/dev/ptmx", O_RDWR)               = 3
+statfs("/dev/pts", {f_type=DEVPTS_SUPER_MAGIC, f_bsize=4096, f_blocks=0, f_bfree=0, f_bavail=0, f_files=0, f_ffree=0, f_fsid={val=[0, 0]}, f_namelen=255, f_frsize=4096}) = 0
+ioctl(3, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(3, TIOCGPTN, [3])                 = 0
+stat64("/dev/pts/3", {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x3), ...}) = 0
+getuid32()                              = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libnss_compat.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib", 0xbeb572f8)              = -1 ENOENT (No such file or directory)
+open("/usr/lib/libnss_compat.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/usr/lib", 0xbeb572f8)          = -1 ENOENT (No such file or directory)
+getgid32()                              = 0
+chmod("/dev/pts/3", 0620)               = 0
+ioctl(3, TIOCSPTLCK, [0])               = 0
+ioctl(3, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+ioctl(3, TIOCGPTN, [3])                 = 0
+stat64("/dev/pts/3", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x3), ...}) = 0
+open("/dev/pts/3", O_RDWR|O_NOCTTY)     = 4
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x232068) = 3764
+close(4)                                = 0
+ioctl(3, TCGETS, {B38400 opost -isig -icanon -echo ...}) = 0
+ioctl(3, SNDCTL_TMR_CONTINUE or TCSETSF, {B38400 opost -isig -icanon -echo ...}) = 0
+fcntl64(3, F_GETFL)                     = 0x2 (flags O_RDWR)
+fcntl64(3, F_SETFL, O_RDWR|O_NONBLOCK)  = 0
+open("/dev/input/event2", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = 4
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40000000
+write(1, "opened `/dev/input/event2`\n", 27opened `/dev/input/event2`
+) = 27
+gettimeofday({tv_sec=503157, tv_usec=389673}, NULL) = 0
+open("/dev/fb0", O_RDWR|O_CLOEXEC)      = 5
+open("/proc/usid", O_RDONLY|O_CLOEXEC)  = 6
+fcntl64(6, F_GETFD)                     = 0x1 (flags FD_CLOEXEC)
+fstat64(6, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x40001000
+read(6, "B01114082142063E", 1024)       = 16
+close(6)                                = 0
+munmap(0x40001000, 4096)                = 0
+write(2, "[FBInk] Detected a Kindle Touch "..., 59[FBInk] Detected a Kindle Touch (0x11 => Whitney on Yoshi)
+) = 59
+write(2, "[FBInk] Enabled Kindle with Pear"..., 48[FBInk] Enabled Kindle with Pearl screen quirks
+) = 48
+write(2, "[FBInk] Clock tick frequency app"..., 50[FBInk] Clock tick frequency appears to be 100 Hz
+) = 50
+write(2, "[FBInk] Screen density set to 16"..., 38[FBInk] Screen density set to 167 dpi
+) = 38
+ioctl(5, FBIOGET_VSCREENINFO, 0x22e0bc) = 0
+write(2, "[FBInk] Variable fb info: 600x80"..., 72[FBInk] Variable fb info: 600x800, 8bpp @ rotation: 1 (Clockwise, 90°)
+) = 72
+ioctl(5, FBIOGET_FSCREENINFO, 0x22e020) = 0
+write(2, "[FBInk] Fixed fb info: ID is \"mx"..., 101[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 2179072 bytes & line length: 608 bytes
+) = 101
+write(2, "[FBInk] Fontsize set to 16x32 (I"..., 62[FBInk] Fontsize set to 16x32 (IBM VGA base glyph size: 8x16)
+) = 62
+write(2, "[FBInk] Line length: 37 cols, Pa"..., 49[FBInk] Line length: 37 cols, Page size: 25 rows
+) = 49
+write(2, "[FBInk] Pen colors set to #00000"..., 84[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+) = 84
+mmap2(NULL, 2179072, PROT_READ|PROT_WRITE, MAP_SHARED, 5, 0) = 0x40001000
+getpid()                                = 3763
+ioctl(5, _IOC(_IOC_WRITE, 0x46, 0x2e, 0x48), 0xbeb59ef8) = 0
+ioctl(5, _IOC(_IOC_WRITE, 0x46, 0x2e, 0x48), 0xbeb59d00) = 0
+timerfd_create(CLOCK_MONOTONIC, TFD_NONBLOCK) = 6
+timerfd_settime(6, 0, {it_interval={tv_sec=0, tv_nsec=0}, it_value={tv_sec=0, tv_nsec=0}}, NULL) = 0
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0x802515cd} ---
++++ killed by SIGSEGV +++
+Segmentation fault

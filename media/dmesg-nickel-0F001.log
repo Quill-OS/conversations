@@ -1,0 +1,400 @@
+kobo login: root
+login[215]: root login on 'ttymxc0'
+[root@kobo ~]# desmesg
+Booting Linux on physical CPU 0x0
+Linux version 4.1.15-00463-g38afd5cea756 (gallen@gallen-ASUS-EXPERTCENTER-D900TA-D900TA) (gcc version 5.3.0 (GCC) ) #28 SMP PREEMPT Fri Sep 16 10:43:24 CST 2022
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine model: Freescale i.MX6 ULL DDR3 NTX Board
+Memory policy: Data cache writealloc
+On node 0 totalpages: 65280
+free_area_init_node: node 0, pgdat 8086e440, node_mem_map 8fbf7000
+  Normal zone: 508 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 65024 pages, LIFO batch:15
+  HighMem zone: 256 pages, LIFO batch:0
+PERCPU: Embedded 12 pages/cpu @8fbcf000 s16908 r8192 d24052 u49152
+pcpu-alloc: s16908 r8192 d24052 u49152 alloc=12*4096
+pcpu-alloc: [0] 0 
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 64772
+Kernel command line: console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+PID hash table entries: 1024 (order: 0, 4096 bytes)
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 249624K/261120K available (5791K kernel code, 237K rwdata, 2200K rodata, 376K init, 380K bss, 11496K reserved, 0K cma-reserved, 1024K highmem)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0x90000000 - 0xff000000   (1776 MB)
+    lowmem  : 0x80000000 - 0x8ff00000   ( 255 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .text : 0x80008000 - 0x807d5fc4   (7992 kB)
+      .init : 0x807d6000 - 0x80834000   ( 376 kB)
+      .data : 0x80834000 - 0x8086f520   ( 238 kB)
+       .bss : 0x80872000 - 0x808d1394   ( 381 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Preemptible hierarchical RCU implementation.
+	Additional per-CPU info printed with stalls.
+	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS:16 nr_irqs:16 16
+mxc_clocksource_init 24000000
+Switching to timer-based delay loop, resolution 41ns
+sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+clocksource mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+/cpus/cpu@0 missing clock-frequency property
+CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Setting up static identity map for 0x80008280 - 0x800082d8
+Brought up 1 CPUs
+SMP: Total of 1 processors activated (48.00 BogoMIPS).
+CPU: All CPU(s) started in SVC mode.
+devtmpfs: initialized
+device-tree: Duplicate name in lcdif@021c8000, renamed to "display#1"
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+cpuidle: using governor ladder
+cpuidle: using governor menu
+ntx_parse_cmdline():cp cmdline=console=ttymxc0,115200 rootwait rw no_console_suspend hwcfg_p=0x8ffffe00 hwcfg_sz=110 waveform_p=0x8ff71a00 waveform_sz=582529 ntxfw_p=0x8ff71400 ntxfw_sz=1034 mem=255M boot_port=1 rootfstype=ext4 root=/dev/mmcblk0p1 quiet
+hwcfg_size_setup() hwcfg_szie=110
+***_MemoryRequest:48: request memory region! addr=8ffffe00, len=110***
+hwcfg_p_setup() hwcfg_p=8ffffe00,vaddr=9005ee00,size=110,pcb=0x51
+boot_port_setup() boot_port=1
+ntxfw_size_setup() ntxfw_size=1034
+***_MemoryRequest:48: request memory region! addr=8ff71400, len=1034***
+ntxfw[0],"E60U22A0_2fl_hdr_200520",type=0x6,sz=16
+lm3630fl dual color table : 1 temperatures ,c1_pwr=0x0,c2_pwr=0x0
+ntxfw[1],"E60U22A0_2fl_tab_200520",type=0x7,sz=844
+ntxfw_p_setup() ntxfw_p=8ff71400,vaddr=9007c400,size=1034,name="E60U22A1",ver=0.0.0.0,items=2
+hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 8 bytes.
+imx6ul-pinctrl 20e0000.iomuxc: initialized IMX pinctrl driver
+imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+mxs-dma 1804000.dma-apbh: initialized
+PMU: ricoh61x_i2c_init:
+PMU: rohmbd71828_i2c_init:
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+sy7636_probe calling
+sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall=78
+sy7636_i2c_parse_dt_pdata():gpio_pmic_pwrall init set 1
+sy7636_i2c_parse_dt_pdata():gpio_pmic_powerup=89
+sy7636_detect calling
+sy7636_detect():opmode=0x0
+sy7636_detect success
+sy7636 0-0062: PMIC SY7636 for eInk display
+sy7636_probe success
+i2c i2c-0: IMX I2C adapter registered
+i2c i2c-0: can't use DMA
+PMU: ricoh61x_i2c_probe:
+ricoh61x_pre_init,line=956
+ricoh61x irq gpio 129
+invalid sleep gpio: -2
+invalid dc_det gpio: -2
+ricoh61x chg gpio 128
+ricoh61x bat_low gpio 131
+PMU: ricoh61x_irq_init: g_full_flag: 0, CHGSTS1: 0x20
+ricoh61x_irq_init: ricoh619_pmic_irq=1
+i2c i2c-3: IMX I2C adapter registered
+i2c i2c-3: can't use DMA
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+PMU: bd71827_battery_init
+MIPI CSI2 driver module loaded
+Advanced Linux Sound Architecture Driver Initialized.
+Bluetooth: Core ver 2.20
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+PMU: bd71828_regulator_init
+PMU: ricoh61x_regulator_init
+PMU: ricoh61x_regulator_probe
+RICOH619_DC1 at 900000uv suspend
+RICOH619_DC2 at 3000000uv suspend
+RICOH619_DC4 at 1140000uv suspend
+RICOH619_DC5 at 1700000uv suspend
+RICOH619_LDO2 at 3000000uv suspend
+sy7636-pmic sy7636-pmic: num_regulators 4
+sy7636-pmic sy7636-pmic: on_delay1=0x2
+sy7636-pmic sy7636-pmic: on_delay2=0x2
+sy7636-pmic sy7636-pmic: on_delay3=0x2
+sy7636-pmic sy7636-pmic: on_delay4=0x2
+sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944606744
+sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+sy7636_regulator_probe(1014): SY7636@8c17a780
+sy7636_regulator_probe():initial vcom=-2500000uV
+ _sy7636_vcom_get_voltage() : vcom=-2500000uV
+_sy7636_vcom_get_voltage() : vcom=-2500000uV
+sy7636_get_temperature():temperature = 0,reg=0x0
+sy7636_get_temperature():temperature = 0,reg=0x0
+PMU: bd718x7_rtc_init
+PMU RTC: ricoh61x_rtc_probe, ricoh61x driver run at 24H-mode
+PMU RTC: we never using periodic function and interrupt
+ricoh61x_rtc_Pon_get_clr, PON=1 -- CTRL2=0x20
+PMU: ricoh61x_rtc_alarm_enable :0
+PMU: ricoh61x_rtc_probe register rtc device
+PMU: ricoh61x_rtc_read_alarm
+rtc_ricoh619 rtc_ricoh619: PMU: read alarm: 4/26/2023 2:4:6 *****
+rtc_ricoh619 rtc_ricoh619: rtc core: registered rtc_ricoh619 as rtc0
+[ricoh61x_irq_sync_unlock-283] set 0xAE to 0x60
+PMU: ricoh61x_rtc_alarm_enable :0
+RICOH61x RTC Register Success
+Switched to clocksource mxc_timer1
+NET: Registered protocol family 2
+TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 1, 8192 bytes)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+NET: Registered protocol family 1
+imx rpmsg driver is registered.
+Bus freq driver module loaded
+futex hash table entries: 256 (order: 2, 16384 bytes)
+bounce: pool size: 64 pages
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+imx-weim 21b8000.weim: Driver registered.
+lm3630a_bl_parse_dt pchip=8c1df910,hwen_gpio 91
+lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+imx-sdma 20ec000.sdma: no event needs to be remapped
+imx-sdma 20ec000.sdma: loaded firmware 3.3
+imx-sdma 20ec000.sdma: initialized
+2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+console [ttymxc0] enabled
+21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+imx-rng 2284000.rngb: iMX RNG Registered.
+imx sema4 driver is registered.
+[drm] Initialized drm 1.1.0 20060810
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+brd: module loaded
+loop: module loaded
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-mxc: Freescale On-Chip EHCI Host driver
+usbcore: registered new interface driver usb-storage
+2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+2184000.usb supply vbus not found, using dummy regulator
+mousedev: PS/2 mouse device common for all mice
+input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[__elan_touch_init-361] firmware version 52 01 2C 31 (12C3)
+[__elan_touch_init-368] firmware ID 52 F1 B5 01 (1B50)
+[__elan_touch_init-400] boot code version  52 05 56 81
+[__elan_touch_init-405] x resolution: 1436 
+[__elan_touch_init-410] y resolution: 1920 
+input: elan-touch as /devices/virtual/input/input1
+elan ts starts in interrupt mode.
+cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+i2c /dev entries driver
+syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021978 ntx_machine_poweroff
+syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+PMU: ricoh61x_battery_init
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+ricoh619_battery_dt_init type_n=0
+ricoh619-battery ricoh619-battery: alarm_vol_mv=3250
+ricoh619-battery ricoh619-battery: fg_poff_vbat=3350
+ricoh61x_battery_probe type_n=0,temp is 1
+ricoh61x_battery_probe() TempDetect=0
+ricoh61x_battery_probe info->num=7,temp is 8
+PMU FG_RESET : ricoh61x_init_battery : initial pswr = 94
+PMU : ricoh61x_init_battery : POWER off history 0x0a is 0x10 
+PMU : ricoh61x_init_battery : POWER control function 0x0d is 0x00 
+PMU : ricoh61x_init_battery : off is 467348, on is 467348, period is 0, fpon_flag is 0
+PMU: ricoh61x_set_OCV_table : 00% voltage = 3431000 uV
+PMU: ricoh61x_set_OCV_table : 10% voltage = 3571400 uV
+PMU: ricoh61x_set_OCV_table : 20% voltage = 3728900 uV
+PMU: ricoh61x_set_OCV_table : 30% voltage = 3766700 uV
+PMU: ricoh61x_set_OCV_table : 40% voltage = 3775300 uV
+PMU: ricoh61x_set_OCV_table : 50% voltage = 3786300 uV
+PMU: ricoh61x_set_OCV_table : 60% voltage = 3822900 uV
+PMU: ricoh61x_set_OCV_table : 70% voltage = 3902300 uV
+PMU: ricoh61x_set_OCV_table : 80% voltage = 3960900 uV
+PMU: ricoh61x_set_OCV_table : 90% voltage = 4048800 uV
+PMU: ricoh61x_set_OCV_table : 100% voltage = 4137900 uV
+PMU : ricoh61x_set_OCV_table : target_vsys is 2869 target_ibat is 179
+PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(2928) is out of range(3431000) 
+PMU : ricoh61x_scaling_OCV_table : new table
+PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35690 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37265 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37656 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37741 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37851 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38217 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38999 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39585 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 40464 v
+PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41355 v
+PMU : ricoh61x_init_charger : GCHGDET (0xDA) is 0x0
+PMU : ricoh61x_init_charger : after CHGISET_REG (0xb8) is 0x44 info->ch_ichg is 0xff info->ch_icchg is 0x1
+PMU : ricoh61x_init_charger : before BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+PMU : ricoh61x_init_charger : after BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+PMU : ricoh61x_init_charger : before BATSET2_REG (0xbb) is 0x33 info->ch_vrchg is 0xff info->ch_vfchg is 0xff 
+PMU : ricoh61x_init_charger : test test val 48, val2 3 vfchg 4200
+PMU : ricoh61x_init_charger : test test val 64, val2 1 icchg 100
+PMU : ricoh61x_init_charger : 100 min 4109000, 100 max 4233000 vfchg 4200 icchg 100 rbat 278
+PMU: ricoh61x_init_fgsoca : * 00% voltage = 3429700 uV
+PMU: ricoh61x_init_fgsoca : * 10% voltage = 3568900 uV
+PMU: ricoh61x_init_fgsoca : * 20% voltage = 3726400 uV
+PMU: ricoh61x_init_fgsoca : * 30% voltage = 3765500 uV
+PMU: ricoh61x_init_fgsoca : * 40% voltage = 3774100 uV
+PMU: ricoh61x_init_fgsoca : * 50% voltage = 3785100 uV
+PMU: ricoh61x_init_fgsoca : * 60% voltage = 3821700 uV
+PMU: ricoh61x_init_fgsoca : * 70% voltage = 3899800 uV
+PMU: ricoh61x_init_fgsoca : * 80% voltage = 3958400 uV
+PMU: ricoh61x_init_fgsoca : * 90% voltage = 4046300 uV
+PMU: ricoh61x_init_fgsoca : * 100% voltage = 4135500 uV
+calc_soc_by_voltageMethod(): FG not ready , getting vbatt from ADC .
+measure_vbatt_ADC():4070000 uV
+==== calc_soc_by_voltageMethod E60U22 ====
+PMU : calc_soc_by_voltageMethod : VBAT is 4070000 [uV], soc is 9200 [0.01%] ----------
+PMU: ricoh61x_init_fgsoca : * Rbat = 278 mOhm   n_cap = 898 mAH
+Create pmic_battery.1 in platform
+sy7636_sensor_probe starting
+sy7636_sensor_probe success
+imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+PMIC = RC5T619, no need to feed watchdog
+Bluetooth: Virtual HCI driver ver 1.5
+Bluetooth: HCI UART driver ver 2.3
+Bluetooth: HCI UART protocol H4 registered
+Bluetooth: HCI UART protocol Three-wire (H5) registered
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+/soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+/soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+led_classdev_register():led_cdev->name=GLED,name=GLED
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+fsl-asrc 2034000.asrc: driver registered
+NET: Registered protocol family 17
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: BNEP socket layer initialized
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+Bluetooth: HIDP socket layer initialized
+lib80211: common routines for IEEE802.11 drivers
+lib80211_crypt: registered algorithm 'NULL'
+lib80211_crypt: registered algorithm 'WEP'
+lib80211_crypt: registered algorithm 'CCMP'
+lib80211_crypt: registered algorithm 'TKIP'
+ntx_wifi_bt_power_init() : done 
+_ntx_wifi_bt_power_ctrl g_initialize = 1
+Wifi / BT power control 0
+Wifi already off.
+wifi 3v3 power off
+_ntx_wifi_bt_power_ctrl() : done 
+mmc0: host does not support reading read-only switch, assuming write-enable
+mmc0: new high speed SDXC card at address 0001
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(7704):EPD 1024x758 
+imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+mmcblk0: mmc0:0001 EC2QT 59.6 GiB 
+ mmcblk0: p1 p2 p3
+_sy7636_vcom_get_voltage() : vcom=-2500000uV
+waveform_size_setup() wf_size=582529
+***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+waveform_p_setup() wf_p=8ff71a00,vaddr=90f00a00,size=582529
+mxc_epdc_fb_init_hw(7479)
+[epdc_firmware_work_func]:fw p=90f00a00,size=582529,fb_data@8c508000,pdata=80849e18
+mxc_epdc_fb_fw_handler(6995),fw=8c193ee8
+mxc_epdc_fb_fw_handler(): fw p=90f00a00,size=582529
+imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R400_AD7121_ED060XH7U4_VB3300-FOC_TC
+drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+EPD QOS_WR 0x7, QOS_RD 0x7
+fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfeed=>-275 10mV,-2750000 uV
+drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,DisplayResolution=1
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+gpio-keys gpio-keys: Error applying setting, reverse things back
+Power:do-not-wakeup-hibernation=0
+Hall:do-not-wakeup-hibernation=0
+_sy7636_vcom_get_voltage() : vcom=-2750000uV
+rtc_ricoh619 rtc_ricoh619: setting system clock to 2023-04-25 20:56:19 UTC (1682456179)
+TMST_SY7636: disabling
+sy7636_get_temperature():temperature = 23,reg=0x17
+RICOH619_LDORTC2: disabling
+RICOH619_LDORTC1: disabling
+RICOH619_LDO10: disabling
+RICOH619_LDO9: disabling
+RICOH619_LDO4: disabling
+RICOH619_LDO3: disabling
+RICOH619_LDO1: disabling
+SD1_SPWR: disabling
+vref-3v3: disabling
+ALSA device list:
+  No soundcards found.
+EXT4-fs (mmcblk0p1): warning: maximal mount count reached, running e2fsck is recommended
+EXT4-fs (mmcblk0p1): recovery complete
+EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:1.
+devtmpfs: mounted
+Freeing unused kernel memory: 376K (807d6000 - 80834000)
+EXT4-fs (mmcblk0p1): re-mounted. Opts: (null)
+udevd (96): /proc/96/oom_adj is deprecated, please use /proc/96/oom_score_adj instead.
+imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(287)[mAs], cc_sum_dec(-287)
+PMU: ricoh61x_displayed_work : dsoc_temp(9400), soc(9400), cc_delta(0)
+PMU: ricoh61x_displayed_work : status(0), rsoc_ready_flag(0)
+PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 0
+PMU:check_charge_status_2 2nd P-On init_pswr(94), cc(0)
+PMU : set_current_time2register : second is 1682456181, hour is 467348
+PMU FG_RESET : calc_capacity_2 : capacity 9400 init_pswr 94 cc_delta 0
+PMU FG_RESET : ricoh61x_displayed_work : initial  dsoc  is  9400
+PMU : set_current_time2register : second is 1682456181, hour is 467348
+PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(287)[mAs], cc_sum_dec(-287)
+PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(0)
+PMU:STATUS= 3: IBAT= -155: VSYS= 4034000: VBAT= 4056100: DSOC= 9400: RSOC= 9400: cc_delta=0: rrf= 0
+usb unplugged
+random: nonblocking pool is initialized
+IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+PMU2: Watchdog timeout triggered. ===============
+PMU: mainFlowOfLowVoltage :	Noxx : cc_delta_cap is 0, cc_delta_cap_now is -11, last_cc_delta_cap is -11
+PMU: mainFlowOfLowVoltage :	Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is 0, cc_cap_mas -3671
+PMU: mainFlowOfLowVoltage :	No9 :Cap is 9357 , low_rate is 104, dsoc is 9400, capnow is 9320, capzero is 13, delta cc is 0, delta cc ori is 0
+PMU: mainFlowOfLowVoltage :	No10 :temp_mas is 0, offset_mas is -1944010752, value is 0, final value is 0
+PMU : set_current_time2register : second is 1682456210, hour is 467348
+PMU:STATUS= 7: IBAT= -115: VSYS= 4032750: VBAT= 4045400: DSOC= 9400: RSOC= 9400: cc_delta=0: rrf= 0
+PMU: ricoh61x_rtc_alarm_enable :0
+[root@kobo ~]# sh: you need to specify whom to kill
+
+[root@kobo ~]# 
+[root@kobo ~]# killall: wpa_supplicant: no process killed
+dhcpcd[1537]: version 6.6.6 starting
+dhcpcd[1537]: eth0: using /sys hwaddr: 58:b0:d4:bf:c6:1a
+dhcpcd[1537]: eth0: executing `/libexec/dhcpcd-run-hooks' PREINIT
+dhcpcd[1537]: eth0: executing `/libexec/dhcpcd-run-hooks' NOCARRIER
+dhcpcd[1537]: no interfaces have a carrier
+dhcpcd[1537]: forking to background
+dhcpcd[1537]: forked to background, child pid 1549

@@ -1,0 +1,15 @@
+```
+OPENSSL_DIR=/home/build/inkbox/openssl/ cargo zigbuild --target armv7-unknown-linux-musleabihf
+```
+i was able to compile it with my compiled openssl ( thanks to cargo zig build ), but this issue now:
+```
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/inkbox-build/inkbox/inkbox-toreader/libs/Libretranslate-rs-to-cpp/lib//libLibretranslate_rs_to_cpp.a(armcap.o): in function `OPENSSL_cpuid_setup':
+armcap.c:(.text.startup.OPENSSL_cpuid_setup+0xa2): undefined reference to `sigsetjmp'
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: armcap.c:(.text.startup.OPENSSL_cpuid_setup+0xae): undefined reference to `sigsetjmp'
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: armcap.c:(.text.startup.OPENSSL_cpuid_setup+0xf4): undefined reference to `sigsetjmp'
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: armcap.c:(.text.startup.OPENSSL_cpuid_setup+0x100): undefined reference to `sigsetjmp'
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: armcap.c:(.text.startup.OPENSSL_cpuid_setup+0x10c): undefined reference to `sigsetjmp'
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/11.2.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/inkbox-build/inkbox/inkbox-toreader/libs/Libretranslate-rs-to-cpp/lib//libLibretranslate_rs_to_cpp.a(armcap.o):armcap.c:(.text.startup.OPENSSL_cpuid_setup+0x118): more undefined references to `sigsetjmp' follow
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:505: build/inkbox] Error 1
+```

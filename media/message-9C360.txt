@@ -1,0 +1,112 @@
+kobo:/# chromium-browser --no-sandbox
+[1858:1878:0801/025133.866249:ERROR:bus.cc(394)] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+[1858:1910:0801/025458.762565:ERROR:model_type_store_service_impl.cc(35)] Failed to initialize ModelTypeStore backend: Init@./../../components/sync/model_impl/model_type_store_backend.cc:99: IO error: /root/.config/chromium/Default/Sync Data/LevelDB/000001.dbtmp: Could not rename file: No further details. (ChromeMethodBFE: 14::RenameFile::1)
+[1858:1908:0801/025519.431017:ERROR:bus.cc(394)] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+[0801/025849.684825:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libvdpau.so.1.0.0
+  Error: No error information
+[0801/025850.130515:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libpangoft2-1.0.so.0.4200.3
+  Error: No error information
+[0801/025850.130977:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libpangoft2-1.0.so.0.4200.3
+  Error: No error information
+[0801/025850.142756:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libfribidi.so.0.4.0
+  Error: No error information
+[0801/025850.143178:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libfribidi.so.0.4.0
+  Error: No error information
+[0801/025850.144369:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libpixman-1.so.0.38.4
+  Error: No error information
+[0801/025850.144678:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libpixman-1.so.0.38.4
+  Error: No error information
+[0801/025850.145898:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libxcb-shm.so.0.0.0
+  Error: No error information
+[0801/025850.146213:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libxcb-shm.so.0.0.0
+  Error: No error information
+[0801/025850.147305:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libxcb-render.so.0.0.0
+  Error: No error information
+[0801/025850.147595:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libxcb-render.so.0.0.0
+  Error: No error information
+[0801/025850.149205:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libogg.so.0.8.3
+  Error: No error information
+[0801/025850.149527:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libogg.so.0.8.3
+  Error: No error information
+[0801/025850.150449:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libcairo-gobject.so.2.11600.0
+  Error: No error information
+[0801/025850.150738:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libcairo-gobject.so.2.11600.0
+  Error: No error information
+[0801/025850.151635:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libepoxy.so.0.0.0
+  Error: No error information
+[0801/025850.151916:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libepoxy.so.0.0.0
+  Error: No error information
+[0801/025850.153663:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libXinerama.so.1.0.0
+  Error: No error information
+[0801/025850.154187:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libXinerama.so.1.0.0
+  Error: No error information
+[0801/025850.155120:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libxkbcommon.so.0.0.0
+  Error: No error information
+[0801/025850.155421:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libxkbcommon.so.0.0.0
+  Error: No error information
+[0801/025850.156489:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libwayland-cursor.so.0.0.0
+  Error: No error information
+[0801/025850.162918:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libwayland-cursor.so.0.0.0
+  Error: No error information
+[0801/025850.164361:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libwayland-egl.so.1.0.0
+  Error: No error information
+[0801/025850.164714:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libwayland-egl.so.1.0.0
+  Error: No error information
+[0801/025850.165819:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libwayland-client.so.0.3.0
+  Error: No error information
+[0801/025850.166120:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libwayland-client.so.0.3.0
+  Error: No error information
+[0801/025850.167006:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libbsd.so.0.9.1
+  Error: No error information
+[0801/025850.167297:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libbsd.so.0.9.1
+  Error: No error information
+[0801/025850.168274:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libp11-kit.so.0.3.0
+  Error: No error information
+[0801/025850.168556:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libp11-kit.so.0.3.0
+  Error: No error information
+[0801/025850.169570:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libunistring.so.2.1.0
+  Error: No error information
+[0801/025850.169853:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libunistring.so.2.1.0
+  Error: No error information
+[0801/025850.170857:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libtasn1.so.6.5.6
+  Error: No error information
+[0801/025850.171141:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libtasn1.so.6.5.6
+  Error: No error information
+[0801/025850.172103:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libnettle.so.6.5
+  Error: No error information
+[0801/025850.173057:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libnettle.so.6.5
+  Error: No error information
+[0801/025850.174327:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libhogweed.so.4.5
+  Error: No error information
+[0801/025850.174649:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libhogweed.so.4.5
+  Error: No error information
+[0801/025850.175642:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libgmp.so.10.3.2
+  Error: No error information
+[0801/025850.175934:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libgmp.so.10.3.2
+  Error: No error information
+[0801/025850.181462:WARNING:stack_trace_posix.cc(715)] Failed to open file: /lib/libblkid.so.1.1.0
+  Error: No error information
+[0801/025850.181822:WARNING:stack_trace_posix.cc(715)] Failed to open file: /lib/libblkid.so.1.1.0
+  Error: No error information
+[0801/025850.207081:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libdrm.so.2.4.0
+  Error: No error information
+[0801/025850.207554:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/libdrm.so.2.4.0
+  Error: No error information
+[0801/025850.510138:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/chromium/chrome
+  Error: No error information
+[0801/025850.511711:WARNING:stack_trace_posix.cc(715)] Failed to open file: /usr/lib/chromium/chrome
+  Error: No error information
+[1906:1906:0801/025853.630890:ERROR:resource_bundle.cc(887)] Failed to load /usr/lib/chromium/chrome_100_percent.pak
+Some features may not be available.
+[1906:1906:0801/025856.912173:ERROR:resource_bundle.cc(434)] failed to load locale.pak
+[1906:1906:0801/025857.595623:ERROR:resource_bundle.cc(887)] Failed to load /usr/lib/chromium/resources.pak
+Some features may not be available.
+[1906:1906:0801/025857.595853:FATAL:chrome_main_delegate.cc(989)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
+Received signal 6
+[end of stack trace]
+Calling _exit(1). Core file will not be generated.
+[1902:1902:0801/025937.267079:ERROR:gl_surface_glx.cc(455)] glxQueryVersion failed
+[1902:1902:0801/025939.324660:ERROR:gl_initializer_x11.cc(148)] GLSurfaceGLX::InitializeOneOff failed.
+[1902:1902:0801/025952.562113:ERROR:viz_main_impl.cc(167)] Exiting GPU process due to errors during initialization
+
+

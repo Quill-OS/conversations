@@ -1,0 +1,855 @@
+[ 1038.502258] PM: Syncing filesystems ... done.
+[ 1038.503151] PM: Preparing system for mem sleep
+[ 1038.503995] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[ 1038.505629] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 1038.506926] PM: Entering mem sleep
+[ 1038.519372] lm3630a_bank_a_update_status():FL PWR[OFF] 
+[ 1038.521100] PMU: ricoh61x_battery_suspend START =================================================================
+[ 1038.530943] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(1073)[mAs], cc_sum_dec(1073)
+[ 1038.535373] PMU : ricoh61x_battery_suspend : Suspend : temp_cc_delta_cap_mas is 0, cc_delta is 1073, last_cc_del1
+[ 1038.535390] PMU: ricoh61x_battery_suspend status(4), rrf(0), suspend_soc(9103), suspend_cc(3)
+[ 1038.535400] PMU: ricoh61x_battery_suspend DSOC(9103), init_pswr(91), cc_delta(3)
+[ 1038.537111] PMU : set_current_time2register : second is 1680706767, hour is 466862
+[ 1038.566914] PMU FG_RESET : calc_capacity_2 : capacity 9103 init_pswr 91 cc_delta 3
+[ 1038.573576] PMU: ricoh61x_battery_suspend : STATUS(4), DSOC(9103), RSOC(9103), init_pswr*100(9100), cc_delta(3) =
+[ 1038.586598] PMU FG_RESET : calc_capacity_2 : capacity 9103 init_pswr 91 cc_delta 3
+[ 1038.593395] PMU: ricoh61x_battery_suspend : fl_current(0), slp_state(1), sus_current(7420), hiber_current(560)
+[ 1038.614638] ------------[ cut here ]------------
+[ 1038.614671] WARNING: CPU: 0 PID: 8430 at kernel/irq/manage.c:1346 __free_irq+0xa4/0x1ec()
+[ 1038.614679] Trying to free already-free IRQ 32
+[ 1038.614687] Modules linked in: [last unloaded: sdio_wifi_pwr]
+[ 1038.614709] CPU: 0 PID: 8430 Comm: ipd Tainted: G        W  O    4.1.15 #1
+[ 1038.614718] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+[ 1038.614752] [<80016240>] (unwind_backtrace) from [<800126e8>] (show_stack+0x10/0x14)
+[ 1038.614774] [<800126e8>] (show_stack) from [<8052f0c0>] (dump_stack+0x84/0xc4)
+[ 1038.614795] [<8052f0c0>] (dump_stack) from [<8003956c>] (warn_slowpath_common+0x80/0xb0)
+[ 1038.614812] [<8003956c>] (warn_slowpath_common) from [<800395cc>] (warn_slowpath_fmt+0x30/0x40)
+[ 1038.614830] [<800395cc>] (warn_slowpath_fmt) from [<80071b5c>] (__free_irq+0xa4/0x1ec)
+[ 1038.614849] [<80071b5c>] (__free_irq) from [<80071d38>] (free_irq+0x4c/0xa4)
+[ 1038.614872] [<80071d38>] (free_irq) from [<8036a884>] (elan_touch_suspend+0xa0/0x114)
+[ 1038.614895] [<8036a884>] (elan_touch_suspend) from [<802dae38>] (dpm_run_callback+0x2c/0xc0)
+[ 1038.614914] [<802dae38>] (dpm_run_callback) from [<802dbdfc>] (__device_suspend+0x114/0x3bc)
+[ 1038.614932] [<802dbdfc>] (__device_suspend) from [<802dd174>] (dpm_suspend+0x120/0x234)
+[ 1038.614951] [<802dd174>] (dpm_suspend) from [<8006cd28>] (suspend_devices_and_enter+0xb0/0x500)
+[ 1038.614968] [<8006cd28>] (suspend_devices_and_enter) from [<8006d410>] (pm_suspend+0x298/0x314)
+[ 1038.614983] [<8006d410>] (pm_suspend) from [<8006c018>] (state_store+0x6c/0xbc)
+[ 1038.615000] [<8006c018>] (state_store) from [<8013d1cc>] (kernfs_fop_write+0xb8/0x19c)
+[ 1038.615019] [<8013d1cc>] (kernfs_fop_write) from [<800e9bd4>] (__vfs_write+0x20/0xdc)
+[ 1038.615036] [<800e9bd4>] (__vfs_write) from [<800ea3b0>] (vfs_write+0x90/0x164)
+[ 1038.615052] [<800ea3b0>] (vfs_write) from [<800eabc8>] (SyS_write+0x44/0x9c)
+[ 1038.615069] [<800eabc8>] (SyS_write) from [<8000f440>] (ret_fast_syscall+0x0/0x3c)
+[ 1038.615081] ---[ end trace e2e79ef8c93e36e2 ]---
+[ 1038.623482] PM: suspend of devices complete after 114.854 msecs
+[ 1038.623503] PM: suspend devices took 0.120 seconds
+[ 1039.628529] PM: late suspend of devices complete after 1004.994 msecs
+[ 1039.630948] PM: noirq suspend of devices complete after 2.386 msecs
+[ 1039.630965] Disabling non-boot CPUs ...
+[ 1039.630975] Turn off M/F mix!
+[ 1039.632618] PM: noirq resume of devices complete after 1.543 msecs
+[ 1039.633674] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[ 1039.636451] IRQ gpio=0, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[ 1039.639138] IRQ gpio=1, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0xcf,when interrupt is comming
+[ 1039.642337] IRQ gpio=1, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 1039.645917] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+[ 1039.669845] PM: early resume of devices complete after 36.808 msecs
+[ 1039.672514] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[ 1039.686370] EPD QOS_WR 0x7, QOS_RD 0x7
+[ 1039.686431] ntx_power_key_hook():state=0
+[ 1039.686740] elan ts starts in interrupt mode.
+[ 1039.703737] PMU: ricoh61x_battery_resume START ==================================================================
+[ 1039.705045] PMU : ricoh61x_battery_resume :  suspend_period_time is 872, sleepExitTime is 1680707639 sleepEntryT=
+[ 1039.706639] PMU : ricoh61x_battery_resume :  RICOH61x_INT_IR_ADCL 0x00
+[ 1039.713408] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(100325)[mAs], cc_sum_dec(3341)
+[ 1039.714640] PMU calc_capacity_in_period Half-Clear CC, cc_sum is over 1%
+[ 1039.722833] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1039.738753] PMU: check_charge_status_2 g_full_flag=1 but OCV is low
+[ 1039.738767] PMU:check_charge_status_2 Resume Sus_soc(9103), cc(310)
+[ 1039.740494] PMU : set_current_time2register : second is 1680707639, hour is 466863
+[ 1039.751525] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1039.775175] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1039.782000] PMU: ricoh61x_battery_resume : STATUS(4), DSOC(9410), RSOC(9410), init_pswr*100(9400), cc_delta(10) =
+[ 1039.805100] lm3630a_bank_a_update_status():FL PWR[ON] 
+[ 1039.907425] [elan_touch_report_data-603] Hello packet 55:55:55:55:ff:ff:ff:ff received
+[ 1040.069623] PM: resume of devices complete after 399.740 msecs
+[ 1040.071358] PM: resume devices took 0.400 seconds
+[ 1040.071373] PM: Finishing wakeup.
+[ 1040.071383] Restarting tasks ... done.
+[ 1040.799446] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1040.812984] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1040.828672] PMU: ricoh61x_displayed_work 1st last_soc_full(0), cc_delta=0
+[ 1040.828695] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0: cc_delta_temp = :
+[ 1040.828706] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= -2: current_soc= 9410: rsoc_limit= 0:
+[ 1040.830376] PMU : set_current_time2register : second is 1680707640, hour is 466863
+[ 1040.840667] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3340)[mAs], cc_sum_dec(3340)
+[ 1040.841116] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(10)
+[ 1040.841133] PMU:STATUS= 6: IBAT= 98: VSYS= 4309000: VBAT= 4100100: DSOC= 9453: RSOC= 9400: cc_delta=10: rrf= 0
+[ 1069.849290] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1069.863166] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1069.879280] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0: cc_delta_temp = :
+[ 1069.879294] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0:
+[ 1069.880998] PMU : set_current_time2register : second is 1680707669, hour is 466863
+[ 1069.891460] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3323)[mAs], cc_sum_dec(3323)
+[ 1069.891901] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(10)
+[ 1069.891916] PMU:STATUS= 6: IBAT= -1: VSYS= 4302500: VBAT= 4039300: DSOC= 9496: RSOC= 9400: cc_delta=10: rrf= 0
+[ 1071.661103] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1071.661123] PMU2: Watchdog timeout triggered. ===============
+[ 1098.977061] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1098.988359] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1099.002166] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0: cc_delta_temp = :
+[ 1099.002180] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0:
+[ 1099.003815] PMU : set_current_time2register : second is 1680707698, hour is 466863
+[ 1099.013800] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3302)[mAs], cc_sum_dec(3302)
+[ 1099.014260] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(10)
+[ 1099.014278] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4033800: DSOC= 9539: RSOC= 9400: cc_delta=10: rrf= 0
+[ 1100.979068] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1103.656840] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1103.656859] PMU2: Watchdog timeout triggered. ===============
+[ 1128.020699] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1128.038840] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1128.058364] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0: cc_delta_temp = :
+[ 1128.058385] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0:
+[ 1128.060777] PMU : set_current_time2register : second is 1680707727, hour is 466863
+[ 1128.072626] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3280)[mAs], cc_sum_dec(3280)
+[ 1128.073383] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(10)
+[ 1128.073406] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4031700: DSOC= 9582: RSOC= 9400: cc_delta=10: rrf= 0
+[ 1135.652782] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1135.652802] PMU2: Watchdog timeout triggered. ===============
+[ 1157.130325] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1157.145110] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1157.162492] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0: cc_delta_temp = :
+[ 1157.162514] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0:
+[ 1157.164319] PMU : set_current_time2register : second is 1680707756, hour is 466863
+[ 1157.175504] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3259)[mAs], cc_sum_dec(3259)
+[ 1157.175993] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(10)
+[ 1157.176013] PMU:STATUS= 6: IBAT= -1: VSYS= 4293500: VBAT= 4033200: DSOC= 9625: RSOC= 9400: cc_delta=10: rrf= 0
+[ 1167.648779] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1167.648798] PMU2: Watchdog timeout triggered. ===============
+[ 1186.179845] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 10
+[ 1186.194517] PMU FG_RESET : calc_capacity_2 : capacity 9410 init_pswr 94 cc_delta 10
+[ 1186.211797] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0: cc_delta_temp = :
+[ 1186.211819] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9410: rsoc_limit= 0:
+[ 1186.213631] PMU : set_current_time2register : second is 1680707785, hour is 466863
+[ 1186.224889] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3237)[mAs], cc_sum_dec(3237)
+[ 1186.225373] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(10)
+[ 1186.225394] PMU:STATUS= 6: IBAT= -1: VSYS= 4295500: VBAT= 4031700: DSOC= 9668: RSOC= 9400: cc_delta=10: rrf= 0
+[ 1186.609114] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1199.644497] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1199.644517] PMU2: Watchdog timeout triggered. ===============
+[ 1215.309283] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1215.322859] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1215.339001] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= -1: current_soc= 9409: rsoc_limit= 0: cc_delta_temp =:
+[ 1215.339016] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= -1: current_soc= 9409: rsoc_limit= 0:
+[ 1215.340732] PMU : set_current_time2register : second is 1680707814, hour is 466863
+[ 1215.351246] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3210)[mAs], cc_sum_dec(3210)
+[ 1215.351690] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(9)
+[ 1215.351705] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4038700: DSOC= 9711: RSOC= 9400: cc_delta=9: rrf= 0
+[ 1231.640268] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1231.640288] PMU2: Watchdog timeout triggered. ===============
+[ 1244.469689] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1244.483490] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1244.499495] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0: cc_delta_temp = :
+[ 1244.499508] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0:
+[ 1244.501213] PMU : set_current_time2register : second is 1680707844, hour is 466863
+[ 1244.512254] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3175)[mAs], cc_sum_dec(3175)
+[ 1244.512723] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(9)
+[ 1244.512740] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4039000: DSOC= 9754: RSOC= 9400: cc_delta=9: rrf= 0
+[ 1263.636012] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1263.636032] PMU2: Watchdog timeout triggered. ===============
+[ 1273.529307] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1273.542897] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1273.559164] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0: cc_delta_temp = :
+[ 1273.559179] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0:
+[ 1273.560903] PMU : set_current_time2register : second is 1680707873, hour is 466863
+[ 1273.571514] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3139)[mAs], cc_sum_dec(3139)
+[ 1273.571968] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(9)
+[ 1273.571984] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4039300: DSOC= 9797: RSOC= 9400: cc_delta=9: rrf= 0
+[ 1280.789094] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1295.631916] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1295.631937] PMU2: Watchdog timeout triggered. ===============
+[ 1303.021818] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1303.038298] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1303.058588] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0: cc_delta_temp = :
+[ 1303.058609] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0:
+[ 1303.060333] PMU : set_current_time2register : second is 1680707902, hour is 466863
+[ 1303.074223] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3102)[mAs], cc_sum_dec(3102)
+[ 1303.074730] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(9)
+[ 1303.074752] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4038400: DSOC= 9840: RSOC= 9400: cc_delta=9: rrf= 0
+[ 1327.627679] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1327.627698] PMU2: Watchdog timeout triggered. ===============
+[ 1332.469690] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1332.483477] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1332.499509] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0: cc_delta_temp = :
+[ 1332.499523] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0:
+[ 1332.501227] PMU : set_current_time2register : second is 1680707932, hour is 466863
+[ 1332.512212] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3066)[mAs], cc_sum_dec(3066)
+[ 1332.512679] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(9)
+[ 1332.512695] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038700: DSOC= 9883: RSOC= 9400: cc_delta=9: rrf= 0
+[ 1359.623431] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1359.623451] PMU2: Watchdog timeout triggered. ===============
+[ 1361.529323] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1361.542896] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1361.559150] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0: cc_delta_temp = :
+[ 1361.559163] PMU: ricoh61x_displayed_work rrf= 0: cc_delta= 0: current_soc= 9409: rsoc_limit= 0:
+[ 1361.560888] PMU : set_current_time2register : second is 1680707961, hour is 466863
+[ 1361.571504] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3031)[mAs], cc_sum_dec(3031)
+[ 1361.571955] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(94), cc_delta(9)
+[ 1361.571970] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4037800: DSOC= 9900: RSOC= 9400: cc_delta=9: rrf= 0
+[ 1390.580225] PMU FG_RESET : calc_capacity : capacity 94 init_pswr 94 cc_delta 9
+[ 1390.603010] PMU FG_RESET : calc_capacity_2 : capacity 9409 init_pswr 94 cc_delta 9
+[ 1390.623111] PMU : calib_ocvTable :max 4233000 min 4109000 current 4036878
+[ 1390.623131] PMU : calib_ocvTable : New OCV 100 = 0x3eb2c8
+[ 1390.624443] PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(3429) is out of range(3431000) 
+[ 1390.624467] PMU : ricoh61x_scaling_OCV_table : new table
+[ 1390.624478] PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v
+[ 1390.624487] PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35604 v
+[ 1390.624497] PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37057 v
+[ 1390.624507] PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37570 v
+[ 1390.624516] PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37717 v
+[ 1390.624525] PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37814 v
+[ 1390.624534] PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38059 v
+[ 1390.624544] PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38632 v
+[ 1390.624553] PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39280 v
+[ 1390.624563] PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 39939 v
+[ 1390.624572] PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41062 v
+[ 1390.628312] PMU: calib_ocvTable : * 00% voltage = 3429700 uV
+[ 1390.628333] PMU: calib_ocvTable : * 10% voltage = 3560400 uV
+[ 1390.628344] PMU: calib_ocvTable : * 20% voltage = 3705700 uV
+[ 1390.628354] PMU: calib_ocvTable : * 30% voltage = 3757000 uV
+[ 1390.628363] PMU: calib_ocvTable : * 40% voltage = 3771600 uV
+[ 1390.628372] PMU: calib_ocvTable : * 50% voltage = 3781400 uV
+[ 1390.628382] PMU: calib_ocvTable : * 60% voltage = 3805800 uV
+[ 1390.628391] PMU: calib_ocvTable : * 70% voltage = 3863200 uV
+[ 1390.628400] PMU: calib_ocvTable : * 80% voltage = 3927900 uV
+[ 1390.628409] PMU: calib_ocvTable : * 90% voltage = 3993800 uV
+[ 1390.628419] PMU: calib_ocvTable : * 100% voltage = 4106200 uV
+[ 1390.629582] PMU: calib_ocvTable Exit 
+[ 1390.632405] PMU : set_current_time2register : second is 1680707990, hour is 466863
+[ 1390.643544] PMU: cc_sum = 2994: cc_cap_res= 98: cc_cap_mas = -1945723192
+[ 1390.643562] PMU: cc_cap_offset= 98: 
+[ 1390.643575] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1390.643588] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1390.829098] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1391.619222] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1391.619241] PMU2: Watchdog timeout triggered. ===============
+[ 1397.039808] PMU: cc_sum = 7: cc_cap_res= 2: cc_cap_mas = -1945723192
+[ 1397.039827] PMU: cc_cap_offset= 96: 
+[ 1397.041565] PMU : set_current_time2register : second is 1680707996, hour is 466863
+[ 1397.053838] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1397.053850] PMU: cc_cap_offset= 96: 
+[ 1397.053860] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1397.053873] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1423.614979] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1423.615000] PMU2: Watchdog timeout triggered. ===============
+[ 1426.489304] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1426.489324] PMU: cc_cap_offset= 84: 
+[ 1426.491042] PMU : set_current_time2register : second is 1680708026, hour is 466863
+[ 1426.503148] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1426.503158] PMU: cc_cap_offset= 84: 
+[ 1426.503168] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1426.503180] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1455.555769] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1455.555789] PMU: cc_cap_offset= 72: 
+[ 1455.557499] PMU : set_current_time2register : second is 1680708055, hour is 466863
+[ 1455.574158] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1455.574178] PMU: cc_cap_offset= 72: 
+[ 1455.574190] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1455.574204] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038100: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1455.611112] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1455.611131] PMU2: Watchdog timeout triggered. ===============
+[ 1460.799104] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1485.039807] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 1485.039827] PMU: cc_cap_offset= 61: 
+[ 1485.041560] PMU : set_current_time2register : second is 1680708084, hour is 466863
+[ 1485.053809] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1485.053820] PMU: cc_cap_offset= 61: 
+[ 1485.053830] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1485.053842] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038400: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1487.606888] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1487.606907] PMU2: Watchdog timeout triggered. ===============
+[ 1514.483126] PMU : set_current_time2register : second is 1680708114, hour is 466863
+[ 1514.492986] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1514.492998] PMU: cc_cap_offset= 49: 
+[ 1514.493009] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1514.493022] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1519.602630] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1519.602650] PMU2: Watchdog timeout triggered. ===============
+[ 1520.555714] PMU: cc_sum = 7: cc_cap_res= 2: cc_cap_mas = -1945723192
+[ 1520.555734] PMU: cc_cap_offset= 47: 
+[ 1520.557438] PMU : set_current_time2register : second is 1680708120, hour is 466863
+[ 1520.574067] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1520.574087] PMU: cc_cap_offset= 47: 
+[ 1520.574099] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1520.574112] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1520.819092] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1550.039795] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1550.039815] PMU: cc_cap_offset= 35: 
+[ 1550.041550] PMU : set_current_time2register : second is 1680708149, hour is 466863
+[ 1550.053811] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1550.053821] PMU: cc_cap_offset= 35: 
+[ 1550.053831] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1550.053844] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4039925: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1551.598365] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1551.598385] PMU2: Watchdog timeout triggered. ===============
+[ 1579.548798] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1579.548818] PMU: cc_cap_offset= 23: 
+[ 1579.550552] PMU : set_current_time2register : second is 1680708179, hour is 466863
+[ 1579.562817] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1579.562827] PMU: cc_cap_offset= 23: 
+[ 1579.562838] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1579.562850] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4041500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1583.594138] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1583.594158] PMU2: Watchdog timeout triggered. ===============
+[ 1609.039787] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1609.039806] PMU: cc_cap_offset= 11: 
+[ 1609.041542] PMU : set_current_time2register : second is 1680708208, hour is 466863
+[ 1609.053801] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1609.053812] PMU: cc_cap_offset= 11: 
+[ 1609.053822] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1609.053834] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4040850: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1615.590227] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1615.590248] PMU2: Watchdog timeout triggered. ===============
+[ 1638.092792] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1638.092811] PMU: cc_cap_offset= -1: 
+[ 1638.094696] PMU : set_current_time2register : second is 1680708237, hour is 466863
+[ 1638.119281] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1638.119301] PMU: cc_cap_offset= -1: 
+[ 1638.119314] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1638.119328] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4041475: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1640.779090] sy7636_get_temperature():temperature = 23,reg=0x17
+[ 1647.586022] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1647.586041] PMU2: Watchdog timeout triggered. ===============
+[ 1667.548767] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1667.548787] PMU: cc_cap_offset= -13: 
+[ 1667.550518] PMU : set_current_time2register : second is 1680708267, hour is 466863
+[ 1667.562798] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1667.562809] PMU: cc_cap_offset= -13: 
+[ 1667.562820] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1667.562832] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4040850: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1679.581787] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1679.581807] PMU2: Watchdog timeout triggered. ===============
+[ 1697.039790] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1697.039809] PMU: cc_cap_offset= -25: 
+[ 1697.041541] PMU : set_current_time2register : second is 1680708296, hour is 466863
+[ 1697.053781] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1697.053793] PMU: cc_cap_offset= -25: 
+[ 1697.053802] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1697.053815] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4039900: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1711.577527] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1711.577546] PMU2: Watchdog timeout triggered. ===============
+[ 1726.490432] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1726.490450] PMU: cc_cap_offset= -37: 
+[ 1726.492162] PMU : set_current_time2register : second is 1680708326, hour is 466863
+[ 1726.504269] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1726.504280] PMU: cc_cap_offset= -37: 
+[ 1726.504289] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1726.504302] PMU:STATUS= 6: IBAT= -1: VSYS= 4306500: VBAT= 4041500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1743.573278] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1743.573297] PMU2: Watchdog timeout triggered. ===============
+[ 1755.555703] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1755.555723] PMU: cc_cap_offset= -49: 
+[ 1755.557427] PMU : set_current_time2register : second is 1680708355, hour is 466863
+[ 1755.574244] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1755.574264] PMU: cc_cap_offset= -49: 
+[ 1755.574277] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1755.574290] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1760.779098] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 1775.569163] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1775.569183] PMU2: Watchdog timeout triggered. ===============
+[ 1785.039781] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1785.039801] PMU: cc_cap_offset= -61: 
+[ 1785.041535] PMU : set_current_time2register : second is 1680708384, hour is 466863
+[ 1785.053805] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1785.053816] PMU: cc_cap_offset= -61: 
+[ 1785.053826] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1785.053839] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038700: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1807.564910] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1807.564930] PMU2: Watchdog timeout triggered. ===============
+[ 1814.490389] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1814.490408] PMU: cc_cap_offset= -73: 
+[ 1814.492113] PMU : set_current_time2register : second is 1680708414, hour is 466863
+[ 1814.504219] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1814.504229] PMU: cc_cap_offset= -73: 
+[ 1814.504239] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1814.504252] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1820.799088] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 1839.560659] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1839.560678] PMU2: Watchdog timeout triggered. ===============
+[ 1843.548771] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1843.548790] PMU: cc_cap_offset= -85: 
+[ 1843.550533] PMU : set_current_time2register : second is 1680708443, hour is 466863
+[ 1843.562782] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1843.562792] PMU: cc_cap_offset= -85: 
+[ 1843.562802] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1843.562814] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038700: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1871.556415] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1871.556433] PMU2: Watchdog timeout triggered. ===============
+[ 1873.045867] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1873.045887] PMU: cc_cap_offset= -97: 
+[ 1873.048220] PMU : set_current_time2register : second is 1680708472, hour is 466863
+[ 1873.062767] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1873.062786] PMU: cc_cap_offset= -97: 
+[ 1873.062799] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1873.062812] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4040850: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1902.489333] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1902.489353] PMU: cc_cap_offset= -9: 
+[ 1902.491070] PMU : set_current_time2register : second is 1680708502, hour is 466863
+[ 1902.503177] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1902.503187] PMU: cc_cap_offset= -9: 
+[ 1902.503197] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1902.503209] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4039600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1903.552169] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1903.552189] PMU2: Watchdog timeout triggered. ===============
+[ 1931.548791] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1931.548811] PMU: cc_cap_offset= -21: 
+[ 1931.550549] PMU : set_current_time2register : second is 1680708531, hour is 466863
+[ 1931.562824] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1931.562834] PMU: cc_cap_offset= -21: 
+[ 1931.562844] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1931.562857] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4040850: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1935.548208] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1935.548228] PMU2: Watchdog timeout triggered. ===============
+[ 1940.779093] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 1960.604360] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1960.604379] PMU: cc_cap_offset= -33: 
+[ 1960.606168] PMU : set_current_time2register : second is 1680708560, hour is 466863
+[ 1960.628278] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1960.628298] PMU: cc_cap_offset= -33: 
+[ 1960.628311] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1960.628324] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1967.543997] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1967.544016] PMU2: Watchdog timeout triggered. ===============
+[ 1990.039731] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 1990.039750] PMU: cc_cap_offset= -45: 
+[ 1990.041486] PMU : set_current_time2register : second is 1680708589, hour is 466863
+[ 1990.053727] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 1990.053737] PMU: cc_cap_offset= -45: 
+[ 1990.053747] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 1990.053760] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4040850: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 1999.539717] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 1999.539737] PMU2: Watchdog timeout triggered. ===============
+[ 2000.799089] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2019.548786] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2019.548806] PMU: cc_cap_offset= -56: 
+[ 2019.550540] PMU : set_current_time2register : second is 1680708619, hour is 466863
+[ 2019.562807] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2019.562818] PMU: cc_cap_offset= -56: 
+[ 2019.562828] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2019.562840] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2031.535336] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2031.535356] PMU2: Watchdog timeout triggered. ===============
+[ 2049.039759] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2049.039779] PMU: cc_cap_offset= -68: 
+[ 2049.041518] PMU : set_current_time2register : second is 1680708648, hour is 466863
+[ 2049.053748] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2049.053758] PMU: cc_cap_offset= -68: 
+[ 2049.053768] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2049.053780] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2063.530925] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2063.530944] PMU2: Watchdog timeout triggered. ===============
+[ 2078.089895] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2078.089914] PMU: cc_cap_offset= -80: 
+[ 2078.094313] PMU : set_current_time2register : second is 1680708677, hour is 466863
+[ 2078.118903] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2078.118923] PMU: cc_cap_offset= -80: 
+[ 2078.118936] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2078.118949] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2095.527289] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2095.527310] PMU2: Watchdog timeout triggered. ===============
+[ 2107.548809] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2107.548828] PMU: cc_cap_offset= -92: 
+[ 2107.550565] PMU : set_current_time2register : second is 1680708707, hour is 466863
+[ 2107.562835] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2107.562845] PMU: cc_cap_offset= -92: 
+[ 2107.562855] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2107.562868] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4041500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2120.799087] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2127.522919] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2127.522938] PMU2: Watchdog timeout triggered. ===============
+[ 2137.039785] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2137.039806] PMU: cc_cap_offset= -4: 
+[ 2137.041540] PMU : set_current_time2register : second is 1680708736, hour is 466863
+[ 2137.053777] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2137.053788] PMU: cc_cap_offset= -4: 
+[ 2137.053798] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2137.053810] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4037200: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2159.518601] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2159.518620] PMU2: Watchdog timeout triggered. ===============
+[ 2166.489310] PMU: cc_sum = 38: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2166.489330] PMU: cc_cap_offset= -16: 
+[ 2166.491049] PMU : set_current_time2register : second is 1680708766, hour is 466863
+[ 2166.503138] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2166.503149] PMU: cc_cap_offset= -16: 
+[ 2166.503158] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2166.503171] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4041500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2191.514242] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2191.514262] PMU2: Watchdog timeout triggered. ===============
+[ 2195.556077] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2195.556097] PMU: cc_cap_offset= -28: 
+[ 2195.557799] PMU : set_current_time2register : second is 1680708795, hour is 466863
+[ 2195.574437] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2195.574457] PMU: cc_cap_offset= -28: 
+[ 2195.574470] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2195.574483] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2223.510046] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2223.510065] PMU2: Watchdog timeout triggered. ===============
+[ 2225.039789] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2225.039808] PMU: cc_cap_offset= -40: 
+[ 2225.041538] PMU : set_current_time2register : second is 1680708824, hour is 466863
+[ 2225.053789] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2225.053800] PMU: cc_cap_offset= -40: 
+[ 2225.053810] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2225.053822] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4040200: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2240.779094] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2254.489224] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2254.489243] PMU: cc_cap_offset= -52: 
+[ 2254.490951] PMU : set_current_time2register : second is 1680708854, hour is 466863
+[ 2254.503038] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2254.503049] PMU: cc_cap_offset= -52: 
+[ 2254.503059] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2254.503072] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2255.505782] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2255.505802] PMU2: Watchdog timeout triggered. ===============
+[ 2283.548791] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2283.548811] PMU: cc_cap_offset= -64: 
+[ 2283.550552] PMU : set_current_time2register : second is 1680708883, hour is 466863
+[ 2283.562806] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2283.562817] PMU: cc_cap_offset= -64: 
+[ 2283.562827] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2283.562839] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038100: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2287.501494] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2287.501514] PMU2: Watchdog timeout triggered. ===============
+[ 2300.799090] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2313.044810] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2313.044829] PMU: cc_cap_offset= -76: 
+[ 2313.047002] PMU : set_current_time2register : second is 1680708912, hour is 466863
+[ 2313.061548] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2313.061568] PMU: cc_cap_offset= -76: 
+[ 2313.061580] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2313.061593] PMU:STATUS= 6: IBAT= -1: VSYS= 4306500: VBAT= 4039600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2319.497216] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2319.497235] PMU2: Watchdog timeout triggered. ===============
+[ 2342.489260] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2342.489280] PMU: cc_cap_offset= -88: 
+[ 2342.490988] PMU : set_current_time2register : second is 1680708942, hour is 466863
+[ 2342.503083] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2342.503093] PMU: cc_cap_offset= -88: 
+[ 2342.503104] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2342.503116] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4040200: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2351.492963] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2351.492983] PMU2: Watchdog timeout triggered. ===============
+[ 2371.548896] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2371.548915] PMU: cc_cap_offset= -99: 
+[ 2371.550653] PMU : set_current_time2register : second is 1680708971, hour is 466863
+[ 2371.562917] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2371.562928] PMU: cc_cap_offset= -99: 
+[ 2371.562938] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2371.562950] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2383.488695] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2383.488716] PMU2: Watchdog timeout triggered. ===============
+[ 2400.602418] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2400.602438] PMU: cc_cap_offset= -11: 
+[ 2400.604350] PMU : set_current_time2register : second is 1680709000, hour is 466863
+[ 2400.631050] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2400.631071] PMU: cc_cap_offset= -11: 
+[ 2400.631084] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2400.631097] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037800: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2415.484405] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2415.484425] PMU2: Watchdog timeout triggered. ===============
+[ 2420.799083] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2430.039781] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2430.039801] PMU: cc_cap_offset= -22: 
+[ 2430.041541] PMU : set_current_time2register : second is 1680709029, hour is 466863
+[ 2430.053796] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2430.053807] PMU: cc_cap_offset= -22: 
+[ 2430.053816] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2430.053829] PMU:STATUS= 6: IBAT= -1: VSYS= 4307000: VBAT= 4038700: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2447.480108] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2447.480128] PMU2: Watchdog timeout triggered. ===============
+[ 2451.887741] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2451.887762] PMU2: PWRON triggered. ===============
+[ 2451.887982] ntx_power_key_hook():state=1
+[ 2452.067962] ntx_power_key_hook():state=0
+[ 2452.068032] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[ 2452.068043] PMU2: PWRON triggered. ===============
+[ 2459.548775] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2459.548794] PMU: cc_cap_offset= -34: 
+[ 2459.550524] PMU : set_current_time2register : second is 1680709059, hour is 466863
+[ 2459.562789] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2459.562800] PMU: cc_cap_offset= -34: 
+[ 2459.562810] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2459.562823] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4038700: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2479.475855] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2479.475875] PMU2: Watchdog timeout triggered. ===============
+[ 2489.039810] PMU: cc_sum = 34: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2489.039829] PMU: cc_cap_offset= -45: 
+[ 2489.041572] PMU : set_current_time2register : second is 1680709088, hour is 466863
+[ 2489.053903] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2489.053914] PMU: cc_cap_offset= -45: 
+[ 2489.053925] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2489.053937] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4036000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2511.471589] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2511.471608] PMU2: Watchdog timeout triggered. ===============
+[ 2518.090747] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2518.090766] PMU: cc_cap_offset= -57: 
+[ 2518.092695] PMU : set_current_time2register : second is 1680709117, hour is 466863
+[ 2518.112603] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2518.112622] PMU: cc_cap_offset= -57: 
+[ 2518.112636] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2518.112649] PMU:STATUS= 6: IBAT= -1: VSYS= 4306500: VBAT= 4038100: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2540.779097] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2543.467329] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2543.467350] PMU2: Watchdog timeout triggered. ===============
+[ 2547.548808] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2547.548828] PMU: cc_cap_offset= -69: 
+[ 2547.550562] PMU : set_current_time2register : second is 1680709147, hour is 466863
+[ 2547.562814] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2547.562825] PMU: cc_cap_offset= -69: 
+[ 2547.562835] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2547.562848] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4038400: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2575.463055] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2575.463075] PMU2: Watchdog timeout triggered. ===============
+[ 2577.039771] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2577.039791] PMU: cc_cap_offset= -81: 
+[ 2577.041528] PMU : set_current_time2register : second is 1680709176, hour is 466863
+[ 2577.053776] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2577.053786] PMU: cc_cap_offset= -81: 
+[ 2577.053796] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2577.053808] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4036900: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2600.799087] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2606.489300] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2606.489319] PMU: cc_cap_offset= -93: 
+[ 2606.491028] PMU : set_current_time2register : second is 1680709206, hour is 466863
+[ 2606.503140] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2606.503150] PMU: cc_cap_offset= -93: 
+[ 2606.503161] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2606.503173] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4036900: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2607.458807] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2607.458826] PMU2: Watchdog timeout triggered. ===============
+[ 2635.560758] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2635.560778] PMU: cc_cap_offset= -5: 
+[ 2635.562620] PMU : set_current_time2register : second is 1680709235, hour is 466863
+[ 2635.577889] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2635.578004] PMU: cc_cap_offset= -5: 
+[ 2635.578019] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2635.578033] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4038400: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2639.454536] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2639.454556] PMU2: Watchdog timeout triggered. ===============
+[ 2665.040327] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2665.040346] PMU: cc_cap_offset= -17: 
+[ 2665.042089] PMU : set_current_time2register : second is 1680709264, hour is 466863
+[ 2665.054364] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2665.054374] PMU: cc_cap_offset= -17: 
+[ 2665.054384] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2665.054396] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2671.450274] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2671.450295] PMU2: Watchdog timeout triggered. ===============
+[ 2694.489291] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2694.489310] PMU: cc_cap_offset= -29: 
+[ 2694.491027] PMU : set_current_time2register : second is 1680709294, hour is 466863
+[ 2694.503115] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2694.503125] PMU: cc_cap_offset= -29: 
+[ 2694.503135] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2694.503148] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2703.446016] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2703.446036] PMU2: Watchdog timeout triggered. ===============
+[ 2720.799086] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2723.548774] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2723.548794] PMU: cc_cap_offset= -40: 
+[ 2723.550533] PMU : set_current_time2register : second is 1680709323, hour is 466863
+[ 2723.562778] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2723.562788] PMU: cc_cap_offset= -40: 
+[ 2723.562798] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2723.562811] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4040850: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2735.441726] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2735.441746] PMU2: Watchdog timeout triggered. ===============
+[ 2753.045557] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2753.045576] PMU: cc_cap_offset= -52: 
+[ 2753.047794] PMU : set_current_time2register : second is 1680709352, hour is 466863
+[ 2753.062081] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2753.062100] PMU: cc_cap_offset= -52: 
+[ 2753.062113] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2753.062126] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4036000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2767.437444] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2767.437464] PMU2: Watchdog timeout triggered. ===============
+[ 2782.489328] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2782.489347] PMU: cc_cap_offset= -64: 
+[ 2782.491058] PMU : set_current_time2register : second is 1680709382, hour is 466863
+[ 2782.503164] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2782.503175] PMU: cc_cap_offset= -64: 
+[ 2782.503186] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2782.503198] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4037800: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2799.433179] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2799.433199] PMU2: Watchdog timeout triggered. ===============
+[ 2811.548795] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 2811.548815] PMU: cc_cap_offset= -75: 
+[ 2811.550559] PMU : set_current_time2register : second is 1680709411, hour is 466863
+[ 2811.562816] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2811.562826] PMU: cc_cap_offset= -75: 
+[ 2811.562836] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2811.562849] PMU:STATUS= 6: IBAT= -1: VSYS= 4307000: VBAT= 4039600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2831.428861] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2831.428881] PMU2: Watchdog timeout triggered. ===============
+[ 2840.601302] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2840.601320] PMU: cc_cap_offset= -87: 
+[ 2840.603083] PMU : set_current_time2register : second is 1680709440, hour is 466863
+[ 2840.629898] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2840.629918] PMU: cc_cap_offset= -87: 
+[ 2840.629930] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2840.629943] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4038700: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2840.819085] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2863.424608] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2863.424627] PMU2: Watchdog timeout triggered. ===============
+[ 2870.039795] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2870.039815] PMU: cc_cap_offset= -99: 
+[ 2870.041557] PMU : set_current_time2register : second is 1680709469, hour is 466863
+[ 2870.053810] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2870.053820] PMU: cc_cap_offset= -99: 
+[ 2870.053831] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2870.053843] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2895.420344] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2895.420364] PMU2: Watchdog timeout triggered. ===============
+[ 2899.548769] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2899.548790] PMU: cc_cap_offset= -11: 
+[ 2899.550520] PMU : set_current_time2register : second is 1680709499, hour is 466863
+[ 2899.562764] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2899.562775] PMU: cc_cap_offset= -11: 
+[ 2899.562786] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2899.562798] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2927.416108] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2927.416127] PMU2: Watchdog timeout triggered. ===============
+[ 2929.039841] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2929.039860] PMU: cc_cap_offset= -23: 
+[ 2929.041593] PMU : set_current_time2register : second is 1680709528, hour is 466863
+[ 2929.053863] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2929.053873] PMU: cc_cap_offset= -23: 
+[ 2929.053884] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2929.053896] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4036600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2958.091738] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2958.091758] PMU: cc_cap_offset= -35: 
+[ 2958.093649] PMU : set_current_time2register : second is 1680709557, hour is 466863
+[ 2958.113424] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2958.113444] PMU: cc_cap_offset= -35: 
+[ 2958.113456] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2958.113469] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4038400: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2959.411865] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2959.411884] PMU2: Watchdog timeout triggered. ===============
+[ 2960.779093] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 2987.548773] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 2987.548792] PMU: cc_cap_offset= -47: 
+[ 2987.550526] PMU : set_current_time2register : second is 1680709587, hour is 466863
+[ 2987.562780] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 2987.562790] PMU: cc_cap_offset= -47: 
+[ 2987.562801] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 2987.562814] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4039300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 2991.407647] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 2991.407667] PMU2: Watchdog timeout triggered. ===============
+[ 3017.039741] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3017.039761] PMU: cc_cap_offset= -59: 
+[ 3017.041486] PMU : set_current_time2register : second is 1680709616, hour is 466863
+[ 3017.053714] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3017.053724] PMU: cc_cap_offset= -59: 
+[ 3017.053735] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3017.053747] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4039600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3020.799087] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 3023.403415] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3023.403435] PMU2: Watchdog timeout triggered. ===============
+[ 3046.489359] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3046.489378] PMU: cc_cap_offset= -71: 
+[ 3046.491092] PMU : set_current_time2register : second is 1680709646, hour is 466863
+[ 3046.503241] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3046.503251] PMU: cc_cap_offset= -71: 
+[ 3046.503262] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3046.503275] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4036900: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3055.399181] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3055.399200] PMU2: Watchdog timeout triggered. ===============
+[ 3075.556156] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3075.556176] PMU: cc_cap_offset= -83: 
+[ 3075.557882] PMU : set_current_time2register : second is 1680709675, hour is 466863
+[ 3075.574843] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3075.574863] PMU: cc_cap_offset= -83: 
+[ 3075.574876] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3075.574889] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4037800: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3087.394925] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3087.394944] PMU2: Watchdog timeout triggered. ===============
+[ 3105.039820] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3105.039840] PMU: cc_cap_offset= -95: 
+[ 3105.041573] PMU : set_current_time2register : second is 1680709704, hour is 466863
+[ 3105.053859] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3105.053870] PMU: cc_cap_offset= -95: 
+[ 3105.053880] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3105.053892] PMU:STATUS= 6: IBAT= -1: VSYS= 4307000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3119.390672] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3119.390690] PMU2: Watchdog timeout triggered. ===============
+[ 3134.489273] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3134.489294] PMU: cc_cap_offset= -7: 
+[ 3134.491002] PMU : set_current_time2register : second is 1680709734, hour is 466863
+[ 3134.503092] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3134.503102] PMU: cc_cap_offset= -7: 
+[ 3134.503112] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3134.503124] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4036600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3140.779093] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 3151.386440] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3151.386460] PMU2: Watchdog timeout triggered. ===============
+[ 3163.548777] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 3163.548797] PMU: cc_cap_offset= -18: 
+[ 3163.550541] PMU : set_current_time2register : second is 1680709763, hour is 466863
+[ 3163.562800] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3163.562810] PMU: cc_cap_offset= -18: 
+[ 3163.562820] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3163.562832] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3183.382217] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3183.382237] PMU2: Watchdog timeout triggered. ===============
+[ 3193.045267] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3193.045287] PMU: cc_cap_offset= -30: 
+[ 3193.047556] PMU : set_current_time2register : second is 1680709792, hour is 466863
+[ 3193.062190] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3193.062209] PMU: cc_cap_offset= -30: 
+[ 3193.062222] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3193.062235] PMU:STATUS= 6: IBAT= -1: VSYS= 4307000: VBAT= 4036600: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3215.377963] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3215.377982] PMU2: Watchdog timeout triggered. ===============
+[ 3222.361696] PMU: cc_sum = 34: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 3222.361715] PMU: cc_cap_offset= -41: 
+[ 3222.363500] PMU : set_current_time2register : second is 1680709822, hour is 466863
+[ 3222.376997] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3222.377016] PMU: cc_cap_offset= -41: 
+[ 3222.377029] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3222.377042] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4039000: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3247.373715] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3247.373734] PMU2: Watchdog timeout triggered. ===============
+[ 3251.548776] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3251.548795] PMU: cc_cap_offset= -53: 
+[ 3251.550526] PMU : set_current_time2register : second is 1680709851, hour is 466863
+[ 3251.562784] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3251.562794] PMU: cc_cap_offset= -53: 
+[ 3251.562805] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3251.562818] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4036300: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3260.799087] sy7636_get_temperature():temperature = 24,reg=0x18
+[ 3279.369477] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3279.369496] PMU2: Watchdog timeout triggered. ===============
+[ 3280.599495] PMU: cc_sum = 34: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 3280.599516] PMU: cc_cap_offset= -64: 
+[ 3280.601459] PMU : set_current_time2register : second is 1680709880, hour is 466863
+[ 3280.629898] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3280.629919] PMU: cc_cap_offset= -64: 
+[ 3280.629932] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3280.629945] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3310.039807] PMU: cc_sum = 36: cc_cap_res= 12: cc_cap_mas = -1945723192
+[ 3310.039827] PMU: cc_cap_offset= -76: 
+[ 3310.041560] PMU : set_current_time2register : second is 1680709909, hour is 466863
+[ 3310.053816] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3310.053826] PMU: cc_cap_offset= -76: 
+[ 3310.053836] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3310.053849] PMU:STATUS= 6: IBAT= -1: VSYS= 4308000: VBAT= 4037500: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+[ 3311.365249] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[ 3311.365269] PMU2: Watchdog timeout triggered. ===============
+[ 3339.399724] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1945723192
+[ 3339.399744] PMU: cc_cap_offset= -87: 
+[ 3339.401478] PMU : set_current_time2register : second is 1680709939, hour is 466863
+[ 3339.413719] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1945723192
+[ 3339.413729] PMU: cc_cap_offset= -87: 
+[ 3339.413740] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)
+[ 3339.413753] PMU:STATUS= 6: IBAT= -1: VSYS= 4307500: VBAT= 4038400: DSOC= 10000: RSOC= 9400: cc_delta=9: rrf= 1
+kobo:~# dmesg | grep wakeuyp
+kobo:~# dmesg | grep wakeu
+[ 1040.071373] PM: Finishing wakeup.

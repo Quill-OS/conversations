@@ -1,0 +1,107 @@
+% dtc -I dtb -O dts -o nia-c.dts nia-c.dtb                      
+nia-c.dts: Warning (node_name_vs_property_name): /soc/aips-bus@02100000/lcdif@021c8000/display: node name and property name conflict
+nia-c.dts: Warning (unit_address_vs_reg): /memory: node has a reg or ranges property, but no unit name
+nia-c.dts: Warning (unit_address_vs_reg): /soc/aips-bus@02000000/anatop@020c8000/regulator-3p0@120: node has a unit name, but no reg or ranges property
+nia-c.dts: Warning (unit_address_vs_reg): /soc/aips-bus@02000000/anatop@020c8000/regulator-vddcore@140: node has a unit name, but no reg or ranges property
+nia-c.dts: Warning (unit_address_vs_reg): /soc/aips-bus@02000000/anatop@020c8000/regulator-vddsoc@140: node has a unit name, but no reg or ranges property
+nia-c.dts: Warning (unit_address_vs_reg): /regulators/regulator@1: node has a unit name, but no reg or ranges property
+nia-c.dts: Warning (unit_address_format): /interrupt-controller@00a01000: unit name should not have leading 0s
+nia-c.dts: Warning (simple_bus_reg): /soc/busfreq: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/pmu: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/sram@00900000: simple-bus unit address format error, expected "900000"
+nia-c.dts: Warning (simple_bus_reg): /soc/sram@00904000: simple-bus unit address format error, expected "904000"
+nia-c.dts: Warning (simple_bus_reg): /soc/sram@00905000: simple-bus unit address format error, expected "905000"
+nia-c.dts: Warning (simple_bus_reg): /soc/dma-apbh@01804000: simple-bus unit address format error, expected "1804000"
+nia-c.dts: Warning (simple_bus_reg): /soc/gpmi-nand@01806000: simple-bus unit address format error, expected "1806000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000: simple-bus unit address format error, expected "2000000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000: simple-bus unit address format error, expected "2000000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/spdif@02004000: simple-bus unit address format error, expected "2004000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/ecspi@02008000: simple-bus unit address format error, expected "2008000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/ecspi@0200c000: simple-bus unit address format error, expected "200c000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/ecspi@02010000: simple-bus unit address format error, expected "2010000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/ecspi@02014000: simple-bus unit address format error, expected "2014000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/serial@02018000: simple-bus unit address format error, expected "2018000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/serial@02020000: simple-bus unit address format error, expected "2020000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/esai@02024000: simple-bus unit address format error, expected "2024000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/sai@02028000: simple-bus unit address format error, expected "2028000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/sai@0202c000: simple-bus unit address format error, expected "202c000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/sai@02030000: simple-bus unit address format error, expected "2030000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/spba-bus@02000000/asrc@02034000: simple-bus unit address format error, expected "2034000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/tsc@02040000: simple-bus unit address format error, expected "2040000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@02080000: simple-bus unit address format error, expected "2080000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@02084000: simple-bus unit address format error, expected "2084000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@02088000: simple-bus unit address format error, expected "2088000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@0208c000: simple-bus unit address format error, expected "208c000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/can@02090000: simple-bus unit address format error, expected "2090000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/can@02094000: simple-bus unit address format error, expected "2094000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpt@02098000: simple-bus unit address format error, expected "2098000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpio@0209c000: simple-bus unit address format error, expected "209c000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpio@020a0000: simple-bus unit address format error, expected "20a0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpio@020a4000: simple-bus unit address format error, expected "20a4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpio@020a8000: simple-bus unit address format error, expected "20a8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpio@020ac000: simple-bus unit address format error, expected "20ac000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/snvs@020b0000: simple-bus unit address format error, expected "20b0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/ethernet@020b4000: simple-bus unit address format error, expected "20b4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/kpp@020b8000: simple-bus unit address format error, expected "20b8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/wdog@020bc000: simple-bus unit address format error, expected "20bc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/wdog@020c0000: simple-bus unit address format error, expected "20c0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/ccm@020c4000: simple-bus unit address format error, expected "20c4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/anatop@020c8000: simple-bus unit address format error, expected "20c8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/anatop@020c8000/regulator-3p0@120: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/anatop@020c8000/regulator-vddcore@140: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/anatop@020c8000/regulator-vddsoc@140: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/usbphy@020c9000: simple-bus unit address format error, expected "20c9000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/usbphy@020ca000: simple-bus unit address format error, expected "20ca000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/tempmon: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/snvs@020cc000: simple-bus unit address format error, expected "20cc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/epit@020d0000: simple-bus unit address format error, expected "20d0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/epit@020d4000: simple-bus unit address format error, expected "20d4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/src@020d8000: simple-bus unit address format error, expected "20d8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpc@020dc000: simple-bus unit address format error, expected "20dc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/iomuxc@020e0000: simple-bus unit address format error, expected "20e0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/iomuxc-gpr@020e4000: simple-bus unit address format error, expected "20e4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/mqs: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/gpt@020e8000: simple-bus unit address format error, expected "20e8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/sdma@020ec000: simple-bus unit address format error, expected "20ec000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@020f0000: simple-bus unit address format error, expected "20f0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@020f4000: simple-bus unit address format error, expected "20f4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@020f8000: simple-bus unit address format error, expected "20f8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02000000/pwm@020fc000: simple-bus unit address format error, expected "20fc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000: simple-bus unit address format error, expected "2100000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/usb@02184000: simple-bus unit address format error, expected "2184000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/usb@02184200: simple-bus unit address format error, expected "2184200"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/usbmisc@02184800: simple-bus unit address format error, expected "2184800"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/ethernet@02188000: simple-bus unit address format error, expected "2188000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/usdhc@02190000: simple-bus unit address format error, expected "2190000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/usdhc@02194000: simple-bus unit address format error, expected "2194000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/adc@02198000: simple-bus unit address format error, expected "2198000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/i2c@021a0000: simple-bus unit address format error, expected "21a0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/i2c@021a4000: simple-bus unit address format error, expected "21a4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/i2c@021a8000: simple-bus unit address format error, expected "21a8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/romcp@021ac000: simple-bus unit address format error, expected "21ac000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/mmdc@021b0000: simple-bus unit address format error, expected "21b0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/weim@021b8000: simple-bus unit address format error, expected "21b8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/ocotp-ctrl@021bc000: simple-bus unit address format error, expected "21bc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/csu@021c0000: simple-bus unit address format error, expected "21c0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/csi@021c4000: simple-bus unit address format error, expected "21c4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/lcdif@021c8000: simple-bus unit address format error, expected "21c8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/pxp@021cc000: simple-bus unit address format error, expected "21cc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/qspi@021e0000: simple-bus unit address format error, expected "21e0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/serial@021e8000: simple-bus unit address format error, expected "21e8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/serial@021ec000: simple-bus unit address format error, expected "21ec000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/serial@021f0000: simple-bus unit address format error, expected "21f0000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/serial@021f4000: simple-bus unit address format error, expected "21f4000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/i2c@021f8000: simple-bus unit address format error, expected "21f8000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02100000/serial@021fc000: simple-bus unit address format error, expected "21fc000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000: simple-bus unit address format error, expected "2200000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000/dcp@02280000: simple-bus unit address format error, expected "2280000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000/rngb@02284000: simple-bus unit address format error, expected "2284000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000/serial@02288000: simple-bus unit address format error, expected "2288000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000/epdc@0228c000: simple-bus unit address format error, expected "228c000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000/iomuxc-snvs@02290000: simple-bus unit address format error, expected "2290000"
+nia-c.dts: Warning (simple_bus_reg): /soc/aips-bus@02200000/snvs-gpr@0x02294000: simple-bus unit address format error, expected "2294000"
+nia-c.dts: Warning (simple_bus_reg): /regulators/regulator@1: missing or empty reg/ranges property
+nia-c.dts: Warning (simple_bus_reg): /regulators/wifi_regulator: missing or empty reg/ranges property
+nia-c.dts: Warning (avoid_unnecessary_addr_size): /regulators: unnecessary #address-cells/#size-cells without "ranges", "dma-ranges" or child "reg" property
+16:19 szybet@hyperbookszyb /home/szybet
+% 

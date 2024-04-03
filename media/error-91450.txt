@@ -1,0 +1,353 @@
+   Compiling fbink-sys v0.1.0 (/home/spagett/fbink-sys)
+error: failed to run custom build command for `fbink-sys v0.1.0 (/home/spagett/fbink-sys)`
+
+Caused by:
+  process didn't exit successfully: `/home/spagett/fbink-sys/target/debug/build/fbink-sys-8b1e5b39073d2e4a/build-script-build` (exit status: 101)
+  --- stdout
+  rm -rf Debug/*.so*
+  rm -rf Debug/shared/*.o
+  rm -rf Debug/shared/*.opt.yaml
+  rm -rf Debug/shared/cutef8/*.o
+  rm -rf Debug/shared/cutef8/*.opt.yaml
+  rm -rf Debug/shared/libunibreak/src/*.o
+  rm -rf Debug/shared/libunibreak/src/*.opt.yaml
+  rm -rf Debug/shared/qimagescale/*.o
+  rm -rf Debug/shared/qimagescale/*.opt.yaml
+  rm -rf Debug/shared/utf8
+  rm -rf Debug/*.a
+  rm -rf Debug/static/libfbink.o
+  rm -rf Debug/static/*.a
+  rm -rf Debug/static/*.o
+  rm -rf Debug/static/*.opt.yaml
+  rm -rf Debug/static/cutef8/*.o
+  rm -rf Debug/static/cutef8/*.opt.yaml
+  rm -rf Debug/static/libunibreak/src/*.o
+  rm -rf Debug/static/libunibreak/src/*.opt.yaml
+  rm -rf Debug/static/qimagescale/*.o
+  rm -rf Debug/static/qimagescale/*.opt.yaml
+  rm -rf Debug/static/utf8
+  rm -rf small.built
+  rm -rf tiny.built
+  rm -rf tinier.built
+  rm -rf Kobo/
+  rm -rf Debug/*.o
+  rm -rf Debug/*.opt.yaml
+  rm -rf Debug/shared/fbink
+  rm -rf Debug/static/fbink
+  rm -rf Debug/fbink
+  rm -rf Debug/shared/button_scan
+  rm -rf Debug/static/button_scan
+  rm -rf Debug/button_scan
+  rm -rf Debug/rota
+  rm -rf Debug/fbdepth
+  rm -rf Debug/alt_buffer
+  rm -rf Debug/doom
+  rm -rf Debug/dump
+  rm -rf Debug/Kobo-DevCap-Test.tar.gz
+  rm -rf Debug/kx122_i2c
+  rm -rf Debug/ion_heaps
+  rm -rf Debug/finger_trace
+  rm -rf Debug/rota_map
+  rm -rf Debug/FBInk-*.tar.xz
+  make -C libunibreak distclean
+  make[1]: Entering directory '/home/spagett/fbink-sys/FBInk/libunibreak'
+  make[1]: Leaving directory '/home/spagett/fbink-sys/FBInk/libunibreak'
+  cd libunibreak && \
+  git reset --hard && \
+  git clean -fxdq
+  HEAD is now at 8f7129a Update emojidata
+  make -C i2c-tools clean
+  make[1]: Entering directory '/home/spagett/fbink-sys/FBInk/i2c-tools'
+  rm -f lib/*.o lib/*.ao lib/libi2c.so.0.1.1 lib/libi2c.a lib/libi2c.so.0 lib/libi2c.so
+  rm -f tools/*.o tools/i2cdetect tools/i2cdump tools/i2cset tools/i2cget tools/i2ctransfer
+  make[1]: Leaving directory '/home/spagett/fbink-sys/FBInk/i2c-tools'
+  cd i2c-tools && \
+  git reset --hard && \
+  git clean -fxdq
+  HEAD is now at a0e5865 i2cdetect: only use "newer" I2C_FUNC_* flags if they exist
+  make -C libevdev distclean
+  make[1]: Entering directory '/home/spagett/fbink-sys/FBInk/libevdev'
+  make[1]: Leaving directory '/home/spagett/fbink-sys/FBInk/libevdev'
+  cd libevdev && \
+  git reset --hard && \
+  git clean -fxdq
+  HEAD is now at 97d0e4d CI: add a comment to the meson build helper
+  rm -rf libunibreak-staged
+  rm -rf libunibreak.built
+  rm -rf libi2c-staged
+  rm -rf libi2c.built
+  rm -rf libevdev-staged
+  rm -rf libevdev.built
+  [[ -d .git ]] && rm -rf VERSION
+
+  /!\
+  /!\
+
+  make staticlib
+  make[1]: Entering directory '/home/spagett/fbink-sys/FBInk'
+
+  /!\
+  /!\
+
+  mkdir -p libi2c-staged
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wno-conversion -Wno-sign-conversion -Wno-suggest-attribute=pure  -o Debug/static/libunibreak/src/linebreak.o -c libunibreak/src/linebreak.c
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wno-conversion -Wno-sign-conversion -Wno-suggest-attribute=pure  -o Debug/static/libunibreak/src/linebreakdata.o -c libunibreak/src/linebreakdata.c
+  make -C i2c-tools \
+  BUILD_DYNAMIC_LIB=0 USE_STATIC_LIB=1 BUILD_STATIC_LIB=1 V=1 \
+  CC='armv7l-linux-musleabihf-cc' AR='armv7l-linux-musleabihf-gcc-ar' \
+  CFLAGS='-Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wno-sign-conversion -fvisibility=hidden' \
+  PREFIX="/" libdir="/lib" DESTDIR='/home/spagett/fbink-sys/FBInk/libi2c-staged' \
+  install-lib install-include
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wno-conversion -Wno-sign-conversion -Wno-suggest-attribute=pure  -o Debug/static/libunibreak/src/unibreakdef.o -c libunibreak/src/unibreakdef.c
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wno-conversion -Wno-sign-conversion -Wno-suggest-attribute=pure  -o Debug/static/libunibreak/src/linebreakdef.o -c libunibreak/src/linebreakdef.c
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init   -o Debug/static/qimagescale/qimagescale.o -c qimagescale/qimagescale.c
+  make[2]: Entering directory '/home/spagett/fbink-sys/FBInk/i2c-tools'
+  armv7l-linux-musleabihf-cc -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wno-sign-conversion -fvisibility=hidden -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wundef -Wmissing-prototypes -Iinclude -c lib/smbus.c -o lib/smbus.ao
+  install -m 755 -d /home/spagett/fbink-sys/FBInk/libi2c-staged//include/i2c
+  for file in i2c/smbus.h ; do \
+  install -m 644 include/$file /home/spagett/fbink-sys/FBInk/libi2c-staged//include/$file ; done
+  rm -f lib/libi2c.a
+  armv7l-linux-musleabihf-gcc-ar rcvs lib/libi2c.a lib/smbus.ao
+  a - lib/smbus.ao
+  install -m 755 -d /home/spagett/fbink-sys/FBInk/libi2c-staged/lib /home/spagett/fbink-sys/FBInk/libi2c-staged//share/man/man3
+  install -m 644 lib/libi2c.a /home/spagett/fbink-sys/FBInk/libi2c-staged/lib
+  install -m 644 lib/libi2c.3 /home/spagett/fbink-sys/FBInk/libi2c-staged//share/man/man3
+  make[2]: Leaving directory '/home/spagett/fbink-sys/FBInk/i2c-tools'
+  touch "libi2c.built"
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init   -o Debug/static/fbink.o -c fbink.c
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init   -o Debug/static/cutef8/utf8.o -c cutef8/utf8.c
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Ilibi2c-staged/include -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init   -o Debug/static/cutef8/dfa.o -c cutef8/dfa.c
+  armv7l-linux-musleabihf-gcc-ar rc Debug/static/libfbink.a Debug/static/fbink.o Debug/static/cutef8/utf8.o Debug/static/cutef8/dfa.o Debug/static/libunibreak/src/linebreak.o Debug/static/libunibreak/src/linebreakdata.o Debug/static/libunibreak/src/unibreakdef.o Debug/static/libunibreak/src/linebreakdef.o Debug/static/qimagescale/qimagescale.o
+  armv7l-linux-musleabihf-cc -r -o Debug/static/libfbink.o -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wl,--as-needed -Wl,--whole-archive -nostdlib Debug/static/libfbink.a libi2c-staged/lib/libi2c.a
+  armv7l-linux-musleabihf-gcc-ar rc Debug/libfbink.a Debug/static/libfbink.o
+  armv7l-linux-musleabihf-gcc-ranlib Debug/libfbink.a
+  make[1]: Leaving directory '/home/spagett/fbink-sys/FBInk'
+  make staticbin
+  make[1]: Entering directory '/home/spagett/fbink-sys/FBInk'
+
+  /!\
+  /!\
+
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -o Debug/fbink_cmd.o -c fbink_cmd.c
+  armv7l-linux-musleabihf-cc  -DDEBUG -D_REENTRANT=1 -D_GNU_SOURCE -DFBINK_FOR_KOBO -DFBINK_MINIMAL -DFBINK_WITH_FONTS -DFBINK_WITH_BITMAP -DFBINK_WITH_IMAGE -DFBINK_WITH_OPENTYPE -DFBINK_WITH_DRAW -Og -fno-omit-frame-pointer -pipe -g -Wall -Wextra -Wunused -Wformat=2 -Wformat-signedness -Wformat-truncation=1 -Wnull-dereference -Wuninitialized -Wduplicated-branches -Wduplicated-cond -Wundef -Wbad-function-cast -Wwrite-strings -Wjump-misses-init -Wlogical-op -Wstrict-prototypes -Wold-style-definition -Wshadow -Wmissing-prototypes -Wmissing-declarations -Wnested-externs -Winline -Wcast-qual -Wcast-align -Wconversion -Wpadded -Wsuggest-attribute=pure -Wsuggest-attribute=const -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wmissing-format-attribute -Wno-jump-misses-init -Wl,--as-needed -LDebug -o Debug/static/fbink Debug/fbink_cmd.o -l:libfbink.a -lm
+  ln -f Debug/static/fbink Debug/fbink
+  make[1]: Leaving directory '/home/spagett/fbink-sys/FBInk'
+  Make command executed successfully!
+  out_path: "/home/spagett/fbink-sys/target/armv7-unknown-linux-musleabihf/debug/build/fbink-sys-792ce7dfeeab08a4/out"
+
+  --- stderr
+  fatal: No names found, cannot describe anything.
+  cat: VERSION: No such file or directory
+  make[1]: *** No rule to make target 'distclean'.  Stop.
+  make: [Makefile:875: libunibreakclean] Error 2 (ignored)
+  make[1]: *** No rule to make target 'distclean'.  Stop.
+  make: [Makefile:887: libevdevclean] Error 2 (ignored)
+  make: [Makefile:952: distclean] Error 1 (ignored)
+  Makefile:105: Detected a musl TC: it *may* be built without linker plugins support, which are a hard dependency of the utils target!
+  fatal: No names found, cannot describe anything.
+  cat: VERSION: No such file or directory
+  Makefile:105: Detected a musl TC: it *may* be built without linker plugins support, which are a hard dependency of the utils target!
+  fatal: No names found, cannot describe anything.
+  cat: VERSION: No such file or directory
+  In file included from libunibreak/src/linebreakdata.c:6:
+  libunibreak/src/linebreakdef.h:160:9: warning: padding struct to align ‘cLb30aRI’ [-Wpadded]
+    160 |     int cLb30aRI;                   /**< Count of RI characters (LB30a) */
+        |         ^~~~~~~~
+  In file included from libunibreak/src/linebreakdef.c:36:
+  libunibreak/src/linebreakdef.h:160:9: warning: padding struct to align ‘cLb30aRI’ [-Wpadded]
+    160 |     int cLb30aRI;                   /**< Count of RI characters (LB30a) */
+        |         ^~~~~~~~
+  In file included from libunibreak/src/linebreak.c:56:
+  libunibreak/src/linebreakdef.h:160:9: warning: padding struct to align ‘cLb30aRI’ [-Wpadded]
+    160 |     int cLb30aRI;                   /**< Count of RI characters (LB30a) */
+        |         ^~~~~~~~
+  In file included from fbink.c:37:
+  fbink.h:523:21: warning: padding struct to align ‘device_id’ [-Wpadded]
+    523 |         DEVICE_ID_T device_id;              // deviceQuirks.deviceId (decimal value, c.f., identify_device() on Kindle!)
+        |                     ^~~~~~~~~
+  fbink.h:557:1: warning: padding struct size to alignment boundary [-Wpadded]
+    557 | } FBInkState;
+        | ^
+  fbink.h:640:1: warning: padding struct size to alignment boundary [-Wpadded]
+    640 | } FBInkOTConfig;
+        | ^
+  fbink.h:656:1: warning: padding struct size to alignment boundary [-Wpadded]
+    656 | } FBInkOTFit;
+        | ^
+  fbink.h:679:1: warning: padding struct size to alignment boundary [-Wpadded]
+    679 | } FBInkDump;
+        | ^
+  In file included from fbink_internal.h:212,
+                   from fbink.c:39:
+  eink/sunxi-kobo.h:38:26: warning: padding struct to align ‘get_region’ [-Wpadded]
+     38 |         struct area_info get_region;
+        |                          ^~~~~~~~~~
+  eink/sunxi-kobo.h:320:32: warning: padding struct to align ‘crop’ [-Wpadded]
+    320 |         struct disp_rect64     crop;              /* crop rectangle boundaries */
+        |                                ^~~~
+  eink/sunxi-kobo.h:332:31: warning: padding struct to align ‘screen_win’ [-Wpadded]
+    332 |         struct disp_rect      screen_win;   /* display window on the screen */
+        |                               ^~~~~~~~~~
+  eink/sunxi-kobo.h:334:31: warning: padding struct to align ‘out_trd_mode’ [-Wpadded]
+    334 |         enum disp_3d_out_mode out_trd_mode; /* 3d display mode */
+        |                               ^~~~~~~~~~~~
+  eink/sunxi-kobo.h:342:1: warning: padding struct size to alignment boundary [-Wpadded]
+    342 | };
+        | ^
+  eink/sunxi-kobo.h:348:32: warning: padding struct to align ‘channel’ [-Wpadded]
+    348 |         unsigned int           channel;
+        |                                ^~~~~~~
+  eink/sunxi-kobo.h:350:1: warning: padding struct size to alignment boundary [-Wpadded]
+    350 | };
+        | ^
+  eink/sunxi-kobo.h:400:28: warning: padding struct to align ‘mode’ [-Wpadded]
+    400 |         enum disp_atw_mode mode;
+        |                            ^~~~
+  eink/sunxi-kobo.h:441:32: warning: padding struct to align ‘crop’ [-Wpadded]
+    441 |         struct disp_rect64     crop;
+        |                                ^~~~
+  eink/sunxi-kobo.h:476:31: warning: padding struct to align ‘screen_win’ [-Wpadded]
+    476 |         struct disp_rect      screen_win;
+        |                               ^~~~~~~~~~
+  eink/sunxi-kobo.h:478:31: warning: padding struct to align ‘out_trd_mode’ [-Wpadded]
+    478 |         enum disp_3d_out_mode out_trd_mode;
+        |                               ^~~~~~~~~~~~
+  eink/sunxi-kobo.h:500:33: warning: padding struct to align ‘channel’ [-Wpadded]
+    500 |         unsigned int            channel;
+        |                                 ^~~~~~~
+  eink/sunxi-kobo.h:502:1: warning: padding struct size to alignment boundary [-Wpadded]
+    502 | };
+        | ^
+  eink/sunxi-kobo.h:515:14: warning: padding struct to align ‘is_cfa’ [-Wpadded]
+    515 |         int  is_cfa;
+        |              ^~~~~~
+  In file included from fbink_types.h:32,
+                   from fbink_internal.h:249,
+                   from fbink.c:39:
+  stb/stb_truetype.h:628:1: warning: padding struct size to alignment boundary [-Wpadded]
+    628 | } stbtt_pack_range;
+        | ^
+  In file included from fbink_internal.h:249,
+                   from fbink.c:39:
+  fbink_types.h:177:1: warning: padding struct size to alignment boundary [-Wpadded]
+    177 | } FBInkOTLine;
+        | ^
+  fbink_types.h:215:35: warning: padding struct to align ‘layer’ [-Wpadded]
+    215 |         struct disp_layer_config2 layer;
+        |                                   ^~~~~
+  fbink_types.h:219:1: warning: padding struct size to alignment boundary [-Wpadded]
+    219 | } FBInkKoboSunxi;
+        | ^
+  In file included from fbink_internal.h:868,
+                   from fbink.c:39:
+  fbink_device_id.h:82:27: warning: padding struct to align ‘offset’ [-Wpadded]
+     82 |         off_t             offset;
+        |                           ^~~~~~
+  In file included from fbink.c:73:
+  stb/stb_image.h:1949:17: warning: padding struct to align ‘maxcode’ [-Wpadded]
+   1949 |    unsigned int maxcode[18];
+        |                 ^~~~~~~
+  stb/stb_image.h:1986:19: warning: padding struct to align ‘nomore’ [-Wpadded]
+   1986 |    int            nomore;      // flag if we saw a marker so must stop
+        |                   ^~~~~~
+  fbink.c: In function ‘wait_for_complete_kobo_mk7’:
+  fbink.c:2730:30: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘3221767727’ to ‘-1073199569’ [-Wsign-conversion]
+   2730 |         int rv = ioctl(fbfd, MXCFB_WAIT_FOR_UPDATE_COMPLETE_V3, &update_marker);
+        |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  fbink.c: In function ‘wait_for_complete_kobo_mtk’:
+  fbink.c:2964:30: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘3221767727’ to ‘-1073199569’ [-Wsign-conversion]
+   2964 |         int rv = ioctl(fbfd, HWTCON_WAIT_FOR_UPDATE_COMPLETE, &marker);
+        |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  fbink.c: In function ‘memmap_ion’:
+  fbink.c:5546:67: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘3222554880’ to ‘-1072412416’ [-Wsign-conversion]
+   5546 |         int                        ret   = ioctl(sunxiCtx.ion_fd, ION_IOC_ALLOC, &alloc);
+        |                                                                   ^~~~~~~~~~~~~
+  fbink.c:5555:54: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘3221768450’ to ‘-1073198846’ [-Wsign-conversion]
+   5555 |         ret                 = ioctl(sunxiCtx.ion_fd, ION_IOC_MAP, &sunxiCtx.ion);
+        |                                                      ^~~~~~~~~~~
+  fbink.c:5618:72: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘3221506305’ to ‘-1073460991’ [-Wsign-conversion]
+   5618 |                 ret                           = ioctl(sunxiCtx.ion_fd, ION_IOC_FREE, &handle);
+        |                                                                        ^~~~~~~~~~~~
+  fbink.c: In function ‘unmap_ion’:
+  fbink.c:5696:64: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘3221506305’ to ‘-1073460991’ [-Wsign-conversion]
+   5696 |         int                    ret    = ioctl(sunxiCtx.ion_fd, ION_IOC_FREE, &handle);
+        |                                                                ^~~~~~~~~~~~
+  In file included from fbink.c:11987:
+  fbink_device_id.c: In function ‘identify_kobo’:
+  fbink_device_id.c:1277:39: warning: conversion from ‘off_t’ {aka ‘long long int’} to ‘long int’ may change value [-Wconversion]
+   1277 |                 if (fseek(fp, hwconfig.offset, SEEK_SET) != 0) {
+        |                               ~~~~~~~~^~~~~~~
+  In file included from fbink.c:39:
+  fbink_device_id.c:1278:79: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   1278 |                         PFWARN("Failed to seek to position 0x%p in `%s`: %m", (void*) hwconfig.offset, hwconfig.device);
+        |                                                                               ^
+  fbink_internal.h:453:63: note: in definition of macro ‘WARN’
+    453 |                         syslog(LOG_ERR, "[FBInk] " fmt "!", ##__VA_ARGS__);                                              \
+        |                                                               ^~~~~~~~~~~
+  fbink_device_id.c:1278:25: note: in expansion of macro ‘PFWARN’
+   1278 |                         PFWARN("Failed to seek to position 0x%p in `%s`: %m", (void*) hwconfig.offset, hwconfig.device);
+        |                         ^~~~~~
+  fbink_device_id.c:1278:79: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   1278 |                         PFWARN("Failed to seek to position 0x%p in `%s`: %m", (void*) hwconfig.offset, hwconfig.device);
+        |                                                                               ^
+  fbink_internal.h:455:65: note: in definition of macro ‘WARN’
+    455 |                         fprintf(stderr, "[FBInk] " fmt "!\n", ##__VA_ARGS__);                                            \
+        |                                                                 ^~~~~~~~~~~
+  fbink_device_id.c:1278:25: note: in expansion of macro ‘PFWARN’
+   1278 |                         PFWARN("Failed to seek to position 0x%p in `%s`: %m", (void*) hwconfig.offset, hwconfig.device);
+        |                         ^~~~~~
+  In file included from fbink.c:11987:
+  fbink_device_id.c:1314:55: warning: signed conversion from ‘unsigned int’ to ‘int’ changes value from ‘2147750514’ to ‘-2147216782’ [-Wsign-conversion]
+   1314 |                                 if (ioctl(fileno(fp), BLKGETSIZE64, &storagesize)) {
+        |                                                       ^~~~~~~~~~~~
+  fbink.c: In function ‘fbink_target’:
+  fbink.c:103:1: warning: function might be candidate for attribute ‘const’ [-Wsuggest-attribute=const]
+    103 | fbink_target(void)
+        | ^~~~~~~~~~~~
+  fbink.c: In function ‘fbink_features’:
+  fbink.c:127:5: warning: function might be candidate for attribute ‘const’ [-Wsuggest-attribute=const]
+    127 |     fbink_features(void)
+        |     ^~~~~~~~~~~~~~
+  fbink.c: In function ‘fbink_get_last_marker’:
+  fbink.c:9348:5: warning: function might be candidate for attribute ‘pure’ [-Wsuggest-attribute=pure]
+   9348 |     fbink_get_last_marker(void)
+        |     ^~~~~~~~~~~~~~~~~~~~~
+  In file included from fbink.c:12026:
+  fbink.c: In function ‘fbink_rota_native_to_canonical’:
+  fbink_rota_quirks.c:364:5: warning: function might be candidate for attribute ‘pure’ [-Wsuggest-attribute=pure]
+    364 |     fbink_rota_native_to_canonical(uint32_t rotate UNUSED_BY_NOTKOBO)
+        |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  fbink.c: In function ‘fbink_rota_canonical_to_native’:
+  fbink_rota_quirks.c:380:5: warning: function might be candidate for attribute ‘pure’ [-Wsuggest-attribute=pure]
+    380 |     fbink_rota_canonical_to_native(uint8_t rotate UNUSED_BY_NOTKOBO)
+        |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  fbink.c: In function ‘initialize_fbink’:
+  fbink.c:5726:5: warning: inlining failed in call to ‘close_fb’: call is unlikely and code size would grow [-Winline]
+   5726 |     close_fb(int fbfd)
+        |     ^~~~~~~~
+  fbink.c:5092:17: note: called from here
+   5092 |                 close_fb(fbfd);
+        |                 ^~~~~~~~~~~~~~
+  Makefile:105: Detected a musl TC: it *may* be built without linker plugins support, which are a hard dependency of the utils target!
+  fatal: No names found, cannot describe anything.
+  cat: VERSION: No such file or directory
+  In file included from fbink_cmd.h:25,
+                   from fbink_cmd.c:28:
+  fbink.h:523:21: warning: padding struct to align ‘device_id’ [-Wpadded]
+    523 |         DEVICE_ID_T device_id;              // deviceQuirks.deviceId (decimal value, c.f., identify_device() on Kindle!)
+        |                     ^~~~~~~~~
+  fbink.h:557:1: warning: padding struct size to alignment boundary [-Wpadded]
+    557 | } FBInkState;
+        | ^
+  fbink.h:640:1: warning: padding struct size to alignment boundary [-Wpadded]
+    640 | } FBInkOTConfig;
+        | ^
+  fbink.h:656:1: warning: padding struct size to alignment boundary [-Wpadded]
+    656 | } FBInkOTFit;
+        | ^
+  fbink.h:679:1: warning: padding struct size to alignment boundary [-Wpadded]
+    679 | } FBInkDump;
+        | ^
+  thread 'main' panicked at build.rs:77:83:
+  Failed to copy libfbink.a library: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

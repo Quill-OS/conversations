@@ -1,0 +1,81 @@
+[main] Building folder: inkbox-power-deamon 
+[build] Starting build
+[proc] Executing command: /usr/bin/cmake --build /mnt/HDD/Project/Public/inkbox-power-deamon/build --config Debug --target all --
+[build] [2/3  33% :: 0.251] Building CXX object CMakeFiles/inkbox-power-deamon.dir/src/monitorEvents.cpp.o
+[build] FAILED: CMakeFiles/inkbox-power-deamon.dir/src/monitorEvents.cpp.o 
+[build] /home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/bin/armv7l-linux-musleabihf-g++   -pthread -g -MD -MT CMakeFiles/inkbox-power-deamon.dir/src/monitorEvents.cpp.o -MF CMakeFiles/inkbox-power-deamon.dir/src/monitorEvents.cpp.o.d -o CMakeFiles/inkbox-power-deamon.dir/src/monitorEvents.cpp.o -c /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp
+[build] In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:2:
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.h:6:6: error: variable or field ‘log’ declared void
+[build]     6 | void log(string message);
+[build]       |      ^~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.h:6:10: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+[build]     6 | void log(string message);
+[build]       |          ^~~~~~
+[build]       |          std::string
+[build] In file included from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/string:39,
+[build]                  from /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.h:4,
+[build]                  from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:2:
+[build] /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+[build]    79 |   typedef basic_string<char>    string;
+[build]       |                                 ^~~~~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp: In function ‘void startMonitoringDev()’:
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:9:5: error: ‘log’ was not declared in this scope; did you mean ‘long’?
+[build]     9 |     log("Starting monitoring events");
+[build]       |     ^~~
+[build]       |     long
+[build] [2/3  66% :: 0.730] Building CXX object CMakeFiles/inkbox-power-deamon.dir/src/main.cpp.o
+[build] FAILED: CMakeFiles/inkbox-power-deamon.dir/src/main.cpp.o 
+[build] /home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/bin/armv7l-linux-musleabihf-g++   -pthread -g -MD -MT CMakeFiles/inkbox-power-deamon.dir/src/main.cpp.o -MF CMakeFiles/inkbox-power-deamon.dir/src/main.cpp.o.d -o CMakeFiles/inkbox-power-deamon.dir/src/main.cpp.o -c /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp
+[build] In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:5:
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.h:6:6: error: variable or field ‘log’ declared void
+[build]     6 | void log(string message);
+[build]       |      ^~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.h:6:10: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+[build]     6 | void log(string message);
+[build]       |          ^~~~~~
+[build]       |          std::string
+[build] In file included from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/iosfwd:39,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/ios:38,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/ostream:38,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/iostream:39,
+[build]                  from /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:1:
+[build] /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+[build]    79 |   typedef basic_string<char>    string;
+[build]       |                                 ^~~~~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:10:6: error: variable or field ‘log’ declared void
+[build]    10 | void log(string to_log)
+[build]       |      ^~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:10:10: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+[build]    10 | void log(string to_log)
+[build]       |          ^~~~~~
+[build]       |          std::string
+[build] In file included from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/iosfwd:39,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/ios:38,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/ostream:38,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/iostream:39,
+[build]                  from /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:1:
+[build] /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+[build]    79 |   typedef basic_string<char>    string;
+[build]       |                                 ^~~~~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp: In function ‘int main()’:
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:22:5: error: ‘string’ was not declared in this scope; did you mean ‘std::string’?
+[build]    22 |     string envVar;
+[build]       |     ^~~~~~
+[build]       |     std::string
+[build] In file included from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/iosfwd:39,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/ios:38,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/ostream:38,
+[build]                  from /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/iostream:39,
+[build]                  from /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:1:
+[build] /mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/armv7l-linux-musleabihf/include/c++/10.2.1/bits/stringfwd.h:79:33: note: ‘std::string’ declared here
+[build]    79 |   typedef basic_string<char>    string;
+[build]       |                                 ^~~~~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:26:9: error: ‘envVar’ was not declared in this scope
+[build]    26 |         envVar = tmp;
+[build]       |         ^~~~~~
+[build] /mnt/HDD/Project/Public/inkbox-power-deamon/src/main.cpp:30:13: error: ‘log’ was not declared in this scope; did you mean ‘long’?
+[build]    30 |             log("Debug mode is activated");
+[build]       |             ^~~
+[build]       |             long
+[build] ninja: build stopped: subcommand failed.
+[build] Build finished with exit code 1

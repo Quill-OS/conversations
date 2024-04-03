@@ -1,0 +1,150 @@
+From a6f5f0dd4e21191ce35030dd4d6421e1cca10ee4 Mon Sep 17 00:00:00 2001
+From: Alexandra Yates <alexandra.yates@linux.intel.com>
+Date: Tue, 15 Sep 2015 10:32:46 -0700
+Subject: [PATCH] PM / sleep: Report interrupt that caused system wakeup
+
+Add a sysfs attribute, /sys/power/pm_wakeup_irq, reporting the IRQ
+number of the first wakeup interrupt (that is, the first interrupt
+from an IRQ line armed for system wakeup) seen by the kernel during
+the most recent system suspend/resume cycle.
+
+This feature will be useful for system wakeup diagnostics of
+spurious wakeup interrupts.
+
+Signed-off-by: Alexandra Yates <alexandra.yates@linux.intel.com>
+[ rjw: Fixed up pm_wakeup_irq definition ]
+Signed-off-by: Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+---
+ Documentation/ABI/testing/sysfs-power | 12 ++++++++++++
+ drivers/base/power/wakeup.c           | 12 ++++++++++++
+ include/linux/suspend.h               |  3 +++
+ kernel/irq/pm.c                       |  2 +-
+ kernel/power/main.c                   | 17 +++++++++++++++++
+ 5 files changed, 45 insertions(+), 1 deletion(-)
+
+diff --git a/Documentation/ABI/testing/sysfs-power b/Documentation/ABI/testing/sysfs-power
+index f4551816329e1..50b368d490b59 100644
+--- a/Documentation/ABI/testing/sysfs-power
++++ b/Documentation/ABI/testing/sysfs-power
+@@ -256,3 +256,15 @@ Description:
+ 		Writing a "1" enables this printing while writing a "0"
+ 		disables it.  The default value is "0".  Reading from this file
+ 		will display the current value.
++
++What:		/sys/power/pm_wakeup_irq
++Date:		April 2015
++Contact:	Alexandra Yates <alexandra.yates@linux.intel.org>
++Description:
++		The /sys/power/pm_wakeup_irq file reports to user space the IRQ
++		number of the first wakeup interrupt (that is, the first
++		interrupt from an IRQ line armed for system wakeup) seen by the
++		kernel during the most recent system suspend/resume cycle.
++
++		This output is useful for system wakeup diagnostics of spurious
++		wakeup interrupts.
+diff --git a/drivers/base/power/wakeup.c b/drivers/base/power/wakeup.c
+index 51f15bc157742..3b361ecfaffcb 100644
+--- a/drivers/base/power/wakeup.c
++++ b/drivers/base/power/wakeup.c
+@@ -25,6 +25,9 @@
+  */
+ bool events_check_enabled __read_mostly;
+ 
++/* First wakeup IRQ seen by the kernel in the last cycle. */
++unsigned int pm_wakeup_irq __read_mostly;
++
+ /* If set and the system is suspending, terminate the suspend. */
+ static bool pm_abort_suspend __read_mostly;
+ 
+@@ -868,6 +871,15 @@ EXPORT_SYMBOL_GPL(pm_system_wakeup);
+ void pm_wakeup_clear(void)
+ {
+ 	pm_abort_suspend = false;
++	pm_wakeup_irq = 0;
++}
++
++void pm_system_irq_wakeup(unsigned int irq_number)
++{
++	if (pm_wakeup_irq == 0) {
++		pm_wakeup_irq = irq_number;
++		pm_system_wakeup();
++	}
+ }
+ 
+ /**
+diff --git a/include/linux/suspend.h b/include/linux/suspend.h
+index 5efe743ce1e88..33aaf9a9596c1 100644
+--- a/include/linux/suspend.h
++++ b/include/linux/suspend.h
+@@ -387,10 +387,12 @@ extern int unregister_pm_notifier(struct notifier_block *nb);
+ 
+ /* drivers/base/power/wakeup.c */
+ extern bool events_check_enabled;
++extern unsigned int pm_wakeup_irq;
+ 
+ extern bool pm_wakeup_pending(void);
+ extern void pm_system_wakeup(void);
+ extern void pm_wakeup_clear(void);
++extern void pm_system_irq_wakeup(unsigned int irq_number);
+ extern bool pm_get_wakeup_count(unsigned int *count, bool block);
+ extern bool pm_save_wakeup_count(unsigned int count);
+ extern void pm_wakep_autosleep_enabled(bool set);
+@@ -440,6 +442,7 @@ static inline int unregister_pm_notifier(struct notifier_block *nb)
+ static inline bool pm_wakeup_pending(void) { return false; }
+ static inline void pm_system_wakeup(void) {}
+ static inline void pm_wakeup_clear(void) {}
++static inline void pm_system_irq_wakeup(unsigned int irq_number) {}
+ 
+ static inline void lock_system_sleep(void) {}
+ static inline void unlock_system_sleep(void) {}
+diff --git a/kernel/irq/pm.c b/kernel/irq/pm.c
+index 21c62617a35a6..e80c4400118ae 100644
+--- a/kernel/irq/pm.c
++++ b/kernel/irq/pm.c
+@@ -21,7 +21,7 @@ bool irq_pm_check_wakeup(struct irq_desc *desc)
+ 		desc->istate |= IRQS_SUSPENDED | IRQS_PENDING;
+ 		desc->depth++;
+ 		irq_disable(desc);
+-		pm_system_wakeup();
++		pm_system_irq_wakeup(irq_desc_get_irq(desc));
+ 		return true;
+ 	}
+ 	return false;
+diff --git a/kernel/power/main.c b/kernel/power/main.c
+index 63d395b5df930..b2dd4d999900a 100644
+--- a/kernel/power/main.c
++++ b/kernel/power/main.c
+@@ -272,6 +272,22 @@ static inline void pm_print_times_init(void)
+ {
+ 	pm_print_times_enabled = !!initcall_debug;
+ }
++
++static ssize_t pm_wakeup_irq_show(struct kobject *kobj,
++					struct kobj_attribute *attr,
++					char *buf)
++{
++	return pm_wakeup_irq ? sprintf(buf, "%u\n", pm_wakeup_irq) : -ENODATA;
++}
++
++static ssize_t pm_wakeup_irq_store(struct kobject *kobj,
++					struct kobj_attribute *attr,
++					const char *buf, size_t n)
++{
++	return -EINVAL;
++}
++power_attr(pm_wakeup_irq);
++
+ #else /* !CONFIG_PM_SLEEP_DEBUG */
+ static inline void pm_print_times_init(void) {}
+ #endif /* CONFIG_PM_SLEEP_DEBUG */
+@@ -604,6 +620,7 @@ static struct attribute * g[] = {
+ #endif
+ #ifdef CONFIG_PM_SLEEP_DEBUG
+ 	&pm_print_times_attr.attr,
++	&pm_wakeup_irq_attr.attr,
+ #endif
+ #endif
+ #ifdef CONFIG_FREEZER
+-- 
+2.39.2
+

@@ -1,0 +1,63 @@
+% make
+make  all-recursive
+make[1]: Entering directory '/mnt/HDD/Project/qt-test/eudev-3.2.10'
+Making all in src
+make[2]: Entering directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src'
+Making all in shared
+make[3]: Entering directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/shared'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/shared'
+Making all in libudev
+make[3]: Entering directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/libudev'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/libudev'
+Making all in udev
+make[3]: Entering directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/udev'
+make  all-am
+make[4]: Entering directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/udev'
+  CC       libudev_core_la-udev-builtin-input_id.lo
+udev-builtin-input_id.c: In function 'test_pointers':
+udev-builtin-input_id.c:191:44: error: 'ABS_MT_SLOT' undeclared (first use in this function)
+  191 |         if (has_mt_coordinates && test_bit(ABS_MT_SLOT, bitmask_abs) && test_bit(ABS_MT_SLOT - 1, bitmask_abs))
+      |                                            ^~~~~~~~~~~
+udev-builtin-input_id.c:42:19: note: in definition of macro 'LONG'
+   42 | #define LONG(x) ((x)/BITS_PER_LONG)
+      |                   ^
+udev-builtin-input_id.c:191:35: note: in expansion of macro 'test_bit'
+  191 |         if (has_mt_coordinates && test_bit(ABS_MT_SLOT, bitmask_abs) && test_bit(ABS_MT_SLOT - 1, bitmask_abs))
+      |                                   ^~~~~~~~
+udev-builtin-input_id.c:191:44: note: each undeclared identifier is reported only once for each function it appears in
+  191 |         if (has_mt_coordinates && test_bit(ABS_MT_SLOT, bitmask_abs) && test_bit(ABS_MT_SLOT - 1, bitmask_abs))
+      |                                            ^~~~~~~~~~~
+udev-builtin-input_id.c:42:19: note: in definition of macro 'LONG'
+   42 | #define LONG(x) ((x)/BITS_PER_LONG)
+      |                   ^
+udev-builtin-input_id.c:191:35: note: in expansion of macro 'test_bit'
+  191 |         if (has_mt_coordinates && test_bit(ABS_MT_SLOT, bitmask_abs) && test_bit(ABS_MT_SLOT - 1, bitmask_abs))
+      |                                   ^~~~~~~~
+udev-builtin-input_id.c:193:30: error: 'INPUT_PROP_DIRECT' undeclared (first use in this function); did you mean 'INPUT_PROP_MAX'?
+  193 |         is_direct = test_bit(INPUT_PROP_DIRECT, bitmask_props);
+      |                              ^~~~~~~~~~~~~~~~~
+udev-builtin-input_id.c:42:19: note: in definition of macro 'LONG'
+   42 | #define LONG(x) ((x)/BITS_PER_LONG)
+      |                   ^
+udev-builtin-input_id.c:193:21: note: in expansion of macro 'test_bit'
+  193 |         is_direct = test_bit(INPUT_PROP_DIRECT, bitmask_props);
+      |                     ^~~~~~~~
+udev-builtin-input_id.c:207:31: error: 'BTN_TRIGGER_HAPPY1' undeclared (first use in this function); did you mean 'BTN_TRIGGER_HAPPY'?
+  207 |                 for (button = BTN_TRIGGER_HAPPY1; button <= BTN_TRIGGER_HAPPY40 && !has_joystick_axes_or_buttons; button++)
+      |                               ^~~~~~~~~~~~~~~~~~
+      |                               BTN_TRIGGER_HAPPY
+udev-builtin-input_id.c:207:61: error: 'BTN_TRIGGER_HAPPY40' undeclared (first use in this function); did you mean 'BTN_TRIGGER_HAPPY'?
+  207 |                 for (button = BTN_TRIGGER_HAPPY1; button <= BTN_TRIGGER_HAPPY40 && !has_joystick_axes_or_buttons; button++)
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+      |                                                             BTN_TRIGGER_HAPPY
+make[4]: *** [Makefile:799: libudev_core_la-udev-builtin-input_id.lo] Error 1
+make[4]: Leaving directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/udev'
+make[3]: *** [Makefile:526: all] Error 2
+make[3]: Leaving directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src/udev'
+make[2]: *** [Makefile:403: all-recursive] Error 1
+make[2]: Leaving directory '/mnt/HDD/Project/qt-test/eudev-3.2.10/src'
+make[1]: *** [Makefile:455: all-recursive] Error 1
+make[1]: Leaving directory '/mnt/HDD/Project/qt-test/eudev-3.2.10'
+make: *** [Makefile:387: all] Error 2

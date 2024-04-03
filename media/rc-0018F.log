@@ -1,0 +1,83 @@
+rc boot logging started at Mon May 10 16:03:50 2021
+
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Splash screen ...cat: /opt/update/will_update: No such file or directory
+Loaded FBInk v1.23.1-25-g196ebcf for Kobo
+[FBInk] Font `../fonts/resources/fraunces.ttf` loaded for style 'Regular'
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+[FBInk] Detected a Kobo Mini (340 => Pixie @ Mark 4)
+[FBInk] Enabled Kobo w/o Multi-Touch quirks
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 200 dpi
+[FBInk] Variable fb info: 600x800, 16bpp @ rotation: 3 (Counter Clockwise, 270)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 2179072 bytes & line length: 1216 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 37 cols, Page size: 50 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Font `../fonts/resources/inter-m.ttf` loaded for style 'Regular'
+ [ ok ]
+ * Starting USBNet ... * WARNING: mass_storage is already stopped
+ [ ok ]
+
+rc boot logging stopped at Mon May 10 16:03:55 2021
+
+
+rc default logging started at Mon May 10 16:03:55 2021
+
+ * Starting evtest watch ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Checking for available updates ...cat: /kobo/mnt/onboard/onboard/.inkbox/can_update: No such file or directory
+cat: /kobo/mnt/onboard/onboard/.inkbox/can_really_update: No such file or directory
+
+ [ ok ]
+ * Waiting for a power button event to put the device to sleep ... [ ok ]
+ * WARNING: wake_standby is already stopped
+Setting up watches.
+Watches established.
+ * Starting InkBox GUI ... [ ok ]
+
+rc default logging stopped at Mon May 10 16:03:58 2021
+
+
+rc boot logging started at Mon May 10 16:40:52 2021
+
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Splash screen ...cat: /opt/update/will_update: No such file or directory
+Loaded FBInk v1.23.1-25-g196ebcf for Kobo
+[FBInk] Font `../fonts/resources/fraunces.ttf` loaded for style 'Regular'
+[FBInk] Couldn't find a Kobo version tag (onboard unmounted or not running on a Kobo?)!
+[FBInk] Detected a Kobo Mini (340 => Pixie @ Mark 4)
+[FBInk] Enabled Kobo w/o Multi-Touch quirks
+[FBInk] Clock tick frequency appears to be 100 Hz
+[FBInk] Screen density set to 200 dpi
+[FBInk] Variable fb info: 600x800, 16bpp @ rotation: 3 (Counter Clockwise, 270)
+[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 2179072 bytes & line length: 1216 bytes
+[FBInk] Canonical rotation: 0 (Upright, 0)
+[FBInk] Fontsize set to 16x16 (IBM base glyph size: 8x8)
+[FBInk] Line length: 37 cols, Page size: 50 rows
+[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+[FBInk] Font `../fonts/resources/inter-m.ttf` loaded for style 'Regular'
+ [ ok ]
+ * Starting USBNet ... * WARNING: mass_storage is already stopped
+ [ ok ]
+
+rc boot logging stopped at Mon May 10 16:40:57 2021
+
+
+rc default logging started at Mon May 10 16:40:57 2021
+
+ * Starting evtest watch ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Checking for available updates ...cat: /kobo/mnt/onboard/onboard/.inkbox/can_update: No such file or directory
+cat: /kobo/mnt/onboard/onboard/.inkbox/can_really_update: No such file or directory
+
+ [ ok ]
+ * Waiting for a power button event to put the device to sleep ... [ ok ]
+ * WARNING: wake_standby is already stopped
+Setting up watches.
+Watches established.
+ * Starting InkBox GUI ... [ ok ]
+
+rc default logging stopped at Mon May 10 16:41:00 2021
+

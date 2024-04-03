@@ -1,0 +1,28 @@
+```
+<4>[ 7035.771197] ------------[ cut here ]------------
+<4>[ 7035.771231] WARNING: CPU: 0 PID: 5993 at kernel/irq/manage.c:1346 __free_irq+0xa4/0x1ec()
+<4>[ 7035.771239] Trying to free already-free IRQ 32
+<4>[ 7035.771247] Modules linked in: g_ether usb_f_rndis usb_f_ecm_subset usb_f_eem usb_f_ecm u_ether libcomposite configfs [la
+st unloaded: sdio_wifi_pwr]
+<4>[ 7035.771299] CPU: 0 PID: 5993 Comm: inkbox-power-de Tainted: G        W  O    4.1.15 #1
+<4>[ 7035.771308] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+<4>[ 7035.771342] [<80016240>] (unwind_backtrace) from [<800126e8>] (show_stack+0x10/0x14)
+<4>[ 7035.771365] [<800126e8>] (show_stack) from [<8052f0c0>] (dump_stack+0x84/0xc4)
+<4>[ 7035.771387] [<8052f0c0>] (dump_stack) from [<8003956c>] (warn_slowpath_common+0x80/0xb0)
+<4>[ 7035.771405] [<8003956c>] (warn_slowpath_common) from [<800395cc>] (warn_slowpath_fmt+0x30/0x40)
+<4>[ 7035.771424] [<800395cc>] (warn_slowpath_fmt) from [<80071b5c>] (__free_irq+0xa4/0x1ec)
+<4>[ 7035.771441] [<80071b5c>] (__free_irq) from [<80071d38>] (free_irq+0x4c/0xa4)
+<4>[ 7035.771463] [<80071d38>] (free_irq) from [<8036a884>] (elan_touch_suspend+0xa0/0x114)
+<4>[ 7035.771486] [<8036a884>] (elan_touch_suspend) from [<802dae38>] (dpm_run_callback+0x2c/0xc0)
+<4>[ 7035.771505] [<802dae38>] (dpm_run_callback) from [<802dbdfc>] (__device_suspend+0x114/0x3bc)
+<4>[ 7035.771523] [<802dbdfc>] (__device_suspend) from [<802dd174>] (dpm_suspend+0x120/0x234)
+<4>[ 7035.771542] [<802dd174>] (dpm_suspend) from [<8006cd28>] (suspend_devices_and_enter+0xb0/0x500)
+<4>[ 7035.771560] [<8006cd28>] (suspend_devices_and_enter) from [<8006d410>] (pm_suspend+0x298/0x314)
+<4>[ 7035.771574] [<8006d410>] (pm_suspend) from [<8006c018>] (state_store+0x6c/0xbc)
+<4>[ 7035.771592] [<8006c018>] (state_store) from [<8013d1cc>] (kernfs_fop_write+0xb8/0x19c)
+<4>[ 7035.771612] [<8013d1cc>] (kernfs_fop_write) from [<800e9bd4>] (__vfs_write+0x20/0xdc)
+<4>[ 7035.771628] [<800e9bd4>] (__vfs_write) from [<800ea3b0>] (vfs_write+0x90/0x164)
+<4>[ 7035.771645] [<800ea3b0>] (vfs_write) from [<800eabc8>] (SyS_write+0x44/0x9c)
+<4>[ 7035.771663] [<800eabc8>] (SyS_write) from [<8000f440>] (ret_fast_syscall+0x0/0x3c)
+<4>[ 7035.771675] ---[ end trace 884261cfc058f660 ]---
+```

@@ -1,0 +1,1915 @@
++ KERNELDIR=/home/dk/kobo/build/kernel
++ '[' -z n306 ']'
++ '[' -z testing ']'
++ '[' -z std ']'
++ PKEY=testing
++ KERNEL_TYPE=std
++ GIT_BASE_URL=https://github.com/Kobo-InkBox
++ PKGS_BASE_URL=http://23.163.0.39
+++ tr -dc A-Za-z0-9
+++ head -c 10
++ MOUNT_BASEPATH=/tmp/inkbox-2hhsmwa4va
+++ dirname '${0}'
++ cd .
++ GITDIR=/home/dk/kobo/build/imgtool
++ mkdir -p out/release
++ case "${1}" in
++ DEVICE=n306
++ build_base_sd_image
++ printf '==== Building base SD image ====\n'
+==== Building base SD image ====
++ IMAGE_FILE=release/inkbox-n306.img
++ pushd out/
+~/kobo/build/imgtool/out ~/kobo/build/imgtool
++ root_command modprobe nbd
++ '[' '' == 1 ']'
++ sudo modprobe nbd
++ qemu-img create -f qcow2 release/inkbox-n306.img 3865470976
+Formatting 'release/inkbox-n306.img', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=3865470976 lazy_refcounts=off refcount_bits=16
++ root_command qemu-nbd --connect /dev/nbd0 release/inkbox-n306.img
++ '[' '' == 1 ']'
++ sudo qemu-nbd --connect /dev/nbd0 release/inkbox-n306.img
++ root_command dd if=/home/dk/kobo/build/imgtool/sd/n306.bin of=/dev/nbd0
++ '[' '' == 1 ']'
++ sudo dd if=/home/dk/kobo/build/imgtool/sd/n306.bin of=/dev/nbd0
+49151+0 records in
+49151+0 records out
+25165312 bytes (25 MB, 24 MiB) copied, 0.55277 s, 45.5 MB/s
++ sync
++ root_command mkfs.ext4 -O '^metadata_csum' /dev/nbd0p1
++ '[' '' == 1 ']'
++ sudo mkfs.ext4 -O '^metadata_csum' /dev/nbd0p1
+mke2fs 1.46.5 (30-Dec-2021)
+Discarding device blocks:    0/3840         done                            
+Creating filesystem with 3840 4k blocks and 3840 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (1024 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
++ root_command mkfs.ext4 -O '^metadata_csum' /dev/nbd0p2
++ '[' '' == 1 ']'
++ sudo mkfs.ext4 -O '^metadata_csum' /dev/nbd0p2
+mke2fs 1.46.5 (30-Dec-2021)
+Discarding device blocks:      0/128000             done                            
+Creating filesystem with 128000 4k blocks and 128000 inodes
+Filesystem UUID: f3de5c98-35c1-40ab-b215-5a3215bad3f8
+Superblock backups stored on blocks: 
+	32768, 98304
+
+Allocating group tables: 0/4   done                            
+Writing inode tables: 0/4   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/4   done
+
++ root_command mkfs.ext4 -O '^metadata_csum' /dev/nbd0p3
++ '[' '' == 1 ']'
++ sudo mkfs.ext4 -O '^metadata_csum' /dev/nbd0p3
+mke2fs 1.46.5 (30-Dec-2021)
+Discarding device blocks:     0/32768           done                            
+Creating filesystem with 32768 4k blocks and 32768 inodes
+
+Allocating group tables: 0/1   done                            
+Writing inode tables: 0/1   done                            
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: 0/1   done
+
++ root_command mkfs.ext4 -O '^metadata_csum' /dev/nbd0p4
++ '[' '' == 1 ']'
++ sudo mkfs.ext4 -O '^metadata_csum' /dev/nbd0p4
+mke2fs 1.46.5 (30-Dec-2021)
+Discarding device blocks:      0/769894             done                            
+Creating filesystem with 769894 4k blocks and 192768 inodes
+Filesystem UUID: c7aec5a7-a958-4016-b2b5-21b27f9156f5
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/24     done                            
+Writing inode tables:  0/2411/24     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/24     done
+
++ root_command e2label /dev/nbd0p1 boot
++ '[' '' == 1 ']'
++ sudo e2label /dev/nbd0p1 boot
++ root_command e2label /dev/nbd0p2 recoveryfs
++ '[' '' == 1 ']'
++ sudo e2label /dev/nbd0p2 recoveryfs
++ root_command e2label /dev/nbd0p3 rootfs
++ '[' '' == 1 ']'
++ sudo e2label /dev/nbd0p3 rootfs
++ root_command e2label /dev/nbd0p4 user
++ '[' '' == 1 ']'
++ sudo e2label /dev/nbd0p4 user
++ popd
+~/kobo/build/imgtool
++ setup_u_boot
++ printf '==== Setting up U-Boot bootloader ====\n'
+==== Setting up U-Boot bootloader ====
++ setup_kernel_repository
++ '[' -z /home/dk/kobo/build/kernel ']'
++ pushd /home/dk/kobo/build/kernel
+~/kobo/build/kernel ~/kobo/build/imgtool
++ '[' n306 == n705 ']'
++ '[' n306 == n905b ']'
++ '[' n306 == n905c ']'
++ '[' n306 == n613 ']'
++ '[' n306 == n236 ']'
++ '[' n306 == n437 ']'
++ '[' n306 == n306 ']'
+++ nproc
++ env TOOLCHAINDIR=/home/dk/kobo/build/kernel/toolchain/arm-nickel-linux-gnueabihf THREADS=8 TARGET=arm-nickel-linux-gnueabihf scripts/build_u-boot.sh n306
+~/kobo/build/kernel/toolchain/arm-nickel-linux-gnueabihf/bin ~/kobo/build/kernel
+~/kobo/build/kernel
+~/kobo/build/kernel/bootloader/mx6ull-n306 ~/kobo/build/kernel
+  CLEAN   examples/standalone
+  CLEAN   tools
+  CLEAN   tools/lib tools/common
+  CLEAN   scripts/basic
+  CLEAN   scripts/kconfig
+  CLEAN   u-boot u-boot.bin u-boot.cfg u-boot.imx u-boot.lds u-boot.map u-boot-nodtb.bin u-boot.srec u-boot.sym System.map
+  CLEAN   include/config include/generated
+  CLEAN   .config include/autoconf.mk include/autoconf.mk.dep include/config.h
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+scripts/kconfig/conf  --silentoldconfig Kconfig
+  CHK     include/config.h
+  UPD     include/config.h
+  GEN     include/autoconf.mk
+  GEN     include/autoconf.mk.dep
+  CHK     include/config/uboot.release
+  CHK     include/generated/timestamp_autogenerated.h
+  UPD     include/generated/timestamp_autogenerated.h
+  CFG     u-boot.cfg
+  UPD     include/config/uboot.release
+  CHK     include/generated/version_autogenerated.h
+  UPD     include/generated/version_autogenerated.h
+  CC      lib/asm-offsets.s
+  CC      arch/arm/lib/asm-offsets.s
+  CHK     include/generated/generic-asm-offsets.h
+  CHK     include/generated/asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  UPD     include/generated/generic-asm-offsets.h
+  HOSTCC  tools/gen_eth_addr
+  HOSTCC  tools/img2srec
+  LDS     u-boot.lds
+  HOSTCC  tools/os_support.o
+  WRAP    tools/lib/crc32.c
+  HOSTCC  tools/mkenvimage.o
+  HOSTCC  tools/aisimage.o
+  HOSTCC  tools/atmelimage.o
+  WRAP    tools/common/bootm.c
+  HOSTCC  tools/default_image.o
+  WRAP    tools/lib/fdtdec_common.c
+  WRAP    tools/lib/fdtdec.c
+  HOSTCC  tools/fit_common.o
+  HOSTCC  tools/fit_image.o
+  HOSTCC  tools/gpimage.o
+  HOSTCC  tools/gpimage-common.o
+  WRAP    tools/common/image-fit.c
+  HOSTCC  tools/image-host.o
+  WRAP    tools/common/image.c
+  HOSTCC  tools/imagetool.o
+  HOSTCC  tools/imximage.o
+  HOSTCC  tools/kwbimage.o
+  WRAP    tools/lib/md5.c
+  HOSTCC  tools/lpc32xximage.o
+  HOSTCC  tools/mxsimage.o
+  HOSTCC  tools/omapimage.o
+  HOSTCC  tools/pblimage.o
+  HOSTCC  tools/pbl_crc32.o
+  WRAP    tools/lib/rc4.c
+  HOSTCC  tools/rkcommon.o
+  HOSTCC  tools/rkimage.o
+  HOSTCC  tools/rksd.o
+  HOSTCC  tools/rkspi.o
+  HOSTCC  tools/socfpgaimage.o
+  WRAP    tools/lib/sha1.c
+  WRAP    tools/lib/sha256.c
+  WRAP    tools/common/hash.c
+  HOSTCC  tools/ublimage.o
+  HOSTCC  tools/zynqimage.o
+  WRAP    tools/lib/libfdt/fdt.c
+  WRAP    tools/lib/libfdt/fdt_ro.c
+  WRAP    tools/lib/libfdt/fdt_rw.c
+  WRAP    tools/lib/libfdt/fdt_strerror.c
+  WRAP    tools/lib/libfdt/fdt_wip.c
+  WRAP    tools/lib/libfdt/fdt_region.c
+  HOSTCC  tools/dumpimage.o
+  HOSTCC  tools/mkimage.o
+  HOSTCC  tools/proftool
+  HOSTCC  tools/fdtgrep.o
+  HOSTCC  tools/lib/crc32.o
+  HOSTCC  tools/common/bootm.o
+  HOSTCC  tools/lib/fdtdec_common.o
+  HOSTCC  tools/lib/fdtdec.o
+  HOSTCC  tools/common/image-fit.o
+  HOSTCC  tools/common/image.o
+  HOSTCC  tools/lib/md5.o
+  HOSTCC  tools/lib/rc4.o
+  HOSTCC  tools/lib/sha1.o
+  HOSTCC  tools/lib/sha256.o
+  HOSTCC  tools/common/hash.o
+  HOSTCC  tools/lib/libfdt/fdt.o
+  HOSTCC  tools/lib/libfdt/fdt_ro.o
+  HOSTCC  tools/lib/libfdt/fdt_rw.o
+  HOSTCC  tools/lib/libfdt/fdt_strerror.o
+  HOSTCC  tools/lib/libfdt/fdt_wip.o
+  HOSTCC  tools/lib/libfdt/fdt_region.o
+  HOSTLD  tools/mkenvimage
+  HOSTLD  tools/fdtgrep
+  HOSTLD  tools/dumpimage
+  HOSTLD  tools/mkimage
+  LD      arch/arm/cpu/built-in.o
+arch/arm/imx-common/Makefile:9: SOC=mx6
+  CC      arch/arm/cpu/armv7/cpu.o
+  CC      arch/arm/cpu/armv7/cache_v7.o
+  CC      arch/arm/cpu/armv7/cp15.o
+  CC      board/freescale/common/mmc.o
+  CC      board/freescale/mx6ull_ntx/mx6ull_ntx.o
+  CC      arch/arm/imx-common/iomux-v3.o
+  AS      arch/arm/lib/vectors.o
+  CC      board/freescale/mx6ull_ntx/ntx_cmd.o
+  CC      arch/arm/cpu/armv7/syslib.o
+  AS      arch/arm/lib/crt0.o
+  CC      board/freescale/common/recovery.o
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'ntxup_init':
+board/freescale/mx6ull_ntx/ntx_cmd.c:128:14: warning: pointer targets in passing argument 1 of 'add_crc16' differ in signedness [-Wpointer-sign]
+    add_crc16(buffer, 2);
+              ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:101:13: note: expected 'unsigned char *' but argument is of type 'char *'
+ static void add_crc16(unsigned char *data, int len) {
+             ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:129:24: warning: pointer targets in passing argument 2 of 'msp430_write_buf' differ in signedness [-Wpointer-sign]
+    msp430_write_buf(22,&buffer[1],3);
+                        ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:27:0:
+board/freescale/mx6ull_ntx/ntx_hw.h:43:5: note: expected 'unsigned char *' but argument is of type 'char *'
+ int msp430_write_buf(unsigned char bRegAddr,unsigned char *I_pbBuf,int I_iBufSize);
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'ntxup_rtc_cmd':
+board/freescale/mx6ull_ntx/ntx_cmd.c:313:14: warning: pointer targets in passing argument 1 of 'add_crc16' differ in signedness [-Wpointer-sign]
+    add_crc16(buffer, 6);
+              ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:101:13: note: expected 'unsigned char *' but argument is of type 'char *'
+ static void add_crc16(unsigned char *data, int len) {
+             ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:314:30: warning: pointer targets in passing argument 2 of 'msp430_write_buf' differ in signedness [-Wpointer-sign]
+    iChk = msp430_write_buf(5,&buffer[1], 7);
+                              ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:27:0:
+board/freescale/mx6ull_ntx/ntx_hw.h:43:5: note: expected 'unsigned char *' but argument is of type 'char *'
+ int msp430_write_buf(unsigned char bRegAddr,unsigned char *I_pbBuf,int I_iBufSize);
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:320:29: warning: pointer targets in passing argument 2 of 'msp430_read_buf' differ in signedness [-Wpointer-sign]
+    iChk = msp430_read_buf(4,buffer, 4);
+                             ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:27:0:
+board/freescale/mx6ull_ntx/ntx_hw.h:41:5: note: expected 'unsigned char *' but argument is of type 'char *'
+ int msp430_read_buf(unsigned char bRegAddr,unsigned char *O_pbBuf,int I_iBufSize);
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'ntxup_wait_touch_recovery':
+board/freescale/mx6ull_ntx/ntx_cmd.c:691:43: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type
+    i2c_write (gbZforceI2C_ChipAddr,0xEE,1,cmd_Active_v2, sizeof(cmd_Active_v2));
+                                           ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:6:0:
+include/i2c.h:761:5: note: expected 'uchar *' but argument is of type 'const uint8_t *'
+ int i2c_write(uint8_t chip, unsigned int addr, int alen,
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:695:43: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type
+    i2c_write (gbZforceI2C_ChipAddr,0xEE,1,cmd_Frequency_v2,sizeof(cmd_Frequency_v2));
+                                           ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:6:0:
+include/i2c.h:761:5: note: expected 'uchar *' but argument is of type 'const uint8_t *'
+ int i2c_write(uint8_t chip, unsigned int addr, int alen,
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:697:43: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type
+    i2c_write (gbZforceI2C_ChipAddr,0xEE,1,cmd_Dual_touch_v2,sizeof(cmd_Dual_touch_v2));
+                                           ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:6:0:
+include/i2c.h:761:5: note: expected 'uchar *' but argument is of type 'const uint8_t *'
+ int i2c_write(uint8_t chip, unsigned int addr, int alen,
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:699:43: warning: passing argument 4 of 'i2c_write' discards 'const' qualifier from pointer target type
+    i2c_write (gbZforceI2C_ChipAddr,0xEE,1,cmd_TouchData_v2,sizeof(cmd_TouchData_v2));
+                                           ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:6:0:
+include/i2c.h:761:5: note: expected 'uchar *' but argument is of type 'const uint8_t *'
+ int i2c_write(uint8_t chip, unsigned int addr, int alen,
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:753:8: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long unsigned int' [-Wformat=]
+        printf ("Wrong points combination ! 0x%x\n",flag);
+        ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:702:9: warning: variable 'dataCnt' set but not used [-Wunused-but-set-variable]
+     int dataCnt;
+         ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:652:15: warning: unused variable 'reg' [-Wunused-variable]
+  unsigned int reg;
+               ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'frontLightCtrl':
+board/freescale/mx6ull_ntx/ntx_cmd.c:883:18: warning: passing argument 1 of 'ntx_gpio_init' from incompatible pointer type
+    ntx_gpio_init(&gptNtxGpio_FL_R_EN);
+                  ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:26:0:
+board/freescale/mx6ull_ntx/ntx_comm.h:59:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO **'
+ int ntx_gpio_init(NTX_GPIO *I_pt_gpio);
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:858:16: warning: unused variable 'reg' [-Wunused-variable]
+   unsigned int reg;
+                ^
+  AS      arch/arm/lib/relocate.o
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:961:25: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(ntxup, 6, 0, do_ntxup,
+                         ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:961:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ntxup, 6, 0, do_ntxup,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:961:25: warning: (near initialization for '_u_boot_list_2_cmd_2_ntxup.cmd')
+ U_BOOT_CMD(ntxup, 6, 0, do_ntxup,
+                         ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:961:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ntxup, 6, 0, do_ntxup,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'do_mf_key':
+board/freescale/mx6ull_ntx/ntx_cmd.c:1120:6: warning: unused variable 'keys' [-Wunused-variable]
+  int keys, i;
+      ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1119:23: warning: unused variable 'key_info' [-Wunused-variable]
+  struct kpp_key_info *key_info;
+                       ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:1182:26: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(mf_key, 2, 0, do_mf_key,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1182:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_key, 2, 0, do_mf_key,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1182:26: warning: (near initialization for '_u_boot_list_2_cmd_2_mf_key.cmd')
+ U_BOOT_CMD(mf_key, 2, 0, do_mf_key,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1182:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_key, 2, 0, do_mf_key,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'do_mf_led':
+board/freescale/mx6ull_ntx/ntx_cmd.c:1192:6: warning: unused variable 'iRet' [-Wunused-variable]
+  int iRet = 0;
+      ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:1216:26: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(mf_led, 3, 0, do_mf_led,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1216:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_led, 3, 0, do_mf_led,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1216:26: warning: (near initialization for '_u_boot_list_2_cmd_2_mf_led.cmd')
+ U_BOOT_CMD(mf_led, 3, 0, do_mf_led,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1216:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_led, 3, 0, do_mf_led,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1268:26: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(mf_rtc, 7, 0, do_mf_rtc,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1268:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_rtc, 7, 0, do_mf_rtc,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1268:26: warning: (near initialization for '_u_boot_list_2_cmd_2_mf_rtc.cmd')
+ U_BOOT_CMD(mf_rtc, 7, 0, do_mf_rtc,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1268:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_rtc, 7, 0, do_mf_rtc,
+ ^
+  CC      arch/arm/imx-common/cpu.o
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'do_mf_sd_wp':
+board/freescale/mx6ull_ntx/ntx_cmd.c:1280:6: warning: unused variable 'iIsWriteProtected' [-Wunused-variable]
+  int iIsWriteProtected = 0;
+      ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1279:16: warning: unused variable 'bEvent' [-Wunused-variable]
+  unsigned char bEvent;
+                ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:1331:28: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(mf_sd_wp, 1, 0, do_mf_sd_wp,
+                            ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1331:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_sd_wp, 1, 0, do_mf_sd_wp,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1331:28: warning: (near initialization for '_u_boot_list_2_cmd_2_mf_sd_wp.cmd')
+ U_BOOT_CMD(mf_sd_wp, 1, 0, do_mf_sd_wp,
+                            ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1331:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_sd_wp, 1, 0, do_mf_sd_wp,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1354:26: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(mf_adc, 1, 0, do_mf_adc,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1354:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_adc, 1, 0, do_mf_adc,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1354:26: warning: (near initialization for '_u_boot_list_2_cmd_2_mf_adc.cmd')
+ U_BOOT_CMD(mf_adc, 1, 0, do_mf_adc,
+                          ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1354:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(mf_adc, 1, 0, do_mf_adc,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1409:31: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(get_PCBA_id, 2, 0, do_get_PCBA_id,
+                               ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1409:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(get_PCBA_id, 2, 0, do_get_PCBA_id,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1409:31: warning: (near initialization for '_u_boot_list_2_cmd_2_get_PCBA_id.cmd')
+ U_BOOT_CMD(get_PCBA_id, 2, 0, do_get_PCBA_id,
+                               ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1409:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(get_PCBA_id, 2, 0, do_get_PCBA_id,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1424:30: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(get_up_ver, 2, 0, do_get_up_ver,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1424:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(get_up_ver, 2, 0, do_get_up_ver,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1424:30: warning: (near initialization for '_u_boot_list_2_cmd_2_get_up_ver.cmd')
+ U_BOOT_CMD(get_up_ver, 2, 0, do_get_up_ver,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1424:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(get_up_ver, 2, 0, do_get_up_ver,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1477:28: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(nandinfo, 2, 0, do_nandinfo,
+                            ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1477:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(nandinfo, 2, 0, do_nandinfo,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1477:28: warning: (near initialization for '_u_boot_list_2_cmd_2_nandinfo.cmd')
+ U_BOOT_CMD(nandinfo, 2, 0, do_nandinfo,
+                            ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1477:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(nandinfo, 2, 0, do_nandinfo,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1510:30: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(hallsensor, 3, 0, do_hallsensor,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1510:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(hallsensor, 3, 0, do_hallsensor,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1510:30: warning: (near initialization for '_u_boot_list_2_cmd_2_hallsensor.cmd')
+ U_BOOT_CMD(hallsensor, 3, 0, do_hallsensor,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1510:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(hallsensor, 3, 0, do_hallsensor,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'do_wifi_3v3':
+board/freescale/mx6ull_ntx/ntx_cmd.c:1527:4: warning: implicit declaration of function 'wifi_3v3' [-Wimplicit-function-declaration]
+    wifi_3v3(1);
+    ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:1540:28: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(wifi_3v3, 2, 0, do_wifi_3v3,
+                            ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1540:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(wifi_3v3, 2, 0, do_wifi_3v3,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1540:28: warning: (near initialization for '_u_boot_list_2_cmd_2_wifi_3v3.cmd')
+ U_BOOT_CMD(wifi_3v3, 2, 0, do_wifi_3v3,
+                            ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1540:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(wifi_3v3, 2, 0, do_wifi_3v3,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1567:24: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(ledG, 2, 0, do_ledG,
+                        ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1567:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ledG, 2, 0, do_ledG,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1567:24: warning: (near initialization for '_u_boot_list_2_cmd_2_ledG.cmd')
+ U_BOOT_CMD(ledG, 2, 0, do_ledG,
+                        ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1567:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ledG, 2, 0, do_ledG,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'do_get_droid_ver':
+board/freescale/mx6ull_ntx/ntx_cmd.c:1703:50: warning: passing argument 4 of 'ntx_read_file_in_ext4' from incompatible pointer type
+   iRet = ntx_read_file_in_ext4(dev,part,filename,&chklen,pcBuildPropBuf,filelen);
+                                                  ^
+In file included from board/freescale/mx6ull_ntx/ntx_cmd.c:26:0:
+board/freescale/mx6ull_ntx/ntx_comm.h:71:5: note: expected 'long unsigned int *' but argument is of type 'int *'
+ int ntx_read_file_in_ext4(int dev,int part,const char *filename,unsigned long *O_filelen,void *pvLoadAddr,unsigned long dwLoadMaxSize);
+     ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1590:16: warning: variable 'cStore' set but not used [-Wunused-but-set-variable]
+  char *pcMatch,cStore,*pcMatchValue,*pc;
+                ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1587:16: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  unsigned long count;
+                ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1584:19: warning: unused variable 'info' [-Wunused-variable]
+  disk_partition_t info;
+                   ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1582:8: warning: unused variable 'part_length' [-Wunused-variable]
+  ulong part_length;
+        ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:1763:33: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(get_droid_ver, 2, 0, do_get_droid_ver,
+                                 ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1763:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(get_droid_ver, 2, 0, do_get_droid_ver,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1763:33: warning: (near initialization for '_u_boot_list_2_cmd_2_get_droid_ver.cmd')
+ U_BOOT_CMD(get_droid_ver, 2, 0, do_get_droid_ver,
+                                 ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1763:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(get_droid_ver, 2, 0, do_get_droid_ver,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1802:29: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(ricoh_reg, 3, 0, do_ricoh_reg,
+                             ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1802:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ricoh_reg, 3, 0, do_ricoh_reg,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1802:29: warning: (near initialization for '_u_boot_list_2_cmd_2_ricoh_reg.cmd')
+ U_BOOT_CMD(ricoh_reg, 3, 0, do_ricoh_reg,
+                             ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1802:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ricoh_reg, 3, 0, do_ricoh_reg,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c: In function 'do_ricoh_watchdog':
+board/freescale/mx6ull_ntx/ntx_cmd.c:1831:4: warning: implicit declaration of function 'RC5T619_watchdog' [-Wimplicit-function-declaration]
+    RC5T619_watchdog(1,iTimeout);
+    ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1810:22: warning: unused variable 'val' [-Wunused-variable]
+   unsigned char reg, val;
+                      ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1810:17: warning: unused variable 'reg' [-Wunused-variable]
+   unsigned char reg, val;
+                 ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from board/freescale/mx6ull_ntx/ntx_cmd.c:3:
+board/freescale/mx6ull_ntx/ntx_cmd.c: At top level:
+board/freescale/mx6ull_ntx/ntx_cmd.c:1859:34: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(ricoh_watchdog, 3, 0, do_ricoh_watchdog,
+                                  ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1859:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ricoh_watchdog, 3, 0, do_ricoh_watchdog,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1859:34: warning: (near initialization for '_u_boot_list_2_cmd_2_ricoh_watchdog.cmd')
+ U_BOOT_CMD(ricoh_watchdog, 3, 0, do_ricoh_watchdog,
+                                  ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1859:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ricoh_watchdog, 3, 0, do_ricoh_watchdog,
+ ^
+board/freescale/mx6ull_ntx/ntx_cmd.c:1101:14: warning: 'gszKeyStringA' defined but not used [-Wunused-variable]
+ static char *gszKeyStringA[TOTAL_KEY] = {
+              ^
+  AS      arch/arm/cpu/armv7/lowlevel_init.o
+  CC      arch/arm/lib/bootm-fdt.o
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'ntx_read_file_in_ext4':
+board/freescale/mx6ull_ntx/ntx_comm.c:934:38: warning: assignment makes integer from pointer without a cast
+                                 addr = pvLoadAddr ;
+                                      ^
+board/freescale/mx6ull_ntx/ntx_comm.c:944:41: warning: implicit declaration of function 'fat_register_device' [-Wimplicit-function-declaration]
+                                         fat_register_device(ext4_dev_desc,1);
+                                         ^
+board/freescale/mx6ull_ntx/ntx_comm.c:945:41: warning: implicit declaration of function 'file_fat_detectfs' [-Wimplicit-function-declaration]
+                                         file_fat_detectfs();
+                                         ^
+board/freescale/mx6ull_ntx/ntx_comm.c:946:41: warning: implicit declaration of function 'file_fat_ls' [-Wimplicit-function-declaration]
+                                         ret = file_fat_ls("/");
+                                         ^
+board/freescale/mx6ull_ntx/ntx_comm.c:948:41: warning: implicit declaration of function 'file_fat_read' [-Wimplicit-function-declaration]
+                                         fatfilelen = file_fat_read("/U2-uinitramfs",addr,10*1024*1024); // 10*1024*1024 , MAX_SIZE
+                                         ^
+board/freescale/mx6ull_ntx/ntx_comm.c:949:41: warning: format '%p' expects argument of type 'void *', but argument 3 has type 'long unsigned int' [-Wformat=]
+                                         printf("[DBG] Read fat file :%s , ext4fs_read(%p,%d)\n","/U2-uinitramfs",addr,fatfilelen);    
+                                         ^
+board/freescale/mx6ull_ntx/ntx_comm.c: In function '_load_ntxRamfs':
+board/freescale/mx6ull_ntx/ntx_comm.c:1170:2: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'ulong' [-Wformat=]
+  printf ("load ramfs to 0x%08X\n", offset);
+  ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+board/freescale/mx6ull_ntx/ntx_comm.c: At top level:
+board/freescale/mx6ull_ntx/ntx_comm.c:1226:33: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(load_ntxRamfs, 2, 0, do_load_ntxRamfs,
+                                 ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1226:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxRamfs, 2, 0, do_load_ntxRamfs,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1226:33: warning: (near initialization for '_u_boot_list_2_cmd_2_load_ntxRamfs.cmd')
+ U_BOOT_CMD(load_ntxRamfs, 2, 0, do_load_ntxRamfs,
+                                 ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1226:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxRamfs, 2, 0, do_load_ntxRamfs,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1322:34: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(load_ntxkernel, 2, 0, do_load_ntxkernel,
+                                  ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1322:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxkernel, 2, 0, do_load_ntxkernel,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1322:34: warning: (near initialization for '_u_boot_list_2_cmd_2_load_ntxkernel.cmd')
+ U_BOOT_CMD(load_ntxkernel, 2, 0, do_load_ntxkernel,
+                                  ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1322:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxkernel, 2, 0, do_load_ntxkernel,
+ ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c: In function '_load_ntxrd':
+board/freescale/mx6ull_ntx/ntx_comm.c:1376:23: warning: unused variable 'ret' [-Wunused-variable]
+   int fatfilelen = 0 ,ret=0;
+                       ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1376:7: warning: unused variable 'fatfilelen' [-Wunused-variable]
+   int fatfilelen = 0 ,ret=0;
+       ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+board/freescale/mx6ull_ntx/ntx_comm.c: At top level:
+board/freescale/mx6ull_ntx/ntx_comm.c:1524:30: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(load_ntxrd, 2, 0, do_load_ntxrd,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1524:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxrd, 2, 0, do_load_ntxrd,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1524:30: warning: (near initialization for '_u_boot_list_2_cmd_2_load_ntxrd.cmd')
+ U_BOOT_CMD(load_ntxrd, 2, 0, do_load_ntxrd,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1524:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxrd, 2, 0, do_load_ntxrd,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1610:31: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(load_ntxdtb, 2, 0, do_load_ntxdtb,
+                               ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1610:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxdtb, 2, 0, do_load_ntxdtb,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1610:31: warning: (near initialization for '_u_boot_list_2_cmd_2_load_ntxdtb.cmd')
+ U_BOOT_CMD(load_ntxdtb, 2, 0, do_load_ntxdtb,
+                               ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1610:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxdtb, 2, 0, do_load_ntxdtb,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1624:30: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(load_ntxwf, 2, 0, do_load_ntxwf,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1624:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxwf, 2, 0, do_load_ntxwf,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1624:30: warning: (near initialization for '_u_boot_list_2_cmd_2_load_ntxwf.cmd')
+ U_BOOT_CMD(load_ntxwf, 2, 0, do_load_ntxwf,
+                              ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1624:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxwf, 2, 0, do_load_ntxwf,
+ ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c: In function '_detect_bootmode':
+board/freescale/mx6ull_ntx/ntx_comm.c:1752:4: warning: implicit declaration of function 'fastboot_connection_abort_at_usb_remove_chk_setup' [-Wimplicit-function-declaration]
+    fastboot_connection_abort_at_usb_remove_chk_setup(&ntx_is_fastboot_abort_inusbremove);
+    ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1856:6: warning: implicit declaration of function 'ntx_wait_powerkey_ex' [-Wimplicit-function-declaration]
+      if(0==ntx_wait_powerkey_ex(10,1,1,upg_key_chk_cus9)) {// if user pressing and holding power key over 10 secs will return 0 or break and return non zero . 
+      ^
+board/freescale/mx6ull_ntx/ntx_comm.c: At top level:
+board/freescale/mx6ull_ntx/ntx_comm.c:2136:3: warning: missing braces around initializer [-Wmissing-braces]
+   .name=0,
+   ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2136:3: warning: (near initialization for 'ntx_fb_binsA[8].name') [-Wmissing-braces]
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'isBatCritical':
+board/freescale/mx6ull_ntx/ntx_comm.c:2421:26: warning: passing argument 1 of 'ntx_gpio_get_value' discards 'const' qualifier from pointer target type
+   (0==ntx_gpio_get_value(&gt_ntx_gpio_bat_low))?1:0
+                          ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2510:7: note: in expansion of macro 'IS_BATT_CRITIAL_LOW'
+   if (IS_BATT_CRITIAL_LOW()) {
+       ^
+board/freescale/mx6ull_ntx/ntx_comm.c:395:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_get_value(NTX_GPIO *I_pt_gpio) 
+     ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2421:26: warning: passing argument 1 of 'ntx_gpio_get_value' discards 'const' qualifier from pointer target type
+   (0==ntx_gpio_get_value(&gt_ntx_gpio_bat_low))?1:0
+                          ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2532:11: note: in expansion of macro 'IS_BATT_CRITIAL_LOW'
+      if (!IS_BATT_CRITIAL_LOW() || (BATTERY_USB_THRESHOLD < i)) {
+           ^
+board/freescale/mx6ull_ntx/ntx_comm.c:395:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_get_value(NTX_GPIO *I_pt_gpio) 
+     ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2533:7: warning: too many arguments for format [-Wformat-extra-args]
+       printf("\nBattery critical !! charge completed, take (%d) secs\n", waitTime*interval, i);
+       ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2421:26: warning: passing argument 1 of 'ntx_gpio_get_value' discards 'const' qualifier from pointer target type
+   (0==ntx_gpio_get_value(&gt_ntx_gpio_bat_low))?1:0
+                          ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2534:82: note: in expansion of macro 'IS_BATT_CRITIAL_LOW'
+       printf ("RC5T619 battery %dmv. (0x%X , battery low %d)\n", i*5000/4095, i, IS_BATT_CRITIAL_LOW());
+                                                                                  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:395:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_get_value(NTX_GPIO *I_pt_gpio) 
+     ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2421:26: warning: passing argument 1 of 'ntx_gpio_get_value' discards 'const' qualifier from pointer target type
+   (0==ntx_gpio_get_value(&gt_ntx_gpio_bat_low))?1:0
+                          ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2542:90: note: in expansion of macro 'IS_BATT_CRITIAL_LOW'
+       printf ("RC5T619 battery too low %dmv. (0x%X , battery low %d)\n", i*5000/4095, i, IS_BATT_CRITIAL_LOW());
+                                                                                          ^
+board/freescale/mx6ull_ntx/ntx_comm.c:395:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_get_value(NTX_GPIO *I_pt_gpio) 
+     ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2555:4: warning: implicit declaration of function 'RC5T619_charger_redetect' [-Wimplicit-function-declaration]
+    RC5T619_charger_redetect();
+    ^
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'ntx_preboot':
+board/freescale/mx6ull_ntx/ntx_comm.c:2669:4: warning: implicit declaration of function 'ntx_wait_powerkey' [-Wimplicit-function-declaration]
+    if(0==ntx_wait_powerkey(10,1,1)) // if user pressing and holding power key over 10 secs will return 0 or break and return non zero . 
+    ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2730:19: warning: passing argument 1 of '_load_ntxkernel' from incompatible pointer type
+   _load_ntxkernel(&gpbKernelAddr,&gdwKernelSize);
+                   ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1233:12: note: expected 'unsigned char **' but argument is of type 'volatile unsigned char **'
+ static int _load_ntxkernel(unsigned char **O_ppbKernelAddr,unsigned long *O_pdwKernelSize)
+            ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2730:34: warning: passing argument 2 of '_load_ntxkernel' discards 'volatile' qualifier from pointer target type
+   _load_ntxkernel(&gpbKernelAddr,&gdwKernelSize);
+                                  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:1233:12: note: expected 'long unsigned int *' but argument is of type 'volatile long unsigned int *'
+ static int _load_ntxkernel(unsigned char **O_ppbKernelAddr,unsigned long *O_pdwKernelSize)
+            ^
+board/freescale/mx6ull_ntx/ntx_comm.c:2567:8: warning: unused variable 'pcLPJ' [-Wunused-variable]
+  char *pcLPJ;
+        ^
+In file included from include/image.h:42:0,
+                 from include/common.h:88,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+board/freescale/mx6ull_ntx/ntx_comm.c: At top level:
+board/freescale/mx6ull_ntx/ntx_comm.c:3015:43: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(ntx_prepare_load_kernel, 2, 0, do_ntx_prepare_load_kernel,
+                                           ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3015:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ntx_prepare_load_kernel, 2, 0, do_ntx_prepare_load_kernel,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3015:43: warning: (near initialization for '_u_boot_list_2_cmd_2_ntx_prepare_load_kernel.cmd')
+ U_BOOT_CMD(ntx_prepare_load_kernel, 2, 0, do_ntx_prepare_load_kernel,
+                                           ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3015:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(ntx_prepare_load_kernel, 2, 0, do_ntx_prepare_load_kernel,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3030:32: warning: initialization from incompatible pointer type
+ U_BOOT_CMD(load_ntxbins, 2, 0, do_load_ntxbins,
+                                ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3030:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxbins, 2, 0, do_load_ntxbins,
+ ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3030:32: warning: (near initialization for '_u_boot_list_2_cmd_2_load_ntxbins.cmd')
+ U_BOOT_CMD(load_ntxbins, 2, 0, do_load_ntxbins,
+                                ^
+include/command.h:169:29: note: in definition of macro 'U_BOOT_CMD_MKENT_COMPLETE'
+   { #_name, _maxargs, _rep, _cmd, _usage,   \
+                             ^
+include/command.h:182:2: note: in expansion of macro 'U_BOOT_CMD_COMPLETE'
+  U_BOOT_CMD_COMPLETE(_name, _maxargs, _rep, _cmd, _usage, _help, NULL)
+  ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3030:1: note: in expansion of macro 'U_BOOT_CMD'
+ U_BOOT_CMD(load_ntxbins, 2, 0, do_load_ntxbins,
+ ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:3037:37: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+ static unsigned char *boot_recovery="boot-recovery";
+                                     ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3038:33: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+ static unsigned char *wipe_data="recovery\x0A--wipe_data\x0A--locale=en_US\x0A";
+                                 ^
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'write_recovery_BCB':
+board/freescale/mx6ull_ntx/ntx_comm.c:3085:8: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+   pBCB = pBuf;
+        ^
+board/freescale/mx6ull_ntx/ntx_comm.c:3090:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+   strcpy (cBCB, boot_recovery);
+           ^
+In file included from include/common.h:22:0,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+include/linux/string.h:28:15: note: expected 'char *' but argument is of type 'unsigned char *'
+ extern char * strcpy(char *,const char *);
+               ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:3090:17: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness [-Wpointer-sign]
+   strcpy (cBCB, boot_recovery);
+                 ^
+In file included from include/common.h:22:0,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+include/linux/string.h:28:15: note: expected 'const char *' but argument is of type 'unsigned char *'
+ extern char * strcpy(char *,const char *);
+               ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:3091:11: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+   strcpy (&cBCB[64], wipe_data);
+           ^
+In file included from include/common.h:22:0,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+include/linux/string.h:28:15: note: expected 'char *' but argument is of type 'unsigned char *'
+ extern char * strcpy(char *,const char *);
+               ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:3091:22: warning: pointer targets in passing argument 2 of 'strcpy' differ in signedness [-Wpointer-sign]
+   strcpy (&cBCB[64], wipe_data);
+                      ^
+In file included from include/common.h:22:0,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+include/linux/string.h:28:15: note: expected 'const char *' but argument is of type 'unsigned char *'
+ extern char * strcpy(char *,const char *);
+               ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'ntx_check_and_increase_boot_count':
+board/freescale/mx6ull_ntx/ntx_comm.c:3113:16: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (!strcmp (cMiscA, boot_recovery)) {
+                ^
+In file included from include/common.h:22:0,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+include/linux/string.h:43:12: note: expected 'const char *' but argument is of type 'unsigned char *'
+ extern int strcmp(const char *,const char *);
+            ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:3113:24: warning: pointer targets in passing argument 2 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (!strcmp (cMiscA, boot_recovery)) {
+                        ^
+In file included from include/common.h:22:0,
+                 from ./arch/arm/include/asm/arch/clock.h:13,
+                 from board/freescale/mx6ull_ntx/mx6ull_ntx.c:7:
+include/linux/string.h:43:12: note: expected 'const char *' but argument is of type 'unsigned char *'
+ extern int strcmp(const char *,const char *);
+            ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'ntx_wait_powerkey_ex':
+board/freescale/mx6ull_ntx/ntx_comm.c:3234:3: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+   printf("%s():power key stat changed %d!!!\n",__FUNCTION__,dwPwrkeyStatChgCnt);
+   ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'ntxhw_USBID_detected':
+board/freescale/mx6ull_ntx/ntx_hw.c:949:47: warning: passing argument 1 of 'ntx_gpio_get_value' discards 'const' qualifier from pointer target type
+  if(gpt_ntx_gpio_USBID && !ntx_gpio_get_value(gpt_ntx_gpio_USBID)) {
+                                               ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:395:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_get_value(NTX_GPIO *I_pt_gpio) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c: In function '_set_WIFI_3V3_ON':
+board/freescale/mx6ull_ntx/ntx_hw.c:1160:22: warning: passing argument 1 of 'ntx_gpio_set_value' from incompatible pointer type
+   ntx_gpio_set_value((struct NTX_GPIO *)gpt_ntx_gpio_WIFI_3V3_ON, value);
+                      ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:390:5: note: expected 'struct NTX_GPIO *' but argument is of type 'struct NTX_GPIO *'
+ int ntx_gpio_set_value(NTX_GPIO *I_pt_gpio,int iOutVal) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'msp430_write_buf':
+board/freescale/mx6ull_ntx/ntx_hw.c:1477:6: warning: unused variable 'iChk' [-Wunused-variable]
+  int iChk;
+      ^
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'EPDPMIC_power_on':
+board/freescale/mx6ull_ntx/ntx_hw.c:2059:22: warning: passing argument 1 of 'ntx_gpio_set_value' discards 'const' qualifier from pointer target type
+   ntx_gpio_set_value(&gt_ntx_gpio_EPDPMIC_VIN,1);
+                      ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:390:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_set_value(NTX_GPIO *I_pt_gpio,int iOutVal) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c:2062:22: warning: passing argument 1 of 'ntx_gpio_set_value' discards 'const' qualifier from pointer target type
+   ntx_gpio_set_value(&gt_ntx_gpio_EPDPMIC_VIN,0);
+                      ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:390:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_set_value(NTX_GPIO *I_pt_gpio,int iOutVal) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'EPDPMIC_vcom_onoff':
+board/freescale/mx6ull_ntx/ntx_hw.c:2071:22: warning: passing argument 1 of 'ntx_gpio_set_value' discards 'const' qualifier from pointer target type
+   ntx_gpio_set_value(&gt_ntx_gpio_EPDPMIC_VCOM,1);
+                      ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:390:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_set_value(NTX_GPIO *I_pt_gpio,int iOutVal) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c:2074:22: warning: passing argument 1 of 'ntx_gpio_set_value' discards 'const' qualifier from pointer target type
+   ntx_gpio_set_value(&gt_ntx_gpio_EPDPMIC_VCOM,0);
+                      ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:390:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_set_value(NTX_GPIO *I_pt_gpio,int iOutVal) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'EPDPMIC_isPowerGood':
+board/freescale/mx6ull_ntx/ntx_hw.c:2082:28: warning: passing argument 1 of 'ntx_gpio_get_value' discards 'const' qualifier from pointer target type
+  iRet = ntx_gpio_get_value(&gt_ntx_gpio_EPDPMIC_PWRGOOD)?1:0;
+                            ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/ntx_comm.c:395:5: note: expected 'struct NTX_GPIO *' but argument is of type 'const struct NTX_GPIO *'
+ int ntx_gpio_get_value(NTX_GPIO *I_pt_gpio) 
+     ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:46:0:
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'ntx_io_assign':
+board/freescale/mx6ull_ntx/ntx_hw.c:2160:22: warning: assignment discards 'const' qualifier from pointer target type
+  gptNtxGpioKey_Power = &gt_ntx_gpio_power_key;
+                      ^
+board/freescale/mx6ull_ntx/ntx_hw.c:2172:22: warning: assignment discards 'const' qualifier from pointer target type
+   gptNtxGpioKey_Home = &gt_ntx_gpio_home_key;
+                      ^
+board/freescale/mx6ull_ntx/ntx_hw.c:2194:26: warning: assignment discards 'const' qualifier from pointer target type
+   gptNtxGpioSW_HallSensor= &gt_ntx_gpio_hallsensor_key;
+                          ^
+board/freescale/mx6ull_ntx/ntx_hw.c:2244:27: warning: assignment discards 'const' qualifier from pointer target type
+  gpt_ntx_gpio_WIFI_3V3_ON = &gt_ntx_gpio_WIFI_3V3_ON;
+                           ^
+board/freescale/mx6ull_ntx/ntx_hw.c:2247:22: warning: assignment discards 'const' qualifier from pointer target type
+  gpt_ntx_gpio_CT_RST = &gt_ntx_gpio_TPRST;
+                      ^
+board/freescale/mx6ull_ntx/ntx_hw.c:2265:25: warning: assignment discards 'const' qualifier from pointer target type
+  gpt_ntx_gpio_EP_3V3_ON = &gt_ntx_gpio_EPDPMIC_VIN ;
+                         ^
+board/freescale/mx6ull_ntx/ntx_hw.c:2266:26: warning: assignment discards 'const' qualifier from pointer target type
+  gpt_ntx_gpio_EP_VCOM_ON = &gt_ntx_gpio_EPDPMIC_VCOM ;
+                          ^
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'ntx_hw_early_init':
+board/freescale/mx6ull_ntx/ntx_hw.c:2297:16: warning: assignment makes pointer from integer without a cast
+    gptNtxHwCfg = 0x83808000;
+                ^
+board/freescale/mx6ull_ntx/ntx_hw.c: In function 'ntx_hw_late_init':
+board/freescale/mx6ull_ntx/ntx_hw.c:2419:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+board/freescale/mx6ull_ntx/mx6ull_ntx.c: In function 'board_mmc_init':
+board/freescale/mx6ull_ntx/mx6ull_ntx.c:403:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+board/freescale/mx6ull_ntx/mx6ull_ntx.c: In function 'board_late_init':
+board/freescale/mx6ull_ntx/mx6ull_ntx.c:784:3: warning: implicit declaration of function 'fuse_read' [-Wimplicit-function-declaration]
+   fuse_read(0, 3, &val);
+   ^
+board/freescale/mx6ull_ntx/mx6ull_ntx.c:789:4: warning: implicit declaration of function 'fuse_prog' [-Wimplicit-function-declaration]
+    if(fuse_prog(0, 3, val))
+    ^
+In file included from board/freescale/mx6ull_ntx/mx6ull_ntx.c:44:0:
+board/freescale/mx6ull_ntx/mx6ull_ntx.c: At top level:
+board/freescale/mx6ull_ntx/ntx_comm.c:149:12: warning: '_detect_bootmode_and_append_boot_args' declared 'static' but never defined [-Wunused-function]
+ static int _detect_bootmode_and_append_boot_args(char *O_cBufA,unsigned long I_ulBufSize);
+            ^
+board/freescale/mx6ull_ntx/ntx_comm.c:648:21: warning: 'gtNtxHiddenMem_logo' defined but not used [-Wunused-variable]
+ static NtxHiddenMem gtNtxHiddenMem_logo = {
+                     ^
+board/freescale/mx6ull_ntx/ntx_comm.c:652:21: warning: 'gtNtxHiddenMem_logo2' defined but not used [-Wunused-variable]
+ static NtxHiddenMem gtNtxHiddenMem_logo2 = {
+                     ^
+  CC      cmd/boot.o
+  LD      board/freescale/common/built-in.o
+  CC      arch/arm/lib/bootm.o
+  CC      arch/arm/cpu/armv7/mx6/soc.o
+  CC      arch/arm/imx-common/speed.o
+  CC      arch/arm/lib/sections.o
+  CC      arch/arm/imx-common/i2c-mxv7.o
+  CC      arch/arm/imx-common/misc.o
+  CC      cmd/bootm.o
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'ntx_gpio_set_valueEx':
+board/freescale/mx6ull_ntx/ntx_comm.c:289:6: warning: 'iRet' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  int iRet;
+      ^
+  CC      common/init/board_init.o
+  CC      arch/arm/imx-common/cache.o
+  CC      arch/arm/lib/stack.o
+  CC      arch/arm/lib/interrupts.o
+  CC      arch/arm/imx-common/init.o
+  CC      common/main.o
+  CC      cmd/help.o
+  LD      common/init/built-in.o
+  CC      common/exports.o
+  CC      arch/arm/lib/reset.o
+  CC      arch/arm/cpu/armv7/mx6/clock.o
+common/main.c: In function 'main_loop':
+common/main.c:74:2: warning: implicit declaration of function 'RC5T619_watchdog' [-Wimplicit-function-declaration]
+  RC5T619_watchdog(0,0);
+  ^
+  CC      arch/arm/lib/cache.o
+  CC      common/hash.o
+board/freescale/mx6ull_ntx/ntx_comm.c: In function 'ntx_wait_powerkey_ex':
+board/freescale/mx6ull_ntx/ntx_comm.c:3203:6: warning: 'iPwrkeyLastState' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    if( iPwrkeyCurState != iPwrkeyLastState ) {
+      ^
+  CC      arch/arm/lib/cache-cp15.o
+  CC      cmd/version.o
+  CC      arch/arm/imx-common/syscounter.o
+  CC      common/cli_hush.o
+  AR      arch/arm/lib/lib.a
+  CC      arch/arm/lib/eabi_compat.o
+  CC      cmd/source.o
+  LD      arch/arm/lib/built-in.o
+  CC      arch/arm/imx-common/cmd_bmode.o
+  CC      cmd/bdinfo.o
+  CC      cmd/cache.o
+  CC      cmd/console.o
+  LD      arch/arm/cpu/armv7/mx6/built-in.o
+  CC      common/autoboot.o
+  LD      arch/arm/imx-common/built-in.o
+  AS      arch/arm/cpu/armv7/start.o
+  CC      cmd/date.o
+  LD      arch/arm/cpu/armv7/built-in.o
+  CC      disk/part.o
+  CC      disk/part_dos.o
+  CC      cmd/echo.o
+  CC      common/board_f.o
+  CC      cmd/elf.o
+  LD      drivers/adc/built-in.o
+  CC      cmd/exit.o
+  LD      board/freescale/mx6ull_ntx/built-in.o
+  CC      drivers/block/disk-uclass.o
+  LD      drivers/dma/built-in.o
+  CC      cmd/ext4.o
+  LD      disk/built-in.o
+  CC      cmd/ext2.o
+  CC      drivers/gpio/mxc_gpio.o
+  LD      drivers/block/built-in.o
+  CC      drivers/core/device.o
+  CC      drivers/core/lists.o
+  CC      common/board_r.o
+  CC      cmd/fat.o
+  CC      drivers/i2c/i2c_core.o
+  CC      drivers/i2c/mxc_i2c.o
+  CC      cmd/fdt.o
+  LD      drivers/gpio/built-in.o
+  CC      common/board_info.o
+  LD      drivers/dfu/built-in.o
+  LD      drivers/hwmon/built-in.o
+  CC      drivers/core/root.o
+  CC      drivers/crypto/fsl/sec.o
+  CC      drivers/input/input.o
+  LD      drivers/memory/built-in.o
+  LD      drivers/crypto/fsl/built-in.o
+  CC      common/bootm.o
+  CC      drivers/misc/mxc_ocotp.o
+  LD      drivers/i2c/built-in.o
+  LD      drivers/crypto/rsa_mod_exp/built-in.o
+  CC      drivers/core/uclass.o
+  CC      drivers/core/util.o
+  LD      drivers/crypto/built-in.o
+  CC      drivers/pcmcia/tqm8xx_pcmcia.o
+  CC      drivers/mmc/fsl_esdhc.o
+  CC      cmd/flash.o
+  LD      drivers/input/built-in.o
+  CC      cmd/fs.o
+  LD      drivers/misc/built-in.o
+  LD      drivers/pwm/built-in.o
+  LD      drivers/pcmcia/built-in.o
+  LD      drivers/soc/built-in.o
+  CC      drivers/core/device-remove.o
+  LD      drivers/sound/built-in.o
+  CC      drivers/rtc/date.o
+  CC      common/bootm_os.o
+  CC      cmd/fuse.o
+  CC      drivers/thermal/thermal-uclass.o
+  LD      drivers/timer/built-in.o
+  LD      drivers/tpm/built-in.o
+  CC      cmd/gpio.o
+  LD      drivers/twserial/built-in.o
+  CC      common/env_attr.o
+  LD      drivers/video/bridge/built-in.o
+  CC      drivers/thermal/imx_thermal.o
+  CC      drivers/mmc/mmc.o
+  CC      drivers/core/dump.o
+  LD      drivers/rtc/built-in.o
+  LD      drivers/video/built-in.o
+  CC      common/env_callback.o
+  CC      common/env_flags.o
+  CC      cmd/i2c.o
+  CC      drivers/mtd/mtdcore.o
+  CC      drivers/watchdog/imx_watchdog.o
+  CC      drivers/mmc/mmc_write.o
+  LD      drivers/thermal/built-in.o
+  CC      drivers/mtd/mtd_uboot.o
+  LD      drivers/core/built-in.o
+  CC      common/env_mmc.o
+  CC      cmd/itest.o
+  LD      drivers/watchdog/built-in.o
+  LD      drivers/built-in.o
+  CC      cmd/load.o
+  CC      cmd/mem.o
+  CC      common/fdt_support.o
+  CC      cmd/misc.o
+  LD      drivers/mtd/onenand/built-in.o
+  CC      cmd/mmc.o
+  CC      drivers/mtd/spi/sf_probe.o
+  CC      drivers/mtd/spi/spi_flash.o
+  LD      drivers/mtd/built-in.o
+  CC      drivers/mtd/spi/sf_params.o
+  CC      cmd/net.o
+  CC      drivers/mtd/spi/sf.o
+  LD      drivers/mmc/built-in.o
+  LD      drivers/net/built-in.o
+  LD      drivers/net/phy/built-in.o
+  CC      cmd/pcmcia.o
+  CC      cmd/sf.o
+  LD      drivers/pci/built-in.o
+  CC      drivers/power/power_core.o
+  CC      cmd/setexpr.o
+  LD      drivers/power/battery/built-in.o
+  LD      drivers/power/fuel_gauge/built-in.o
+  CC      cmd/test.o
+  LD      drivers/power/mfd/built-in.o
+  CC      common/usb.o
+  CC      drivers/power/power_i2c.o
+  CC      common/usb_hub.o
+  CC      drivers/power/pmic/pmic_pfuze3000.o
+  LD      drivers/mtd/spi/built-in.o
+  CC      cmd/usb.o
+  CC      cmd/fastboot.o
+  LD      drivers/power/regulator/built-in.o
+  LD      drivers/power/built-in.o
+  LD      drivers/power/pmic/built-in.o
+  CC      cmd/usb_mass_storage.o
+  CC      cmd/ximg.o
+  CC      drivers/serial/serial.o
+  CC      drivers/spi/spi.o
+cmd/fastboot.c: In function 'do_fastboot':
+cmd/fastboot.c:91:2: warning: implicit declaration of function 'fastboot_flash_dump_ptn' [-Wimplicit-function-declaration]
+  fastboot_flash_dump_ptn();
+  ^
+  CC      drivers/serial/serial_mxc.o
+  CC      drivers/spi/fsl_qspi.o
+  CC      common/usb_storage.o
+  CC      cmd/nvedit.o
+  CC      common/flash.o
+  CC      cmd/disk.o
+  CC      common/splash.o
+  LD      drivers/serial/built-in.o
+  CC      common/env_common.o
+  CC      common/bouncebuf.o
+  LD      drivers/usb/dwc3/built-in.o
+  CC      common/console.o
+  LD      drivers/spi/built-in.o
+  LD      drivers/usb/emul/built-in.o
+  CC      common/dlmalloc.o
+  CC      common/malloc_simple.o
+  CC      drivers/usb/eth/usb_ether.o
+  CC      common/image.o
+  CC      common/image-android.o
+  CC      common/image-fdt.o
+  LD      cmd/built-in.o
+  CC      common/memsize.o
+  CC      common/stdio.o
+  CC      drivers/usb/eth/asix.o
+  CC      common/image-sparse.o
+  CC      common/cli_simple.o
+  CC      drivers/usb/gadget/epautoconf.o
+  CC      common/cli.o
+  CC      common/cli_readline.o
+  CC      common/command.o
+  CC      common/s_record.o
+  CC      common/xyzModem.o
+  CC      drivers/usb/gadget/config.o
+  CC      drivers/usb/gadget/usbstring.o
+  CC      drivers/usb/gadget/ci_udc.o
+  CC      drivers/usb/gadget/g_dnl.o
+  CC      drivers/usb/gadget/f_mass_storage.o
+  CC      drivers/usb/gadget/f_fastboot.o
+  LD      drivers/usb/eth/built-in.o
+  LD      drivers/usb/gadget/udc/built-in.o
+drivers/usb/gadget/f_fastboot.c: In function 'ntx_header_update':
+drivers/usb/gadget/f_fastboot.c:1033:8: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+  pbBuf = head_block+align_offset;
+        ^
+drivers/usb/gadget/f_fastboot.c:1037:2: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'unsigned char *' [-Wformat=]
+  sprintf(cCmdA,"mmc read 0x%x 0x%x 1",pbBuf,block_s-1);
+  ^
+drivers/usb/gadget/f_fastboot.c:1047:6: warning: pointer targets in assignment differ in signedness [-Wpointer-sign]
+  ptr = pbBuf + 0x1F0;
+      ^
+drivers/usb/gadget/f_fastboot.c:1055:2: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'unsigned char *' [-Wformat=]
+  sprintf(cCmdA,"mmc write 0x%x 0x%x 1",pbBuf,block_s-1);
+  ^
+drivers/usb/gadget/f_fastboot.c: In function 'do_bootm_on_complete':
+drivers/usb/gadget/f_fastboot.c:2550:2: warning: format '%p' expects argument of type 'void *', but argument 2 has type 'ulong' [-Wformat=]
+  printf("Booting kernel @ %p ...\n",load_addr);
+  ^
+drivers/usb/gadget/f_fastboot.c: At top level:
+drivers/usb/gadget/f_fastboot.c:1648:13: warning: '_fastboot_load_partitions' defined but not used [-Wunused-function]
+ static void _fastboot_load_partitions(void)
+             ^
+  CC      drivers/usb/host/ehci-hcd.o
+  LD      drivers/usb/musb/built-in.o
+  LD      common/built-in.o
+  LD      drivers/usb/phy/built-in.o
+  CC      drivers/usb/host/ehci-mx6.o
+  LD      drivers/usb/ulpi/built-in.o
+  LD      drivers/usb/musb-new/built-in.o
+  CC      fs/fs.o
+  CC      fs/ext4/ext4fs.o
+  CC      fs/fat/fat.o
+  CC      fs/fat/file.o
+  CC      fs/ext4/ext4_common.o
+  LD      drivers/usb/host/built-in.o
+  CC      fs/ext4/dev.o
+  CC      fs/ext4/ext4_write.o
+  CC      fs/ext4/ext4_journal.o
+  CC      lib/libfdt/fdt.o
+  CC      net/checksum.o
+  LD      drivers/usb/gadget/built-in.o
+  CC      fs/ext4/crc16.o
+  CC      net/arp.o
+  CC      lib/libfdt/fdt_ro.o
+  CC      net/bootp.o
+  CC      lib/libfdt/fdt_rw.o
+  LD      fs/fat/built-in.o
+  CC      lib/libfdt/fdt_strerror.o
+  LD      test/built-in.o
+  CC      test/dm/cmd_dm.o
+  CC      lib/zlib/zlib.o
+  CC      net/eth_legacy.o
+  CC      lib/libfdt/fdt_sw.o
+  CC      lib/libfdt/fdt_wip.o
+  LD      test/dm/built-in.o
+  CC      lib/libfdt/fdt_empty_tree.o
+  CC      lib/libfdt/fdt_addresses.o
+  CC      net/eth_common.o
+  CC      net/net.o
+  CC      lib/libfdt/fdt_region.o
+  CC      lib/crc7.o
+  CC      lib/crc8.o
+  CC      net/nfs.o
+  CC      lib/crc16.o
+  CC      lib/gunzip.o
+  CC      net/tftp.o
+  CC      lib/initcall.o
+  LD      lib/libfdt/built-in.o
+  CC      lib/lmb.o
+  CC      lib/ldiv.o
+  CC      lib/net_utils.o
+  LD      fs/ext4/built-in.o
+  LD      fs/built-in.o
+  CC      lib/qsort.o
+  CC      lib/rc4.o
+  CC      lib/strmhz.o
+  CC      lib/list_sort.o
+  CC      lib/hashtable.o
+  CC      lib/errno.o
+  LD      net/built-in.o
+  CC      lib/display_options.o
+  CC      lib/crc32.o
+  CC      lib/ctype.o
+  CC      lib/div64.o
+  CC      lib/hang.o
+  CC      lib/linux_compat.o
+  CC      lib/linux_string.o
+  CC      lib/membuff.o
+  CC      lib/slre.o
+  CC      lib/string.o
+  CC      lib/time.o
+  CC      lib/vsprintf.o
+  LD      lib/zlib/built-in.o
+  CC      lib/panic.o
+  CC      lib/strto.o
+  LD      lib/built-in.o
+  CC      examples/standalone/stubs.o
+  CC      examples/standalone/hello_world.o
+  LD      examples/standalone/libstubs.o
+  LD      examples/standalone/hello_world
+  OBJCOPY examples/standalone/hello_world.srec
+  OBJCOPY examples/standalone/hello_world.bin
+  LD      u-boot
+  OBJCOPY u-boot-nodtb.bin
+  OBJCOPY u-boot.srec
+  SYM     u-boot.sym
+  COPY    u-boot.bin
+arch/arm/imx-common/Makefile:9: SOC=mx6
+  CFGS    board/freescale/mx6ull_ntx/imximage_lpddr2.cfg.cfgtmp
+  MKIMAGE u-boot.imx
+~/kobo/build/kernel
++ '[' n306 '!=' n306 ']'
++ cp -v bootloader/out/u-boot_inkbox.n306.imx /home/dk/kobo/build/imgtool/out/release/u-boot_inkbox.bin
+'bootloader/out/u-boot_inkbox.n306.imx' -> '/home/dk/kobo/build/imgtool/out/release/u-boot_inkbox.bin'
++ sync
++ root_command dd if=/home/dk/kobo/build/imgtool/out/release/u-boot_inkbox.bin of=/dev/nbd0 bs=1K seek=1
++ '[' '' == 1 ']'
++ sudo dd if=/home/dk/kobo/build/imgtool/out/release/u-boot_inkbox.bin of=/dev/nbd0 bs=1K seek=1
+403+0 records in
+403+0 records out
+412672 bytes (413 kB, 403 KiB) copied, 0.00272972 s, 151 MB/s
++ sync
++ popd
+~/kobo/build/imgtool
++ setup_kernel
++ printf '==== Setting up InkBox OS kernel ====\n'
+==== Setting up InkBox OS kernel ====
++ setup_kernel_repository
++ '[' -z /home/dk/kobo/build/kernel ']'
++ pushd /home/dk/kobo/build/kernel
+~/kobo/build/kernel ~/kobo/build/imgtool
++ '[' n306 == n306 ']'
++ KERNEL_FILE=zImage-std
++ '[' n306 == n705 ']'
++ '[' n306 == n905b ']'
++ '[' n306 == n905c ']'
++ '[' n306 == n613 ']'
++ '[' n306 == n236 ']'
++ '[' n306 == n437 ']'
++ '[' n306 == n306 ']'
+++ nproc
++ env GITDIR=/home/dk/kobo/build/kernel TOOLCHAINDIR=/home/dk/kobo/build/kernel/toolchain/arm-nickel-linux-gnueabihf THREADS=8 TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 std
+---- Building Kobo Nia (N306) kernel ----
+---- Building STANDARD kernel for n306 ----
+  CLEAN   .
+  CLEAN   arch/arm/vdso
+  CLEAN   usr
+  CLEAN   .tmp_versions
+  CLEAN   scripts/basic
+  CLEAN   scripts/dtc
+  CLEAN   scripts/genksyms
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/arm/include/generated
+  CLEAN   .config .version
+---- Kernel build ID is: 0gV2u2Rx ----
+---- Kernel commit is: 930ae5d ----
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+drivers/input/misc/Kconfig:815:warning: leading whitespace ignored
+  CHK     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/bitsperlong.h
+  WRAP    arch/arm/include/generated/asm/cputime.h
+  WRAP    arch/arm/include/generated/asm/current.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  CHK     include/generated/uapi/linux/version.h
+  UPD     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/errno.h
+  WRAP    arch/arm/include/generated/asm/exec.h
+  UPD     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/ioctl.h
+  WRAP    arch/arm/include/generated/asm/ipcbuf.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm/include/generated/asm/msgbuf.h
+  WRAP    arch/arm/include/generated/asm/param.h
+  WRAP    arch/arm/include/generated/asm/parport.h
+  WRAP    arch/arm/include/generated/asm/poll.h
+  WRAP    arch/arm/include/generated/asm/preempt.h
+  WRAP    arch/arm/include/generated/asm/resource.h
+  WRAP    arch/arm/include/generated/asm/rwsem.h
+  WRAP    arch/arm/include/generated/asm/scatterlist.h
+  WRAP    arch/arm/include/generated/asm/seccomp.h
+  WRAP    arch/arm/include/generated/asm/sections.h
+  WRAP    arch/arm/include/generated/asm/segment.h
+  WRAP    arch/arm/include/generated/asm/sembuf.h
+  HOSTCC  scripts/basic/bin2c
+  WRAP    arch/arm/include/generated/asm/serial.h
+  WRAP    arch/arm/include/generated/asm/shmbuf.h
+  WRAP    arch/arm/include/generated/asm/siginfo.h
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/sizes.h
+  WRAP    arch/arm/include/generated/asm/socket.h
+  WRAP    arch/arm/include/generated/asm/sockios.h
+  WRAP    arch/arm/include/generated/asm/termbits.h
+  WRAP    arch/arm/include/generated/asm/termios.h
+  WRAP    arch/arm/include/generated/asm/timex.h
+  WRAP    arch/arm/include/generated/asm/trace_clock.h
+  WRAP    arch/arm/include/generated/asm/unaligned.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  Generating include/generated/mach-types.h
+  HOSTCC  scripts/genksyms/genksyms.o
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/kallsyms
+  SHIPPED scripts/genksyms/parse.tab.c
+  HOSTCC  scripts/conmakehash
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+  SHIPPED scripts/genksyms/lex.lex.c
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/livetree.o
+  SHIPPED scripts/genksyms/keywords.hash.c
+  HOSTCC  scripts/sortextable
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  CC      scripts/mod/devicetable-offsets.s
+  HOSTCC  scripts/genksyms/lex.lex.o
+  MKELF   scripts/mod/elfconfig.h
+  GEN     scripts/mod/devicetable-offsets.h
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  CC      kernel/bounds.s
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/file2alias.o
+  CHK     include/generated/bounds.h
+  UPD     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  HOSTLD  scripts/genksyms/genksyms
+  CHK     include/generated/asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  HOSTLD  scripts/dtc/dtc
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_rd.o
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  HOSTCC  usr/gen_init_cpio
+  CC      arch/arm/vfp/vfpmodule.o
+  UPD     include/generated/compile.h
+  CC      init/calibrate.o
+  AS      arch/arm/vfp/entry.o
+  AS      arch/arm/vfp/vfphw.o
+  LDS     arch/arm/vdso/vdso.lds
+  ./scripts/gen_initramfs_list.sh: Cannot open '/home/build/inkbox/kernel/initrd/devnodes-imx.txt'
+make[1]: *** [usr/Makefile:73: usr/initramfs_data.cpio.xz] Error 1
+make: *** [Makefile:947: usr] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      init/init_task.o
+  CC      arch/arm/vdso/vgettimeofday.o
+  CC      arch/arm/vfp/vfpsingle.o
+  AS      arch/arm/vdso/datapage.o
+  HOSTCC  arch/arm/vdso/vdsomunge
+  VDSO    arch/arm/vdso/vdso.so.raw
+  CC      init/version.o
+  CC      arch/arm/vfp/vfpdouble.o
+  MUNGE   arch/arm/vdso/vdso.so.dbg
+  OBJCOPY arch/arm/vdso/vdso.so
+  AS      arch/arm/vdso/vdso.o
+  LD      arch/arm/vdso/built-in.o
+  LD      init/mounts.o
+  LD      init/built-in.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+---- There was an error during the build process, aborting... ----
+++ nproc
++ env GITDIR=/home/dk/kobo/build/kernel TOOLCHAINDIR=/home/dk/kobo/build/kernel/toolchain/arm-nickel-linux-gnueabihf THREADS=8 TARGET=arm-nickel-linux-gnueabihf scripts/build_kernel.sh n306 root
+---- Building Kobo Nia (N306) kernel ----
+---- Building ROOT kernel for n306 ----
+  CLEAN   .
+  CLEAN   arch/arm/vdso
+  CLEAN   usr
+  CLEAN   .tmp_versions
+  CLEAN   scripts/basic
+  CLEAN   scripts/dtc
+  CLEAN   scripts/genksyms
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/arm/include/generated
+  CLEAN   .config .version
+---- Kernel build ID is: z6LPTToG ----
+---- Kernel commit is: 930ae5d ----
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --silentoldconfig Kconfig
+drivers/input/misc/Kconfig:815:warning: leading whitespace ignored
+  CHK     include/config/kernel.release
+  WRAP    arch/arm/include/generated/asm/bitsperlong.h
+  WRAP    arch/arm/include/generated/asm/cputime.h
+  WRAP    arch/arm/include/generated/asm/current.h
+  WRAP    arch/arm/include/generated/asm/emergency-restart.h
+  WRAP    arch/arm/include/generated/asm/exec.h
+  WRAP    arch/arm/include/generated/asm/errno.h
+  WRAP    arch/arm/include/generated/asm/ioctl.h
+  WRAP    arch/arm/include/generated/asm/ipcbuf.h
+  UPD     include/config/kernel.release
+  CHK     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/irq_regs.h
+  WRAP    arch/arm/include/generated/asm/kdebug.h
+  UPD     include/generated/uapi/linux/version.h
+  WRAP    arch/arm/include/generated/asm/local.h
+  WRAP    arch/arm/include/generated/asm/local64.h
+  WRAP    arch/arm/include/generated/asm/mcs_spinlock.h
+  WRAP    arch/arm/include/generated/asm/msgbuf.h
+  WRAP    arch/arm/include/generated/asm/param.h
+  WRAP    arch/arm/include/generated/asm/parport.h
+  WRAP    arch/arm/include/generated/asm/poll.h
+  WRAP    arch/arm/include/generated/asm/preempt.h
+  WRAP    arch/arm/include/generated/asm/resource.h
+  WRAP    arch/arm/include/generated/asm/rwsem.h
+  WRAP    arch/arm/include/generated/asm/scatterlist.h
+  WRAP    arch/arm/include/generated/asm/seccomp.h
+  WRAP    arch/arm/include/generated/asm/sections.h
+  WRAP    arch/arm/include/generated/asm/segment.h
+  WRAP    arch/arm/include/generated/asm/sembuf.h
+  WRAP    arch/arm/include/generated/asm/serial.h
+  WRAP    arch/arm/include/generated/asm/shmbuf.h
+  WRAP    arch/arm/include/generated/asm/siginfo.h
+  WRAP    arch/arm/include/generated/asm/simd.h
+  WRAP    arch/arm/include/generated/asm/sizes.h
+  HOSTCC  scripts/basic/bin2c
+  WRAP    arch/arm/include/generated/asm/socket.h
+  WRAP    arch/arm/include/generated/asm/sockios.h
+  WRAP    arch/arm/include/generated/asm/termbits.h
+  WRAP    arch/arm/include/generated/asm/termios.h
+  WRAP    arch/arm/include/generated/asm/timex.h
+  WRAP    arch/arm/include/generated/asm/trace_clock.h
+  WRAP    arch/arm/include/generated/asm/unaligned.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  Generating include/generated/mach-types.h
+  HOSTCC  scripts/genksyms/genksyms.o
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/dtc/fstree.o
+  CC      scripts/mod/empty.o
+  SHIPPED scripts/genksyms/parse.tab.c
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/conmakehash
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/dtc/data.o
+  SHIPPED scripts/genksyms/lex.lex.c
+  CC      scripts/mod/devicetable-offsets.s
+  CC      kernel/bounds.s
+  MKELF   scripts/mod/elfconfig.h
+  GEN     scripts/mod/devicetable-offsets.h
+  CHK     include/generated/bounds.h
+  SHIPPED scripts/genksyms/keywords.hash.c
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  UPD     include/generated/bounds.h
+  HOSTCC  scripts/dtc/livetree.o
+  CC      arch/arm/kernel/asm-offsets.s
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  CHK     include/generated/asm-offsets.h
+  UPD     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  HOSTCC  scripts/dtc/util.o
+  HOSTCC  scripts/mod/modpost.o
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTLD  scripts/genksyms/genksyms
+  HOSTLD  scripts/dtc/dtc
+  HOSTLD  scripts/mod/modpost
+  CC      init/main.o
+  CHK     include/generated/compile.h
+  CC      init/do_mounts.o
+  CC      init/do_mounts_rd.o
+  HOSTCC  usr/gen_init_cpio
+  CC      init/do_mounts_initrd.o
+  CC      init/initramfs.o
+  UPD     include/generated/compile.h
+  CC      init/calibrate.o
+  CC      arch/arm/vfp/vfpmodule.o
+  CC      init/init_task.o
+  ./scripts/gen_initramfs_list.sh: Cannot open '/home/build/inkbox/kernel/initrd/devnodes-imx.txt'
+make[1]: *** [usr/Makefile:73: usr/initramfs_data.cpio.xz] Error 1
+make: *** [Makefile:947: usr] Error 2
+make: *** Waiting for unfinished jobs....
+  AS      arch/arm/vfp/entry.o
+  AS      arch/arm/vfp/vfphw.o
+  CC      init/version.o
+  CC      arch/arm/vfp/vfpsingle.o
+  CC      arch/arm/vfp/vfpdouble.o
+  LDS     arch/arm/vdso/vdso.lds
+  CC      arch/arm/vdso/vgettimeofday.o
+  AS      arch/arm/vdso/datapage.o
+  HOSTCC  arch/arm/vdso/vdsomunge
+  VDSO    arch/arm/vdso/vdso.so.raw
+  LD      init/mounts.o
+  LD      init/built-in.o
+  MUNGE   arch/arm/vdso/vdso.so.dbg
+  OBJCOPY arch/arm/vdso/vdso.so
+  AS      arch/arm/vdso/vdso.o
+  LD      arch/arm/vdso/built-in.o
+  LD      arch/arm/vfp/vfp.o
+  LD      arch/arm/vfp/built-in.o
+---- There was an error during the build process, aborting... ----
++ '[' n306 == n306 ']'
++ cp -v kernel/out/n306/zImage-std /home/dk/kobo/build/imgtool/out/release/uImage-std
+cp: cannot stat 'kernel/out/n306/zImage-std': No such file or directory
++ cp -v kernel/out/n306/zImage-root /home/dk/kobo/build/imgtool/out/release/uImage-root
+cp: cannot stat 'kernel/out/n306/zImage-root': No such file or directory
++ root_command dd if=kernel/out/n306/zImage-std of=/dev/nbd0 bs=512 seek=81920
++ '[' '' == 1 ']'
++ sudo dd if=kernel/out/n306/zImage-std of=/dev/nbd0 bs=512 seek=81920
+dd: failed to open 'kernel/out/n306/zImage-std': No such file or directory
++ exit 1

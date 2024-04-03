@@ -1,0 +1,89 @@
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/sdb
+[22:48:37] *** (1/4) PREPARE NATIVE CHROOT ***
+[22:48:39] (native) install cryptsetup util-linux parted
+[22:48:40] *** (2/4) CREATE DEVICE ROOTFS ("kobo-nia") ***
+[22:48:44] (rootfs_kobo-nia) install postmarketos-base device-kobo-nia postmarketos-ui-xfce4 alsa-plugins-pulse blueman faenza-icon-theme gnome-keyring greybird-themes network-manager-applet onboard pavucontrol pm-utils postmarketos-artwork-icons postmarketos-artwork-wallpapers pulseaudio unclutter-xfixes xfce4-pulseaudio-plugin xfce4-screensaver xfce4-terminal xfce4-whiskermenu-plugin lang musl-locales postmarketos-base-nofde
+[22:48:58] (rootfs_kobo-nia) install device-kobo-nia
+[22:49:12] (rootfs_kobo-nia) install postmarketos-mkinitfs
+[22:49:16] (rootfs_kobo-nia) mkinitfs kobo-clara-mainline
+[22:49:22]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+New password: 
+              Retype new password: 
+                                   passwd: password updated successfully
+                                                                        [22:49:31] NOTE: No valid keymap specified for device
+[22:49:39] *** (3/4) PREPARE INSTALL BLOCKDEVICE ***
+[22:49:39] (native) mount /dev/install (host: /dev/sdb)
+[22:49:39] WARNING: This device has a previous installation of pmOS. CONTINUE? (y/n) [n]: y
+[22:49:45] (native) partition /dev/install (boot: 256M, reserved: 0M, root: the rest)
+[22:49:45] (native) install e2fsprogs
+[22:49:46] (native) format /dev/installp2 (root, ext4)
+[22:50:13] (native) mount /dev/installp2 to /mnt/install
+[22:50:13] (native) install e2fsprogs
+[22:50:14] (native) format /dev/installp1 (boot, ext2), mount to mountpoint
+[22:50:14] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+[22:50:14] ERROR: Command failed (exit code 1): (native) % mkfs.ext2 -F -q -L pmOS_boot /dev/installp1
+[22:50:14] See also: <https://postmarketos.org/troubleshooting>
+Run 'pmbootstrap log' for details.
+dk@dk-ThinkPad-E560:~$ pmbootstrap log
+(081685) [22:49:45] % sudo mount --bind /dev/sdb1 /home/dk/.local/var/pmbootstrap/chroot_native/dev/installp1
+(081685) [22:49:45] % sudo touch /home/dk/.local/var/pmbootstrap/chroot_native/dev/installp2
+(081685) [22:49:45] % sudo mount --bind /dev/sdb2 /home/dk/.local/var/pmbootstrap/chroot_native/dev/installp2
+(081685) [22:49:45] (native) calculate depends of e2fsprogs (pmbootstrap -v for details)
+(081685) [22:49:45] (native) install e2fsprogs
+(081685) [22:49:45] % sudo rm -f /home/dk/.local/var/pmbootstrap/chroot_native/tmp/apk_progress_fifo
+(081685) [22:49:45] % sudo mkfifo /home/dk/.local/var/pmbootstrap/chroot_native/tmp/apk_progress_fifo
+(081685) [22:49:45] (native) % cat /tmp/apk_progress_fifo
+(081685) [22:49:45] (native) % sh -c exec 3>/tmp/apk_progress_fifo; apk --no-progress --progress-fd 3 add e2fsprogs
+(081685) [22:49:45] New background process: pid=82869, output=background
+WARNING: opening /mnt/pmbootstrap-packages: No such file or directory
+(1/3) Installing libcom_err (1.47.0-r2)
+(2/3) Installing e2fsprogs-libs (1.47.0-r2)
+(3/3) Installing e2fsprogs (1.47.0-r2)
+Executing busybox-1.36.0-r8.trigger
+OK: 24 MiB in 72 packages
+(081685) [22:49:46] (native) format /dev/installp2 (root, ext4)
+(081685) [22:49:46] (native) % mkfs.ext4 -O ^metadata_csum -F -q -L pmOS_root /dev/installp2
+(081685) [22:50:13] (native) mount /dev/installp2 to /mnt/install
+(081685) [22:50:13] (native) % mkdir -p /mnt/install
+(081685) [22:50:13] (native) % mount /dev/installp2 /mnt/install
+(081685) [22:50:13] (native) calculate depends of e2fsprogs (pmbootstrap -v for details)
+(081685) [22:50:13] (native) install e2fsprogs
+(081685) [22:50:13] % sudo rm -f /home/dk/.local/var/pmbootstrap/chroot_native/tmp/apk_progress_fifo
+(081685) [22:50:13] % sudo mkfifo /home/dk/.local/var/pmbootstrap/chroot_native/tmp/apk_progress_fifo
+(081685) [22:50:13] (native) % cat /tmp/apk_progress_fifo
+(081685) [22:50:13] (native) % sh -c exec 3>/tmp/apk_progress_fifo; apk --no-progress --progress-fd 3 add e2fsprogs
+(081685) [22:50:13] New background process: pid=82953, output=background
+WARNING: opening /mnt/pmbootstrap-packages: No such file or directory
+OK: 24 MiB in 72 packages
+(081685) [22:50:14] (native) format /dev/installp1 (boot, ext2), mount to mountpoint
+(081685) [22:50:14] (native) % mkfs.ext2 -F -q -L pmOS_boot /dev/installp1
+/dev/installp1 is apparently in use by the system; will not make a filesystem here!
+(081685) [22:50:14] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(081685) [22:50:14] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+(081685) [22:50:14] ERROR: Command failed (exit code 1): (native) % mkfs.ext2 -F -q -L pmOS_boot /dev/installp1
+(081685) [22:50:14] See also: <https://postmarketos.org/troubleshooting>
+(081685) [22:50:14] Traceback (most recent call last):
+  File "/home/dk/pmbootstrap/pmb/__init__.py", line 63, in main
+    getattr(frontend, args.action)(args)
+  File "/home/dk/pmbootstrap/pmb/helpers/frontend.py", line 325, in install
+    pmb.install.install(args)
+  File "/home/dk/pmbootstrap/pmb/install/_install.py", line 1086, in install
+    install_system_image(args, 0, f"rootfs_{args.device}", step, steps,
+  File "/home/dk/pmbootstrap/pmb/install/_install.py", line 708, in install_system_image
+    pmb.install.format(args, layout, boot_label, root_label, sdcard)
+  File "/home/dk/pmbootstrap/pmb/install/format.py", line 143, in format
+    format_and_mount_boot(args, boot_dev, boot_label)
+  File "/home/dk/pmbootstrap/pmb/install/format.py", line 36, in format_and_mount_boot
+    pmb.chroot.root(args, ["mkfs.ext2", "-F", "-q", "-L", boot_label,
+  File "/home/dk/pmbootstrap/pmb/chroot/root.py", line 83, in root
+    return pmb.helpers.run_core.core(args, msg, cmd_sudo, None, output,
+  File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 351, in core
+    check_return_code(args, code, log_message)
+  File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 221, in check_return_code
+    raise RuntimeError(f"Command failed (exit code {str(code)}): " +
+RuntimeError: Command failed (exit code 1): (native) % mkfs.ext2 -F -q -L pmOS_boot /dev/installp1
+
+(082967) [22:50:31] % tail -n 60 -F /home/dk/.local/var/pmbootstrap/log.txt
+(082967) [22:50:31] *** output passed to pmbootstrap stdout, not to this log ***
+
+

@@ -1,0 +1,71 @@
+Linux inkbox #1 PREEMPT Sat Sep 24 08:52:33 EDT 2022 GNU/Linux
+InkBox OS, kernel build UR7tnvfM, commit 0627009
+
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+boot: clean, 26/6144 files, 10941/24576 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+recoveryfs: clean, 15/128016 files, 451239/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+rootfs: recovering journal
+rootfs: clean, 21/32768 files, 66884/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+user: recovering journal
+user: clean, 3636/198800 files, 562582/794240 blocks
+
+(initrd) Hit ENTER to stop auto-boot ... [    4.143787] [PROGRESS_BAR-3065] No progess ...
+
+
+ * Device is rooted; not enforcing security policy
+ * Starting init ramdisk USB debug framework
+tcpsvd: listening on 0.0.0.0:21, starting
+ * Boot mode: Standard
+Verifying root filesystem's digital signature ...
+Done.
+ * Mounted root filesystem
+ * Mounted core SquashFS archives
+ * Mounted essential filesystems
+
+Validating developer key ...
+Found valid developer key.
+Validating against UID ...
+Developer key does match UID.
+The door is open now; be careful what you let in.
+Verified OK
+
+   OpenRC 0.41.2.6fc2696f3e is starting up Linux 3.0.35-inkbox (armv7l)
+
+ * /proc is already mounted
+ * Mounting /run ... * /run/openrc: creating directory
+ * /run/lock: creating directory
+ * /run/lock: correcting owner
+ * Caching service dependencies ... [ ok ]
+ * Mounting debug filesystem ... [ ok ]
+ * Mounting fuse control filesystem ... [ ok ]
+ * Remounting devtmpfs on /dev ... [ ok ]
+ * Mounting /dev/shm ... [ ok ]
+ * Starting udev ... [ ok ]
+ [ ok ]
+ * Starting USBNet ... [ ok ]
+ * Splash screen ... [ ok ]
+ * Mounting onboard storage filesystem ... [ ok ]
+ * Starting InkBox Power Daemon (ipd) ... [ ok ]
+ * Starting battery watchdog ... [ ok ]
+ * Setting hostname ... [ ok ]
+ * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Checking for available updates ...Update skipped or no update available, aborting ...
+ [ ok ]
+ * Starting InkBox GUI ... * Starting InkBox Daemon (ibxd) ... [ ok ]
+ * Setting up GUI user applications
+ * Successfully set up application 'InkVT'
+ * Successfully set up application 'Maps'
+ * Successfully set up application 'QtFrotz'
+ [ ok ]
+ [ ok ]
+
+Welcome to InkBox OS 1.9
+Kernel 3.0.35-inkbox on armv7l (/dev/ttymxc0)
+
+kobo login:

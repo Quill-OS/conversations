@@ -1,0 +1,63 @@
+pmbootstrap init
+[21:27:26] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+[21:27:26] Work path [/home/pi/.local/var/pmbootstrap]: 
+[21:27:42] NOTE: pmaports path: /home/pi/.local/var/pmbootstrap/cache_git/pmaports
+[21:27:42] Choose the postmarketOS release channel.
+[21:27:42] Available (7):
+[21:27:42] * edge: Rolling release / Most devices / Occasional breakage: https://postmarketos.org/edge
+[21:27:42] * v22.12: Latest release / Recommended for best stability
+[21:27:42] * v22.06: Old release (unsupported)
+[21:27:42] * v21.12: Old release (unsupported)
+[21:27:42] * v21.06: Old release (unsupported)
+[21:27:42] * v21.03: Old release (unsupported)
+[21:27:42] * v20.05: Old release (unsupported)
+[21:27:42] Channel [edge]: edge
+[21:27:44] Choose your target device vendor (either an existing one, or a new one for porting).
+[21:27:44] Available vendors (76): acer, alcatel, amazon, amediatech, apple, ark, arrow, asus, beelink, bq, cubietech, cutiepi, dongshanpi, essential, fairphone, finepower, fly, goclever, google, gp, hisense, htc, huawei, infocus, jolla, klipad, kobo, lark, leeco, lenovo, lg, mangopi, medion, meizu, microsoft, mobvoi, motorola, nextbit, nobby, nokia, nvidia, odroid, oneplus, oppo, ouya, pegatron, pine64, planet, purism, qemu, radxa, raspberry, samsung, semc, sharp, shift, sipeed, sony, sourceparts, surftab, t2m, tablet, tokio, tolino, trekstor, vernee, videostrong, volla, wexler, wiko, wileyfox, xiaomi, xunlong, yu, zte, zuk
+[21:27:44] Vendor [kobo]: kobo
+[21:27:46] Available codenames (2): clara, librah2o
+[21:27:46] Device codename [nia]: clara
+[21:27:47] Which kernel do you want to use with your device?
+[21:27:47] Downstream kernels are typically the outdated Android kernel forks.
+[21:27:47] Upstream kernels (mainline, stable, ...) get security updates, but may have less working features than downstream kernels.
+[21:27:47] Available kernels (2):
+[21:27:47] * downstream: Downstream kernel
+[21:27:47] * mainline: Close to mainline kernel
+[21:27:47] Kernel [downstream]: mainline
+[21:28:11] This device has proprietary components, which trade some of your freedom with making more peripherals work.
+[21:28:11] We would like to offer full functionality without hurting your freedom, but this is currently not possible for your device.
+[21:28:11] device-kobo-clara-nonfree-firmware: Kobo Clara HD firmware
+[21:28:11] Enable this package? (y/n) [y]: y
+[21:28:18] Username [dk]: ad
+[21:28:35] Available user interfaces (13): 
+[21:28:35] * none: Bare minimum OS image for testing and manual customization. The "console" UI should be selected if a graphical UI is not desired.
+[21:28:35] * asteroid: (Wayland) Smartwatch UI from AsteroidOS
+[21:28:35] * console: Console environment, with no graphical/touch UI
+[21:28:35] * fbkeyboard: Plain framebuffer console with touchscreen keyboard support
+[21:28:35] * gnome: (Wayland) Gnome Shell
+[21:28:35] * gnome-mobile: (Wayland) Gnome Shell patched to adapt better to phones (Experimental)
+[21:28:35] * i3wm: (X11) Tiling WM (keyboard required)
+[21:28:35] * lxqt: (X11) Lightweight Qt Desktop Environment (stylus recommended)
+[21:28:35] * mate: (X11) MATE Desktop Environment, fork of GNOME2 (stylus recommended)
+[21:28:35] * plasma-desktop: (X11/Wayland) KDE Desktop Environment (works well with tablets)
+[21:28:35] * shelli: Plain console with touchscreen gesture support
+[21:28:35] * sxmo-de-dwm: Simple Mobile: Mobile environment based on SXMO and running on dwm
+[21:28:35] * sxmo-de-sway: Simple Mobile: Mobile environment based on SXMO and running on sway
+[21:28:35] * xfce4: (X11) Lightweight desktop (stylus recommended)
+[21:28:35] NOTE: 6 user interfaces are not available. If device supports GPU acceleration, set "deviceinfo_gpu_accelerated" to make UIs available. See: <https://wiki.postmarketos.org/wiki/Deviceinfo_reference
+[21:28:35] User interface [xfce4]: xfce4
+[21:28:44] Additional options: extra free space: 0 MB, boot partition size: 256 MB, parallel jobs: 5, ccache per arch: 5G, sudo timer: False, mirror: http://mirror.postmarketos.org/postmarketos/
+[21:28:44] Change them? (y/n) [n]: n
+[21:28:48] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+[21:28:48] Extra packages [n]: n
+[21:28:50] Your host timezone: Europe/Berlin
+[21:28:50] Use this timezone instead of GMT? (y/n) [y]: n
+[21:28:54] WARNING: Unable to determine timezone configuration on host, using GMT.
+[21:28:54] Available locales (14): C.UTF-8, ch_DE.UTF-8, de_CH.UTF-8, de_DE.UTF-8, en_GB.UTF-8, en_US.UTF-8, es_ES.UTF-8, fr_FR.UTF-8, it_IT.UTF-8, nb_NO.UTF-8, nl_NL.UTF-8, pt_BR.UTF-8, ru_RU.UTF-8, sv_SE.UTF-8
+[21:28:54] Choose default locale for installation [en_GB.UTF-8]: 
+[21:28:58] Device hostname (short form, e.g. 'foo') [kobo-clara]: 
+[21:29:00] After pmaports are changed, the binary packages may be outdated. If you want to install postmarketOS without changes, reply 'n' for a faster installation.
+[21:29:00] Build outdated packages during 'pmbootstrap install'? (y/n) [y]: 
+[21:29:02] WARNING: The chroots and git repositories in the work dir do not get updated automatically.
+[21:29:02] Run 'pmbootstrap status' once a day before working with pmbootstrap to make sure that everything is up-to-date.
+[21:29:02] DONE!

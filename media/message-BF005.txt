@@ -1,0 +1,67 @@
+kobo-nia:~$ ls -R -l /sys | grep sy7636
+drwxr-xr-x    2 root     root             0 May 10 22:48 sy7636
+/sys/bus/i2c/drivers/sy7636:
+lrwxrwxrwx    1 root     root             0 May 10 22:50 module -> ../../../../module/sy7636_core
+lrwxrwxrwx    1 root     root             0 May 10 22:50 sy7636-pmic -> ../../../devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-pmic
+lrwxrwxrwx    1 root     root             0 May 10 22:50 sy7636-sns -> ../../../devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns
+drwxr-xr-x    2 root     root             0 May 10 22:48 sy7636-pmic
+drwxr-xr-x    2 root     root             0 May 10 22:48 sy7636_sensor
+/sys/bus/platform/drivers/sy7636-pmic:
+lrwxrwxrwx    1 root     root             0 May 10 22:50 module -> ../../../../module/sy7636_regulator
+lrwxrwxrwx    1 root     root             0 May 10 22:50 sy7636-pmic -> ../../../../devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-pmic
+/sys/bus/platform/drivers/sy7636_sensor:
+lrwxrwxrwx    1 root     root             0 May 10 22:50 module -> ../../../../module/sy7636_hwmon
+lrwxrwxrwx    1 root     root             0 May 10 22:50 sy7636-sns -> ../../../../devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns
+lrwxrwxrwx    1 root     root             0 May 10 22:50 hwmon5 -> ../../devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns/hwmon/hwmon5
+lrwxrwxrwx    1 root     root             0 May 10 22:50 driver -> ../../../../../../../bus/i2c/drivers/sy7636
+lrwxrwxrwx    1 root     root             0 May 10 22:50 of_node -> ../../../../../../../firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62
+drwxr-xr-x    3 root     root             0 May 10 22:48 sy7636-pmic
+drwxr-xr-x    4 root     root             0 May 10 22:48 sy7636-sns
+lrwxrwxrwx    1 root     root             0 May 10 22:50 of_node -> ../../../../../../../../../firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/DISPLAY
+lrwxrwxrwx    1 root     root             0 May 10 22:50 of_node -> ../../../../../../../../../firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/VCOM
+lrwxrwxrwx    1 root     root             0 May 10 22:50 of_node -> ../../../../../../../../../firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/V3P3
+lrwxrwxrwx    1 root     root             0 May 10 22:50 of_node -> ../../../../../../../../../firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/TMST
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-pmic:
+lrwxrwxrwx    1 root     root             0 May 10 22:50 driver -> ../../../../../../../../bus/platform/drivers/sy7636-pmic
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-pmic/power:
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns:
+lrwxrwxrwx    1 root     root             0 May 10 22:50 driver -> ../../../../../../../../bus/platform/drivers/sy7636_sensor
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns/hwmon:
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns/hwmon/hwmon5:
+lrwxrwxrwx    1 root     root             0 May 10 22:50 device -> ../../../sy7636-sns
+lrwxrwxrwx    1 root     root             0 May 10 22:50 of_node -> ../../../../../../../../../../firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns/hwmon/hwmon5/power:
+/sys/devices/platform/soc/2100000.bus/21a0000.i2c/i2c-0/0-0062/sy7636-sns/power:
+drwxr-xr-x    3 root     root             0 May 10 22:50 sy7636@62
+/sys/firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62:
+/sys/firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators:
+/sys/firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/DISPLAY:
+/sys/firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/TMST:
+/sys/firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/V3P3:
+/sys/firmware/devicetree/base/soc/bus@2100000/i2c@21a0000/sy7636@62/regulators/VCOM:
+ls: can't open '/sys/kernel/debug': Permission denied
+drwxr-xr-x    6 root     root             0 May 10 22:48 sy7636_core
+drwxr-xr-x    6 root     root             0 May 10 22:48 sy7636_hwmon
+drwxr-xr-x    6 root     root             0 May 10 22:48 sy7636_regulator
+/sys/module/sy7636_core:
+/sys/module/sy7636_core/drivers:
+lrwxrwxrwx    1 root     root             0 May 10 22:51 i2c:sy7636 -> ../../../bus/i2c/drivers/sy7636
+/sys/module/sy7636_core/holders:
+lrwxrwxrwx    1 root     root             0 May 10 22:51 sy7636_hwmon -> ../../sy7636_hwmon
+lrwxrwxrwx    1 root     root             0 May 10 22:51 sy7636_regulator -> ../../sy7636_regulator
+/sys/module/sy7636_core/notes:
+/sys/module/sy7636_core/sections:
+/sys/module/sy7636_hwmon:
+/sys/module/sy7636_hwmon/drivers:
+lrwxrwxrwx    1 root     root             0 May 10 22:51 platform:sy7636_sensor -> ../../../bus/platform/drivers/sy7636_sensor
+/sys/module/sy7636_hwmon/holders:
+lrwxrwxrwx    1 root     root             0 May 10 22:51 sy7636_regulator -> ../../sy7636_regulator
+/sys/module/sy7636_hwmon/notes:
+/sys/module/sy7636_hwmon/sections:
+/sys/module/sy7636_regulator:
+/sys/module/sy7636_regulator/drivers:
+lrwxrwxrwx    1 root     root             0 May 10 22:51 platform:sy7636-pmic -> ../../../bus/platform/drivers/sy7636-pmic
+/sys/module/sy7636_regulator/holders:
+/sys/module/sy7636_regulator/notes:
+/sys/module/sy7636_regulator/sections:
+kobo-nia:~$ 

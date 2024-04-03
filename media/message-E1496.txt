@@ -1,0 +1,25 @@
+kindle:~# chmod -R 001 /sys
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_status"): device not open
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_capacity"): device not open
+kindle:~# QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_capacity"): device not open
+16/03/2023 @ 19:52:39 | functions: isBatteryCritical: Battery is at a critical charge level!
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_status"): device not open
+16/03/2023 @ 19:52:39 | MainWindow: Warning! Battery is at a critical charge level!
+16/03/2023 @ 19:52:40 | alert: Displaying critical battery alert splash
+16/03/2023 @ 19:52:40 | functions: Powering off
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_status"): device not open
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_capacity"): device not open
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_status"): device not open
+QIODevice::read (QFile, "/sys/devices/system/yoshi_battery/yoshi_battery0/battery_capacity"): device not open
+
+Broadcast message from root@kindle
+        (not a tty) at 19:52:41 ...
+
+The system is going down for power off NOW!
+ * Stopping InkBox Power Daemon (ipd) ...                                                                                                                                                                                             [ ok ]
+ * Stopping InkBox GUI ...                                                                                                                                                                                                            [ ok ]
+ * Unmounting onboard storage filesystem ...                                                                                                                                                                                          [ ok ]
+ * Stopping sshd ...                                                                                                                                                                                                                  [ ok ]
+ * Mounting root filesystem read-only ...
+Connection to 192.168.3.2 closed by remote host.
+Connection to 192.168.3.2 closed.

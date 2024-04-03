@@ -1,0 +1,1011 @@
+[  674.094931]   ==> rssi_level:0, rate_bitmap:0x000ff005                                      
+[  674.094956] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005  
+[  674.095159] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=3
+[  674.095368] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x000
+[  674.095871] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)            
+[  674.096352] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15                
+[  674.096381] RTL871X: LocPsPoll: 2                                                           
+[  674.096396] RTL871X: LocNullData: 3                                                         
+[  674.096411] RTL871X: LocQosNull: 4                                                          
+[  674.096429] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)                       
+[  674.096610] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen)
+[  674.096632] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0             
+[  674.096899] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1                     
+[  674.103203] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way     
+[  674.179168] RTL871X: phydm_rssi_report mac_id:0, mac:0c:54:15:1c:2c:8a, rssi:68             
+[  674.179232] RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:False, Fire
+[  674.279366] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4                    
+[  674.798884] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[  674.804586] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x01, WirelessMode:0x0b, rate_bitma0
+[  674.804657] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff    
+[  674.804657]   ==> rssi_level:1, rate_bitmap:0x000f0000                                      
+[  674.804719] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xf0000  
+[  674.805138] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xf0000 init_rate=3
+[  675.104950] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  675.105004] PMU2: Watchdog timeout triggered. ===============                               
+[  675.649804] PMU: calib_ocvTable IBAT > 64mA -- Not Calibration --                           
+[  675.652093] PMU : set_current_time2register : second is 1325436403, hour is 368176          
+[  675.668920] PMU: cc_sum = 1879: cc_cap_res= 26: cc_cap_mas = -1915183416                    
+[  675.668963] PMU: cc_cap_offset= 81:                                                         
+[  675.669001] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  675.669057] PMU:STATUS= 6: IBAT= 99: VSYS= 4302750: VBAT= 4098850: DSOC= 10000: RSOC= 9500:1
+[  676.095510] RTL871X: send eapol packet                                                      
+[  676.095866] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0         
+[  676.099525] RTL871X: recv eapol packet                                                      
+[  676.798828] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[  678.798824] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[  678.799294] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE      
+[  678.803343] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2               
+[  679.198856] RTL871X: recv eapol packet                                                      
+[  680.798601] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 70                    
+[  680.801288] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=70                                    
+[  682.798590] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  684.798594] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  685.137855] RTL871X: recv eapol packet                                                      
+[  686.798590] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  688.798583] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  690.798580] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  692.798581] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  694.798607] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 68                    
+[  696.798616] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[  697.222002] RTL871X: recv eapol packet                                                      
+[  698.798622] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[  699.267314] RTL871X: adaptive_early_32k(): bcn_cnt = 101                                    
+[  700.798591] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[  702.798579] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[  703.609122] RTL871X: rtw_wx_set_mlme                                                        
+[  703.609147] RTL871X: rtw_wx_set_mlme, cmd=0, reason=3                                       
+[  703.609206] RTL871X: indicate disassoc                                                      
+[  703.609288] RTL871X: set bssid:00:00:00:00:00:00                                            
+[  703.609338] RTL871X: =>rtw_wx_set_essid                                                     
+[  703.609350] RTL871X: ssid=�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD�, len=32                                 
+[  703.609366] RTL871X: set ssid [�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD�����C`��] fw_state=0x000000        8
+[  703.609375] RTL871X: Set SSID under fw_state=0x00000008                                     
+[  703.609387] RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+[  703.609413] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[  703.614765] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=1 len=8                     
+[  703.615710] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect                       
+[  703.615743] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_DISCONNET
+[  703.615757] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2               
+[  703.616480] RTL871X: ### Clean STA_(0) info ###                                             
+[  703.616505] RTL871X: free disconnecting network                                             
+[  703.625981] RTL871X: (2)871x_drv - drv_close, bup=1, hw_init_completed=_TRUE                
+[  703.626700] RTL871X: indicate disassoc                                                      
+[  703.626793] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect                       
+[  703.626855] RTL871X: -871x_drv - drv_close, bup=1                                           
+[  703.630213] RTL871X: set bssid:00:00:00:00:00:00                                            
+[  703.630282] RTL871X: =>rtw_wx_set_essid                                                     
+[  703.630294] RTL871X: ssid=��N^���l�zl�Ԛr��a �g)�59, len=32                                  
+[  703.630310] RTL871X: set ssid [���N^���l�zl�Ԛr��a �g)�59����C`��] fw_state=0x00000808       
+[  703.630319] RTL871X: Set SSID under fw_state=0x00000808                                     
+[  703.630330] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[  703.655083] RTL871X: module exit start                                                      
+[  703.655287] RTL871X: rtw_ndev_uninit(eth0) if1                                              
+[  703.678795] RTL871X: rtw_pm_set_ips IPS_NONE                                                
+[  703.678855] RTL871X: ### Clean STA_(1) info ###                                             
+[  703.678878] RTL871X: rtw_sdio_if1_deinit wowlan_mode:0                                      
+[  703.678887] RTL871X: ===> rtw_dev_unload                                                    
+[  703.679023] RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at li1
+[  703.679460] RTL871X: CheckIPSStatus(): Read 0x100=0xff 0x86=0x00                            
+[  703.679513] RTL871X: rtw_dev_unload: driver not in IPS                                      
+[  703.687617] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0                                         
+[  703.687628] RTL871X: SetHwReg8188F: hci_sus_state=3                                         
+[  703.688362] RTL871X: SetHwReg8188F: hci_sus_state=0                                         
+[  703.688373] RTL871X: <=== rtw_dev_unload                                                    
+[  703.688381] RTL871X: +r871xu_dev_remove, hw_init_completed=0                                
+[  703.690470] RTL871X: module exit success                                                    
+[  703.751929] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[  703.751956] Wifi / BT power control 0                                                       
+[  703.753863] mmc1: card 0001 removed                                                         
+[  703.764304] wifi 3v3 power off                                                              
+[  703.764344] _ntx_wifi_bt_power_ctrl() : done                                                
+[  704.400019] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.               
+[  704.885801] PMU: cc_sum = 38: cc_cap_res= 12: cc_cap_mas = -1915183416                      
+[  704.885856] PMU: cc_cap_offset= 69:                                                         
+[  704.888114] PMU : set_current_time2register : second is 1325436432, hour is 368176          
+[  704.905236] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  704.905284] PMU: cc_cap_offset= 69:                                                         
+[  704.905321] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  704.905375] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4098250: DSOC= 10000: RSOC= 9500:1
+[  707.102296] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  707.102351] PMU2: Watchdog timeout triggered. ===============                               
+[  733.982839] PMU: cc_sum = 41: cc_cap_res= 13: cc_cap_mas = -1915183416                      
+[  733.982893] PMU: cc_cap_offset= 56:                                                         
+[  733.985147] PMU : set_current_time2register : second is 1325436461, hour is 368176          
+[  734.001155] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  734.001202] PMU: cc_cap_offset= 56:                                                         
+[  734.001241] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  734.001294] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4096700: DSOC= 10000: RSOC= 9500:1
+[  739.099627] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  739.099682] PMU2: Watchdog timeout triggered. ===============                               
+[  746.189999] sy7636_get_temperature():temperature = 26,reg=0x1a                              
+[  763.051291] PMU: cc_sum = 41: cc_cap_res= 13: cc_cap_mas = -1915183416                      
+[  763.051347] PMU: cc_cap_offset= 43:                                                         
+[  763.053876] PMU : set_current_time2register : second is 1325436490, hour is 368176          
+[  763.071471] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  763.071513] PMU: cc_cap_offset= 43:                                                         
+[  763.071552] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  763.071608] PMU:STATUS= 6: IBAT= -1: VSYS= 4312000: VBAT= 4097300: DSOC= 10000: RSOC= 9500:1
+[  771.096966] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  771.097022] PMU2: Watchdog timeout triggered. ===============                               
+[  792.393922] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  792.393976] PMU: cc_cap_offset= 29:                                                         
+[  792.396524] PMU : set_current_time2register : second is 1325436520, hour is 368176          
+[  792.414182] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  792.414227] PMU: cc_cap_offset= 29:                                                         
+[  792.414266] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  792.414320] PMU:STATUS= 6: IBAT= -1: VSYS= 4311500: VBAT= 4096400: DSOC= 10000: RSOC= 9500:1
+[  803.094293] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  803.094347] PMU2: Watchdog timeout triggered. ===============                               
+[  821.553071] PMU : set_current_time2register : second is 1325436549, hour is 368176          
+[  821.567429] PMU: cc_sum = 43: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  821.567474] PMU: cc_cap_offset= 15:                                                         
+[  821.567513] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  821.567570] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4097300: DSOC= 10000: RSOC= 9500:1
+[  827.893904] PMU: cc_sum = 9: cc_cap_res= 3: cc_cap_mas = -1915183416                        
+[  827.893959] PMU: cc_cap_offset= 12:                                                         
+[  827.896527] PMU : set_current_time2register : second is 1325436555, hour is 368176          
+[  827.914247] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  827.914293] PMU: cc_cap_offset= 12:                                                         
+[  827.914330] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  827.914384] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4097600: DSOC= 10000: RSOC= 9600:1
+[  835.091655] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  835.091710] PMU2: Watchdog timeout triggered. ===============                               
+[  841.600211] sy7636_get_temperature():temperature = 26,reg=0x1a                              
+[  857.051188] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  857.051242] PMU: cc_cap_offset= -2:                                                         
+[  857.053793] PMU : set_current_time2register : second is 1325436584, hour is 368176          
+[  857.071310] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  857.071354] PMU: cc_cap_offset= -2:                                                         
+[  857.071392] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  857.071446] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4097675: DSOC= 10000: RSOC= 9600:1
+[  867.089064] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  867.089119] PMU2: Watchdog timeout triggered. ===============                               
+[  886.561962] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  886.562017] PMU: cc_cap_offset= -16:                                                        
+[  886.564591] PMU : set_current_time2register : second is 1325436614, hour is 368176          
+[  886.582214] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  886.582257] PMU: cc_cap_offset= -16:                                                        
+[  886.582297] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  886.582351] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4096100: DSOC= 10000: RSOC= 9600:1
+[  899.086376] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  899.086431] PMU2: Watchdog timeout triggered. ===============                               
+[  915.993859] PMU: cc_sum = 43: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  915.993914] PMU: cc_cap_offset= -30:                                                        
+[  915.996452] PMU : set_current_time2register : second is 1325436643, hour is 368176          
+[  916.014267] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  916.014319] PMU: cc_cap_offset= -30:                                                        
+[  916.014360] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  916.014415] PMU:STATUS= 6: IBAT= -1: VSYS= 4309500: VBAT= 4095800: DSOC= 10000: RSOC= 9600:1
+[  926.169594] sy7636_get_temperature():temperature = 26,reg=0x1a                              
+[  931.083677] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  931.083732] PMU2: Watchdog timeout triggered. ===============                               
+[  945.051311] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  945.051367] PMU: cc_cap_offset= -44:                                                        
+[  945.053918] PMU : set_current_time2register : second is 1325436672, hour is 368176          
+[  945.071482] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  945.071525] PMU: cc_cap_offset= -44:                                                        
+[  945.071565] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  945.071619] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4097600: DSOC= 10000: RSOC= 9600:1
+[  963.081021] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  963.081076] PMU2: Watchdog timeout triggered. ===============                               
+[  974.562029] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[  974.562084] PMU: cc_cap_offset= -58:                                                        
+[  974.564625] PMU : set_current_time2register : second is 1325436702, hour is 368176          
+[  974.582255] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[  974.582298] PMU: cc_cap_offset= -58:                                                        
+[  974.582338] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[  974.582391] PMU:STATUS= 6: IBAT= -1: VSYS= 4311500: VBAT= 4097925: DSOC= 10000: RSOC= 9600:1
+[  995.078349] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[  995.078403] PMU2: Watchdog timeout triggered. ===============                               
+[ 1003.993821] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1003.993877] PMU: cc_cap_offset= -72:                                                        
+[ 1003.996446] PMU : set_current_time2register : second is 1325436731, hour is 368176          
+[ 1004.014264] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1004.014317] PMU: cc_cap_offset= -72:                                                        
+[ 1004.014358] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1004.014412] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4095200: DSOC= 10000: RSOC= 9600:1
+[ 1007.430301] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[ 1007.430322] Wifi / BT power control 1                                                       
+[ 1007.430330] wifi 3v3 power on                                                               
+[ 1007.488626] Wifi On                                                                         
+[ 1007.488726] _ntx_wifi_bt_power_ctrl() : done                                                
+[ 1007.559079] sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined rae
+[ 1007.580997] mmc1: new high speed SDIO card at address 0001                                  
+[ 1007.587353] RTL871X: module init start                                                      
+[ 1007.587378] RTL871X: rtl8189fs v4.3.24.1_16872.20160217                                     
+[ 1007.587388] RTL871X: build time: Feb 20 2022 09:28:20                                       
+[ 1007.587888] RTL871X: CHIP TYPE: RTL8188F                                                    
+[ 1007.588526] RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1                    
+[ 1007.588547] RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)    
+[ 1007.588789] RTL871X: SetHwReg8188F: hci_sus_state=1                                         
+[ 1007.590681] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1                                         
+[ 1007.590692] RTL871X: SetHwReg8188F: hci_sus_state=2                                         
+[ 1007.590996] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f                       
+[ 1007.591007] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.         
+[ 1007.591106] RTL871X: PowerOnCheck: 0x1B8 test Pass.                                         
+[ 1007.591177] RTL871X: EEPROM type is E-FUSE                                                  
+[ 1007.591569] RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0                          
+[ 1007.633143] RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98                           
+[ 1007.633159] RTL871X: Efuse Realmap:                                                         
+[ 1007.633167] 29 81 03 CC 00 00 50 00 00 00 04 CC 0A 0C 00 00                                 
+[ 1007.633215] 28 29 29 29 29 29 2B 2B 2B 2B 2B 25 FF FF FF FF                                 
+[ 1007.633260] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633305] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633350] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633395] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633440] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633485] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633530] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633576] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633621] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.633666] FF FF FF FF FF FF FF FF 20 1E 1D 00 00 00 00 FF                                 
+[ 1007.633711] FF 11 00 10 00 FF 00 FF 00 00 FF FF FF FF FF FF                                 
+[ 1007.633756] 3E 10 01 02 23 FF FF FF 20 04 4C 02 79 F1 21 02                                 
+[ 1007.633801] 0C 00 22 04 00 08 00 32 FF 21 02 0C 00 22 2A 01                                 
+[ 1007.633846] 01 00 00 00 00 00 00 00 00 00 00 00 02 00 FF FF                                 
+[ 1007.633890] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                 
+[ 1007.633934] 00 EB 00 6E 01 00 00 00 00 FF 58 B0 D4 9D A6 8E                                 
+[ 1007.633979] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634025] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634070] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634115] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634160] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634205] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634250] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634295] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634340] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634386] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634431] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634476] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634521] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634566] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1007.634678] RTL871X: hal_com_config_channel_plan chplan:0x20                                
+[ 1007.634690] RTL871X: Hal_DetectWoWMode                                                      
+[ 1007.635791] RTL871X: kfree flag:1                                                           
+[ 1007.635801] RTL871X: bb_gain:2                                                              
+[ 1007.638146] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0                                         
+[ 1007.638157] RTL871X: SetHwReg8188F: hci_sus_state=3                                         
+[ 1007.638977] RTL871X: SetHwReg8188F: hci_sus_state=0                                         
+[ 1007.638989] RTL871X: rtw_hal_read_chip_info in 50 ms                                        
+[ 1007.639186] RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13                
+[ 1007.640037] RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1          
+[ 1007.641299] RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.                        
+[ 1007.641346] RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1                          
+[ 1007.641453] RTL871X: default power by rate loaded                                           
+[ 1007.642157] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642169] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642180] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642188] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642199] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642206] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642288] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642296] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642307] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642315] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642325] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642333] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642416] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642424] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642434] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642442] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642452] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1007.642460] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1007.642633] RTL871X: default power limit loaded                                             
+[ 1007.642987] RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e                             
+[ 1007.643205] RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+[ 1007.643297] RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e                     
+[ 1007.660306] RTL871X: oob_irq ZERO!                                                          
+[ 1007.660457] RTL871X: module init ret=0                                                      
+[ 1009.241685] RTL871X: +871x_drv - drv_open, bup=0                                            
+[ 1009.242407] RTL871X: FW does not exist before power on!!                                    
+[ 1009.244472] RTL871X: SetHwReg8188F: hci_sus_state=1                                         
+[ 1009.247965] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1                                         
+[ 1009.248010] RTL871X: SetHwReg8188F: hci_sus_state=2                                         
+[ 1009.249278] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f                       
+[ 1009.249327] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.         
+[ 1009.249632] RTL871X: PowerOnCheck: 0x1B8 test Pass.                                         
+[ 1009.249672] RTL871X: Power on ok!                                                           
+[ 1009.250400] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3                               
+[ 1009.250450] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768                   
+[ 1009.250507] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=18
+[ 1009.250542] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!                      
+[ 1009.250575] RTL871X: rtl8188f_FirmwareDownload by IO write!                                 
+[ 1009.422186] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x000405
+[ 1009.422658] RTL871X: _8051Reset8188: Finish                                                 
+[ 1009.436114] RTL871X: _FWFreeToGo: Polling FW ready OK! (148, 10ms), REG_MCUFWDL:0x000401c6  
+[ 1009.436124] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !                                   
+[ 1009.436134] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 180ms                   
+[ 1009.436144] RTL871X:  <=== rtl8188f_FirmwareDownload()                                      
+[ 1009.436189] RTL871X: HalDetectPwrDownMode(): PDN=0                                          
+[ 1009.436199] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.                            
+[ 1009.897691] RTL871X: ADAPTIVITY_VERSION 9.0                                                 
+[ 1009.897715] RTL871X: RTW_ADAPTIVITY_EN_ENABLE                                               
+[ 1009.897727] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL                                             
+[ 1009.897736] RTL871X: RTW_ADAPTIVITY_DML_DISABLE                                             
+[ 1009.897747] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2                                            
+[ 1009.898647] RTL871X: pDM_Odm TxPowerTrackControl = 1                                        
+[ 1009.898708] RTL871X: pDM_Odm TxPowerTrackControl = 1                                        
+[ 1010.603720] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####             
+[ 1010.603866] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_off2
+[ 1010.604262] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060                
+[ 1010.605038] RTL871X: MAC Address = 58:b0:d4:9d:a6:8e                                        
+[ 1010.605667] RTL871X: -871x_drv - drv_open, bup=1                                            
+[ 1010.612540] RTL871X: start rtl8188fs_xmit_thread(eth0)                                      
+[ 1010.734221] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!                                     
+[ 1010.734269] RTL871X: set_mode = IW_MODE_INFRA                                               
+[ 1010.734569] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####             
+[ 1010.735062] RTL871X: set bssid:00:00:00:00:00:00                                            
+[ 1010.735158] RTL871X: =>rtw_wx_set_essid                                                     
+[ 1010.735169] RTL871X: ssid=, len=32                                                          
+[ 1010.735216] RTL871X: set ssid [] fw_state=0x00000008                                        
+[ 1010.735226] RTL871X: Set SSID under fw_state=0x00000008                                     
+[ 1010.739222] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[ 1010.768715] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!                                     
+[ 1012.278691] RTL871X: survey done event(21) band:0 for eth0                                  
+[ 1012.278829] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: hotspotttssss(0c:50
+[ 1012.278893] RTL871X: rtw_select_and_join_from_scanned_queue: candidate: hotspotttssss(0c:54)
+[ 1012.278942] RTL871X: link to new AP                                                         
+[ 1012.279007] RTL871X: [HT] HAL Support STBC = 0x01                                           
+[ 1012.279052] RTL871X: [HT] Declare supporting RX STBC = 1                                    
+[ 1012.279117] RTL871X: rtw_indicate_scan_done(eth0)                                           
+[ 1012.280918] RTL871X: rtw_chk_start_clnt_join(eth0) req: 1,0,0                               
+[ 1012.280980] RTL871X: rtw_chk_start_clnt_join(eth0) union: 1,0,0                             
+[ 1012.307613] RTL871X: OnBeacon: beacon keys ready                                            
+[ 1012.307682] RTL871X: link to new AP                                                         
+[ 1012.307721] RTL871X: start auth                                                             
+[ 1012.307779] RTL871X: issue_auth                                                             
+[ 1012.318117] RTL871X: OnAuthClient                                                           
+[ 1012.318168] RTL871X: auth success, start assoc                                              
+[ 1012.318251] RTL871X: network.SupportedRates[0]=82                                           
+[ 1012.318287] RTL871X: network.SupportedRates[1]=84                                           
+[ 1012.318318] RTL871X: network.SupportedRates[2]=8B                                           
+[ 1012.318350] RTL871X: network.SupportedRates[3]=96                                           
+[ 1012.318380] RTL871X: network.SupportedRates[4]=0C                                           
+[ 1012.318510] RTL871X: network.SupportedRates[5]=12                                           
+[ 1012.318544] RTL871X: network.SupportedRates[6]=18                                           
+[ 1012.318576] RTL871X: network.SupportedRates[7]=24                                           
+[ 1012.318608] RTL871X: network.SupportedRates[8]=30                                           
+[ 1012.318639] RTL871X: network.SupportedRates[9]=48                                           
+[ 1012.318670] RTL871X: network.SupportedRates[10]=60                                          
+[ 1012.318701] RTL871X: network.SupportedRates[11]=6C                                          
+[ 1012.318737] RTL871X: bssrate_len = 12                                                       
+[ 1012.323747] RTL871X: OnAssocRsp                                                             
+[ 1012.323843] RTL871X: report_join_res(1)                                                     
+[ 1012.323889] RTL871X: rtw_joinbss_update_network                                             
+[ 1012.323934] RTL871X: +rtw_update_ht_cap()                                                   
+[ 1012.324034] RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:0c:54:15:1c:2c:8a macid:0            
+[ 1012.324069] RTL871X: rtw_joinbss_update_stainfo                                             
+[ 1012.324136] RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff    
+[ 1012.324180] RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3                                        
+[ 1012.324217] RTL871X: ### Set STA_(0) info ###                                               
+[ 1012.324258] RTL871X: assoc success                                                          
+[ 1012.328808] RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f                             
+[ 1012.332576] RTL871X: WMM(0): 0, a42b                                                        
+[ 1012.332771] RTL871X: WMM(1): 0, a44f                                                        
+[ 1012.332949] RTL871X: WMM(2): 0, 5e4322                                                      
+[ 1012.333119] RTL871X: WMM(3): 0, 2f3222                                                      
+[ 1012.333159] RTL871X: wmm_para_seq(0): 0                                                     
+[ 1012.333193] RTL871X: wmm_para_seq(1): 1                                                     
+[ 1012.333226] RTL871X: wmm_para_seq(2): 2                                                     
+[ 1012.333257] RTL871X: wmm_para_seq(3): 3                                                     
+[ 1012.333290] RTL871X: HTOnAssocRsp                                                           
+[ 1012.333500] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitma5
+[ 1012.333558] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff    
+[ 1012.333558]   ==> rssi_level:0, rate_bitmap:0x000ff005                                      
+[ 1012.333620] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005  
+[ 1012.334037] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=3
+[ 1012.334458] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x000
+[ 1012.335412] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)            
+[ 1012.336335] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15                
+[ 1012.336397] RTL871X: LocPsPoll: 2                                                           
+[ 1012.336435] RTL871X: LocNullData: 3                                                         
+[ 1012.336472] RTL871X: LocQosNull: 4                                                          
+[ 1012.336515] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)                       
+[ 1012.336831] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen)
+[ 1012.336883] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0             
+[ 1012.337397] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1                     
+[ 1012.346784] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way     
+[ 1012.409837] RTL871X: phydm_rssi_report mac_id:0, mac:0c:54:15:1c:2c:8a, rssi:68             
+[ 1012.409867] RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:False, Fire
+[ 1012.510423] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4                    
+[ 1012.598843] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[ 1012.604542] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x01, WirelessMode:0x0b, rate_bitma0
+[ 1012.604613] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff    
+[ 1012.604613]   ==> rssi_level:1, rate_bitmap:0x000f0000                                      
+[ 1012.604676] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xf0000  
+[ 1012.605089] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xf0000 init_rate=3
+[ 1014.333925] RTL871X: send eapol packet                                                      
+[ 1014.334288] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0         
+[ 1014.338784] RTL871X: recv eapol packet                                                      
+[ 1014.598951] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[ 1016.598848] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[ 1016.599323] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE      
+[ 1016.603388] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2               
+[ 1017.532337] RTL871X: recv eapol packet                                                      
+[ 1018.598618] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1018.601426] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=68                                    
+[ 1020.598600] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1021.630149] sy7636_get_temperature():temperature = 26,reg=0x1a                              
+[ 1022.598619] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1023.470963] RTL871X: recv eapol packet                                                      
+[ 1024.598596] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1026.598578] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1027.075757] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1027.075811] PMU2: Watchdog timeout triggered. ===============                               
+[ 1028.598619] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1030.598619] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1032.598596] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1033.053095] PMU: cc_sum = 37: cc_cap_res= 12: cc_cap_mas = -1915183416                      
+[ 1033.053150] PMU: cc_cap_offset= -84:                                                        
+[ 1033.055692] PMU : set_current_time2register : second is 1325436760, hour is 368176          
+[ 1033.073431] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1033.073476] PMU: cc_cap_offset= -84:                                                        
+[ 1033.073516] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1033.073568] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4097650: DSOC= 10000: RSOC= 9600:1
+[ 1034.598582] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1035.350133] RTL871X: recv eapol packet                                                      
+[ 1036.598617] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1036.986281] RTL871X: adaptive_early_32k(): bcn_cnt = 101                                    
+[ 1038.598625] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1040.598489] RTL871X: CurIGValue=68, EntryMinUndecoratedSmoothedPWDB = 68                    
+[ 1041.170709] RTL871X: rtw_wx_set_mlme                                                        
+[ 1041.170733] RTL871X: rtw_wx_set_mlme, cmd=0, reason=3                                       
+[ 1041.170790] RTL871X: indicate disassoc                                                      
+[ 1041.170860] RTL871X: set bssid:00:00:00:00:00:00                                            
+[ 1041.170911] RTL871X: =>rtw_wx_set_essid                                                     
+[ 1041.170922] RTL871X: ssid=�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD�, len=32                                 
+[ 1041.170937] RTL871X: set ssid [�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD��^~�C`��] fw_state=0x000000        8
+[ 1041.170945] RTL871X: Set SSID under fw_state=0x00000008                                     
+[ 1041.170958] RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+[ 1041.170985] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[ 1041.175895] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=1 len=8                     
+[ 1041.176625] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect                       
+[ 1041.176651] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_DISCONNET
+[ 1041.176665] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2               
+[ 1041.179124] RTL871X: ### Clean STA_(0) info ###                                             
+[ 1041.179155] RTL871X: free disconnecting network                                             
+[ 1041.186602] RTL871X: (2)871x_drv - drv_close, bup=1, hw_init_completed=_TRUE                
+[ 1041.187323] RTL871X: indicate disassoc                                                      
+[ 1041.187420] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect                       
+[ 1041.187476] RTL871X: -871x_drv - drv_close, bup=1                                           
+[ 1041.190486] RTL871X: set bssid:00:00:00:00:00:00                                            
+[ 1041.190563] RTL871X: =>rtw_wx_set_essid                                                     
+[ 1041.190575] RTL871X: ssid=��N^���l�zl�Ԛr��a �g)�59, len=32                                  
+[ 1041.190620] RTL871X: set ssid [��N^���l�zl�Ԛr��a �g)�59�^~�C`��] fw_state=0x00000808        
+[ 1041.190630] RTL871X: Set SSID under fw_state=0x00000808                                     
+[ 1041.190642] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[ 1041.215255] RTL871X: module exit start                                                      
+[ 1041.215464] RTL871X: rtw_ndev_uninit(eth0) if1                                              
+[ 1041.248732] RTL871X: rtw_pm_set_ips IPS_NONE                                                
+[ 1041.248792] RTL871X: ### Clean STA_(1) info ###                                             
+[ 1041.248815] RTL871X: rtw_sdio_if1_deinit wowlan_mode:0                                      
+[ 1041.248824] RTL871X: ===> rtw_dev_unload                                                    
+[ 1041.248952] RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at li1
+[ 1041.249397] RTL871X: CheckIPSStatus(): Read 0x100=0xff 0x86=0x00                            
+[ 1041.249447] RTL871X: rtw_dev_unload: driver not in IPS                                      
+[ 1041.257548] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0                                         
+[ 1041.257560] RTL871X: SetHwReg8188F: hci_sus_state=3                                         
+[ 1041.258298] RTL871X: SetHwReg8188F: hci_sus_state=0                                         
+[ 1041.258309] RTL871X: <=== rtw_dev_unload                                                    
+[ 1041.258317] RTL871X: +r871xu_dev_remove, hw_init_completed=0                                
+[ 1041.260453] RTL871X: module exit success                                                    
+[ 1041.314271] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[ 1041.314290] Wifi / BT power control 0                                                       
+[ 1041.315725] mmc1: card 0001 removed                                                         
+[ 1041.325699] wifi 3v3 power off                                                              
+[ 1041.325732] _ntx_wifi_bt_power_ctrl() : done                                                
+[ 1059.073076] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1059.073130] PMU2: Watchdog timeout triggered. ===============                               
+[ 1062.561973] PMU: cc_sum = 41: cc_cap_res= 13: cc_cap_mas = -1915183416                      
+[ 1062.562029] PMU: cc_cap_offset= -97:                                                        
+[ 1062.564592] PMU : set_current_time2register : second is 1325436790, hour is 368176          
+[ 1062.582207] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1062.582251] PMU: cc_cap_offset= -97:                                                        
+[ 1062.582292] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1062.582345] PMU:STATUS= 6: IBAT= -1: VSYS= 4308500: VBAT= 4097300: DSOC= 10000: RSOC= 9600:1
+[ 1081.639719] sy7636_get_temperature():temperature = 26,reg=0x1a                              
+[ 1091.070453] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1091.070508] PMU2: Watchdog timeout triggered. ===============                               
+[ 1091.993442] PMU: cc_sum = 43: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1091.993498] PMU: cc_cap_offset= -11:                                                        
+[ 1091.996024] PMU : set_current_time2register : second is 1325436819, hour is 368176          
+[ 1092.013721] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1092.013773] PMU: cc_cap_offset= -11:                                                        
+[ 1092.013815] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1092.013868] PMU:STATUS= 6: IBAT= -1: VSYS= 4310000: VBAT= 4096100: DSOC= 10000: RSOC= 9600:1
+[ 1121.052841] PMU: cc_sum = 43: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1121.052897] PMU: cc_cap_offset= -25:                                                        
+[ 1121.055441] PMU : set_current_time2register : second is 1325436848, hour is 368176          
+[ 1121.073083] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1121.073128] PMU: cc_cap_offset= -25:                                                        
+[ 1121.073168] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1121.073220] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4097300: DSOC= 10000: RSOC= 9600:1
+[ 1123.067797] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1123.067852] PMU2: Watchdog timeout triggered. ===============                               
+[ 1150.562012] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1150.562067] PMU: cc_cap_offset= -39:                                                        
+[ 1150.564619] PMU : set_current_time2register : second is 1325436878, hour is 368176          
+[ 1150.582225] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1150.582270] PMU: cc_cap_offset= -39:                                                        
+[ 1150.582310] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1150.582363] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4095200: DSOC= 10000: RSOC= 9600:1
+[ 1155.065118] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1155.065171] PMU2: Watchdog timeout triggered. ===============                               
+[ 1156.053424] RTL871X: module init start                                                      
+[ 1156.053451] RTL871X: rtl8189fs v4.3.24.1_16872.20160217                                     
+[ 1156.053460] RTL871X: build time: Feb 20 2022 09:28:20                                       
+[ 1156.054800] RTL871X: module init ret=0                                                      
+[ 1166.169608] sy7636_get_temperature():temperature = 26,reg=0x1a                              
+[ 1179.993902] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1179.993959] PMU: cc_cap_offset= -53:                                                        
+[ 1179.996490] PMU : set_current_time2register : second is 1325436907, hour is 368176          
+[ 1180.014118] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1180.014170] PMU: cc_cap_offset= -53:                                                        
+[ 1180.014212] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1180.014267] PMU:STATUS= 6: IBAT= -1: VSYS= 4309000: VBAT= 4096400: DSOC= 10000: RSOC= 9600:1
+[ 1187.062442] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1187.062496] PMU2: Watchdog timeout triggered. ===============                               
+[ 1209.052660] PMU: cc_sum = 43: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1209.052716] PMU: cc_cap_offset= -67:                                                        
+[ 1209.055259] PMU : set_current_time2register : second is 1325436936, hour is 368176          
+[ 1209.072938] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1209.072983] PMU: cc_cap_offset= -67:                                                        
+[ 1209.073023] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1209.073076] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4096725: DSOC= 10000: RSOC= 9600:1
+[ 1219.059798] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1219.059853] PMU2: Watchdog timeout triggered. ===============                               
+[ 1238.562467] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1238.562521] PMU: cc_cap_offset= -81:                                                        
+[ 1238.565117] PMU : set_current_time2register : second is 1325436966, hour is 368176          
+[ 1238.582840] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1238.582885] PMU: cc_cap_offset= -81:                                                        
+[ 1238.582925] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1238.582979] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4097350: DSOC= 10000: RSOC= 9600:1
+[ 1251.055798] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1251.055818] PMU2: Watchdog timeout triggered. ===============                               
+[ 1261.600292] sy7636_get_temperature():temperature = 25,reg=0x19                              
+[ 1267.993856] PMU: cc_sum = 43: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1267.993911] PMU: cc_cap_offset= -95:                                                        
+[ 1267.996470] PMU : set_current_time2register : second is 1325436995, hour is 368176          
+[ 1268.014239] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1268.014289] PMU: cc_cap_offset= -95:                                                        
+[ 1268.014332] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1268.014386] PMU:STATUS= 6: IBAT= -1: VSYS= 4310500: VBAT= 4096400: DSOC= 10000: RSOC= 9600:1
+[ 1283.052930] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1283.052986] PMU2: Watchdog timeout triggered. ===============                               
+[ 1297.052822] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1297.052878] PMU: cc_cap_offset= -9:                                                         
+[ 1297.055447] PMU : set_current_time2register : second is 1325437024, hour is 368176          
+[ 1297.073243] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1297.073287] PMU: cc_cap_offset= -9:                                                         
+[ 1297.073326] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1297.073380] PMU:STATUS= 6: IBAT= -1: VSYS= 4311500: VBAT= 4096700: DSOC= 10000: RSOC= 9600:1
+[ 1315.050255] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1315.050309] PMU2: Watchdog timeout triggered. ===============                               
+[ 1321.680396] sy7636_get_temperature():temperature = 25,reg=0x19                              
+[ 1326.567067] PMU: cc_sum = 42: cc_cap_res= 14: cc_cap_mas = -1915183416                      
+[ 1326.567123] PMU: cc_cap_offset= -23:                                                        
+[ 1326.570074] PMU : set_current_time2register : second is 1325437054, hour is 368176          
+[ 1326.585744] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1915183416                        
+[ 1326.585797] PMU: cc_cap_offset= -23:                                                        
+[ 1326.585840] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1326.585892] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4097925: DSOC= 10000: RSOC= 9600:1
+[ 1326.617296] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[ 1326.617317] Wifi / BT power control 1                                                       
+[ 1326.617324] wifi 3v3 power on                                                               
+[ 1326.668451] Wifi On                                                                         
+[ 1326.668529] _ntx_wifi_bt_power_ctrl() : done                                                
+[ 1326.733556] sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined rae
+[ 1326.752128] mmc1: new high speed SDIO card at address 0001                                  
+[ 1326.760971] RTL871X: CHIP TYPE: RTL8188F                                                    
+[ 1326.761694] RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1                    
+[ 1326.761726] RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)    
+[ 1326.762029] RTL871X: SetHwReg8188F: hci_sus_state=1                                         
+[ 1326.764387] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1                                         
+[ 1326.764404] RTL871X: SetHwReg8188F: hci_sus_state=2                                         
+[ 1326.764885] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f                       
+[ 1326.764903] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.         
+[ 1326.765044] RTL871X: PowerOnCheck: 0x1B8 test Pass.                                         
+[ 1326.765159] RTL871X: EEPROM type is E-FUSE                                                  
+[ 1326.765785] RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0                          
+[ 1326.833569] RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98                           
+[ 1326.833595] RTL871X: Efuse Realmap:                                                         
+[ 1326.833608] 29 81 03 CC 00 00 50 00 00 00 04 CC 0A 0C 00 00                                 
+[ 1326.833688] 28 29 29 29 29 29 2B 2B 2B 2B 2B 25 FF FF FF FF                                 
+[ 1326.833764] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.833841] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.833917] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.833993] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.834069] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.834145] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.834222] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.834298] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.834374] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.834450] FF FF FF FF FF FF FF FF 20 1E 1D 00 00 00 00 FF                                 
+[ 1326.834526] FF 11 00 10 00 FF 00 FF 00 00 FF FF FF FF FF FF                                 
+[ 1326.834602] 3E 10 01 02 23 FF FF FF 20 04 4C 02 79 F1 21 02                                 
+[ 1326.834678] 0C 00 22 04 00 08 00 32 FF 21 02 0C 00 22 2A 01                                 
+[ 1326.834754] 01 00 00 00 00 00 00 00 00 00 00 00 02 00 FF FF                                 
+[ 1326.834829] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                 
+[ 1326.834904] 00 EB 00 6E 01 00 00 00 00 FF 58 B0 D4 9D A6 8E                                 
+[ 1326.834980] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835056] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835132] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835208] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835285] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835361] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835437] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835513] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835589] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835665] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835742] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835818] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835894] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.835970] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1326.836148] RTL871X: hal_com_config_channel_plan chplan:0x20                                
+[ 1326.836166] RTL871X: Hal_DetectWoWMode                                                      
+[ 1326.837942] RTL871X: kfree flag:1                                                           
+[ 1326.837960] RTL871X: bb_gain:2                                                              
+[ 1326.840999] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0                                         
+[ 1326.841015] RTL871X: SetHwReg8188F: hci_sus_state=3                                         
+[ 1326.841777] RTL871X: SetHwReg8188F: hci_sus_state=0                                         
+[ 1326.841789] RTL871X: rtw_hal_read_chip_info in 80 ms                                        
+[ 1326.842006] RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13                
+[ 1326.842848] RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1          
+[ 1326.844127] RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.                        
+[ 1326.844174] RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1                          
+[ 1326.844282] RTL871X: default power by rate loaded                                           
+[ 1326.845020] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845031] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845042] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845050] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845060] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845069] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845148] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845156] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845166] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845174] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845185] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845193] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845276] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845283] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845294] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845302] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845313] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1326.845321] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1326.845494] RTL871X: default power limit loaded                                             
+[ 1326.845850] RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e                             
+[ 1326.846059] RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+[ 1326.846146] RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e                     
+[ 1326.863703] RTL871X: oob_irq ZERO!                                                          
+[ 1347.047096] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1347.047151] PMU2: Watchdog timeout triggered. ===============                               
+[ 1355.993884] PMU: cc_sum = 40: cc_cap_res= 13: cc_cap_mas = -1979859256                      
+[ 1355.993941] PMU: cc_cap_offset= -36:                                                        
+[ 1355.996493] PMU : set_current_time2register : second is 1325437083, hour is 368176          
+[ 1356.014271] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1979859256                        
+[ 1356.014325] PMU: cc_cap_offset= -36:                                                        
+[ 1356.014366] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1356.014422] PMU:STATUS= 6: IBAT= -1: VSYS= 4311500: VBAT= 4097000: DSOC= 10000: RSOC= 9600:1
+[ 1379.043844] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1379.043897] PMU2: Watchdog timeout triggered. ===============                               
+[ 1385.052842] PMU: cc_sum = 41: cc_cap_res= 13: cc_cap_mas = -1979859256                      
+[ 1385.052898] PMU: cc_cap_offset= -49:                                                        
+[ 1385.055442] PMU : set_current_time2register : second is 1325437112, hour is 368176          
+[ 1385.073088] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1979859256                        
+[ 1385.073132] PMU: cc_cap_offset= -49:                                                        
+[ 1385.073172] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1385.073224] PMU:STATUS= 6: IBAT= -1: VSYS= 4313000: VBAT= 4097000: DSOC= 10000: RSOC= 9600:1
+[ 1391.583358] RTL871X: module exit start                                                      
+[ 1391.583556] RTL871X: rtw_ndev_uninit(eth0) if1                                              
+[ 1391.608825] RTL871X: ### Clean STA_(1) info ###                                             
+[ 1391.608863] RTL871X: rtw_sdio_if1_deinit wowlan_mode:0                                      
+[ 1391.608873] RTL871X: rtw_dev_unload: bup==_FALSE                                            
+[ 1391.608880] RTL871X: +r871xu_dev_remove, hw_init_completed=0                                
+[ 1391.609805] RTL871X: module exit success                                                    
+[ 1391.671618] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[ 1391.671644] Wifi / BT power control 0                                                       
+[ 1391.673552] mmc1: card 0001 removed                                                         
+[ 1391.683973] wifi 3v3 power off                                                              
+[ 1391.684013] _ntx_wifi_bt_power_ctrl() : done                                                
+[ 1391.751130] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[ 1391.751157] Wifi / BT power control 1                                                       
+[ 1391.751168] wifi 3v3 power on                                                               
+[ 1391.808733] Wifi On                                                                         
+[ 1391.808938] _ntx_wifi_bt_power_ctrl() : done                                                
+[ 1391.889417] sdhci-esdhc-imx 2190000.usdhc: card claims to support voltages below defined rae
+[ 1391.907400] RTL871X: module init start                                                      
+[ 1391.907426] RTL871X: rtl8189fs v4.3.24.1_16872.20160217                                     
+[ 1391.907436] RTL871X: build time: Feb 20 2022 09:28:20                                       
+[ 1391.910471] RTL871X: module init ret=0                                                      
+[ 1391.912260] mmc1: new high speed SDIO card at address 0001                                  
+[ 1391.922759] RTL871X: CHIP TYPE: RTL8188F                                                    
+[ 1391.923369] RTL871X: rtw_hal_config_rftype RF_Type is 3 TotalTxPath is 1                    
+[ 1391.923390] RTL871X: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)    
+[ 1391.923618] RTL871X: SetHwReg8188F: hci_sus_state=1                                         
+[ 1391.926433] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1                                         
+[ 1391.926454] RTL871X: SetHwReg8188F: hci_sus_state=2                                         
+[ 1391.926791] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f                       
+[ 1391.926803] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.         
+[ 1391.926906] RTL871X: PowerOnCheck: 0x1B8 test Pass.                                         
+[ 1391.926980] RTL871X: EEPROM type is E-FUSE                                                  
+[ 1391.927385] RTL871X: hal_EfuseSwitchToBank: Efuse switch bank to 0                          
+[ 1391.987908] RTL871X: hal_ReadEFuse_WiFi: data end at address=0x98                           
+[ 1391.987930] RTL871X: Efuse Realmap:                                                         
+[ 1391.987939] 29 81 03 CC 00 00 50 00 00 00 04 CC 0A 0C 00 00                                 
+[ 1391.987987] 28 29 29 29 29 29 2B 2B 2B 2B 2B 25 FF FF FF FF                                 
+[ 1391.988032] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988077] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988123] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988168] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988213] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988258] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988303] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988348] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988393] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988514] FF FF FF FF FF FF FF FF 20 1E 1D 00 00 00 00 FF                                 
+[ 1391.988560] FF 11 00 10 00 FF 00 FF 00 00 FF FF FF FF FF FF                                 
+[ 1391.988605] 3E 10 01 02 23 FF FF FF 20 04 4C 02 79 F1 21 02                                 
+[ 1391.988650] 0C 00 22 04 00 08 00 32 FF 21 02 0C 00 22 2A 01                                 
+[ 1391.988695] 01 00 00 00 00 00 00 00 00 00 00 00 02 00 FF FF                                 
+[ 1391.988739] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00                                 
+[ 1391.988783] 00 EB 00 6E 01 00 00 00 00 FF 58 B0 D4 9D A6 8E                                 
+[ 1391.988828] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988874] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988919] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.988964] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989009] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989054] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989099] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989144] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989189] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989234] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989279] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989325] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989370] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989415] FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF                                 
+[ 1391.989545] RTL871X: hal_com_config_channel_plan chplan:0x20                                
+[ 1391.989559] RTL871X: Hal_DetectWoWMode                                                      
+[ 1391.990665] RTL871X: kfree flag:1                                                           
+[ 1391.990677] RTL871X: bb_gain:2                                                              
+[ 1391.993087] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0                                         
+[ 1391.993099] RTL871X: SetHwReg8188F: hci_sus_state=3                                         
+[ 1391.993855] RTL871X: SetHwReg8188F: hci_sus_state=0                                         
+[ 1391.993867] RTL871X: rtw_hal_read_chip_info in 70 ms                                        
+[ 1391.994070] RTL871X: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13                
+[ 1391.994925] RTL871X: rtw_alloc_macid((null)) if1, hwaddr:ff:ff:ff:ff:ff:ff macid:1          
+[ 1391.996199] RTL871X: rtw_init_pwrctrl_priv: set GPIO_0 1 as default.                        
+[ 1391.996247] RTL871X: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=1                          
+[ 1391.996352] RTL871X: default power by rate loaded                                           
+[ 1391.997060] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997072] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997084] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997093] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997103] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997111] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997193] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997201] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997212] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997220] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997230] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997238] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997322] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997330] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997341] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997348] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997359] RTL871X: Invalid Channel 114 of Band 1 in phy_GetChannelIndexOfTxPowerLimit     
+[ 1391.997367] RTL871X: unsupported channel: 114 at 5G                                         
+[ 1391.997540] RTL871X: default power limit loaded                                             
+[ 1391.997895] RTL871X: rtw_macaddr_cfg mac addr:58:b0:d4:9d:a6:8e                             
+[ 1391.998110] RTL871X: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+[ 1391.998199] RTL871X: rtw_ndev_init(eth0) if1 mac_addr=58:b0:d4:9d:a6:8e                     
+[ 1392.016893] RTL871X: oob_irq ZERO!                                                          
+[ 1393.527892] RTL871X: +871x_drv - drv_open, bup=0                                            
+[ 1393.530123] RTL871X: FW does not exist before power on!!                                    
+[ 1393.533763] RTL871X: SetHwReg8188F: hci_sus_state=1                                         
+[ 1393.537269] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=1                                         
+[ 1393.537313] RTL871X: SetHwReg8188F: hci_sus_state=2                                         
+[ 1393.538220] RTL871X: PowerOnCheck: val_mix:0x0000063f, res:0x0000063f                       
+[ 1393.538266] RTL871X: PowerOnCheck: 0x100 the result of cmd52 and cmd53 is the same.         
+[ 1393.538869] RTL871X: PowerOnCheck: 0x1B8 test Pass.                                         
+[ 1393.538912] RTL871X: Power on ok!                                                           
+[ 1393.539648] RTL871X: rtl8188f_FirmwareDownload(eth0) tmp_ps=3                               
+[ 1393.539700] RTL871X: rtl8188f_FirmwareDownload fw: FW_WoWLAN, size: 18768                   
+[ 1393.539758] RTL871X: rtl8188f_FirmwareDownload: fw_ver=1 fw_subver=0007 sig=0x88f1, Month=18
+[ 1393.539793] RTL871X: rtl8188f_FirmwareDownload(): Shift for fw header!                      
+[ 1393.539826] RTL871X: rtl8188f_FirmwareDownload by IO write!                                 
+[ 1393.703912] RTL871X: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x000405
+[ 1393.704384] RTL871X: _8051Reset8188: Finish                                                 
+[ 1393.717917] RTL871X: _FWFreeToGo: Polling FW ready OK! (149, 10ms), REG_MCUFWDL:0x000401c6  
+[ 1393.717927] RTL871X: rtl8188f_FirmwareDownload: DLFW OK !                                   
+[ 1393.717937] RTL871X: rtl8188f_FirmwareDownload success. write_fw:1, 170ms                   
+[ 1393.717947] RTL871X:  <=== rtl8188f_FirmwareDownload()                                      
+[ 1393.717991] RTL871X: HalDetectPwrDownMode(): PDN=0                                          
+[ 1393.718000] RTL871X: Set RF Chip ID to RF_6052 and RF type to 3.                            
+[ 1394.184087] RTL871X: ADAPTIVITY_VERSION 9.0                                                 
+[ 1394.184111] RTL871X: RTW_ADAPTIVITY_EN_ENABLE                                               
+[ 1394.184123] RTL871X: RTW_ADAPTIVITY_MODE_NORMAL                                             
+[ 1394.184132] RTL871X: RTW_ADAPTIVITY_DML_DISABLE                                             
+[ 1394.184143] RTL871X: RTW_ADAPTIVITY_DC_BACKOFF:2                                            
+[ 1394.184973] RTL871X: pDM_Odm TxPowerTrackControl = 1                                        
+[ 1394.185030] RTL871X: pDM_Odm TxPowerTrackControl = 1                                        
+[ 1394.881349] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####             
+[ 1394.881493] RTL871X: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_off2
+[ 1394.881890] RTL871X: kfree gain_offset 0x55:0x82060 RTL871X:  after :0x8a060                
+[ 1394.882678] RTL871X: MAC Address = 58:b0:d4:9d:a6:8e                                        
+[ 1394.883306] RTL871X: -871x_drv - drv_open, bup=1                                            
+[ 1394.885155] RTL871X: start rtl8188fs_xmit_thread(eth0)                                      
+[ 1394.975807] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!                                     
+[ 1394.975852] RTL871X: set_mode = IW_MODE_INFRA                                               
+[ 1394.976195] RTL871X: #### hw_var_set_opmode() -5147 iface_type(0) mode = 2 ####             
+[ 1394.976694] RTL871X: set bssid:00:00:00:00:00:00                                            
+[ 1394.976788] RTL871X: =>rtw_wx_set_essid                                                     
+[ 1394.976800] RTL871X: ssid=, len=32                                                          
+[ 1394.976844] RTL871X: set ssid [] fw_state=0x00000008                                        
+[ 1394.976854] RTL871X: Set SSID under fw_state=0x00000008                                     
+[ 1394.980793] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[ 1395.008780] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!                                     
+[ 1396.548721] RTL871X: survey done event(21) band:0 for eth0                                  
+[ 1396.548861] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: 70mai_d01_AD5D(f0:6
+[ 1396.548926] RTL871X: [by_bssid:0][assoc_ssid:][to_roam:0] new candidate: hotspotttssss(0c:55
+[ 1396.548985] RTL871X: rtw_select_and_join_from_scanned_queue: candidate: hotspotttssss(0c:54)
+[ 1396.549033] RTL871X: link to new AP                                                         
+[ 1396.549096] RTL871X: [HT] HAL Support STBC = 0x01                                           
+[ 1396.549138] RTL871X: [HT] Declare supporting RX STBC = 1                                    
+[ 1396.549199] RTL871X: rtw_indicate_scan_done(eth0)                                           
+[ 1396.551002] RTL871X: rtw_chk_start_clnt_join(eth0) req: 1,0,0                               
+[ 1396.551062] RTL871X: rtw_chk_start_clnt_join(eth0) union: 1,0,0                             
+[ 1396.619306] RTL871X: OnBeacon: beacon keys ready                                            
+[ 1396.619374] RTL871X: link to new AP                                                         
+[ 1396.619414] RTL871X: start auth                                                             
+[ 1396.619471] RTL871X: issue_auth                                                             
+[ 1396.623261] RTL871X: OnAuthClient                                                           
+[ 1396.623294] RTL871X: auth success, start assoc                                              
+[ 1396.623341] RTL871X: network.SupportedRates[0]=82                                           
+[ 1396.623360] RTL871X: network.SupportedRates[1]=84                                           
+[ 1396.623376] RTL871X: network.SupportedRates[2]=8B                                           
+[ 1396.623393] RTL871X: network.SupportedRates[3]=96                                           
+[ 1396.623410] RTL871X: network.SupportedRates[4]=0C                                           
+[ 1396.623425] RTL871X: network.SupportedRates[5]=12                                           
+[ 1396.623441] RTL871X: network.SupportedRates[6]=18                                           
+[ 1396.623457] RTL871X: network.SupportedRates[7]=24                                           
+[ 1396.623473] RTL871X: network.SupportedRates[8]=30                                           
+[ 1396.623489] RTL871X: network.SupportedRates[9]=48                                           
+[ 1396.623506] RTL871X: network.SupportedRates[10]=60                                          
+[ 1396.623522] RTL871X: network.SupportedRates[11]=6C                                          
+[ 1396.623541] RTL871X: bssrate_len = 12                                                       
+[ 1396.627803] RTL871X: OnAssocRsp                                                             
+[ 1396.627859] RTL871X: report_join_res(1)                                                     
+[ 1396.627886] RTL871X: rtw_joinbss_update_network                                             
+[ 1396.627912] RTL871X: +rtw_update_ht_cap()                                                   
+[ 1396.627963] RTL871X: rtw_alloc_macid(eth0) if1, hwaddr:0c:54:15:1c:2c:8a macid:0            
+[ 1396.627981] RTL871X: rtw_joinbss_update_stainfo                                             
+[ 1396.628016] RTL871X: supp_mcs_set = ff, 00, 00, rf_type=3, tx_ra_bitmap=00000000000fffff    
+[ 1396.628041] RTL871X: rtw_get_tx_nss: 1 SS, rf_type=3                                        
+[ 1396.628059] RTL871X: ### Set STA_(0) info ###                                               
+[ 1396.628082] RTL871X: assoc success                                                          
+[ 1396.631939] RTL871X: HW_VAR_BASIC_RATE: 0x15f -> 0x15f -> 0x15f                             
+[ 1396.632606] RTL871X: WMM(0): 0, a42b                                                        
+[ 1396.632710] RTL871X: WMM(1): 0, a44f                                                        
+[ 1396.632804] RTL871X: WMM(2): 0, 5e4322                                                      
+[ 1396.632911] RTL871X: WMM(3): 0, 2f3222                                                      
+[ 1396.632934] RTL871X: wmm_para_seq(0): 0                                                     
+[ 1396.632952] RTL871X: wmm_para_seq(1): 1                                                     
+[ 1396.632968] RTL871X: wmm_para_seq(2): 2                                                     
+[ 1396.632983] RTL871X: wmm_para_seq(3): 3                                                     
+[ 1396.633001] RTL871X: HTOnAssocRsp                                                           
+[ 1396.633122] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x00, WirelessMode:0x0b, rate_bitma5
+[ 1396.633154] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff    
+[ 1396.633154]   ==> rssi_level:0, rate_bitmap:0x000ff005                                      
+[ 1396.633185] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xff005  
+[ 1396.633446] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xff005 init_rate=3
+[ 1396.633722] RTL871X: SetHwReg8188F(eth0): [HW_VAR_MACID_WAKEUP] macid=0, org reg_0x4d4=0x000
+[ 1396.634370] RTL871X: +rtl8188f_download_rsvd_page(eth0): iface_type=0 mstatus(1)            
+[ 1396.634990] RTL871X: rtw_hal_set_fw_rsvd_page PageSize: 128, RsvdPageNUm: 15                
+[ 1396.635027] RTL871X: LocPsPoll: 2                                                           
+[ 1396.635046] RTL871X: LocNullData: 3                                                         
+[ 1396.635067] RTL871X: LocQosNull: 4                                                          
+[ 1396.635089] RTL871X: rtw_hal_set_fw_rsvd_page PageNum(5), pktlen(578)                       
+[ 1396.635305] RTL871X: rtw_hal_set_fw_rsvd_page: Set RSVD page location to Fw ,TotalPacketLen)
+[ 1396.635333] RTL871X: RsvdPageLoc: ProbeRsp=0 PsPoll=2 Null=3 QoSNull=4 BTNull=0             
+[ 1396.635663] RTL871X: eth0: 1 DL RSVD page success! DLBcnCount:1, poll:1                     
+[ 1396.641732] RTL871X: =>mlmeext_joinbss_event_callback - End to Connection without 4-way     
+[ 1396.721516] RTL871X: phydm_rssi_report mac_id:0, mac:0c:54:15:1c:2c:8a, rssi:70             
+[ 1396.721550] RTL871X: phydm_rssi_report RAINFO - TP:UL, TxBF:DIS, STBC:DIS, Noisy:False, Fire
+[ 1396.821962] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=0 len=4                    
+[ 1396.878768] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[ 1396.884466] RTL871X: ODM_Get_Rate_Bitmap ==> rssi_level:0x01, WirelessMode:0x0b, rate_bitma0
+[ 1396.884535] RTL871X: UpdateHalRAMask8188F => mac_id:0, networkType:0x0b, mask:0x000fffff    
+[ 1396.884535]   ==> rssi_level:1, rate_bitmap:0x000f0000                                      
+[ 1396.884598] RTL871X: rtl8188f_set_FwMacIdConfig_cmd(): mac_id=0 raid=0x3 bw=0 mask=0xf0000  
+[ 1396.885008] RTL871X: UpdateHalRAMask8188F(): mac_id=0 raid=0x3 bw=0 mask=0xf0000 init_rate=3
+[ 1398.634180] RTL871X: send eapol packet                                                      
+[ 1398.634535] RTL871X: rtl8188f_fill_default_txdesc(eth0): SP Packet(0x888E) rate=0x0         
+[ 1398.638275] RTL871X: recv eapol packet                                                      
+[ 1398.878788] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[ 1400.878796] RTL871X: do rtw_gw_addr_query()RTL871X: Get Gateway IP/MAC fail!                
+[ 1400.879264] RTL871X: rtw_set_ps_mode(eth0) Enter 802.11 power save - WIFI-TRAFFIC_IDLE      
+[ 1400.883313] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 2, SmartPS=2               
+[ 1401.740998] RTL871X: recv eapol packet                                                      
+[ 1402.878593] RTL871X: CurIGValue=62, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1402.881246] RTL871X: rtl8188f_hal_dm_in_lps, RSSI_Min=70                                    
+[ 1404.878590] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1406.180007] sy7636_get_temperature():temperature = 25,reg=0x19                              
+[ 1406.878623] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1407.680586] RTL871X: recv eapol packet                                                      
+[ 1408.878614] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1410.878591] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1411.041008] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1411.041062] PMU2: Watchdog timeout triggered. ===============                               
+[ 1412.878588] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1414.113384] PMU: cc_sum = 35: cc_cap_res= 11: cc_cap_mas = -1979859256                      
+[ 1414.113416] PMU: cc_cap_offset= -60:                                                        
+[ 1414.115440] PMU : set_current_time2register : second is 1325437141, hour is 368176          
+[ 1414.129618] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1979859256                        
+[ 1414.129642] PMU: cc_cap_offset= -60:                                                        
+[ 1414.129662] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1414.129689] PMU:STATUS= 6: IBAT= -1: VSYS= 4322500: VBAT= 4094575: DSOC= 10000: RSOC= 9600:1
+[ 1414.878633] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1416.878613] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1418.878604] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1419.763500] RTL871X: recv eapol packet                                                      
+[ 1420.878594] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1421.400248] RTL871X: adaptive_early_32k(): bcn_cnt = 101                                    
+[ 1422.878632] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1424.878614] RTL871X: CurIGValue=70, EntryMinUndecoratedSmoothedPWDB = 70                    
+[ 1425.412619] RTL871X: rtw_wx_set_mlme                                                        
+[ 1425.412644] RTL871X: rtw_wx_set_mlme, cmd=0, reason=3                                       
+[ 1425.412702] RTL871X: indicate disassoc                                                      
+[ 1425.412773] RTL871X: set bssid:00:00:00:00:00:00                                            
+[ 1425.412823] RTL871X: =>rtw_wx_set_essid                                                     
+[ 1425.412835] RTL871X: ssid=�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD�, len=32                                 
+[ 1425.412850] RTL871X: set ssid [�/}�'ӊɒ+"o�ơ��ȋ�N?�c��LD��u�C`��] fw_state=0x000000         8
+[ 1425.412860] RTL871X: Set SSID under fw_state=0x00000008                                     
+[ 1425.412872] RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+[ 1425.412899] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[ 1425.417922] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=1 len=8                     
+[ 1425.418956] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect                       
+[ 1425.418984] RTL871X: rtw_set_ps_mode(eth0) Leave 802.11 power save - WIFI-LPS_CTRL_DISCONNET
+[ 1425.418998] RTL871X: rtl8188f_set_FwPwrMode_cmd(): FW LPS mode = 0, SmartPS=2               
+[ 1425.419791] RTL871X: ### Clean STA_(0) info ###                                             
+[ 1425.419820] RTL871X: free disconnecting network                                             
+[ 1425.429834] RTL871X: set bssid:00:00:00:00:00:00                                            
+[ 1425.429907] RTL871X: =>rtw_wx_set_essid                                                     
+[ 1425.429919] RTL871X: ssid=��N^���l�zl�Ԛr��a �g)�59, len=32                                  
+[ 1425.429937] RTL871X: set ssid [���N^���l�zl�Ԛr��a �g)�59�u�C`��] fw_state=0x00000808        
+[ 1425.429945] RTL871X: Set SSID under fw_state=0x00000808                                     
+[ 1425.429957] RTL871X: <=rtw_wx_set_essid, ret 0                                              
+[ 1425.430243] RTL871X: (2)871x_drv - drv_close, bup=1, hw_init_completed=_TRUE                
+[ 1425.431016] RTL871X: indicate disassoc                                                      
+[ 1425.431090] RTL871X: -871x_drv - drv_close, bup=1                                           
+[ 1425.431211] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect                       
+[ 1425.459350] RTL871X: module exit start                                                      
+[ 1425.459547] RTL871X: rtw_ndev_uninit(eth0) if1                                              
+[ 1425.488805] RTL871X: rtw_pm_set_ips IPS_NONE                                                
+[ 1425.488864] RTL871X: ### Clean STA_(1) info ###                                             
+[ 1425.488887] RTL871X: rtw_sdio_if1_deinit wowlan_mode:0                                      
+[ 1425.488895] RTL871X: ===> rtw_dev_unload                                                    
+[ 1425.489030] RTL871X: rtw_cmd_thread: DriverStopped(True) SurpriseRemoved(False) break at li1
+[ 1425.489474] RTL871X: CheckIPSStatus(): Read 0x100=0xff 0x86=0x00                            
+[ 1425.489525] RTL871X: rtw_dev_unload: driver not in IPS                                      
+[ 1425.497608] RTL871X: SetHwReg8188F: bMacPwrCtrlOn=0                                         
+[ 1425.497619] RTL871X: SetHwReg8188F: hci_sus_state=3                                         
+[ 1425.498354] RTL871X: SetHwReg8188F: hci_sus_state=0                                         
+[ 1425.498364] RTL871X: <=== rtw_dev_unload                                                    
+[ 1425.498374] RTL871X: +r871xu_dev_remove, hw_init_completed=0                                
+[ 1425.500464] RTL871X: module exit success                                                    
+[ 1425.556041] _ntx_wifi_bt_power_ctrl g_initialize = 1                                        
+[ 1425.556061] Wifi / BT power control 0                                                       
+[ 1425.557494] mmc1: card 0001 removed                                                         
+[ 1425.567691] wifi 3v3 power off                                                              
+[ 1425.567723] _ntx_wifi_bt_power_ctrl() : done                                                
+[ 1443.037828] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is cog
+[ 1443.037882] PMU2: Watchdog timeout triggered. ===============                               
+[ 1443.561986] PMU: cc_sum = 41: cc_cap_res= 13: cc_cap_mas = -1979859256                      
+[ 1443.562042] PMU: cc_cap_offset= -73:                                                        
+[ 1443.564607] PMU : set_current_time2register : second is 1325437171, hour is 368176          
+[ 1443.582227] PMU: cc_sum = 0: cc_cap_res= 0: cc_cap_mas = -1979859256                        
+[ 1443.582274] PMU: cc_cap_offset= -73:                                                        
+[ 1443.582313] PMU: ricoh61x_displayed_work Full-Clear CC, PSWR(100)                           
+[ 1443.582366] PMU:STATUS= 6: IBAT= -1: VSYS= 4311000: VBAT= 4095800: DSOC= 10000: RSOC= 9600:1

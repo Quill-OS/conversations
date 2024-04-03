@@ -1,0 +1,119 @@
+0x758baf60 in QDBusAbstractInterface::callWithArgumentList(QDBus::CallMode, QString const&, QList<QVariant> const&) () from target:/mnt/okular/okular_things/lib/libQt5DBus.so.5
+(gdb) backtrace
+#0  0x758baf60 in QDBusAbstractInterface::callWithArgumentList(QDBus::CallMode, QString const&, QList<QVariant> const&) () from target:/mnt/okular/okular_things/lib/libQt5DBus.so.5
+#1  0x758bb6e8 in QDBusAbstractInterface::internalConstCall(QDBus::CallMode, QString const&, QList<QVariant> const&) const () from target:/mnt/okular/okular_things/lib/libQt5DBus.so.5
+#2  0x758a5d80 in QDBusConnectionInterface::isServiceRegistered(QString const&) const ()
+   from target:/mnt/okular/okular_things/lib/libQt5DBus.so.5
+#3  0x73249b5c in dbusMatch (constraint=..., value=...)
+    at /home/szybet/kdesrc/frameworks/purpose/src/alternativesmodel.cpp:67
+#4  0x7324bef6 in Purpose::AlternativesModelPrivate::constraintMatches (this=0x6e7d88, 
+    meta=..., constraint=...)
+    at /home/szybet/kdesrc/frameworks/purpose/src/alternativesmodel.cpp:139
+#5  0x7324bc7e in Purpose::AlternativesModelPrivate::isPluginAcceptable (this=0x6e7d88, 
+    meta=..., disabledPlugins=...)
+    at /home/szybet/kdesrc/frameworks/purpose/src/alternativesmodel.cpp:113
+#6  0x7324a79e in operator() (__closure=0x5775f8, meta=...)
+    at /home/szybet/kdesrc/frameworks/purpose/src/alternativesmodel.cpp:311
+#7  0x7324ae8a in std::__invoke_impl<bool, Purpose::AlternativesModel::initializeModel()::<lambda(const KPluginMetaData&)>&, const KPluginMetaData&>(std::__invoke_other, struct {...} &) (
+    __f=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/invoke.h:61
+#8  0x7324ada2 in std::__invoke_r<bool, Purpose::AlternativesModel::initializeModel()::<lambda(const KPluginMetaData&)>&, const KPluginMetaData&>(struct {...} &) (__fn=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/invoke.h:114
+#9  0x7324aca2 in std::_Function_handler<bool(const KPluginMetaData&), Purpose::AlternativesModel::initializeModel()::<lambda(const KPluginMetaData&)> >::_M_invoke(const std::_Any_data &, const KPluginMetaData &) (__functor=..., __args#0=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/std_function.h:291
+#10 0x762bfcea in std::function<bool (KPluginMetaData const&)>::operator()(KPluginMetaData const&) const (this=0x7effe7f0, __args#0=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/std_function.h:560
+#11 0x762c2426 in operator() (__closure=0x874638, pluginPath=...)
+    at /home/szybet/kdesrc/frameworks/kcoreaddons/src/lib/plugin/kpluginmetadata.cpp:337
+#12 0x762c549e in std::__invoke_impl<void, KPluginMetaData::findPlugins(const QString&, std::function<bool(const KPluginMetaData&)>, KPluginMetaData::KPluginMetaDataOption)::<lambda(const QString&)>&, const QString&>(std::__invoke_other, struct {...} &) (__f=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/invoke.h:61
+#13 0x762c50fc in std::__invoke_r<void, KPluginMetaData::findPlugins(const QString&, std::function<bool(const KPluginMetaData&)>, KPluginMetaData::KPluginMetaDataOption)::<lambda(const QString&)>&, const QString&>(struct {...} &) (__fn=...)
+--Type <RET> for more, q to quit, c to continue without paging--
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/invoke.h:111
+#14 0x762c4eaa in std::_Function_handler<void(const QString&), KPluginMetaData::findPlugins(const QString&, std::function<bool(const KPluginMetaData&)>, KPluginMetaData::KPluginMetaDataOption)::<lambda(const QString&)> >::_M_invoke(const std::_Any_data &, const QString &) (
+    __functor=..., __args#0=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/std_function.h:291
+#15 0x762bfbf4 in std::function<void (QString const&)>::operator()(QString const&) const (
+    this=0x7effe7b4, __args#0=...)
+    at /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/include/c++/11.2.0/bits/std_function.h:560
+#16 0x762c5b1c in KPluginMetaDataPrivate::forEachPlugin(QString const&, std::function<void (QString const&)>) (directory=..., callback=...)
+    at /home/szybet/kdesrc/frameworks/kcoreaddons/src/lib/plugin/kpluginmetadata.cpp:78
+#17 0x762c262e in KPluginMetaData::findPlugins(QString const&, std::function<bool (KPluginMetaData const&)>, KPluginMetaData::KPluginMetaDataOption) (directory=..., filter=..., 
+    option=KPluginMetaData::DoNotAllowEmptyMetaData)
+    at /home/szybet/kdesrc/frameworks/kcoreaddons/src/lib/plugin/kpluginmetadata.cpp:328
+#18 0x762c22fe in KPluginMetaData::findPlugins(QString const&, std::function<bool (KPluginMetaData const&)>) (directory=..., filter=...)
+    at /home/szybet/kdesrc/frameworks/kcoreaddons/src/lib/plugin/kpluginmetadata.cpp:308
+#19 0x7324aaea in Purpose::AlternativesModel::initializeModel (this=0x2a2048)
+    at /home/szybet/kdesrc/frameworks/purpose/src/alternativesmodel.cpp:316
+#20 0x73249f9a in Purpose::AlternativesModel::setPluginType (this=0x2a2048, pluginType=...)
+    at /home/szybet/kdesrc/frameworks/purpose/src/alternativesmodel.cpp:190
+#21 0x72fbed42 in Okular::Part::openFile (this=0x76910)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/part/part.cpp:1678
+#22 0x76f93d1a in KParts::ReadOnlyPartPrivate::openLocalFile (this=0x6db88)
+    at /home/szybet/kdesrc/frameworks/kparts/src/readonlypart.cpp:184
+#23 0x76f93a6e in KParts::ReadOnlyPart::openUrl (this=0x76910, url=...)
+    at /home/szybet/kdesrc/frameworks/kparts/src/readonlypart.cpp:145
+#24 0x72fbf8e6 in Okular::Part::openUrl (this=0x76910, _url=..., swapInsteadOfOpening=false)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/part/part.cpp:1819
+#25 0x72fbf61c in Okular::Part::openUrl (this=0x76910, url=...)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/part/part.cpp:1767
+#26 0x00026976 in Shell::openUrl (this=0x697f8, url=..., serializedOptions=...)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/shell/shell.cpp:416
+#27 0x0002849a in Shell::fileOpen (this=0x697f8)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/shell/shell.cpp:649
+#28 0x0002fd00 in QtPrivate::FunctorCall<QtPrivate::IndexesList<>, QtPrivate::List<>, void, void (Shell::*)()>::call(void (Shell::*)(), Shell*, void**) (
+    f=(void (Shell::*)(Shell * const)) 0x27cb1 <Shell::fileOpen()>, o=0x697f8, arg=0x7efff020)
+    at /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/s--Type <RET> for more, q to quit, c to continue without paging--
+ysroot/include/QtCore/qobjectdefs_impl.h:152
+#29 0x0002f378 in QtPrivate::FunctionPointer<void (Shell::*)()>::call<QtPrivate::List<>, void>(void (Shell::*)(), Shell*, void**) (
+    f=(void (Shell::*)(Shell * const)) 0x27cb1 <Shell::fileOpen()>, o=0x697f8, arg=0x7efff020)
+    at /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtCore/qobjectdefs_impl.h:185
+#30 0x0002e416 in QtPrivate::QSlotObject<void (Shell::*)(), QtPrivate::List<>, void>::impl(int, QtPrivate::QSlotObjectBase*, QObject*, void**, bool*) (which=1, this_=0x84d400, r=0x697f8, 
+    a=0x7efff020, ret=0x0)
+    at /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtCore/qobjectdefs_impl.h:418
+#31 0x755af898 in ?? () from target:/mnt/okular/okular_things/lib/libQt5Core.so.5
+#32 0x0001ec9e in WelcomeScreen::openClicked (this=0x847968)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/build/shell/okular_autogen/EWIEGA46WW/moc_welcomescreen.cpp:194
+#33 0x00036bc6 in QtPrivate::FunctorCall<QtPrivate::IndexesList<>, QtPrivate::List<>, void, void (WelcomeScreen::*)()>::call(void (WelcomeScreen::*)(), WelcomeScreen*, void**) (
+    f=(void (WelcomeScreen::*)(WelcomeScreen * const)) 0x1ec89 <WelcomeScreen::openClicked()>, o=0x847968, arg=0x7efff188)
+    at /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtCore/qobjectdefs_impl.h:152
+#34 0x00036838 in QtPrivate::FunctionPointer<void (WelcomeScreen::*)()>::call<QtPrivate::List<>, void>(void (WelcomeScreen::*)(), WelcomeScreen*, void**) (
+    f=(void (WelcomeScreen::*)(WelcomeScreen * const)) 0x1ec89 <WelcomeScreen::openClicked()>, o=0x847968, arg=0x7efff188)
+    at /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtCore/qobjectdefs_impl.h:185
+#35 0x00036420 in QtPrivate::QSlotObject<void (WelcomeScreen::*)(), QtPrivate::List<>, void>::impl(int, QtPrivate::QSlotObjectBase*, QObject*, void**, bool*) (which=1, this_=0x84be58, 
+    r=0x847968, a=0x7efff188, ret=0x0)
+    at /home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/include/QtCore/qobjectdefs_impl.h:418
+#36 0x755af898 in ?? () from target:/mnt/okular/okular_things/lib/libQt5Core.so.5
+#37 0x75f242d0 in QAbstractButton::clicked(bool) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#38 0x75f24474 in ?? () from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#39 0x75f2562a in ?? () from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#40 0x75f257b6 in QAbstractButton::mouseReleaseEvent(QMouseEvent*) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#41 0x75e9bd46 in QWidget::event(QEvent*) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#42 0x75e6b54c in QApplicationPrivate::notify_helper(QObject*, QEvent*) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#43 0x75e71a88 in QApplication::notify(QObject*, QEvent*) ()
+--Type <RET> for more, q to quit, c to continue without paging--
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#44 0x75586600 in QCoreApplication::notifyInternal2(QObject*, QEvent*) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Core.so.5
+#45 0x75e70e24 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool, bool) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#46 0x75eb12de in ?? () from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#47 0x75eb3bac in ?? () from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#48 0x75e6b54c in QApplicationPrivate::notify_helper(QObject*, QEvent*) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Widgets.so.5
+#49 0x75586600 in QCoreApplication::notifyInternal2(QObject*, QEvent*) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Core.so.5
+#50 0x759e90b6 in QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) () from target:/mnt/okular/okular_things/lib/libQt5Gui.so.5
+#51 0x759e7e52 in QGuiApplicationPrivate::processTouchEvent(QWindowSystemInterfacePrivate::TouchEvent*) () from target:/mnt/okular/okular_things/lib/libQt5Gui.so.5
+#52 0x759c9810 in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from target:/mnt/okular/okular_things/lib/libQt5Gui.so.5
+#53 0x749611ee in ?? () from target:/mnt/okular/okular_things/plugins/platforms/libkobo.so
+#54 0x755853f4 in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) ()
+   from target:/mnt/okular/okular_things/lib/libQt5Core.so.5
+#55 0x7558bb7e in QCoreApplication::exec() ()
+   from target:/mnt/okular/okular_things/lib/libQt5Core.so.5
+#56 0x00020eb8 in main (argc=1, argv=0x7efffcd4)
+    at /home/szybet/kdesrc/kde/kdegraphics/okular/shell/main.cpp:109

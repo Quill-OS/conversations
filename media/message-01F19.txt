@@ -1,0 +1,43 @@
+kernel: E wdog:--------Kernel Reboot Message Start--------:
+[  307.513058] arcotg_udc: I pmic:faulti:sense_0=0x200:battery dies/charger times out.
+[  321.639572] KERNEL: I pmic: PWRON1 event:
+[  436.662822] PM: Syncing filesystems ... done.
+[  436.696985] Freezing user space processes ... (elapsed 0.00 seconds) done.
+[  436.700912] Freezing remaining freezable tasks ... (elapsed 0.00 seconds) done.
+[  436.701817] Suspending console(s) (use no_console_suspend to debug)
+[  436.841764] Reset Cause readback: 0x2 
+[  436.842460] ar6003: powering off in suspend
+[  436.843236] PM: suspend of devices complete after 140.191 msecs
+[  436.843295] kernel: I PM:suspend:duration=140.191:
+[  436.844017] PM: late suspend of devices complete after 0.658 msecs
+[  436.844072] kernel: I PM:latesuspend:duration=0.658:
+[  436.888909] PM: early resume of devices complete after 0.280 msecs
+[  436.888978] kernel: I PM:earlyresume:duration=0.280:
+[  436.890501] KERNEL: I pmic: PWRON1 event:
+[  437.080808] mmc0: queuing CIS tuple 0x01 length 3
+[  437.088078] mmc0: queuing CIS tuple 0x1a length 5
+[  437.091271] mmc0: queuing CIS tuple 0x1b length 8
+[  437.091922] mmc0: queuing CIS tuple 0x14 length 0
+[  437.267775] SDIO: Enabling device mmc0:0001:1...
+[  437.272398] SDIO: Enabled device mmc0:0001:1
+[  437.301657] ar6k_wlan mmc0:0001:1: firmware: requesting /opt/ar6k/target/AR6003/hw2.1.1/bin
+[  437.301768] firmware mmc0:0001:1: parent mmc0:0001:1 should not be sleeping
+[  437.574891] PM: resume of devices complete after 685.531 msecs
+[  437.574955] kernel: I PM:resume:duration=685.531:
+[  437.578932] Restarting tasks ... done.
+[  437.646345] MAC from kernel xx:xx:xx:xx:86:A1
+[  437.654518] ar6k_wlan mmc0:0001:1: firmware: requesting /opt/ar6k/target/AR6003/hw2.1.1/bin
+[  437.704397] ar6k_wlan mmc0:0001:1: firmware: requesting /opt/ar6k/target/AR6003/hw2.1.1/bin
+[  437.930491] ar6k_wlan mmc0:0001:1: firmware: requesting /opt/ar6k/target/AR6003/hw2.1.1/bin
+[  438.040097] wmi_control_rx() : Unknown id 0x101e
+[  439.448109] Battery: Resume - TimeSuspended(secs)=14578, NAC=0x1df2, RSOC=99, capacity=99%
+
+[  439.526797] Battery: Resume - PostUpdate NAC=0x1ddb, RSOC=99 
+[  458.948948] KERNEL: I pmic: PWRON1 event:
+[   89.954921] g_ether gadget: high speed config #1: CDC Ethernet (ECM)
+[   90.675876] arcotg_udc: I pmic:chargerUsbHigh::
+[  169.126301] MX50 Accessory shutdown
+[  169.145348] MXC Watchdog # 0 shutdown
+[  169.145627] Starting new kernel
+[  169.147485] Bye!
+kernel: E wdog:--------Kernel Reboot Message End--------:

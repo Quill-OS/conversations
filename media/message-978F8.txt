@@ -1,0 +1,178 @@
+Welcome to InkBox OS 2.0
+Kernel 4.1.15 on armv7l (/dev/ttymxc0)
+
+kobo login: root
+Password: 
+Welcome to InkBox OS!
+login[1502]: root login on 'ttymxc0'
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+kobo:~# ls
+kobo:~# evdev
+-ash: evdev: not found
+kobo:~# evdevtest
+-ash: evdevtest: not found
+kobo:~# ev^C
+kobo:~# l
+last                  loadkmap              lz4
+launch_lockscreen.sh  local                 lz4c
+lbu                   logger                lz4cat
+lbu_commit            login                 lzcat
+lbu_exclude           logname               lzcmp
+lbu_include           logread               lzdiff
+lbu_status            losetup               lzegrep
+lbu_update            lpd                   lzfgrep
+ldconfig              lpq                   lzgrep
+ldd                   lpr                   lzless
+less                  lprsetup.sh           lzma
+let                   ls                    lzmadec
+link                  lsattr                lzmainfo
+linux32               lsmod                 lzmore
+linux64               lsof                  lzop
+ln                    lspci                 lzopcat
+lnstat                lsscsi
+loadfont              lsusb
+kobo:~# l
+last                  loadkmap              lz4
+launch_lockscreen.sh  local                 lz4c
+lbu                   logger                lz4cat
+lbu_commit            login                 lzcat
+lbu_exclude           logname               lzcmp
+lbu_include           logread               lzdiff
+lbu_status            losetup               lzegrep
+lbu_update            lpd                   lzfgrep
+ldconfig              lpq                   lzgrep
+ldd                   lpr                   lzless
+less                  lprsetup.sh           lzma
+let                   ls                    lzmadec
+link                  lsattr                lzmainfo
+linux32               lsmod                 lzmore
+linux64               lsof                  lzop
+ln                    lspci                 lzopcat
+lnstat                lsscsi
+loadfont              lsusb
+kobo:~# l^C
+kobo:~# evde^C
+kobo:~# evde^C
+kobo:~# chroot /kobo
+kobo:/# ev
+/bin/ash: ev: not found
+kobo:/# exit
+kobo:~# ls
+kobo:~# ev
+eval    evtest
+kobo:~# ev
+eval    evtest
+kobo:~# ev
+eval    evtest
+kobo:~# evtest /dev/input/
+by-path/  event0    event1    event2    mice      mouse0
+kobo:~# evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 59 (KEY_F1)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+***********************************************
+  This device is grabbed by another process.
+  No events are available to evtest while the
+  other grab is active.
+  In most cases, this is caused by an X driver,
+  try VT-switching and re-run evtest again.
+  Run the following command to see processes with
+  an open fd on this device
+ "fuser -v /dev/input/event0"
+***********************************************
+^Ckobo:~# killall ipd
+kobo:~# killall ipd
+killall: ipd: no process killed
+kobo:~# killall ipd
+killall: ipd: no process killed
+kobo:~# killall ipd
+killall: ipd: no process killed
+kobo:~# evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 59 (KEY_F1)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690103601.636003, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1690103601.636003, -------------- SYN_REPORT ------------
+Event: time 1690103601.844392, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1690103601.844392, -------------- SYN_REPORT ------------
+Event: time 1690103604.981200, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1690103604.981200, -------------- SYN_REPORT ------------
+Event: time 1690103605.964380, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1690103605.964380, -------------- SYN_REPORT ------------
+kobo:~# evtest /dev/input/
+by-path/  event0    event1    event2    mice      mouse0
+kobo:~# evtest /dev/input/by-path/platform-
+platform-21f8000.i2c-platform-bd71828-pwrkey-event
+platform-ntx_event0-event
+kobo:~# evtest /dev/input/by-path/platform-
+platform-21f8000.i2c-platform-bd71828-pwrkey-event
+platform-ntx_event0-event
+kobo:~# evtest /dev/input/by-path/platform-ntx_event0-event 
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 59 (KEY_F1)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690103645.044422, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1690103645.044422, -------------- SYN_REPORT ------------
+Event: time 1690103645.681241, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1690103645.681241, -------------- SYN_REPORT ------------
+Event: time 1690103645.961166, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1690103645.96����6, -------------- SYN_REPORT ------------
+Event: time 1690103646.074362, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1690103646.074362, -------------- SYN_REPORT ------------
+kobo:~# evtest /dev/input/by-path/platform-
+platform-21f8000.i2c-platform-bd71828-pwrkey-event
+platform-ntx_event0-event
+kobo:~# evtest /dev/input/by-path/platform-
+platform-21f8000.i2c-platform-bd71828-pwrkey-event
+platform-ntx_event0-event
+kobo:~# evtest /dev/input/by-path/platform-21f8000.i2c-platform-bd71828-pwrkey-e
+vent 
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "bd71828-pwrkey"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1690103661.558383, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690103661.558383, -------------- SYN_REPORT ------------
+Event: time 1690103661.674583, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690103661.674583, -------------- SYN_REPORT ------------
+Event: time 1690103663.029061, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690103663.029061, -------------- SYN_REPORT ------------
+Event: time 1690103663.110040, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690103663.110040, -------------- SYN_REPORT ------------
+Event: time 1690103663.689231, type 1 (EV_KEY), code 116 (KEY_POWER), value 1
+Event: time 1690103663.689231, -------------- SYN_REPORT ------------
+Event: time 1690103663.771266, type 1 (EV_KEY), code 116 (KEY_POWER), value 0
+Event: time 1690103663.771266, -------------- SYN_REPORT ------------

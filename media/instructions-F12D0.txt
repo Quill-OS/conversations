@@ -1,0 +1,83 @@
+# Packages you need
+uboot-tools
+squashfs-tools
+
+# Create a work directory
+sudo mkdir -p /home/build/inkbox && sudo chown -R "${USER}:${USER}" /home/build/ && cd /home/build/inkbox
+
+# Clone kernel
+git clone https://github.com/Kobo-InkBox/kernel && sync
+
+# Compile U-Boot and kernel
+cd /home/build/inkbox/kernel
+env TOOLCHAINDIR=/home/build/inkbox/kernel/toolchain/arm-kobo-linux-gnueabihf TARGET=arm-kobo-linux-gnueabihf THREADS=8 scripts/build_u-boot.sh n249
+env GITDIR=/home/build/inkbox/kernel TOOLCHAINDIR=/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/ THREADS=8 TARGET=armv7l-linux-musleabihf scripts/build_kernel.sh n249 root
+
+# Partitioning
+Device     Boot   Start      End  Sectors  Size Id Type
+/dev/sda1         49152    79872    30721   15M 83 Linux
+/dev/sda2        104448  1128447  1024000  500M 83 Linux
+/dev/sda3       1128448  1390591   262144  128M 83 Linux
+/dev/sda4       1390592 15523839 14133248  6,7G 83 Linux
+
+# Backup bootmmc
+dd if=/dev/sda bs=512 count=49151 of=bootmmc.bin
+xz bootmmc.bin
+
+# Format partitions
+mkfs.ext4 /dev/sda1 -O "^metadata_csum"
+mkfs.ext4 /dev/sda2 -O "^metadata_csum"
+mkfs.ext4 /dev/sda3 -O "^metadata_csum"
+mkfs.ext4 /dev/sda4 -O "^metadata_csum"
+
+# Generate the public/private key pair that will be used to sign release InkBox OS packages on this device (DON'T SHARE)
+openssl genrsa -out private.pem 2048
+openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+
+# Build,sign,copy inkbox rootfs
+cd /home/build/inkbox
+git clone https://github.com/Kobo-InkBox/rootfs && cd rootfs
+env GITDIR="${PWD}" ./release.sh && cd ..
+openssl dgst -sha256 -sign /path/to/private.pem -out rootfs.squashfs.dgst rootfs.squashfs
+cp rootfs.squashfs* /path/to/partition3
+
+# Build,sign,copy inkbox reproducible image builder
+cd /home/build/inkbox
+git clone https://github.com/Kobo-InkBox/imgtool && cd imgtool
+openssl dgst -sha256 -sign /path/to/private.pem -out sd/overlaymount-rootfs.squashfs.dgst sd/overlaymount-rootfs.squashfs
+cp sd/overlaymount-rootfs.squashfs* /path/to/partition2
+cp sd/overlaymount-rootfs.squashfs* /path/to/partition3
+
+# Copy zImage and DTB to parition1
+cp /home/build/inkbox/kernel/kernel/out/n249/zImage-root /path/to/partition1
+cp /home/build/inkbox/kernel/kernel/linux-5.16-n249/arch/arm/boot/dts/imx6sll-kobo-clarahd.dtb /path/to/partition1
+
+# Unmount sdcard and then put it in the ereader
+
+# Boot
+ext4load mmc 0:1 0x83000000 DTB
+ext4load mmc 0:1 0x80800000 zImage
+bootz 0x80800000 - 0x83000000 (hit a key at the 'stop auto-boot prompt')
+
+# login
+user: root
+
+# next
+unsquashfs -d /lib/modules /opt/modules.sqsh
+
+# next put epdc.fw in /lib/firmware/imx/epdc/epdc_PENG060D.fw
+
+# load modules
+modprobe tps6518x-regulator
+modprobe tps6518x-hwmon
+modprobe mxc_epdc_v2_fb
+
+# launch inkbox splash
+/etc/init.d/inkbox-splash
+
+
+
+
+
+
+

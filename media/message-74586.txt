@@ -1,0 +1,10 @@
+```
+/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Core.so: undefined reference to `std::pmr::monotonic_buffer_resource::~monotonic_buffer_resource()@GLIBCXX_3.4.28'
+/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Core.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_release()@CXXABI_1.3.13'
+/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Core.so: undefined reference to `vtable for std::pmr::monotonic_buffer_resource@GLIBCXX_3.4.28'
+/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Core.so: undefined reference to `std::pmr::get_default_resource()@GLIBCXX_3.4.26'
+/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Qml.so: undefined reference to `std::__throw_bad_array_new_length()@GLIBCXX_3.4.29'
+/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/arm-kobo-linux-gnueabihf/bin/../lib/gcc/arm-kobo-linux-gnueabihf/7.5.0/../../../../arm-kobo-linux-gnueabihf/bin/ld.bfd: /mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Core.so: undefined reference to `std::__exception_ptr::exception_ptr::_M_addref()@CXXABI_1.3.13'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:361: quickddit] Error 1
+```

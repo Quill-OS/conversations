@@ -1,0 +1,45 @@
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "ch 3", 4)                    = 4
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "cur 1", 5)                   = 5
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "dc 0", 4)                    = 4
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "ch 4", 4)                    = 4
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "cur 1", 5)                   = 5
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "dc 0", 4)                    = 4
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "ch 5", 4)                    = 4
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "cur 1", 5)                   = 5
+close(22)                               = 0
+open("/sys/devices/platform/pmic_light.1/lit", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 22
+fcntl64(22, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(22, {st_mode=S_IFREG|0644, st_size=4096, ...}) = 0
+write(22, "dc 0", 4)                    = 4
+close(22)

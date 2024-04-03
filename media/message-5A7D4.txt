@@ -1,0 +1,61 @@
+Booting default InkBox kernel ...
+[   13.096263] kexec: Starting new kernel
+[    0.000000] L2C-310: enabling full line of zeros but not enabled in Cortex-A9
+[    0.486013] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.486093] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    9.857207] [cyttsp5_hid_output_read_manufacture_data_] manufacture :GIS 
+[    9.883163] kx122 0-001e: Unable to read property x-map. Use default 0.
+[    9.890007] kx122 0-001e: Unable to read property y-map. Use default 1.
+[    9.896765] kx122 0-001e: Unable to read property z-map. Use default 2.
+[    9.903450] kx122 0-001e: Unable to read property y-negate. Use default 0.
+[    9.910453] kx122 0-001e: Unable to read property z-negate. Use default 0.
+[    9.917456] kx122 0-001e: Unable to read property g-range. Use default 8g
+[    9.982744] kx122 0-001e: Failed to look up default state
+[    9.988370] [kx122_probe_2662] irq1:120 , gpio1:91 
+[    9.993884] [kx122_probe_2703] using irq1:120  
+[    9.998588] [kx122_probe_2735] g_range:8 
+[   10.016464] [kx122_probe_2768] using irq 
+[   10.021338] [kx122-CNTL1]:1 
+[   10.025067] [kx122-CNTL2]:3f 
+[   10.028955] [kx122-CNTL3]:98 
+[   10.032761] [KX122_TILT_ANGLE_LL]:11 
+[   10.076474] [kx122_probe_2815] success 
+[   10.088019] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021be8 ntx_machine_poweroff
+[   10.099555] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[   10.464129] cpu cpu0: dev_pm_opp_get_opp_count: device OPP not found (-19)
+Linux inkbox 4.1.15-inkbox #1 SMP PREEMPT Tue Jan 25 16:49:56 GMT 2022 armv7l GNU/Linux
+InkBox OS, kernel build 5P7SXMF1
+Copyright (C) 2021-2022 Nicolas Mailloux <nicolecrivain@gmail.com>
+
+Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1: clean, 12/3840 files, 12102/15360 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p5: recovering journal
+/dev/mmcblk0p5: clean, 13/128016 files, 46487/512000 blocks
+fsck.fat 4.2+git (2021-01-31)
+There are differences between boot sector and its backup.
+This is mostly harmless. Differences: (offset:original/backup)
+  65:01/00
+  Not automatically fixing this.
+Dirty bit is set. Fs was not properly unmounted and some data may be corrupt.
+ Automatically removing dirty bit.
+
+*** Filesystem was changed ***
+Writing changes.
+/dev/mmcblk0p3: 13449 files, 380190/523261 clusters
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4: recovering journal
+/dev/mmcblk0p4: clean, 51/196608 files, 718531/786432 blocks
+
+(initrd) Hit any key to stop auto-boot ... 
+Security policy not enforced; root access permitted.
+EXPRESS_VERIFICATION: overlaymount-rootfs.squashfs: checksum invalid!
+Verifying root filesystem's digital signature ...
+Root filesystem's digital signature is invalid! Shutting down ...
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes
+Requesting system poweroff
+[   39.056906] reboot: Power down

@@ -1,0 +1,150 @@
+kobo:~# echo noroot | dd of=/dev/mmcblk0 bs=512 seek=79872
+0+1 records in
+0+1 records out
+7 bytes copied, 0.0035945 s, 1.9 kB/s
+kobo:~# sync
+kobo:~# reboot
+
+Broadcast message from root@kobo
+	(/dev/ttymxc0) at 05:16:19 ...
+
+The system is going down for reboot NOW!
+ * Stopping InkBox Power Daemon (ipd) ...
+ [ ok ]
+ * Stopping InkBox GUI ...
+ [ ok ]
+ * Unmounting onboard storage filesystem ...
+ [ ok ]
+ * Stopping sshd ...
+ [ ok ]
+ * Mounting root filesystem read-only ...
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes
+Requesting system reboot
+[  177.650661] Restarting system.
+[  177.657672] msp430_write: write reg error : Reg 0x90 = 0xff00
+
+
+U-Boot 2009.08-inkbox (Apr 25 2023 - 23:20:43)
+
+CPU:   Freescale i.MX50 family 1.1V at 800 MHz
+mx50 pll1: 800MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 200000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Board: MX50 RDP board
+Boot Reason: [POR]
+Boot Device: SD
+I2C:   ready
+DRAM:  256 MB
+MMC:   FSL_ESDHC: 0, FSL_ESDHC: 1, FSL_ESDHC: 2
+In:    serial
+Out:   serial
+Err:   serial
+[_get_sd_number] g_sd_number:0
+
+MMC read: dev # 0, block # 1023, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 0, block # 1024, count 1 partition # 0 ... 
+1 blocks read: OK
+no ramdisk env ,default rd->70d00000
+
+MMC read: dev # 0, block # 8191, count 1 partition # 0 ... 
+1 blocks read: OK
+no ramdisk image signature ! skip load initrd !
+
+MMC read: dev # 0, block # 12287, count 1 partition # 0 ... 
+1 blocks read: OK
+no ramdisk image signature ! skip load initrd !
+ram p=70000000,size=268435456
+
+MMC read: dev # 0, block # 18431, count 1 partition # 0 ... 
+1 blocks read: OK
+no "logo" bin header
+
+MMC read: dev # 0, block # 14335, count 1 partition # 0 ... 
+1 blocks read: OK
+
+MMC read: dev # 0, block # 14336, count 2207 partition # 0 ... 
+2207 blocks read: OK
+Kernel RAM visiable size=254M->254M
+init TPS65185 power ...
+Relock PLL1 to 1GHz ...
+mx50 pll1: 1000MHz
+mx50 pll2: 400MHz
+mx50 pll3: 216MHz
+ipg clock     : 66666666Hz
+ipg per clock : 66666666Hz
+uart clock    : 24000000Hz
+ahb clock     : 133333333Hz
+axi_a clock   : 400000000Hz
+axi_b clock   : 200000000Hz
+weim_clock    : 100000000Hz
+ddr clock     : 200000000Hz
+esdhc1 clock  : 80000000Hz
+esdhc2 clock  : 80000000Hz
+esdhc3 clock  : 80000000Hz
+esdhc4 clock  : 80000000Hz
+Hit any key to stop autoboot:  0 
+Valid chip addresses: 00 43
+
+MMC read: dev # 0, block # 81919, count 1 partition # 0 ... 
+1 blocks read: OK
+no kernel image signature !
+
+MMC read: dev # 0, block # 81920, count 20480 partition # 0 ... 
+20480 blocks read: OK
+## Booting kernel from Legacy Image at 70800000 ...
+   Image Name:   linux-2.6.35.3-inkbox+
+   Created:      2023-04-27   2:21:29 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    7260476 Bytes =  6.9 MB
+   Load Address: 70008000
+   Entry Point:  70008000
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+Interface 'lo': flags set to 0001.
+
+Linux inkbox #1 PREEMPT Thu Apr 27 02:21:25 UTC 202 GNU/Linux
+InkBox OS, kernel build mhWIfrqc, commit a5809a4
+
+Copyright (C) 2021-2023 Nicolas Mailloux <nicolecrivain@gmail.com>
+ * Checking filesystems ...
+
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p1: clean, 24/4872 files, 8917/19456 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p2: clean, 15/128016 files, 455599/512000 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p3: recovering journal
+Setting free inodes count to 32747 (was 32748)
+Setting free blocks count to 62828 (was 62829)
+/dev/mmcblk0p3: clean, 21/32768 files, 68244/131072 blocks
+e2fsck 1.46.2 (28-Feb-2021)
+/dev/mmcblk0p4: clean, 131/192768 files, 579749/769894 blocks
+
+(initrd) Hit ENTER to stop auto-boot ... 
+
+ * Security policy was violated! Shutting down ...
+The system is going down NOW!
+Sent SIGTERM to all processes
+Sent SIGKILL to all processes
+Requesting system poweroff
+[   13.300056] Power down.

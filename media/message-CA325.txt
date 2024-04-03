@@ -1,0 +1,520 @@
+9:39 szybet@hyperbookszyb /home/build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d
+% make -j 8
+cd src/ && ( test -e Makefile || /home/build/inkbox/compiled-binaries/qt-bin/bin/qmake -o Makefile /mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/src.pro ) && make -f Makefile 
+make[1]: Entering directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src'
+cd doc/ && ( test -e Makefile || /home/build/inkbox/compiled-binaries/qt-bin/bin/qmake -o Makefile /mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/doc/doc.pro ) && make -f Makefile 
+cd plugins/ && ( test -e Makefile || /home/build/inkbox/compiled-binaries/qt-bin/bin/qmake -o Makefile /mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/plugins.pro ) && make -f Makefile 
+make[2]: Entering directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins'
+make[2]: Entering directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/doc'
+make[2]: Nothing to be done for 'first'.
+make[2]: Leaving directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/doc'
+cd scenegraph/ && ( test -e Makefile || /home/build/inkbox/compiled-binaries/qt-bin/bin/qmake -o Makefile /mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/scenegraph/scenegraph.pro ) && make -f Makefile 
+make[3]: Entering directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/scenegraph'
+cd softwarecontext/ && ( test -e Makefile || /home/build/inkbox/compiled-binaries/qt-bin/bin/qmake -o Makefile /mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/scenegraph/softwarecontext/softwarecontext.pro ) && make -f Makefile 
+make[4]: Entering directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/scenegraph/softwarecontext'
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/context.o context.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/pluginmain.o pluginmain.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/renderloop.o renderloop.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/rectanglenode.o rectanglenode.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/imagenode.o imagenode.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/pixmaptexture.o pixmaptexture.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/renderingvisitor.o renderingvisitor.cpp
+arm-kobo-linux-gnueabihf-g++ -c -pipe --sysroot=/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/ -O3 -march=armv7-a -mfpu=neon -mfloat-abi=hard -D__arm__ -D__ARM_NEON__ -fPIC -fno-omit-frame-pointer -funwind-tables -Wl,--no-merge-exidx-entries -std=c++1z -fvisibility=hidden -fvisibility-inlines-hidden -fno-exceptions -Wall -Wextra -Wvla -Wdate-time -Wshift-overflow=2 -Wduplicated-cond -Wno-stringop-overflow -Wno-format-overflow -D_REENTRANT -fPIC -DQT_NO_LINKED_LIST -DQT_DEPRECATED_WARNINGS -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT -DQT_NO_EXCEPTIONS -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE -DQT_NO_DEBUG -DQT_PLUGIN -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -I. -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels/5.15.2/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2 -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQmlModels -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtNetwork -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore -I.moc -I/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/mkspecs/linux-kobo-gnueabihf-g++ -o .obj/ninepatchnode.o ninepatchnode.cpp
+renderingvisitor.cpp:32:10: fatal error: private/qquickshadereffectnode_p.h: No such file or directory
+   32 | #include <private/qquickshadereffectnode_p.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[4]: *** [Makefile:3700: .obj/renderingvisitor.o] Error 1
+make[4]: *** Waiting for unfinished jobs....
+In file included from pixmaptexture.cpp:20:
+pixmaptexture.h:41:13: error: field 'm_pixmap' has incomplete type 'QPixmap'
+   41 |     QPixmap m_pixmap;
+      |             ^~~~~~~~
+In file included from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qversionnumber.h:48,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/5.15.2/QtCore/private/qglobal_p.h:80,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/5.15.2/QtQml/private/qtqmlglobal_p.h:54,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qtquickglobal_p.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgtexture_p.h:54,
+                 from pixmaptexture.h:23,
+                 from pixmaptexture.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qmetatype.h:156:20: note: forward declaration of 'class QPixmap'
+  156 |     F(QPixmap, 65, QPixmap) \
+      |                    ^~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qmetatype.h:2087:11: note: in definition of macro 'QT_FORWARD_DECLARE_STATIC_TYPES_ITER'
+ 2087 |     class Name;
+      |           ^~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qmetatype.h:2090:1: note: in expansion of macro 'QT_FOR_EACH_STATIC_GUI_CLASS'
+ 2090 | QT_FOR_EACH_STATIC_GUI_CLASS(QT_FORWARD_DECLARE_STATIC_TYPES_ITER)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pixmaptexture.cpp: In constructor 'PixmapTexture::PixmapTexture(const QImage&)':
+pixmaptexture.cpp:25:25: error: incomplete type 'QPixmap' used in nested name specifier
+   25 |     : m_pixmap(QPixmap::fromImage(image, Qt::NoFormatConversion))
+      |                         ^~~~~~~~~
+make[4]: *** [Makefile:3287: .obj/pixmaptexture.o] Error 1
+In file included from context.cpp:20:
+context.h: In member function 'virtual QSGRenderContext* SoftwareContext::Context::createRenderContext()':
+context.h:95:76: error: invalid new-expression of abstract class type 'SoftwareContext::RenderContext'
+   95 |     QSGRenderContext *createRenderContext() { return new RenderContext(this); }
+      |                                                                            ^
+context.h:73:7: note:   because the following virtual functions are pure within 'SoftwareContext::RenderContext':
+   73 | class RenderContext : public QSGRenderContext
+      |       ^~~~~~~~~~~~~
+In file included from context.h:23,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:199:25: note:     'virtual QSGTexture* QSGRenderContext::createTexture(const QImage&, uint) const'
+  199 |     virtual QSGTexture *createTexture(const QImage &image, uint flags = CreateTexture_Alpha) const = 0;
+      |                         ^~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:205:17: note:     'virtual int QSGRenderContext::maxTextureSize() const'
+  205 |     virtual int maxTextureSize() const = 0;
+      |                 ^~~~~~~~~~~~~~
+In file included from context.cpp:22:
+rectanglenode.h: At global scope:
+rectanglenode.h:29:30: error: invalid use of incomplete type 'class QSGRectangleNode'
+   29 | class RectangleNode : public QSGRectangleNode
+      |                              ^~~~~~~~~~~~~~~~
+In file included from context.h:23,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:87:7: note: forward declaration of 'class QSGRectangleNode'
+   87 | class QSGRectangleNode;
+      |       ^~~~~~~~~~~~~~~~
+In file included from context.cpp:23:
+imagenode.h:71:26: error: invalid use of incomplete type 'class QSGImageNode'
+   71 | class ImageNode : public QSGImageNode
+      |                          ^~~~~~~~~~~~
+In file included from context.h:23,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:88:7: note: forward declaration of 'class QSGImageNode'
+   88 | class QSGImageNode;
+      |       ^~~~~~~~~~~~
+In file included from context.cpp:27:
+ninepatchnode.h:25:30: error: invalid use of incomplete type 'class QSGNinePatchNode'
+   25 | class NinePatchNode : public QSGNinePatchNode
+      |                              ^~~~~~~~~~~~~~~~
+In file included from context.h:23,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:89:7: note: forward declaration of 'class QSGNinePatchNode'
+   89 | class QSGNinePatchNode;
+      |       ^~~~~~~~~~~~~~~~
+context.cpp: In member function 'virtual void SoftwareContext::Renderer::render()':
+context.cpp:110:30: error: invalid cast to abstract class type 'RenderingVisitor'
+  110 |     RenderingVisitor(&painter).visitChildren(rootNode());
+      |                              ^
+In file included from context.cpp:28:
+renderingvisitor.h:25:7: note:   because the following virtual functions are pure within 'RenderingVisitor':
+   25 | class RenderingVisitor : public QSGNodeVisitorEx
+      |       ^~~~~~~~~~~~~~~~
+In file included from context.h:25,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:106:18: note:     'virtual bool QSGNodeVisitorEx::visit(QSGInternalImageNode*)'
+  106 |     virtual bool visit(QSGInternalImageNode *) = 0;
+      |                  ^~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:107:18: note:     'virtual void QSGNodeVisitorEx::endVisit(QSGInternalImageNode*)'
+  107 |     virtual void endVisit(QSGInternalImageNode *) = 0;
+      |                  ^~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:110:18: note:     'virtual bool QSGNodeVisitorEx::visit(QSGInternalRectangleNode*)'
+  110 |     virtual bool visit(QSGInternalRectangleNode *) = 0;
+      |                  ^~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:111:18: note:     'virtual void QSGNodeVisitorEx::endVisit(QSGInternalRectangleNode*)'
+  111 |     virtual void endVisit(QSGInternalRectangleNode *) = 0;
+      |                  ^~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:117:18: note:     'virtual bool QSGNodeVisitorEx::visit(QSGSpriteNode*)'
+  117 |     virtual bool visit(QSGSpriteNode *) = 0;
+      |                  ^~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:118:18: note:     'virtual void QSGNodeVisitorEx::endVisit(QSGSpriteNode*)'
+  118 |     virtual void endVisit(QSGSpriteNode *) = 0;
+      |                  ^~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:120:18: note:     'virtual bool QSGNodeVisitorEx::visit(QSGRenderNode*)'
+  120 |     virtual bool visit(QSGRenderNode *) = 0;
+      |                  ^~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:121:18: note:     'virtual void QSGNodeVisitorEx::endVisit(QSGRenderNode*)'
+  121 |     virtual void endVisit(QSGRenderNode *) = 0;
+      |                  ^~~~~~~~
+context.cpp: In member function 'void SoftwareContext::PixmapRenderer::render(QPixmap*)':
+context.cpp:150:30: error: invalid cast to abstract class type 'RenderingVisitor'
+  150 |     RenderingVisitor(&painter).visitChildren(rootNode());
+      |                              ^
+context.cpp: In constructor 'SoftwareContext::Context::Context(QObject*)':
+context.cpp:162:5: error: 'setDistanceFieldEnabled' was not declared in this scope
+  162 |     setDistanceFieldEnabled(false);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+context.cpp: In member function 'virtual QSGRectangleNode* SoftwareContext::Context::createRectangleNode()':
+context.cpp:167:30: error: cannot convert 'RectangleNode*' to 'QSGRectangleNode*' in return
+  167 |     return new RectangleNode();
+      |                              ^
+context.cpp: In member function 'virtual QSGImageNode* SoftwareContext::Context::createImageNode()':
+context.cpp:172:26: error: cannot convert 'ImageNode*' to 'QSGImageNode*' in return
+  172 |     return new ImageNode();
+      |                          ^
+context.cpp: In member function 'virtual QSGPainterNode* SoftwareContext::Context::createPainterNode(QQuickPaintedItem*)':
+context.cpp:177:32: error: invalid new-expression of abstract class type 'PainterNode'
+  177 |     return new PainterNode(item);
+      |                                ^
+In file included from context.cpp:24:
+painternode.h:28:7: note:   because the following virtual functions are pure within 'PainterNode':
+   28 | class PainterNode : public QSGPainterNode
+      |       ^~~~~~~~~~~
+In file included from context.h:25,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:191:18: note:     'virtual void QSGPainterNode::setTextureSize(const QSize&)'
+  191 |     virtual void setTextureSize(const QSize &size) = 0;
+      |                  ^~~~~~~~~~~~~~
+context.cpp: In member function 'virtual QSGNinePatchNode* SoftwareContext::Context::createNinePatchNode()':
+context.cpp:189:30: error: cannot convert 'NinePatchNode*' to 'QSGNinePatchNode*' in return
+  189 |     return new NinePatchNode();
+      |                              ^
+context.cpp: In member function 'virtual QSGLayer* SoftwareContext::Context::createLayer(QSGRenderContext*)':
+context.cpp:194:43: error: invalid new-expression of abstract class type 'SoftwareLayer'
+  194 |     return new SoftwareLayer(renderContext);
+      |                                           ^
+In file included from context.cpp:29:
+softwarelayer.h:30:7: note:   because the following virtual functions are pure within 'SoftwareLayer':
+   30 | class SoftwareLayer : public QSGLayer
+      |       ^~~~~~~~~~~~~
+In file included from context.h:25,
+                 from context.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:214:18: note:     'virtual void QSGLayer::setMirrorHorizontal(bool)'
+  214 |     virtual void setMirrorHorizontal(bool mirror) = 0;
+      |                  ^~~~~~~~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:215:18: note:     'virtual void QSGLayer::setMirrorVertical(bool)'
+  215 |     virtual void setMirrorVertical(bool mirror) = 0;
+      |                  ^~~~~~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:216:18: note:     'virtual void QSGLayer::setSamples(int)'
+  216 |     virtual void setSamples(int samples) = 0;
+      |                  ^~~~~~~~~~
+In file included from ninepatchnode.cpp:20:
+ninepatchnode.h:26:1: error: expected class-name before '{' token
+   26 | {
+      | ^
+In file included from ninepatchnode.cpp:22:
+imagenode.h:72:1: error: expected class-name before '{' token
+   72 | {
+      | ^
+ninepatchnode.cpp: In constructor 'NinePatchNode::NinePatchNode()':
+ninepatchnode.cpp:26:5: error: 'setMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   26 |     setMaterial((QSGMaterial*)1);
+      |     ^~~~~~~~~~~
+      |     QSGMaterial
+ninepatchnode.cpp:27:5: error: 'setGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+   27 |     setGeometry((QSGGeometry*)1);
+      |     ^~~~~~~~~~~
+      |     QSGGeometry
+ninepatchnode.cpp: In member function 'virtual void NinePatchNode::setTexture(QSGTexture*)':
+ninepatchnode.cpp:38:15: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   38 |     markDirty(DirtyMaterial);
+      |               ^~~~~~~~~~~~~
+      |               QSGMaterial
+ninepatchnode.cpp:38:5: error: 'markDirty' was not declared in this scope
+   38 |     markDirty(DirtyMaterial);
+      |     ^~~~~~~~~
+ninepatchnode.cpp: In member function 'virtual void NinePatchNode::setBounds(const QRectF&)':
+ninepatchnode.cpp:47:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+   47 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+ninepatchnode.cpp:47:5: error: 'markDirty' was not declared in this scope
+   47 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+In file included from rectanglenode.cpp:20:
+rectanglenode.h:30:1: error: expected class-name before '{' token
+   30 | {
+      | ^
+ninepatchnode.cpp: In member function 'virtual void NinePatchNode::setDevicePixelRatio(qreal)':
+ninepatchnode.cpp:56:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+   56 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+ninepatchnode.cpp:56:5: error: 'markDirty' was not declared in this scope
+   56 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+ninepatchnode.cpp: In member function 'virtual void NinePatchNode::setPadding(qreal, qreal, qreal, qreal)':
+ninepatchnode.cpp:66:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+   66 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+ninepatchnode.cpp:66:5: error: 'markDirty' was not declared in this scope
+   66 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+ninepatchnode.cpp: In member function 'void NinePatchNode::paint(QPainter*)':
+ninepatchnode.cpp:79:105: warning: 'constexpr QFlags<T>::QFlags(QFlags<T>::Zero) [with Enum = QDrawBorderPixmap::DrawingHint; QFlags<T>::Zero = int QFlags<QDrawBorderPixmap::DrawingHint>::Private::*]' is deprecated: Use default constructor instead [-Wdeprecated-declarations]
+   79 |                                            m_margins, Qt::StretchTile, QDrawBorderPixmap::DrawingHints(0));
+      |                                                                                                         ^
+In file included from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qglobal.h:1304,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/qtqmlglobal.h:47,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/qtquickglobal.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/qsggeometry.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/qsgnode.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:54,
+                 from ninepatchnode.h:23,
+                 from ninepatchnode.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qflags.h:123:80: note: declared here
+  123 |     QT_DEPRECATED_X("Use default constructor instead") Q_DECL_CONSTEXPR inline QFlags(Zero) noexcept : i(0) {}
+      |                                                                                ^~~~~~
+rectanglenode.cpp: In constructor 'RectangleNode::RectangleNode()':
+rectanglenode.cpp:33:5: error: 'setMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   33 |     setMaterial((QSGMaterial*)1);
+      |     ^~~~~~~~~~~
+      |     QSGMaterial
+rectanglenode.cpp:34:5: error: 'setGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+   34 |     setGeometry((QSGGeometry*)1);
+      |     ^~~~~~~~~~~
+      |     QSGGeometry
+rectanglenode.cpp: In member function 'virtual void RectangleNode::setRect(const QRectF&)':
+rectanglenode.cpp:42:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   42 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+rectanglenode.cpp:42:9: error: 'markDirty' was not declared in this scope
+   42 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+In file included from imagenode.cpp:20:
+imagenode.h:72:1: error: expected class-name before '{' token
+   72 | {
+      | ^
+rectanglenode.cpp: In member function 'virtual void RectangleNode::setColor(const QColor&)':
+rectanglenode.cpp:51:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   51 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+rectanglenode.cpp:51:9: error: 'markDirty' was not declared in this scope
+   51 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+rectanglenode.cpp: In member function 'virtual void RectangleNode::setPenColor(const QColor&)':
+rectanglenode.cpp:60:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   60 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+rectanglenode.cpp:60:9: error: 'markDirty' was not declared in this scope
+   60 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+rectanglenode.cpp: In member function 'virtual void RectangleNode::setPenWidth(qreal)':
+rectanglenode.cpp:69:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+   69 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+rectanglenode.cpp:69:9: error: 'markDirty' was not declared in this scope
+   69 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+rectanglenode.cpp: In member function 'virtual void RectangleNode::setGradientStops(const QGradientStops&)':
+rectanglenode.cpp:164:15: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  164 |     markDirty(DirtyMaterial);
+      |               ^~~~~~~~~~~~~
+      |               QSGMaterial
+rectanglenode.cpp:164:5: error: 'markDirty' was not declared in this scope
+  164 |     markDirty(DirtyMaterial);
+      |     ^~~~~~~~~
+rectanglenode.cpp: In member function 'virtual void RectangleNode::setRadius(qreal)':
+rectanglenode.cpp:172:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  172 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+rectanglenode.cpp:172:9: error: 'markDirty' was not declared in this scope
+  172 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+make[4]: *** [Makefile:2145: .obj/context.o] Error 1
+In file included from renderloop.cpp:22:
+context.h: In member function 'virtual QSGRenderContext* SoftwareContext::Context::createRenderContext()':
+context.h:95:76: error: invalid new-expression of abstract class type 'SoftwareContext::RenderContext'
+   95 |     QSGRenderContext *createRenderContext() { return new RenderContext(this); }
+      |                                                                            ^
+context.h:73:7: note:   because the following virtual functions are pure within 'SoftwareContext::RenderContext':
+   73 | class RenderContext : public QSGRenderContext
+      |       ^~~~~~~~~~~~~
+In file included from context.h:23,
+                 from renderloop.cpp:22:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:199:25: note:     'virtual QSGTexture* QSGRenderContext::createTexture(const QImage&, uint) const'
+  199 |     virtual QSGTexture *createTexture(const QImage &image, uint flags = CreateTexture_Alpha) const = 0;
+      |                         ^~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:205:17: note:     'virtual int QSGRenderContext::maxTextureSize() const'
+  205 |     virtual int maxTextureSize() const = 0;
+      |                 ^~~~~~~~~~~~~~
+In file included from pluginmain.h:28,
+                 from pluginmain.cpp:20:
+context.h: In member function 'virtual QSGRenderContext* SoftwareContext::Context::createRenderContext()':
+context.h:95:76: error: invalid new-expression of abstract class type 'SoftwareContext::RenderContext'
+   95 |     QSGRenderContext *createRenderContext() { return new RenderContext(this); }
+      |                                                                            ^
+context.h:73:7: note:   because the following virtual functions are pure within 'SoftwareContext::RenderContext':
+   73 | class RenderContext : public QSGRenderContext
+      |       ^~~~~~~~~~~~~
+In file included from pluginmain.h:23,
+                 from pluginmain.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:199:25: note:     'virtual QSGTexture* QSGRenderContext::createTexture(const QImage&, uint) const'
+  199 |     virtual QSGTexture *createTexture(const QImage &image, uint flags = CreateTexture_Alpha) const = 0;
+      |                         ^~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:205:17: note:     'virtual int QSGRenderContext::maxTextureSize() const'
+  205 |     virtual int maxTextureSize() const = 0;
+      |                 ^~~~~~~~~~~~~~
+imagenode.cpp: In constructor 'ImageNode::ImageNode()':
+imagenode.cpp:307:5: error: 'setMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  307 |     setMaterial((QSGMaterial*)1);
+      |     ^~~~~~~~~~~
+      |     QSGMaterial
+imagenode.cpp:308:5: error: 'setGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+  308 |     setGeometry((QSGGeometry*)1);
+      |     ^~~~~~~~~~~
+      |     QSGGeometry
+imagenode.cpp: In member function 'virtual void ImageNode::setTargetRect(const QRectF&)':
+imagenode.cpp:317:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+  317 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+imagenode.cpp:317:5: error: 'markDirty' was not declared in this scope
+  317 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+pluginmain.cpp: In member function 'virtual QSGContext* ContextPlugin::create(const QString&) const':
+pluginmain.cpp:41:49: error: invalid new-expression of abstract class type 'SoftwareContext::Context'
+   41 |         instance = new SoftwareContext::Context();
+      |                                                 ^
+In file included from pluginmain.h:28,
+                 from pluginmain.cpp:20:
+context.h:89:7: note:   because the following virtual functions are pure within 'SoftwareContext::Context':
+   89 | class Context : public QSGContext
+      |       ^~~~~~~
+In file included from pluginmain.h:23,
+                 from pluginmain.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:125:39: note:     'virtual QSGInternalRectangleNode* QSGContext::createInternalRectangleNode()'
+  125 |     virtual QSGInternalRectangleNode *createInternalRectangleNode() = 0;
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:126:35: note:     'virtual QSGInternalImageNode* QSGContext::createInternalImageNode(QSGRenderContext*)'
+  126 |     virtual QSGInternalImageNode *createInternalImageNode(QSGRenderContext *renderContext) = 0;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgcontext_p.h:134:28: note:     'virtual QSGSpriteNode* QSGContext::createSpriteNode()'
+  134 |     virtual QSGSpriteNode *createSpriteNode() = 0;
+      |                            ^~~~~~~~~~~~~~~~
+pluginmain.cpp: In member function 'virtual QSGRenderLoop* ContextPlugin::createWindowManager()':
+pluginmain.cpp:51:16: error: expected type-specifier before 'ThreadedRenderLoop'
+   51 |     return new ThreadedRenderLoop();
+      |                ^~~~~~~~~~~~~~~~~~
+pluginmain.cpp:51:15: error: expected ';' before 'ThreadedRenderLoop'
+   51 |     return new ThreadedRenderLoop();
+      |               ^~~~~~~~~~~~~~~~~~~
+      |               ;
+pluginmain.cpp:51:34: error: 'ThreadedRenderLoop' cannot be used as a function
+   51 |     return new ThreadedRenderLoop();
+      |                ~~~~~~~~~~~~~~~~~~^~
+imagenode.cpp: In member function 'virtual void ImageNode::setInnerTargetRect(const QRectF&)':
+imagenode.cpp:325:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+  325 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+imagenode.cpp:325:5: error: 'markDirty' was not declared in this scope
+  325 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::setInnerSourceRect(const QRectF&)':
+imagenode.cpp:333:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+  333 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+imagenode.cpp:333:5: error: 'markDirty' was not declared in this scope
+  333 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::setSubSourceRect(const QRectF&)':
+imagenode.cpp:341:15: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+  341 |     markDirty(DirtyGeometry);
+      |               ^~~~~~~~~~~~~
+      |               QSGGeometry
+imagenode.cpp:341:5: error: 'markDirty' was not declared in this scope
+  341 |     markDirty(DirtyGeometry);
+      |     ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::setTexture(QSGTexture*)':
+imagenode.cpp:349:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  349 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+imagenode.cpp:349:9: error: 'markDirty' was not declared in this scope
+  349 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+make[4]: *** [Makefile:3907: .obj/ninepatchnode.o] Error 1
+imagenode.cpp: In member function 'virtual void ImageNode::setMirror(bool)':
+imagenode.cpp:358:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  358 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+imagenode.cpp:358:9: error: 'markDirty' was not declared in this scope
+  358 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::setFiltering(QSGTexture::Filtering)':
+imagenode.cpp:373:15: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  373 |     markDirty(DirtyMaterial);
+      |               ^~~~~~~~~~~~~
+      |               QSGMaterial
+imagenode.cpp:373:5: error: 'markDirty' was not declared in this scope
+  373 |     markDirty(DirtyMaterial);
+      |     ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::setHorizontalWrapMode(QSGTexture::WrapMode)':
+imagenode.cpp:383:15: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  383 |     markDirty(DirtyMaterial);
+      |               ^~~~~~~~~~~~~
+      |               QSGMaterial
+imagenode.cpp:383:5: error: 'markDirty' was not declared in this scope
+  383 |     markDirty(DirtyMaterial);
+      |     ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::setVerticalWrapMode(QSGTexture::WrapMode)':
+imagenode.cpp:393:15: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  393 |     markDirty(DirtyMaterial);
+      |               ^~~~~~~~~~~~~
+      |               QSGMaterial
+imagenode.cpp:393:5: error: 'markDirty' was not declared in this scope
+  393 |     markDirty(DirtyMaterial);
+      |     ^~~~~~~~~
+imagenode.cpp: In member function 'virtual void ImageNode::preprocess()':
+imagenode.cpp:416:19: error: 'DirtyGeometry' was not declared in this scope; did you mean 'QSGGeometry'?
+  416 |         markDirty(DirtyGeometry);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGGeometry
+imagenode.cpp:416:9: error: 'markDirty' was not declared in this scope
+  416 |         markDirty(DirtyGeometry);
+      |         ^~~~~~~~~
+imagenode.cpp:419:19: error: 'DirtyMaterial' was not declared in this scope; did you mean 'QSGMaterial'?
+  419 |         markDirty(DirtyMaterial);
+      |                   ^~~~~~~~~~~~~
+      |                   QSGMaterial
+imagenode.cpp:419:9: error: 'markDirty' was not declared in this scope
+  419 |         markDirty(DirtyMaterial);
+      |         ^~~~~~~~~
+imagenode.cpp: In member function 'void ImageNode::paint(QPainter*)':
+imagenode.cpp:446:97: warning: 'constexpr QFlags<T>::QFlags(QFlags<T>::Zero) [with Enum = QDrawBorderPixmap::DrawingHint; QFlags<T>::Zero = int QFlags<QDrawBorderPixmap::DrawingHint>::Private::*]' is deprecated: Use default constructor instead [-Wdeprecated-declarations]
+  446 |                                            margins, tilerules, QDrawBorderPixmap::DrawingHints(0));
+      |                                                                                                 ^
+In file included from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qglobal.h:1304,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQml/qtqmlglobal.h:47,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/qtquickglobal.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/qsggeometry.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/qsgnode.h:43,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:54,
+                 from imagenode.h:23,
+                 from imagenode.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtCore/qflags.h:123:80: note: declared here
+  123 |     QT_DEPRECATED_X("Use default constructor instead") Q_DECL_CONSTEXPR inline QFlags(Zero) noexcept : i(0) {}
+      |                                                                                ^~~~~~
+imagenode.cpp:455:27: warning: 'void QPainter::setMatrix(const QMatrix&, bool)' is deprecated: Use setTransform() instead [-Wdeprecated-declarations]
+  455 |         painter->setMatrix(transform, true);
+      |         ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/qpaintengine.h:47,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui/private/qtextengine_p.h:62,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/5.15.2/QtGui/private/qfontengine_p.h:58,
+                 from /mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtQuick/5.15.2/QtQuick/private/qsgadaptationlayer_p.h:65,
+                 from imagenode.h:23,
+                 from imagenode.cpp:20:
+/mnt/HDD/Project/inkbox-build/inkbox/compiled-binaries/qt-bin/include/QtGui/qpainter.h:241:10: note: declared here
+  241 |     void setMatrix(const QMatrix &matrix, bool combine = false);
+      |          ^~~~~~~~~
+make[4]: *** [Makefile:2956: .obj/rectanglenode.o] Error 1
+make[4]: *** [Makefile:2433: .obj/pluginmain.o] Error 1
+renderloop.cpp: In member function 'void RenderLoop::renderWindow(QQuickWindow*)':
+renderloop.cpp:95:13: error: 'class QQuickWindowPrivate' has no member named 'flushDelayedTouchEvent'; did you mean 'deliverDelayedTouchEvent'?
+   95 |         cd->flushDelayedTouchEvent();
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+      |             deliverDelayedTouchEvent
+make[4]: *** [Makefile:3175: .obj/imagenode.o] Error 1
+make[4]: *** [Makefile:2756: .obj/renderloop.o] Error 1
+make[4]: Leaving directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/scenegraph/softwarecontext'
+make[3]: *** [Makefile:47: sub-softwarecontext-make_first] Error 2
+make[3]: Leaving directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins/scenegraph'
+make[2]: *** [Makefile:47: sub-scenegraph-make_first] Error 2
+make[2]: Leaving directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src/plugins'
+make[1]: *** [Makefile:48: sub-plugins-make_first] Error 2
+make[1]: Leaving directory '/mnt/HDD/Project/inkbox-build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d/src'
+make: *** [Makefile:48: sub-src-make_first] Error 2
+19:39 szybet@hyperbookszyb /home/build/inkbox/nheko-crosscompilation-hell/qtdeclarative-render2d
+% 

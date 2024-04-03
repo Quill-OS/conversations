@@ -1,0 +1,259 @@
+From 6fba6eede8f08db732289d45c3c5a2118e4879c7 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Mon, 5 Sep 2022 23:06:10 +0200
+Subject: [PATCH] c o d e  s t a n d a r d s, perfect english and bigger next
+ and previous buttons
+
+---
+ src/settings/settings.cpp | 70 +++++++++++++++++----------------------
+ src/settings/settings.h   | 20 ++++-------
+ src/settings/settings.ui  | 14 ++++----
+ 3 files changed, 44 insertions(+), 60 deletions(-)
+
+diff --git a/src/settings/settings.cpp b/src/settings/settings.cpp
+index b11774e..5659211 100644
+--- a/src/settings/settings.cpp
++++ b/src/settings/settings.cpp
+@@ -66,6 +66,9 @@ settings::settings(QWidget *parent) :
+     ui->nextBtn->setText("");
+     ui->nextBtn->setIcon(QIcon(":/resources/chevron-right.png"));
+ 
++    ui->nextBtn->setFixedWidth(100);
++    ui->previousBtn->setFixedWidth(100);
++
+     ui->requestLeaseBtn->hide();
+     ui->usbmsBtn->hide();
+     ui->label_3->hide();
+@@ -114,18 +117,21 @@ settings::settings(QWidget *parent) :
+     string_checkconfig(".config/07-words_number/config");
+     if(checkconfig_str_val == "") {
+         if(global::deviceID == "n705\n") {
+-            wordNumberSaved = 120;
+-        } else if(global::deviceID == "n873\n") {
+-            wordNumberSaved = 250;
+-        } else {
+-            wordNumberSaved = 175;
++            wordsNumberSaved = 120;
++        }
++        else if(global::deviceID == "n873\n") {
++            wordsNumberSaved = 250;
++        }
++        else {
++            wordsNumberSaved = 175;
+         }
+     }
+     else {
+         QString words_number = checkconfig_str_val;
+-        ui->wordNumberShowLabel->setText(words_number);
+-        wordNumberSaved = checkconfig_str_val.toInt();
++        wordsNumberSaved = checkconfig_str_val.toInt();
+     }
++    ui->wordsNumberValueLabel->setText(QString::number(wordsNumberSaved));
++
+ 
+     // ePUB page size
+     if(checkconfig(".config/13-epub_page_size/set") == true) {
+@@ -374,33 +380,17 @@ settings::~settings()
+ {
+     delete ui;
+ }
+-/*
+-void settings::on_pageSizeWidthSpinBox_valueChanged(int arg1)
+-{
+-    std::string value = std::to_string(arg1);
+-    string_writeconfig(".config/13-epub_page_size/width", value);
+-    string_writeconfig(".config/13-epub_page_size/set", "true");
+-    log("Set ePUB page size width to " + QString::number(arg1), className);
+-}
+ 
+-void settings::on_pageSizeHeightSpinBox_valueChanged(int arg1)
+-{
+-    std::string value = std::to_string(arg1);
+-    string_writeconfig(".config/13-epub_page_size/height", value);
+-    string_writeconfig(".config/13-epub_page_size/set", "true");
+-    log("Set ePUB page size height to " + QString::number(arg1), className);
+-}
+-*/
+ void settings::on_okBtn_clicked() {
+     // Save things
+-    string_writeconfig(".config/07-words_number/config", QString::number(wordNumberSaved).toStdString());
+-    log("Set text files words number to " + QString::number(wordNumberSaved), className);
++    writeFile(".config/07-words_number/config", QString::number(wordsNumberSaved));
++    log("Set text files words number to " + QString::number(wordsNumberSaved), className);
+ 
+-    string_writeconfig(".config/13-epub_page_size/width", QString::number(pageSizeWidthSaved).toStdString());
+-    string_writeconfig(".config/13-epub_page_size/set", "true");
++    writeFile(".config/13-epub_page_size/width", QString::number(pageSizeWidthSaved));
++    writeFile(".config/13-epub_page_size/set", "true");
+ 
+-    string_writeconfig(".config/13-epub_page_size/height", QString::number(pageSizeHeightSaved).toStdString());
+-    string_writeconfig(".config/13-epub_page_size/set", "true");
++    writeFile(".config/13-epub_page_size/height", QString::number(pageSizeHeightSaved));
++    writeFile(".config/13-epub_page_size/set", "true");
+ 
+     // Prevent potential unknown damage launching via shell script this could do
+     if(launch_sh == true) {
+@@ -1060,22 +1050,22 @@ void settings::on_exportHighlightsBtn_clicked()
+     showToast("Highlights exported successfully");
+ }
+ 
+-void settings::on_wordNumberAddBtn_clicked()
++void settings::on_wordsNumberIncBtn_clicked()
+ {
+-    wordNumberSaved = wordNumberSaved + 5;
+-    ui->wordNumberShowLabel->setText(QString::number(wordNumberSaved));
++    wordsNumberSaved = wordsNumberSaved + 5;
++    ui->wordsNumberValueLabel->setText(QString::number(wordsNumberSaved));
+ 
+ }
+ 
+-void settings::on_wordNumberDelBtn_clicked()
++void settings::on_wordsNumberDecBtn_clicked()
+ {
+-    if(wordNumberSaved > 10) {
+-        wordNumberSaved = wordNumberSaved - 5;
+-        ui->wordNumberShowLabel->setText(QString::number(wordNumberSaved));
++    if(wordsNumberSaved > 10) {
++        wordsNumberSaved = wordsNumberSaved - 5;
++        ui->wordsNumberValueLabel->setText(QString::number(wordsNumberSaved));
+     }
+ }
+ 
+-void settings::on_pageSizeHeightDelBtn_clicked()
++void settings::on_pageSizeHeightDecBtn_clicked()
+ {
+     if(pageSizeHeightSaved > 100) {
+         pageSizeHeightSaved = pageSizeHeightSaved - 5;
+@@ -1083,13 +1073,13 @@ void settings::on_pageSizeHeightDelBtn_clicked()
+     }
+ }
+ 
+-void settings::on_pageSizeHeightAddBtn_clicked()
++void settings::on_pageSizeHeightIncBtn_clicked()
+ {
+     pageSizeHeightSaved = pageSizeHeightSaved + 5;
+     ui->pageSizeHeightLabel->setText(QString::number(pageSizeHeightSaved));
+ }
+ 
+-void settings::on_pageSizeWidthDelBtn_clicked()
++void settings::on_pageSizeWidthDecBtn_clicked()
+ {
+     if(pageSizeWidthSaved > 100) {
+         pageSizeWidthSaved = pageSizeWidthSaved - 5;
+@@ -1097,7 +1087,7 @@ void settings::on_pageSizeWidthDelBtn_clicked()
+     }
+ }
+ 
+-void settings::on_pageSizeWidthAddBtn_clicked()
++void settings::on_pageSizeWidthIncBtn_clicked()
+ {
+     pageSizeWidthSaved = pageSizeWidthSaved + 5;
+     ui->pageSizeWidthLabel->setText(QString::number(pageSizeWidthSaved));
+diff --git a/src/settings/settings.h b/src/settings/settings.h
+index 9d74050..95adccc 100644
+--- a/src/settings/settings.h
++++ b/src/settings/settings.h
+@@ -70,18 +70,12 @@ private slots:
+     void on_generateSystemReportBtn_clicked();
+     void on_tzComboBox_currentTextChanged(const QString &arg1);
+     void on_exportHighlightsBtn_clicked();
+-
+-    void on_wordNumberAddBtn_clicked();
+-
+-    void on_wordNumberDelBtn_clicked();
+-
+-    void on_pageSizeHeightDelBtn_clicked();
+-
+-    void on_pageSizeHeightAddBtn_clicked();
+-
+-    void on_pageSizeWidthDelBtn_clicked();
+-
+-    void on_pageSizeWidthAddBtn_clicked();
++    void on_wordsNumberIncBtn_clicked();
++    void on_wordsNumberDecBtn_clicked();
++    void on_pageSizeHeightDecBtn_clicked();
++    void on_pageSizeHeightIncBtn_clicked();
++    void on_pageSizeWidthDecBtn_clicked();
++    void on_pageSizeWidthIncBtn_clicked();
+ 
+ signals:
+     void showToast(QString messageToDisplay);
+@@ -96,7 +90,7 @@ private:
+ 
+     int pageSizeHeightSaved;
+     int pageSizeWidthSaved;
+-    int wordNumberSaved;
++    int wordsNumberSaved;
+ };
+ 
+ #endif // SETTINGS_H
+diff --git a/src/settings/settings.ui b/src/settings/settings.ui
+index ec5f004..7eb1cf4 100644
+--- a/src/settings/settings.ui
++++ b/src/settings/settings.ui
+@@ -270,7 +270,7 @@
+                   </spacer>
+                  </item>
+                  <item row="0" column="3">
+-                  <widget class="QPushButton" name="pageSizeWidthDelBtn">
++                  <widget class="QPushButton" name="pageSizeWidthDecBtn">
+                    <property name="text">
+                     <string/>
+                    </property>
+@@ -281,7 +281,7 @@
+                   </widget>
+                  </item>
+                  <item row="0" column="8">
+-                  <widget class="QPushButton" name="pageSizeHeightDelBtn">
++                  <widget class="QPushButton" name="pageSizeHeightDecBtn">
+                    <property name="text">
+                     <string/>
+                    </property>
+@@ -292,7 +292,7 @@
+                   </widget>
+                  </item>
+                  <item row="0" column="10">
+-                  <widget class="QPushButton" name="pageSizeHeightAddBtn">
++                  <widget class="QPushButton" name="pageSizeHeightIncBtn">
+                    <property name="text">
+                     <string/>
+                    </property>
+@@ -303,7 +303,7 @@
+                   </widget>
+                  </item>
+                  <item row="0" column="5">
+-                  <widget class="QPushButton" name="pageSizeWidthAddBtn">
++                  <widget class="QPushButton" name="pageSizeWidthIncBtn">
+                    <property name="text">
+                     <string/>
+                    </property>
+@@ -369,7 +369,7 @@
+                   <number>0</number>
+                  </property>
+                  <item row="1" column="4">
+-                  <widget class="QPushButton" name="wordNumberAddBtn">
++                  <widget class="QPushButton" name="wordsNumberIncBtn">
+                    <property name="text">
+                     <string/>
+                    </property>
+@@ -380,7 +380,7 @@
+                   </widget>
+                  </item>
+                  <item row="1" column="3">
+-                  <widget class="QLabel" name="wordNumberShowLabel">
++                  <widget class="QLabel" name="wordsNumberValueLabel">
+                    <property name="text">
+                     <string>30</string>
+                    </property>
+@@ -407,7 +407,7 @@
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+-                  <widget class="QPushButton" name="wordNumberDelBtn">
++                  <widget class="QPushButton" name="wordsNumberDecBtn">
+                    <property name="text">
+                     <string/>
+                    </property>
+-- 
+2.37.3
+

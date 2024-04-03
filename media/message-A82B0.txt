@@ -1,0 +1,1074 @@
+[    0.253946] Bluetooth: Core ver 2.20
+[    0.254067] NET: Registered protocol family 31
+[    0.254090] Bluetooth: HCI device and connection manager initialized
+[    0.254133] Bluetooth: HCI socket layer initialized
+[    0.254167] Bluetooth: L2CAP socket layer initialized
+[    0.254277] Bluetooth: SCO socket layer initialized
+[    0.255557] PMU: ricoh61x_regulator_init
+[    0.255885] PMU: ricoh61x_regulator_probe
+[    0.258991] RICOH619_DC1 at 900000uv suspend
+[    0.263575] RICOH619_DC2 at 3000000uv suspend
+[    0.284703] RICOH619_DC4 at 1140000uv suspend
+[    0.294792] RICOH619_DC5 at 1700000uv suspend
+[    0.313801] RICOH619_LDO2 at 3000000uv suspend
+[    0.423517] sy7636-pmic sy7636-pmic: num_regulators 4
+[    0.423646] sy7636-pmic sy7636-pmic: on_delay1=0x2
+[    0.423675] sy7636-pmic sy7636-pmic: on_delay2=0x2
+[    0.423701] sy7636-pmic sy7636-pmic: on_delay3=0x2
+[    0.423729] sy7636-pmic sy7636-pmic: on_delay4=0x2
+[    0.423756] sy7636-pmic sy7636-pmic: failed to get VLDO property,default will be 0x2
+[    0.423785] sy7636-pmic sy7636-pmic: turnoff_delay_ep3v3=-1944606744
+[    0.423854] sy7636-pmic sy7636-pmic: request vcom gpio failed (-16)!
+[    0.423897] sy7636-pmic sy7636-pmic: request powerup gpio failed (-16)!
+[    0.423945] sy7636_regulator_probe(1014): SY7636@8c17a780
+[    0.423967] sy7636_regulator_probe():initial vcom=-2500000uV
+[    0.423967]  _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    0.430152] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    0.431489] sy7636_get_temperature():temperature = 0,reg=0x0
+[    0.432382] sy7636_get_temperature():temperature = 0,reg=0x0
+[    0.433466] PMU RTC: ricoh61x_rtc_probe, ricoh61x driver run at 24H-mode
+[    0.433494] PMU RTC: we never using periodic function and interrupt
+[    0.435790] ricoh61x_rtc_Pon_get_clr, PON=1 -- CTRL2=0x20
+[    0.438375] PMU: ricoh61x_rtc_alarm_enable :0
+[    0.439605] PMU: ricoh61x_rtc_probe register rtc device
+[    0.441019] PMU: ricoh61x_rtc_read_alarm
+[    0.443518] rtc_ricoh619 rtc_ricoh619: PMU: read alarm: 1/1/2011 0:0:0 *****
+[    0.445489] rtc_ricoh619 rtc_ricoh619: rtc core: registered rtc_ricoh619 as rtc0
+[    0.445624] [ricoh61x_irq_sync_unlock-283] set 0xAE to 0x60
+[    0.446628] PMU: ricoh61x_rtc_alarm_enable :0
+[    0.447711] RICOH61x RTC Register Success
+[    0.448484] Switched to clocksource mxc_timer1
+[    0.474294] NET: Registered protocol family 2
+[    0.475714] TCP established hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.475806] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.475898] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.476034] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    0.476098] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    0.476522] NET: Registered protocol family 1
+[    5.001516] imx rpmsg driver is registered.
+[    5.003843] Bus freq driver module loaded
+[    5.006125] futex hash table entries: 256 (order: 2, 16384 bytes)
+[    5.026388] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    5.027141] fuse init (API version 7.23)
+[    5.034109] bounce: pool size: 64 pages
+[    5.034173] io scheduler noop registered
+[    5.034211] io scheduler deadline registered
+[    5.034666] io scheduler cfq registered (default)
+[    5.035668] imx-weim 21b8000.weim: Driver registered.
+[    5.041204] lm3630a_bl_parse_dt pchip=8c1e1790,hwen_gpio 91
+[    5.053357] lm3630a_bl 0-0036: LM3630A[1] backlight register OK.
+[    5.055944] imx-sdma 20ec000.sdma: no event needs to be remapped
+[    5.056164] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[    5.064147] imx-sdma 20ec000.sdma: initialized
+[    5.225403] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 18, base_baud = 5000000) is a IMX
+[    5.245216] console [ttymxc0] enabled
+[    5.247113] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 220, base_baud = 5000000) is a IMX
+[    5.285040] imx-rng 2284000.rngb: iMX RNG Registered.
+[    5.285717] imx sema4 driver is registered.
+[    5.285894] [drm] Initialized drm 1.1.0 20060810
+[    5.287174] [drm] Initialized vivante 1.0.0 20120216 on minor 0
+[    5.313707] brd: module loaded
+[    5.327163] loop: module loaded
+[    5.330849] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.330892] ehci-mxc: Freescale On-Chip EHCI Host driver
+[    5.331373] usbcore: registered new interface driver usb-storage
+[    5.333903] 2184800.usbmisc supply vbus-wakeup not found, using dummy regulator
+[    5.335683] 2184000.usb supply vbus not found, using dummy regulator
+[    5.343528] mousedev: PS/2 mouse device common for all mice
+[    5.345503] input: ntx_event0 as /devices/platform/ntx_event0/input/input0
+[    5.600054] [elan] __hello_packet_handler: hello packet 55:55:55:55:ff:ff:ff:ff
+[    5.601602] [__elan_touch_init-361] firmware version 52 01 2C 31 (12C3)
+[    5.603128] [__elan_touch_init-368] firmware ID 52 F1 B5 01 (1B50)
+[    5.604650] [__elan_touch_init-400] boot code version  52 05 56 81
+[    5.606164] [__elan_touch_init-405] x resolution: 1436 
+[    5.607669] [__elan_touch_init-410] y resolution: 1920 
+[    5.608298] input: elan-touch as /devices/virtual/input/input1
+[    5.609714] elan ts starts in interrupt mode.
+[    5.610080] cyttsp5_loader_init: Parade TTSP FW Loader Driver (Built TTDA.03.07.844339) rc=0
+[    5.612914] snvs_rtc 20cc000.snvs:snvs-rtc-lp: rtc core: registered 20cc000.snvs:snvs-r as rtc1
+[    5.613265] i2c /dev entries driver
+[    5.614589] syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 80021c08 ntx_machine_poweroff
+[    5.625139] syscon-poweroff: probe of 20cc000.snvs:snvs-poweroff failed with error -16
+[    5.625467] PMU: ricoh61x_battery_init
+[    5.625742] PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+[    5.636664] ricoh619_battery_dt_init type_n=0
+[    5.636775] ricoh619-battery ricoh619-battery: alarm_vol_mv=3250
+[    5.636800] ricoh619-battery ricoh619-battery: fg_poff_vbat=3350
+[    5.636824] ricoh61x_battery_probe type_n=0,temp is 1
+[    5.636842] ricoh61x_battery_probe() TempDetect=0
+[    5.636860] ricoh61x_battery_probe info->num=7,temp is 8
+[    5.640969] PMU FG_RESET : ricoh61x_init_battery : initial pswr = 100
+[    5.641661] PMU : ricoh61x_init_battery : POWER off history 0x0a is 0x10 
+[    5.642344] PMU : ricoh61x_init_battery : POWER control function 0x0d is 0x00 
+[    5.646754] PMU : ricoh61x_init_battery : off is 368209, on is 368209, period is 0, fpon_flag is 0
+[    5.646783] PMU: ricoh61x_set_OCV_table : 00% voltage = 3431000 uV
+[    5.646804] PMU: ricoh61x_set_OCV_table : 10% voltage = 3571400 uV
+[    5.646824] PMU: ricoh61x_set_OCV_table : 20% voltage = 3728900 uV
+[    5.646843] PMU: ricoh61x_set_OCV_table : 30% voltage = 3766700 uV
+[    5.646863] PMU: ricoh61x_set_OCV_table : 40% voltage = 3775300 uV
+[    5.646883] PMU: ricoh61x_set_OCV_table : 50% voltage = 3786300 uV
+[    5.646903] PMU: ricoh61x_set_OCV_table : 60% voltage = 3822900 uV
+[    5.646924] PMU: ricoh61x_set_OCV_table : 70% voltage = 3902300 uV
+[    5.646943] PMU: ricoh61x_set_OCV_table : 80% voltage = 3960900 uV
+[    5.646963] PMU: ricoh61x_set_OCV_table : 90% voltage = 4048800 uV
+[    5.646983] PMU: ricoh61x_set_OCV_table : 100% voltage = 4137900 uV
+[    5.647006] PMU : ricoh61x_set_OCV_table : target_vsys is 2869 target_ibat is 179
+[    5.647030] PMU : ricoh61x_scaling_OCV_table : setting value of cuttoff_vol(2928) is out of range(3431000) 
+[    5.647061] PMU : ricoh61x_scaling_OCV_table : new table
+[    5.647082] PMU : ricoh61x_scaling_OCV_table : ocv_table 0 is 34298 v
+[    5.647101] PMU : ricoh61x_scaling_OCV_table : ocv_table 1 is 35690 v
+[    5.647121] PMU : ricoh61x_scaling_OCV_table : ocv_table 2 is 37265 v
+[    5.647140] PMU : ricoh61x_scaling_OCV_table : ocv_table 3 is 37656 v
+[    5.647159] PMU : ricoh61x_scaling_OCV_table : ocv_table 4 is 37741 v
+[    5.647178] PMU : ricoh61x_scaling_OCV_table : ocv_table 5 is 37851 v
+[    5.647197] PMU : ricoh61x_scaling_OCV_table : ocv_table 6 is 38217 v
+[    5.647216] PMU : ricoh61x_scaling_OCV_table : ocv_table 7 is 38999 v
+[    5.647235] PMU : ricoh61x_scaling_OCV_table : ocv_table 8 is 39585 v
+[    5.647254] PMU : ricoh61x_scaling_OCV_table : ocv_table 9 is 40464 v
+[    5.647273] PMU : ricoh61x_scaling_OCV_table : ocv_table 10 is 41355 v
+[    5.677546] PMU : ricoh61x_init_charger : GCHGDET (0xDA) is 0x0
+[    5.680761] PMU : ricoh61x_init_charger : after CHGISET_REG (0xb8) is 0x44 info->ch_ichg is 0xff info->ch_icchg is 0x1
+[    5.681455] PMU : ricoh61x_init_charger : before BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+[    5.683277] PMU : ricoh61x_init_charger : after BATSET1_REG (0xba) is 0x49 info->ch_vbatovset is 0xff
+[    5.683962] PMU : ricoh61x_init_charger : before BATSET2_REG (0xbb) is 0x33 info->ch_vrchg is 0xff info->ch_vfchg is 0xff 
+[    5.689675] PMU : ricoh61x_init_charger : test test val 48, val2 3 vfchg 4200
+[    5.690362] PMU : ricoh61x_init_charger : test test val 64, val2 1 icchg 100
+[    5.690393] PMU : ricoh61x_init_charger : 100 min 4109000, 100 max 4233000 vfchg 4200 icchg 100 rbat 278
+[    5.693356] PMU: ricoh61x_init_fgsoca : * 00% voltage = 3429700 uV
+[    5.693380] PMU: ricoh61x_init_fgsoca : * 10% voltage = 3568900 uV
+[    5.693400] PMU: ricoh61x_init_fgsoca : * 20% voltage = 3726400 uV
+[    5.693420] PMU: ricoh61x_init_fgsoca : * 30% voltage = 3765500 uV
+[    5.693440] PMU: ricoh61x_init_fgsoca : * 40% voltage = 3774100 uV
+[    5.693460] PMU: ricoh61x_init_fgsoca : * 50% voltage = 3785100 uV
+[    5.693480] PMU: ricoh61x_init_fgsoca : * 60% voltage = 3821700 uV
+[    5.693500] PMU: ricoh61x_init_fgsoca : * 70% voltage = 3899800 uV
+[    5.693519] PMU: ricoh61x_init_fgsoca : * 80% voltage = 3958400 uV
+[    5.693539] PMU: ricoh61x_init_fgsoca : * 90% voltage = 4046300 uV
+[    5.693559] PMU: ricoh61x_init_fgsoca : * 100% voltage = 4135500 uV
+[    5.693578] calc_soc_by_voltageMethod(): FG not ready , getting vbatt from ADC .
+[    5.694900] measure_vbatt_ADC():4134000 uV
+[    5.694923] ==== calc_soc_by_voltageMethod E60U22 ====
+[    5.700829] PMU : calc_soc_by_voltageMethod : VBAT is 4134000 [uV], soc is 9900 [0.01%] ----------
+[    5.701529] PMU: ricoh61x_init_fgsoca : * Rbat = 278 mOhm   n_cap = 898 mAH
+[    5.702212] Create pmic_battery.1 in platform
+[    5.704092] sy7636_sensor_probe starting
+[    5.704832] sy7636_sensor_probe success
+[    5.711307] imx2-wdt 20bc000.wdog: timeout 60 sec (nowayout=0)
+[    5.711708] Bluetooth: Virtual HCI driver ver 1.5
+[    5.712182] Bluetooth: HCI UART driver ver 2.3
+[    5.712210] Bluetooth: HCI UART protocol H4 registered
+[    5.712231] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[    5.713336] sdhci: Secure Digital Host Controller Interface driver
+[    5.713363] sdhci: Copyright(c) Pierre Ossman
+[    5.713397] sdhci-pltfm: SDHCI platform and OF driver helper
+[    5.716170] /soc/aips-bus@02100000/usdhc@02190000: voltage-ranges unspecified
+[    5.716298] sdhci-esdhc-imx 2190000.usdhc: assigned as wifi host
+[    5.717747] sdhci-esdhc-imx 2190000.usdhc: No vqmmc regulator found
+[    5.719571] led_classdev_register():led_cdev->name=mmc1::,name=mmc1::
+[    5.758742] mmc1: SDHCI controller on 2190000.usdhc [2190000.usdhc] using ADMA
+[    5.759989] /soc/aips-bus@02100000/usdhc@02194000: voltage-ranges unspecified
+[    5.760357] sdhci-esdhc-imx 2194000.usdhc: No vmmc regulator found
+[    5.760389] sdhci-esdhc-imx 2194000.usdhc: No vqmmc regulator found
+[    5.763324] led_classdev_register():led_cdev->name=mmc0::,name=mmc0::
+[    5.809716] mmc0: SDHCI controller on 2194000.usdhc [2194000.usdhc] using ADMA
+[    5.820731] led_classdev_register():led_cdev->name=GLED,name=GLED
+[    5.821657] usbcore: registered new interface driver usbhid
+[    5.821680] usbhid: USB HID core driver
+[    5.843710] fsl-asrc 2034000.asrc: driver registered
+[    5.847267] NET: Registered protocol family 17
+[    5.847807] Bluetooth: RFCOMM TTY layer initialized
+[    5.847868] Bluetooth: RFCOMM socket layer initialized
+[    5.848058] Bluetooth: RFCOMM ver 1.11
+[    5.848148] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    5.848170] Bluetooth: BNEP filters: protocol multicast
+[    5.848210] Bluetooth: BNEP socket layer initialized
+[    5.848247] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    5.848295] Bluetooth: HIDP socket layer initialized
+[    5.848329] lib80211: common routines for IEEE802.11 drivers
+[    5.848439] lib80211_crypt: registered algorithm 'NULL'
+[    5.848637] lib80211_crypt: registered algorithm 'WEP'
+[    5.848680] lib80211_crypt: registered algorithm 'CCMP'
+[    5.848716] lib80211_crypt: registered algorithm 'TKIP'
+[    5.852107] ntx_wifi_bt_power_init() : done 
+[    5.852129] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[    5.852137] Wifi / BT power control 0
+[    5.852146] Wifi already off.
+[    5.852181] wifi 3v3 power off
+[    5.852192] _ntx_wifi_bt_power_ctrl() : done 
+[    5.867075] mmc0: host does not support reading read-only switch, assuming write-enable
+[    5.874033] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c(7704):EPD 1024x758 
+[    5.874075] imx_epdc_v2_fb 228c000.epdc: resolution 1024x758, bpp 16
+[    5.876919] imx_epdc_v2_fb 228c000.epdc: EPDC version = 30
+[    5.879742] mmc0: new high speed SDHC card at address aaaa
+[    5.888605] mmcblk0: mmc0:aaaa SS16G 14.8 GiB 
+[    5.893040]  mmcblk0: p1 p2 p3 p4
+[    5.903966] _sy7636_vcom_get_voltage() : vcom=-2500000uV
+[    5.904008] waveform_size_setup() wf_size=582529
+[    5.904024] ***_MemoryRequest:171: request memory region! addr=0x8ff71a00, len=582529***
+[    5.904081] waveform_p_setup() wf_p=8ff71a00,vaddr=91000a00,size=582529
+[    5.904482] mxc_epdc_fb_init_hw(7479)
+[    5.904532] [epdc_firmware_work_func]:fw p=91000a00,size=582529,fb_data@8d1c8000,pdata=80efde18
+[    5.904543] mxc_epdc_fb_fw_handler(6995),fw=8c193ee8
+[    5.904552] mxc_epdc_fb_fw_handler(): fw p=91000a00,size=582529
+[    5.904608] imx_epdc_v2_fb 228c000.epdc:  --- Extra Waveform Data length: 40 bytes---
+[    5.904623] imx_epdc_v2_fb 228c000.epdc:      Extra Waveform Data: 320_R345_ADFB11_ED060XH7U4_VB3300-FOC_TC
+[    5.904677] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[    5.908612] EPD QOS_WR 0x7, QOS_RD 0x7
+[    5.908647] fake_s1d13522_parse_epd_cmdline : epd cmdline parse already done .
+[    5.908660] fake_s1d13522_initEx3:VCOM from HWCONFIG 0xfee9=>-279 10mV,-2790000 uV
+[    5.908681] drivers/video/fbdev/mxc/mxc_epdc_fake_s1d13522.c(1767):k_fake_s1d13522_init,DisplayResolution=1
+[    5.921260] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    5.936689] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    5.943850] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    5.958186] gpio-keys gpio-keys: Error applying setting, reverse things back
+[    5.965438] Power:do-not-wakeup-hibernation=0
+[    5.965461] Hall:do-not-wakeup-hibernation=0
+[    5.966300] _sy7636_vcom_get_voltage() : vcom=-2790000uV
+[    5.967685] rtc_ricoh619 rtc_ricoh619: setting system clock to 2012-01-03 01:36:31 UTC (1325554591)
+[    5.980462] TMST_SY7636: disabling
+[    6.019868] sy7636_get_temperature():temperature = 26,reg=0x1a
+[    6.019952] RICOH619_LDORTC2: disabling
+[    6.021699] RICOH619_LDORTC1: disabling
+[    6.023420] RICOH619_LDO10: disabling
+[    6.025143] RICOH619_LDO9: disabling
+[    6.026863] RICOH619_LDO4: disabling
+[    6.028597] RICOH619_LDO3: disabling
+[    6.030315] RICOH619_LDO1: disabling
+[    6.031420] SD1_SPWR: disabling
+[    6.031437] vref-3v3: disabling
+[    6.031799] ALSA device list:
+[    6.031813]   No soundcards found.
+[    6.047167] Freeing unused kernel memory: 7364K (807b7000 - 80ee8000)
+[    7.099095] ntx_power_key_hook():state=0
+[    7.608276] imx_epdc_v2_fb 228c000.epdc: Cleared LUT complete for init update
+[    7.856578] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3433)[mAs], cc_sum_dec(-3433)
+[    7.861366] PMU: ricoh61x_displayed_work : dsoc_temp(10000), soc(10000), cc_delta(-10)
+[    7.861415] PMU: ricoh61x_displayed_work : status(0), rsoc_ready_flag(0)
+[    7.879409] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 100 cc_delta -10
+[    7.889133] PMU:check_charge_status_2 2nd P-On init_pswr(100), cc(-10)
+[    7.889175] PMU:check_charge_status_2 Set 100%
+[    7.891693] PMU : set_current_time2register : second is 1325554593, hour is 368209
+[    7.913405] PMU FG_RESET : calc_capacity_2 : capacity 9990 init_pswr 100 cc_delta -10
+[    7.920584] PMU FG_RESET : ricoh61x_displayed_work : initial  dsoc  is  10000
+[    7.922475] PMU : set_current_time2register : second is 1325554593, hour is 368209
+[    7.936143] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(3433)[mAs], cc_sum_dec(-3433)
+[    7.939982] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(100), cc_delta(-10)
+[    7.940007] PMU:STATUS= 3: IBAT= -96: VSYS= 4139000: VBAT= 4135500: DSOC= 10000: RSOC= 9900: cc_delta=-10: rrf= 0
+[    8.548975] 
+[    8.548975] Bus freq set to 24000000 start...
+[    8.549233] 
+[    8.549233] Bus freq set to 24000000 done...
+[   10.135112] 
+[   10.135112] Bus freq set to 400000000 start...
+[   10.135408] 
+[   10.135408] Bus freq set to 400000000 done...
+[   10.251606] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+[   10.440814] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+[   10.521614] ntx_power_key_hook():state=0
+[   11.549008] 
+[   11.549008] Bus freq set to 24000000 start...
+[   11.549289] 
+[   11.549289] Bus freq set to 24000000 done...
+[   11.620898] usb unplugged
+[   15.586536] 
+[   15.586536] Bus freq set to 400000000 start...
+[   15.586845] 
+[   15.586845] Bus freq set to 400000000 done...
+[   16.643503] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[   16.643524] PMU2: Watchdog timeout triggered. ===============
+[   19.997079] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+[   24.519311] EXT4-fs (mmcblk0p1): mounted filesystem with ordered data mode. Opts: (null)
+[   24.602264] EXT4-fs (mmcblk0p4): mounted filesystem with ordered data mode. Opts: (null)
+[   36.959737] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 100 cc_delta -19
+[   36.988762] PMU FG_RESET : calc_capacity_2 : capacity 9981 init_pswr 100 cc_delta -19
+[   37.000420] PMU : set_current_time2register : second is 1325554638, hour is 368209
+[   37.015107] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(6391)[mAs], cc_sum_dec(-6391)
+[   37.018934] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(100), cc_delta(-19)
+[   37.018957] PMU:STATUS= 6: IBAT= -112: VSYS= 4118500: VBAT= 4122975: DSOC= 10000: RSOC= 9900: cc_delta=-19: rrf= 0
+[   38.418567] random: nonblocking pool is initialized
+[   38.715260] udevd[812]: starting version 3.2.9
+[   39.025892] udevd[813]: starting eudev-3.2.9
+[   40.967830] FAT-fs (loop0): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[   43.449026] 
+[   43.449026] Bus freq set to 24000000 start...
+[   43.449296] 
+[   43.449296] Bus freq set to 24000000 done...
+[   44.045868] 
+[   44.045868] Bus freq set to 400000000 start...
+[   44.046165] 
+[   44.046165] Bus freq set to 400000000 done...
+[   44.829045] 
+[   44.829045] Bus freq set to 24000000 start...
+[   44.829332] 
+[   44.829332] Bus freq set to 24000000 done...
+[   45.416104] 
+[   45.416104] Bus freq set to 400000000 start...
+[   45.416400] 
+[   45.416400] Bus freq set to 400000000 done...
+[   45.620933] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[   45.620954] PMU2: Watchdog timeout triggered. ===============
+[   46.423575] using random self ethernet address
+[   46.423606] using random host ethernet address
+[   46.430036] usb0: HOST MAC b2:f9:56:ff:c7:d7
+[   46.430647] usb0: MAC ba:b3:9c:67:04:ef
+[   46.430735] using random self ethernet address
+[   46.430751] using random host ethernet address
+[   46.430839] g_ether gadget: Ethernet Gadget, version: Memorial Day 2008
+[   46.430852] g_ether gadget: g_ether ready
+[   66.035216] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 100 cc_delta -29
+[   66.053914] PMU FG_RESET : calc_capacity_2 : capacity 9971 init_pswr 100 cc_delta -29
+[   66.063180] PMU : set_current_time2register : second is 1325554670, hour is 368209
+[   66.075322] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(9636)[mAs], cc_sum_dec(-9636)
+[   66.078875] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(100), cc_delta(-29)
+[   66.078894] PMU:STATUS= 6: IBAT= -109: VSYS= 4119000: VBAT= 4128800: DSOC= 10000: RSOC= 9900: cc_delta=-29: rrf= 0
+[   77.616614] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[   77.616634] PMU2: Watchdog timeout triggered. ===============
+[   79.901242] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[   79.901259] [_lm3630a_set_FL-1073] led A c=208,b=0, led B c=0,b=0
+[   79.906740] drivers/video/backlight/lm3630a_bl.c(1381) lm3630a_update_status(0)
+[   79.906745] _fl_lm3630a_percentage(1209) _fl_lm3630a_percentage(0)
+[   79.906752] [_lm3630a_set_FL-1073] led A c=0,b=0, led B c=0,b=0
+[   79.906755] _lm3630a_set_FL():FL PWR[OFF] 
+[   90.409857] sy7636_get_temperature():temperature = 26,reg=0x1a
+[   93.029101] 
+[   93.029101] Bus freq set to 24000000 start...
+[   93.029378] 
+[   93.029378] Bus freq set to 24000000 done...
+[   93.605000] 
+[   93.605000] Bus freq set to 400000000 start...
+[   93.605295] 
+[   93.605295] Bus freq set to 400000000 done...
+[   94.519254] 
+[   94.519254] Bus freq set to 24000000 start...
+[   94.519518] 
+[   94.519518] Bus freq set to 24000000 done...
+[   94.604697] 
+[   94.604697] Bus freq set to 400000000 start...
+[   94.604988] 
+[   94.604988] Bus freq set to 400000000 done...
+[   95.192633] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 100 cc_delta -39
+[   95.219576] PMU FG_RESET : calc_capacity_2 : capacity 9961 init_pswr 100 cc_delta -39
+[   95.231857] PMU : set_current_time2register : second is 1325554701, hour is 368209
+[   95.249932] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(12883)[mAs], cc_sum_dec(-12883)
+[   95.254681] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(100), cc_delta(-39)
+[   95.254746] PMU:STATUS= 6: IBAT= -117: VSYS= 4115000: VBAT= 4121450: DSOC= 10000: RSOC= 9900: cc_delta=-39: rrf= 0
+[   96.099030] 
+[   96.099030] Bus freq set to 24000000 start...
+[   96.099317] 
+[   96.099317] Bus freq set to 24000000 done...
+[   96.606186] 
+[   96.606186] Bus freq set to 400000000 start...
+[   96.606490] 
+[   96.606490] Bus freq set to 400000000 done...
+[   98.019220] 
+[   98.019220] Bus freq set to 24000000 start...
+[   98.019497] 
+[   98.019497] Bus freq set to 24000000 done...
+[   98.605401] 
+[   98.605401] Bus freq set to 400000000 start...
+[   98.605705] 
+[   98.605705] Bus freq set to 400000000 done...
+[  100.019198] 
+[  100.019198] Bus freq set to 24000000 start...
+[  100.019469] 
+[  100.019469] Bus freq set to 24000000 done...
+[  100.605096] 
+[  100.605096] Bus freq set to 400000000 start...
+[  100.605396] 
+[  100.605396] Bus freq set to 400000000 done...
+[  102.019217] 
+[  102.019217] Bus freq set to 24000000 start...
+[  102.019488] 
+[  102.019488] Bus freq set to 24000000 done...
+[  102.605410] 
+[  102.605410] Bus freq set to 400000000 start...
+[  102.605691] 
+[  102.605691] Bus freq set to 400000000 done...
+[  103.035375] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  103.035396] PMU2: Watchdog timeout triggered. ===============
+[  104.019171] 
+[  104.019171] Bus freq set to 24000000 start...
+[  104.019440] 
+[  104.019440] Bus freq set to 24000000 done...
+[  104.605415] 
+[  104.605415] Bus freq set to 400000000 start...
+[  104.605720] 
+[  104.605720] Bus freq set to 400000000 done...
+[  105.869198] 
+[  105.869198] Bus freq set to 24000000 start...
+[  105.869466] 
+[  105.869466] Bus freq set to 24000000 done...
+[  106.025278] 
+[  106.025278] Bus freq set to 400000000 start...
+[  106.025572] 
+[  106.025572] Bus freq set to 400000000 done...
+[  108.019237] 
+[  108.019237] Bus freq set to 24000000 start...
+[  108.019514] 
+[  108.019514] Bus freq set to 24000000 done...
+[  108.605033] 
+[  108.605033] Bus freq set to 400000000 start...
+[  108.605324] 
+[  108.605324] Bus freq set to 400000000 done...
+[  110.019222] 
+[  110.019222] Bus freq set to 24000000 start...
+[  110.019499] 
+[  110.019499] Bus freq set to 24000000 done...
+[  110.605395] 
+[  110.605395] Bus freq set to 400000000 start...
+[  110.605691] 
+[  110.605691] Bus freq set to 400000000 done...
+[  112.019175] 
+[  112.019175] Bus freq set to 24000000 start...
+[  112.019447] 
+[  112.019447] Bus freq set to 24000000 done...
+[  112.604996] 
+[  112.604996] Bus freq set to 400000000 start...
+[  112.605296] 
+[  112.605296] Bus freq set to 400000000 done...
+[  114.019226] 
+[  114.019226] Bus freq set to 24000000 start...
+[  114.019502] 
+[  114.019502] Bus freq set to 24000000 done...
+[  114.605342] 
+[  114.605342] Bus freq set to 400000000 start...
+[  114.605636] 
+[  114.605636] Bus freq set to 400000000 done...
+[  115.869189] 
+[  115.869189] Bus freq set to 24000000 start...
+[  115.869461] 
+[  115.869461] Bus freq set to 24000000 done...
+[  116.025328] 
+[  116.025328] Bus freq set to 400000000 start...
+[  116.025622] 
+[  116.025622] Bus freq set to 400000000 done...
+[  117.519179] 
+[  117.519179] Bus freq set to 24000000 start...
+[  117.519440] 
+[  117.519440] Bus freq set to 24000000 done...
+[  118.105912] 
+[  118.105912] Bus freq set to 400000000 start...
+[  118.106208] 
+[  118.106208] Bus freq set to 400000000 done...
+[  119.519415] 
+[  119.519415] Bus freq set to 24000000 start...
+[  119.519691] 
+[  119.519691] Bus freq set to 24000000 done...
+[  120.105348] 
+[  120.105348] Bus freq set to 400000000 start...
+[  120.105651] 
+[  120.105651] Bus freq set to 400000000 done...
+[  121.019310] 
+[  121.019310] Bus freq set to 24000000 start...
+[  121.019568] 
+[  121.019568] Bus freq set to 24000000 done...
+[  121.525243] 
+[  121.525243] Bus freq set to 400000000 start...
+[  121.525540] 
+[  121.525540] Bus freq set to 400000000 done...
+[  122.519177] 
+[  122.519177] Bus freq set to 24000000 start...
+[  122.519470] 
+[  122.519470] Bus freq set to 24000000 done...
+[  122.874152] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  122.874720] PMU2: Watchdog timeout triggered. ===============
+[  123.105811] 
+[  123.105811] Bus freq set to 400000000 start...
+[  123.106103] 
+[  123.106103] Bus freq set to 400000000 done...
+[  124.429925] 
+[  124.429925] Bus freq set to 24000000 start...
+[  124.430557] 
+[  124.430557] Bus freq set to 24000000 done...
+[  124.498237] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 100 cc_delta -44
+[  124.524788] 
+[  124.524788] Bus freq set to 400000000 start...
+[  124.525031] 
+[  124.525031] Bus freq set to 400000000 done...
+[  124.542420] PMU FG_RESET : calc_capacity_2 : capacity 9956 init_pswr 100 cc_delta -44
+[  124.562138] PMU FG_RESET : calc_capacity_2 : capacity 9956 init_pswr 100 cc_delta -44
+[  124.570666] PMU : set_current_time2register : second is 1325554748, hour is 368209
+[  124.583293] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(14485)[mAs], cc_sum_dec(-14485)
+[  124.586895] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(100), cc_delta(-44)
+[  124.586911] PMU:STATUS= 4: IBAT= -27: VSYS= 4142000: VBAT= 4153500: DSOC= 9956: RSOC= 9956: cc_delta=-44: rrf= 0
+[  125.869079] 
+[  125.869079] Bus freq set to 24000000 start...
+[  125.869364] 
+[  125.869364] Bus freq set to 24000000 done...
+[  126.104753] 
+[  126.104753] Bus freq set to 400000000 start...
+[  126.105056] 
+[  126.105056] Bus freq set to 400000000 done...
+[  127.519197] 
+[  127.519197] Bus freq set to 24000000 start...
+[  127.519464] 
+[  127.519464] Bus freq set to 24000000 done...
+[  128.105229] 
+[  128.105229] Bus freq set to 400000000 start...
+[  128.105525] 
+[  128.105525] Bus freq set to 400000000 done...
+[  129.519183] 
+[  129.519183] Bus freq set to 24000000 start...
+[  129.519451] 
+[  129.519451] Bus freq set to 24000000 done...
+[  130.105263] 
+[  130.105263] Bus freq set to 400000000 start...
+[  130.105558] 
+[  130.105558] Bus freq set to 400000000 done...
+[  131.019244] 
+[  131.019244] Bus freq set to 24000000 start...
+[  131.019517] 
+[  131.019517] Bus freq set to 24000000 done...
+[  131.614693] 
+[  131.614693] Bus freq set to 400000000 start...
+[  131.615017] 
+[  131.615017] Bus freq set to 400000000 done...
+[  132.519184] 
+[  132.519184] Bus freq set to 24000000 start...
+[  132.519445] 
+[  132.519445] Bus freq set to 24000000 done...
+[  133.104941] 
+[  133.104941] Bus freq set to 400000000 start...
+[  133.105234] 
+[  133.105234] Bus freq set to 400000000 done...
+[  134.429892] 
+[  134.429892] Bus freq set to 24000000 start...
+[  134.430497] 
+[  134.430497] Bus freq set to 24000000 done...
+[  134.525221] 
+[  134.525221] Bus freq set to 400000000 start...
+[  134.525512] 
+[  134.525512] Bus freq set to 400000000 done...
+[  135.869067] 
+[  135.869067] Bus freq set to 24000000 start...
+[  135.869336] 
+[  135.869336] Bus freq set to 24000000 done...
+[  136.105623] 
+[  136.105623] Bus freq set to 400000000 start...
+[  136.105916] 
+[  136.105916] Bus freq set to 400000000 done...
+[  138.519184] 
+[  138.519184] Bus freq set to 24000000 start...
+[  138.519461] 
+[  138.519461] Bus freq set to 24000000 done...
+[  139.104790] 
+[  139.104790] Bus freq set to 400000000 start...
+[  139.105078] 
+[  139.105078] Bus freq set to 400000000 done...
+[  140.429019] 
+[  140.429019] Bus freq set to 24000000 start...
+[  140.429308] 
+[  140.429308] Bus freq set to 24000000 done...
+[  140.605226] 
+[  140.605226] Bus freq set to 400000000 start...
+[  140.605543] 
+[  140.605543] Bus freq set to 400000000 done...
+[  142.429072] 
+[  142.429072] Bus freq set to 24000000 start...
+[  142.429351] 
+[  142.429351] Bus freq set to 24000000 done...
+[  142.606199] 
+[  142.606199] Bus freq set to 400000000 start...
+[  142.606499] 
+[  142.606499] Bus freq set to 400000000 done...
+[  144.019195] 
+[  144.019195] Bus freq set to 24000000 start...
+[  144.019462] 
+[  144.019462] Bus freq set to 24000000 done...
+[  144.157073] 
+[  144.157073] Bus freq set to 400000000 start...
+[  144.157353] 
+[  144.157353] Bus freq set to 400000000 done...
+[  145.519183] 
+[  145.519183] Bus freq set to 24000000 start...
+[  145.519450] 
+[  145.519450] Bus freq set to 24000000 done...
+[  145.723613] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  145.724174] PMU2: Watchdog timeout triggered. ===============
+[  146.024745] 
+[  146.024745] Bus freq set to 400000000 start...
+[  146.025035] 
+[  146.025035] Bus freq set to 400000000 done...
+[  147.519181] 
+[  147.519181] Bus freq set to 24000000 start...
+[  147.519451] 
+[  147.519451] Bus freq set to 24000000 done...
+[  148.024612] 
+[  148.024612] Bus freq set to 400000000 start...
+[  148.024909] 
+[  148.024909] Bus freq set to 400000000 done...
+[  150.289074] 
+[  150.289074] Bus freq set to 24000000 start...
+[  150.289350] 
+[  150.289350] Bus freq set to 24000000 done...
+[  150.390207] 
+[  150.390207] Bus freq set to 400000000 start...
+[  150.390479] 
+[  150.390479] Bus freq set to 400000000 done...
+[  151.019189] 
+[  151.019189] Bus freq set to 24000000 start...
+[  151.019453] 
+[  151.019453] Bus freq set to 24000000 done...
+[  151.606195] 
+[  151.606195] Bus freq set to 400000000 start...
+[  151.606489] 
+[  151.606489] Bus freq set to 400000000 done...
+[  152.519186] 
+[  152.519186] Bus freq set to 24000000 start...
+[  152.519456] 
+[  152.519456] Bus freq set to 24000000 done...
+[  153.105400] 
+[  153.105400] Bus freq set to 400000000 start...
+[  153.105686] 
+[  153.105686] Bus freq set to 400000000 done...
+[  154.429276] 
+[  154.429276] Bus freq set to 24000000 start...
+[  154.429548] 
+[  154.429548] Bus freq set to 24000000 done...
+[  154.525199] 
+[  154.525199] Bus freq set to 400000000 start...
+[  154.525494] 
+[  154.525494] Bus freq set to 400000000 done...
+[  154.610141] sy7636_get_temperature():temperature = 26,reg=0x1a
+[  155.709070] 
+[  155.709070] Bus freq set to 24000000 start...
+[  155.709344] 
+[  155.709344] Bus freq set to 24000000 done...
+[  156.085661] 
+[  156.085661] Bus freq set to 400000000 start...
+[  156.085951] 
+[  156.085951] Bus freq set to 400000000 done...
+[  157.519207] 
+[  157.519207] Bus freq set to 24000000 start...
+[  157.519472] 
+[  157.519472] Bus freq set to 24000000 done...
+[  158.104983] 
+[  158.104983] Bus freq set to 400000000 start...
+[  158.105260] 
+[  158.105260] Bus freq set to 400000000 done...
+[  159.519187] 
+[  159.519187] Bus freq set to 24000000 start...
+[  159.519453] 
+[  159.519453] Bus freq set to 24000000 done...
+[  160.105158] 
+[  160.105158] Bus freq set to 400000000 start...
+[  160.105457] 
+[  160.105457] Bus freq set to 400000000 done...
+[  161.019231] 
+[  161.019231] Bus freq set to 24000000 start...
+[  161.019487] 
+[  161.019487] Bus freq set to 24000000 done...
+[  161.605329] 
+[  161.605329] Bus freq set to 400000000 start...
+[  161.605633] 
+[  161.605633] Bus freq set to 400000000 done...
+[  162.519188] 
+[  162.519188] Bus freq set to 24000000 start...
+[  162.519456] 
+[  162.519456] Bus freq set to 24000000 done...
+[  163.105053] 
+[  163.105053] Bus freq set to 400000000 start...
+[  163.105351] 
+[  163.105351] Bus freq set to 400000000 done...
+[  164.429079] 
+[  164.429079] Bus freq set to 24000000 start...
+[  164.429359] 
+[  164.429359] Bus freq set to 24000000 done...
+[  164.604726] 
+[  164.604726] Bus freq set to 400000000 start...
+[  164.605042] 
+[  164.605042] Bus freq set to 400000000 done...
+[  164.633322] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is 0, cc_delta_cap_now is -51, last_cc_delta_cap is -51
+[  164.633345] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is 0, cc_cap_mas -16636
+[  164.633368] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 91, dsoc is 9956, capnow is 10000, capzero is 0, delta cc is 0, delta cc ori is 0
+[  164.633380] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is 0, offset_mas is -1, value is 0, final value is 0
+[  164.635134] PMU : set_current_time2register : second is 1325554808, hour is 368209
+[  164.638630] PMU:STATUS= 7: IBAT= -22: VSYS= 4145250: VBAT= 4154400: DSOC= 9956: RSOC= 9956: cc_delta=-44: rrf= 0
+[  165.879079] 
+[  165.879079] Bus freq set to 24000000 start...
+[  165.879354] 
+[  165.879354] Bus freq set to 24000000 done...
+[  166.077783] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  166.078370] PMU2: Watchdog timeout triggered. ===============
+[  166.104081] 
+[  166.104081] Bus freq set to 400000000 start...
+[  166.104333] 
+[  166.104333] Bus freq set to 400000000 done...
+[  167.519209] 
+[  167.519209] Bus freq set to 24000000 start...
+[  167.519475] 
+[  167.519475] Bus freq set to 24000000 done...
+[  167.615138] 
+[  167.615138] Bus freq set to 400000000 start...
+[  167.615416] 
+[  167.615416] Bus freq set to 400000000 done...
+[  168.519175] 
+[  168.519175] Bus freq set to 24000000 start...
+[  168.519442] 
+[  168.519442] Bus freq set to 24000000 done...
+[  169.105103] 
+[  169.105103] Bus freq set to 400000000 start...
+[  169.105382] 
+[  169.105382] Bus freq set to 400000000 done...
+[  170.429046] 
+[  170.429046] Bus freq set to 24000000 start...
+[  170.429326] 
+[  170.429326] Bus freq set to 24000000 done...
+[  170.605454] 
+[  170.605454] Bus freq set to 400000000 start...
+[  170.605753] 
+[  170.605753] Bus freq set to 400000000 done...
+[  172.019233] 
+[  172.019233] Bus freq set to 24000000 start...
+[  172.019510] 
+[  172.019510] Bus freq set to 24000000 done...
+[  172.605239] 
+[  172.605239] Bus freq set to 400000000 start...
+[  172.605524] 
+[  172.605524] Bus freq set to 400000000 done...
+[  174.019178] 
+[  174.019178] Bus freq set to 24000000 start...
+[  174.019442] 
+[  174.019442] Bus freq set to 24000000 done...
+[  174.455346] 
+[  174.455346] Bus freq set to 400000000 start...
+[  174.455643] 
+[  174.455643] Bus freq set to 400000000 done...
+[  176.519182] 
+[  176.519182] Bus freq set to 24000000 start...
+[  176.519465] 
+[  176.519465] Bus freq set to 24000000 done...
+[  176.635227] 
+[  176.635227] Bus freq set to 400000000 start...
+[  176.635520] 
+[  176.635520] Bus freq set to 400000000 done...
+[  178.159066] 
+[  178.159066] Bus freq set to 24000000 start...
+[  178.159341] 
+[  178.159341] Bus freq set to 24000000 done...
+[  178.365775] 
+[  178.365775] Bus freq set to 400000000 start...
+[  178.366077] 
+[  178.366077] Bus freq set to 400000000 done...
+[  184.549049] 
+[  184.549049] Bus freq set to 24000000 start...
+[  184.549333] 
+[  184.549333] Bus freq set to 24000000 done...
+[  186.091975] 
+[  186.091975] Bus freq set to 400000000 start...
+[  186.092253] 
+[  186.092253] Bus freq set to 400000000 done...
+[  188.428989] 
+[  188.428989] Bus freq set to 24000000 start...
+[  188.429268] 
+[  188.429268] Bus freq set to 24000000 done...
+[  189.624539] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  189.625111] PMU2: Watchdog timeout triggered. ===============
+[  190.400169] 
+[  190.400169] Bus freq set to 400000000 start...
+[  190.400445] 
+[  190.400445] Bus freq set to 400000000 done...
+[  190.959011] 
+[  190.959011] Bus freq set to 24000000 start...
+[  190.959268] 
+[  190.959268] Bus freq set to 24000000 done...
+[  194.024304] 
+[  194.024304] Bus freq set to 400000000 start...
+[  194.024580] 
+[  194.024580] Bus freq set to 400000000 done...
+[  194.025301] PM: Syncing filesystems ... done.
+[  194.027192] PM: Preparing system for mem sleep
+[  194.037648] Freezing user space processes ... 
+[  194.047349] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -6, cc_delta_cap_now is -57, last_cc_delta_cap is -51
+[  194.047371] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is 0, cc_cap_mas -18672
+[  194.047393] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 91, dsoc is 9951, capnow is 10000, capzero is 0, delta cc is -5, delta cc ori is -6
+[  194.047406] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -148, offset_mas is -148, value is -546, final value is -5
+[  194.049165] PMU : set_current_time2register : second is 1325554857, hour is 368209
+[  194.052490] PMU:STATUS= 7: IBAT= -71: VSYS= 4137750: VBAT= 4140050: DSOC= 9951: RSOC= 9956: cc_delta=-44: rrf= 0
+[  210.787414] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  210.787433] PMU2: Watchdog timeout triggered. ===============
+[  214.041854] 
+[  214.041881] Freezing of tasks failed after 20.004 seconds (2 tasks refusing to freeze, wq_busy=0):
+[  214.051046] fuse-overlayfs  D 8056fa18     0   380      1 0x00000001
+[  214.051095] [<8056fa18>] (__schedule) from [<8056fda4>] (schedule+0x40/0x98)
+[  214.051139] [<8056fda4>] (schedule) from [<801bcfdc>] (__fuse_request_send+0x13c/0x2c8)
+[  214.051161] [<801bcfdc>] (__fuse_request_send) from [<801bfe08>] (fuse_simple_request+0xc8/0x1dc)
+[  214.051179] [<801bfe08>] (fuse_simple_request) from [<801c00cc>] (fuse_getxattr+0xe8/0x110)
+[  214.051200] [<801c00cc>] (fuse_getxattr) from [<801085b0>] (getxattr+0x74/0x15c)
+[  214.051220] [<801085b0>] (getxattr) from [<80108ee8>] (SyS_fgetxattr+0x34/0x5c)
+[  214.051241] [<80108ee8>] (SyS_fgetxattr) from [<8000f440>] (ret_fast_syscall+0x0/0x3c)
+[  214.051259] udevd           D 8056fa18     0   813      1 0x00000001
+[  214.051285] [<8056fa18>] (__schedule) from [<8056fda4>] (schedule+0x40/0x98)
+[  214.051301] [<8056fda4>] (schedule) from [<801bcfdc>] (__fuse_request_send+0x13c/0x2c8)
+[  214.051318] [<801bcfdc>] (__fuse_request_send) from [<801bfe08>] (fuse_simple_request+0xc8/0x1dc)
+[  214.051336] [<801bfe08>] (fuse_simple_request) from [<801c2208>] (fuse_lookup_name+0xb8/0x16c)
+[  214.051355] [<801c2208>] (fuse_lookup_name) from [<801c22f4>] (fuse_lookup+0x38/0xdc)
+[  214.051374] [<801c22f4>] (fuse_lookup) from [<800ef928>] (lookup_real+0x20/0x4c)
+[  214.051393] [<800ef928>] (lookup_real) from [<800f082c>] (__lookup_hash+0x34/0x3c)
+[  214.051411] [<800f082c>] (__lookup_hash) from [<800f086c>] (lookup_slow+0x38/0xa4)
+[  214.051429] [<800f086c>] (lookup_slow) from [<800f42e0>] (path_lookupat+0x5b8/0x704)
+[  214.051445] [<800f42e0>] (path_lookupat) from [<800f4448>] (filename_lookup+0x1c/0x64)
+[  214.051459] [<800f4448>] (filename_lookup) from [<800f5840>] (user_path_at_empty+0x54/0x7c)
+[  214.051475] [<800f5840>] (user_path_at_empty) from [<800f587c>] (user_path_at+0x14/0x1c)
+[  214.051491] [<800f587c>] (user_path_at) from [<800ebb08>] (vfs_fstatat+0x44/0x98)
+[  214.051509] [<800ebb08>] (vfs_fstatat) from [<800ec1e0>] (SyS_stat64+0x14/0x30)
+[  214.051528] [<800ec1e0>] (SyS_stat64) from [<8000f440>] (ret_fast_syscall+0x0/0x3c)
+[  214.051581] 
+[  214.051592] Restarting tasks ... done.
+[  217.549014] 
+[  217.549014] Bus freq set to 24000000 start...
+[  217.549284] 
+[  217.549284] Bus freq set to 24000000 done...
+[  218.104732] 
+[  218.104732] Bus freq set to 400000000 start...
+[  218.105027] 
+[  218.105027] Bus freq set to 400000000 done...
+[  219.519220] 
+[  219.519220] Bus freq set to 24000000 start...
+[  219.519486] 
+[  219.519486] Bus freq set to 24000000 done...
+[  220.105141] 
+[  220.105141] Bus freq set to 400000000 start...
+[  220.105421] 
+[  220.105421] Bus freq set to 400000000 done...
+[  221.519195] 
+[  221.519195] Bus freq set to 24000000 start...
+[  221.519471] 
+[  221.519471] Bus freq set to 24000000 done...
+[  222.105000] 
+[  222.105000] Bus freq set to 400000000 start...
+[  222.105293] 
+[  222.105293] Bus freq set to 400000000 done...
+[  223.072661] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -5, cc_delta_cap_now is -62, last_cc_delta_cap is -57
+[  223.072731] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is -148, cc_cap_mas -20322
+[  223.072809] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 90, dsoc is 9947, capnow is 10000, capzero is 0, delta cc is -4, delta cc ori is -5
+[  223.072860] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -309, offset_mas is -161, value is -450, final value is -4
+[  223.075427] PMU : set_current_time2register : second is 1325554890, hour is 368209
+[  223.080459] PMU:STATUS= 7: IBAT= -53: VSYS= 4139500: VBAT= 4145200: DSOC= 9947: RSOC= 9956: cc_delta=-44: rrf= 0
+[  223.609936] sy7636_get_temperature():temperature = 26,reg=0x1a
+[  224.519176] 
+[  224.519176] Bus freq set to 24000000 start...
+[  224.519461] 
+[  224.519461] Bus freq set to 24000000 done...
+[  225.105670] 
+[  225.105670] Bus freq set to 400000000 start...
+[  225.105968] 
+[  225.105968] Bus freq set to 400000000 done...
+[  226.429071] 
+[  226.429071] Bus freq set to 24000000 start...
+[  226.429349] 
+[  226.429349] Bus freq set to 24000000 done...
+[  226.605251] 
+[  226.605251] Bus freq set to 400000000 start...
+[  226.605554] 
+[  226.605554] Bus freq set to 400000000 done...
+[  228.019172] 
+[  228.019172] Bus freq set to 24000000 start...
+[  228.019443] 
+[  228.019443] Bus freq set to 24000000 done...
+[  228.605323] 
+[  228.605323] Bus freq set to 400000000 start...
+[  228.605604] 
+[  228.605604] Bus freq set to 400000000 done...
+[  230.019176] 
+[  230.019176] Bus freq set to 24000000 start...
+[  230.019447] 
+[  230.019447] Bus freq set to 24000000 done...
+[  230.604941] 
+[  230.604941] Bus freq set to 400000000 start...
+[  230.605244] 
+[  230.605244] Bus freq set to 400000000 done...
+[  232.020100] 
+[  232.020100] Bus freq set to 24000000 start...
+[  232.020734] 
+[  232.020734] Bus freq set to 24000000 done...
+[  232.605343] 
+[  232.605343] Bus freq set to 400000000 start...
+[  232.605621] 
+[  232.605621] Bus freq set to 400000000 done...
+[  233.050982] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  233.051003] PMU2: Watchdog timeout triggered. ===============
+[  234.019181] 
+[  234.019181] Bus freq set to 24000000 start...
+[  234.019446] 
+[  234.019446] Bus freq set to 24000000 done...
+[  234.605140] 
+[  234.605140] Bus freq set to 400000000 start...
+[  234.605440] 
+[  234.605440] Bus freq set to 400000000 done...
+[  236.019228] 
+[  236.019228] Bus freq set to 24000000 start...
+[  236.019505] 
+[  236.019505] Bus freq set to 24000000 done...
+[  236.605246] 
+[  236.605246] Bus freq set to 400000000 start...
+[  236.605526] 
+[  236.605526] Bus freq set to 400000000 done...
+[  238.019174] 
+[  238.019174] Bus freq set to 24000000 start...
+[  238.019439] 
+[  238.019439] Bus freq set to 24000000 done...
+[  238.604964] 
+[  238.604964] Bus freq set to 400000000 start...
+[  238.605259] 
+[  238.605259] Bus freq set to 400000000 done...
+[  240.020086] 
+[  240.020086] Bus freq set to 24000000 start...
+[  240.020741] 
+[  240.020741] Bus freq set to 24000000 done...
+[  240.605231] 
+[  240.605231] Bus freq set to 400000000 start...
+[  240.605530] 
+[  240.605530] Bus freq set to 400000000 done...
+[  242.019181] 
+[  242.019181] Bus freq set to 24000000 start...
+[  242.019448] 
+[  242.019448] Bus freq set to 24000000 done...
+[  242.604989] 
+[  242.604989] Bus freq set to 400000000 start...
+[  242.605281] 
+[  242.605281] Bus freq set to 400000000 done...
+[  244.019221] 
+[  244.019221] Bus freq set to 24000000 start...
+[  244.019498] 
+[  244.019498] Bus freq set to 24000000 done...
+[  244.325612] 
+[  244.325612] Bus freq set to 400000000 start...
+[  244.325913] 
+[  244.325913] Bus freq set to 400000000 done...
+[  245.019186] 
+[  245.019186] Bus freq set to 24000000 start...
+[  245.019467] 
+[  245.019467] Bus freq set to 24000000 done...
+[  245.605186] 
+[  245.605186] Bus freq set to 400000000 start...
+[  245.605462] 
+[  245.605462] Bus freq set to 400000000 done...
+[  246.519181] 
+[  246.519181] Bus freq set to 24000000 start...
+[  246.519463] 
+[  246.519463] Bus freq set to 24000000 done...
+[  247.025202] 
+[  247.025202] Bus freq set to 400000000 start...
+[  247.025513] 
+[  247.025513] Bus freq set to 400000000 done...
+[  250.549033] 
+[  250.549033] Bus freq set to 24000000 start...
+[  250.549309] 
+[  250.549309] Bus freq set to 24000000 done...
+[  250.906093] 
+[  250.906093] Bus freq set to 400000000 start...
+[  250.906390] 
+[  250.906390] Bus freq set to 400000000 done...
+[  252.549054] 
+[  252.549054] Bus freq set to 24000000 start...
+[  252.549341] 
+[  252.549341] Bus freq set to 24000000 done...
+[  252.624109] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -6, cc_delta_cap_now is -68, last_cc_delta_cap is -62
+[  252.624654] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is 0, after temp_cc_delta_cap_mas is -309, cc_cap_mas -22072
+[  252.625376] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 90, dsoc is 9942, capnow is 10000, capzero is 0, delta cc is -5, delta cc ori is -6
+[  252.625798] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -438, offset_mas is -129, value is -540, final value is -5
+[  252.632984] 
+[  252.632984] Bus freq set to 400000000 start...
+[  252.633140] 
+[  252.633140] Bus freq set to 400000000 done...
+[  252.634788] PMU : set_current_time2register : second is 1325554935, hour is 368209
+[  252.638259] PMU:STATUS= 7: IBAT= -41: VSYS= 4140500: VBAT= 4151075: DSOC= 9942: RSOC= 9956: cc_delta=-44: rrf= 0
+[  254.428953] 
+[  254.428953] Bus freq set to 24000000 start...
+[  254.429199] 
+[  254.429199] Bus freq set to 24000000 done...
+[  255.298484] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  255.299724] PMU2: Watchdog timeout triggered. ===============
+[  255.306643] 
+[  255.306643] Bus freq set to 400000000 start...
+[  255.306800] 
+[  255.306800] Bus freq set to 400000000 done...
+[  256.548964] 
+[  256.548964] Bus freq set to 24000000 start...
+[  256.549212] 
+[  256.549212] Bus freq set to 24000000 done...
+[  261.195568] 
+[  261.195568] Bus freq set to 400000000 start...
+[  261.195841] 
+[  261.195841] Bus freq set to 400000000 done...
+[  261.296723] PM: Syncing filesystems ... done.
+[  261.298298] PM: Preparing system for mem sleep
+[  261.299960] Freezing user space processes ... (elapsed 0.001 seconds) done.
+[  261.301688] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[  261.303022] PM: Entering mem sleep
+[  261.320179] PMU: ricoh61x_battery_suspend START ================================================================================
+[  261.334491] PMU: cc_sum = 22591: cc_cap_res= 30: cc_cap_mas = -2006270556
+[  261.334506] PMU: cc_cap_offset= -30: 
+[  261.334519] PMU : ricoh61x_battery_suspend : Suspend : temp_cc_delta_cap_mas is -957, cc_delta is -22591, last_cc_delta_cap_mas is -22072
+[  261.346751] PMU FG_RESET : calc_capacity_2 : capacity 9900 init_pswr 99 cc_delta 0
+[  261.353600] PMU: ricoh61x_battery_suspend status(7), rrf(0), suspend_soc(9942), suspend_cc(0)
+[  261.353613] PMU: ricoh61x_battery_suspend DSOC(9942), init_pswr(99), cc_delta(-69)
+[  261.355341] PMU : set_current_time2register : second is 1325554957, hour is 368209
+[  261.383861] PMU FG_RESET : calc_capacity_2 : capacity 9900 init_pswr 99 cc_delta 0
+[  261.390713] PMU: ricoh61x_battery_suspend : STATUS(7), DSOC(9942), RSOC(9900), init_pswr*100(9900), cc_delta(0) ====================
+[  261.390727] PMU: ricoh61x_battery_suspend : fl_current(0), slp_state(1), sus_current(7420), hiber_current(560)
+[  261.421016] PM: suspend of devices complete after 116.396 msecs
+[  261.421040] PM: suspend devices took 0.120 seconds
+[  262.419028] PM: late suspend of devices complete after 997.954 msecs
+[  262.421527] PM: noirq suspend of devices complete after 2.465 msecs
+[  262.421545] Disabling non-boot CPUs ...
+[  262.421555] Turn off M/F mix!
+[  262.423192] PM: noirq resume of devices complete after 1.536 msecs
+[  262.424245] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[  262.426477] IRQ gpio=0, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[  262.429131] IRQ gpio=1, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0x8,when interrupt is comming
+[  262.431751] IRQ gpio=1, IN_TEN_SYS=0x91,PWR_ON_TIMES=0x5b,int_sts=0x2,when interrupt is comming
+[  262.433795] PMU:charger_usb_isr
+[  262.454409] PM: early resume of devices complete after 30.800 msecs
+[  262.457074] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[  262.491052] EPD QOS_WR 0x7, QOS_RD 0x7
+[  262.491113] ntx_power_key_hook():state=0
+[  262.491420] elan ts starts in interrupt mode.
+[  262.517531] PMU: ricoh61x_battery_resume START ================================================================================
+[  262.518858] PMU : ricoh61x_battery_resume :  suspend_period_time is 204, sleepExitTime is 1325555161 sleepEntryTime is 1325554957 ==========
+[  262.520471] PMU : ricoh61x_battery_resume :  RICOH61x_INT_IR_ADCL 0x00
+[  262.529287] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(726)[mAs], cc_sum_dec(-726)
+[  262.533319] PMU: ricoh61x_battery_resume : Discharge Processing (rrf=0)
+[  262.533337] PMU : calc_cc_value_by_sleepPeriod : delta_cap is 114240 [uAs], Period is 204 [s], fa_cap is 898 [mAh], delta_soc is 0 [0.01%], offset is 114240 [uAs]
+[  262.533349] PMU: calc_soc_by_currentMethod Hibernate(S/W) hiber_current(560), cc_delta(0) ----------
+[  262.533359] PMU : calc_soc_by_currentMethod : slp_state is 1, soc is 9942 [0.01%]  ----------
+[  262.535656] ==== calc_soc_by_voltageMethod E60U22 ====
+[  262.541416] PMU : calc_soc_by_voltageMethod : VBAT is 4152600 [uV], soc is 9900 [0.01%] ----------
+[  262.541431] PMU: ricoh61x_battery_resume : soc_current(9942), soc_voltage(9900), Diff(42), is_low_current(1), Cnt_ApplyVolMethod (0) ==========
+[  262.543796] PMU: update_rsoc_on_currentMethod : Current Method. state(7), dsoc(9942), rsoc(9900), init_pswr(99), cc_delta(0) ----------
+[  262.556782] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 99 cc_delta 0
+[  262.564162] PMU:check_charge_status_2 Resume Sus_soc(9942), cc(0)
+[  262.565893] PMU : set_current_time2register : second is 1325555161, hour is 368209
+[  262.597862] PMU FG_RESET : calc_capacity_2 : capacity 9900 init_pswr 99 cc_delta 0
+[  262.604680] PMU: ricoh61x_battery_resume : STATUS(7), DSOC(9942), RSOC(9900), init_pswr*100(9900), cc_delta(0) ====================
+[  262.629108] lm3630a_bank_a_update_status():FL PWR[ON] 
+[  262.649665] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[  262.652285] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x4,when interrupt is comming
+[  262.655457] IRQ gpio=1, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x1,when interrupt is comming
+[  262.689600] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+[  262.692143] usb plugged 1
+[  262.694906] PMU:_config_ricoh619_charger_params set SDP 500mA charging. (type 1)
+[  262.711701] [elan_touch_report_data-603] Hello packet 55:55:55:55:ff:ff:ff:ff received
+[  262.900050] PM: resume of devices complete after 445.604 msecs
+[  262.901757] PM: resume devices took 0.450 seconds
+[  262.901776] PM: Finishing wakeup.
+[  262.901786] Restarting tasks ... done.
+[  263.277198] g_ether gadget: high-speed config #1: CDC Ethernet (ECM)
+[  263.770919] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is -1, cc_delta_cap_now is 1, last_cc_delta_cap is 0
+[  263.770951] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is -2, after temp_cc_delta_cap_mas is -311, cc_cap_mas 441
+[  263.770983] PMU: mainFlowOfLowVoltage :      No9 :Cap is 10050 , low_rate is 90, dsoc is 9942, capnow is 10000, capzero is 0, delta cc is 0, delta cc ori is -1
+[  263.771003] PMU: mainFlowOfLowVoltage :      No10 :temp_mas is -601, offset_mas is -290, value is -90, final value is 0
+[  263.773223] PMU : set_current_time2register : second is 1325555163, hour is 368209
+[  263.777390] PMU:STATUS= 7: IBAT= -3: VSYS= 4141000: VBAT= 4152600: DSOC= 9942: RSOC= 9900: cc_delta=0: rrf= 0
+[  266.624128] imx_epdc_v2_fb 228c000.epdc: Ignoring collision withnewer update.
+[  292.887804] PMU: mainFlowOfLowVoltage :      Noxx : cc_delta_cap is 12, cc_delta_cap_now is 14, last_cc_delta_cap is 1
+[  292.887836] PMU: mainFlowOfLowVoltage :      Noxx : temp_cc_delta_cap is -1, after temp_cc_delta_cap_mas is -278, cc_cap_mas 4683
+[  292.901468] PMU FG_RESET : calc_capacity : capacity 99 init_pswr 99 cc_delta 14
+[  292.923065] PMU FG_RESET : calc_capacity_2 : capacity 9914 init_pswr 99 cc_delta 14
+[  292.932228] PMU : set_current_time2register : second is 1325555192, hour is 368209
+[  292.945777] PMU calc_capacity_in_period 1%FACAP(32328)[mAs], cc_sum(4683)[mAs], cc_sum_dec(4683)
+[  292.950596] PMU: ricoh61x_displayed_work Half-Clear CC, init_pswr(99), cc_delta(14)
+[  292.950622] PMU:STATUS= 4: IBAT= 144: VSYS= 4308000: VBAT= 4098225: DSOC= 9914: RSOC= 9914: cc_delta=14: rrf= 0
+[  294.446852] IRQ gpio=0, IN_TEN_SYS=0xd1,PWR_ON_TIMES=0x5b,int_sts=0x40,when interrupt is comming
+[  294.446906] PMU2: Watchdog timeout triggered. ===============

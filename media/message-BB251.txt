@@ -1,0 +1,22 @@
+write(1, "(initrd) Hit ENTER to stop auto-"..., 41(initrd) Hit ENTER to stop auto-boot ... ) = 41
+select(1, [0], NULL, NULL, {3, 0})      = 0 (Timeout)                                                                 
+write(1, "\n", 1                                                                                                      
+)                       = 1                                                                                           
+write(1, "\n", 1                                                                                                      
+)                       = 1                                                                                           
+openat(AT_FDCWD, "/dev/mmcblk0", O_RDONLY) = 4                                                                        
+_llseek(4, 40894464, [40894464], SEEK_SET) = 0                                                                        
+read(4, "rooted", 6)                    = 6                                                                           
+close(4)                                = 0                                                                           
+write(1, "rooted\4\n", 8rooted                                                                                        
+)               = 8                                                                                                   
+access("/opt/root", F_OK)               = 0                                                                           
+openat(AT_FDCWD, "/opt/root", O_RDONLY) = 4                                                                           
+fstat64(4, {st_mode=S_IFREG|0644, st_size=7, ...}) = 0                                                                
+fstat64(4, {st_mode=S_IFREG|0644, st_size=7, ...}) = 0                                                                
+_llseek(4, 0, [0], SEEK_SET)            = 0                                                                           
+read(4, "rooted\n", 7)                  = 7                                                                           
+_llseek(4, 7, [7], SEEK_SET)            = 0                                                                           
+close(4)                                = 0                                                                           
+write(1, "\33[1m\33[33m * \33[0mDevice is rooted"..., 64 * Device is rooted; not enforcing security policy        
+) = 64

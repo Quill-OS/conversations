@@ -1,0 +1,63 @@
+nicolas@gentoo-ryzen /tmp> gdb
+GNU gdb (Gentoo 13.1.90_p20230429 vanilla) 13.1.90.20230429-git
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-pc-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://bugs.gentoo.org/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) file kill_process
+Reading symbols from kill_process...
+(gdb) start
+Temporary breakpoint 1 at 0x1575: file kill_process.c, line 85.
+Starting program: /tmp/kill_process 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+Temporary breakpoint 1, main () at kill_process.c:85
+85		kill_process("busybox", SIGTERM);
+(gdb) step
+kill_process (name=0x555555556014 "busybox", signal=15) at kill_process.c:12
+12		int pid = get_pid_by_name(name);
+(gdb) step
+get_pid_by_name (name=0x555555556014 "busybox") at kill_process.c:18
+18	int get_pid_by_name(const char * name) {
+(gdb) step
+19		struct dirent * entry = NULL;
+(gdb) step
+20		DIR * dp = NULL;
+(gdb) step
+22		const char proc[] = "/proc";
+(gdb) step
+23		dp = opendir(proc);
+(gdb) step
+24		while((entry = readdir(dp))) {
+(gdb) step
+26			char cmdline_file[1024] = { 0 };
+(gdb) step
+27			sprintf(cmdline_file, "%s%s/cmdline", proc, entry->d_name);
+(gdb) step
+28			char * cmdline = read_file(cmdline_file, false);
+(gdb) step
+read_file (file_path=0x7fffffffd8e0 "/proc./cmdline", strip_newline=false) at kill_process.c:46
+46		if(access(file_path, F_OK) != 0) {
+(gdb) step
+47			return NULL;
+(gdb) step
+82	}
+(gdb) step
+get_pid_by_name (name=0x555555556014 "busybox") at kill_process.c:30
+30			if(strstr(cmdline, name)) {
+(gdb) step
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff7f1729f in ?? () from /lib64/libc.so.6
+(gdb)

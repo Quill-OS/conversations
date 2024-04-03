@@ -1,0 +1,125 @@
+kindle:~# rm /tmp/inkbox; wget 192.168.3.1:8000/inkbox -O /tmp/inkbox; chmod +x /tmp/inkbox; umount -l -f /kobo/mnt/onboard/.adds/inkbox/inkbox-bin; mount --bind /tmp/inkbox /kobo/mnt/onboard/.adds/inkbox/inkbox-bin; killall inkbox-bin 
+inkbox inkbox.sh; env QT_QPA_PLATFORM=kobo QT_LOGGING_RULES=qt.qpa.input=true chroot /kobo /mnt/onboard/.adds/inkbox/inkbox.sh
+--1970-01-01 07:20:04--  http://192.168.3.1:8000/inkbox
+Connecting to 192.168.3.1:8000... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6288688 (6.0M) [application/octet-stream]
+Saving to: '/tmp/inkbox'
+
+/tmp/inkbox                                                100%[========================================================================================================================================>]   6.00M  16.6MB/s    in 0.4s    
+
+1970-01-01 07:20:05 (16.6 MB/s) - '/tmp/inkbox' saved [6288688/6288688]
+
+killall: inkbox-bin: no process killed
+killall: inkbox: no process killed
+killall: inkbox.sh: no process killed
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+[FBInk] Rotation quirks are only handled on Kobo!
+[FBInk] [fbink_set_fb_info] Unsupported rotation value: 38!
+Failed to set rotation and bpp: -22
+[FBInk] Rotation quirks are only handled on Kobo!
+qt.qpa.input: evdevtouch: Adding device at /dev/input/event2
+qt.qpa.input: "swapxy:invertx:hw_range_x_max=800:hw_range_y_max=600:screenwidth=600:screenheight=800:screenrotation=3420"
+qt.qpa.input: evdevtouch: Using device /dev/input/event2
+qt.qpa.input: evdevtouch: /dev/input/event2: Protocol type B (multi), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event2: min X: 0 max X: 4095
+qt.qpa.input: evdevtouch: overwriting touch x max: 800
+qt.qpa.input: evdevtouch: /dev/input/event2: min Y: 0 max Y: 4095
+qt.qpa.input: evdevtouch: overwriting touch y max: 600
+qt.qpa.input: evdevtouch: /dev/input/event2: min pressure: 0 max pressure: 0
+qt.qpa.input: evdevtouch: /dev/input/event2: device name: zforce
+kobofb: Finished initialization.
+qt.qpa.input: evdevtouch: Updating QInputDeviceManager device count: 1 touch devices, 0 pending handler(s)
+qt.qpa.input: EV_ABS TRACKING_ID  0
+qt.qpa.input: EV_ABS TRACKING_ID != -1 touch point pressed
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: EV_ABS MT_POS_X 2600
+qt.qpa.input: EV_ABS MT_POS_X Type B
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: EV_ABS MT_POS_Y 3857
+qt.qpa.input: EV_ABS MT_POS_Y Type B
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Adding touch point: 0 -1
+qt.qpa.input: Touchpoint raw position: QPointF(800,600)
+qt.qpa.input: Touchpoint normal position: QPointF(1,1)
+qt.qpa.input: Touchpoint transformed normal position: QPointF(1,0)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(595,-4 8x8) normalized QPointF(1,0) press 1 vel QVector2D(0, 0) state 1 Qt::TouchPointPressed
+qt.qpa.input: Contact state: Qt::TouchPointStationary
+qt.qpa.input: EV_ABS MT_POS_X 2609
+qt.qpa.input: EV_ABS MT_POS_X Type B
+qt.qpa.input: Contact state: Qt::TouchPointMoved
+qt.qpa.input: EV_ABS MT_POS_Y 3860
+qt.qpa.input: EV_ABS MT_POS_Y Type B
+qt.qpa.input: Contact state: Qt::TouchPointMoved
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Adding touch point: 0 -1
+qt.qpa.input: Touchpoint raw position: QPointF(800,600)
+qt.qpa.input: Touchpoint normal position: QPointF(1,1)
+qt.qpa.input: Touchpoint transformed normal position: QPointF(1,0)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(595,-4 8x8) normalized QPointF(1,0) press 1 vel QVector2D(0, 0) state 2 Qt::TouchPointMoved
+qt.qpa.input: Contact state: Qt::TouchPointStationary
+qt.qpa.input: EV_ABS TRACKING_ID  -1
+qt.qpa.input: EV_ABS TRACKING_ID = -1 touch point released
+qt.qpa.input: Contact state: Qt::TouchPointReleased
+qt.qpa.input: Contact state: Qt::TouchPointReleased
+qt.qpa.input: Contact state: Qt::TouchPointReleased
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Adding touch point: 0 -1
+qt.qpa.input: Touchpoint raw position: QPointF(800,600)
+qt.qpa.input: Touchpoint normal position: QPointF(1,1)
+qt.qpa.input: Touchpoint transformed normal position: QPointF(1,0)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(595,-4 8x8) normalized QPointF(1,0) press 0 vel QVector2D(0, 0) state 8 Qt::TouchPointReleased
+qt.qpa.input: Contact state: Qt::TouchPointState(0)
+qt.qpa.input: EV_ABS TRACKING_ID  0
+qt.qpa.input: EV_ABS TRACKING_ID != -1 touch point pressed
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: EV_ABS MT_POS_X 2663
+qt.qpa.input: EV_ABS MT_POS_X Type B
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: EV_ABS MT_POS_Y 3874
+qt.qpa.input: EV_ABS MT_POS_Y Type B
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: Contact state: Qt::TouchPointPressed
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Adding touch point: 0 -1
+qt.qpa.input: Touchpoint raw position: QPointF(800,600)
+qt.qpa.input: Touchpoint normal position: QPointF(1,1)
+qt.qpa.input: Touchpoint transformed normal position: QPointF(1,0)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(595,-4 8x8) normalized QPointF(1,0) press 1 vel QVector2D(0, 0) state 1 Qt::TouchPointPressed
+qt.qpa.input: Contact state: Qt::TouchPointStationary
+qt.qpa.input: EV_ABS MT_POS_X 2659
+qt.qpa.input: EV_ABS MT_POS_X Type B
+qt.qpa.input: Contact state: Qt::TouchPointMoved
+qt.qpa.input: EV_ABS MT_POS_Y 3887
+qt.qpa.input: EV_ABS MT_POS_Y Type B
+qt.qpa.input: Contact state: Qt::TouchPointMoved
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Adding touch point: 0 -1
+qt.qpa.input: Touchpoint raw position: QPointF(800,600)
+qt.qpa.input: Touchpoint normal position: QPointF(1,1)
+qt.qpa.input: Touchpoint transformed normal position: QPointF(1,0)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(595,-4 8x8) normalized QPointF(1,0) press 1 vel QVector2D(0, 0) state 2 Qt::TouchPointMoved
+qt.qpa.input: Contact state: Qt::TouchPointStationary
+qt.qpa.input: EV_ABS TRACKING_ID  -1
+qt.qpa.input: EV_ABS TRACKING_ID = -1 touch point released
+qt.qpa.input: Contact state: Qt::TouchPointReleased
+qt.qpa.input: Contact state: Qt::TouchPointReleased
+qt.qpa.input: Contact state: Qt::TouchPointReleased
+qt.qpa.input: EV_SYN SYN_REPORT
+qt.qpa.input: Adding touch point: 0 -1
+qt.qpa.input: Touchpoint raw position: QPointF(800,600)
+qt.qpa.input: Touchpoint normal position: QPointF(1,1)
+qt.qpa.input: Touchpoint transformed normal position: QPointF(1,0)
+qt.qpa.input: Screen rect: QRect(0,0 600x800)
+qt.qpa.input: Registering touch point: TouchPoint(0 @QRectF(595,-4 8x8) normalized QPointF(1,0) press 0 vel QVector2D(0, 0) state 8 Qt::TouchPointReleased
+qt.qpa.input: Contact state: Qt::TouchPointState(0)

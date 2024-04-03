@@ -1,0 +1,173 @@
+~/code$ binwalk -B sd_card_PRS-T1_1.0.07_adb_enabled.bin
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+3921          0xF51           Unix path: /home/hudson/slave/workspace/build_sydney_gen_pwr3_production/bootable/bootloader/uboot-imx/cpu/arm_cortexa8
+137388        0x218AC         CRC32 polynomial table, little endian
+169017        0x29439         Unix path: /opt/eldk/arm
+1048576       0x100000        uImage header, header size: 64 bytes, header CRC: 0xC62947B6, created: 2014-05-07 06:23:24, image size: 2288064 bytes, Data Address: 0x70008000, Entry Point: 0x70008000, data CRC: 0xE71034E4, OS: Linux, CPU: ARM, image type: OS Kernel Image, compression type: none, image name: "Normal Kernel"
+1048640       0x100040        Linux kernel ARM boot executable zImage (little-endian)
+1065353       0x104189        gzip compressed data, maximum compression, from Unix, last modified: 2014-05-07 06:03:56
+5242880       0x500000        uImage header, header size: 64 bytes, header CRC: 0x81959F98, created: 2020-04-26 18:13:04, image size: 286848 bytes, Data Address: 0x70308000, Entry Point: 0x70308000, data CRC: 0x47F3B07F, OS: Linux, CPU: ARM, image type: RAMDisk Image, compression type: none, image name: "Normal Rootfs"
+5242944       0x500040        gzip compressed data, from Unix, last modified: 2020-04-26 18:11:40
+6291456       0x600000        uImage header, header size: 64 bytes, header CRC: 0x91DDBCA9, created: 2011-09-27 00:54:19, image size: 2284836 bytes, Data Address: 0x70008000, Entry Point: 0x70008000, data CRC: 0xCB85C7A2, OS: Linux, CPU: ARM, image type: OS Kernel Image, compression type: none, image name: "Recovery Kernel"
+6291520       0x600040        Linux kernel ARM boot executable zImage (little-endian)
+6308233       0x604189        gzip compressed data, maximum compression, from Unix, last modified: 2011-09-27 00:34:34
+16122880      0xF60400        PEM RSA private key
+20950321      0x13FAD31       Unix path: /sys/class/rfkill/rfkill0/type) failed: No such file or directory (2)
+20955380      0x13FC0F4       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+20955567      0x13FC1AF       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+21193781      0x1436435       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+21193968      0x14364F0       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+21226147      0x143E2A3       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+21226334      0x143E35E       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+21275250      0x144A272       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+21275437      0x144A32D       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+21394155      0x14672EB       Intel x86 or x64 microcode, sig 0x6e72654b, pf_mask 0x206f4e20, 2090-04-29, rev 0x-7c000000, size 1919903264
+23794958      0x16B150E       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+23795145      0x16B15C9       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+23820741      0x16B79C5       Unix path: /dev/block/vold/179:10 does not contain a FAT filesystem
+23821173      0x16B7B75       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+23821360      0x16B7C30       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+23840940      0x16BC8AC       Unix path: /dev/block/vold/179:10 does not contain a FAT filesystem
+23841128      0x16BC968       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+23841315      0x16BCA23       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+23877426      0x16C5732       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+23877613      0x16C57ED       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+23931364      0x16D29E4       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+23931551      0x16D2A9F       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+23990688      0x16E11A0       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+23990875      0x16E125B       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+24027527      0x16EA187       Unix path: /sys/class/rfkill/rfkill0/type) failed: No such file or directory (2)
+24031919      0x16EB2AF       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+24032106      0x16EB36A       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+24070136      0x16F47F8       Unix path: /sys/class/rfkill/rfkill0/type) failed: No such file or directory (2)
+24074528      0x16F5920       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+24074715      0x16F59DB       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+24112355      0x16FECE3       Unix path: /sys/class/rfkill/rfkill0/type) failed: No such file or directory (2)
+24116747      0x16FFE0B       Unix path: /dev/block/vold/179:9 does not contain a FAT filesystem
+24116934      0x16FFEC6       Unix path: /dev/block/vold/179:8 does not contain a FAT filesystem
+24150738      0x17082D2       Unix path: /sys/class/rfkill/rfkill0/type) failed: No such file or directory (2)
+26214400      0x1900000       Linux EXT filesystem, blocks count: 10240, image size: 10485760, rev 0.0, ext4 filesystem data, UUID=fd4953cc-74e3-40b8-b300-7a90e7cae7ca, volume name "Recovery"
+36700160      0x2300000       CramFS filesystem, little endian, size: 7667712, version 2, sorted_dirs, CRC 0xFE1B1DBA, edition 0, 4321 blocks, 576 files
+47194112      0x2D02000       CramFS filesystem, little endian, size: 12984320, version 2, sorted_dirs, CRC 0x8DD1DAAD, edition 0, 4687 blocks, 45 files
+64004096      0x3D0A000       Linux EXT filesystem, blocks count: 137250, image size: 140544000, rev 0.0, ext2 filesystem data, UUID=ecab395c-586a-4667-91ec-a677f0cff0cf, volume name "dictionaries"
+206684672     0xC51C200       Microsoft executable, portable (PE)
+207206400     0xC59B800       Copyright string: "Copyright (c) 1992-2004 by P.J. Plauger, licensed by Dinkumware, Ltd. ALL RIGHTS RESERVED."
+207233544     0xC5A2208       Object signature in DER format (PKCS header length: 4, sequence length: 5936
+207233693     0xC5A229D       Certificate in DER format (x509 v3), header length: 4, sequence length: 1120
+207234817     0xC5A2701       Certificate in DER format (x509 v3), header length: 4, sequence length: 1146
+207235967     0xC5A2B7F       Certificate in DER format (x509 v3), header length: 4, sequence length: 1181
+207237152     0xC5A3020       Certificate in DER format (x509 v3), header length: 4, sequence length: 1181
+207239680     0xC5A3A00       Microsoft executable, portable (PE)
+207866376     0xC63CA08       Object signature in DER format (PKCS header length: 4, sequence length: 5949
+207866525     0xC63CA9D       Certificate in DER format (x509 v3), header length: 4, sequence length: 1120
+207867649     0xC63CF01       Certificate in DER format (x509 v3), header length: 4, sequence length: 1146
+207868799     0xC63D37F       Certificate in DER format (x509 v3), header length: 4, sequence length: 1181
+207869984     0xC63D820       Certificate in DER format (x509 v3), header length: 4, sequence length: 1194
+207872512     0xC63E200       XML document, version: "1.0"
+207874560     0xC63EA00       Microsoft executable, portable (PE)
+208206344     0xC68FA08       Object signature in DER format (PKCS header length: 4, sequence length: 5456
+208206493     0xC68FA9D       Certificate in DER format (x509 v3), header length: 4, sequence length: 890
+208207387     0xC68FE1B       Certificate in DER format (x509 v3), header length: 4, sequence length: 964
+208208355     0xC6901E3       Certificate in DER format (x509 v3), header length: 4, sequence length: 1276
+208209635     0xC6906E3       Certificate in DER format (x509 v3), header length: 4, sequence length: 1290
+208209796     0xC690784       Digi International firmware, load address: 0x204D6963, entry point: 0x66742053,
+208212483     0xC691203       XML document, version: "1.0"
+208214528     0xC691A00       Microsoft executable, portable (PE)
+208314880     0xC6AA200       XML document, version: "1.0"
+208316928     0xC6AAA00       XML document, version: "1.0"
+208323072     0xC6AC200       PNG image, 52 x 9, 8-bit/color RGBA, non-interlaced
+208325120     0xC6ACA00       JPEG image data, JFIF standard 1.02
+208333312     0xC6AEA00       PNG image, 56 x 11, 8-bit colormap, non-interlaced
+208335360     0xC6AF200       PNG image, 140 x 128, 8-bit/color RGBA, non-interlaced
+208335488     0xC6AF280       Zlib compressed data, compressed
+208339456     0xC6B0200       PNG image, 76 x 36, 8-bit/color RGBA, non-interlaced
+208339541     0xC6B0255       Zlib compressed data, best compression
+208342213     0xC6B0CC5       Zlib compressed data, best compression
+208343552     0xC6B1200       PNG image, 300 x 32, 8-bit/color RGBA, non-interlaced
+208343630     0xC6B124E       Zlib compressed data, best compression
+208345600     0xC6B1A00       PNG image, 26 x 72, 8-bit/color RGBA, non-interlaced
+208347648     0xC6B2200       PNG image, 56 x 11, 8-bit/color RGBA, non-interlaced
+208349696     0xC6B2A00       XML document, version: "1.0"
+208351744     0xC6B3200       XML document, version: "1.0"
+208353792     0xC6B3A00       XML document, version: "1.0"
+208355840     0xC6B4200       XML document, version: "1.0"
+208364032     0xC6B6200       XML document, version: "1.0"
+208364908     0xC6B656C       Copyright string: "Copyright</key>"
+208370368     0xC6B7AC0       Unix path: /usr/lib/dyld
+208385634     0xC6BB662       Unix path: /usr/bin/hdiutil
+208441856     0xC6C9200       XML document, version: "1.0"
+208443904     0xC6C9A00       PNG image, 300 x 32, 8-bit/color RGBA, non-interlaced
+208443982     0xC6C9A4E       Zlib compressed data, best compression
+208468480     0xC6CFA00       PNG image, 76 x 36, 8-bit/color RGBA, non-interlaced
+208468565     0xC6CFA55       Zlib compressed data, best compression
+208471237     0xC6D04C5       Zlib compressed data, best compression
+208579072     0xC6EAA00       Microsoft executable, portable (PE)
+208920276     0xC73DED4       PNG image, 256 x 256, 8-bit/color RGBA, non-interlaced
+208920317     0xC73DEFD       Zlib compressed data, best compression
+208998912     0xC751200       JPEG image data, JFIF standard 1.01
+209000960     0xC751A00       SQLite 3.x database,, user version 14
+209005056     0xC752A00       JPEG image data, JFIF standard 1.01
+209006604     0xC75300C       SQLite 3.x database,
+209007104     0xC753200       JPEG image data, JFIF standard 1.01
+209037824     0xC75AA00       JPEG image data, JFIF standard 1.01
+209039872     0xC75B200       SQLite 3.x database,, user version 14
+209043968     0xC75C200       JPEG image data, JFIF standard 1.01
+209046016     0xC75CA00       JPEG image data, JFIF standard 1.01
+209058304     0xC75FA00       JPEG image data, JFIF standard 1.01
+209070365     0xC76291D       JPEG image data, JFIF standard 1.01
+209072640     0xC763200       JPEG image data, JFIF standard 1.01
+209094701     0xC76882D       JPEG image data, JFIF standard 1.01
+209097216     0xC769200       JPEG image data, JFIF standard 1.01
+209106749     0xC76B73D       JPEG image data, JFIF standard 1.01
+209109504     0xC76C200       JPEG image data, JFIF standard 1.01
+209120845     0xC76EE4D       JPEG image data, JFIF standard 1.01
+209123840     0xC76FA00       JPEG image data, JFIF standard 1.01
+209132893     0xC771D5D       JPEG image data, JFIF standard 1.01
+209136128     0xC772A00       JPEG image data, JFIF standard 1.01
+209144941     0xC774C6D       JPEG image data, JFIF standard 1.01
+209146368     0xC775200       JPEG image data, JFIF standard 1.01
+209156989     0xC777B7D       JPEG image data, JFIF standard 1.01
+209160704     0xC778A00       JPEG image data, JFIF standard 1.01
+209169037     0xC77AA8D       JPEG image data, JFIF standard 1.01
+209170944     0xC77B200       JPEG image data, JFIF standard 1.01
+209181085     0xC77D99D       JPEG image data, JFIF standard 1.01
+209183232     0xC77E200       JPEG image data, JFIF standard 1.01
+209193133     0xC7808AD       JPEG image data, JFIF standard 1.01
+209207808     0xC784200       JPEG image data, JFIF standard 1.01
+209209856     0xC784A00       JPEG image data, JFIF standard 1.01
+209216000     0xC786200       JPEG image data, JFIF standard 1.01
+209220096     0xC787200       JPEG image data, JFIF standard 1.01
+209222144     0xC787A00       JPEG image data, JFIF standard 1.01
+209226240     0xC788A00       JPEG image data, JFIF standard 1.01
+209230336     0xC789A00       JPEG image data, JFIF standard 1.01
+209236480     0xC78B200       JPEG image data, JFIF standard 1.01
+209238528     0xC78BA00       JPEG image data, JFIF standard 1.01
+209240576     0xC78C200       JPEG image data, JFIF standard 1.01
+209244672     0xC78D200       JPEG image data, JFIF standard 1.01
+209248768     0xC78E200       JPEG image data, JFIF standard 1.01
+209252864     0xC78F200       JPEG image data, JFIF standard 1.01
+209256960     0xC790200       JPEG image data, JFIF standard 1.01
+209259008     0xC790A00       JPEG image data, JFIF standard 1.01
+209261056     0xC791200       JPEG image data, JFIF standard 1.01
+209263104     0xC791A00       JPEG image data, JFIF standard 1.01
+209265152     0xC792200       JPEG image data, JFIF standard 1.01
+209269248     0xC793200       JPEG image data, JFIF standard 1.01
+209271296     0xC793A00       JPEG image data, JFIF standard 1.01
+209273344     0xC794200       JPEG image data, JFIF standard 1.01
+209275392     0xC794A00       JPEG image data, JFIF standard 1.01
+209277440     0xC795200       JPEG image data, JFIF standard 1.01
+209279488     0xC795A00       JPEG image data, JFIF standard 1.01
+217161728     0xCF1A000       Linux EXT filesystem, blocks count: 36739, image size: 37620736, rev 0.0, ext2 filesystem data, UUID=72c0c5fc-6229-443f-96d1-0278739f739f, volume name "preload"
+259137536     0xF722000       Linux EXT filesystem, blocks count: 49153, image size: 50332672, rev 1.0, ext4 filesystem data, UUID=10b2c3e0-6584-48fb-8839-a94797cf97cf, volume name "data"
+309501952     0x1272A000      Linux EXT filesystem, blocks count: 1178401, image size: 1206682624, rev 0.0, ext2 filesystem data, UUID=d71243ed-680a-43aa-89ed-4b01162b162b, volume name "system"
+1521335296    0x5AADBC00      gzip compressed data, from Unix, last modified: 1970-01-01 00:00:00 (null date)
+1521339392    0x5AADCC00      Linux EXT filesystem, blocks count: 25600, image size: 26214400, rev 1.0, ext2 filesystem data (mounted or unclean), UUID=ddaa282f-f831-4e1e-a80e-04c2a71da71d
+1547586560    0x5C3E4C00      SQLite 3.x database,, user version 14
+1547592204    0x5C3E620C      SQLite 3.x database,
+1547596300    0x5C3E720C      SQLite 3.x database,
+1547627520    0x5C3EEC00      SQLite 3.x database,, user version 14
+1547633164    0x5C3F020C      SQLite 3.x database,
+1547637260    0x5C3F120C      SQLite 3.x database,
+

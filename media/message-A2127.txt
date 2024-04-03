@@ -1,0 +1,97 @@
+chdir("/system-lib/lib")                = 0
+stat64("/app-temp/cache", {st_mode=S_IFDIR|0755, st_size=60, ...}) = 0
+stat64("/app-temp/cache/esri_default", 0x7edd0040) = -1 ENOENT (No such file or directory)
+chdir("/system-lib/lib")                = 0
+futex(0x2bfcbac8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbacc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbad0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbb74, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbad8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbadc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbaec, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfc93f4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcba38, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfc9990, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfc9488, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbad4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbaf0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getuid32()                              = 1000
+geteuid32()                             = 1000
+getgid32()                              = 1000
+getegid32()                             = 1000
+open("/home/nicolas/x-tools/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/usr/openssl.cnf", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+futex(0x2bfcbae0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/proc/meminfo", O_RDONLY|O_CLOEXEC) = 44
+fstat64(44, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2d4fa000
+read(44, "MemTotal:         254568 kB\nMemF"..., 1024) = 1024
+close(44)                               = 0
+munmap(0x2d4fa000, 4096)                = 0
+futex(0x2be1c49c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2be1c4a0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x2bfcbbb4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getrandom(0x54bb0920, 32, 0)            = -1 ENOSYS (Function not implemented)
+shmget(0x72, 1, 000)                    = 0
+shmat(0, NULL, SHM_RDONLY)              = 0x2d4fa000
+open("/dev/urandom", O_RDONLY)          = -1 ENOENT (No such file or directory)
+open("/dev/random", O_RDONLY)           = -1 ENOENT (No such file or directory)
+open("/dev/hwrng", O_RDONLY)            = -1 ENOENT (No such file or directory)
+open("/dev/srandom", O_RDONLY)          = -1 ENOENT (No such file or directory)
+futex(0x2bfcbb9c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=1261, tv_nsec=188855877}) = 0
+write(41, "\1\0\0\0\0\0\0\0", 8)        = 8
+futex(0x2ba557c8, FUTEX_WAKE_PRIVATE, 1) = 1
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+Random number generator not seeded, disabling SSL support
+qt.network.ssl: QSslSocket::connectToHostEncrypted: TLS initialization failed
+futex(0x54add1dc, FUTEX_CMP_REQUEUE_PRIVATE, 1, 2147483647, 0x54add1c0, 44) = 1
+futex(0x54add1c0, FUTEX_WAKE_PRIVATE, 1) = 1
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=1261, tv_nsec=218454627}) = 0
+ppoll([{fd=34, events=POLLIN}, {fd=32, events=POLLIN}], 2, {tv_sec=0, tv_nsec=0}, NULL, 8) = 1 ([{fd=32, revents=POLLIN}], left {tv_sec=0, tv_nsec=0})
+read(32, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=1261, tv_nsec=219264502}) = 0
+fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2d4fb000
+write(1, "network error: (99) TLS initiali"..., 46network error: (99) TLS initialization failed
+) = 46
+write(2, "Random number generator not seed"..., 58Random number generator not seeded, disabling SSL support
+) = 58
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=1261, tv_nsec=223809252}) = 0
+write(41, "\1\0\0\0\0\0\0\0", 8Random number generator not seeded, disabling SSL support
+qt.network.ssl: QSslSocket::connectToHostEncrypted: TLS initialization failed
+)        = 8
+futex(0x2ba55854, FUTEX_WAKE_PRIVATE, 1) = 1
+write(1, "network error: (99) TLS initiali"..., 46network error: (99) TLS initialization failed
+) = 46
+write(1, "network error: (99) TLS initiali"..., 46network error: (99) TLS initialization failed
+) = 46
+write(1, "network error: (99) TLS initiali"..., 46network error: (99) TLS initialization failed

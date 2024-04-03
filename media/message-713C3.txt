@@ -1,0 +1,45 @@
+kobo-nia:~$ fbi
+
+This program displays images using the Linux framebuffer device.
+Supported formats: PhotoCD, jpeg, ppm, gif, tiff, xwd, bmp, png,
+webp. It tries to use ImageMagick's convert for unknown file formats.
+
+usage: fbi [ options ] file1 file2 ... fileN
+
+    -h  -help               print this help text 
+    -V  -version            print fbi version number 
+    -i  -info               print device info 
+        -store              write cmd line args to config file 
+    -l  -list <arg>         read image filelist from file <arg> 
+    -P  -text               switch into text reading mode 
+    -a  -autozoom           automagically pick useful zoom factor 
+        -(no)autoup           like the above, but upscale only      
+        -(no)autodown         like the above, but downscale only    
+    -w  -(no)fitwidth         use width only for autoscaling        
+    -v  -(no)verbose        show filenames all the time             
+    -u  -(no)random         show files in a random order            
+    -1  -(no)once           don't loop (for use with -t)            
+        -(no)comments       display image comments                  
+    -e  -(no)edit           enable editing commands (see man page)  
+        -(no)backup           create backup files when editing      
+        -(no)preserve         preserve timestamps when editing      
+        -(no)readahead      read ahead images into cache            
+        -cachemem <arg>     image cache size in megabytes           
+        -blend <arg>        image blend time in miliseconds         
+    -T  -vt <arg>           start on virtual console <arg>          
+    -s  -scroll <arg>       scroll image by <arg> pixels            
+    -t  -timeout <arg>      load next image after <arg> sec without user input 
+    -r  -resolution <arg>   pick PhotoCD resolution (1..5)          
+    -f  -font <arg>         use font <arg> (anything fontconfig accepts) 
+    -d  -device <arg>       use framebuffer/drm device <arg>        
+    -o  -output <arg>       use drm output <arg> (try -info for a list) 
+        -(no)interactive    allow keyboard interaction              
+    -m  -mode <arg>         use video mode <arg> (from /etc/fb.modes) 
+
+Large images can be scrolled using the cursor keys.  Zoom in/out
+works with '+' and '-'.  Use ESC or 'q' to quit.  Space and PgDn
+show the next, PgUp shows the previous image. Jumping to a image
+works with <i>g.  Return acts like Space but additionally prints
+prints the filename of the currently displayed image to stdout.
+
+kobo-nia:~$

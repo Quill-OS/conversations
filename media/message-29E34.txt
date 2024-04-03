@@ -1,0 +1,99 @@
+eBR-1A # help 
+?       - alias for 'help'
+autoscr - DEPRECATED - use "source" command instead
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+booti   - booti   - boot android bootimg from memory
+
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+clk     - Clock sub system
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+date    - get/set/reset date & time
+destroyenv- destroy enviroment variables stored in medium
+dhcp    - boot image via network using DHCP/TFTP protocol
+download_mode- download_mode - enter i.MX serial/usb download mode
+echo    - echo args to console
+erase   - erase FLASH memory
+ext2load- load binary file from a Ext2 filesystem
+ext2ls  - list files in a directory (default /)
+ext4load- load binary file from a Ext4 filesystem
+ext4ls  - list files in a directory (default /)
+fastboot- fastboot- use USB Fastboot protocol
+
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+flinfo  - print FLASH memory information
+get_PCBA_id- get_PCBA_id - get PCBA id 
+
+get_droid_ver- get_droid_ver - get android version 
+
+get_epdpmic_ver- get_epdpmic_ver - get EPD PMIC version 
+
+get_up_ver- get_up_ver - get microp version 
+
+go      - start application at address 'addr'
+hallsensor- hallsensor - get hallsensor state .
+
+help    - print online help
+i2c     - I2C sub-system
+iminfo  - print header information for application image
+imxotp  - One-Time Programable sub-system
+imxtract- extract a part of a multi-image
+itest   - return true/false on integer compare
+load_ntxbins- load_ntxbins - netronix binaries load 
+
+load_ntxkernel- load_kernel - netronix kernel image load 
+
+load_ntxrd- load_ntxrd - netronix ramdisk image load 
+
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+md      - memory display
+mf_adc  - mf_adc - get adc value 
+
+mf_key  - mf_key - ntx key test 
+
+mf_rtc  - mf_rtc - rtc date/time set/get 
+
+mf_sd_wp- mf_sd_wp - external sd card info 
+
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mmc     - MMC sub system
+mmcinfo - mmcinfo <dev num>-- display MMC info
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+nandinfo- nandinfo - get nand flash information .
+
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+ntx_prepare_load_kernel- ntx_prepare_load_kernel - prepare to load kernel 
+
+ntxup   - ntxup - netronix microp commands
+
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+rarpboot- boot image via network using RARP/TFTP protocol
+reset   - Perform RESET of the CPU
+ricoh_reg- ricoh_reg -  read / write ricoh register .
+
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+sf      - SPI flash sub-system
+sleep   - delay execution for some time
+source  - run script from memory
+sspi    - SPI utility commands
+tftpboot- boot image via network using TFTP protocol
+version - print monitor version
+wifi_3v3- wifi_3v3 - wifi 3v3 output .

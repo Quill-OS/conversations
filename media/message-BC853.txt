@@ -1,0 +1,69 @@
+pmbootstrap build linux-kobo-clara-mainline --force
+[21:36:33] (native) install bash bc bison devicepkg-dev findutils flex gmp-dev lzop mpc1-dev mpfr-dev openssl-dev perl
+[21:36:37] (native) build armv7/linux-kobo-clara-mainline-6.1.12-r0.apk
+[21:47:19] NOTE: The failed command's output is above the ^^^ line in the log file: /home/pi/.local/var/pmbootstrap/log.txt
+[21:47:19] ERROR: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d -f
+[21:47:19] See also: <https://postmarketos.org/troubleshooting>
+Run 'pmbootstrap log' for details.
+pi@raspberrypi:~ $ pmbootstrap log
+>>> linux-kobo-clara-mainline: Checking sha512sums...
+linux-kobo-clara-mainline-d6a0a4cc5f6fd75a5c6e26e14b2c2d6c94918ff3.tar.gz: OK
+rtl8189ES_linux-476020109b3841421af289a7b78c7a25b0c45fac.tar.gz: OK
+config-kobo-clara-mainline.armv7: OK
+>>> linux-kobo-clara-mainline: Unpacking /var/cache/distfiles/linux-kobo-clara-mainline-d6a0a4cc5f6fd75a5c6e26e14b2c2d6c94918ff3.tar.gz...
+>>> linux-kobo-clara-mainline: Unpacking /var/cache/distfiles/rtl8189ES_linux-476020109b3841421af289a7b78c7a25b0c45fac.tar.gz...
+NOTE: *not* replacing /home/pmos/build/src/linux-d6a0a4cc5f6fd75a5c6e26e14b2c2d6c94918ff3/include/linux/compiler-gcc.h, because of REPLACE_GCCH=0
+make: Entering directory '/home/pmos/build/src/linux-d6a0a4cc5f6fd75a5c6e26e14b2c2d6c94918ff3'
+  GEN     Makefile
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/confdata.o
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/menu.o
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTCC  scripts/kconfig/util.o
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+make: Leaving directory '/home/pmos/build/src/linux-d6a0a4cc5f6fd75a5c6e26e14b2c2d6c94918ff3'
+../scripts/gcc-plugins/arm_ssp_per_task_plugin.c: In function 'unsigned int arm_pertask_ssp_rtl_execute()':
+../scripts/gcc-plugins/arm_ssp_per_task_plugin.c:37:34: error: 'gen_load_tp_hard' was not declared in this scope
+   37 |                 emit_insn_before(gen_load_tp_hard(current), insn);
+      |                                  ^~~~~~~~~~~~~~~~
+make[3]: *** [../scripts/gcc-plugins/Makefile:54: scripts/gcc-plugins/arm_ssp_per_task_plugin.so] Error 1
+make[2]: *** [../scripts/Makefile.build:500: scripts/gcc-plugins] Error 2
+make[1]: *** [/home/pmos/build/src/linux-d6a0a4cc5f6fd75a5c6e26e14b2c2d6c94918ff3/Makefile:1266: scripts] Error 2
+make: *** [Makefile:231: __sub-make] Error 2
+>>> ERROR: linux-kobo-clara-mainline: build failed
+(250020) [21:47:19] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(250020) [21:47:19] NOTE: The failed command's output is above the ^^^ line in the log file: /home/pi/.local/var/pmbootstrap/log.txt
+(250020) [21:47:19] ERROR: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d -f
+(250020) [21:47:19] See also: <https://postmarketos.org/troubleshooting>
+(250020) [21:47:19] Traceback (most recent call last):
+  File "/home/pi/pmbootstrap/pmb/__init__.py", line 52, in main
+    getattr(frontend, args.action)(args)
+  File "/home/pi/pmbootstrap/pmb/helpers/frontend.py", line 115, in build
+    if not pmb.build.package(args, package, arch_package, force,
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 540, in package
+    (output, cmd, env) = run_abuild(args, apkbuild, arch, strict, force, cross,
+  File "/home/pi/pmbootstrap/pmb/build/_package.py", line 467, in run_abuild
+    pmb.chroot.user(args, cmd, suffix, "/home/pmos/build", env=env)
+  File "/home/pi/pmbootstrap/pmb/chroot/user.py", line 26, in user
+    return pmb.chroot.root(args, cmd, suffix, working_dir, output,
+  File "/home/pi/pmbootstrap/pmb/chroot/root.py", line 83, in root
+    return pmb.helpers.run_core.core(args, msg, cmd_sudo, None, output,
+  File "/home/pi/pmbootstrap/pmb/helpers/run_core.py", line 351, in core
+    check_return_code(args, code, log_message)
+  File "/home/pi/pmbootstrap/pmb/helpers/run_core.py", line 221, in check_return_code
+    raise RuntimeError(f"Command failed (exit code {str(code)}): " +
+RuntimeError: Command failed (exit code 1): (native) % cd /home/pmos/build; busybox su pmos -c CARCH=armv7 SUDO_APK='abuild-apk --no-progress' GOCACHE=/home/pmos/.cache/go-build HOME=/home/pmos abuild -D postmarketOS -d -f
+
+(260580) [21:49:41] % tail -n 60 -F /home/pi/.local/var/pmbootstrap/log.txt
+(260580) [21:49:41] *** output passed to pmbootstrap stdout, not to this log ***
+

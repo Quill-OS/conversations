@@ -1,0 +1,1525 @@
+From a4bfd0a0ccb4f633a9b4b6a8d0291b719b8f7d1a Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Mon, 26 Sep 2022 20:56:32 +0200
+Subject: [PATCH] Options to disable dialogs at launch. Its also needed to
+ create those directories in inkbox.sh, so an update there is needed too
+
+---
+ src/homeWidget/mainwindow.cpp |   85 ++-
+ src/settings/settings.cpp     |   35 ++
+ src/settings/settings.h       |    4 +
+ src/settings/settings.ui      | 1024 +++++++++++++++++----------------
+ 4 files changed, 615 insertions(+), 533 deletions(-)
+
+diff --git a/src/homeWidget/mainwindow.cpp b/src/homeWidget/mainwindow.cpp
+index 4b3406f..3cf70e2 100644
+--- a/src/homeWidget/mainwindow.cpp
++++ b/src/homeWidget/mainwindow.cpp
+@@ -139,7 +139,12 @@ MainWindow::MainWindow(QWidget *parent)
+         wifiIconTimer->setInterval(2500);
+         connect(wifiIconTimer, SIGNAL(timeout()), this, SLOT(updateWifiIcon()));
+         wifiIconTimer->start();
++
++        // For the OTA update process to actually start
++        checkWifiState();
+     }
++
++
+     setBatteryIcon();
+ 
+     ui->brightnessBtn->setStyleSheet("font-size: 9pt; padding-bottom: 5px; padding-top: 5px; padding-left: 8px; padding-right: 8px;");
+@@ -340,40 +345,61 @@ MainWindow::MainWindow(QWidget *parent)
+         }
+     }
+ 
+-    // Check for an update and ask if the user wants to install it
+-    checkForUpdate();
+-    // Check for an OTA update
+-    QTimer::singleShot(1000, this, SLOT(checkForOtaUpdate()));
++    // Update checking
++    QString checkUpdatesPath = ".config/23-updates/check-updates";
++    QFile checkUpdatesConfig = QFile(checkUpdatesPath);
++    if(checkUpdatesConfig.exists() == false)
++    {
++        writeFile(checkUpdatesPath, "true");
++    }
++    if(checkconfig(checkUpdatesPath) == true) {
++        log("Checking for updates", className);
++        // Check for an update and ask if the user wants to install it
++        checkForUpdate();
++        // Check for an OTA update
++        QTimer::singleShot(1000, this, SLOT(checkForOtaUpdate()));
++    }
++    else {
++        log("Not launching updater because of .config/23-updates/check-updates", className);
++    }
+ 
+     // USB mass storage prompt
+-    QTimer *usbmsPrompt = new QTimer(this);
+-    usbmsPrompt->setInterval(500);
+-    connect(usbmsPrompt, &QTimer::timeout, [&]() {
+-        if(checkconfig("/opt/inkbox_genuine") == true) {
+-            if(global::usbms::showUsbmsDialog != true) {
+-                if(isUsbPluggedIn() != usbmsStatus) {
+-                    global::usbms::showUsbmsDialog = true;
+-                }
+-            }
+-            else {
+-                usbmsStatus = isUsbPluggedIn();
+-                if(usbmsStatus == false) {
+-                    // Loop again...
+-                    ;
++    QString showUSBPromtPath = ".config/22-usb/show-dialog";
++    QFile showUSBPromtFile = QFile(showUSBPromtPath);
++    if(showUSBPromtFile.exists() == false)
++    {
++        writeFile(showUSBPromtPath, "true");
++    }
++    if(checkconfig(showUSBPromtPath) == true) {
++        QTimer *usbmsPrompt = new QTimer(this);
++        usbmsPrompt->setInterval(500);
++        connect(usbmsPrompt, &QTimer::timeout, [&]() {
++            if(checkconfig("/opt/inkbox_genuine") == true) {
++                if(global::usbms::showUsbmsDialog != true) {
++                    if(isUsbPluggedIn() != usbmsStatus) {
++                        global::usbms::showUsbmsDialog = true;
++                    }
+                 }
+                 else {
+-                    // An USB cable is connected!
+-                    setBatteryIcon();
+-                    openUsbmsDialog();
++                    usbmsStatus = isUsbPluggedIn();
++                    if(usbmsStatus == false) {
++                        // Loop again...
++                        ;
++                    }
++                    else {
++                        // An USB cable is connected!
++                        setBatteryIcon();
++                        openUsbmsDialog();
++                    }
+                 }
+             }
+-        }
+-        else {
+-            // Do nothing, we're running along with Nickel & friends...
+-            ;
+-        }
+-    } );
+-    usbmsPrompt->start();
++            else {
++                // Do nothing, we're running along with Nickel & friends...
++                ;
++            }
++        } );
++        usbmsPrompt->start();
++    }
+ 
+     // If the DEVKEY file is present, install a developer key
+     if(QFile::exists("/mnt/onboard/onboard/.inkbox/DEVKEY") == true && QFile::exists("/mnt/onboard/onboard/.inkbox/DEVKEY.dgst") == true) {
+@@ -975,14 +1001,17 @@ void MainWindow::checkForOtaUpdate() {
+     if(global::wifi::isConnected == true) {
+         string_checkconfig_ro("/external_root/opt/storage/update/last_sync");
+         if(!checkconfig_str_val.isEmpty()) {
++            log("/external_root/opt/storage/update/last_sync is empty", className);
+             unsigned long currentEpoch = QDateTime::currentSecsSinceEpoch();
+             unsigned long syncEpoch = checkconfig_str_val.toULong();
+             unsigned long allowSyncEpoch = syncEpoch + 86400;
+             if(currentEpoch > allowSyncEpoch) {
++                log("Launching OTA update process", className);
+                 launchOtaUpdater();
+             }
+         }
+         else {
++            log("Launching OTA update process", className);
+             launchOtaUpdater();
+         }
+     }
+diff --git a/src/settings/settings.cpp b/src/settings/settings.cpp
+index d99f1b7..d314088 100644
+--- a/src/settings/settings.cpp
++++ b/src/settings/settings.cpp
+@@ -107,6 +107,12 @@ settings::settings(QWidget *parent) :
+     if(checkconfig(".config/05-quote/config") == true) {
+         ui->quoteCheckBox->click();
+     }
++    if(checkconfig(".config/23-updates/check-updates") == true) {
++        ui->updateCheckingCheckbox->click();
++    }
++    if(checkconfig(".config/22-usb/show-dialog") == true) {
++        ui->showUSBPromtCheckBox->click();
++    }
+ 
+     if(global::deviceID == "n705\n" or global::deviceID == "n905\n" or global::deviceID == "n613\n" or global::deviceID == "n236\n" or global::deviceID == "n437\n" or global::deviceID == "n306\n") {
+         if(checkconfig(".config/10-dark_mode/config") == true) {
+@@ -1110,3 +1116,32 @@ void settings::on_localLibraryShowFoldersCheckBox_toggled(bool checked)
+     }
+ }
+ 
++void settings::on_updateCheckingCheckbox_toggled(bool checked)
++{
++    QString settingString = "Check for updates";
++    if(checked == true) {
++        logEnabled(settingString, className);
++        checked_box = true;
++        writeconfig(".config/23-updates/check-updates", "true");
++    }
++    else {
++        logDisabled(settingString, className);
++        checked_box = false;
++        writeconfig(".config/23-updates/check-updates", "false");
++    }
++}
++
++void settings::on_showUSBPromtCheckBox_toggled(bool checked)
++{
++    QString settingString = "Show usb promt";
++    if(checked == true) {
++        logEnabled(settingString, className);
++        checked_box = true;
++        writeconfig(".config/22-usb/show-dialog", "true");
++    }
++    else {
++        logDisabled(settingString, className);
++        checked_box = false;
++        writeconfig(".config/22-usb/show-dialog", "false");
++    }
++}
+diff --git a/src/settings/settings.h b/src/settings/settings.h
+index 0fa66e4..561fdb7 100644
+--- a/src/settings/settings.h
++++ b/src/settings/settings.h
+@@ -78,6 +78,10 @@ private slots:
+ 
+     void on_localLibraryShowFoldersCheckBox_toggled(bool checked);
+ 
++    void on_updateCheckingCheckbox_toggled(bool checked);
++
++    void on_showUSBPromtCheckBox_toggled(bool checked);
++
+ signals:
+     void showToast(QString messageToDisplay);
+     void closeIndefiniteToast();
+diff --git a/src/settings/settings.ui b/src/settings/settings.ui
+index 64d1939..e0b6ee6 100644
+--- a/src/settings/settings.ui
++++ b/src/settings/settings.ui
+@@ -68,8 +68,8 @@
+          <rect>
+           <x>0</x>
+           <y>0</y>
+-          <width>463</width>
+-          <height>632</height>
++          <width>457</width>
++          <height>667</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+@@ -118,177 +118,6 @@
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+-               <item row="3" column="0">
+-                <layout class="QGridLayout" name="gridLayout_15">
+-                 <property name="bottomMargin">
+-                  <number>0</number>
+-                 </property>
+-                 <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_11">
+-                   <property name="orientation">
+-                    <enum>Qt::Horizontal</enum>
+-                   </property>
+-                   <property name="sizeHint" stdset="0">
+-                    <size>
+-                     <width>40</width>
+-                     <height>20</height>
+-                    </size>
+-                   </property>
+-                  </spacer>
+-                 </item>
+-                 <item row="0" column="3">
+-                  <widget class="QPushButton" name="pageSizeWidthDecBtn">
+-                   <property name="text">
+-                    <string/>
+-                   </property>
+-                   <property name="icon">
+-                    <iconset resource="../eink.qrc">
+-                     <normaloff>:/resources/minus.png</normaloff>:/resources/minus.png</iconset>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="8">
+-                  <widget class="QPushButton" name="pageSizeHeightDecBtn">
+-                   <property name="text">
+-                    <string/>
+-                   </property>
+-                   <property name="icon">
+-                    <iconset resource="../eink.qrc">
+-                     <normaloff>:/resources/minus.png</normaloff>:/resources/minus.png</iconset>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="10">
+-                  <widget class="QPushButton" name="pageSizeHeightIncBtn">
+-                   <property name="text">
+-                    <string/>
+-                   </property>
+-                   <property name="icon">
+-                    <iconset resource="../eink.qrc">
+-                     <normaloff>:/resources/plus.png</normaloff>:/resources/plus.png</iconset>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="5">
+-                  <widget class="QPushButton" name="pageSizeWidthIncBtn">
+-                   <property name="text">
+-                    <string/>
+-                   </property>
+-                   <property name="icon">
+-                    <iconset resource="../eink.qrc">
+-                     <normaloff>:/resources/plus.png</normaloff>:/resources/plus.png</iconset>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="0">
+-                  <widget class="QLabel" name="pageSizePageSizeLabel">
+-                   <property name="text">
+-                    <string>ePUB size:</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="2">
+-                  <widget class="QLabel" name="label_12">
+-                   <property name="text">
+-                    <string>Width:</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="4">
+-                  <widget class="QLabel" name="pageSizeWidthLabel">
+-                   <property name="text">
+-                    <string>450</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="7">
+-                  <widget class="QLabel" name="label_13">
+-                   <property name="text">
+-                    <string>Height:</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="9">
+-                  <widget class="QLabel" name="pageSizeHeightLabel">
+-                   <property name="text">
+-                    <string>450</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="0" column="6">
+-                  <spacer name="horizontalSpacer_17">
+-                   <property name="orientation">
+-                    <enum>Qt::Horizontal</enum>
+-                   </property>
+-                   <property name="sizeHint" stdset="0">
+-                    <size>
+-                     <width>40</width>
+-                     <height>20</height>
+-                    </size>
+-                   </property>
+-                  </spacer>
+-                 </item>
+-                </layout>
+-               </item>
+-               <item row="0" column="0">
+-                <widget class="QLabel" name="label_7">
+-                 <property name="font">
+-                  <font>
+-                   <family>Chivo</family>
+-                   <weight>50</weight>
+-                   <italic>true</italic>
+-                   <bold>false</bold>
+-                  </font>
+-                 </property>
+-                 <property name="text">
+-                  <string>Reading</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="11" column="0">
+-                <widget class="QCheckBox" name="clockCheckBox">
+-                 <property name="text">
+-                  <string>Clock: Show seconds</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="21" column="0">
+-                <widget class="Line" name="line_7">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
+-                 </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="14" column="0">
+-                <widget class="QLabel" name="label_14">
+-                 <property name="font">
+-                  <font>
+-                   <family>Chivo</family>
+-                   <italic>true</italic>
+-                  </font>
+-                 </property>
+-                 <property name="text">
+-                  <string>Local library</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="6" column="0">
+-                <widget class="QCheckBox" name="readerScrollBarCheckBox">
+-                 <property name="text">
+-                  <string>Show scroll bar if needed</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="5" column="0">
+-                <widget class="QCheckBox" name="globalReadingSettingsCheckBox">
+-                 <property name="text">
+-                  <string>Global reading settings</string>
+-                 </property>
+-                </widget>
+-               </item>
+                <item row="22" column="0">
+                 <layout class="QGridLayout" name="gridLayout_4">
+                  <property name="bottomMargin">
+@@ -329,20 +158,47 @@
+                  </item>
+                 </layout>
+                </item>
+-               <item row="7" column="0">
+-                <widget class="QCheckBox" name="menuBarCheckBox">
+-                 <property name="text">
+-                  <string>Always show status bar</string>
++               <item row="27" column="0">
++                <spacer name="verticalSpacer">
++                 <property name="orientation">
++                  <enum>Qt::Vertical</enum>
+                  </property>
+-                </widget>
++                 <property name="sizeType">
++                  <enum>QSizePolicy::MinimumExpanding</enum>
++                 </property>
++                 <property name="sizeHint" stdset="0">
++                  <size>
++                   <width>0</width>
++                   <height>0</height>
++                  </size>
++                 </property>
++                </spacer>
+                </item>
+-               <item row="25" column="0">
+-                <layout class="QGridLayout" name="gridLayout_3">
++               <item row="2" column="0">
++                <layout class="QGridLayout" name="gridLayout_6">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+-                 <item row="0" column="1">
+-                  <spacer name="horizontalSpacer">
++                 <item row="1" column="4">
++                  <widget class="QPushButton" name="wordsNumberIncBtn">
++                   <property name="text">
++                    <string/>
++                   </property>
++                   <property name="icon">
++                    <iconset resource="../eink.qrc">
++                     <normaloff>:/resources/plus.png</normaloff>:/resources/plus.png</iconset>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="1" column="3">
++                  <widget class="QLabel" name="wordsNumberValueLabel">
++                   <property name="text">
++                    <string>30</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="1" column="1">
++                  <spacer name="horizontalSpacer_5">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+@@ -354,28 +210,36 @@
+                    </property>
+                   </spacer>
+                  </item>
+-                 <item row="0" column="0">
+-                  <widget class="QLabel" name="label_4">
++                 <item row="1" column="0">
++                  <widget class="QLabel" name="wordsNumberLabel">
+                    <property name="text">
+-                    <string>Request DHCP lease</string>
++                    <string>Words number/page (plain text files)</string>
+                    </property>
+                   </widget>
+                  </item>
+-                 <item row="0" column="2">
+-                  <widget class="QPushButton" name="requestLeaseBtn">
+-                   <property name="font">
+-                    <font>
+-                     <weight>75</weight>
+-                     <bold>true</bold>
+-                    </font>
+-                   </property>
++                 <item row="1" column="2">
++                  <widget class="QPushButton" name="wordsNumberDecBtn">
+                    <property name="text">
+-                    <string>Request</string>
++                    <string/>
++                   </property>
++                   <property name="icon">
++                    <iconset resource="../eink.qrc">
++                     <normaloff>:/resources/minus.png</normaloff>:/resources/minus.png</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
++               <item row="21" column="0">
++                <widget class="Line" name="line_7">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
++                 </property>
++                </widget>
++               </item>
+                <item row="8" column="0">
+                 <layout class="QGridLayout" name="gridLayout_16">
+                  <property name="bottomMargin">
+@@ -416,6 +280,30 @@
+                  </item>
+                 </layout>
+                </item>
++               <item row="1" column="0">
++                <widget class="Line" name="line_8">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
++                 </property>
++                </widget>
++               </item>
++               <item row="16" column="0">
++                <widget class="QCheckBox" name="localLibraryShowFoldersCheckBox">
++                 <property name="text">
++                  <string>Show folders</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="11" column="0">
++                <widget class="QCheckBox" name="clockCheckBox">
++                 <property name="text">
++                  <string>Clock: Show seconds</string>
++                 </property>
++                </widget>
++               </item>
+                <item row="12" column="0">
+                 <widget class="QCheckBox" name="quoteCheckBox">
+                  <property name="text">
+@@ -423,21 +311,32 @@
+                  </property>
+                 </widget>
+                </item>
+-               <item row="26" column="0">
+-                <spacer name="verticalSpacer">
++               <item row="15" column="0">
++                <widget class="Line" name="line_11">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
+                  <property name="orientation">
+-                  <enum>Qt::Vertical</enum>
++                  <enum>Qt::Horizontal</enum>
+                  </property>
+-                 <property name="sizeType">
+-                  <enum>QSizePolicy::MinimumExpanding</enum>
++                </widget>
++               </item>
++               <item row="24" column="0">
++                <widget class="Line" name="line_3">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
+                  </property>
+-                 <property name="sizeHint" stdset="0">
+-                  <size>
+-                   <width>0</width>
+-                   <height>0</height>
+-                  </size>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
+                  </property>
+-                </spacer>
++                </widget>
++               </item>
++               <item row="7" column="0">
++                <widget class="QCheckBox" name="menuBarCheckBox">
++                 <property name="text">
++                  <string>Always show status bar</string>
++                 </property>
++                </widget>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QLabel" name="label_2">
+@@ -454,31 +353,26 @@
+                  </property>
+                 </widget>
+                </item>
+-               <item row="2" column="0">
+-                <layout class="QGridLayout" name="gridLayout_6">
++               <item row="14" column="0">
++                <widget class="QLabel" name="label_14">
++                 <property name="font">
++                  <font>
++                   <family>Chivo</family>
++                   <italic>true</italic>
++                  </font>
++                 </property>
++                 <property name="text">
++                  <string>Local library</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="25" column="0">
++                <layout class="QGridLayout" name="gridLayout_3">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+-                 <item row="1" column="4">
+-                  <widget class="QPushButton" name="wordsNumberIncBtn">
+-                   <property name="text">
+-                    <string/>
+-                   </property>
+-                   <property name="icon">
+-                    <iconset resource="../eink.qrc">
+-                     <normaloff>:/resources/plus.png</normaloff>:/resources/plus.png</iconset>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="1" column="3">
+-                  <widget class="QLabel" name="wordsNumberValueLabel">
+-                   <property name="text">
+-                    <string>30</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="1" column="1">
+-                  <spacer name="horizontalSpacer_5">
++                 <item row="0" column="1">
++                  <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+@@ -490,33 +384,54 @@
+                    </property>
+                   </spacer>
+                  </item>
+-                 <item row="1" column="0">
+-                  <widget class="QLabel" name="wordsNumberLabel">
++                 <item row="0" column="0">
++                  <widget class="QLabel" name="label_4">
+                    <property name="text">
+-                    <string>Words number/page (plain text files)</string>
++                    <string>Request USBNET DHCP lease</string>
+                    </property>
+                   </widget>
+                  </item>
+-                 <item row="1" column="2">
+-                  <widget class="QPushButton" name="wordsNumberDecBtn">
+-                   <property name="text">
+-                    <string/>
++                 <item row="0" column="2">
++                  <widget class="QPushButton" name="requestLeaseBtn">
++                   <property name="font">
++                    <font>
++                     <weight>75</weight>
++                     <bold>true</bold>
++                    </font>
+                    </property>
+-                   <property name="icon">
+-                    <iconset resource="../eink.qrc">
+-                     <normaloff>:/resources/minus.png</normaloff>:/resources/minus.png</iconset>
++                   <property name="text">
++                    <string>Request</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+-               <item row="10" column="0">
+-                <widget class="Line" name="line_6">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
++               <item row="6" column="0">
++                <widget class="QCheckBox" name="readerScrollBarCheckBox">
++                 <property name="text">
++                  <string>Show scroll bar if needed</string>
+                  </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
++                </widget>
++               </item>
++               <item row="5" column="0">
++                <widget class="QCheckBox" name="globalReadingSettingsCheckBox">
++                 <property name="text">
++                  <string>Global reading settings</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="0" column="0">
++                <widget class="QLabel" name="label_7">
++                 <property name="font">
++                  <font>
++                   <family>Chivo</family>
++                   <weight>50</weight>
++                   <italic>true</italic>
++                   <bold>false</bold>
++                  </font>
++                 </property>
++                 <property name="text">
++                  <string>Reading</string>
+                  </property>
+                 </widget>
+                </item>
+@@ -591,6 +506,135 @@
+                  </item>
+                 </layout>
+                </item>
++               <item row="13" column="0">
++                <widget class="QCheckBox" name="demoCheckBox">
++                 <property name="text">
++                  <string>Disable &quot;Welcome to InkBox&quot; message</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="3" column="0">
++                <layout class="QGridLayout" name="gridLayout_15">
++                 <property name="bottomMargin">
++                  <number>0</number>
++                 </property>
++                 <item row="0" column="1">
++                  <spacer name="horizontalSpacer_11">
++                   <property name="orientation">
++                    <enum>Qt::Horizontal</enum>
++                   </property>
++                   <property name="sizeHint" stdset="0">
++                    <size>
++                     <width>40</width>
++                     <height>20</height>
++                    </size>
++                   </property>
++                  </spacer>
++                 </item>
++                 <item row="0" column="3">
++                  <widget class="QPushButton" name="pageSizeWidthDecBtn">
++                   <property name="text">
++                    <string/>
++                   </property>
++                   <property name="icon">
++                    <iconset resource="../eink.qrc">
++                     <normaloff>:/resources/minus.png</normaloff>:/resources/minus.png</iconset>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="8">
++                  <widget class="QPushButton" name="pageSizeHeightDecBtn">
++                   <property name="text">
++                    <string/>
++                   </property>
++                   <property name="icon">
++                    <iconset resource="../eink.qrc">
++                     <normaloff>:/resources/minus.png</normaloff>:/resources/minus.png</iconset>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="10">
++                  <widget class="QPushButton" name="pageSizeHeightIncBtn">
++                   <property name="text">
++                    <string/>
++                   </property>
++                   <property name="icon">
++                    <iconset resource="../eink.qrc">
++                     <normaloff>:/resources/plus.png</normaloff>:/resources/plus.png</iconset>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="5">
++                  <widget class="QPushButton" name="pageSizeWidthIncBtn">
++                   <property name="text">
++                    <string/>
++                   </property>
++                   <property name="icon">
++                    <iconset resource="../eink.qrc">
++                     <normaloff>:/resources/plus.png</normaloff>:/resources/plus.png</iconset>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="0">
++                  <widget class="QLabel" name="pageSizePageSizeLabel">
++                   <property name="text">
++                    <string>ePUB size:</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="2">
++                  <widget class="QLabel" name="label_12">
++                   <property name="text">
++                    <string>Width:</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="4">
++                  <widget class="QLabel" name="pageSizeWidthLabel">
++                   <property name="text">
++                    <string>450</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="7">
++                  <widget class="QLabel" name="label_13">
++                   <property name="text">
++                    <string>Height:</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="9">
++                  <widget class="QLabel" name="pageSizeHeightLabel">
++                   <property name="text">
++                    <string>450</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="0" column="6">
++                  <spacer name="horizontalSpacer_17">
++                   <property name="orientation">
++                    <enum>Qt::Horizontal</enum>
++                   </property>
++                   <property name="sizeHint" stdset="0">
++                    <size>
++                     <width>40</width>
++                     <height>20</height>
++                    </size>
++                   </property>
++                  </spacer>
++                 </item>
++                </layout>
++               </item>
++               <item row="10" column="0">
++                <widget class="Line" name="line_6">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
++                 </property>
++                </widget>
++               </item>
+                <item row="20" column="0">
+                 <widget class="QLabel" name="label_5">
+                  <property name="font">
+@@ -606,13 +650,6 @@
+                  </property>
+                 </widget>
+                </item>
+-               <item row="13" column="0">
+-                <widget class="QCheckBox" name="demoCheckBox">
+-                 <property name="text">
+-                  <string>Disable &quot;Welcome to InkBox&quot; message</string>
+-                 </property>
+-                </widget>
+-               </item>
+                <item row="23" column="0">
+                 <widget class="QLabel" name="label_3">
+                  <property name="font">
+@@ -622,44 +659,14 @@
+                   </font>
+                  </property>
+                  <property name="text">
+-                  <string>USB networking</string>
++                  <string>USB</string>
+                  </property>
+                 </widget>
+                </item>
+-               <item row="16" column="0">
+-                <widget class="QCheckBox" name="localLibraryShowFoldersCheckBox">
++               <item row="26" column="0">
++                <widget class="QCheckBox" name="showUSBPromtCheckBox">
+                  <property name="text">
+-                  <string>Show folders</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="1" column="0">
+-                <widget class="Line" name="line_8">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
+-                 </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="24" column="0">
+-                <widget class="Line" name="line_3">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
+-                 </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="15" column="0">
+-                <widget class="Line" name="line_11">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
+-                 </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
++                  <string>Show USB connection dialog</string>
+                  </property>
+                 </widget>
+                </item>
+@@ -686,43 +693,20 @@
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+-               <item row="20" column="0">
+-                <widget class="Line" name="line_2">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
+-                 </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="26" column="0">
+-                <layout class="QGridLayout" name="gridLayout_17">
++               <item row="11" column="0">
++                <layout class="QGridLayout" name="gridLayout_12">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+-                 <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_14">
+-                   <property name="orientation">
+-                    <enum>Qt::Horizontal</enum>
+-                   </property>
+-                   <property name="sizeHint" stdset="0">
+-                    <size>
+-                     <width>40</width>
+-                     <height>20</height>
+-                    </size>
+-                   </property>
+-                  </spacer>
+-                 </item>
+                  <item row="0" column="0">
+-                  <widget class="QLabel" name="repackLabel">
++                  <widget class="QLabel" name="label_8">
+                    <property name="text">
+-                    <string>Repack</string>
++                    <string>Reset this device</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+-                  <widget class="QPushButton" name="repackBtn">
++                  <widget class="QPushButton" name="resetBtn">
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+@@ -730,26 +714,39 @@
+                     </font>
+                    </property>
+                    <property name="text">
+-                    <string>Repack</string>
++                    <string>Reset</string>
+                    </property>
+                   </widget>
+                  </item>
++                 <item row="0" column="1">
++                  <spacer name="horizontalSpacer_8">
++                   <property name="orientation">
++                    <enum>Qt::Horizontal</enum>
++                   </property>
++                   <property name="sizeHint" stdset="0">
++                    <size>
++                     <width>40</width>
++                     <height>20</height>
++                    </size>
++                   </property>
++                  </spacer>
++                 </item>
+                 </layout>
+                </item>
+-               <item row="15" column="0">
+-                <layout class="QGridLayout" name="checkOtaUpdateGridLayout">
++               <item row="14" column="0">
++                <layout class="QGridLayout" name="gridLayout_18">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0">
+-                  <widget class="QLabel" name="checkOtaUpdateLabel">
++                  <widget class="QLabel" name="label_11">
+                    <property name="text">
+-                    <string>Check for updates</string>
++                    <string>Timezone</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_13">
++                  <spacer name="horizontalSpacer_16">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+@@ -762,22 +759,22 @@
+                   </spacer>
+                  </item>
+                  <item row="0" column="2">
+-                  <widget class="QPushButton" name="checkOtaUpdateBtn">
+-                   <property name="font">
+-                    <font>
+-                     <weight>75</weight>
+-                     <bold>true</bold>
+-                    </font>
+-                   </property>
+-                   <property name="text">
+-                    <string>Check</string>
+-                   </property>
+-                  </widget>
++                  <widget class="QComboBox" name="tzComboBox"/>
+                  </item>
+                 </layout>
+                </item>
+-               <item row="6" column="0">
+-                <widget class="QLabel" name="softwareLabel">
++               <item row="24" column="0">
++                <widget class="Line" name="line_10">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
++                 </property>
++                </widget>
++               </item>
++               <item row="23" column="0">
++                <widget class="QLabel" name="storageEncryptionLabel">
+                  <property name="font">
+                   <font>
+                    <family>Chivo</family>
+@@ -785,30 +782,31 @@
+                   </font>
+                  </property>
+                  <property name="text">
+-                  <string>System</string>
++                  <string>Storage encryption</string>
+                  </property>
+                 </widget>
+                </item>
+-               <item row="22" column="0">
+-                <layout class="QGridLayout" name="gridLayout_13">
++               <item row="10" column="0">
++                <widget class="QCheckBox" name="darkModeCheckBox">
++                 <property name="text">
++                  <string>Enable night mode</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="15" column="0">
++                <layout class="QGridLayout" name="checkOtaUpdateGridLayout">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+-                 <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_9">
+-                   <property name="orientation">
+-                    <enum>Qt::Horizontal</enum>
+-                   </property>
+-                   <property name="sizeHint" stdset="0">
+-                    <size>
+-                     <width>40</width>
+-                     <height>20</height>
+-                    </size>
++                 <item row="0" column="0">
++                  <widget class="QLabel" name="checkOtaUpdateLabel">
++                   <property name="text">
++                    <string>Check for updates</string>
+                    </property>
+-                  </spacer>
++                  </widget>
+                  </item>
+                  <item row="0" column="2">
+-                  <widget class="QPushButton" name="setPasscodeBtn">
++                  <widget class="QPushButton" name="checkOtaUpdateBtn">
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+@@ -816,21 +814,27 @@
+                     </font>
+                    </property>
+                    <property name="text">
+-                    <string>Set</string>
++                    <string>Check</string>
+                    </property>
+                   </widget>
+                  </item>
+-                 <item row="0" column="0">
+-                  <widget class="QLabel" name="setPasscodeLabel">
+-                   <property name="text">
+-                    <string>Set a passcode</string>
++                 <item row="0" column="1">
++                  <spacer name="horizontalSpacer_13">
++                   <property name="orientation">
++                    <enum>Qt::Horizontal</enum>
+                    </property>
+-                  </widget>
++                   <property name="sizeHint" stdset="0">
++                    <size>
++                     <width>40</width>
++                     <height>20</height>
++                    </size>
++                   </property>
++                  </spacer>
+                  </item>
+                 </layout>
+                </item>
+-               <item row="19" column="0">
+-                <widget class="QLabel" name="securityLabel">
++               <item row="6" column="0">
++                <widget class="QLabel" name="softwareLabel">
+                  <property name="font">
+                   <font>
+                    <family>Chivo</family>
+@@ -838,51 +842,79 @@
+                   </font>
+                  </property>
+                  <property name="text">
+-                  <string>Security</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="25" column="0">
+-                <widget class="QCheckBox" name="enableEncryptedStorageCheckBox">
+-                 <property name="text">
+-                  <string>Enable</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="8" column="0">
+-                <widget class="QCheckBox" name="enableUiScalingCheckBox">
+-                 <property name="text">
+-                  <string>Enable UI scaling</string>
++                  <string>System</string>
+                  </property>
+                 </widget>
+                </item>
+-               <item row="23" column="0">
+-                <widget class="QLabel" name="storageEncryptionLabel">
+-                 <property name="font">
+-                  <font>
+-                   <family>Chivo</family>
+-                   <italic>true</italic>
+-                  </font>
+-                 </property>
+-                 <property name="text">
+-                  <string>Storage encryption</string>
++               <item row="9" column="0">
++                <layout class="QGridLayout" name="gridLayout_8">
++                 <property name="bottomMargin">
++                  <number>0</number>
+                  </property>
+-                </widget>
++                 <item row="1" column="2">
++                  <widget class="QLabel" name="uiScaleNumberLabel">
++                   <property name="font">
++                    <font>
++                     <weight>75</weight>
++                     <bold>true</bold>
++                    </font>
++                   </property>
++                   <property name="text">
++                    <string>1</string>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="1" column="1">
++                  <widget class="QSlider" name="uiScalingSlider">
++                   <property name="minimum">
++                    <number>0</number>
++                   </property>
++                   <property name="maximum">
++                    <number>2</number>
++                   </property>
++                   <property name="singleStep">
++                    <number>1</number>
++                   </property>
++                   <property name="pageStep">
++                    <number>1</number>
++                   </property>
++                   <property name="value">
++                    <number>0</number>
++                   </property>
++                   <property name="orientation">
++                    <enum>Qt::Horizontal</enum>
++                   </property>
++                  </widget>
++                 </item>
++                 <item row="1" column="0">
++                  <widget class="QLabel" name="uiScalingLabel">
++                   <property name="text">
++                    <string>UI scaling factor</string>
++                   </property>
++                   <property name="alignment">
++                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
++                   </property>
++                  </widget>
++                 </item>
++                </layout>
+                </item>
+-               <item row="14" column="0">
+-                <layout class="QGridLayout" name="gridLayout_18">
++               <item row="12" column="0">
++                <layout class="QGridLayout" name="gridLayout_7">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
++                 <property name="verticalSpacing">
++                  <number>0</number>
++                 </property>
+                  <item row="0" column="0">
+-                  <widget class="QLabel" name="label_11">
++                  <widget class="QLabel" name="label_9">
+                    <property name="text">
+-                    <string>Timezone</string>
++                    <string>System info</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_16">
++                  <spacer name="horizontalSpacer_6">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+@@ -895,34 +927,20 @@
+                   </spacer>
+                  </item>
+                  <item row="0" column="2">
+-                  <widget class="QComboBox" name="tzComboBox"/>
++                  <widget class="QPushButton" name="showSystemInfoBtn">
++                   <property name="font">
++                    <font>
++                     <weight>75</weight>
++                     <bold>true</bold>
++                    </font>
++                   </property>
++                   <property name="text">
++                    <string>Show</string>
++                   </property>
++                  </widget>
+                  </item>
+                 </layout>
+                </item>
+-               <item row="10" column="0">
+-                <widget class="QCheckBox" name="darkModeCheckBox">
+-                 <property name="text">
+-                  <string>Enable night mode</string>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="24" column="0">
+-                <widget class="Line" name="line_10">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
+-                 </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
+-                 </property>
+-                </widget>
+-               </item>
+-               <item row="21" column="0">
+-                <widget class="QCheckBox" name="enableLockscreenCheckBox">
+-                 <property name="text">
+-                  <string>Enable lock screen and passcode</string>
+-                 </property>
+-                </widget>
+-               </item>
+                <item row="13" column="0">
+                 <layout class="QGridLayout" name="gridLayout_19">
+                  <property name="bottomMargin">
+@@ -963,6 +981,13 @@
+                  </item>
+                 </layout>
+                </item>
++               <item row="21" column="0">
++                <widget class="QCheckBox" name="enableLockscreenCheckBox">
++                 <property name="text">
++                  <string>Enable lock screen and passcode</string>
++                 </property>
++                </widget>
++               </item>
+                <item row="18" column="0">
+                 <layout class="QGridLayout" name="gridLayout_14">
+                  <property name="bottomMargin">
+@@ -1006,46 +1031,26 @@
+                  </item>
+                 </layout>
+                </item>
+-               <item row="7" column="0">
+-                <widget class="Line" name="line_9">
+-                 <property name="frameShadow">
+-                  <enum>QFrame::Plain</enum>
++               <item row="19" column="0">
++                <widget class="QLabel" name="securityLabel">
++                 <property name="font">
++                  <font>
++                   <family>Chivo</family>
++                   <italic>true</italic>
++                  </font>
+                  </property>
+-                 <property name="orientation">
+-                  <enum>Qt::Horizontal</enum>
++                 <property name="text">
++                  <string>Security</string>
+                  </property>
+                 </widget>
+                </item>
+-               <item row="27" column="0">
+-                <spacer name="verticalSpacer_2">
+-                 <property name="orientation">
+-                  <enum>Qt::Vertical</enum>
+-                 </property>
+-                 <property name="sizeHint" stdset="0">
+-                  <size>
+-                   <width>20</width>
+-                   <height>40</height>
+-                  </size>
+-                 </property>
+-                </spacer>
+-               </item>
+-               <item row="12" column="0">
+-                <layout class="QGridLayout" name="gridLayout_7">
++               <item row="26" column="0">
++                <layout class="QGridLayout" name="gridLayout_17">
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+-                 <property name="verticalSpacing">
+-                  <number>0</number>
+-                 </property>
+-                 <item row="0" column="0">
+-                  <widget class="QLabel" name="label_9">
+-                   <property name="text">
+-                    <string>System info</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+                  <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_6">
++                  <spacer name="horizontalSpacer_14">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+@@ -1057,35 +1062,15 @@
+                    </property>
+                   </spacer>
+                  </item>
+-                 <item row="0" column="2">
+-                  <widget class="QPushButton" name="showSystemInfoBtn">
+-                   <property name="font">
+-                    <font>
+-                     <weight>75</weight>
+-                     <bold>true</bold>
+-                    </font>
+-                   </property>
+-                   <property name="text">
+-                    <string>Show</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                </layout>
+-               </item>
+-               <item row="11" column="0">
+-                <layout class="QGridLayout" name="gridLayout_12">
+-                 <property name="bottomMargin">
+-                  <number>0</number>
+-                 </property>
+                  <item row="0" column="0">
+-                  <widget class="QLabel" name="label_8">
++                  <widget class="QLabel" name="repackLabel">
+                    <property name="text">
+-                    <string>Reset this device</string>
++                    <string>Repack</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="2">
+-                  <widget class="QPushButton" name="resetBtn">
++                  <widget class="QPushButton" name="repackBtn">
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+@@ -1093,12 +1078,53 @@
+                     </font>
+                    </property>
+                    <property name="text">
+-                    <string>Reset</string>
++                    <string>Repack</string>
+                    </property>
+                   </widget>
+                  </item>
++                </layout>
++               </item>
++               <item row="8" column="0">
++                <widget class="QCheckBox" name="enableUiScalingCheckBox">
++                 <property name="text">
++                  <string>Enable UI scaling</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="7" column="0">
++                <widget class="Line" name="line_9">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
++                 </property>
++                </widget>
++               </item>
++               <item row="20" column="0">
++                <widget class="Line" name="line_2">
++                 <property name="frameShadow">
++                  <enum>QFrame::Plain</enum>
++                 </property>
++                 <property name="orientation">
++                  <enum>Qt::Horizontal</enum>
++                 </property>
++                </widget>
++               </item>
++               <item row="25" column="0">
++                <widget class="QCheckBox" name="enableEncryptedStorageCheckBox">
++                 <property name="text">
++                  <string>Enable</string>
++                 </property>
++                </widget>
++               </item>
++               <item row="22" column="0">
++                <layout class="QGridLayout" name="gridLayout_13">
++                 <property name="bottomMargin">
++                  <number>0</number>
++                 </property>
+                  <item row="0" column="1">
+-                  <spacer name="horizontalSpacer_8">
++                  <spacer name="horizontalSpacer_9">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+@@ -1110,15 +1136,8 @@
+                    </property>
+                   </spacer>
+                  </item>
+-                </layout>
+-               </item>
+-               <item row="9" column="0">
+-                <layout class="QGridLayout" name="gridLayout_8">
+-                 <property name="bottomMargin">
+-                  <number>0</number>
+-                 </property>
+-                 <item row="1" column="2">
+-                  <widget class="QLabel" name="uiScaleNumberLabel">
++                 <item row="0" column="2">
++                  <widget class="QPushButton" name="setPasscodeBtn">
+                    <property name="font">
+                     <font>
+                      <weight>75</weight>
+@@ -1126,44 +1145,39 @@
+                     </font>
+                    </property>
+                    <property name="text">
+-                    <string>1</string>
+-                   </property>
+-                  </widget>
+-                 </item>
+-                 <item row="1" column="1">
+-                  <widget class="QSlider" name="uiScalingSlider">
+-                   <property name="minimum">
+-                    <number>0</number>
+-                   </property>
+-                   <property name="maximum">
+-                    <number>2</number>
+-                   </property>
+-                   <property name="singleStep">
+-                    <number>1</number>
+-                   </property>
+-                   <property name="pageStep">
+-                    <number>1</number>
+-                   </property>
+-                   <property name="value">
+-                    <number>0</number>
+-                   </property>
+-                   <property name="orientation">
+-                    <enum>Qt::Horizontal</enum>
++                    <string>Set</string>
+                    </property>
+                   </widget>
+                  </item>
+-                 <item row="1" column="0">
+-                  <widget class="QLabel" name="uiScalingLabel">
++                 <item row="0" column="0">
++                  <widget class="QLabel" name="setPasscodeLabel">
+                    <property name="text">
+-                    <string>UI scaling factor</string>
+-                   </property>
+-                   <property name="alignment">
+-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
++                    <string>Set a passcode</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
++               <item row="27" column="0">
++                <spacer name="verticalSpacer_2">
++                 <property name="orientation">
++                  <enum>Qt::Vertical</enum>
++                 </property>
++                 <property name="sizeHint" stdset="0">
++                  <size>
++                   <width>20</width>
++                   <height>40</height>
++                  </size>
++                 </property>
++                </spacer>
++               </item>
++               <item row="16" column="0">
++                <widget class="QCheckBox" name="updateCheckingCheckbox">
++                 <property name="text">
++                  <string>Check for updates at launch</string>
++                 </property>
++                </widget>
++               </item>
+               </layout>
+              </item>
+             </layout>
+-- 
+2.37.3
+

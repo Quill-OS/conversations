@@ -1,0 +1,63 @@
+pmbootstrap log
+==> kernel: device-tree blob operations
+==> initramfs: creating uInitrd
+Image Name:   uInitrd
+Created:      Tue May  9 21:47:52 2023
+Image Type:   ARM Linux RAMDisk Image (uncompressed)
+Data Size:    2700910 Bytes = 2637.61 KiB = 2.58 MiB
+Load Address: 00000000
+Entry Point:  00000000
+==> kernel: creating uImage
+Image Name:   postmarketOS
+Created:      Tue May  9 21:47:52 2023
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    6105208 Bytes = 5962.12 KiB = 5.82 MiB
+Load Address: 80008000
+Entry Point:  80008000
+==> Checking free space at /boot
+... OK!
+==> Installing: /boot/initramfs
+==> Installing: /boot/initramfs-extra
+==> Installing: /boot/imx6ull-kobo-nia.dtb
+==> Installing: /boot/uImage
+==> Installing: /boot/uInitrd
+21:47:56.547657 boot-deploy completed in: 4.97s
+21:47:56.554342 mkinitfs completed in: 8.93s
+(077680) [23:47:56]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+(077680) [23:47:56] (rootfs_kobo-nia) % passwd dk-x86
+New password: 
+Retype new password: 
+passwd: password updated successfully
+(077680) [23:52:04] (rootfs_kobo-nia) % grep ^root:!: /etc/shadow
+(077680) [23:52:04] (rootfs_kobo-nia) locking root
+(077680) [23:52:04] (rootfs_kobo-nia) % passwd -l root
+passwd: password changed.
+(077680) [23:52:04] NOTE: No valid keymap specified for device
+(077680) [23:52:04] (rootfs_kobo-nia) % setup-timezone Europe/Berlin
+(077680) [23:52:09] (rootfs_kobo-nia) % sed -i s/LANG=C.UTF-8/LANG=en_GB.UTF-8/ /etc/profile.d/locale.sh
+sed: /etc/profile.d/locale.sh: No such file or directory
+(077680) [23:52:09] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(077680) [23:52:09] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+(077680) [23:52:09] ERROR: Command failed (exit code 1): (rootfs_kobo-nia) % sed -i s/LANG=C.UTF-8/LANG=en_GB.UTF-8/ /etc/profile.d/locale.sh
+(077680) [23:52:09] See also: <https://postmarketos.org/troubleshooting>
+(077680) [23:52:09] Traceback (most recent call last):
+  File "/home/dk/pmbootstrap/pmb/__init__.py", line 63, in main
+    getattr(frontend, args.action)(args)
+  File "/home/dk/pmbootstrap/pmb/helpers/frontend.py", line 325, in install
+    pmb.install.install(args)
+  File "/home/dk/pmbootstrap/pmb/install/_install.py", line 1074, in install
+    create_device_rootfs(args, step, steps)
+  File "/home/dk/pmbootstrap/pmb/install/_install.py", line 1035, in create_device_rootfs
+    pmb.chroot.root(args, ["sed", "-i",
+  File "/home/dk/pmbootstrap/pmb/chroot/root.py", line 83, in root
+    return pmb.helpers.run_core.core(args, msg, cmd_sudo, None, output,
+  File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 351, in core
+    check_return_code(args, code, log_message)
+  File "/home/dk/pmbootstrap/pmb/helpers/run_core.py", line 221, in check_return_code
+    raise RuntimeError(f"Command failed (exit code {str(code)}): " +
+RuntimeError: Command failed (exit code 1): (rootfs_kobo-nia) % sed -i s/LANG=C.UTF-8/LANG=en_GB.UTF-8/ /etc/profile.d/locale.sh
+
+(080846) [23:52:43] % tail -n 60 -F /home/dk/.local/var/pmbootstrap/log.txt
+(080846) [23:52:43] *** output passed to pmbootstrap stdout, not to this log ***
+^C
+Caught KeyboardInterrupt, exiting …

@@ -1,0 +1,115 @@
+kobo-nia:/etc/udev/rules.d$ cat /sys/bus/i2c/devices/0-0015/input/input0/
+cat: read error: Is a directory
+kobo-nia:/etc/udev/rules.d$ sudo udevadm test /sys/bus/i2c/devices/0-0015/input/
+input0
+calling: test
+version 3.2.12
+This program is for debugging only, it does not run any program
+specified by a RUN key. It may show incorrect results, because
+some values may be different, or not available at a simulation run.
+
+ does not exist, please run udevadm hwdb --update
+Load module index
+timestamp of '/etc/udev/rules.d' changed
+Reading rules file: /usr/lib/udev/rules.d/10-dm.rules
+Reading rules file: /usr/lib/udev/rules.d/11-dm-lvm.rules
+Reading rules file: /usr/lib/udev/rules.d/11-dm-mpath.rules
+Reading rules file: /usr/lib/udev/rules.d/11-dm-parts.rules
+Reading rules file: /usr/lib/udev/rules.d/13-dm-disk.rules
+Reading rules file: /lib/udev/rules.d/20-tm2-touchkey-input.rules
+Reading rules file: /lib/udev/rules.d/20-tm2-touchkey-leds.rules
+Reading rules file: /lib/udev/rules.d/20-zinitix-input.rules
+Reading rules file: /lib/udev/rules.d/50-firmware.rules
+Reading rules file: /lib/udev/rules.d/50-udev-default.rules
+Reading rules file: /usr/lib/udev/rules.d/56-multipath.rules
+Reading rules file: /lib/udev/rules.d/60-autosuspend.rules
+Reading rules file: /lib/udev/rules.d/60-block.rules
+Reading rules file: /lib/udev/rules.d/60-cdrom_id.rules
+Reading rules file: /lib/udev/rules.d/60-drm.rules
+Reading rules file: /lib/udev/rules.d/60-evdev.rules
+Reading rules file: /lib/udev/rules.d/60-fido-id.rules
+Reading rules file: /lib/udev/rules.d/60-input-id.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-alsa.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-input.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-storage-tape.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-storage.rules
+Reading rules file: /lib/udev/rules.d/60-persistent-v4l.rules
+Reading rules file: /lib/udev/rules.d/60-sensor.rules
+Reading rules file: /lib/udev/rules.d/60-serial.rules
+Reading rules file: /run/udev/rules.d/61-dev-root-link.rules
+Reading rules file: /lib/udev/rules.d/64-btrfs-dm.rules
+Reading rules file: /lib/udev/rules.d/64-btrfs-zoned.rules
+Reading rules file: /lib/udev/rules.d/64-btrfs.rules
+Reading rules file: /usr/lib/udev/rules.d/66-kpartx.rules
+Reading rules file: /usr/lib/udev/rules.d/68-del-part-nodes.rules
+Reading rules file: /usr/lib/udev/rules.d/69-dm-lvm.rules
+Reading rules file: /lib/udev/rules.d/70-camera.rules
+Reading rules file: /lib/udev/rules.d/70-joystick.rules
+Reading rules file: /lib/udev/rules.d/70-memory.rules
+Reading rules file: /lib/udev/rules.d/70-mouse.rules
+Reading rules file: /lib/udev/rules.d/70-power-switch.rules
+Reading rules file: /lib/udev/rules.d/70-touchpad.rules
+Reading rules file: /lib/udev/rules.d/70-uaccess.rules
+Reading rules file: /lib/udev/rules.d/71-seat.rules
+Reading rules file: /lib/udev/rules.d/73-seat-late.rules
+Reading rules file: /lib/udev/rules.d/75-net-description.rules
+Reading rules file: /lib/udev/rules.d/75-probe_mtd.rules
+Reading rules file: /lib/udev/rules.d/78-sound-card.rules
+Reading rules file: /lib/udev/rules.d/80-drivers.rules
+Reading rules file: /usr/lib/udev/rules.d/80-libinput-device-groups.rules
+Reading rules file: /lib/udev/rules.d/81-net-dhcp.rules
+Reading rules file: /lib/udev/rules.d/84-nm-drivers.rules
+Reading rules file: /lib/udev/rules.d/85-nm-unmanaged.rules
+Reading rules file: /lib/udev/rules.d/90-alsa-restore.rules
+Reading rules file: /usr/lib/udev/rules.d/90-feedbackd-regulator-haptic.rules
+Reading rules file: /usr/lib/udev/rules.d/90-libinput-fuzz-override.rules
+Reading rules file: /lib/udev/rules.d/90-nm-thunderbolt.rules
+Reading rules file: /usr/lib/udev/rules.d/90-pulseaudio.rules
+Reading rules file: /usr/lib/udev/rules.d/95-dm-notify.rules
+Reading rules file: /lib/udev/rules.d/95-upower-hid.rules
+Reading rules file: /lib/udev/rules.d/95-upower-wup.rules
+Reading rules file: /etc/udev/rules.d/99-ektf2232.rules
+rules contain 49152 bytes tokens (4096 * 12 bytes), 18717 bytes strings
+2850 strings (38027 bytes), 1929 de-duplicated (20232 bytes), 922 trie nodes used
+IMPORT builtin 'hwdb' /lib/udev/rules.d/50-udev-default.rules:14
+IMPORT builtin 'hwdb' returned non-zero
+IMPORT builtin 'input_id' /lib/udev/rules.d/60-input-id.rules:5
+capabilities/ev raw kernel attribute: b
+capabilities/abs raw kernel attribute: 2608000 3
+capabilities/rel raw kernel attribute: 0
+capabilities/key raw kernel attribute: 400 0 0 0 0 0 0 0 0 0 0
+properties raw kernel attribute: 2
+test_key: checking bit block 0 for any keys; found=0
+test_key: checking bit block 32 for any keys; found=0
+test_key: checking bit block 64 for any keys; found=0
+test_key: checking bit block 96 for any keys; found=0
+test_key: checking bit block 128 for any keys; found=0
+test_key: checking bit block 160 for any keys; found=0
+test_key: checking bit block 192 for any keys; found=0
+test_key: checking bit block 224 for any keys; found=0
+IMPORT builtin 'hwdb' /lib/udev/rules.d/60-input-id.rules:6
+IMPORT builtin 'hwdb' returned non-zero
+IMPORT builtin 'path_id' /lib/udev/rules.d/60-persistent-input.rules:35
+no db file to read /run/udev/data/+subsystem:input: No such file or directory
+RUN 'kmod load '$env{MODALIAS}'' /lib/udev/rules.d/80-drivers.rules:5
+created db file '/run/udev/data/+input:input0' for '/bus/i2c/devices/0-0015/input/input0'
+ABS=2608000 3
+ACTION=add
+DEVPATH=/bus/i2c/devices/0-0015/input/input0
+EV=b
+ID_FOR_SEAT=input-platform-21a0000_i2c
+ID_INPUT=1
+ID_INPUT_TOUCHSCREEN=1
+ID_PATH=platform-21a0000.i2c
+ID_PATH_TAG=platform-21a0000_i2c
+KEY=400 0 0 0 0 0 0 0 0 0 0
+MODALIAS=input:b0018v0000p0000e0000-e0,1,3,k14A,ra0,1,2F,35,36,39,mlsfw
+NAME="ektf2232"
+PRODUCT=18/0/0/0
+PROP=2
+SUBSYSTEM=input
+TAGS=:seat:
+USEC_INITIALIZED=15285870
+run: 'kmod load 'input:b0018v0000p0000e0000-e0,1,3,k14A,ra0,1,2F,35,36,39,mlsfw''
+Unload module index
+kobo-nia:/etc/udev/rules.d$ 

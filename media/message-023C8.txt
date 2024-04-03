@@ -1,0 +1,162 @@
+kobo-nia:~$ dmesg
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.3.0 (pmos@dk-ThinkPad-E560) (armv7-alpine-linux-musleabihf-gcc (Alpine 12.2.1_git20220924-r10) 12.2.1 20220924, GNU ld (GNU Binutils) 2.40) #2-postmarketOS Tue May  9 21:30:48 UTC 2023
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Kobo Nia
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] cma: Reserved 64 MiB at 0x8ac00000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000]   HighMem  empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x000000008fffffff]
+[    0.000000] CPU: All CPU(s) started in SVC mode.
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 64960
+[    0.000000] Kernel command line: console=ttymxc0,115200 debug
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 176376K/262144K available (9216K kernel code, 1080K rwdata, 2576K rodata, 1024K init, 386K bss, 20232K reserved, 65536K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000003] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000039] clocksource: mxc_timer1: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.002448] Console: colour dummy device 80x30
+[    0.002523] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.002558] pid_max: default: 32768 minimum: 301
+[    0.002932] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.002978] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.004742] CPU: Testing write buffer coherency: ok
+[    0.006787] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.006820] cblist_init_generic: Setting shift to 0 and lim to 1.
+[    0.007181] Setting up static identity map for 0x80100000 - 0x80100060
+[    0.008427] devtmpfs: initialized
+[    0.021597] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.022107] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.022158] futex hash table entries: 256 (order: -1, 3072 bytes, linear)
+[    0.026949] pinctrl core: initialized pinctrl subsystem
+[    0.030159] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.032277] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.034443] thermal_sys: Registered thermal governor 'step_wise'
+[    0.034509] cpuidle: using governor menu
+[    0.034617] CPU identified as i.MX6ULL, silicon rev 1.1
+[    0.041351] platform soc: Fixed dependency cycle(s) with /soc/bus@2000000/gpc@20dc000
+[    0.064100] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.064141] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.065732] imx6ul-pinctrl 20e0000.pinctrl: initialized IMX pinctrl driver
+[    0.067554] imx6ul-pinctrl 2290000.iomuxc-snvs: initialized IMX pinctrl driver
+[    0.074228] gpio gpiochip0: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[    0.077520] gpio gpiochip1: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[    0.080978] gpio gpiochip2: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[    0.084395] gpio gpiochip3: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[    0.087822] gpio gpiochip4: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[    0.094966] usbcore: registered new interface driver usbfs
+[    0.095069] usbcore: registered new interface driver hub
+[    0.095168] usbcore: registered new device driver usb
+[    0.099341] i2c i2c-0: IMX I2C adapter registered
+[    0.101753] i2c i2c-3: IMX I2C adapter registered
+[    0.102331] pps_core: LinuxPPS API ver. 1 registered
+[    0.102350] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.102401] PTP clock support registered
+[    0.107066] clocksource: Switched to clocksource mxc_timer1
+[    0.107687] VFS: Disk quotas dquot_6.6.0
+[    0.107754] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.130550] NET: Registered PF_INET protocol family
+[    0.131051] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.132946] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.133017] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.133052] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.133117] TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.133201] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.133395] UDP hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.133457] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.133784] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.138315] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    0.141397] Initialise system trusted keyrings
+[    0.142505] Trying to unpack rootfs image as initramfs...
+[    0.147794] workingset: timestamp_bits=14 max_order=16 bucket_order=2
+[    0.148670] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.149161] fuse: init (API version 7.38)
+[    0.648627] Key type asymmetric registered
+[    0.648668] Asymmetric key parser 'x509' registered
+[    0.658246] io scheduler mq-deadline registered
+[    0.658280] io scheduler kyber registered
+[    0.681400] mxs-dma 1804000.dma-apbh: initialized
+[    0.685654] 2020000.serial: ttymxc0 at MMIO 0x2020000 (irq = 192, base_baud = 5000000) is a IMX
+[    0.685786] printk: console [ttymxc0] enabled
+[    1.266814] Freeing initrd memory: 2640K
+[    1.269830] imx-sdma 20ec000.dma-controller: Direct firmware load for imx/sdma/sdma-imx6q.bin failed with error -2
+[    1.279044] imx-sdma 20ec000.dma-controller: external firmware not found, using ROM firmware
+[    1.288700] 21ec000.serial: ttymxc2 at MMIO 0x21ec000 (irq = 193, base_baud = 5000000) is a IMX
+[    1.331314] imx_rngc 2284000.rng: Freescale RNGB registered (HW revision 2.129)
+[    1.338026] random: crng init done
+[    1.372730] brd: module loaded
+[    1.385625] loop: module loaded
+[    1.461732] i2c_dev: i2c /dev entries driver
+[    1.473560] sdhci: Secure Digital Host Controller Interface driver
+[    1.478585] sdhci: Copyright(c) Pierre Ossman
+[    1.481675] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.500554] usbcore: registered new interface driver usbhid
+[    1.504930] usbhid: USB HID core driver
+[    1.513693] NET: Registered PF_INET6 protocol family
+[    1.519675] Segment Routing with IPv6
+[    1.522471] In-situ OAM (IOAM) with IPv6
+[    1.525349] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.531453] NET: Registered PF_PACKET protocol family
+[    1.535415] mmc1: SDHCI controller on 2190000.mmc [2190000.mmc] using ADMA
+[    1.541115] mmc0: SDHCI controller on 2194000.mmc [2194000.mmc] using ADMA
+[    1.551604] Registering SWP/SWPB emulation handler
+[    1.563878] Loading compiled-in X.509 certificates
+[    1.589309] imx_usb 2184000.usb: No over current polarity defined
+[    1.594270] mmc0: host does not support reading read-only switch, assuming write-enable
+[    1.608285] mmc0: new high speed SDHC card at address aaaa
+[    1.614477] imx_thermal 20c8000.anatop:tempmon: Commercial CPU temperature grade - max:95C critical:90C passive:85C
+[    1.625146] mmcblk0: mmc0:aaaa SC16G 14.8 GiB 
+[    1.631541] imx6ul-pinctrl 2290000.iomuxc-snvs: pin MX6ULL_PAD_SNVS_TAMPER3 already requested by 21f8000.i2c; cannot claim for gpio-keys
+[    1.642636] imx6ul-pinctrl 2290000.iomuxc-snvs: pin-5 (gpio-keys) status -22
+[    1.648418] imx6ul-pinctrl 2290000.iomuxc-snvs: could not request pin 5 (MX6ULL_PAD_SNVS_TAMPER3) from group gpio_snvs_keys_grp  on device 2290000.iomuxc-snvs
+[    1.661331] gpio-keys gpio-keys: Error applying setting, reverse things back
+[    1.667333]  mmcblk0: p1 p2
+[    1.670141] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.680284] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.685049] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    1.694302] Freeing unused kernel image (initmem) memory: 1024K
+[    1.699056] cfg80211: failed to load regulatory.db
+[    1.702893] Run /init as init process
+[    1.705284]   with arguments:
+[    1.706950]     /init
+[    1.707946]   with environment:
+[    1.709786]     HOME=/
+[    1.710843]     TERM=linux
+[    2.540104] configfs-gadget.g1 gadget.0: HOST MAC 06:30:ef:c9:7a:d7
+[    2.545104] configfs-gadget.g1 gadget.0: MAC 5a:bc:5b:8a:5a:b5
+[    3.073484] EXT4-fs (mmcblk0p1): mounted filesystem 419fbf96-8146-4d00-9470-3543c51b7df9 without journal. Quota mode: none.
+[    8.417509] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+[    8.428239] EXT4-fs (mmcblk0p2): mounted filesystem 2725e597-a32b-4caf-a5a9-30e1af8417d7 with ordered data mode. Quota mode: none.
+[    8.455172] EXT4-fs (mmcblk0p1): unmounting filesystem 419fbf96-8146-4d00-9470-3543c51b7df9.
+[    8.787304] EXT4-fs (mmcblk0p1): mounted filesystem 419fbf96-8146-4d00-9470-3543c51b7df9 without journal. Quota mode: none.
+[   11.870748] udevd[719]: starting version 3.2.11
+[   12.012547] udevd[719]: starting eudev-3.2.11
+[   12.666939] lm3630a_bl 0-0036: LM3630A backlight register OK.
+[   12.703323] mc: Linux media interface: v0.10
+[   12.745635] videodev: Linux video capture interface: v2.00
+[   12.790461] rc5t619-rtc rc5t619-rtc: registered as rtc0
+[   12.802328] rc5t619-rtc rc5t619-rtc: setting system clock to 2023-05-09T22:54:40 UTC (1683672880)
+[   12.940965] pxp 21cc000.pxp: Device registered as /dev/video0
+[   14.680831] EXT4-fs (mmcblk0p2): re-mounted 2725e597-a32b-4caf-a5a9-30e1af8417d7. Quota mode: none.
+[   31.268358] IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+[   31.849739] LDO1: disabling
+[   31.851761] LDO3: disabling
+[   31.853710] LDO4: disabling
+[   31.854485] LDO9: disabling
+[   31.855184] LDO10: disabling
+[   31.855870] LDORTC1: disabling
+[   31.856559] LDORTC2: disabling
+[   49.108951] zram: Added device: zram0

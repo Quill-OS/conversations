@@ -1,0 +1,83 @@
+kobo:~# evtest /dev/input/event0
+Input driver version is 1.0.1
+Input device ID: bus 0x19 vendor 0x1 product 0x1 version 0x100
+Input device name: "gpio-keys"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 59 (KEY_F1)
+    Event code 116 (KEY_POWER)
+  Event type 4 (EV_MSC)
+    Event code 3 (MSC_RAW)
+Properties:
+Testing ... (interrupt to exit)
+Event: time 1325467214.311057, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467214.311057, -------------- SYN_REPORT ------------
+Event: time 1325467214.381021, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467214.381021, -------------- SYN_REPORT ------------
+Event: time 1325467225.321022, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467225.321022, -------------- SYN_REPORT ------------
+Event: time 1325467226.481025, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467226.481025, -------------- SYN_REPORT ------------
+Event: time 1325467227.321021, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467227.321021, -------------- SYN_REPORT ------------
+Event: time 1325467227.401065, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467227.401065, -------------- SYN_REPORT ------------
+Event: time 1325467228.710991, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467228.710991, -------------- SYN_REPORT ------------
+Event: time 1325467232.101025, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467232.101025, -------------- SYN_REPORT ------------
+Event: time 1325467235.491045, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467235.491045, -------------- SYN_REPORT ------------
+Event: time 1325467236.490991, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467236.490991, -------------- SYN_REPORT ------------
+Event: time 1325467237.880991, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467237.880991, -------------- SYN_REPORT ------------
+Event: time 1325467238.651057, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467238.651057, -------------- SYN_REPORT ------------
+Event: time 1325467239.571019, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467239.571019, -------------- SYN_REPORT ------------
+Event: time 1325467240.111018, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467240.111018, -------------- SYN_REPORT ------------
+Event: time 1325467241.501018, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467241.501018, -------------- SYN_REPORT ------------
+Event: time 1325467242.120993, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467242.120993, -------------- SYN_REPORT ------------
+Event: time 1325467242.961050, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467242.961050, -------------- SYN_REPORT ------------
+Event: time 1325467243.581034, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467243.581034, -------------- SYN_REPORT ------------
+Event: time 1325467244.741004, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467244.741004, -------------- SYN_REPORT ------------
+Event: time 1325467245.280993, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467245.280993, -------------- SYN_REPORT ------------
+Event: time 1325467246.741002, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467246.741002, -------------- SYN_REPORT ------------
+Event: time 1325467247.740993, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467247.740993, -------------- SYN_REPORT ------------
+Event: time 1325467249.131051, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467249.131051, -------------- SYN_REPORT ------------
+Event: time 1325467249.901025, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467249.901025, -------------- SYN_REPORT ------------
+Event: time 1325467250.671057, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467250.671057, -------------- SYN_REPORT ------------
+Event: time 1325467251.281011, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467251.281011, -------------- SYN_REPORT ------------
+Event: time 1325467251.981039, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467251.981039, -------------- SYN_REPORT ------------
+Event: time 1325467252.521021, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467252.521021, -------------- SYN_REPORT ------------
+Event: time 1325467253.131000, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467253.131000, -------------- SYN_REPORT ------------
+Event: time 1325467253.521015, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467253.521015, -------------- SYN_REPORT ------------
+Event: time 1325467255.981025, type 1 (EV_KEY), code 59 (KEY_F1), value 1
+Event: time 1325467255.981025, -------------- SYN_REPORT ------------
+Event: time 1325467256.681078, type 1 (EV_KEY), code 59 (KEY_F1), value 0
+Event: time 1325467256.681078, -------------- SYN_REPORT ------------
+
+Broadcast message from @kobo
+        (not a tty) at 01:36:27 ...
+
+The system is going down for power off NOW!
+

@@ -1,0 +1,54 @@
+```
+% history | grep configure
+ 4280  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure \\n--prefix=build_lib
+ 4281  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure
+ 4282  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --host
+ 4285  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --host
+ 4286  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --help
+ 4287  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --host=arm
+ 4310  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --host=arm --prefix=installl
+ 4312  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/installl
+ 4327  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/installl
+ 4328  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-cross-ranlib \\n./configure --host=musl --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4330  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-cross-ranlib \\n./configure --host=musl --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4331  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-cross-ranlib \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4332  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4335  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\n./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4336  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\n./configure --host=arm-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4337  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-cross-ranlib \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4342  CROSS_PREFIX=armv7l-linux-musleabihf- ./configure --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4346  CROSS_PREFIX=armv7l-linux-musleabihf- ./configure --prefix=/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/
+ 4352  CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" ./configure --prefix=/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/
+ 4353  CHOST=arm CC=armv7l-linux-musleabihf-gcc AR=armv7l-linux-musleabihf-ar CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" ./configure --prefix=/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/
+ 4356  CHOST=arm CC=armv7l-linux-musleabihf-gcc AR=armv7l-linux-musleabihf-ar CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" ./configure --prefix=/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/
+ 4357  CHOST=arm CC=armv7l-linux-musleabihf-gcc AR=armv7l-linux-musleabihf-ar CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" LDFLAGS=-static ./configure --prefix=/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/
+ 4358  CHOST=arm CC=armv7l-linux-musleabihf-gcc AR=armv7l-linux-musleabihf-ar CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" LDFLAGS=-static ./configure --prefix=/mnt/HDD/Project/Public/emu-new/out/kernel/toolchain/armv7l-linux-musleabihf-cross/ --help
+ 4360  CHOST=arm CC=armv7l-linux-musleabihf-gcc AR=armv7l-linux-musleabihf-ar CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" LDFLAGS=-static ./configure --target=arm-linux-musl
+ 4361  CHOST=musl CC=armv7l-linux-musleabihf-gcc AR=armv7l-linux-musleabihf-ar CROSS_PREFIX="/home/build/inkbox/kernel/toolchain/armv7l-linux-musleabihf-cross/" LDFLAGS=-static ./configure --target=arm-linux-musl
+ 4362  CHOST=arm CC=armv7l-linux-musleabihf-gcc ./configure
+ 4363  ./configure --host=armv7l-linux-musleabihf
+ 4364  ./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4370  ./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4374  CHOST=arm ./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4394  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-cross-ranlib \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4396  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\n./configure --host=arm --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4399  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\n./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4401  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\n./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 4402  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib CXX=armv7l-linux-musleabihf-g++\n./configure --host=armv7l-linux-musleabihf --prefix=/mnt/HDD/Project/Public/inkbox-power-deamon/lib/libevdev/install
+ 5880  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure
+ 5881  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --host=armv7l-linux-musleabihf
+ 5884  CHOST=arm \   \nCC=arm-kobo-linux-gnueabihf-gcc \\nAR=arm-kobo-linux-gnueabihf-ar \\nRANLIB=arm-kobo-linux-gnueabihf-ranlib \\n./configure \\n--prefix=build_lib
+ 5886  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --host=armv7l-linux-musleabihf
+ 5887  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --prefix=build_lib
+ 5892  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --prefix=build_lib --host=arm-linux-musl
+ 5893  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --prefix=build_lib
+ 5894  CHOST=arm \   \nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --prefix=build_lib
+ 5895  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ CFLAGS="-fPIC" ./configure --prefix=build_lib
+ 5901  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --host=armv7l-linux-musleabihf --prefix=build_lib
+ 5902  CHOST=arm \   \nCC=armv7l-linux-musleabihf-gcc \\nAR=armv7l-linux-musleabihf-ar \\nRANLIB=armv7l-linux-musleabihf-ranlib \\nCXX=armv7l-linux-musleabihf-g++ ./configure --host=armv7l-linux-musleabihf
+20:59 szybet@hyperbookszyb /home/szybet
+% 
+
+
+```
+here is some inspiration

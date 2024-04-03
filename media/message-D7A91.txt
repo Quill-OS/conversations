@@ -1,0 +1,58 @@
+im unable to do anything
+```
+kobo:/# cd /sys/bus/i2c/devices/0-0015
+kobo:/sys/bus/i2c/devices/0-0015# ls
+driver     modalias   name       of_node    power      subsystem  uevent
+kobo:/sys/bus/i2c/devices/0-0015# cat name 
+elan-touch
+kobo:/sys/bus/i2c/devices/0-0015# cd driver
+kobo:/sys/bus/i2c/devices/0-0015/driver# ls
+0-0015  bind    uevent  unbind
+kobo:/sys/bus/i2c/devices/0-0015/driver# cd ..
+kobo:/sys/bus/i2c/devices/0-0015# ls
+driver     modalias   name       of_node    power      subsystem  uevent
+kobo:/sys/bus/i2c/devices/0-0015# ls -shal
+total 0      
+     0 drwx---rwx    3 root     root           0 Oct 17 00:00 .
+     0 drwx---rwx    8 root     root           0 Oct 17 00:00 ..
+     0 lrwxrwxrwx    1 root     root           0 Oct 17 10:09 driver -> ../../../../../../../bus/i2c/drivers/elan-touch
+     0 -rwx---rwx    1 root     root        4.0K Oct 16 23:58 modalias
+     0 -rwx---rwx    1 root     root        4.0K Oct 16 23:58 name
+     0 lrwxrwxrwx    1 root     root           0 Oct 17 10:09 of_node -> ../../../../../../../firmware/devicetree/base/soc/aips-bus@02100000/i2c@021a0000/elan_ts@15
+     0 drwx---rwx    2 root     root           0 Oct 17 00:00 power
+     0 lrwxrwxrwx    1 root     root           0 Oct 17 10:09 subsystem -> ../../../../../../../bus/i2c
+     0 -rwx---rwx    1 root     root        4.0K Oct 16 23:58 uevent
+kobo:/sys/bus/i2c/devices/0-0015# ls
+driver     modalias   name       of_node    power      subsystem  uevent
+kobo:/sys/bus/i2c/devices/0-0015# ls
+driver     modalias   name       of_node    power      subsystem  uevent
+kobo:/sys/bus/i2c/devices/0-0015# cd driver
+kobo:/sys/bus/i2c/devices/0-0015/driver# ls
+0-0015  bind    uevent  unbind
+kobo:/sys/bus/i2c/devices/0-0015/driver# echo elan_touch > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/devices/0-0015/driver# echo elan_touch@15 > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/devices/0-0015/driver# echo touch > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/devices/0-0015/driver# echo 0015 > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/devices/0-0015/driver# echo 0-0015 > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/devices/0-0015/driver# 
+kobo:/sys/bus/i2c/devices/0-0015/driver# cd ..
+kobo:/sys/bus/i2c/drivers# ls
+at24                 kx122                sy7636
+cyttsp5_i2c_adapter  lm3630a_bl           tps6518x
+dummy                mma8x5x              vtl_ts
+elan-touch           ricoh619             wacom_i2c
+fp9928               si114x               zforce-ir-touch
+kobo:/sys/bus/i2c/drivers# cd elan-touch/
+kobo:/sys/bus/i2c/drivers/elan-touch# ls
+bind    uevent  unbind
+kobo:/sys/bus/i2c/drivers/elan-touch# echo elan-touch > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/drivers/elan-touch# echo elan_touch > unbind 
+-bash: echo: write error: No such device
+kobo:/sys/bus/i2c/drivers/elan-touch# 
+```

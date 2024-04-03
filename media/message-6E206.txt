@@ -1,0 +1,34 @@
+```
+[ 2712.922496] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=96 len=4
+[ 2713.127262] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=97 len=4
+[ 2713.639314] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=12 seq=98 len=4
+[ 2715.564739] RTL871X: rtw_wx_set_mlme
+[ 2715.564762] RTL871X: rtw_wx_set_mlme, cmd=0, reason=3
+[ 2715.564822] RTL871X: indicate disassoc
+[ 2715.564891] RTL871X: set bssid:00:00:00:00:00:00
+[ 2715.564960] RTL871X: =>rtw_wx_set_essid
+[ 2715.564974] RTL871X: ssid=�▒��N^���l�zl�Ԛr��a �g)�59, len=32
+[ 2715.564990] RTL871X: set ssid [�▒��N^���l�zl�Ԛr��a �g)�59�^���B`�▒�] fw_state=0x00000008
+[ 2715.564999] RTL871X: Set SSID under fw_state=0x00000008
+[ 2715.565012] RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+[ 2715.565039] RTL871X: <=rtw_wx_set_essid, ret 0
+[ 2715.568191] RTL871X: rtl8188f_c2h_packet_handler: C2H, ID=3 seq=99 len=8
+[ 2715.570898] RTL871X: rtw_reset_securitypriv(eth0) - End to Disconnect
+[ 2715.570959] RTL871X: ### Clean STA_(0) info ###
+[ 2715.570978] RTL871X: free disconnecting network
+[ 2715.838099] _ntx_wifi_bt_power_ctrl g_initialize = 1
+[ 2715.838119] Wifi / BT power control 0
+[ 2715.838280] RTL871X: (2)871x_drv - drv_close, bup=1, hw_init_completed=_TRUE
+[ 2715.839643] RTL871X: 3_sd_cmd52_write: FAIL!(-110) addr=0x106a4 val=0x00
+[ 2715.840708] RTL871X: 3sd_write8: FAIL!(-110) addr=0x10553 val=0x01
+[ 2715.840789] RTL871X: 3sd_write8: FAIL!(-110) addr=0x10550 val=0xff
+[ 2715.840832] RTL871X: 3sd_write8: FAIL!(-110) addr=0x10618 val=0x00
+[ 2715.840875] RTL871X: 3sd_write8: FAIL!(-110) addr=0x10619 val=0x00
+[ 2715.840917] RTL871X: 3sd_write8: FAIL!(-110) addr=0x1061a val=0x00
+[ 2715.840959] RTL871X: 3sd_write8: FAIL!(-110) addr=0x1061b val=0x00
+[ 2715.842001] RTL871X: 3sd_write8: FAIL!(-110) addr=0x1061c val=0x00
+[ 2715.845007] RTL871X: 3sd_write8: FAIL!(-110) addr=0x1061d val=0x00
+[ 2715.845171] RTL871X: 3sd_write8: FAIL!(-110) addr=0x10102 val=0x0e
+[ 2723.568405] RTL871X: rtw_scan_timeout_handler(eth0) fw_state=808
+[ 2723.568464] RTL871X: rtw_indicate_scan_done(eth0)
+```

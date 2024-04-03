@@ -1,0 +1,154 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   content/qt/lib/libQt5Bluetooth.so
+	new file:   content/qt/lib/libQt5Bluetooth.so.5
+	new file:   content/qt/lib/libQt5Bluetooth.so.5.15
+	new file:   content/qt/lib/libQt5Bluetooth.so.5.15.2
+	modified:   content/qt/lib/libQt5Concurrent.so.5.15.2
+	modified:   content/qt/lib/libQt5Core.so.5.15.2
+	new file:   content/qt/lib/libQt5DBus.so
+	new file:   content/qt/lib/libQt5DBus.so.5
+	new file:   content/qt/lib/libQt5DBus.so.5.15
+	new file:   content/qt/lib/libQt5DBus.so.5.15.2
+	modified:   content/qt/lib/libQt5Gui.so.5.15.2
+	new file:   content/qt/lib/libQt5Multimedia.so
+	new file:   content/qt/lib/libQt5Multimedia.so.5
+	new file:   content/qt/lib/libQt5Multimedia.so.5.15
+	new file:   content/qt/lib/libQt5Multimedia.so.5.15.2
+	new file:   content/qt/lib/libQt5MultimediaQuick.so
+	new file:   content/qt/lib/libQt5MultimediaQuick.so.5
+	new file:   content/qt/lib/libQt5MultimediaQuick.so.5.15
+	new file:   content/qt/lib/libQt5MultimediaQuick.so.5.15.2
+	new file:   content/qt/lib/libQt5MultimediaWidgets.so
+	new file:   content/qt/lib/libQt5MultimediaWidgets.so.5
+	new file:   content/qt/lib/libQt5MultimediaWidgets.so.5.15
+	new file:   content/qt/lib/libQt5MultimediaWidgets.so.5.15.2
+	modified:   content/qt/lib/libQt5Network.so.5.15.2
+	modified:   content/qt/lib/libQt5NetworkAuth.so.5.15.2
+	new file:   content/qt/lib/libQt5Nfc.so
+	new file:   content/qt/lib/libQt5Nfc.so.5
+	new file:   content/qt/lib/libQt5Nfc.so.5.15
+	new file:   content/qt/lib/libQt5Nfc.so.5.15.2
+	new file:   content/qt/lib/libQt5PrintSupport.so
+	new file:   content/qt/lib/libQt5PrintSupport.so.5
+	new file:   content/qt/lib/libQt5PrintSupport.so.5.15
+	new file:   content/qt/lib/libQt5PrintSupport.so.5.15.2
+	modified:   content/qt/lib/libQt5Qml.so.5.15.2
+	modified:   content/qt/lib/libQt5QmlModels.so.5.15.2
+	modified:   content/qt/lib/libQt5QmlWorkerScript.so.5.15.2
+	modified:   content/qt/lib/libQt5Quick.so.5.15.2
+	modified:   content/qt/lib/libQt5QuickShapes.so.5.15.2
+	modified:   content/qt/lib/libQt5QuickTemplates2.so.5.15.2
+	modified:   content/qt/lib/libQt5QuickTest.so.5.15.2
+	new file:   content/qt/lib/libQt5Scxml.so
+	new file:   content/qt/lib/libQt5Scxml.so.5
+	new file:   content/qt/lib/libQt5Scxml.so.5.15
+	new file:   content/qt/lib/libQt5Scxml.so.5.15.2
+	modified:   content/qt/lib/libQt5Sql.so.5.15.2
+	modified:   content/qt/lib/libQt5Svg.so.5.15.2
+	modified:   content/qt/lib/libQt5Test.so.5.15.2
+	new file:   content/qt/lib/libQt5VirtualKeyboard.so
+	new file:   content/qt/lib/libQt5VirtualKeyboard.so.5
+	new file:   content/qt/lib/libQt5VirtualKeyboard.so.5.15
+	new file:   content/qt/lib/libQt5VirtualKeyboard.so.5.15.2
+	modified:   content/qt/lib/libQt5WebChannel.so.5.15.2
+	modified:   content/qt/lib/libQt5WebSockets.so.5.15.2
+	modified:   content/qt/lib/libQt5Widgets.so.5.15.2
+	new file:   content/qt/lib/libQt5XmlPatterns.so
+	new file:   content/qt/lib/libQt5XmlPatterns.so.5
+	new file:   content/qt/lib/libQt5XmlPatterns.so.5.15
+	new file:   content/qt/lib/libQt5XmlPatterns.so.5.15.2
+	modified:   content/qt/lib/libsndfile.so.1
+	new file:   content/qt/lib/metatypes/qt5core_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5gui_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5qml_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5qmlmodels_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5qmlworkerscript_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5quick_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5quickshapes_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5quicktest_metatypes.json
+	new file:   content/qt/lib/metatypes/qt5widgets_metatypes.json
+	new file:   content/qt/plugins/bearer/libqconnmanbearer.so
+	new file:   content/qt/plugins/bearer/libqnmbearer.so
+	modified:   content/qt/plugins/iconengines/libqsvgicon.so
+	modified:   content/qt/plugins/imageformats/libqsvg.so
+	new file:   content/qt/plugins/mediaservice/libqtmedia_audioengine.so
+	new file:   content/qt/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so
+	new file:   content/qt/plugins/platforminputcontexts/libqtvirtualkeyboardplugin.so
+	new file:   content/qt/plugins/platforms/libqlinuxfb.so
+	new file:   content/qt/plugins/platforms/libqminimal.so
+	new file:   content/qt/plugins/platforms/libqoffscreen.so
+	modified:   content/qt/plugins/platforms/libqvnc.so
+	new file:   content/qt/plugins/platformthemes/libqxdgdesktopportal.so
+	new file:   content/qt/plugins/playlistformats/libqtmultimedia_m3u.so
+	new file:   content/qt/plugins/virtualkeyboard/libqtvirtualkeyboard_hangul.so
+	new file:   content/qt/plugins/virtualkeyboard/libqtvirtualkeyboard_openwnn.so
+	new file:   content/qt/plugins/virtualkeyboard/libqtvirtualkeyboard_pinyin.so
+	new file:   content/qt/plugins/virtualkeyboard/libqtvirtualkeyboard_tcime.so
+	new file:   content/qt/plugins/virtualkeyboard/libqtvirtualkeyboard_thai.so
+	modified:   content/qt/qml/Qt/labs/animation/liblabsanimationplugin.so
+	new file:   content/qt/qml/Qt/labs/animation/plugins.qmltypes
+	modified:   content/qt/qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so
+	new file:   content/qt/qml/Qt/labs/folderlistmodel/plugins.qmltypes
+	modified:   content/qt/qml/Qt/labs/qmlmodels/liblabsmodelsplugin.so
+	new file:   content/qt/qml/Qt/labs/qmlmodels/plugins.qmltypes
+	modified:   content/qt/qml/Qt/labs/settings/libqmlsettingsplugin.so
+	new file:   content/qt/qml/Qt/labs/settings/plugins.qmltypes
+	modified:   content/qt/qml/Qt/labs/sharedimage/libsharedimageplugin.so
+	new file:   content/qt/qml/Qt/labs/sharedimage/plugins.qmltypes
+	modified:   content/qt/qml/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so
+	new file:   content/qt/qml/Qt/labs/wavefrontmesh/plugins.qmltypes
+	new file:   content/qt/qml/Qt/test/qtestroot/plugins.qmltypes
+	new file:   content/qt/qml/QtBluetooth/libdeclarative_bluetooth.so
+	new file:   content/qt/qml/QtBluetooth/plugins.qmltypes
+	new file:   content/qt/qml/QtBluetooth/qmldir
+	new file:   content/qt/qml/QtMultimedia/Video.qml
+	new file:   content/qt/qml/QtMultimedia/libdeclarative_multimedia.so
+	new file:   content/qt/qml/QtMultimedia/plugins.qmltypes
+	new file:   content/qt/qml/QtMultimedia/qmldir
+	new file:   content/qt/qml/QtNfc/libdeclarative_nfc.so
+	new file:   content/qt/qml/QtNfc/plugins.qmltypes
+	new file:   content/qt/qml/QtNfc/qmldir
+	modified:   content/qt/qml/QtQml/Models.2/libmodelsplugin.so
+	new file:   content/qt/qml/QtQml/Models.2/plugins.qmltypes
+	modified:   content/qt/qml/QtQml/StateMachine/libqtqmlstatemachine.so
+	new file:   content/qt/qml/QtQml/StateMachine/plugins.qmltypes
+	modified:   content/qt/qml/QtQml/WorkerScript.2/libworkerscriptplugin.so
+	new file:   content/qt/qml/QtQml/WorkerScript.2/plugins.qmltypes
+	modified:   content/qt/qml/QtQml/libqmlplugin.so
+	new file:   content/qt/qml/QtQml/plugins.qmltypes
+	modified:   content/qt/qml/QtQuick.2/libqtquick2plugin.so
+	new file:   content/qt/qml/QtQuick.2/plugins.qmltypes
+	modified:   content/qt/qml/QtQuick/Controls.2/Fusion/libqtquickcontrols2fusionstyleplugin.so
+	modified:   content/qt/qml/QtQuick/Controls.2/Imagine/libqtquickcontrols2imaginestyleplugin.so
+	modified:   content/qt/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
+	modified:   content/qt/qml/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so
+	modified:   content/qt/qml/QtQuick/Controls.2/libqtquickcontrols2plugin.so
+	modified:   content/qt/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+	new file:   content/qt/qml/QtQuick/Layouts/plugins.qmltypes
+	modified:   content/qt/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+	new file:   content/qt/qml/QtQuick/LocalStorage/plugins.qmltypes
+	modified:   content/qt/qml/QtQuick/Shapes/libqmlshapesplugin.so
+	new file:   content/qt/qml/QtQuick/Shapes/plugins.qmltypes
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/Settings/libqtquickvirtualkeyboardsettingsplugin.so
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/Settings/plugins.qmltypes
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/Settings/qmldir
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/Styles/libqtquickvirtualkeyboardstylesplugin.so
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/Styles/plugins.qmltypes
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/Styles/qmldir
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/libqtquickvirtualkeyboardplugin.so
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/plugins.qmltypes
+	new file:   content/qt/qml/QtQuick/VirtualKeyboard/qmldir
+	modified:   content/qt/qml/QtQuick/Window.2/libwindowplugin.so
+	new file:   content/qt/qml/QtQuick/Window.2/plugins.qmltypes
+	new file:   content/qt/qml/QtQuick/XmlListModel/libqmlxmllistmodelplugin.so
+	new file:   content/qt/qml/QtQuick/XmlListModel/plugins.qmltypes
+	new file:   content/qt/qml/QtQuick/XmlListModel/qmldir
+	new file:   content/qt/qml/QtScxml/libdeclarative_scxml.so
+	new file:   content/qt/qml/QtScxml/plugins.qmltypes
+	new file:   content/qt/qml/QtScxml/qmldir
+	modified:   content/qt/qml/QtTest/libqmltestplugin.so
+	new file:   content/qt/qml/QtTest/plugins.qmltype

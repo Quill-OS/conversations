@@ -1,0 +1,118 @@
+#!/bin/sh
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+sleep 1
+/sbin/mdev -s
+hostname kobo
+echo 3 > /sys/class/graphics/fb0/rotate
+
+# Upgrading kernel if needed
+mount /dev/mmcblk0p1 /mnt
+KERNEL_FLASH=`cat /mnt/flags/KERNEL_FLASH`
+WILL_UPDATE=`cat /mnt/flags/WILL_UPDATE`
+DIAGS_BOOT=`cat /mnt/flags/DIAGS_BOOT`
+
+if [ "$KERNEL_FLASH" == "true" ]; then
+	cp /mnt/boot/uImage /
+	sync
+	echo "Flashing new kernel..."
+	dd if=/uImage of=/dev/mmcblk0 bs=512 seek=2048
+	sync
+	echo "false" > /mnt/flags/KERNEL_FLASH
+	rm /mnt/boot/uImage
+	echo "Done, rebooting..."
+	reboot
+else
+	umount /mnt
+	evtest /dev/input/event0 > /tmp/input-log &
+
+	read -t 3 -n 1 -s -r -p "Hit any key to stop auto-boot... " KEY
+
+	if [ "$KEY" == "" ]; then
+		INPUT_LOG=`cat /tmp/input-log | grep value`
+		export INPUT_LOG
+
+		if [ "$INPUT_LOG" == "" ]; then
+			if [ "$DIAGS_BOOT" != "true" ]; then
+				# Enforcing security policy; device is not rooted.
+				mount /dev/mmcblk0p3 /mnt
+				mount /dev/mmcblk0p1 /mnt/boot
+
+				echo "Enforcing security policy..."
+
+				losetup /dev/loop7 /opt/lockdown.sqsh
+				mount /dev/loop7 /mnt/opt/root -o ro,nodev,nosuid,noexec
+
+				export ROOTFS_PASSWD=`cat /mnt/etc/passwd`
+				export LOCKDOWN_PASSWD=`cat /opt/passwd_lockdown`
+
+				if [ "$ROOTFS_PASSWD" == "$LOCKDOWN_PASSWD" ]; then
+					:
+				else
+					# passwd file was modified; restoring it to prevent shell access
+					rm /mnt/etc/passwd
+					cp /opt/passwd_lockdown /mnt/etc/passwd
+				fi
+
+				mount --move /proc /mnt/proc
+				mount --move /sys /mnt/sys
+				mount -t devtmpfs devtmpfs /mnt/dev
+				mount -t tmpfs tmpfs /mnt/tmp
+				chroot /mnt /sbin/openrc "sysinit"
+				chroot /mnt /sbin/openrc "boot"
+				chroot /mnt /sbin/openrc "default"
+			else
+				echo "DIAGS_BOOT is set to 'true', booting into diagnostics..."
+				mkdir -p /boot /alpine
+				mount /dev/mmcblk0p1 /boot
+				mount /dev/mmcblk0p2 /mnt -o ro
+				losetup /dev/loop7 /opt/lockdown.sqsh
+				mount /dev/loop7 /mnt/opt/root -o ro,nodev,nosuid,noexec
+				mount /boot/boot/alpine-udev.sqsh /alpine
+				mount --bind /proc /mnt/proc
+				mount --bind /proc /alpine/proc
+				mount --bind /sys /mnt/sys
+				mount --bind /sys /alpine/sys
+				mount --bind /boot /mnt/boot
+				mount -t devtmpfs devtmpfs /mnt/dev
+				mount -t devtmpfs devtmpfs /alpine/dev
+				mount -t tmpfs tmpfs /mnt/tmp
+				mount -t tmpfs tmpfs /alpine/tmp
+				mount -t tmpfs tmpfs /alpine/run
+				chroot /alpine /sbin/openrc "sysinit"
+				chroot /mnt /opt/bin/diagnostics_splash
+				sleep 2
+				chroot /mnt /opt/recovery/launch.sh &
+			fi
+		else
+			echo "Input event caught, booting into recovery partition..."
+			mkdir -p /boot /alpine
+			mount /dev/mmcblk0p1 /boot
+			mount /dev/mmcblk0p2 /mnt -o ro
+			losetup /dev/loop7 /opt/lockdown.sqsh
+			mount /dev/loop7 /mnt/opt/root -o ro,nodev,nosuid,noexec
+			mount /boot/boot/alpine-udev.sqsh /alpine
+			mount --bind /proc /mnt/proc
+			mount --bind /proc /alpine/proc
+			mount --bind /sys /mnt/sys
+			mount --bind /sys /alpine/sys
+			mount --bind /boot /mnt/boot
+			mount -t devtmpfs devtmpfs /mnt/dev
+			mount -t devtmpfs devtmpfs /alpine/dev
+			mount -t tmpfs tmpfs /mnt/tmp
+			mount -t tmpfs tmpfs /alpine/tmp
+			mount -t tmpfs tmpfs /alpine/run
+			chroot /alpine /sbin/openrc "sysinit"
+			chroot /mnt /opt/bin/diagnostics_splash
+			sleep 2
+			chroot /mnt /opt/recovery/launch.sh &
+		fi
+	else
+		rm /usr/sbin/chroot
+		echo -e "#!/bin/sh\n\n/sbin/getty -L ttymxc0 115200 vt100" > /usr/sbin/chroot
+		chmod +x /usr/sbin/chroot
+	fi
+fi
+
+killall evtest

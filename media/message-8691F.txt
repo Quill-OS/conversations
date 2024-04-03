@@ -1,0 +1,34 @@
+* Warning *
+Root filesystem is mounted read-only.
+Invoke `ifsctl mnt rootfs rw' to make it read-write.
+kobo:~# restart inkbox_gui
+ * Stopping InkBox GUI ...                                                                                                                                                                    [ ok ]
+ * Starting InkBox GUI ...
+ * Starting InkBox Daemon (ibxd) ...                                                                                                                                                          [ ok ]
+ * Setting up GUI user applications
+ * Successfully set up application 'InkVT'
+ * Successfully set up application 'Maps'
+ * Successfully set up application 'QtFrotz'                                                                                                                                                  [ ok ]
+kobo:~#  * WARNING: sshd has already been started
+iniparser: cannot open /mnt/onboard/.kobo/nightmode.ini
+cat: can't open '/mnt/onboard/.kobo/Kobo/Kobo eReader.conf': No such file or directory
+Motion debug enabled. Debug information for screen and mouse will be printed
+Motion debug enabled. Debug information for screen and mouse will be printed
+Motion debug enabled. Debug information for screen and mouse will be printed
+Motion debug enabled. Debug information for screen and mouse will be printed
+[FBInk] Unidentified Kobo device code (40)!
+kobofb: Finished initialization.
+03/03/2023 @ 18:29:59 | main: Running on device n437
+03/03/2023 @ 18:29:59 | main: Device has Wi-Fi capabilities
+03/03/2023 @ 18:30:01 | sleepThread: Sleep pipe thread active
+03/03/2023 @ 18:30:02 | sleepThread: Looking for messages in pipe
+03/03/2023 @ 18:30:07 | homePageWidget: Reading database
+03/03/2023 @ 18:30:07 | homePageWidget: Reading recent books database
+03/03/2023 @ 18:30:07 | homePageWidget: Setting up home page
+03/03/2023 @ 18:30:08 | homePageWidget: Reading pinned books database
+qUncompress: Input data is corrupted
+03/03/2023 @ 18:30:08 | MainWindow: Checking for available updates
+03/03/2023 @ 18:30:08 | MainWindow: checkForUpdate: No update available.
+03/03/2023 @ 18:30:10 | MainWindow: Showing USB Mass Storage dialog
+03/03/2023 @ 18:30:11 | MainWindow: Setting initial brightness to 50
+03/03/2023 @ 18:30:11 | functions: cinematicBrightness: Setting brightness to 50

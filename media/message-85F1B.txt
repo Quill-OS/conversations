@@ -1,0 +1,278 @@
+In file included from /home/build/inkbox/ultralight/build/SDK/include/Ultralight/Ultralight.h:22,
+                 from /home/build/inkbox/ultralight/samples/Sample 1 - Render to PNG/main.cpp:1:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:33:16: error: expected identifier before 'alignas'
+   33 | struct UExport alignas(16) Matrix {
+      |                ^~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:33:16: warning: attribute ignored [-Wattributes]
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:33:16: note: an attribute that appertains to a type-specifier is ignored
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:34:3: error: expected primary-expression before 'typedef'
+   34 |   typedef double Aligned4x4[4][4];
+      |   ^~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:34:3: error: expected '}' before 'typedef'
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:33:35: note: to match this '{'
+   33 | struct UExport alignas(16) Matrix {
+      |                                   ^
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:36:3: error: 'Aligned4x4' does not name a type
+   36 |   Aligned4x4 data;
+      |   ^~~~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:53:18: error: 'Matrix' does not name a type; did you mean 'Matrix4x4'?
+   53 |   void Set(const Matrix& other);
+      |                  ^~~~~~
+      |                  Matrix4x4
+/home/build/inkbox/ultralight/build/SDK/bin/libUltralightCore.so: file not recognized: file format not recognized
+collect2: error: ld returned 1 exit status
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:73:23: error: non-member function 'double ultralight::m11()' cannot have cv-qualifier
+   73 |   inline double m11() const { return data[0][0]; }
+      |                       ^~~~~
+make[2]: *** [samples/Sample 3 - Resizable App/CMakeFiles/Sample3.dir/build.make:97: samples/Sample 3 - Resizable App/Sample3] Error 1
+make[1]: *** [CMakeFiles/Makefile2:434: samples/Sample 3 - Resizable App/CMakeFiles/Sample3.dir/all] Error 2
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m11()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:73:38: error: 'data' was not declared in this scope
+   73 |   inline double m11() const { return data[0][0]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:74:23: error: non-member function 'double ultralight::m12()' cannot have cv-qualifier
+   74 |   inline double m12() const { return data[0][1]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m12()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:74:38: error: 'data' was not declared in this scope
+   74 |   inline double m12() const { return data[0][1]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:75:23: error: non-member function 'double ultralight::m13()' cannot have cv-qualifier
+   75 |   inline double m13() const { return data[0][2]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m13()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:75:38: error: 'data' was not declared in this scope
+   75 |   inline double m13() const { return data[0][2]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:76:23: error: non-member function 'double ultralight::m14()' cannot have cv-qualifier
+   76 |   inline double m14() const { return data[0][3]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m14()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:76:38: error: 'data' was not declared in this scope
+   76 |   inline double m14() const { return data[0][3]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:77:23: error: non-member function 'double ultralight::m21()' cannot have cv-qualifier
+   77 |   inline double m21() const { return data[1][0]; }
+      |                       ^~~~~
+[ 88%] Building CXX object samples/Sample 8 - Web Browser/CMakeFiles/Sample8.dir/src/UI.cpp.o
+/home/build/inkbox/ultralight/build/SDK/bin/libUltralightCore.so/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m21()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:77:38: error: 'data' was not declared in this scope
+   77 |   inline double m21() const { return data[1][0]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:78:23: error: non-member function 'double ultralight::m22()' cannot have cv-qualifier
+   78 |   inline double m22() const { return data[1][1]; }
+      |                       ^~~~~
+: file not recognized: file format not recognized
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m22()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:78:38: error: 'data' was not declared in this scope
+   78 |   inline double m22() const { return data[1][1]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:79:23: error: non-member function 'double ultralight::m23()' cannot have cv-qualifier
+   79 |   inline double m23() const { return data[1][2]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m23()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:79:38: error: 'data' was not declared in this scope
+   79 |   inline double m23() const { return data[1][2]; }
+      |                                      ^~~~
+collect2: error: ld returned 1 exit status
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:80:23: error: non-member function 'double ultralight::m24()' cannot have cv-qualifier
+   80 |   inline double m24() const { return data[1][3]; }
+      |                       ^~~~~
+make[2]: *** [samples/Sample 2 - Basic App/CMakeFiles/Sample2.dir/build.make:97: samples/Sample 2 - Basic App/Sample2] Error 1
+make[1]: *** [CMakeFiles/Makefile2:408: samples/Sample 2 - Basic App/CMakeFiles/Sample2.dir/all] Error 2
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m24()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:80:38: error: 'data' was not declared in this scope
+   80 |   inline double m24() const { return data[1][3]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:81:23: error: non-member function 'double ultralight::m31()' cannot have cv-qualifier
+   81 |   inline double m31() const { return data[2][0]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m31()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:81:38: error: 'data' was not declared in this scope
+   81 |   inline double m31() const { return data[2][0]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:82:23: error: non-member function 'double ultralight::m32()' cannot have cv-qualifier
+   82 |   inline double m32() const { return data[2][1]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m32()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:82:38: error: 'data' was not declared in this scope
+   82 |   inline double m32() const { return data[2][1]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:83:23: error: non-member function 'double ultralight::m33()' cannot have cv-qualifier
+   83 |   inline double m33() const { return data[2][2]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m33()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:83:38: error: 'data' was not declared in this scope
+   83 |   inline double m33() const { return data[2][2]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:84:23: error: non-member function 'double ultralight::m34()' cannot have cv-qualifier
+   84 |   inline double m34() const { return data[2][3]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m34()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:84:38: error: 'data' was not declared in this scope
+   84 |   inline double m34() const { return data[2][3]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:85:23: error: non-member function 'double ultralight::m41()' cannot have cv-qualifier
+   85 |   inline double m41() const { return data[3][0]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m41()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:85:38: error: 'data' was not declared in this scope
+   85 |   inline double m41() const { return data[3][0]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:86:23: error: non-member function 'double ultralight::m42()' cannot have cv-qualifier
+   86 |   inline double m42() const { return data[3][1]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m42()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:86:38: error: 'data' was not declared in this scope
+   86 |   inline double m42() const { return data[3][1]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:87:23: error: non-member function 'double ultralight::m43()' cannot have cv-qualifier
+   87 |   inline double m43() const { return data[3][2]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m43()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:87:38: error: 'data' was not declared in this scope
+   87 |   inline double m43() const { return data[3][2]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:88:23: error: non-member function 'double ultralight::m44()' cannot have cv-qualifier
+   88 |   inline double m44() const { return data[3][3]; }
+      |                       ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::m44()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:88:38: error: 'data' was not declared in this scope
+   88 |   inline double m44() const { return data[3][3]; }
+      |                                      ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:90:21: error: non-member function 'double ultralight::a()' cannot have cv-qualifier
+   90 |   inline double a() const { return data[0][0]; }
+      |                     ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::a()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:90:36: error: 'data' was not declared in this scope
+   90 |   inline double a() const { return data[0][0]; }
+      |                                    ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:91:21: error: non-member function 'double ultralight::b()' cannot have cv-qualifier
+   91 |   inline double b() const { return data[0][1]; }
+      |                     ^~~~~
+[ 90%] Building CXX object samples/Sample 8 - Web Browser/CMakeFiles/Sample8.dir/src/main.cpp.o
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::b()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:91:36: error: 'data' was not declared in this scope
+   91 |   inline double b() const { return data[0][1]; }
+      |                                    ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:92:21: error: non-member function 'double ultralight::c()' cannot have cv-qualifier
+   92 |   inline double c() const { return data[1][0]; }
+      |                     ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::c()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:92:36: error: 'data' was not declared in this scope
+   92 |   inline double c() const { return data[1][0]; }
+      |                                    ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:93:21: error: non-member function 'double ultralight::d()' cannot have cv-qualifier
+   93 |   inline double d() const { return data[1][1]; }
+      |                     ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::d()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:93:36: error: 'data' was not declared in this scope
+   93 |   inline double d() const { return data[1][1]; }
+      |                                    ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:94:21: error: non-member function 'double ultralight::e()' cannot have cv-qualifier
+   94 |   inline double e() const { return data[3][0]; }
+      |                     ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::e()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:94:36: error: 'data' was not declared in this scope
+   94 |   inline double e() const { return data[3][0]; }
+      |                                    ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:95:21: error: non-member function 'double ultralight::f()' cannot have cv-qualifier
+   95 |   inline double f() const { return data[3][1]; }
+      |                     ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: In function 'double ultralight::f()':
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:95:36: error: 'data' was not declared in this scope
+   95 |   inline double f() const { return data[3][1]; }
+      |                                    ^~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h: At global scope:
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:100:21: error: non-member function 'bool ultralight::IsIdentity()' cannot have cv-qualifier
+  100 |   bool IsIdentity() const;
+      |                     ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:105:34: error: non-member function 'bool ultralight::IsIdentityOrTranslation()' cannot have cv-qualifier
+  105 |   bool IsIdentityOrTranslation() const;
+      |                                  ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:110:19: error: non-member function 'bool ultralight::IsAffine()' cannot have cv-qualifier
+  110 |   bool IsAffine() const;
+      |                   ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:116:19: error: non-member function 'bool ultralight::IsSimple()' cannot have cv-qualifier
+  116 |   bool IsSimple() const;
+      |                   ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:141:24: error: 'Matrix' does not name a type; did you mean 'Matrix4x4'?
+  141 |   void Transform(const Matrix& other);
+      |                        ^~~~~~
+      |                        Matrix4x4
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:146:27: error: 'result' was not declared in this scope
+  146 |   bool GetInverse(Matrix& result) const;
+      |                           ^~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:151:31: error: non-member function 'ultralight::Point ultralight::Apply(const Point&)' cannot have cv-qualifier
+  151 |   Point Apply(const Point& p) const;
+      |                               ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:156:29: error: non-member function 'ultralight::Rect ultralight::Apply(const ultralight::Rect&)' cannot have cv-qualifier
+  156 |   Rect Apply(const Rect& r) const;
+      |                             ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:161:19: error: non-member function 'uint32_t ultralight::Hash()' cannot have cv-qualifier
+  161 |   uint32_t Hash() const;
+      |                   ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:167:28: error: non-member function 'ultralight::Matrix4x4 ultralight::GetMatrix4x4()' cannot have cv-qualifier
+  167 |   Matrix4x4 GetMatrix4x4() const;
+      |                            ^~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:170:31: error: 'Matrix' does not name a type
+  170 | bool UExport operator==(const Matrix& a, const Matrix& b);
+      |                               ^~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:170:48: error: 'Matrix' does not name a type
+  170 | bool UExport operator==(const Matrix& a, const Matrix& b);
+      |                                                ^~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:170:14: error: 'bool operator==(const int&, const int&)' must have an argument of class or enumerated type
+  170 | bool UExport operator==(const Matrix& a, const Matrix& b);
+      |              ^~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:171:31: error: 'Matrix' does not name a type
+  171 | bool UExport operator!=(const Matrix& a, const Matrix& b);
+      |                               ^~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:171:48: error: 'Matrix' does not name a type
+  171 | bool UExport operator!=(const Matrix& a, const Matrix& b);
+      |                                                ^~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:171:14: error: 'bool operator!=(const int&, const int&)' must have an argument of class or enumerated type
+  171 | bool UExport operator!=(const Matrix& a, const Matrix& b);
+      |              ^~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:173:31: error: 'Matrix4x4' does not name a type
+  173 | bool UExport operator==(const Matrix4x4& a, const Matrix4x4& b);
+      |                               ^~~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:173:51: error: 'Matrix4x4' does not name a type
+  173 | bool UExport operator==(const Matrix4x4& a, const Matrix4x4& b);
+      |                                                   ^~~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:173:14: error: 'bool operator==(const int&, const int&)' must have an argument of class or enumerated type
+  173 | bool UExport operator==(const Matrix4x4& a, const Matrix4x4& b);
+      |              ^~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:174:31: error: 'Matrix4x4' does not name a type
+  174 | bool UExport operator!=(const Matrix4x4& a, const Matrix4x4& b);
+      |                               ^~~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:174:51: error: 'Matrix4x4' does not name a type
+  174 | bool UExport operator!=(const Matrix4x4& a, const Matrix4x4& b);
+      |                                                   ^~~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:174:14: error: 'bool operator!=(const int&, const int&)' must have an argument of class or enumerated type
+  174 | bool UExport operator!=(const Matrix4x4& a, const Matrix4x4& b);
+      |              ^~~~~~~~
+/home/build/inkbox/ultralight/build/SDK/include/Ultralight/Matrix.h:176:1: error: expected declaration before '}' token
+  176 | }  // namespace ultralight
+      | ^
+[ 92%] Linking CXX executable Sample5

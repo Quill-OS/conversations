@@ -1,0 +1,227 @@
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:3: warning: "_GNU_SOURCE" redefined
+    3 | #define _GNU_SOURCE /* for asprintf */
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:27:3: error: expected identifier before numeric constant
+   27 |  [0 ... SYN_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:27:18: error: expected ‘{’ before ‘=’ token
+   27 |  [0 ... SYN_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:27:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+   27 |  [0 ... SYN_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:27:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+   27 |  [0 ... SYN_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:27:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:35:3: error: expected identifier before numeric constant
+   35 |  [0 ... KEY_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:35:18: error: expected ‘{’ before ‘=’ token
+   35 |  [0 ... KEY_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:35:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+   35 |  [0 ... KEY_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:35:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+   35 |  [0 ... KEY_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:35:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:427:3: error: expected identifier before numeric constant
+  427 |  [0 ... REL_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:427:18: error: expected ‘{’ before ‘=’ token
+  427 |  [0 ... REL_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:427:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  427 |  [0 ... REL_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:427:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  427 |  [0 ... REL_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:427:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:437:3: error: expected identifier before numeric constant
+  437 |  [0 ... ABS_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:437:18: error: expected ‘{’ before ‘=’ token
+  437 |  [0 ... ABS_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:437:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  437 |  [0 ... ABS_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:437:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  437 |  [0 ... ABS_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:437:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:480:4: error: expected identifier before numeric constant
+  480 |  [ 0 ... MSC_MAX] = NULL,
+      |    ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:480:19: error: expected ‘{’ before ‘=’ token
+  480 |  [ 0 ... MSC_MAX] = NULL,
+      |                   ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:480:21: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  480 |  [ 0 ... MSC_MAX] = NULL,
+      |                     ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:480:17: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  480 |  [ 0 ... MSC_MAX] = NULL,
+      |                 ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:480:17: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:490:3: error: expected identifier before numeric constant
+  490 |  [0 ... LED_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:490:18: error: expected ‘{’ before ‘=’ token
+  490 |  [0 ... LED_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:490:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  490 |  [0 ... LED_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:490:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  490 |  [0 ... LED_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:490:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:505:3: error: expected identifier before numeric constant
+  505 |  [0 ... SND_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:505:18: error: expected ‘{’ before ‘=’ token
+  505 |  [0 ... SND_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:505:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  505 |  [0 ... SND_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:505:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  505 |  [0 ... SND_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:505:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:511:3: error: expected identifier before numeric constant
+  511 |  [0 ... REP_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:511:18: error: expected ‘{’ before ‘=’ token
+  511 |  [0 ... REP_MAX] = NULL,
+      |                  ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:511:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  511 |  [0 ... REP_MAX] = NULL,
+      |                    ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:511:16: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  511 |  [0 ... REP_MAX] = NULL,
+      |                ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:511:16: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:516:3: error: expected identifier before numeric constant
+  516 |  [0 ... SW_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:516:17: error: expected ‘{’ before ‘=’ token
+  516 |  [0 ... SW_MAX] = NULL,
+      |                 ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:516:19: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  516 |  [0 ... SW_MAX] = NULL,
+      |                   ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:516:15: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  516 |  [0 ... SW_MAX] = NULL,
+      |               ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:516:15: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:555:3: error: expected identifier before numeric constant
+  555 |  [0 ... FF_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:555:17: error: expected ‘{’ before ‘=’ token
+  555 |  [0 ... FF_MAX] = NULL,
+      |                 ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:555:19: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  555 |  [0 ... FF_MAX] = NULL,
+      |                   ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:555:15: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  555 |  [0 ... FF_MAX] = NULL,
+      |               ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:555:15: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:567:3: error: expected identifier before numeric constant
+  567 |  [0 ... FF_STATUS_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:567:24: error: expected ‘{’ before ‘=’ token
+  567 |  [0 ... FF_STATUS_MAX] = NULL,
+      |                        ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:567:26: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  567 |  [0 ... FF_STATUS_MAX] = NULL,
+      |                          ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:567:22: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  567 |  [0 ... FF_STATUS_MAX] = NULL,
+      |                      ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:567:22: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:574:3: error: expected identifier before numeric constant
+  574 |  [0 ... EV_MAX] = -1,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:574:17: error: expected ‘{’ before ‘=’ token
+  574 |  [0 ... EV_MAX] = -1,
+      |                 ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:574:20: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘int’)
+  574 |  [0 ... EV_MAX] = -1,
+      |                    ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:574:15: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  574 |  [0 ... EV_MAX] = -1,
+      |               ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:574:15: note:   no known conversion for argument 1 from ‘int’ to ‘const<lambda()>&’
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:589:3: error: expected identifier before numeric constant
+  589 |  [0 ... EV_MAX] = NULL,
+      |   ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: In lambda function:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:589:17: error: expected ‘{’ before ‘=’ token
+  589 |  [0 ... EV_MAX] = NULL,
+      |                 ^
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:21:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h: At global scope:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:589:19: error: no match for ‘operator=’ (operand types are ‘<lambda()>’ and ‘long int’)
+  589 |  [0 ... EV_MAX] = NULL,
+      |                   ^~~~
+In file included from /mnt/HDD/Project/Public/inkbox-power-deamon/src/monitorEvents.cpp:24:
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:589:15: note: candidate: ‘<lambda()>&<lambda()>::operator=(const<lambda()>&)’ (deleted)
+  589 |  [0 ... EV_MAX] = NULL,
+      |               ^
+/mnt/HDD/Project/Public/inkbox-power-deamon/src/devDefinitions.h:589:15: note:   no known conversion for argument 1 from ‘long int’ to ‘const<lambda()>&’
+make[2]: *** [CMakeFiles/inkbox-power-deamon.dir/build.make:90: CMakeFiles/inkbox-power-deamon.dir/src/monitorEvents.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:839: CMakeFiles/inkbox-power-deamon.dir/all] Error 2
+make: *** [Makefile:121: all] Error 2

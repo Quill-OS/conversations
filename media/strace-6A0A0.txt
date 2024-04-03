@@ -1,0 +1,124 @@
+execve("./xdotest", ["./xdotest"], 0x7e81dd80 /* 18 vars */) = 0
+set_tls(0x2ab2e5ec)                     = 0
+set_tid_address(0x2ab2f1a0)             = 17610
+open("/etc/ld-musl-armhf.path", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libxdo.so.3", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libxdo.so.3", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libxdo.so.3", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=29940, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0D%\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 98304, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ab30000
+mmap2(0x2ab46000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x6000) = 0x2ab46000
+close(3)                                = 0
+open("/lib/libevdev.so.2", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libevdev.so.2", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libevdev.so.2", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=54508, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0XG\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 122880, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ab48000
+mmap2(0x2ab62000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0xa000) = 0x2ab62000
+close(3)                                = 0
+open("/lib/libX11.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libX11.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libX11.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=888336, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\310-\1\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 954368, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ab66000
+mmap2(0x2ac4b000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0xd5000) = 0x2ac4b000
+close(3)                                = 0
+open("/lib/libXtst.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libXtst.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libXtst.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=13468, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0l\r\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 81920, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ac4f000
+mmap2(0x2ac61000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x2000) = 0x2ac61000
+close(3)                                = 0
+open("/lib/libXinerama.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libXinerama.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libXinerama.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=5228, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0<\7\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 73728, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ac63000
+mmap2(0x2ac73000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0) = 0x2ac73000
+close(3)                                = 0
+open("/lib/libxkbcommon.so.0", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libxkbcommon.so.0", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libxkbcommon.so.0", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=177372, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\08)\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 245760, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ac75000
+mmap2(0x2acaf000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x2a000) = 0x2acaf000
+close(3)                                = 0
+open("/lib/libxcb.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libxcb.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libxcb.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=95376, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\264\223\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 163840, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2acb1000
+mmap2(0x2acd7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x16000) = 0x2acd7000
+close(3)                                = 0
+open("/lib/libXext.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libXext.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libXext.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=38592, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\244%\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 106496, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2acd9000
+mmap2(0x2acf1000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x8000) = 0x2acf1000
+close(3)                                = 0
+open("/lib/libXau.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libXau.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libXau.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=9276, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\214\10\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 77824, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2acf3000
+mmap2(0x2ad04000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x1000) = 0x2ad04000
+close(3)                                = 0
+open("/lib/libXdmcp.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libXdmcp.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libXdmcp.so.6", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=13480, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\234\r\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 81920, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ad06000
+mmap2(0x2ad18000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x2000) = 0x2ad18000
+close(3)                                = 0
+open("/lib/libbsd.so.0", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libbsd.so.0", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libbsd.so.0", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=67120, ...}) = 0
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10*\0\0004\0\0\0"..., 936) = 936
+mmap2(NULL, 135168, PROT_READ|PROT_EXEC, MAP_PRIVATE, 3, 0) = 0x2ad1a000
+mmap2(0x2ad39000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0xf000) = 0x2ad39000
+close(3)                                = 0
+mprotect(0x2ab46000, 4096, PROT_READ)   = 0
+mprotect(0x2ab62000, 12288, PROT_READ)  = 0
+mprotect(0x2ac4b000, 8192, PROT_READ)   = 0
+mprotect(0x2ac61000, 4096, PROT_READ)   = 0
+mprotect(0x2ac73000, 4096, PROT_READ)   = 0
+mprotect(0x2acaf000, 4096, PROT_READ)   = 0
+mprotect(0x2acd7000, 4096, PROT_READ)   = 0
+mprotect(0x2acf1000, 4096, PROT_READ)   = 0
+mprotect(0x2ad04000, 4096, PROT_READ)   = 0
+mprotect(0x2ad18000, 4096, PROT_READ)   = 0
+mprotect(0x2ad39000, 4096, PROT_READ)   = 0
+mprotect(0x54aba000, 4096, PROT_READ)   = 0
+open("/dev/input/event0", O_RDWR|O_NONBLOCK|O_LARGEFILE) = 3
+ioctl(1, TIOCGWINSZ, {ws_row=44, ws_col=150, ws_xpixel=0, ws_ypixel=0}) = 0
+writev(1, [{iov_base="Input device opened successfully"..., iov_len=33}, {iov_base="\n", iov_len=1}], 2Input device opened successfully.
+) = 34
+ioctl(0, EVIOCGBIT(0, 4), 0x2ab2f240)   = -1 EINVAL (Invalid argument)
+writev(1, [{iov_base="Failed to initialize libevdev!", iov_len=30}, {iov_base="\n", iov_len=1}], 2Failed to initialize libevdev!
+) = 31
+exit_group(1)                           = ?
++++ exited with 1 +++

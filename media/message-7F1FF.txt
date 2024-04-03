@@ -1,0 +1,66 @@
+kobo:/# rmmod sdio_wifi_pwr
+[ 1742.888545] mmc1: Timeout waiting for hardware interrupt.
+[ 1752.908547] mmc1: Timeout waiting for hardware interrupt.
+[ 1762.928610] mmc1: Timeout waiting for hardware interrupt.
+^C[ 1772.948547] mmc1: Timeout waiting for hardware interrupt.
+^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C^C[ 1782.968537] mmc1: Timeout waiting for hardware interrupt.
+
+
+
+
+
+
+^C^C^C^C^C^C^C
+^C^C^C^C^C^C^C^Cc
+^C^C^C^C^C^C^C^C^C^C^C^C^C[ 1791.293251] Unable to handle kernel NULL pointer dereference at virtual address 00000000
+[ 1791.337994] pgd = 80004000
+[ 1791.347212] [00000000] *pgd=00000000
+[ 1791.358686] Internal error: Oops: 80000005 [#1] PREEMPT SMP ARM
+[ 1791.364619] Modules linked in: 8189fs(O) g_ether usb_f_rndis usb_f_ecm_subset usb_f_eem usb_f_ecm u_ether libcomposite configfs [last unloaded: sdio_wifi_pwr]
+[ 1791.378963] CPU: 0 PID: 2304 Comm: RTW_CMD_THREAD Tainted: G           O    4.1.15 #1
+[ 1791.386796] Hardware name: Freescale i.MX6 Ultralite (Device Tree)
+[ 1791.392981] task: 8dff9300 ti: 8d7d0000 task.ti: 8d7d0000
+[ 1791.398389] PC is at 0x0
+[ 1791.401124] LR is at _rtw_read8+0x18/0x1c [8189fs]
+[ 1791.405927] pc : [<00000000>]    lr : [<7f04f3b8>]    psr: 20000013
+[ 1791.405927] sp : 8d7d1db8  ip : 00000000  fp : 000001cc
+[ 1791.417408] r10: 900d6000  r9 : 00000001  r8 : 8d7d1e09
+[ 1791.422637] r7 : 00000007  r6 : 00000002  r5 : 900d1000  r4 : 00000037
+[ 1791.429169] r3 : 00000000  r2 : 00000000  r1 : 000001cc  r0 : 900d217c
+[ 1791.435703] Flags: nzCv  IRQs on  FIQs on  Mode SVC_32  ISA ARM  Segment kernel
+[ 1791.443016] Control: 10c53c7d  Table: 8882c06a  DAC: 00000015
+[ 1791.448769] Process RTW_CMD_THREAD (pid: 2304, stack limit = 0x8d7d0210)
+[ 1791.455475] Stack: (0x8d7d1db8 to 0x8d7d2000)
+[ 1791.459839] 1da0:                                                       00000037 7f0c5950
+[ 1791.468026] 1dc0: 7f043bd8 00000020 00000000 00000000 7f043bd8 00000000 87118000 900d6000
+[ 1791.476210] 1de0: 900d1000 00000000 900d20d8 00022fb6 7f043bd8 7f0c5e68 00000000 00000000
+[ 1791.484396] 1e00: 80f417b4 0000004c 04220040 00400c00 00000000 900d1000 00000000 900d6000
+[ 1791.492581] 1e20: 00000000 00000000 900d20d8 00022fb6 7f043bd8 7f0c1c20 900d20d8 00022fb6
+[ 1791.500767] 1e40: 7f043bd8 800700ec 7f10c5a0 900d1000 87118588 87118000 00000000 00000000
+[ 1791.508952] 1e60: 900d20d8 7f0c65ec 900d1000 7f0a40ac 900d1000 7f06e118 7f1045c0 00128f38
+[ 1791.517138] 1e80: 900d20d8 00022fb6 7f043bd8 87118000 900d1000 8d7d1eb0 7f1045c0 7f128f38
+[ 1791.525323] 1ea0: 900d20d8 7f06e448 8d7d1eb0 80055aa4 49464957 53504c2d 5254435f 454c5f4c
+[ 1791.533509] 1ec0: 00455641 00000000 00000000 00000000 900d1000 87118000 900d20f8 7f042658
+[ 1791.541694] 1ee0: 7f043bd8 80534760 87118588 87e90a00 900d1000 7f043c84 7f043bd8 805349d4
+[ 1791.549880] 1f00: 87118000 900d1000 8999dc80 900d1000 900d20f8 7f1045c0 7f128f38 900d20d8
+[ 1791.558065] 1f20: 00022fb6 7f040c84 88675df0 a0000013 7f040800 87e90a00 900d2124 900d20e8
+[ 1791.566251] 1f40: 900d1000 00000000 8999d700 900d1000 7f040800 00000000 00000000 00000000
+[ 1791.574436] 1f60: 00000000 80051a0c 384c5452 00000000 23232320 900d1000 00000000 00000000
+[ 1791.582622] 1f80: 8d7d1f80 8d7d1f80 00000000 00000000 8d7d1f90 8d7d1f90 8d7d1fac 8999d700
+[ 1791.590807] 1fa0: 80051930 00000000 00000000 8000f4e8 00000000 00000000 00000000 00000000
+[ 1791.598992] 1fc0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[ 1791.607176] 1fe0: 00000000 00000000 00000000 00000000 00000013 00000000 69206874 203a2073
+[ 1791.615847] [<7f04f3b8>] (_rtw_read8 [8189fs]) from [<7f0c5950>] (FillH2CCmd8188F+0x98/0x174 [8189fs])
+[ 1791.625738] [<7f0c5950>] (FillH2CCmd8188F [8189fs]) from [<7f0c5e68>] (rtl8188f_set_FwPwrMode_cmd+0x240/0x24c [8189fs])
+[ 1791.637101] [<7f0c5e68>] (rtl8188f_set_FwPwrMode_cmd [8189fs]) from [<7f0c1c20>] (SetHwReg8188F+0xb90/0x1004 [8189fs])
+[ 1791.648363] [<7f0c1c20>] (SetHwReg8188F [8189fs]) from [<7f0c65ec>] (SetHwReg8188FS+0x7c/0x80 [8189fs])
+[ 1791.658306] [<7f0c65ec>] (SetHwReg8188FS [8189fs]) from [<7f0a40ac>] (rtw_hal_set_hwreg+0x10/0x14 [8189fs])
+[ 1791.668518] [<7f0a40ac>] (rtw_hal_set_hwreg [8189fs]) from [<7f06e118>] (rtw_set_ps_mode+0x168/0x238 [8189fs])
+[ 1791.678918] [<7f06e118>] (rtw_set_ps_mode [8189fs]) from [<7f06e448>] (LPS_Leave+0x7c/0xa4 [8189fs])
+[ 1791.688409] [<7f06e448>] (LPS_Leave [8189fs]) from [<7f042658>] (lps_ctrl_wk_hdl+0xf8/0x150 [8189fs])
+[ 1791.697945] [<7f042658>] (lps_ctrl_wk_hdl [8189fs]) from [<7f043c84>] (rtw_drvextra_cmd_hdl+0xac/0x260 [8189fs])
+[ 1791.708438] [<7f043c84>] (rtw_drvextra_cmd_hdl [8189fs]) from [<7f040c84>] (rtw_cmd_thread+0x484/0x640 [8189fs])
+[ 1791.718786] [<7f040c84>] (rtw_cmd_thread [8189fs]) from [<80051a0c>] (kthread+0xdc/0xf4)
+[ 1791.726903] [<80051a0c>] (kthread) from [<8000f4e8>] (ret_from_fork+0x14/0x2c)
+[ 1791.734138] Code: bad PC value
+[ 1791.754034] ---[ end trace e503bbf77ea0c402 ]---

@@ -1,0 +1,29 @@
+pmbootstrap build linux-kobo-clara-mainline --force
+[18:02:19] (native) install bash bc bison devicepkg-dev findutils flex gmp-dev lzop mpc1-dev mpfr-dev openssl-dev perl
+[18:02:20] WARNING: package musl-armv7: aport version 1.2.3_git20230411-r0 is lower than 1.2.4-r0 from the binary repository. 1.2.4-r0 will be used when installing musl-armv7. See also: <https://postmarketos.org/warning-repo2>
+[18:02:20] (native) install ccache-cross-symlinks gcc-armv7 g++-armv7
+[18:02:20] (native) build armv7/linux-kobo-clara-mainline-6.1.12-r5.apk
+[18:08:25] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[18:08:25] DONE!
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+[18:09:16] *** (1/4) PREPARE NATIVE CHROOT ***
+[18:09:19] (native) install cryptsetup util-linux parted
+[18:09:20] *** (2/4) CREATE DEVICE ROOTFS ("kobo-nia") ***
+[18:09:22] WARNING: package postmarketos-initramfs: aport version 1.0.2-r0 is lower than 1.1.0-r0 from the binary repository. 1.1.0-r0 will be used when installing postmarketos-initramfs. See also: <https://postmarketos.org/warning-repo2>
+[18:09:22] WARNING: package postmarketos-base-ui: aport version 7-r0 is lower than 8-r0 from the binary repository. 8-r0 will be used when installing postmarketos-base-ui. See also: <https://postmarketos.org/warning-repo2>
+[18:09:22] WARNING: package postmarketos-base-ui: aport version 7-r0 is lower than 8-r0 from the binary repository. 8-r0 will be used when installing postmarketos-base-ui. See also: <https://postmarketos.org/warning-repo2>
+[18:09:22] WARNING: package boot-deploy: aport version 0.7-r1 is lower than 0.8.1-r0 from the binary repository. 0.8.1-r0 will be used when installing boot-deploy. See also: <https://postmarketos.org/warning-repo2>
+[18:09:22] (rootfs_kobo-nia) install postmarketos-base device-kobo-nia postmarketos-ui-console lang musl-locales postmarketos-base-nofde
+[18:09:46] (rootfs_kobo-nia) install device-kobo-nia
+[18:09:59] (rootfs_kobo-nia) install postmarketos-mkinitfs
+[18:10:02] (rootfs_kobo-nia) mkinitfs kobo-clara-mainline
+[18:10:11]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+New password: 
+              Retype new password: 
+                                   passwd: password updated successfully
+                                                                        [18:10:17] NOTE: No valid keymap specified for device
+[18:10:23] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+[18:10:23] ERROR: Command failed (exit code 1): (rootfs_kobo-nia) % sed -i s/LANG=C.UTF-8/LANG=en_GB.UTF-8/ /etc/profile.d/locale.sh
+[18:10:23] See also: <https://postmarketos.org/troubleshooting>
+Run 'pmbootstrap log' for details.
+dk@dk-ThinkPad-E560:~$

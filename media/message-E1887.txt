@@ -1,0 +1,43 @@
+```
+kobo:~# ./oobe-inkbox: line 5: /mnt/onboard/.adds/inkbox/oobe-inkbox-bin: Permission denied
+^C
+kobo:~# ls -l /mnt/onboard/.adds/inkbox/
+ls: /mnt/onboard/.adds/inkbox/: No such file or directory
+kobo:~# ls -l /kobo/mnt/onboard/.adds/inkbox[1;5D/
+ls: /kobo/mnt/onboard/.adds/inkbox[1: No such file or directory
+-ash: 5D/: not found
+kobo:~# ls -l /kobo/mnt/onboard/.adds/inkbox
+total 13164
+-rwxr-xr-x    1 user     user           530 May 21 20:08 2048
+-rwxr-xr-x    1 user     user         83124 May 21 20:08 2048-bin
+-rw-r--r--    1 user     user           261 May 21 20:08 AUTHORS
+-rw-r--r--    1 user     user         34470 May 21 20:08 LICENSE
+drwxr-xr-x   29 user     user             0 May 21 20:08 dictionary
+-rw-r--r--    1 root     root          5974 Jun 12 15:11 eink.qss
+-rwxr-xr-x    1 user     user           563 May 21 20:08 epub.sh
+-rwxr-xr-x    1 user     user          3930 May 21 20:08 explore_local_library.sh
+-rwxr-xr-x    1 user     user          1043 May 21 20:08 find_epub_metadata.sh
+-rwxr-xr-x    1 user     user           203 May 21 20:08 inkbox
+-rwxr-xr-x    1 root     root       8088432 Jun 13 16:41 inkbox-bin
+-rwxr-xr-x    1 user     user          4406 Jun 13 16:38 inkbox.sh
+-rwxr-xr-x    1 user     user           348 May 21 20:08 install_developer-key.sh
+-rwxr-xr-x    1 user     user           940 May 21 20:08 launch_user_application.sh
+-rwxr-xr-x    1 user     user            85 May 21 20:08 lockscreen
+-rw-r--r--    1 root     root        140372 Jun 13 16:41 lockscreen-bin
+-rwxr-xr-x    1 user     user           195 Jun 13 16:39 oobe-inkbox
+-rw-r--r--    1 root     root       3089084 Jun 13 16:41 oobe-inkbox-bin
+-rwxr-xr-x    1 user     user           178 May 21 20:08 pdf_get_total_pages_number.sh
+-rwxr-xr-x    1 user     user          1386 May 21 20:08 qalculate
+-rwxr-xr-x    1 user     user       1906572 May 21 20:08 qalculate-bin
+-rwxr-xr-x    1 user     user           579 May 21 20:08 qreversi
+-rwxr-xr-x    1 user     user        119612 May 21 20:08 qreversi-bin
+-rwxr-xr-x    1 user     user           599 May 21 20:08 remount_tmpfs_launch.sh
+-rwxr-xr-x    1 user     user           157 May 21 20:08 reset-config.sh
+-rwxr-xr-x    1 user     user           298 May 21 20:08 splash.sh
+-rwxr-xr-x    1 user     user          2025 May 21 20:08 split-txt.py
+-rwxr-xr-x    1 user     user           307 May 21 20:08 split.sh
+drwxr-xr-x    5 user     user             0 May 21 20:08 system
+-rwxr-xr-x    1 user     user           122 May 21 20:08 test_ping.sh
+-rwxr-xr-x    1 user     user           252 May 21 20:08 wake.sh
+kobo:~# 
+```

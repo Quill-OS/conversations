@@ -1,0 +1,40 @@
+```
+fuse-overlayfs        14522760  12334328   1428908  90% /
+/dev/loop0            10230000   1245448   8984552  12% /mnt/onboard/onboard
+tmpfs                    25016        84     24932   0% /opt/ibxd
+squashfuse               22528     22528         0 100% /mnt/onboard/.adds/inkbox
+/dev/mmcblk0p4        14522760  12334328   1428908  90% /mnt/onboard/.adds/inkbox/.config
+squashfuse               24576     24576         0 100% /mnt/onboard/.adds/qt-linux-5.15.2-kobo
+squashfuse               17408     17408         0 100% /mnt/onboard/.adds/Python-3.9.2
+fuse-overlayfs          117203    106575      1454  99% /mnt/onboard/.adds/qt-linux-5.15.2-kobo/plugins/platforms/libkobo.so
+fuse-overlayfs          117203    106575      1454  99% /mnt/onboard/.adds/inkbox/eink.qss
+tmpfs                   131072     45828     85244  35% /tmp
+devtmpfs                 10240         0     10240   0% /dev
+fuse-overlayfs          117203    106575      1454  99% /external_root
+devtmpfs                 10240         0     10240   0% /external_root/dev
+tmpfs                    16384       396     15988   2% /external_root/tmp
+tmpfs                    25016        84     24932   0% /external_root/run
+fuse-overlayfs          117203    106575      1454  99% /external_root/var
+tmpfs                     8192         8      8184   0% /external_root/var/log
+tmpfs                      512         0       512   0% /external_root/var/db/dhcpcd
+/dev/mmcblk0p4        14522760  12334328   1428908  90% /external_root/var/db/dhcpcd/duid
+squashfuse               63488     63488         0 100% /external_root/opt/isa
+/dev/loop7                1024      1024         0 100% /external_root/opt/root
+/dev/mmcblk0p4        14522760  12334328   1428908  90% /external_root/opt/update
+/dev/mmcblk0p4        14522760  12334328   1428908  90% /external_root/opt/storage
+fuse-overlayfs          117203    106575      1454  99% /usr/share/zoneinfo
+fuse-overlayfs          117203    106575      1454  99% /etc/localtime
+fuse-overlayfs          117203    106575      1454  99% /opt/version
+fuse-overlayfs          117203    106575      1454  99% /bin/kobo_config.sh
+tmpfs                    16384        24     16360   0% /opt/inkbox_device
+tmpfs                    16384        24     16360   0% /external_root/opt/inkbox_device
+fuse-overlayfs          117203    106575      1454  99% /external_root/opt/X11/extensions_folders_list
+fuse-overlayfs          117203    106575      1454  99% /external_root/opt/X11/extensions_list
+fuse-overlayfs          117203    106575      1454  99% /external_root/opt/X11/nographic_extensions_folders_list
+fuse-overlayfs          117203    106575      1454  99% /external_root/opt/X11/nographic_extensions_list
+/dev/mmcblk0p1           13129        28     12026   0% /external_root/boot
+tmpfs                    16384        24     16360   0% /tmp/resolv.conf
+tmpfs                   125064         0    125064   0% /inkbox
+tmpfs                   131072         8    131064   0% /run
+
+```

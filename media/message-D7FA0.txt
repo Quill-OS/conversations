@@ -1,0 +1,87 @@
+build@inkbox:~/inkbox/kernel/kernel/linux-3.0.35-n437$ diff --color /tmp/kernel/kernel_imx/drivers/input/touchscreen/zforce_i2c.c drivers/input/touchscreen/zforce_i2c.c
+53a54,55
+>       unsigned char PD_Resp;
+>       unsigned char lower_amp_flag;
+65a68,70
+> static const uint8_t cmd_FixedSinalStrengthX[] = {0xEE, 0x03, 0x0F, 0, 0x09};
+> static const uint8_t cmd_FixedSinalStrengthY[] = {0xEE, 0x03, 0x0F, 1, 0x09};
+> static uint8_t cmd_LowerPDAmpResp[] = {0xEE, 0x05, 0x22, 0x01, 0x00, 0x75, 0x37};
+195a201
+>       int i;
+227a234
+> #if 0
+233a241,247
+> #else
+> //                    printk ("[%s-%d] send cmd_FixedSinalStrengthX\n",__func__,__LINE__);
+>                       zForce_ir_touch_data.PD_Resp = 0x3F;
+>                       zForce_ir_touch_data.lower_amp_flag = 0;
+>                       i2c_master_send(client, cmd_FixedSinalStrengthX, sizeof(cmd_FixedSinalStrengthX));
+>                       g_zforce_initial_step = 1;
+> #endif
+241a256
+> //                    printk ("[%s-%d] send cmd_Frequency\n",__func__,__LINE__);
+250a266
+> //                    printk ("[%s-%d] send cmd_StartTouchData\n",__func__,__LINE__);
+267a284
+> //                    printk ("[%s-%d] send cmd_SetConfiguration\n",__func__,__LINE__);
+295a313
+> //                            printk ("[%s-%d] send cmd_LowSignalRequestY\n",__func__,__LINE__);
+321a340
+>                                       printk ("[%s-%d] send cmd_Resolution\n",__func__,__LINE__);
+328a348
+>                                       printk ("[%s-%d] send cmd_Frequency\n",__func__,__LINE__);
+335a356
+>                                       printk ("[%s-%d] send cmd_StartTouchData\n",__func__,__LINE__);
+343a365
+> //                            printk ("[%s-%d] send cmd_LowSignalRequestX\n",__func__,__LINE__);
+349d370
+<                                       int i;
+363a385,431
+>                       break;
+>               case 0x0F:              // fixed signal strength with 10 step current strength.
+>                       if ((3 > buf_recv[1]) || (buf_recv[1] != (buf[2]+3))) {
+> //                            printk ("[%s-%d] Fixed SignalStrength response with wrong length. (%02X %02X %02X)\n",__func__,__LINE__, buf_recv[0], buf_recv[1], buf[0]);
+>                               break;
+>                       }
+> //                    printk ("[%s-%d] Fixed SignalStrength %c Response (%d Signals) : \n",__func__,__LINE__,buf[1]?'Y':'X', buf[2]);
+> //                    printk ("0x%02X 0x%02X ",buf_recv[0], buf_recv[1]);
+>                       for (i=0; i<(buf[2]+3) ; i++) {
+> //                            printk ("0x%02X ", buf[i]);
+>                               if (3 <= i && 230 < buf[i])
+>                                       zForce_ir_touch_data.lower_amp_flag = 1;
+>                       }
+> //                    printk ("\n");
+>                       if (buf[1]) {
+>                               if (0x0F != g_zforce_initial_step)
+>                                       break;
+>                               if (zForce_ir_touch_data.lower_amp_flag && (0x07 < zForce_ir_touch_data.PD_Resp)) {
+>                                       zForce_ir_touch_data.PD_Resp -= 0x08;
+>                                       cmd_LowerPDAmpResp[6] = zForce_ir_touch_data.PD_Resp;
+>                                       printk ("[%s-%d] Lower amp of PD response. Set reg RX_FB 0x%02X. \n",__func__,__LINE__,zForce_ir_touch_data.PD_Resp);
+>                                       i2c_master_send(client, cmd_LowerPDAmpResp, sizeof(cmd_LowerPDAmpResp));
+>                                       zForce_ir_touch_data.lower_amp_flag = 0;
+>                                       g_zforce_initial_step = 0x22;
+>                               }
+>                               else {
+>                                       if(8==gptHWCFG->m_val.bTouchCtrl || 11==gptHWCFG->m_val.bTouchCtrl) {  // v2 & v3
+>                                               i2c_master_send(client, cmd_Resolution_v2, sizeof(cmd_Resolution_v2));
+>                                       }else{
+>                                               i2c_master_send(client, cmd_Resolution, sizeof(cmd_Resolution));
+>                                       }
+> //                                    printk ("[%s-%d] send cmd_Resolution\n",__func__,__LINE__);
+>                                       g_zforce_initial_step = 2;
+>                               }
+>                       }
+>                       else if (1 == g_zforce_initial_step){
+> //                            printk ("[%s-%d] send cmd_FixedSinalStrengthY\n",__func__,__LINE__);
+>                               i2c_master_send(client, cmd_FixedSinalStrengthY, sizeof(cmd_FixedSinalStrengthY));
+>                               g_zforce_initial_step = 0x0F;
+>                       }
+>                       break;
+>               case 0x22:              // set register RX_FB response
+>                       printk ("[%s-%d] Lower amp of PD response %x \n",__func__,__LINE__,buf[1]);
+>                       zForce_ir_touch_data.lower_amp_flag = 0;
+> //                    printk ("[%s-%d] send cmd_FixedSinalStrengthX\n",__func__,__LINE__);
+>                       i2c_master_send(client, cmd_FixedSinalStrengthX, sizeof(cmd_FixedSinalStrengthX));
+>                       g_zforce_initial_step = 1;
+build@inkbox:~/inkbox/kernel/kernel/linux-3.0.35-n437$ 

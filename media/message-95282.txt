@@ -1,0 +1,94 @@
+╰─ sudo GITDIR=${PWD} ./release.sh /home/build/inkbox/private.pem 1.9 /home/build/inkbox/gui-bundle/build                                                                                                                                  ─╯
+[sudo] password for dominiac:
+/home/build/inkbox/gui-bundle/content/inkbox /home/build/inkbox/gui-bundle
+/home/build/inkbox/gui-bundle
+/home/build/inkbox/gui-bundle/out/update-bundle /home/build/inkbox/gui-bundle
+Parallel mksquashfs: Using 16 processors
+Creating 4.0 filesystem on ./inkbox.isa, block size 1048576.
+[=============================================================================================================================================================================================================================|] 188/188 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 1048576
+	compressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 32533.89 Kbytes (31.77 Mbytes)
+	32.96% of uncompressed filesystem size (98713.04 Kbytes)
+Inode table size 1438 bytes (1.40 Kbytes)
+	27.58% of uncompressed inode table size (5214 bytes)
+Directory table size 1258 bytes (1.23 Kbytes)
+	42.63% of uncompressed directory table size (2951 bytes)
+Number of duplicate files found 1
+Number of inodes 153
+Number of files 110
+Number of fragments 23
+Number of symbolic links 0
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 43
+Number of hard-links 0
+Number of ids (unique uids + gids) 3
+Number of uids 2
+	dominiac (1000)
+	root (0)
+Number of gids 2
+	dominiac (1001)
+	root (0)
+Parallel mksquashfs: Using 16 processors
+Creating 4.0 filesystem on ./qt.isa, block size 1048576.
+[=============================================================================================================================================================================================================================|] 681/681 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 1048576
+	compressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 24383.44 Kbytes (23.81 Mbytes)
+	34.51% of uncompressed filesystem size (70654.92 Kbytes)
+Inode table size 5600 bytes (5.47 Kbytes)
+	21.88% of uncompressed inode table size (25591 bytes)
+Directory table size 6742 bytes (6.58 Kbytes)
+	34.63% of uncompressed directory table size (19467 bytes)
+Number of duplicate files found 11
+Number of inodes 761
+Number of files 639
+Number of fragments 32
+Number of symbolic links 69
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 53
+Number of hard-links 0
+Number of ids (unique uids + gids) 2
+Number of uids 1
+	dominiac (1000)
+Number of gids 1
+	dominiac (1001)
+Parallel mksquashfs: Using 16 processors
+Creating 4.0 filesystem on /home/build/inkbox/gui-bundle/out/update.isa, block size 1048576.
+[===============================================================================================================================================================================================================================|] 61/61 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 1048576
+	compressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 56930.19 Kbytes (55.60 Mbytes)
+	99.95% of uncompressed filesystem size (56956.32 Kbytes)
+Inode table size 166 bytes (0.16 Kbytes)
+	35.02% of uncompressed inode table size (474 bytes)
+Directory table size 135 bytes (0.13 Kbytes)
+	100.00% of uncompressed directory table size (135 bytes)
+Number of duplicate files found 0
+Number of inodes 8
+Number of files 7
+Number of fragments 3
+Number of symbolic links 0
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 1
+Number of hard-links 0
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)

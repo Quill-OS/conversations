@@ -1,0 +1,126 @@
+U-Boot 2016.03-00038-g4a92f9d (Jun 04 2018 - 14:20:13 +0800)
+
+CPU:   Freescale i.MX6SLL rev1.1 996 MHz (running at 792 MHz)
+CPU:   Commercial temperature grade (0C to 95C) at 32C
+Reset cause: POR
+Board: MX6SLL LPDDR2 NTX
+I2C:   ready
+DRAM:  512 MiB
+__get_sd_number(),cfg23=1,cfg24=0
+force_idle_bus: sda=1 scl=0 sda.gp=0x4d scl.gp=0x4c
+force_idle_bus: sda=0 scl=0 sda.gp=0x4f scl.gp=0x4e
+force_idle_bus: sda=1 scl=0 sda.gp=0x56 scl.gp=0x55
+MMC:   board_mmc_init() : isd=1
+board_mmc_init() : wifi=2
+FSL_SDHC: 0, FSL_SDHC: 1
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_early_init() 0
+ram p=80000000,size=536870912
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x9ffffe00 0x3ff 0x1
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+mmc read 0x9ffffe00 0x400 0x1
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+ntx_hw_late_init()
+mmc read 0x9ffffc00 0x1 0x1
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN not avalible !
+ntx_gpio_get_value(402) : error parameter ! null ptr !
+ntx_config_fastboot_layout():10 binaries partition added
+ntx_config_fastboot_layout():3 mbr partition added
+check_and_clean: reg 0, flag_set 0
+Fastboot: Normal
+Net:   CPU Net Initialization Failed
+No ethernet found.
+Hit any key to stop autoboot:  0
+switch to partitions #0, OK
+mmc0 is current device
+mmc read 0x80800000 0x800 0x2400
+
+MMC read: dev # 0, block # 2048, count 9216 ... 9216 blocks read: OK
+Booting from mmc ...
+mmc read 0x83000000 0x505 0x1
+
+MMC read: dev # 0, block # 1285, count 1 ... 1 blocks read: OK
+dtb size = 33718@83000000
+mmc read 0x83000000 0x506 0x47
+
+MMC read: dev # 0, block # 1286, count 71 ... 71 blocks read: OK
+
+ hwcfgp=9ffffe00,pcb=74,customer=9
+
+ntx_gpio_get_value(402) : error parameter ! null ptr !
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+mmc read 0x9ffffc00 0x37ff 0x1
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+mmc read 0x9fd6e400 0x3800 0x148d
+
+MMC read: dev # 0, block # 14336, count 5261 ... 5261 blocks read: OK
+mmc read 0x9fd6e200 0x405 0x1
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+mmc read 0x9fd6be00 0x406 0x13
+
+MMC read: dev # 0, block # 1030, count 19 ... 19 blocks read: OK
+Kernel RAM visiable size=509M->509M
+hwcfg rootfstype : 2
+hwcfg partition type : 2
+Kernel image @ 0x80800000 [ 0x000000 - 0x44e730 ]
+## Flattened Device Tree blob at 83000000
+   Booting using the fdt blob at 0x83000000
+   Using Device Tree in place at 83000000, end 8300b3b5
+
+Starting kernel ...
+
+i2c i2c-1: Device probe no ACK , retry 1/10 ...
+tps6518x-pmic tps6518x-pmic: request vcom gpio failed (-16)!
+tps6518x-pmic tps6518x-pmic: request powerup gpio failed (-16)!
+tps6518x 1-0068: tps6518x int workqueue creating failed !
+syscon-poweroff 20cc000.snvs:snvs-poweroff: pm_power_off already claimed 8002158c ntx_machine_poweroff
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+cpu cpu0: dev_pm_opp_get_opp_count: device OPP not found (-19)
+EPDC_QoS not supported on this platform !
+rtc_ricoh619 rtc_ricoh619: hctosys: unable to read the hardware clock
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000184 seconds, 2.7MB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+cannot open /dev/null
+dosfsck 3.0.6, 04 Oct 2009, FAT32, LFN
+There are differences between boot sector and its backup.
+Differences: (offset:original/backup)
+  65:01/00
+  Not automatically fixing this.
+/dev/mmcblk0p3: 364 files, 93040/516216 clusters
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+hwclock: RTC_RD_TIME: Invalid argument
+insmod: can't read '/drivers/mx6sll-ntx/misc/lowmem.ko': No such file or directory
+
+(none) login: /usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+sh: you need to specify whom to kill
+cyttsp5_i2c_adapter 1-0024: cyttsp5_core_rt_resume: Error on wake
+killall: wpa_supplicant: no process killed
+dhcpcd[1163]: version 6.6.6 starting
+dhcpcd[1163]: eth0: using /sys hwaddr: 58:b0:d4:72:73:eb
+dhcpcd[1163]: eth0: executing `/libexec/dhcpcd-run-hooks' PREINIT
+dhcpcd[1163]: eth0: executing `/libexec/dhcpcd-run-hooks' NOCARRIER
+dhcpcd[1163]: no interfaces have a carrier
+dhcpcd[1163]: forking to background
+dhcpcd[1163]: forked to background, child pid 1173
+1161
+OK

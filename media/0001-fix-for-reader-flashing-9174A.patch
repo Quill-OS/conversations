@@ -1,0 +1,34 @@
+From 2c7c49a97cc99f0ec3b638d7dc53dc4112898e93 Mon Sep 17 00:00:00 2001
+From: Szybet <53944559+Szybet@users.noreply.github.com>
+Date: Tue, 13 Sep 2022 17:42:54 +0200
+Subject: [PATCH] fix for reader flashing
+
+---
+ src/reader/reader.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/reader/reader.cpp b/src/reader/reader.cpp
+index 46fd5a2..c960cd1 100644
+--- a/src/reader/reader.cpp
++++ b/src/reader/reader.cpp
+@@ -1309,6 +1309,9 @@ void reader::setTextProperties(int alignment, int lineSpacing, int margins, QStr
+     QTextCursor cursor = ui->text->textCursor();
+     textDialogLock = true;
+     // Kudos to Qt for not implementing the opposite of the following function /)_-)
++
++    ui->text->setStyleSheet("QTextEdit { selection-background-color: white }");
++
+     ui->text->selectAll();
+     if(alignment == 0) {
+         ui->text->setAlignment(Qt::AlignLeft);
+@@ -1428,6 +1431,7 @@ void reader::setTextProperties(int alignment, int lineSpacing, int margins, QStr
+         keyCount++;
+     }
+     htmlText.replace(QRegExp("font-family:'.*';"), "");
++    ui->text->setStyleSheet("QTextEdit { selection-background-color: black }");
+     ui->text->setHtml(htmlText);
+ }
+ 
+-- 
+2.37.3
+

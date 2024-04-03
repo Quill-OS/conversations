@@ -1,0 +1,46 @@
+build@inkbox ~/i/rootfs (master)> ls -sa ../rootfs.squashfs
+55088 ../rootfs.squashfs
+build@inkbox ~/i/rootfs (master)> env GITDIR="$PWD" bash -x ./release.sh ~/keys/inkbox/kt/private.pem 2.0 ~/inkbox
++ '[' -z /home/build/inkbox/rootfs ']'
++ cd /home/build/inkbox/rootfs
++ git rev-parse HEAD
++ chmod u+s /home/build/inkbox/rootfs/bin/busybox
++ find . -type f -name .keep -exec rm '{}' ';'
++ rm -f ../rootfs.squashfs
++ mksquashfs . ../rootfs.squashfs -b 1048576 -comp xz -Xdict-size 100% -always-use-fragments -all-root -e .git -e .gitignore -e .vscode -e release.sh
+Parallel mksquashfs: Using 8 processors
+Creating 4.0 filesystem on ../rootfs.squashfs, block size 1048576.
+[============================================================================================================================================================================================================================================\] 8014/8014 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 1048576
+	compressed data, compressed metadata, compressed fragments,
+	compressed xattrs, compressed ids
+	duplicates are removed
+Filesystem size 56429.21 Kbytes (55.11 Mbytes)
+	31.52% of uncompressed filesystem size (179016.31 Kbytes)
+Inode table size 64624 bytes (63.11 Kbytes)
+	19.82% of uncompressed inode table size (326089 bytes)
+Directory table size 81692 bytes (79.78 Kbytes)
+	42.95% of uncompressed directory table size (190196 bytes)
+Number of duplicate files found 662
+Number of inodes 9586
+Number of files 7980
+Number of fragments 139
+Number of symbolic links 1038
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 568
+Number of hard-links 0
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)
++ rm ./.commit
++ find . -type d '!' -path '*.git*' -empty -exec touch '{}/.keep' ';'
++ echo 'Root filesystem has been compressed.'
+Root filesystem has been compressed.
+build@inkbox ~/i/rootfs (master)> ls -sa ../rootfs.squashfs
+56432 ../rootfs.squashfs
+build@inkbox ~/i/rootfs (master)>

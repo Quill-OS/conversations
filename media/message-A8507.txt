@@ -1,0 +1,457 @@
+build@inkbox ~/i/g/c/qt (main)> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   lib/Qt5Zlib.la
+	new file:   lib/cmake/Qt5/Qt5Config.cmake
+	new file:   lib/cmake/Qt5/Qt5ConfigVersion.cmake
+	new file:   lib/cmake/Qt5/Qt5ModuleLocation.cmake
+	new file:   lib/cmake/Qt5AccessibilitySupport/Qt5AccessibilitySupportConfig.cmake
+	new file:   lib/cmake/Qt5AccessibilitySupport/Qt5AccessibilitySupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5Bluetooth/Qt5BluetoothConfig.cmake
+	new file:   lib/cmake/Qt5Bluetooth/Qt5BluetoothConfigVersion.cmake
+	new file:   lib/cmake/Qt5BootstrapDBus/Qt5BootstrapDBusConfig.cmake
+	new file:   lib/cmake/Qt5BootstrapDBus/Qt5BootstrapDBusConfigVersion.cmake
+	new file:   lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake
+	new file:   lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake
+	new file:   lib/cmake/Qt5Concurrent/Qt5ConcurrentConfig.cmake
+	new file:   lib/cmake/Qt5Concurrent/Qt5ConcurrentConfigVersion.cmake
+	new file:   lib/cmake/Qt5Core/Qt5CTestMacros.cmake
+	new file:   lib/cmake/Qt5Core/Qt5CoreConfig.cmake
+	new file:   lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
+	new file:   lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake
+	new file:   lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
+	new file:   lib/cmake/Qt5Core/Qt5CoreMacros.cmake
+	new file:   lib/cmake/Qt5DBus/Qt5DBusConfig.cmake
+	new file:   lib/cmake/Qt5DBus/Qt5DBusConfigExtras.cmake
+	new file:   lib/cmake/Qt5DBus/Qt5DBusConfigVersion.cmake
+	new file:   lib/cmake/Qt5DBus/Qt5DBusMacros.cmake
+	new file:   lib/cmake/Qt5DeviceDiscoverySupport/Qt5DeviceDiscoverySupportConfig.cmake
+	new file:   lib/cmake/Qt5DeviceDiscoverySupport/Qt5DeviceDiscoverySupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5EdidSupport/Qt5EdidSupportConfig.cmake
+	new file:   lib/cmake/Qt5EdidSupport/Qt5EdidSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5EventDispatcherSupport/Qt5EventDispatcherSupportConfig.cmake
+	new file:   lib/cmake/Qt5EventDispatcherSupport/Qt5EventDispatcherSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5FbSupport/Qt5FbSupportConfig.cmake
+	new file:   lib/cmake/Qt5FbSupport/Qt5FbSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5FontDatabaseSupport/Qt5FontDatabaseSupportConfig.cmake
+	new file:   lib/cmake/Qt5FontDatabaseSupport/Qt5FontDatabaseSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5GuiConfig.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
+	new file:   lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake
+	new file:   lib/cmake/Qt5InputSupport/Qt5InputSupportConfig.cmake
+	new file:   lib/cmake/Qt5InputSupport/Qt5InputSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5Multimedia/Qt5MultimediaConfig.cmake
+	new file:   lib/cmake/Qt5Multimedia/Qt5MultimediaConfigVersion.cmake
+	new file:   lib/cmake/Qt5Multimedia/Qt5Multimedia_AudioCaptureServicePlugin.cmake
+	new file:   lib/cmake/Qt5Multimedia/Qt5Multimedia_QM3uPlaylistPlugin.cmake
+	new file:   lib/cmake/Qt5MultimediaQuick/Qt5MultimediaQuickConfig.cmake
+	new file:   lib/cmake/Qt5MultimediaQuick/Qt5MultimediaQuickConfigVersion.cmake
+	new file:   lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfig.cmake
+	new file:   lib/cmake/Qt5MultimediaWidgets/Qt5MultimediaWidgetsConfigVersion.cmake
+	new file:   lib/cmake/Qt5Network/Qt5NetworkConfig.cmake
+	new file:   lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake
+	new file:   lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake
+	new file:   lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake
+	new file:   lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake
+	new file:   lib/cmake/Qt5NetworkAuth/Qt5NetworkAuthConfig.cmake
+	new file:   lib/cmake/Qt5NetworkAuth/Qt5NetworkAuthConfigVersion.cmake
+	new file:   lib/cmake/Qt5Nfc/Qt5NfcConfig.cmake
+	new file:   lib/cmake/Qt5Nfc/Qt5NfcConfigVersion.cmake
+	new file:   lib/cmake/Qt5PacketProtocol/Qt5PacketProtocolConfig.cmake
+	new file:   lib/cmake/Qt5PacketProtocol/Qt5PacketProtocolConfigVersion.cmake
+	new file:   lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake
+	new file:   lib/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5QmlConfig.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5QmlConfigExtras.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5QmlConfigVersion.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QDebugMessageServiceFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QLocalClientConnectionFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlDebugServerFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlDebuggerServiceFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlInspectorServiceFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugConnectorFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlNativeDebugServiceFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlPreviewServiceFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQmlProfilerServiceFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QQuickProfilerAdapterFactory.cmake
+	new file:   lib/cmake/Qt5Qml/Qt5Qml_QTcpServerConnectionFactory.cmake
+	new file:   lib/cmake/Qt5QmlDebug/Qt5QmlDebugConfig.cmake
+	new file:   lib/cmake/Qt5QmlDebug/Qt5QmlDebugConfigVersion.cmake
+	new file:   lib/cmake/Qt5QmlDevTools/Qt5QmlDevToolsConfig.cmake
+	new file:   lib/cmake/Qt5QmlDevTools/Qt5QmlDevToolsConfigVersion.cmake
+	new file:   lib/cmake/Qt5QmlImportScanner/Qt5QmlImportScannerConfig.cmake
+	new file:   lib/cmake/Qt5QmlImportScanner/Qt5QmlImportScannerTemplate.cpp.in
+	new file:   lib/cmake/Qt5QmlModels/Qt5QmlModelsConfig.cmake
+	new file:   lib/cmake/Qt5QmlModels/Qt5QmlModelsConfigVersion.cmake
+	new file:   lib/cmake/Qt5QmlWorkerScript/Qt5QmlWorkerScriptConfig.cmake
+	new file:   lib/cmake/Qt5QmlWorkerScript/Qt5QmlWorkerScriptConfigVersion.cmake
+	new file:   lib/cmake/Qt5Quick/Qt5QuickConfig.cmake
+	new file:   lib/cmake/Qt5Quick/Qt5QuickConfigVersion.cmake
+	new file:   lib/cmake/Qt5QuickCompiler/Qt5QuickCompilerConfig.cmake
+	new file:   lib/cmake/Qt5QuickControls2/Qt5QuickControls2Config.cmake
+	new file:   lib/cmake/Qt5QuickControls2/Qt5QuickControls2ConfigVersion.cmake
+	new file:   lib/cmake/Qt5QuickShapes/Qt5QuickShapesConfig.cmake
+	new file:   lib/cmake/Qt5QuickShapes/Qt5QuickShapesConfigVersion.cmake
+	new file:   lib/cmake/Qt5QuickTemplates2/Qt5QuickTemplates2Config.cmake
+	new file:   lib/cmake/Qt5QuickTemplates2/Qt5QuickTemplates2ConfigVersion.cmake
+	new file:   lib/cmake/Qt5QuickTest/Qt5QuickTestConfig.cmake
+	new file:   lib/cmake/Qt5QuickTest/Qt5QuickTestConfigVersion.cmake
+	new file:   lib/cmake/Qt5QuickWidgets/Qt5QuickWidgetsConfig.cmake
+	new file:   lib/cmake/Qt5QuickWidgets/Qt5QuickWidgetsConfigVersion.cmake
+	new file:   lib/cmake/Qt5Scxml/Qt5ScxmlConfig.cmake
+	new file:   lib/cmake/Qt5Scxml/Qt5ScxmlConfigExtras.cmake
+	new file:   lib/cmake/Qt5Scxml/Qt5ScxmlConfigVersion.cmake
+	new file:   lib/cmake/Qt5Scxml/Qt5ScxmlMacros.cmake
+	new file:   lib/cmake/Qt5ServiceSupport/Qt5ServiceSupportConfig.cmake
+	new file:   lib/cmake/Qt5ServiceSupport/Qt5ServiceSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5Sql/Qt5SqlConfig.cmake
+	new file:   lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake
+	new file:   lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake
+	new file:   lib/cmake/Qt5Svg/Qt5SvgConfig.cmake
+	new file:   lib/cmake/Qt5Svg/Qt5SvgConfigVersion.cmake
+	new file:   lib/cmake/Qt5Test/Qt5TestConfig.cmake
+	new file:   lib/cmake/Qt5Test/Qt5TestConfigExtras.cmake
+	new file:   lib/cmake/Qt5Test/Qt5TestConfigVersion.cmake
+	new file:   lib/cmake/Qt5ThemeSupport/Qt5ThemeSupportConfig.cmake
+	new file:   lib/cmake/Qt5ThemeSupport/Qt5ThemeSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboardConfig.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboardConfigVersion.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboard_QtVirtualKeyboardHangulPlugin.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboard_QtVirtualKeyboardOpenWnnPlugin.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboard_QtVirtualKeyboardPinyinPlugin.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboard_QtVirtualKeyboardTCImePlugin.cmake
+	new file:   lib/cmake/Qt5VirtualKeyboard/Qt5VirtualKeyboard_QtVirtualKeyboardThaiPlugin.cmake
+	new file:   lib/cmake/Qt5WebChannel/Qt5WebChannelConfig.cmake
+	new file:   lib/cmake/Qt5WebChannel/Qt5WebChannelConfigVersion.cmake
+	new file:   lib/cmake/Qt5WebSockets/Qt5WebSocketsConfig.cmake
+	new file:   lib/cmake/Qt5WebSockets/Qt5WebSocketsConfigVersion.cmake
+	new file:   lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake
+	new file:   lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake
+	new file:   lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake
+	new file:   lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake
+	new file:   lib/cmake/Qt5XkbCommonSupport/Qt5XkbCommonSupportConfig.cmake
+	new file:   lib/cmake/Qt5XkbCommonSupport/Qt5XkbCommonSupportConfigVersion.cmake
+	new file:   lib/cmake/Qt5Xml/Qt5XmlConfig.cmake
+	new file:   lib/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake
+	new file:   lib/cmake/Qt5XmlPatterns/Qt5XmlPatternsConfig.cmake
+	new file:   lib/cmake/Qt5XmlPatterns/Qt5XmlPatternsConfigVersion.cmake
+	new file:   lib/cmake/Qt5Zlib/Qt5ZlibConfig.cmake
+	new file:   lib/cmake/Qt5Zlib/Qt5ZlibConfigVersion.cmake
+	new file:   lib/libQt5AccessibilitySupport.a
+	new file:   lib/libQt5AccessibilitySupport.la
+	new file:   lib/libQt5AccessibilitySupport.prl
+	new file:   lib/libQt5Bluetooth.la
+	new file:   lib/libQt5Bluetooth.prl
+	new file:   lib/libQt5Bluetooth.so
+	new file:   lib/libQt5Bluetooth.so.5
+	new file:   lib/libQt5Bluetooth.so.5.15
+	new file:   lib/libQt5Bluetooth.so.5.15.2
+	new file:   lib/libQt5Bootstrap.a
+	new file:   lib/libQt5Bootstrap.la
+	new file:   lib/libQt5Bootstrap.prl
+	new file:   lib/libQt5Charts.la
+	new file:   lib/libQt5Charts.prl
+	new file:   lib/libQt5Concurrent.la
+	new file:   lib/libQt5Concurrent.prl
+	modified:   lib/libQt5Concurrent.so.5.15.2
+	new file:   lib/libQt5Core.la
+	new file:   lib/libQt5Core.prl
+	modified:   lib/libQt5Core.so.5.15.2
+	new file:   lib/libQt5DBus.la
+	new file:   lib/libQt5DBus.prl
+	new file:   lib/libQt5DBus.so
+	new file:   lib/libQt5DBus.so.5
+	new file:   lib/libQt5DBus.so.5.15
+	new file:   lib/libQt5DBus.so.5.15.2
+	new file:   lib/libQt5DeviceDiscoverySupport.a
+	new file:   lib/libQt5DeviceDiscoverySupport.la
+	new file:   lib/libQt5DeviceDiscoverySupport.prl
+	new file:   lib/libQt5EdidSupport.a
+	new file:   lib/libQt5EdidSupport.la
+	new file:   lib/libQt5EdidSupport.prl
+	new file:   lib/libQt5EventDispatcherSupport.a
+	new file:   lib/libQt5EventDispatcherSupport.la
+	new file:   lib/libQt5EventDispatcherSupport.prl
+	new file:   lib/libQt5FbSupport.a
+	new file:   lib/libQt5FbSupport.la
+	new file:   lib/libQt5FbSupport.prl
+	new file:   lib/libQt5FontDatabaseSupport.a
+	new file:   lib/libQt5FontDatabaseSupport.la
+	new file:   lib/libQt5FontDatabaseSupport.prl
+	new file:   lib/libQt5Gui.la
+	new file:   lib/libQt5Gui.prl
+	modified:   lib/libQt5Gui.so.5.15.2
+	new file:   lib/libQt5InputSupport.a
+	new file:   lib/libQt5InputSupport.la
+	new file:   lib/libQt5InputSupport.prl
+	new file:   lib/libQt5Multimedia.la
+	new file:   lib/libQt5Multimedia.prl
+	new file:   lib/libQt5Multimedia.so
+	new file:   lib/libQt5Multimedia.so.5
+	new file:   lib/libQt5Multimedia.so.5.15
+	new file:   lib/libQt5Multimedia.so.5.15.2
+	new file:   lib/libQt5MultimediaQuick.la
+	new file:   lib/libQt5MultimediaQuick.prl
+	new file:   lib/libQt5MultimediaQuick.so
+	new file:   lib/libQt5MultimediaQuick.so.5
+	new file:   lib/libQt5MultimediaQuick.so.5.15
+	new file:   lib/libQt5MultimediaQuick.so.5.15.2
+	new file:   lib/libQt5MultimediaWidgets.la
+	new file:   lib/libQt5MultimediaWidgets.prl
+	new file:   lib/libQt5MultimediaWidgets.so
+	new file:   lib/libQt5MultimediaWidgets.so.5
+	new file:   lib/libQt5MultimediaWidgets.so.5.15
+	new file:   lib/libQt5MultimediaWidgets.so.5.15.2
+	new file:   lib/libQt5Network.la
+	new file:   lib/libQt5Network.prl
+	modified:   lib/libQt5Network.so.5.15.2
+	new file:   lib/libQt5NetworkAuth.la
+	new file:   lib/libQt5NetworkAuth.prl
+	modified:   lib/libQt5NetworkAuth.so.5.15.2
+	new file:   lib/libQt5Nfc.la
+	new file:   lib/libQt5Nfc.prl
+	new file:   lib/libQt5Nfc.so
+	new file:   lib/libQt5Nfc.so.5
+	new file:   lib/libQt5Nfc.so.5.15
+	new file:   lib/libQt5Nfc.so.5.15.2
+	new file:   lib/libQt5PacketProtocol.a
+	new file:   lib/libQt5PacketProtocol.la
+	new file:   lib/libQt5PacketProtocol.prl
+	new file:   lib/libQt5PrintSupport.la
+	new file:   lib/libQt5PrintSupport.prl
+	new file:   lib/libQt5PrintSupport.so
+	new file:   lib/libQt5PrintSupport.so.5
+	new file:   lib/libQt5PrintSupport.so.5.15
+	new file:   lib/libQt5PrintSupport.so.5.15.2
+	new file:   lib/libQt5Qml.la
+	new file:   lib/libQt5Qml.prl
+	modified:   lib/libQt5Qml.so.5.15.2
+	new file:   lib/libQt5QmlDebug.a
+	new file:   lib/libQt5QmlDebug.la
+	new file:   lib/libQt5QmlDebug.prl
+	new file:   lib/libQt5QmlDevTools.a
+	new file:   lib/libQt5QmlDevTools.la
+	new file:   lib/libQt5QmlDevTools.prl
+	new file:   lib/libQt5QmlModels.la
+	new file:   lib/libQt5QmlModels.prl
+	modified:   lib/libQt5QmlModels.so.5.15.2
+	new file:   lib/libQt5QmlWorkerScript.la
+	new file:   lib/libQt5QmlWorkerScript.prl
+	modified:   lib/libQt5QmlWorkerScript.so.5.15.2
+	new file:   lib/libQt5Quick.la
+	new file:   lib/libQt5Quick.prl
+	modified:   lib/libQt5Quick.so.5.15.2
+	new file:   lib/libQt5QuickControls2.la
+	new file:   lib/libQt5QuickControls2.prl
+	new file:   lib/libQt5QuickShapes.la
+	new file:   lib/libQt5QuickShapes.prl
+	modified:   lib/libQt5QuickShapes.so.5.15.2
+	new file:   lib/libQt5QuickTemplates2.la
+	new file:   lib/libQt5QuickTemplates2.prl
+	modified:   lib/libQt5QuickTemplates2.so.5.15.2
+	new file:   lib/libQt5QuickTest.la
+	new file:   lib/libQt5QuickTest.prl
+	modified:   lib/libQt5QuickTest.so.5.15.2
+	new file:   lib/libQt5QuickWidgets.la
+	new file:   lib/libQt5QuickWidgets.prl
+	new file:   lib/libQt5Scxml.la
+	new file:   lib/libQt5Scxml.prl
+	new file:   lib/libQt5Scxml.so
+	new file:   lib/libQt5Scxml.so.5
+	new file:   lib/libQt5Scxml.so.5.15
+	new file:   lib/libQt5Scxml.so.5.15.2
+	new file:   lib/libQt5ServiceSupport.a
+	new file:   lib/libQt5ServiceSupport.la
+	new file:   lib/libQt5ServiceSupport.prl
+	new file:   lib/libQt5Sql.la
+	new file:   lib/libQt5Sql.prl
+	modified:   lib/libQt5Sql.so.5.15.2
+	new file:   lib/libQt5Svg.la
+	new file:   lib/libQt5Svg.prl
+	modified:   lib/libQt5Svg.so.5.15.2
+	new file:   lib/libQt5Test.la
+	new file:   lib/libQt5Test.prl
+	modified:   lib/libQt5Test.so.5.15.2
+	new file:   lib/libQt5ThemeSupport.a
+	new file:   lib/libQt5ThemeSupport.la
+	new file:   lib/libQt5ThemeSupport.prl
+	new file:   lib/libQt5VirtualKeyboard.la
+	new file:   lib/libQt5VirtualKeyboard.prl
+	new file:   lib/libQt5VirtualKeyboard.so
+	new file:   lib/libQt5VirtualKeyboard.so.5
+	new file:   lib/libQt5VirtualKeyboard.so.5.15
+	new file:   lib/libQt5VirtualKeyboard.so.5.15.2
+	new file:   lib/libQt5WebChannel.la
+	new file:   lib/libQt5WebChannel.prl
+	modified:   lib/libQt5WebChannel.so.5.15.2
+	new file:   lib/libQt5WebSockets.la
+	new file:   lib/libQt5WebSockets.prl
+	modified:   lib/libQt5WebSockets.so.5.15.2
+	new file:   lib/libQt5Widgets.la
+	new file:   lib/libQt5Widgets.prl
+	modified:   lib/libQt5Widgets.so.5.15.2
+	new file:   lib/libQt5XkbCommonSupport.a
+	new file:   lib/libQt5XkbCommonSupport.la
+	new file:   lib/libQt5XkbCommonSupport.prl
+	new file:   lib/libQt5Xml.la
+	new file:   lib/libQt5Xml.prl
+	new file:   lib/libQt5XmlPatterns.la
+	new file:   lib/libQt5XmlPatterns.prl
+	new file:   lib/libQt5XmlPatterns.so
+	new file:   lib/libQt5XmlPatterns.so.5
+	new file:   lib/libQt5XmlPatterns.so.5.15
+	new file:   lib/libQt5XmlPatterns.so.5.15.2
+	new file:   lib/libQt5Zlib.prl
+	new file:   lib/libqtfreetype.a
+	new file:   lib/libqtfreetype.prl
+	new file:   lib/libqtlibpng.a
+	new file:   lib/libqtlibpng.prl
+	new file:   lib/metatypes/qt5core_metatypes.json
+	new file:   lib/metatypes/qt5gui_metatypes.json
+	new file:   lib/metatypes/qt5qml_metatypes.json
+	new file:   lib/metatypes/qt5qmlmodels_metatypes.json
+	new file:   lib/metatypes/qt5qmlworkerscript_metatypes.json
+	new file:   lib/metatypes/qt5quick_metatypes.json
+	new file:   lib/metatypes/qt5quickshapes_metatypes.json
+	new file:   lib/metatypes/qt5quicktest_metatypes.json
+	new file:   lib/metatypes/qt5widgets_metatypes.json
+	new file:   lib/pkgconfig/Qt5Bluetooth.pc
+	new file:   lib/pkgconfig/Qt5Charts.pc
+	new file:   lib/pkgconfig/Qt5Concurrent.pc
+	new file:   lib/pkgconfig/Qt5Core.pc
+	new file:   lib/pkgconfig/Qt5DBus.pc
+	new file:   lib/pkgconfig/Qt5Gui.pc
+	new file:   lib/pkgconfig/Qt5Multimedia.pc
+	new file:   lib/pkgconfig/Qt5MultimediaWidgets.pc
+	new file:   lib/pkgconfig/Qt5Network.pc
+	new file:   lib/pkgconfig/Qt5NetworkAuth.pc
+	new file:   lib/pkgconfig/Qt5Nfc.pc
+	new file:   lib/pkgconfig/Qt5PrintSupport.pc
+	new file:   lib/pkgconfig/Qt5Qml.pc
+	new file:   lib/pkgconfig/Qt5QmlModels.pc
+	new file:   lib/pkgconfig/Qt5QmlWorkerScript.pc
+	new file:   lib/pkgconfig/Qt5Quick.pc
+	new file:   lib/pkgconfig/Qt5QuickControls2.pc
+	new file:   lib/pkgconfig/Qt5QuickTemplates2.pc
+	new file:   lib/pkgconfig/Qt5QuickTest.pc
+	new file:   lib/pkgconfig/Qt5QuickWidgets.pc
+	new file:   lib/pkgconfig/Qt5Scxml.pc
+	new file:   lib/pkgconfig/Qt5Sql.pc
+	new file:   lib/pkgconfig/Qt5Svg.pc
+	new file:   lib/pkgconfig/Qt5Test.pc
+	new file:   lib/pkgconfig/Qt5VirtualKeyboard.pc
+	new file:   lib/pkgconfig/Qt5WebChannel.pc
+	new file:   lib/pkgconfig/Qt5WebSockets.pc
+	new file:   lib/pkgconfig/Qt5Widgets.pc
+	new file:   lib/pkgconfig/Qt5Xml.pc
+	new file:   lib/pkgconfig/Qt5XmlPatterns.pc
+	new file:   plugins/bearer/libqconnmanbearer.so
+	new file:   plugins/bearer/libqnmbearer.so
+	modified:   plugins/iconengines/libqsvgicon.so
+	modified:   plugins/imageformats/libqsvg.so
+	new file:   plugins/mediaservice/libqtmedia_audioengine.so
+	new file:   plugins/platforminputcontexts/libibusplatforminputcontextplugin.so
+	new file:   plugins/platforminputcontexts/libqtvirtualkeyboardplugin.so
+	new file:   plugins/platforms/libqlinuxfb.so
+	new file:   plugins/platforms/libqminimal.so
+	new file:   plugins/platforms/libqoffscreen.so
+	modified:   plugins/platforms/libqvnc.so
+	new file:   plugins/platformthemes/libqxdgdesktopportal.so
+	new file:   plugins/playlistformats/libqtmultimedia_m3u.so
+	new file:   plugins/virtualkeyboard/libqtvirtualkeyboard_hangul.so
+	new file:   plugins/virtualkeyboard/libqtvirtualkeyboard_openwnn.so
+	new file:   plugins/virtualkeyboard/libqtvirtualkeyboard_pinyin.so
+	new file:   plugins/virtualkeyboard/libqtvirtualkeyboard_tcime.so
+	new file:   plugins/virtualkeyboard/libqtvirtualkeyboard_thai.so
+	modified:   qml/Qt/labs/animation/liblabsanimationplugin.so
+	new file:   qml/Qt/labs/animation/plugins.qmltypes
+	modified:   qml/Qt/labs/folderlistmodel/libqmlfolderlistmodelplugin.so
+	new file:   qml/Qt/labs/folderlistmodel/plugins.qmltypes
+	modified:   qml/Qt/labs/qmlmodels/liblabsmodelsplugin.so
+	new file:   qml/Qt/labs/qmlmodels/plugins.qmltypes
+	modified:   qml/Qt/labs/settings/libqmlsettingsplugin.so
+	new file:   qml/Qt/labs/settings/plugins.qmltypes
+	modified:   qml/Qt/labs/sharedimage/libsharedimageplugin.so
+	new file:   qml/Qt/labs/sharedimage/plugins.qmltypes
+	modified:   qml/Qt/labs/wavefrontmesh/libqmlwavefrontmeshplugin.so
+	new file:   qml/Qt/labs/wavefrontmesh/plugins.qmltypes
+	new file:   qml/Qt/test/qtestroot/plugins.qmltypes
+	new file:   qml/QtBluetooth/libdeclarative_bluetooth.so
+	new file:   qml/QtBluetooth/plugins.qmltypes
+	new file:   qml/QtBluetooth/qmldir
+	new file:   qml/QtMultimedia/Video.qml
+	new file:   qml/QtMultimedia/libdeclarative_multimedia.so
+	new file:   qml/QtMultimedia/plugins.qmltypes
+	new file:   qml/QtMultimedia/qmldir
+	new file:   qml/QtNfc/libdeclarative_nfc.so
+	new file:   qml/QtNfc/plugins.qmltypes
+	new file:   qml/QtNfc/qmldir
+	modified:   qml/QtQml/Models.2/libmodelsplugin.so
+	new file:   qml/QtQml/Models.2/plugins.qmltypes
+	modified:   qml/QtQml/StateMachine/libqtqmlstatemachine.so
+	new file:   qml/QtQml/StateMachine/plugins.qmltypes
+	modified:   qml/QtQml/WorkerScript.2/libworkerscriptplugin.so
+	new file:   qml/QtQml/WorkerScript.2/plugins.qmltypes
+	modified:   qml/QtQml/libqmlplugin.so
+	new file:   qml/QtQml/plugins.qmltypes
+	modified:   qml/QtQuick.2/libqtquick2plugin.so
+	new file:   qml/QtQuick.2/plugins.qmltypes
+	modified:   qml/QtQuick/Controls.2/Fusion/libqtquickcontrols2fusionstyleplugin.so
+	modified:   qml/QtQuick/Controls.2/Imagine/libqtquickcontrols2imaginestyleplugin.so
+	modified:   qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
+	modified:   qml/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so
+	modified:   qml/QtQuick/Controls.2/libqtquickcontrols2plugin.so
+	modified:   qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+	new file:   qml/QtQuick/Layouts/plugins.qmltypes
+	modified:   qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+	new file:   qml/QtQuick/LocalStorage/plugins.qmltypes
+	modified:   qml/QtQuick/Shapes/libqmlshapesplugin.so
+	new file:   qml/QtQuick/Shapes/plugins.qmltypes
+	new file:   qml/QtQuick/VirtualKeyboard/Settings/libqtquickvirtualkeyboardsettingsplugin.so
+	new file:   qml/QtQuick/VirtualKeyboard/Settings/plugins.qmltypes
+	new file:   qml/QtQuick/VirtualKeyboard/Settings/qmldir
+	new file:   qml/QtQuick/VirtualKeyboard/Styles/libqtquickvirtualkeyboardstylesplugin.so
+	new file:   qml/QtQuick/VirtualKeyboard/Styles/plugins.qmltypes
+	new file:   qml/QtQuick/VirtualKeyboard/Styles/qmldir
+	new file:   qml/QtQuick/VirtualKeyboard/libqtquickvirtualkeyboardplugin.so
+	new file:   qml/QtQuick/VirtualKeyboard/plugins.qmltypes
+	new file:   qml/QtQuick/VirtualKeyboard/qmldir
+	modified:   qml/QtQuick/Window.2/libwindowplugin.so
+	new file:   qml/QtQuick/Window.2/plugins.qmltypes
+	new file:   qml/QtQuick/XmlListModel/libqmlxmllistmodelplugin.so
+	new file:   qml/QtQuick/XmlListModel/plugins.qmltypes
+	new file:   qml/QtQuick/XmlListModel/qmldir
+	new file:   qml/QtScxml/libdeclarative_scxml.so
+	new file:   qml/QtScxml/plugins.qmltypes
+	new file:   qml/QtScxml/qmldir
+	modified:   qml/QtTest/libqmltestplugin.so
+	new file:   qml/QtTest/plugins.qmltypes
+
+build@inkbox ~/i/g/c/qt (main)>

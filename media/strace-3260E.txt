@@ -1,0 +1,1913 @@
+execve("./kazv", ["./kazv"], 0x7ee1bd08 /* 20 vars */) = 0
+brk(NULL)                               = 0x21b1000
+uname({sysname="Linux", nodename="kobo", ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9f000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/neon", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/vfp", 0x7eccd3f0)  = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l", 0x7eccd3f0)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/lib/tls/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/neon", 0x7eccd3f0)     = -1 ENOENT (No such file or directory)
+open("/lib/tls/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/vfp", 0x7eccd3f0)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls", 0x7eccd3f0)          = -1 ENOENT (No such file or directory)
+open("/lib/v7l/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/lib/v7l/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/neon", 0x7eccd3f0)     = -1 ENOENT (No such file or directory)
+open("/lib/v7l/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/vfp", 0x7eccd3f0)      = -1 ENOENT (No such file or directory)
+open("/lib/v7l/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l", 0x7eccd3f0)          = -1 ENOENT (No such file or directory)
+open("/lib/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/neon/vfp", 0x7eccd3f0)     = -1 ENOENT (No such file or directory)
+open("/lib/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/neon", 0x7eccd3f0)         = -1 ENOENT (No such file or directory)
+open("/lib/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/vfp", 0x7eccd3f0)          = -1 ENOENT (No such file or directory)
+open("/lib/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+open("/mnt/matrix/matrix/lib/tls/v7l/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/v7l/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/v7l/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/v7l/neon", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/v7l/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/v7l/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/v7l/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/v7l", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/neon", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/tls/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/tls", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/v7l/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/v7l/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/v7l/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/v7l/neon", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/v7l/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/v7l/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/v7l/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/v7l", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/neon/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/neon/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/neon/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/neon", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/vfp/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/lib/vfp", 0x7eccd3f0) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libboost_serialization.so.1.83.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0000\376\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=395048, ...}) = 0
+mmap2(NULL, 235784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f3f000
+mprotect(0x76f67000, 61440, PROT_NONE)  = 0
+mmap2(0x76f76000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x27000) = 0x76f76000
+close(3)                                = 0
+open("/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\344H\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=122897, ...}) = 0
+mmap2(NULL, 127568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f1f000
+mprotect(0x76f34000, 28672, PROT_NONE)  = 0
+mmap2(0x76f3b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x76f3b000
+mmap2(0x76f3d000, 4688, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76f3d000
+close(3)                                = 0
+open("/lib/libQt5QuickControls2.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5QuickControls2.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\17\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=147108, ...}) = 0
+mmap2(NULL, 211316, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76eeb000
+mprotect(0x76f0d000, 61440, PROT_NONE)  = 0
+mmap2(0x76f1c000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x76f1c000
+close(3)                                = 0
+open("/lib/libQt5Quick.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Quick.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0@E\r\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=3464476, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9e000
+mmap2(NULL, 3531988, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76b8c000
+mprotect(0x76ec0000, 61440, PROT_NONE)  = 0
+mmap2(0x76ecf000, 110592, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x333000) = 0x76ecf000
+mmap2(0x76eea000, 1236, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76eea000
+close(3)                                = 0
+open("/lib/libQt5QmlModels.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5QmlModels.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0 S\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=390412, ...}) = 0
+mmap2(NULL, 454796, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76b1c000
+mprotect(0x76b79000, 61440, PROT_NONE)  = 0
+mmap2(0x76b88000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5c000) = 0x76b88000
+mmap2(0x76b8b000, 140, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76b8b000
+close(3)                                = 0
+open("/lib/libQt5Qml.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Qml.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10v\7\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=3337564, ...}) = 0
+mmap2(NULL, 3407240, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x767dc000
+mprotect(0x76afa000, 61440, PROT_NONE)  = 0
+mmap2(0x76b09000, 73728, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x31d000) = 0x76b09000
+mmap2(0x76b1b000, 3464, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76b1b000
+close(3)                                = 0
+open("/lib/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\310E\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=258236, ...}) = 0
+mmap2(NULL, 322376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7678d000
+mprotect(0x767ca000, 65536, PROT_NONE)  = 0
+mmap2(0x767da000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3d000) = 0x767da000
+close(3)                                = 0
+open("/lib/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\310\350\20\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=4926776, ...}) = 0
+mmap2(NULL, 4991684, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x762ca000
+mprotect(0x76760000, 61440, PROT_NONE)  = 0
+mmap2(0x7676f000, 122880, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x495000) = 0x7676f000
+close(3)                                = 0
+open("/lib/libQt5Gui.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Gui.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10;\n\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=4486444, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9d000
+mmap2(NULL, 4572324, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75e6d000
+mprotect(0x762a6000, 65536, PROT_NONE)  = 0
+mmap2(0x762b6000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x439000) = 0x762b6000
+mmap2(0x762c4000, 21668, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x762c4000
+close(3)                                = 0
+open("/lib/libKF5KIOCore.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5KIOCore.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\274\240\3\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=31712412, ...}) = 0
+mmap2(NULL, 1532384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75cf6000
+mprotect(0x75e57000, 65536, PROT_NONE)  = 0
+mmap2(0x75e67000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x161000) = 0x75e67000
+mmap2(0x75e6c000, 480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75e6c000
+close(3)                                = 0
+open("/lib/libQt5Network.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Network.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\2309\4\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1416804, ...}) = 0
+mmap2(NULL, 1481712, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75b8c000
+mprotect(0x75ce0000, 65536, PROT_NONE)  = 0
+mmap2(0x75cf0000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x154000) = 0x75cf0000
+close(3)                                = 0
+open("/lib/libQt5Concurrent.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Concurrent.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\37\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=18068, ...}) = 0
+mmap2(NULL, 82168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75b77000
+mprotect(0x75b7b000, 61440, PROT_NONE)  = 0
+mmap2(0x75b8a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x75b8a000
+close(3)                                = 0
+open("/lib/libKF5Service.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5Service.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\260C\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=14365080, ...}) = 0
+mmap2(NULL, 621452, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75adf000
+mprotect(0x75b65000, 65536, PROT_NONE)  = 0
+mmap2(0x75b75000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x86000) = 0x75b75000
+close(3)                                = 0
+open("/lib/libKF5ConfigCore.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5ConfigCore.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\200S\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=6158392, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9c000
+mmap2(NULL, 457708, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75a6f000
+mprotect(0x75acd000, 61440, PROT_NONE)  = 0
+mmap2(0x75adc000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5d000) = 0x75adc000
+close(3)                                = 0
+open("/lib/libKF5CoreAddons.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5CoreAddons.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10\257\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=15389932, ...}) = 0
+mmap2(NULL, 807232, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x759a9000
+mprotect(0x75a5c000, 65536, PROT_NONE)  = 0
+mmap2(0x75a6c000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb3000) = 0x75a6c000
+mmap2(0x75a6e000, 320, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75a6e000
+close(3)                                = 0
+open("/lib/libQt5DBus.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5DBus.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\360;\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=477480, ...}) = 0
+mmap2(NULL, 542760, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75924000
+mprotect(0x75997000, 61440, PROT_NONE)  = 0
+mmap2(0x759a6000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x72000) = 0x759a6000
+close(3)                                = 0
+open("/lib/libQt5Core.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Core.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\250Y\10\0004\0\0\0"..., 512) = 512
+lseek(3, 5137760, SEEK_SET)             = 5137760
+read(3, "\4\0\0\0\20\0\0\0\1\0\0\0GNU\0\0\0\0\0\2\0\0\0\6\0\0\0\34\0\0\0", 32) = 32
+fstat64(3, {st_mode=S_IFREG|0755, st_size=5189256, ...}) = 0
+mmap2(NULL, 5266640, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7541e000
+mprotect(0x75905000, 61440, PROT_NONE)  = 0
+mmap2(0x75914000, 53248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4e6000) = 0x75914000
+mmap2(0x75921000, 11472, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75921000
+close(3)                                = 0
+open("/lib/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\271\7\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1385008, ...}) = 0
+mmap2(NULL, 1457684, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x752ba000
+mprotect(0x75405000, 65536, PROT_NONE)  = 0
+mmap2(0x75415000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14b000) = 0x75415000
+mmap2(0x7541c000, 7700, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7541c000
+close(3)                                = 0
+open("/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0<\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=435632, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9b000
+mmap2(NULL, 467088, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75247000
+mprotect(0x752b1000, 28672, PROT_NONE)  = 0
+mmap2(0x752b8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x69000) = 0x752b8000
+close(3)                                = 0
+open("/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\270\315\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=114072, ...}) = 0
+mmap2(NULL, 145572, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75223000
+mprotect(0x7523f000, 28672, PROT_NONE)  = 0
+mmap2(0x75246000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b000) = 0x75246000
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10o\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1226300, ...}) = 0
+mmap2(NULL, 1262952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x750ee000
+mprotect(0x75216000, 28672, PROT_NONE)  = 0
+mmap2(0x7521d000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x127000) = 0x7521d000
+mmap2(0x75220000, 9576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75220000
+close(3)                                = 0
+open("/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\27\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=26480, ...}) = 0
+mmap2(NULL, 57872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x750df000
+mprotect(0x750e5000, 28672, PROT_NONE)  = 0
+mmap2(0x750ec000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x750ec000
+close(3)                                = 0
+open("/lib/libQt5QuickTemplates2.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5QuickTemplates2.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0h\32\6\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1121756, ...}) = 0
+mmap2(NULL, 1186220, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74fbd000
+mprotect(0x750c3000, 61440, PROT_NONE)  = 0
+mmap2(0x750d2000, 53248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x105000) = 0x750d2000
+close(3)                                = 0
+open("/lib/libQt5Xml.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libQt5Xml.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\323\0\0004\0\0\0"..., 512) = 512
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f9a000
+fstat64(3, {st_mode=S_IFREG|0755, st_size=199216, ...}) = 0
+mmap2(NULL, 263320, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74f7c000
+mprotect(0x74fac000, 61440, PROT_NONE)  = 0
+mmap2(0x74fbb000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2f000) = 0x74fbb000
+close(3)                                = 0
+open("/lib/libKF5I18n.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5I18n.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0Pg\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=3820748, ...}) = 0
+mmap2(NULL, 394632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74f1b000
+mprotect(0x74f6a000, 65536, PROT_NONE)  = 0
+mmap2(0x74f7a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4f000) = 0x74f7a000
+close(3)                                = 0
+open("/lib/libKF5Crash.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5Crash.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0t'\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=927328, ...}) = 0
+mmap2(NULL, 103216, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74f01000
+mprotect(0x74f0a000, 61440, PROT_NONE)  = 0
+mmap2(0x74f19000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8000) = 0x74f19000
+close(3)                                = 0
+open("/lib/libKF5DBusAddons.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5DBusAddons.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\244c\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=4301960, ...}) = 0
+mmap2(NULL, 169356, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74ed7000
+mprotect(0x74eef000, 65536, PROT_NONE)  = 0
+mmap2(0x74eff000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0x74eff000
+close(3)                                = 0
+open("/lib/libKF5AuthCore.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libKF5AuthCore.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\34O\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=3156464, ...}) = 0
+mmap2(NULL, 131928, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74eb6000
+mprotect(0x74ec6000, 61440, PROT_NONE)  = 0
+mmap2(0x74ed5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x74ed5000
+close(3)                                = 0
+open("/lib/libmount.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libmount.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\210\201\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1125364, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f99000
+mmap2(NULL, 289516, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74e6f000
+mprotect(0x74ea5000, 61440, PROT_NONE)  = 0
+mmap2(0x74eb4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x35000) = 0x74eb4000
+close(3)                                = 0
+open("/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0,\t\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=9648, ...}) = 0
+mmap2(NULL, 41144, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74e64000
+mprotect(0x74e66000, 28672, PROT_NONE)  = 0
+mmap2(0x74e6d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x74e6d000
+close(3)                                = 0
+open("/lib/libssl.so.1.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libssl.so.1.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\320\24\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=468868, ...}) = 0
+mmap2(NULL, 435364, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74df9000
+mprotect(0x74e4c000, 61440, PROT_NONE)  = 0
+mmap2(0x74e5b000, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x52000) = 0x74e5b000
+close(3)                                = 0
+open("/lib/libcrypto.so.1.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/lib/libcrypto.so.1.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\250R\4\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=2104728, ...}) = 0
+mmap2(NULL, 1765296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74c4a000
+mprotect(0x74dce000, 65536, PROT_NONE)  = 0
+mmap2(0x74dde000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x184000) = 0x74dde000
+mmap2(0x74df6000, 12208, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x74df6000
+close(3)                                = 0
+open("/lib/libudev.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\085\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=616500, ...}) = 0
+mmap2(NULL, 158620, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74c23000
+mprotect(0x74c38000, 65536, PROT_NONE)  = 0
+mmap2(0x74c48000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x74c48000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74c22000
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/neon/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/neon/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/neon/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/neon", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/v7l", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/neon/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/neon/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/neon/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/neon", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/tls", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/neon/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/neon/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/neon/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/neon", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/v7l", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/neon/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/neon/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/neon/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/neon", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/vfp/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/vfp", 0x7ecccf60) = -1 ENOENT (No such file or directory)
+open("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib/libblkid.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/build/inkbox/compiled-binaries/arm-kobo-linux-gnueabihf/arm-kobo-linux-gnueabihf/sysroot/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/lib/libblkid.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0xU\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1318344, ...}) = 0
+mmap2(NULL, 260324, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x74be2000
+mprotect(0x74c0f000, 65536, PROT_NONE)  = 0
+mmap2(0x74c1f000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2d000) = 0x74c1f000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74be1000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74be0000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74bdf000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74bde000
+set_tls(0x74bde700)                     = 0
+mprotect(0x7521d000, 8192, PROT_READ)   = 0
+mprotect(0x74c1f000, 8192, PROT_READ)   = 0
+mprotect(0x76f3b000, 4096, PROT_READ)   = 0
+mprotect(0x750ec000, 4096, PROT_READ)   = 0
+mprotect(0x74c48000, 4096, PROT_READ)   = 0
+mprotect(0x74e6d000, 4096, PROT_READ)   = 0
+mprotect(0x74dde000, 90112, PROT_READ)  = 0
+mprotect(0x74e5b000, 20480, PROT_READ)  = 0
+mprotect(0x74eb4000, 4096, PROT_READ)   = 0
+mprotect(0x752b8000, 4096, PROT_READ)   = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74bdd000
+mprotect(0x75415000, 20480, PROT_READ)  = 0
+mprotect(0x75914000, 32768, PROT_READ)  = 0
+mprotect(0x759a6000, 4096, PROT_READ)   = 0
+mprotect(0x75a6c000, 4096, PROT_READ)   = 0
+mprotect(0x74ed5000, 4096, PROT_READ)   = 0
+mprotect(0x74eff000, 4096, PROT_READ)   = 0
+mprotect(0x762b6000, 32768, PROT_READ)  = 0
+mprotect(0x74f19000, 4096, PROT_READ)   = 0
+mprotect(0x74f7a000, 4096, PROT_READ)   = 0
+mprotect(0x74fbb000, 4096, PROT_READ)   = 0
+mprotect(0x75cf0000, 12288, PROT_READ)  = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74bdc000
+mprotect(0x76b09000, 53248, PROT_READ)  = 0
+mprotect(0x76b88000, 8192, PROT_READ)   = 0
+mprotect(0x76ecf000, 69632, PROT_READ)  = 0
+mprotect(0x750d2000, 36864, PROT_READ)  = 0
+mprotect(0x75adc000, 8192, PROT_READ)   = 0
+mprotect(0x75b75000, 4096, PROT_READ)   = 0
+mprotect(0x75b8a000, 4096, PROT_READ)   = 0
+mprotect(0x75e67000, 12288, PROT_READ)  = 0
+mprotect(0x7676f000, 86016, PROT_READ)  = 0
+mprotect(0x767da000, 4096, PROT_READ)   = 0
+mprotect(0x76f1c000, 8192, PROT_READ)   = 0
+mprotect(0x76f76000, 8192, PROT_READ)   = 0
+mprotect(0x381000, 49152, PROT_READ)    = 0
+mprotect(0x76fa0000, 4096, PROT_READ)   = 0
+set_tid_address(0x74bde2a8)             = 2733
+set_robust_list(0x74bde2b0, 12)         = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x76f23248, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7511aa80}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x76f2332c, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7511aa80}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+ugetrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+brk(NULL)                               = 0x21b1000
+brk(0x21d6000)                          = 0x21d6000
+futex(0x7541c708, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7541c70c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+read(3, "\37Uj\315", 4)                 = 4
+geteuid32()                             = 0
+getuid32()                              = 0
+futex(0x759213c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/locale/C.UTF-8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/locale/C.utf8/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/usr/lib/locale/C/LC_IDENTIFICATION", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+access("/proc/2733/exe", F_OK)          = 0
+lstat64("/proc/2733/exe", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+lstat64("/proc", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat64("/proc/2733", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat64("/proc/2733/exe", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+readlink("/proc/2733/exe", "/mnt/matrix/matrix/kazv", 4095) = 23
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/kazv", {st_mode=S_IFREG|0755, st_size=8401464, ...}) = 0
+access("/mnt/matrix/matrix/qt.conf", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/plugins", F_OK) = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+access("/mnt/matrix/matrix", F_OK)      = 0
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+open("/mnt/matrix/matrix/qtlogging.ini", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/root/.config/QtProject/qtlogging.ini", 0x7eccd5e0) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/QtProject/qtlogging.ini", 0x7eccd5e0) = -1 ENOENT (No such file or directory)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=2492, tv_nsec=120253418}) = 0
+write(2, "QFactoryLoader::QFactoryLoader()"..., 100) = 100
+access("/mnt/matrix/matrix/plugins/platforms/.", F_OK) = 0
+openat(AT_FDCWD, "/mnt/matrix/matrix/plugins/platforms", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 4
+getdents64(4, 0x21bbef8 /* 7 entries */, 32768) = 232
+getdents64(4, 0x21bbef8 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+write(2, "QFactoryLoader::QFactoryLoader()"..., 94) = 94
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms/libkobo.so", {st_mode=S_IFREG|0755, st_size=948440, ...}) = 0
+open("/mnt/matrix/matrix/plugins/platforms/libkobo.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0755, st_size=948440, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0755, st_size=948440, ...}) = 0
+mmap2(NULL, 948440, PROT_READ, MAP_SHARED, 4, 0) = 0x74af4000
+write(2, "Found metadata in lib /mnt/matri"..., 346) = 346
+close(4)                                = 0
+munmap(0x74af4000, 948440)              = 0
+write(2, "Got keys from plugin meta data ("..., 40) = 40
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms/libqlinuxfb.so", {st_mode=S_IFREG|0755, st_size=881124, ...}) = 0
+open("/mnt/matrix/matrix/plugins/platforms/libqlinuxfb.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0755, st_size=881124, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0755, st_size=881124, ...}) = 0
+mmap2(NULL, 881124, PROT_READ, MAP_SHARED, 4, 0) = 0x74b04000
+write(2, "Found metadata in lib /mnt/matri"..., 349) = 349
+close(4)                                = 0
+munmap(0x74b04000, 881124)              = 0
+write(2, "Got keys from plugin meta data ("..., 43) = 43
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms/libqminimal.so", {st_mode=S_IFREG|0755, st_size=22208, ...}) = 0
+open("/mnt/matrix/matrix/plugins/platforms/libqminimal.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0755, st_size=22208, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0755, st_size=22208, ...}) = 0
+mmap2(NULL, 22208, PROT_READ, MAP_SHARED, 4, 0) = 0x74bd6000
+write(2, "Found metadata in lib /mnt/matri"..., 349) = 349
+close(4)                                = 0
+munmap(0x74bd6000, 22208)               = 0
+write(2, "Got keys from plugin meta data ("..., 43) = 43
+write(2, "QFactoryLoader::QFactoryLoader()"..., 100) = 100
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms/libqoffscreen.so", {st_mode=S_IFREG|0755, st_size=703360, ...}) = 0
+open("/mnt/matrix/matrix/plugins/platforms/libqoffscreen.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0755, st_size=703360, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0755, st_size=703360, ...}) = 0
+mmap2(NULL, 703360, PROT_READ, MAP_SHARED, 4, 0) = 0x74b30000
+write(2, "Found metadata in lib /mnt/matri"..., 355) = 355
+close(4)                                = 0
+munmap(0x74b30000, 703360)              = 0
+write(2, "Got keys from plugin meta data ("..., 45) = 45
+write(2, "QFactoryLoader::QFactoryLoader()"..., 94) = 94
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/platforms/libqvnc.so", {st_mode=S_IFREG|0755, st_size=765576, ...}) = 0
+open("/mnt/matrix/matrix/plugins/platforms/libqvnc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0755, st_size=765576, ...}) = 0
+fstat64(4, {st_mode=S_IFREG|0755, st_size=765576, ...}) = 0
+mmap2(NULL, 765576, PROT_READ, MAP_SHARED, 4, 0) = 0x74b21000
+write(2, "Found metadata in lib /mnt/matri"..., 337) = 337
+close(4)                                = 0
+munmap(0x74b21000, 765576)              = 0
+write(2, "Got keys from plugin meta data ("..., 39) = 39
+write(2, "QFactoryLoader::QFactoryLoader()"..., 92) = 92
+access("/mnt/matrix/matrix/platforms/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/qt.conf", F_OK) = -1 ENOENT (No such file or directory)
+futex(0x74e6e0ac, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/mnt/matrix/matrix/plugins/platforms/libkobo.so", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\210w\1\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=948440, ...}) = 0
+mmap2(NULL, 1013168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x74ae4000
+mprotect(0x74bc6000, 61440, PROT_NONE)  = 0
+mmap2(0x74bd5000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xe1000) = 0x74bd5000
+close(4)                                = 0
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/neon/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/neon/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/neon/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/neon", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/v7l", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/neon/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/neon/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/neon/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/neon", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/tls/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/tls", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/neon/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/neon/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/neon/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/neon", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/v7l", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/neon/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/neon/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/neon/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/neon", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/vfp/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/plugins/platforms/../../lib/vfp", 0x7ecccd08) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/libmtdev.so.1", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0h\n\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=69668, ...}) = 0
+mmap2(NULL, 77980, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x74ad0000
+mprotect(0x74ad3000, 61440, PROT_NONE)  = 0
+mmap2(0x74ae2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x2000) = 0x74ae2000
+close(4)                                = 0
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/libinput.so.10", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\370t\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=1031256, ...}) = 0
+mmap2(NULL, 345628, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x74a7b000
+mprotect(0x74abf000, 61440, PROT_NONE)  = 0
+mmap2(0x74ace000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x43000) = 0x74ace000
+close(4)                                = 0
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/libxkbcommon.so.0", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\350(\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=593636, ...}) = 0
+mmap2(NULL, 316264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x74a2d000
+mprotect(0x74a69000, 65536, PROT_NONE)  = 0
+mmap2(0x74a79000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x3c000) = 0x74a79000
+close(4)                                = 0
+open("/mnt/matrix/matrix/plugins/platforms/../../lib/libevdev.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\370L\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=180016, ...}) = 0
+mmap2(NULL, 127000, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x74a0d000
+mprotect(0x74a19000, 65536, PROT_NONE)  = 0
+mmap2(0x74a29000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0xc000) = 0x74a29000
+close(4)                                = 0
+mprotect(0x74a29000, 12288, PROT_READ)  = 0
+mprotect(0x74a79000, 4096, PROT_READ)   = 0
+mprotect(0x74ae2000, 4096, PROT_READ)   = 0
+mprotect(0x74ace000, 4096, PROT_READ)   = 0
+mprotect(0x74bd5000, 20480, PROT_READ)  = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 65) = 65
+access("/bin/kobo_config.sh", F_OK)     = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x74bde2a8) = 2735
+close(5)                                = 0
+fcntl64(4, F_SETFD, 0)                  = 0
+fstat64(4, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74a0c000
+read(4, "luna\n", 4096)                 = 5
+read(4, "", 4096)                       = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2735, si_uid=0, si_status=0, si_utime=1 /* 0.01 s */, si_stime=3 /* 0.03 s */} ---
+close(4)                                = 0
+wait4(2735, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2735
+munmap(0x74a0c000, 4096)                = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x74bde2a8) = 2738
+close(5)                                = 0
+fcntl64(4, F_SETFD, 0)                  = 0
+fstat64(4, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74a0c000
+read(4, "340\n", 4096)                  = 4
+read(4, "", 4096)                       = 0
+close(4)                                = 0
+wait4(2738, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 2738
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2738, si_uid=0, si_status=0, si_utime=1 /* 0.01 s */, si_stime=2 /* 0.02 s */} ---
+munmap(0x74a0c000, 4096)                = 0
+access("/dev/fb0", F_OK)                = 0
+access("/dev/fb0", F_OK)                = 0
+access("/dev/fb0", R_OK|W_OK)           = 0
+open("/dev/fb0", O_RDWR|O_LARGEFILE|O_CLOEXEC) = 4
+ioctl(4, FBIOGET_VSCREENINFO, 0x7eccd818) = 0
+close(4)                                = 0
+geteuid32()                             = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4
+connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+close(4)                                = 0
+open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=230, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7490d000
+read(4, "# /etc/nsswitch.conf\n\npasswd:   "..., 1048576) = 230
+read(4, "", 1048576)                    = 0
+close(4)                                = 0
+munmap(0x7490d000, 1048576)             = 0
+open("/lib/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 4
+read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0<\31\0\0004\0\0\0"..., 512) = 512
+fstat64(4, {st_mode=S_IFREG|0755, st_size=42536, ...}) = 0
+mmap2(NULL, 74660, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x749fa000
+mprotect(0x74a04000, 28672, PROT_NONE)  = 0
+mmap2(0x74a0b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x9000) = 0x74a0b000
+close(4)                                = 0
+mprotect(0x74a0b000, 4096, PROT_READ)   = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4
+fstat64(4, {st_mode=S_IFREG|0644, st_size=334, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x748fa000
+read(4, "root:x:0:0:root:/root:/bin/sh\nda"..., 1048576) = 334
+close(4)                                = 0
+munmap(0x748fa000, 1048576)             = 0
+lstat64("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=160, ...}) = 0
+write(2, "QStandardPaths: XDG_RUNTIME_DIR "..., 75) = 75
+geteuid32()                             = 0
+mkdir("/tmp/runtime-root", 0700)        = -1 EEXIST (File exists)
+lstat64("/tmp/runtime-root", {st_mode=S_IFDIR|0700, st_size=40, ...}) = 0
+stat64("/tmp/runtime-root/flatpak-info", 0x7eccd878) = -1 ENOENT (No such file or directory)
+eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK)   = 4
+mmap2(NULL, 65536, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x749ea000
+mprotect(0x749ea000, 65536, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
+cacheflush(0x749f9bc8, 0x749f9e5c, 0)   = 0
+cacheflush(0x749f95d0, 0x749f996a, 0)   = 0
+cacheflush(0x749f9088, 0x749f938a, 0)   = 0
+cacheflush(0x749f8de8, 0x749f8f84, 0)   = 0
+cacheflush(0x749f8a78, 0x749f8c98, 0)   = 0
+cacheflush(0x749f8780, 0x749f8944, 0)   = 0
+cacheflush(0x749f83a8, 0x749f8610, 0)   = 0
+cacheflush(0x749f7bf0, 0x749f8068, 0)   = 0
+cacheflush(0x749f7528, 0x749f78cc, 0)   = 0
+open("/dev/fb0", O_RDWR|O_CLOEXEC)      = 5
+open("/mnt/onboard/.kobo/version", O_RDONLY|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0644, st_size=89, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x748ea000
+read(6, "N705362002807,2.6.35.3,4.26.1670"..., 1048576) = 89
+read(6, "", 1048576)                    = 0
+close(6)                                = 0
+munmap(0x748ea000, 1048576)             = 0
+write(2, "[FBInk] Unidentified Kobo device"..., 44) = 44
+ioctl(5, FBIOGET_VSCREENINFO, 0x74bdb44c) = 0
+ioctl(5, FBIOGET_FSCREENINFO, 0x74bdb3b8) = 0
+ioctl(5, FBIOPUT_VSCREENINFO, 0x7eccd738) = 0
+ioctl(5, FBIOGET_VSCREENINFO, 0x74bdb44c) = 0
+mmap2(NULL, 3145728, PROT_READ|PROT_WRITE, MAP_SHARED, 5, 0) = 0x746ea000
+ioctl(5, FBIOGET_VSCREENINFO, 0x7eccd8a0) = 0
+mmap2(NULL, 782336, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7462b000
+write(4, "\1\0\0\0\0\0\0\0", 8)         = 8
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=2493, tv_nsec=76357543}) = 0
+lstat64("standby_cursor.png", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+write(2, "QFactoryLoader::QFactoryLoader()"..., 103) = 103
+access("/mnt/matrix/matrix/plugins/imageformats/.", F_OK) = 0
+openat(AT_FDCWD, "/mnt/matrix/matrix/plugins/imageformats", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 6
+getdents64(6, 0x21c15f0 /* 11 entries */, 32768) = 336
+getdents64(6, 0x21c15f0 /* 0 entries */, 32768) = 0
+close(6)                                = 0
+write(2, "QFactoryLoader::QFactoryLoader()"..., 97) = 97
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqgif.so", {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqgif.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+mmap2(NULL, 22168, PROT_READ, MAP_SHARED, 6, 0) = 0x74625000
+write(2, "Found metadata in lib /mnt/matri"..., 374) = 374
+close(6)                                = 0
+munmap(0x74625000, 22168)               = 0
+write(2, "Got keys from plugin meta data ("..., 39) = 39
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqicns.so", {st_mode=S_IFREG|0755, st_size=30488, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqicns.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=30488, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=30488, ...}) = 0
+mmap2(NULL, 30488, PROT_READ, MAP_SHARED, 6, 0) = 0x74623000
+write(2, "Found metadata in lib /mnt/matri"..., 380) = 380
+close(6)                                = 0
+munmap(0x74623000, 30488)               = 0
+write(2, "Got keys from plugin meta data ("..., 40) = 40
+write(2, "QFactoryLoader::QFactoryLoader()"..., 97) = 97
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqico.so", {st_mode=S_IFREG|0755, st_size=22232, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqico.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=22232, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=22232, ...}) = 0
+mmap2(NULL, 22232, PROT_READ, MAP_SHARED, 6, 0) = 0x74625000
+write(2, "Found metadata in lib /mnt/matri"..., 448) = 448
+close(6)                                = 0
+munmap(0x74625000, 22232)               = 0
+write(2, "Got keys from plugin meta data ("..., 46) = 46
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqjpeg.so", {st_mode=S_IFREG|0755, st_size=243880, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqjpeg.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=243880, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=243880, ...}) = 0
+mmap2(NULL, 243880, PROT_READ, MAP_SHARED, 6, 0) = 0x745ef000
+write(2, "Found metadata in lib /mnt/matri"..., 423) = 423
+close(6)                                = 0
+munmap(0x745ef000, 243880)              = 0
+write(2, "Got keys from plugin meta data ("..., 47) = 47
+write(2, "QFactoryLoader::QFactoryLoader()"..., 97) = 97
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqsvg.so", {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqsvg.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+mmap2(NULL, 14032, PROT_READ, MAP_SHARED, 6, 0) = 0x74627000
+write(2, "Found metadata in lib /mnt/matri"..., 438) = 438
+close(6)                                = 0
+munmap(0x74627000, 14032)               = 0
+write(2, "Got keys from plugin meta data ("..., 47) = 47
+write(2, "QFactoryLoader::QFactoryLoader()"..., 97) = 97
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqtga.so", {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqtga.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+mmap2(NULL, 13936, PROT_READ, MAP_SHARED, 6, 0) = 0x74627000
+write(2, "Found metadata in lib /mnt/matri"..., 376) = 376
+close(6)                                = 0
+munmap(0x74627000, 13936)               = 0
+write(2, "Got keys from plugin meta data ("..., 39) = 39
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqtiff.so", {st_mode=S_IFREG|0755, st_size=420116, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqtiff.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=420116, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=420116, ...}) = 0
+mmap2(NULL, 420116, PROT_READ, MAP_SHARED, 6, 0) = 0x745c4000
+write(2, "Found metadata in lib /mnt/matri"..., 423) = 423
+close(6)                                = 0
+munmap(0x745c4000, 420116)              = 0
+write(2, "Got keys from plugin meta data ("..., 47) = 47
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqwbmp.so", {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqwbmp.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+mmap2(NULL, 13960, PROT_READ, MAP_SHARED, 6, 0) = 0x74627000
+write(2, "Found metadata in lib /mnt/matri"..., 386) = 386
+close(6)                                = 0
+munmap(0x74627000, 13960)               = 0
+write(2, "Got keys from plugin meta data ("..., 40) = 40
+write(2, "QFactoryLoader::QFactoryLoader()"..., 98) = 98
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/plugins/imageformats/libqwebp.so", {st_mode=S_IFREG|0755, st_size=563868, ...}) = 0
+open("/mnt/matrix/matrix/plugins/imageformats/libqwebp.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 6
+fstat64(6, {st_mode=S_IFREG|0755, st_size=563868, ...}) = 0
+fstat64(6, {st_mode=S_IFREG|0755, st_size=563868, ...}) = 0
+mmap2(NULL, 563868, PROT_READ, MAP_SHARED, 6, 0) = 0x745a1000
+write(2, "Found metadata in lib /mnt/matri"..., 378) = 378
+close(6)                                = 0
+munmap(0x745a1000, 563868)              = 0
+write(2, "Got keys from plugin meta data ("..., 40) = 40
+write(2, "QFactoryLoader::QFactoryLoader()"..., 95) = 95
+access("/mnt/matrix/matrix/imageformats/.", F_OK) = -1 ENOENT (No such file or directory)
+open("/mnt/matrix/matrix/plugins/imageformats/libqgif.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\370\25\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+mmap2(NULL, 86296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x74615000
+mprotect(0x7461a000, 61440, PROT_NONE)  = 0
+mmap2(0x74629000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x4000) = 0x74629000
+close(6)                                = 0
+mprotect(0x74629000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 68) = 68
+open("/mnt/matrix/matrix/plugins/imageformats/libqicns.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\330\37\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=30488, ...}) = 0
+mmap2(NULL, 94616, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x745fd000
+mprotect(0x74604000, 61440, PROT_NONE)  = 0
+mmap2(0x74613000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x6000) = 0x74613000
+close(6)                                = 0
+mprotect(0x74613000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 69) = 69
+open("/mnt/matrix/matrix/plugins/imageformats/libqico.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\33\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=22232, ...}) = 0
+mmap2(NULL, 86360, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x745e7000
+mprotect(0x745eb000, 65536, PROT_NONE)  = 0
+mmap2(0x745fb000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x4000) = 0x745fb000
+close(6)                                = 0
+mprotect(0x745fb000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 68) = 68
+open("/mnt/matrix/matrix/plugins/imageformats/libqjpeg.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\2301\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=243880, ...}) = 0
+mmap2(NULL, 308008, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7459b000
+mprotect(0x745d5000, 65536, PROT_NONE)  = 0
+mmap2(0x745e5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x3a000) = 0x745e5000
+close(6)                                = 0
+mprotect(0x745e5000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 69) = 69
+open("/mnt/matrix/matrix/plugins/imageformats/libqsvg.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\310\33\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+mmap2(NULL, 78160, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x74587000
+mprotect(0x7458a000, 61440, PROT_NONE)  = 0
+mmap2(0x74599000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x2000) = 0x74599000
+close(6)                                = 0
+mprotect(0x74599000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 68) = 68
+open("/mnt/matrix/matrix/plugins/imageformats/libqtga.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\25\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+mmap2(NULL, 78064, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x74573000
+mprotect(0x74576000, 61440, PROT_NONE)  = 0
+mmap2(0x74585000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x2000) = 0x74585000
+close(6)                                = 0
+mprotect(0x74585000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 68) = 68
+open("/mnt/matrix/matrix/plugins/imageformats/libqtiff.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p0\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=420116, ...}) = 0
+mmap2(NULL, 484692, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x744fc000
+mprotect(0x74560000, 61440, PROT_NONE)  = 0
+mmap2(0x7456f000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x63000) = 0x7456f000
+close(6)                                = 0
+mprotect(0x7456f000, 12288, PROT_READ)  = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 69) = 69
+open("/mnt/matrix/matrix/plugins/imageformats/libqwbmp.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\260\26\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+mmap2(NULL, 78088, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x744e8000
+mprotect(0x744eb000, 61440, PROT_NONE)  = 0
+mmap2(0x744fa000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x2000) = 0x744fa000
+close(6)                                = 0
+mprotect(0x744fa000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 69) = 69
+open("/mnt/matrix/matrix/plugins/imageformats/libqwebp.so", O_RDONLY|O_CLOEXEC) = 6
+read(6, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20D\0\0004\0\0\0"..., 512) = 512
+fstat64(6, {st_mode=S_IFREG|0755, st_size=563868, ...}) = 0
+mmap2(NULL, 634736, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7444d000
+mprotect(0x744d6000, 61440, PROT_NONE)  = 0
+mmap2(0x744e5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x88000) = 0x744e5000
+mmap2(0x744e7000, 3952, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x744e7000
+close(6)                                = 0
+mprotect(0x744e5000, 4096, PROT_READ)   = 0
+write(2, "loaded library \"/mnt/matrix/matr"..., 69) = 69
+cacheflush(0x749f9c68, 0x749f9eae, 0)   = 0
+cacheflush(0x749f9498, 0x749f9918, 0)   = 0
+cacheflush(0x749f8dc0, 0x749f9164, 0)   = 0
+cacheflush(0x749f8a20, 0x749f8c6e, 0)   = 0
+cacheflush(0x749f8208, 0x749f86ae, 0)   = 0
+cacheflush(0x749f7af0, 0x749f7eb2, 0)   = 0
+cacheflush(0x749f7740, 0x749f799a, 0)   = 0
+cacheflush(0x749f6ee0, 0x749f73ac, 0)   = 0
+cacheflush(0x749f6788, 0x749f6b68, 0)   = 0
+cacheflush(0x749f63d8, 0x749f6632, 0)   = 0
+cacheflush(0x749f5b78, 0x749f6044, 0)   = 0
+cacheflush(0x749f5420, 0x749f5800, 0)   = 0
+cacheflush(0x749f5048, 0x749f52bc, 0)   = 0
+cacheflush(0x749f4718, 0x749f4c56, 0)   = 0
+cacheflush(0x749f3f08, 0x749f4342, 0)   = 0
+cacheflush(0x749f3b30, 0x749f3da4, 0)   = 0
+cacheflush(0x749f3200, 0x749f373e, 0)   = 0
+cacheflush(0x749f29f0, 0x749f2e2a, 0)   = 0
+cacheflush(0x749f25e8, 0x749f2882, 0)   = 0
+cacheflush(0x749f1ba0, 0x749f2184, 0)   = 0
+cacheflush(0x749f1298, 0x749f174a, 0)   = 0
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x73c4d000
+mprotect(0x73c4d000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x7444bf18, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[2741], tls=0x7444c8a0, child_tidptr=0x7444c448) = 2741
+open("/home/build/inkbox/files/etc/udev/udev.conf", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+epoll_create1(EPOLL_CLOEXEC)            = 6
+timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC|TFD_NONBLOCK) = 7
+epoll_ctl(6, EPOLL_CTL_ADD, 7, {events=EPOLLIN, data={u32=35434096, u64=35434096}}) = 0
+open("/home/build/inkbox/files/etc/udev/udev.conf", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+readlink("/sys/devices/virtual/dmi/id", 0x7ecccbb0, 1024) = -1 ENOENT (No such file or directory)
+stat64("/sys/devices/virtual/dmi/id/uevent", 0x7ecccfe0) = -1 ENOENT (No such file or directory)
+open("/sys/firmware/devicetree/base/compatible", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0700, st_size=34, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73c4c000
+read(10, "fsl,imx6ull-ddr3-arm2\0fsl,imx6ul"..., 4096) = 34
+read(10, "", 4096)                      = 0
+close(10)                               = 0
+munmap(0x73c4c000, 4096)                = 0
+openat(AT_FDCWD, "/usr/local/share/libinput", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 10
+getdents64(10, 0x21cb8a8 /* 40 entries */, 32768) = 1888
+getdents64(10, 0x21cb8a8 /* 0 entries */, 32768) = 0
+close(10)                               = 0
+open("/usr/local/share/libinput/10-generic-keyboard.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=245, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 245
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/10-generic-mouse.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=197, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 197
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/10-generic-trackball.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=110, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 110
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-a4tech.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=100, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[A4TECH USB X-710BK]\nMatchVendor"..., 1048576) = 100
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-aiptek.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=307, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 307
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-alps.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=894, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 894
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-contour.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=461, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Contour Design RollerMouse Free"..., 1048576) = 461
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-cypress.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=272, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 272
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-elantech.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=250, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 250
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-glorious.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=111, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Glorious Model O]\nMatchUdevType"..., 1048576) = 111
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-ibm.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1099, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 1099
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-kensington.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=187, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Kensington Orbit claims to hav"..., 1048576) = 187
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-logitech.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2126, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 2126
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-madcatz.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1952, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 1952
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-microsoft.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1207, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 1207
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-razer.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=3592, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 3592
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-synaptics.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=510, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 510
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-trust.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=120, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Trust GXT 25 Gaming Mouse]\nMatc"..., 1048576) = 120
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-vmware.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=246, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 246
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/30-vendor-wacom.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=550, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 550
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-framework.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=162, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Framework Laptop Touchpad]\nMatc"..., 1048576) = 162
+brk(0x21f7000)                          = 0x21f7000
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-acer.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=265, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Acer Switch Alpha 12]\nMatchName"..., 1048576) = 265
+read(10, "", 1048576)                   = 0
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-apple.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=3141, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 3141
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-asus.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1535, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 1535
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-chicony.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=424, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 424
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-chuwi.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Chuwi Gemibook]\nMatchName=HTIX5"..., 1048576) = 218
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-cyborg.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1522, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 1522
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-dell.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=3349, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 3349
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-gigabyte.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Gigabyte Aero 15 touchpad]\nMatc"..., 1048576) = 159
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-google.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2690, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 2690
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-gpd.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=158, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[GPD Win Max - All versions]\nMat"..., 1048576) = 158
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-hp.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2911, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 2911
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-huawei.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=254, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Clickpad that announces BTN_RI"..., 1048576) = 254
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-lenovo.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=9563, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 9563
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-pine64.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=132, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[PineBook Pro Keyboard]\nMatchVen"..., 1048576) = 132
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-sony.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=247, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 247
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-starlabs.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=161, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Star Labs Touchpad]\nMatchName=*"..., 1048576) = 161
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-system76.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=575, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "# Do not edit this file, it will"..., 1048576) = 575
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-toshiba.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Toshiba Satellite L855-14E Touc"..., 1048576) = 149
+read(10, "", 1048576)                   = 0
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/share/libinput/50-system-vaio.quirks", O_RDONLY|O_LARGEFILE) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=173, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(10, "[Positivo-Vaio Touchpad]\nMatchNa"..., 1048576) = 173
+read(10, "", 1048576)                   = 0
+close(10)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+open("/usr/local/etc/libinput/local-overrides.quirks", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+access("/run/udev/control", F_OK)       = 0
+socket(AF_NETLINK, SOCK_RAW|SOCK_CLOEXEC|SOCK_NONBLOCK, NETLINK_KOBJECT_UEVENT) = 10
+setsockopt(10, SOL_SOCKET, SO_ATTACH_FILTER, {len=8, filter=0x7eccc870}, 8) = 0
+bind(10, {sa_family=AF_NETLINK, nl_pid=0, nl_groups=0x000002}, 12) = 0
+getsockname(10, {sa_family=AF_NETLINK, nl_pid=2733, nl_groups=0x000002}, [12]) = 0
+setsockopt(10, SOL_SOCKET, SO_PASSCRED, [1], 4) = 0
+epoll_ctl(6, EPOLL_CTL_ADD, 10, {events=EPOLLIN, data={u32=35573688, u64=35573688}}) = 0
+stat64("/sys/subsystem", 0x7eccd808)    = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/sys/bus", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 11
+brk(0x2218000)                          = 0x2218000
+getdents64(11, 0x21ef5b0 /* 22 entries */, 32768) = 608
+getdents64(11, 0x21ef5b0 /* 0 entries */, 32768) = 0
+brk(0x2210000)                          = 0x2210000
+close(11)                               = 0
+openat(AT_FDCWD, "/sys/class", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 11
+getdents64(11, 0x21ef5b0 /* 39 entries */, 32768) = 1096
+openat(AT_FDCWD, "/sys/class/input", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 12
+getdents64(12, 0x21f75d8 /* 8 entries */, 32768) = 232
+readlink("/sys/class/input/mice", "../../devices/virtual/input/mice", 1024) = 32
+stat64("/sys/devices/virtual/input/mice/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/class/input/event0", "../../devices/platform/ntx_event"..., 1024) = 53
+stat64("/sys/devices/platform/ntx_event0/input/input0/event0/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/class/input/event1", "../../devices/virtual/input/inpu"..., 1024) = 41
+stat64("/sys/devices/virtual/input/input1/event1/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/class/input/input0", "../../devices/platform/ntx_event"..., 1024) = 46
+stat64("/sys/devices/platform/ntx_event0/input/input0/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/class/input/input1", "../../devices/virtual/input/inpu"..., 1024) = 34
+stat64("/sys/devices/virtual/input/input1/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/class/input/mouse0", "../../devices/virtual/input/inpu"..., 1024) = 41
+stat64("/sys/devices/virtual/input/input1/mouse0/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+getdents64(12, 0x21f75d8 /* 0 entries */, 32768) = 0
+close(12)                               = 0
+getdents64(11, 0x21ef5b0 /* 0 entries */, 32768) = 0
+close(11)                               = 0
+readlink("/sys/devices/platform/ntx_event0/input/input0", 0x7ecccbd0, 1024) = -1 EINVAL (Invalid argument)
+stat64("/sys/devices/platform/ntx_event0/input/input0/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/devices/platform/ntx_event0/input/input0/event0", 0x7ecccbd0, 1024) = -1 EINVAL (Invalid argument)
+stat64("/sys/devices/platform/ntx_event0/input/input0/event0/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/devices/platform/ntx_event0/input/input0/event0/subsystem", "../../../../../../class/input", 1024) = 29
+open("/sys/devices/platform/ntx_event0/input/input0/event0/uevent", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 11
+fstat64(11, {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73c4c000
+read(11, "MAJOR=13\nMINOR=64\nDEVNAME=input/"..., 4096) = 39
+read(11, "", 4096)                      = 0
+close(11)                               = 0
+munmap(0x73c4c000, 4096)                = 0
+open("/run/udev/data/c13:64", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=175, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73c4c000
+read(11, "S:input/by-path/platform-ntx_eve"..., 4096) = 175
+read(11, "", 4096)                      = 0
+close(11)                               = 0
+munmap(0x73c4c000, 4096)                = 0
+readlink("/sys/devices/virtual/input/input1", 0x7ecccbd0, 1024) = -1 EINVAL (Invalid argument)
+stat64("/sys/devices/virtual/input/input1/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/devices/virtual/input/input1/event1", 0x7ecccbd0, 1024) = -1 EINVAL (Invalid argument)
+stat64("/sys/devices/virtual/input/input1/event1/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/devices/virtual/input/input1/event1/subsystem", "../../../../../class/input", 1024) = 26
+open("/sys/devices/virtual/input/input1/event1/uevent", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 11
+fstat64(11, {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73c4c000
+read(11, "MAJOR=13\nMINOR=65\nDEVNAME=input/"..., 4096) = 39
+read(11, "", 4096)                      = 0
+close(11)                               = 0
+munmap(0x73c4c000, 4096)                = 0
+open("/run/udev/data/c13:65", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=77, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73c4c000
+read(11, "I:145814534\nE:ID_INPUT=1\nE:ID_IN"..., 4096) = 77
+read(11, "", 4096)                      = 0
+close(11)                               = 0
+munmap(0x73c4c000, 4096)                = 0
+readlink("/sys/devices/virtual/input/input1/mouse0", 0x7ecccbd0, 1024) = -1 EINVAL (Invalid argument)
+stat64("/sys/devices/virtual/input/input1/mouse0/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+readlink("/sys/devices/virtual/input/mice", 0x7ecccbd0, 1024) = -1 EINVAL (Invalid argument)
+stat64("/sys/devices/virtual/input/mice/uevent", {st_mode=S_IFREG|0700, st_size=4096, ...}) = 0
+stat64("/root/.config/xkb", 0x7eccd7b8) = -1 ENOENT (No such file or directory)
+stat64("/root/.xkb", 0x7eccd7b8)        = -1 ENOENT (No such file or directory)
+stat64("/usr/local/etc/xkb", 0x7eccd7b8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/X11/xkb", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+stat64("/usr/local/share/X11/xkb", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+geteuid32()                             = 0
+getegid32()                             = 0
+getuid32()                              = 0
+getgid32()                              = 0
+access("/usr/local/share/X11/xkb", R_OK|X_OK) = 0
+open("/usr/local/share/X11/xkb/rules/evdev", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=43090, ...}) = 0
+mmap2(NULL, 43090, PROT_READ, MAP_SHARED, 11, 0) = 0x73c42000
+munmap(0x73c42000, 43090)               = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/keycodes/evdev", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=8764, ...}) = 0
+mmap2(NULL, 8764, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4a000
+munmap(0x73c4a000, 8764)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/keycodes/aliases", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2176, ...}) = 0
+mmap2(NULL, 2176, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 2176)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/complete", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=179, ...}) = 0
+mmap2(NULL, 179, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 179)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/basic", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=607, ...}) = 0
+mmap2(NULL, 607, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 607)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/mousekeys", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=214, ...}) = 0
+mmap2(NULL, 214, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 214)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/pc", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=3353, ...}) = 0
+mmap2(NULL, 3353, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 3353)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/iso9995", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=429, ...}) = 0
+mmap2(NULL, 429, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 429)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/level5", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=8219, ...}) = 0
+mmap2(NULL, 8219, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4a000
+munmap(0x73c4a000, 8219)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/extra", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=5437, ...}) = 0
+mmap2(NULL, 5437, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4b000
+munmap(0x73c4b000, 5437)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/numpad", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1955, ...}) = 0
+mmap2(NULL, 1955, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 1955)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/types/extra", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=5437, ...}) = 0
+mmap2(NULL, 5437, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4b000
+munmap(0x73c4b000, 5437)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/complete", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=228, ...}) = 0
+mmap2(NULL, 228, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 228)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/basic", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1054, ...}) = 0
+mmap2(NULL, 1054, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 1054)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/ledcaps", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=469, ...}) = 0
+mmap2(NULL, 469, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 469)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/lednum", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=466, ...}) = 0
+mmap2(NULL, 466, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 466)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/iso9995", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1644, ...}) = 0
+mmap2(NULL, 1644, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 1644)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/mousekeys", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=4604, ...}) = 0
+mmap2(NULL, 4604, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4b000
+munmap(0x73c4b000, 4604)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/accessx", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1121, ...}) = 0
+mmap2(NULL, 1121, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 1121)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/misc", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2724, ...}) = 0
+mmap2(NULL, 2724, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 2724)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/ledscroll", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=486, ...}) = 0
+mmap2(NULL, 486, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 486)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/misc", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2724, ...}) = 0
+mmap2(NULL, 2724, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 2724)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/xfree86", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1842, ...}) = 0
+mmap2(NULL, 1842, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 1842)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/level5", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1396, ...}) = 0
+mmap2(NULL, 1396, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 1396)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/compat/caps", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=507, ...}) = 0
+mmap2(NULL, 507, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 507)                 = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/pc", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2389, ...}) = 0
+mmap2(NULL, 2389, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 2389)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/srvr_ctrl", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2331, ...}) = 0
+mmap2(NULL, 2331, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 2331)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/pc", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2389, ...}) = 0
+mmap2(NULL, 2389, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 2389)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/keypad", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=23758, ...}) = 0
+mmap2(NULL, 23758, PROT_READ, MAP_SHARED, 11, 0) = 0x73c47000
+munmap(0x73c47000, 23758)               = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/keypad", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=23758, ...}) = 0
+mmap2(NULL, 23758, PROT_READ, MAP_SHARED, 11, 0) = 0x73c47000
+munmap(0x73c47000, 23758)               = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/altwin", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=3363, ...}) = 0
+mmap2(NULL, 3363, PROT_READ, MAP_SHARED, 11, 0) = 0x73c4c000
+munmap(0x73c4c000, 3363)                = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/us", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=79045, ...}) = 0
+mmap2(NULL, 79045, PROT_READ, MAP_SHARED, 11, 0) = 0x73c39000
+munmap(0x73c39000, 79045)               = 0
+close(11)                               = 0
+open("/usr/local/share/X11/xkb/symbols/inet", O_RDONLY|O_LARGEFILE) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=64134, ...}) = 0
+mmap2(NULL, 64134, PROT_READ, MAP_SHARED, 11, 0) = 0x73c3d000
+munmap(0x73c3d000, 64134)               = 0
+close(11)                               = 0
+epoll_wait(6, [], 32, 0)                = 0
+write(2, "kobofb: Finished initialization."..., 33) = 33
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qt_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_c.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_c", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_Latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en_latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtbase_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_c.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_c", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtbase_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_Latn_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_Latn_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_latn_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_latn_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_Latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_Latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en_latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtbase_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtscript_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_c.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_c", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtscript_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_Latn_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_Latn_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_latn_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_latn_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_Latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_Latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en_latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtscript_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtmultimedia_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_c.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_c", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtmultimedia_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_Latn_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_Latn_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_latn_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_latn_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_Latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_Latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en_latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtmultimedia_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_c.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_c", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_Latn_US.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_Latn_US", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_latn_us.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_latn_us", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_Latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_Latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_latn.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en_latn", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_en", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qtxmlpatterns_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+getcwd("/mnt/matrix/matrix", 4096)      = 19
+stat64("/mnt/matrix/matrix/drkonqi", 0x7eccd838) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/libexec/drkonqi", 0x7eccd838) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/Public/okulartry/okular-things/lib/libexec/drkonqi", 0x7eccd838) = -1 ENOENT (No such file or directory)
+geteuid32()                             = 0
+open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=334, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73a00000
+read(11, "root:x:0:0:root:/root:/bin/sh\nda"..., 1048576) = 334
+close(11)                               = 0
+munmap(0x73a00000, 1048576)             = 0
+lstat64("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=160, ...}) = 0
+write(2, "QStandardPaths: XDG_RUNTIME_DIR "..., 75) = 75
+geteuid32()                             = 0
+mkdir("/tmp/runtime-root", 0700)        = -1 EEXIST (File exists)
+lstat64("/tmp/runtime-root", {st_mode=S_IFDIR|0700, st_size=40, ...}) = 0
+getcwd("/mnt/matrix/matrix", 4096)      = 19
+stat64("/mnt/matrix/matrix/drkonqi-coredump-processor", 0x7eccd878) = -1 ENOENT (No such file or directory)
+stat64("/mnt/matrix/matrix/libexec/drkonqi-coredump-processor", 0x7eccd878) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/Public/okulartry/okular-things/lib/libexec/drkonqi-coredump-processor", 0x7eccd878) = -1 ENOENT (No such file or directory)
+open("/proc/sys/kernel/core_pattern", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/en/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/en/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/en/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/C/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/C/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/C/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/en/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/en/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/en/LC_MESSAGES/kdbusaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/en/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/en/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/en/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/C/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/C/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/C/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/en/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/en/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/en/LC_MESSAGES/kauth5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/en/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/en/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/en/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/C/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/C/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/C/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/root/.local/share/locale/en/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/share/locale/en/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+stat64("/usr/share/locale/en/LC_MESSAGES/kcoreaddons5_qt.qm", 0x7eccd8a8) = -1 ENOENT (No such file or directory)
+clock_gettime(CLOCK_MONOTONIC, {tv_sec=2494, tv_nsec=891771502}) = 0
+write(2, "QFactoryLoader::QFactoryLoader()"..., 97) = 97
+access("/mnt/matrix/matrix/plugins/styles/.", F_OK) = -1 ENOENT (No such file or directory)
+write(2, "QFactoryLoader::QFactoryLoader()"..., 89) = 89
+access("/mnt/matrix/matrix/styles/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix/qml", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/mnt/matrix/matrix", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x73300000
+mprotect(0x73300000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x73afef18, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[2742], tls=0x73aff8a0, child_tidptr=0x73aff448) = 2742
+futex(0x21f8b1c, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x21f8b00, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b00, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f0a08, FUTEX_WAIT_PRIVATE, 3, NULL) = 0
+futex(0x21f0a08, FUTEX_WAKE_PRIVATE, 1) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73c4c000
+munmap(0x73c4c000, 4096)                = 0
+mmap2(NULL, 4456448, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x72cc0000
+mmap2(0x72cc0000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x72cc0000
+mmap2(0x730ff000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x730ff000
+mmap2(NULL, 2097152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x72ac0000
+mmap2(0x72ac0000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x72ac0000
+mmap2(0x72cbf000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x72cbf000
+mmap2(NULL, 4194304, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x726c0000
+madvise(0x726c0000, 4194304, MADV_DONTNEED) = -1 ENOSYS (Function not implemented)
+mprotect(0x726c0000, 65536, PROT_READ|PROT_WRITE) = 0
+madvise(0x726c0000, 65536, MADV_WILLNEED) = -1 ENOSYS (Function not implemented)
+mprotect(0x726d0000, 65536, PROT_READ|PROT_WRITE) = 0
+madvise(0x726d0000, 65536, MADV_WILLNEED) = -1 ENOSYS (Function not implemented)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 12
+fstat64(12, {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+fstat64(12, {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73200000
+read(12, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1048576) = 114
+_llseek(12, -6, [108], SEEK_CUR)        = 0
+read(12, "\nUTC0\n", 1048576)           = 6
+close(12)                               = 0
+munmap(0x73200000, 1048576)             = 0
+futex(0x7541bcd0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+stat64("/etc/TZ", 0x7eccd978)           = -1 ENOENT (No such file or directory)
+readlink("/etc/localtime", 0x22058b8, 256) = -1 EINVAL (Invalid argument)
+open("/etc/TZ", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 12
+fstat64(12, {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+fstat64(12, {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+brk(0x2231000)                          = 0x2231000
+read(12, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 16384) = 114
+read(12, "", 16270)                     = 0
+brk(0x222d000)                          = 0x222d000
+close(12)                               = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+stat64("/etc/TZ", 0x7eccd9b8)           = -1 ENOENT (No such file or directory)
+readlink("/etc/localtime", 0x22058b8, 256) = -1 EINVAL (Invalid argument)
+open("/etc/TZ", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+stat64("/etc/TZ", 0x7eccd960)           = -1 ENOENT (No such file or directory)
+readlink("/etc/localtime", 0x22058b8, 256) = -1 EINVAL (Invalid argument)
+open("/etc/TZ", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+gettimeofday({tv_sec=1688059781, tv_usec=240011}, NULL) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=114, ...}) = 0
+mprotect(0x726e0000, 65536, PROT_READ|PROT_WRITE) = 0
+madvise(0x726e0000, 65536, MADV_WILLNEED) = -1 ENOSYS (Function not implemented)
+access("/mnt/matrix/matrix/lib", F_OK)  = 0
+access("/mnt/matrix/matrix/translations/qt_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_c.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_c", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt_", R_OK) = -1 ENOENT (No such file or directory)
+access("/mnt/matrix/matrix/translations/qt", R_OK) = -1 ENOENT (No such file or directory)
+getcwd("/mnt/matrix/matrix", 4096)      = 19
+uname({sysname="Linux", nodename="kobo", ...}) = 0
+open("/etc/os-release", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 12
+fstat64(12, {st_mode=S_IFREG|0644, st_size=95, ...}) = 0
+read(12, "NAME=Buildroot\nVERSION=2015.11\nI"..., 95) = 95
+close(12)                               = 0
+write(11, "\1\0\0\0\0\0\0\0", 8)        = 8
+futex(0x21f0a08, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x21f8b1c, FUTEX_WAIT_PRIVATE, 3, NULL) = 0
+futex(0x21f8b00, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b00, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f0a08, FUTEX_WAIT_PRIVATE, 3, NULL) = 0
+futex(0x21f0a08, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f8b00, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b18, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b1c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x21f8b18, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+futex(0x21f8b00, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f8b1c, FUTEX_WAIT_PRIVATE, 7, NULL) = 0
+futex(0x21f8b00, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b00, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f0a08, FUTEX_WAIT_PRIVATE, 3, NULL) = 0
+futex(0x21f0a08, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f8b00, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b18, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b1c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x21f8b18, FUTEX_OP_SET<<28|0<<12|FUTEX_OP_CMP_GT<<24|0x1) = 0
+futex(0x21f8b00, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f8b1c, FUTEX_WAIT_PRIVATE, 11, NULL) = 0
+futex(0x21f8b00, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f8b00, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21f0a08, FUTEX_WAIT_PRIVATE, 3, NULL) = 0
+futex(0x21f0a08, FUTEX_WAKE_PRIVATE, 1) = 0
+write(2, "QQmlApplicationEngine failed to "..., 47) = 47
+write(2, "qrc:/main.qml:8:1: module \"org.k"..., 62) = 62
+write(11, "\1\0\0\0\0\0\0\0", 8)        = 8
+futex(0x21f81e4, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x21f81c8, FUTEX_WAIT_PRIVATE, 2, NULL) = 0
+futex(0x21f81c8, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x21fa660, FUTEX_WAIT_PRIVATE, 3, NULL) = 0
+futex(0x21fa660, FUTEX_WAKE_PRIVATE, 1) = 0
+madvise(0x726d0000, 65536, MADV_DONTNEED) = -1 ENOSYS (Function not implemented)
+mprotect(0x726d0000, 65536, PROT_NONE)  = 0
+madvise(0x726e0000, 65536, MADV_DONTNEED) = -1 ENOSYS (Function not implemented)
+mprotect(0x726e0000, 65536, PROT_NONE)  = 0
+madvise(0x726c0000, 65536, MADV_DONTNEED) = -1 ENOSYS (Function not implemented)
+mprotect(0x726c0000, 65536, PROT_NONE)  = 0
+munmap(0x726c0000, 4194304)             = 0
+munmap(0x72cc0000, 4456448)             = 0
+munmap(0x72ac0000, 2097152)             = 0
+close(4)                                = 0
+ioctl(5, FBIOPUT_VSCREENINFO, 0x7eccd918) = 0
+ioctl(5, FBIOGET_VSCREENINFO, 0x74bdb44c) = 0
+munmap(0x746ea000, 3145728)             = 0
+close(5)                                = 0
+munmap(0x7462b000, 782336)              = 0
+write(8, "\1\0\0\0\0\0\0\0", 8)         = 8
+futex(0x21c3d30, FUTEX_WAKE_PRIVATE, 1) = 1
+futex(0x21ca4f4, FUTEX_WAIT_PRIVATE, 1, NULL) = 0
+futex(0x21ca4d8, FUTEX_WAKE_PRIVATE, 1) = 0
+write(2, "QLibraryPrivate::unload succeede"..., 91) = 91
+write(2, "QLibraryPrivate::unload succeede"..., 92) = 92
+write(2, "QLibraryPrivate::unload succeede"..., 91) = 91
+write(2, "QLibraryPrivate::unload succeede"..., 92) = 92
+write(2, "QLibraryPrivate::unload succeede"..., 91) = 91
+write(2, "QLibraryPrivate::unload succeede"..., 91) = 91
+write(2, "QLibraryPrivate::unload succeede"..., 92) = 92
+write(2, "QLibraryPrivate::unload succeede"..., 92) = 92
+write(2, "QLibraryPrivate::unload succeede"..., 92) = 92
+write(2, "QLibraryPrivate::unload succeede"..., 88) = 88
+close(3)                                = 0
+write(2, "QLibraryPrivate::unload succeede"..., 101) = 101
+write(2, "QLibraryPrivate::unload succeede"..., 118) = 118
+exit_group(-1)                          = ?
++++ exited with 255 +++

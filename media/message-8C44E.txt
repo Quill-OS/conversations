@@ -1,0 +1,204 @@
+~/fractal-legacy # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sed 's#/proc/self/exe#\/bin\/sh#g' | sh -s -- -y
+info: downloading installer
+curl: (22) The requested URL returned error: 404 
+rustup: command failed: downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.pJHhBM/rustup-init armv7-unknown-linux-musleabihf
+~/fractal-legacy # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sed 's#/proc/self/exe#\/bin\/sh#g' | sh -x -s -- -y
++ '['  '=' 'Version JM 93t+ 2010-03-05' ]
++ set -u
++ RUSTUP_UPDATE_ROOT=https://static.rust-lang.org/rustup
++ main -y
++ downloader --check
++ local _dld
++ local _ciphersuites
++ local _err
++ local _status
++ local _retry
++ check_cmd curl
++ command -v curl
++ _dld=curl
++ '[' --check '=' --check ]
++ need_cmd curl
++ check_cmd curl
++ command -v curl
++ need_cmd uname
++ check_cmd uname
++ command -v uname
++ need_cmd mktemp
++ check_cmd mktemp
++ command -v mktemp
++ need_cmd chmod
++ check_cmd chmod
++ command -v chmod
++ need_cmd mkdir
++ check_cmd mkdir
++ command -v mkdir
++ need_cmd rm
++ check_cmd rm
++ command -v rm
++ need_cmd rmdir
++ check_cmd rmdir
++ command -v rmdir
++ get_architecture
++ local _ostype _cputype _bitness _arch _clibtype
++ uname -s
++ _ostype=Linux
++ uname -m
++ _cputype=armv7l
++ _clibtype=gnu
++ '[' Linux '=' Linux ]
++ uname -o
++ '[' Linux '=' Android ]
++ ldd --version
++ grep -q musl
++ _clibtype=musl
++ '[' Linux '=' Darwin ]
++ '[' Linux '=' SunOS ]
++ check_proc
++ test -L /bin/sh
++ _ostype=unknown-linux-musl
++ get_bitness
++ need_cmd head
++ check_cmd head
++ command -v head
++ local _current_exe_head
++ head -c 5 /bin/sh
++ _current_exe_head='ELF'
++ printf '\177ELF\001'
++ '[' 'ELF' '=' 'ELF' ]
++ echo 32
++ _bitness=32
++ _cputype=armv7
++ '[' unknown-linux-musl '=' linux-android ]
++ _ostype=unknown-linux-musleabihf
++ '[' unknown-linux-musleabihf '=' unknown-linux-gnu ]
++ '[' unknown-linux-musleabihf '=' unknown-linux-gnueabihf ]
++ _arch=armv7-unknown-linux-musleabihf
++ RETVAL=armv7-unknown-linux-musleabihf
++ local '_arch=armv7-unknown-linux-musleabihf'
++ assert_nz armv7-unknown-linux-musleabihf arch
++ '[' -z armv7-unknown-linux-musleabihf ]
++ local '_ext='
++ local '_url=https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init'
++ local _dir
++ ensure mktemp -d
++ mktemp -d
++ _dir=/tmp/tmp.PPpejf
++ local '_file=/tmp/tmp.PPpejf/rustup-init'
++ local '_ansi_escapes_are_valid=false'
++ '[' -t 2 ]
++ '[' set '=' set ]
++ _ansi_escapes_are_valid=true
++ local 'need_tty=yes'
++ OPTIND=1
++ '[' -y '='  ]
++ getopts :hy sub_arg -y
++ need_tty=no
++ getopts :hy sub_arg -y
++ true
++ printf '\33[1minfo:\33[0m downloading installer\n'
+info: downloading installer
++ ensure mkdir -p /tmp/tmp.PPpejf
++ mkdir -p /tmp/tmp.PPpejf
++ ensure downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.PPpejf/rustup-init armv7-unknown-linux-musleabihf
++ downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.PPpejf/rustup-init armv7-unknown-linux-musleabihf
++ local _dld
++ local _ciphersuites
++ local _err
++ local _status
++ local _retry
++ check_cmd curl
++ command -v curl
++ _dld=curl
++ '[' https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init '=' --check ]
++ '[' curl '=' curl ]
++ check_curl_for_retry_support
++ local '_retry_supported='
++ check_help_for notspecified curl --retry
++ local _arch
++ local _cmd
++ local _arg
++ _arch=notspecified
++ shift
++ _cmd=curl
++ shift
++ local _category
++ grep -q 'For all options use the manual or "--help all".'
++ curl --help
++ _category=
++ curl --help 
++ grep -q -- --retry
++ true
++ _retry_supported='--retry 3'
++ check_help_for notspecified curl --continue-at
++ local _arch
++ local _cmd
++ local _arg
++ _arch=notspecified
++ shift
++ _cmd=curl
++ shift
++ local _category
++ curl --help
++ grep -q 'For all options use the manual or "--help all".'
++ _category=
++ curl --help 
++ grep -q -- --continue-at
++ true
++ _retry_supported='--retry 3 -C -'
++ RETVAL='--retry 3 -C -'
++ _retry='--retry 3 -C -'
++ get_ciphersuites_for_curl
++ '[' -n  ]
++ local '_openssl_syntax=no'
++ local '_gnutls_syntax=no'
++ local '_backend_supported=yes'
++ curl -V
++ grep -q ' OpenSSL/'
++ _openssl_syntax=yes
++ local '_args_supported=no'
++ '[' yes '=' yes ]
++ check_help_for notspecified curl --tlsv1.2 --ciphers --proto
++ local _arch
++ local _cmd
++ local _arg
++ _arch=notspecified
++ shift
++ _cmd=curl
++ shift
++ local _category
++ curl --help
++ grep -q 'For all options use the manual or "--help all".'
++ _category=
++ curl+  --help 
+grep -q -- --tlsv1.2
++ curl --help 
++ grep -q -- --ciphers
++ curl --help 
++ grep -q -- --proto
++ true
++ _args_supported=yes
++ local '_cs='
++ '[' yes '=' yes ]
++ '[' yes '=' yes ]
++ get_strong_ciphersuites_for openssl
++ '[' openssl '=' openssl ]
++ echo TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384
++ _cs=TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384
++ RETVAL=TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384
++ _ciphersuites=TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384
++ '[' -n TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384 ]
++ curl --retry 3 -C - --proto '=https' --tlsv1.2 --ciphers TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384 --silent --show-error --fail --location https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init --output /tmp/tmp.PPpejf/rustup-init
++ _err='curl: (22) The requested URL returned error: 404 '
++ _status=22
++ '[' -n 'curl: (22) The requested URL returned error: 404 ' ]
++ echo 'curl: (22) The requested URL returned error: 404 '
+curl: (22) The requested URL returned error: 404 
++ echo 'curl: (22) The requested URL returned error: 404 '
++ grep -q '404$'
++ return 22
++ err 'command failed: downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.PPpejf/rustup-init armv7-unknown-linux-musleabihf'
++ say 'command failed: downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.PPpejf/rustup-init armv7-unknown-linux-musleabihf'
++ printf 'rustup: %s\n' 'command failed: downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.PPpejf/rustup-init armv7-unknown-linux-musleabihf'
+rustup: command failed: downloader https://static.rust-lang.org/rustup/dist/armv7-unknown-linux-musleabihf/rustup-init /tmp/tmp.PPpejf/rustup-init armv7-unknown-linux-musleabihf
++ exit 1
+~/fractal-legacy #

@@ -1,0 +1,54 @@
+kobo-nia:~$ evtest /dev/input/event0 
+Input driver version is 1.0.1
+Input device ID: bus 0x18 vendor 0x0 product 0x0 version 0x0
+Input device name: "ektf2232"
+Supported events:
+  Event type 0 (EV_SYN)
+  Event type 1 (EV_KEY)
+    Event code 330 (BTN_TOUCH)
+  Event type 3 (EV_ABS)
+    Event code 0 (ABS_X)
+      Value   1276
+      Min        0
+      Max     1919
+    Event code 1 (ABS_Y)
+      Value     65
+      Min        0
+      Max     1435
+    Event code 47 (ABS_MT_SLOT)
+      Value      0
+      Min        0
+      Max        4
+    Event code 53 (ABS_MT_POSITION_X)
+      Value      0
+      Min        0
+      Max     1919
+    Event code 54 (ABS_MT_POSITION_Y)
+      Value      0
+      Min        0
+      Max     1435
+    Event code 57 (ABS_MT_TRACKING_ID)
+      Value      0
+      Min        0
+      Max    65535
+Properties:
+  Property type 1 (INPUT_PROP_DIRECT)
+Testing ... (interrupt to exit)
+Event: time 1686937186.023357, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 32
+Event: time 1686937186.023357, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 1257
+Event: time 1686937186.023357, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 150
+Event: time 1686937186.023357, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 1
+Event: time 1686937186.023357, type 3 (EV_ABS), code 0 (ABS_X), value 1257
+Event: time 1686937186.023357, type 3 (EV_ABS), code 1 (ABS_Y), value 150
+Event: time 1686937186.023357, -------------- SYN_REPORT ------------
+Event: time 1686937186.658191, type 3 (EV_ABS), code 47 (ABS_MT_SLOT), value 1
+Event: time 1686937186.658191, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value 33
+Event: time 1686937186.658191, type 3 (EV_ABS), code 53 (ABS_MT_POSITION_X), value 218
+Event: time 1686937186.658191, type 3 (EV_ABS), code 54 (ABS_MT_POSITION_Y), value 1729
+Event: time 1686937186.658191, -------------- SYN_REPORT ------------
+Event: time 1686937198.064809, type 3 (EV_ABS), code 47 (ABS_MT_SLOT), value 0
+Event: time 1686937198.064809, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value -1
+Event: time 1686937198.064809, type 3 (EV_ABS), code 47 (ABS_MT_SLOT), value 1
+Event: time 1686937198.064809, type 3 (EV_ABS), code 57 (ABS_MT_TRACKING_ID), value -1
+Event: time 1686937198.064809, type 1 (EV_KEY), code 330 (BTN_TOUCH), value 0
+Event: time 1686937198.064809, -------------- SYN_REPORT ------------

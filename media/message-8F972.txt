@@ -1,0 +1,362 @@
+dk@dk-ThinkPad-E560:~$ pmbootstrap kconfig edit linux-kobo-clara-mainline
+[sudo] password for dk: 
+[09:32:51] (native) install abuild build-base ccache git
+[09:32:56] (native) install ccache-cross-symlinks gcc-armv7 g++-armv7
+[09:32:58] (native) install bash bc bison devicepkg-dev findutils flex gmp-dev lzop mpc1-dev mpfr-dev openssl-dev perl ncurses-dev
+[09:32:59] (native) extract kernel source
+[09:33:11] (native) apply patches
+NOTE: *not* replacing /home/pmos/build/src/linux-b18538d8658b542d42d07aa687e1373d559fbcf6/include/linux/compiler-gcc.h, because of REPLACE_GCCH=0
+make: Entering directory '/home/pmos/build/src/linux-b18538d8658b542d42d07aa687e1373d559fbcf6'
+  GEN     Makefile
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/confdata.o
+  HOSTCC  scripts/kconfig/expr.o
+  LEX     scripts/kconfig/lexer.lex.c
+  YACC    scripts/kconfig/parser.tab.[ch]
+  HOSTCC  scripts/kconfig/menu.o
+  HOSTCC  scripts/kconfig/preprocess.o
+  HOSTCC  scripts/kconfig/symbol.o
+  HOSTCC  scripts/kconfig/util.o
+  HOSTCC  scripts/kconfig/lexer.lex.o
+  HOSTCC  scripts/kconfig/parser.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+make: Leaving directory '/home/pmos/build/src/linux-b18538d8658b542d42d07aa687e1373d559fbcf6'
+[09:33:26] (native) make menuconfig
+  GEN     Makefile
+  UPD     scripts/kconfig/mconf-cfg
+  HOSTCC  scripts/kconfig/mconf.o
+  HOSTCC  scripts/kconfig/lxdialog/checklist.o
+  HOSTCC  scripts/kconfig/lxdialog/inputbox.o
+  HOSTCC  scripts/kconfig/lxdialog/menubox.o
+  HOSTCC  scripts/kconfig/lxdialog/textbox.o
+  HOSTCC  scripts/kconfig/lxdialog/util.o
+  HOSTCC  scripts/kconfig/lxdialog/yesno.o
+  HOSTLD  scripts/kconfig/mconf
+configuration written to .config
+
+*** End of the configuration.
+*** Execute 'make' to start the build or try 'make help'.
+
+[09:34:58] Copy kernel config back to aport-folder
+[09:35:01] (native) generate checksums for linux-kobo-clara-mainline
+[09:35:02] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[09:35:02] DONE!
+dk@dk-ThinkPad-E560:~$ pmboostrap shutdown
+pmboostrap: command not found
+dk@dk-ThinkPad-E560:~$ pmbootstrap shutdown
+[09:35:22] DONE!
+dk@dk-ThinkPad-E560:~$ pmbootstrap build linux-kobo-clara-mainline --force
+[09:35:58] Update package index for armv7 (4 file(s))
+[09:36:02] (native) install bash bc bison devicepkg-dev findutils flex gmp-dev lzop mpc1-dev mpfr-dev openssl-dev perl
+[09:36:03] (native) install ccache-cross-symlinks gcc-armv7 g++-armv7
+[09:36:04] (native) build armv7/linux-kobo-clara-mainline-6.1.12-r2.apk
+[09:48:07] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[09:48:07] DONE!
+dk@dk-ThinkPad-E560:~$ lsusb
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 004: ID 138a:0011 Validity Sensors, Inc. VFS5011 Fingerprint Reader
+Bus 001 Device 003: ID 5986:0708 Acer, Inc Integrated Camera
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+dk@dk-ThinkPad-E560:~$ sudo fdisk -l
+[sudo] password for dk: 
+Disk /dev/loop0: 4 KiB, 4096 bytes, 8 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop1: 148.44 MiB, 155652096 bytes, 304008 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop2: 149 MiB, 156241920 bytes, 305160 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop3: 173.37 MiB, 181788672 bytes, 355056 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop4: 162.55 MiB, 170446848 bytes, 332904 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop5: 55.61 MiB, 58310656 bytes, 113888 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop6: 55.61 MiB, 58314752 bytes, 113896 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop7: 63.29 MiB, 66359296 bytes, 129608 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/sda: 931.51 GiB, 1000204886016 bytes, 1953525168 sectors
+Disk model: Samsung SSD 860 
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 145AE007-9460-4D9A-AD06-6294E7B33BAE
+
+Device       Start        End    Sectors  Size Type
+/dev/sda1     2048    1050623    1048576  512M EFI System
+/dev/sda2  1050624 1953523711 1952473088  931G Linux filesystem
+
+
+Disk /dev/loop8: 63.32 MiB, 66392064 bytes, 129672 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop9: 55.1 MiB, 57778176 bytes, 112848 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop10: 55.03 MiB, 57704448 bytes, 112704 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop11: 239.88 MiB, 251527168 bytes, 491264 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop12: 349.69 MiB, 366673920 bytes, 716160 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop13: 91.69 MiB, 96141312 bytes, 187776 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop14: 346.33 MiB, 363151360 bytes, 709280 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop15: 241.9 MiB, 253648896 bytes, 495408 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop16: 53.24 MiB, 55824384 bytes, 109032 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop17: 49.84 MiB, 52260864 bytes, 102072 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mmcblk0: 14.84 GiB, 15931539456 bytes, 31116288 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xa86b864d
+
+Device         Boot  Start      End  Sectors  Size Id Type
+/dev/mmcblk0p1 *     49152   499711   450560  220M 83 Linux
+/dev/mmcblk0p2      499712 31115263 30615552 14.6G 83 Linux
+dk@dk-ThinkPad-E560:~$ pmbootstrap init
+[09:55:28] Location of the 'work' path. Multiple chroots (native, device arch, device rootfs) will be created in there.
+[09:55:28] Work path [/home/dk/.local/var/pmbootstrap]: 
+[09:55:29] NOTE: pmaports path: /home/dk/.local/var/pmbootstrap/cache_git/pmaports
+[09:55:29] Choose the postmarketOS release channel.
+[09:55:29] Available (7):
+[09:55:29] * edge: Rolling release / Most devices / Occasional breakage: https://postmarketos.org/edge
+[09:55:29] * v22.12: Latest release / Recommended for best stability
+[09:55:29] * v22.06: Old release (unsupported)
+[09:55:29] * v21.12: Old release (unsupported)
+[09:55:29] * v21.06: Old release (unsupported)
+[09:55:29] * v21.03: Old release (unsupported)
+[09:55:29] * v20.05: Old release (unsupported)
+[09:55:29] Channel [edge]: 
+[09:55:30] Choose your target device vendor (either an existing one, or a new one for porting).
+[09:55:30] Available vendors (76): acer, alcatel, amazon, amediatech, apple, ark, arrow, asus, beelink, bq, cubietech, cutiepi, dongshanpi, essential, fairphone, finepower, fly, goclever, google, gp, hisense, htc, huawei, infocus, jolla, klipad, kobo, lark, leeco, lenovo, lg, mangopi, medion, meizu, microsoft, mobvoi, motorola, nextbit, nobby, nokia, nvidia, odroid, oneplus, oppo, ouya, pegatron, pine64, planet, purism, qemu, radxa, raspberry, samsung, semc, sharp, shift, sipeed, sony, sourceparts, surftab, t2m, tablet, tokio, tolino, trekstor, vernee, videostrong, volla, wexler, wiko, wileyfox, xiaomi, xunlong, yu, zte, zuk
+[09:55:30] Vendor [kobo]: 
+[09:55:31] Available codenames (3): clara, librah2o, nia
+[09:55:31] Device codename [nia]: 
+[09:55:32] Username [dk-x86]: 
+[09:55:34] Available user interfaces (13): 
+[09:55:34] * none: Bare minimum OS image for testing and manual customization. The "console" UI should be selected if a graphical UI is not desired.
+[09:55:34] * asteroid: (Wayland) Smartwatch UI from AsteroidOS
+[09:55:34] * console: Console environment, with no graphical/touch UI
+[09:55:34] * fbkeyboard: Plain framebuffer console with touchscreen keyboard support
+[09:55:34] * gnome: (Wayland) Gnome Shell
+[09:55:34] * gnome-mobile: (Wayland) Gnome Shell patched to adapt better to phones (Experimental)
+[09:55:34] * i3wm: (X11) Tiling WM (keyboard required)
+[09:55:34] * lxqt: (X11) Lightweight Qt Desktop Environment (stylus recommended)
+[09:55:34] * mate: (X11) MATE Desktop Environment, fork of GNOME2 (stylus recommended)
+[09:55:34] * plasma-desktop: (X11/Wayland) KDE Desktop Environment (works well with tablets)
+[09:55:34] * shelli: Plain console with touchscreen gesture support
+[09:55:34] * sxmo-de-dwm: Simple Mobile: Mobile environment based on SXMO and running on dwm
+[09:55:34] * sxmo-de-sway: Simple Mobile: Mobile environment based on SXMO and running on sway
+[09:55:34] * xfce4: (X11) Lightweight desktop (stylus recommended)
+[09:55:34] NOTE: 6 user interfaces are not available. If device supports GPU acceleration, set "deviceinfo_gpu_accelerated" to make UIs available. See: <https://wiki.postmarketos.org/wiki/Deviceinfo_reference
+[09:55:34] User interface [xfce4]: 
+[09:55:36] Additional options: extra free space: 0 MB, boot partition size: 256 MB, parallel jobs: 5, ccache per arch: 5G, sudo timer: False, mirror: http://mirror.postmarketos.org/postmarketos/
+[09:55:36] Change them? (y/n) [n]: 
+[09:55:38] Additional packages that will be installed to rootfs. Specify them in a comma separated list (e.g.: vim,file) or "none"
+[09:55:38] Extra packages [none]: 
+[09:55:39] WARNING: Unable to determine timezone configuration on host, using GMT.
+[09:55:39] Available locales (14): C.UTF-8, ch_DE.UTF-8, de_CH.UTF-8, de_DE.UTF-8, en_GB.UTF-8, en_US.UTF-8, es_ES.UTF-8, fr_FR.UTF-8, it_IT.UTF-8, nb_NO.UTF-8, nl_NL.UTF-8, pt_BR.UTF-8, ru_RU.UTF-8, sv_SE.UTF-8
+[09:55:39] Choose default locale for installation [en_GB.UTF-8]: 
+[09:55:40] Device hostname (short form, e.g. 'foo') [kobo-nia]: 
+[09:55:41] After pmaports are changed, the binary packages may be outdated. If you want to install postmarketOS without changes, reply 'n' for a faster installation.
+[09:55:41] Build outdated packages during 'pmbootstrap install'? (y/n) [y]: 
+[09:55:42] Zap existing chroots to apply configuration? (y/n) [y]: 
+[09:55:45] % rm -rf /home/dk/.local/var/pmbootstrap/chroot_native
+[09:55:45] % rm -rf /home/dk/.local/var/pmbootstrap/chroot_rootfs_kobo-nia
+[09:55:46] Cleared up ~1336 MB of space
+[09:55:46] WARNING: The chroots and git repositories in the work dir do not get updated automatically.
+[09:55:46] Run 'pmbootstrap status' once a day before working with pmbootstrap to make sure that everything is up-to-date.
+[09:55:46] DONE!
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/
+Display all 230 possibilities? (y or n)
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+mmcblk0    mmcblk0p1  mmcblk0p2  
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+mmcblk0    mmcblk0p1  mmcblk0p2  
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+[09:56:22] *** (1/4) PREPARE NATIVE CHROOT ***
+[09:56:23] (native) install alpine-base
+[09:56:27] (native) install cryptsetup util-linux parted
+[09:56:28] *** (2/4) CREATE DEVICE ROOTFS ("kobo-nia") ***
+[09:56:28] (native) install qemu-arm
+[09:56:29] Register qemu binfmt (arm)
+[09:56:29] (rootfs_kobo-nia) install alpine-base
+[09:56:35] (rootfs_kobo-nia) install postmarketos-base device-kobo-nia postmarketos-ui-xfce4 alsa-plugins-pulse blueman faenza-icon-theme gnome-keyring greybird-themes network-manager-applet onboard pavucontrol pm-utils postmarketos-artwork-icons postmarketos-artwork-wallpapers pulseaudio unclutter-xfixes xfce4-pulseaudio-plugin xfce4-screensaver xfce4-terminal xfce4-whiskermenu-plugin lang musl-locales postmarketos-base-nofde
+[09:57:52] (rootfs_kobo-nia) install device-kobo-nia
+[09:58:07] (rootfs_kobo-nia) install postmarketos-mkinitfs
+[09:58:11] (rootfs_kobo-nia) mkinitfs kobo-clara-mainline
+[09:58:19]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+New password: 
+              Retype new password: 
+                                   passwd: password updated successfully
+                                                                        [09:58:27] NOTE: No valid keymap specified for device
+[09:58:36] *** (3/4) PREPARE INSTALL BLOCKDEVICE ***
+[09:58:36] ERROR: /dev/mmcblk0p2 is mounted! Will not attempt to format this!
+[09:58:36] See also: <https://postmarketos.org/troubleshooting>
+Run 'pmbootstrap log' for details.
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+[10:00:14] *** (1/4) PREPARE NATIVE CHROOT ***
+[10:00:16] (native) install cryptsetup util-linux parted
+[10:00:17] *** (2/4) CREATE DEVICE ROOTFS ("kobo-nia") ***
+[10:00:21] (rootfs_kobo-nia) install postmarketos-base device-kobo-nia postmarketos-ui-xfce4 alsa-plugins-pulse blueman faenza-icon-theme gnome-keyring greybird-themes network-manager-applet onboard pavucontrol pm-utils postmarketos-artwork-icons postmarketos-artwork-wallpapers pulseaudio unclutter-xfixes xfce4-pulseaudio-plugin xfce4-screensaver xfce4-terminal xfce4-whiskermenu-plugin lang musl-locales postmarketos-base-nofde
+[10:00:36] (rootfs_kobo-nia) install device-kobo-nia
+[10:00:50] (rootfs_kobo-nia) install postmarketos-mkinitfs
+[10:00:54] (rootfs_kobo-nia) mkinitfs kobo-clara-mainline
+[10:01:01]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+New password: 
+              Retype new password: 
+                                   passwd: password updated successfully
+                                                                        [10:01:11] NOTE: No valid keymap specified for device
+[10:01:18] *** (3/4) PREPARE INSTALL BLOCKDEVICE ***
+[10:01:19] (native) mount /dev/install (host: /dev/mmcblk0)
+[10:01:19] WARNING: This device has a previous installation of pmOS. CONTINUE? (y/n) [n]: y
+[10:01:22] (native) partition /dev/install (boot: 256M, reserved: 0M, root: the rest)
+[10:01:23] (native) install e2fsprogs
+[10:01:24] (native) format /dev/installp2 (root, ext4)
+[10:01:42] (native) mount /dev/installp2 to /mnt/install
+[10:01:42] (native) install e2fsprogs
+[10:01:43] (native) format /dev/installp1 (boot, ext2), mount to mountpoint
+[10:01:43] NOTE: The failed command's output is above the ^^^ line in the log file: /home/dk/.local/var/pmbootstrap/log.txt
+[10:01:43] ERROR: Command failed (exit code 1): (native) % mkfs.ext2 -F -q -L pmOS_boot /dev/installp1
+[10:01:43] See also: <https://postmarketos.org/troubleshooting>
+Run 'pmbootstrap log' for details.
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+[10:03:17] *** (1/4) PREPARE NATIVE CHROOT ***
+[10:03:19] (native) install cryptsetup util-linux parted
+[10:03:20] *** (2/4) CREATE DEVICE ROOTFS ("kobo-nia") ***
+[10:03:24] (rootfs_kobo-nia) install postmarketos-base device-kobo-nia postmarketos-ui-xfce4 alsa-plugins-pulse blueman faenza-icon-theme gnome-keyring greybird-themes network-manager-applet onboard pavucontrol pm-utils postmarketos-artwork-icons postmarketos-artwork-wallpapers pulseaudio unclutter-xfixes xfce4-pulseaudio-plugin xfce4-screensaver xfce4-terminal xfce4-whiskermenu-plugin lang musl-locales postmarketos-base-nofde
+[10:03:38] (rootfs_kobo-nia) install device-kobo-nia
+[10:03:52] (rootfs_kobo-nia) install postmarketos-mkinitfs
+[10:03:56] (rootfs_kobo-nia) mkinitfs kobo-clara-mainline
+[10:04:03]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+New password: 
+              Retype new password: 
+                                   passwd: password updated successfully
+                                                                        [10:04:14] NOTE: No valid keymap specified for device
+[10:04:21] *** (3/4) PREPARE INSTALL BLOCKDEVICE ***
+[10:04:22] ERROR: /dev/mmcblk0p1 is mounted! Will not attempt to format this!
+[10:04:22] See also: <https://postmarketos.org/troubleshooting>
+Run 'pmbootstrap log' for details.
+dk@dk-ThinkPad-E560:~$ pmbootstrap install --sdcard /dev/mmcblk0
+[10:04:35] *** (1/4) PREPARE NATIVE CHROOT ***
+[10:04:37] (native) install cryptsetup util-linux parted
+[10:04:38] *** (2/4) CREATE DEVICE ROOTFS ("kobo-nia") ***
+[10:04:42] (rootfs_kobo-nia) install postmarketos-base device-kobo-nia postmarketos-ui-xfce4 alsa-plugins-pulse blueman faenza-icon-theme gnome-keyring greybird-themes network-manager-applet onboard pavucontrol pm-utils postmarketos-artwork-icons postmarketos-artwork-wallpapers pulseaudio unclutter-xfixes xfce4-pulseaudio-plugin xfce4-screensaver xfce4-terminal xfce4-whiskermenu-plugin lang musl-locales postmarketos-base-nofde
+[10:04:56] (rootfs_kobo-nia) install device-kobo-nia
+[10:05:11] (rootfs_kobo-nia) install postmarketos-mkinitfs
+[10:05:14] (rootfs_kobo-nia) mkinitfs kobo-clara-mainline
+[10:05:21]  *** SET LOGIN PASSWORD FOR: 'dk-x86' ***
+New password: 
+              Retype new password: 
+                                   passwd: password updated successfully
+                                                                        [10:05:28] NOTE: No valid keymap specified for device
+[10:05:35] *** (3/4) PREPARE INSTALL BLOCKDEVICE ***
+[10:05:35] (native) mount /dev/install (host: /dev/mmcblk0)
+[10:05:36] WARNING: This device has a previous installation of pmOS. CONTINUE? (y/n) [n]: y
+[10:05:37] (native) partition /dev/install (boot: 256M, reserved: 0M, root: the rest)
+[10:05:38] (native) install e2fsprogs
+[10:05:38] (native) format /dev/installp2 (root, ext4)
+[10:05:55] (native) mount /dev/installp2 to /mnt/install
+[10:05:56] (native) install e2fsprogs
+[10:05:56] (native) format /dev/installp1 (boot, ext2), mount to mountpoint
+[10:05:58] *** (4/4) FILL INSTALL BLOCKDEVICE ***
+[10:05:58] (native) copy rootfs_kobo-nia to /mnt/install/
+[10:06:02] Embed firmware u-boot/kobo-nia/u-boot.imx in the SD card image at offset 2 with step size 512
+[10:06:02] Embed firmware u-boot/kobo-nia/u-boot-env.bin in the SD card image at offset 1536 with step size 512
+[10:06:02] Unmounting SD card (this may take a while to sync, please wait)
+[10:06:51] 
+[10:06:51] *** FLASHING INFORMATION ***
+[10:06:51] Refer to the installation instructions of your device, or the generic install instructions in the wiki.
+[10:06:51] https://wiki.postmarketos.org/wiki/Installation_guide#pmbootstrap_flash
+[10:06:51] 
+[10:06:51] *** SSH DAEMON INFORMATION ***
+[10:06:51] SSH daemon is enabled (disable with --no-sshd).
+[10:06:51] Login as 'dk-x86' with the password given during installation.
+[10:06:51] 
+[10:06:51] *** FIREWALL INFORMATION ***
+[10:06:51] Firewall is enabled, but may not work (couldn't determine if kernel supports nftables).
+[10:06:51] For more information: https://postmarketos.org/firewall
+[10:06:51] 
+[10:06:51] NOTE: chroot is still active (use 'pmbootstrap shutdown' as necessary)
+[10:06:51] DONE!

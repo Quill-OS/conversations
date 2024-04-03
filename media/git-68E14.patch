@@ -1,0 +1,47 @@
+diff --git a/init.c b/init.c
+index a4922b4..83a1f57 100644
+--- a/init.c
++++ b/init.c
+@@ -146,6 +146,13 @@ int main(void) {
+ 	// Kernel version
+ 	struct utsname uname_data;
+ 	uname(&uname_data);
++	if(MATCH(uname_data.release, "n306c")) {
++		button_input_device = "/dev/input/by-path/platform-21f8000.i2c-platform-bd71828-pwrkey-event";
++	}
++	else {
++		button_input_device = "/dev/input/event0";
++	}
++
+ 	char * kernel_version = NULL;
+ 	// Pass 0 to snprintf to let it tell us how large of a buffer we need
+ 	int size = snprintf(kernel_version, 0U, "%s %s %s", uname_data.sysname, uname_data.nodename, uname_data.version);
+@@ -335,7 +342,7 @@ int main(void) {
+ 	bool power_button_pressed = false;
+ 	bool other_button_pressed = false;
+ 	// Allow 3 seconds for power button input (boot mode & DFL mode)
+-	int fd = open(BUTTON_INPUT_DEVICE, O_RDONLY | O_NONBLOCK);
++	int fd = open(button_input_device, O_RDONLY | O_NONBLOCK);
+ 	if (fd == -1) {
+ 		perror("open");
+ 		exit(EXIT_FAILURE);
+diff --git a/init.h b/init.h
+index 3b91699..9efd93b 100644
+--- a/init.h
++++ b/init.h
+@@ -39,7 +39,6 @@
+ #define ROOT_FLAG_SECTOR 79872
+ #define ROOT_FLAG_SECTOR_KT 98304
+ #define ROOT_FLAG_SIZE 6U
+-#define BUTTON_INPUT_DEVICE "/dev/input/event0"
+ #define BOOT_STANDARD 0
+ #define BOOT_DIAGNOSTICS 1
+ #define SERIAL_FIFO_PATH "/tmp/serial-fifo"
+@@ -47,6 +46,7 @@
+ 
+ // Variables
+ char * device = NULL;
++char * button_input_device = NULL;
+ char tty[8] = { 0 };
+ char * usbnet_ip;
+ char * usbnet_device_address;

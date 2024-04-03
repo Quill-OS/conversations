@@ -1,0 +1,212 @@
+[ 1317.743752] PM: Syncing filesystems ... done.
+[ 1317.748232] PM: Preparing system for mem sleep
+[ 1317.751928] Freezing user space processes ... (elapsed 0.002 seconds) done.
+[ 1317.754011] Freezing remaining freezable tasks ... (elapsed 0.001 seconds) done.
+[ 1317.755463] PM: Entering mem sleep
+[ 1317.770925] lm3630a_bank_a_update_status():FL PWR[OFF] 
+[ 1317.772677] [bd71828_regulator_suspend-856]...
+[ 1317.772695] [bd71828_regulator_suspend-MX6ULL]...
+[ 1317.784712] PM: suspend of devices complete after 27.644 msecs
+[ 1317.784734] PM: suspend devices took 0.030 seconds
+[ 1318.780442] PM: late suspend of devices complete after 995.674 msecs
+[ 1318.782964] PM: noirq suspend of devices complete after 2.492 msecs
+[ 1318.782981] Disabling non-boot CPUs ...
+[ 1318.782990] Turn off M/F mix!
+[ 1318.784653] PM: noirq resume of devices complete after 1.562 msecs
+[ 1318.785746] imx-sdma 20ec000.sdma: loaded firmware 3.3
+[ 1318.787929] PM: early resume of devices complete after 2.796 msecs
+[ 1318.790606] drivers/video/fbdev/mxc/mxc_epdc_v2_fb.c,epdc_init_settings_ex():epdc_mode="E60XC5"
+[ 1318.803712] EPD QOS_WR 0x7, QOS_RD 0x7
+[ 1318.804081] elan ts starts in interrupt mode.
+[ 1318.813292] [bd71828_regulator_resume-918]...
+[ 1318.814857] lm3630a_bank_a_update_status():FL PWR[ON] 
+[ 1318.998028] PM: resume of devices complete after 210.057 msecs
+[ 1318.999750] PM: resume devices took 0.210 seconds
+[ 1318.999766] PM: Finishing wakeup.
+[ 1318.999776] Restarting tasks ... done.
+[ 1319.022883] [elan_touch_report_data-620] Hello packet 55:55:55:55:ff:ff:ff:ff received
+[ 1319.028485] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1319.330740] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,2),v=4110100,vmin=4096000),vsys(v=4110000,vmin=4089000),curr=-52360(avg=-89488),cc=99523236,dcap=1648,fcap=1646
+[ 1320.267527] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1321.260441] 
+[ 1321.260441] Bus freq set to 24000000 start...
+[ 1321.260732] 
+[ 1321.260732] Bus freq set to 24000000 done...
+[ 1321.347019] 
+[ 1321.347019] Bus freq set to 400000000 start...
+[ 1321.347304] 
+[ 1321.347304] Bus freq set to 400000000 done...
+[ 1321.798645] [_lm3630a_set_FL-1123] led A c=12,b=4, led B c=0,b=0
+[ 1321.864150] [_lm3630a_set_FL-1123] led A c=31,b=3, led B c=0,b=0
+[ 1321.920034] [_lm3630a_set_FL-1123] led A c=31,b=11, led B c=0,b=0
+[ 1321.975425] [_lm3630a_set_FL-1123] led A c=31,b=14, led B c=0,b=0
+[ 1322.030845] [_lm3630a_set_FL-1123] led A c=31,b=16, led B c=0,b=0
+[ 1322.087375] [_lm3630a_set_FL-1123] led A c=31,b=18, led B c=0,b=0
+[ 1322.143318] [_lm3630a_set_FL-1123] led A c=31,b=20, led B c=0,b=0
+[ 1322.198882] [_lm3630a_set_FL-1123] led A c=31,b=25, led B c=0,b=0
+[ 1322.254431] [_lm3630a_set_FL-1123] led A c=31,b=30, led B c=0,b=0
+[ 1322.310083] [_lm3630a_set_FL-1123] led A c=31,b=36, led B c=0,b=0
+[ 1322.347635] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,2),v=4109900,vmin=4096500),vsys(v=4106500,vmin=4089000),curr=-117096(avg=-89488),cc=99516774,dcap=1648,fcap=1646
+[ 1322.370459] [_lm3630a_set_FL-1123] led A c=31,b=39, led B c=0,b=0
+[ 1322.429065] [_lm3630a_set_FL-1123] led A c=31,b=43, led B c=0,b=0
+[ 1322.484130] [_lm3630a_set_FL-1123] led A c=31,b=47, led B c=0,b=0
+[ 1322.539292] [_lm3630a_set_FL-1123] led A c=31,b=50, led B c=0,b=0
+[ 1322.594359] [_lm3630a_set_FL-1123] led A c=31,b=53, led B c=0,b=0
+[ 1322.649402] [_lm3630a_set_FL-1123] led A c=31,b=59, led B c=0,b=0
+[ 1322.675492] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1322.704470] [_lm3630a_set_FL-1123] led A c=31,b=64, led B c=0,b=0
+[ 1322.759538] [_lm3630a_set_FL-1123] led A c=31,b=71, led B c=0,b=0
+[ 1322.814617] [_lm3630a_set_FL-1123] led A c=31,b=79, led B c=0,b=0
+[ 1322.869718] [_lm3630a_set_FL-1123] led A c=31,b=86, led B c=0,b=0
+[ 1322.933647] [_lm3630a_set_FL-1123] led A c=31,b=92, led B c=0,b=0
+[ 1322.988794] [_lm3630a_set_FL-1123] led A c=31,b=98, led B c=0,b=0
+[ 1323.044015] [_lm3630a_set_FL-1123] led A c=31,b=102, led B c=0,b=0
+[ 1323.100604] [_lm3630a_set_FL-1123] led A c=31,b=108, led B c=0,b=0
+[ 1323.156060] [_lm3630a_set_FL-1123] led A c=31,b=109, led B c=0,b=0
+[ 1323.211666] [_lm3630a_set_FL-1123] led A c=31,b=113, led B c=0,b=0
+[ 1323.267252] [_lm3630a_set_FL-1123] led A c=31,b=114, led B c=0,b=0
+[ 1323.322770] [_lm3630a_set_FL-1123] led A c=31,b=117, led B c=0,b=0
+[ 1323.378338] [_lm3630a_set_FL-1123] led A c=31,b=119, led B c=0,b=0
+[ 1323.433917] [_lm3630a_set_FL-1123] led A c=31,b=121, led B c=0,b=0
+[ 1323.489590] [_lm3630a_set_FL-1123] led A c=31,b=123, led B c=0,b=0
+[ 1324.825326] bd71827-power bd71827-power: 
+[ 1324.825326] ~~~DCIN inserted
+[ 1324.825356] bd71827-power bd71827-power: changeToSDPMode
+[ 1324.825370] bd71827-power bd71827-power: setCurrentLimit() set current limit 500 mA
+[ 1324.825904] bd71827-power bd71827-power: setChargeCurrent() set charge current 500 mA
+[ 1325.021143] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=2,dcin=1
+[ 1325.021270] Mass Storage Function, version: 2009/09/11
+[ 1325.021287] LUN: removable file: (no medium)
+[ 1325.021434] LUN: removable file: (no medium)
+[ 1325.021446] Number of LUNs=1
+[ 1325.021460] Number of LUNs=1
+[ 1325.033277] chargedetect gadget: Composite Gadget (ACM + MS), version: 2011/10/10
+[ 1325.033305] chargedetect gadget: userspace failed to provide iSerialNumber
+[ 1325.033314] chargedetect gadget: chargedetect ready
+[ 1325.127453] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1325.341354] bd71827-power bd71827-power: DCIN_STAT CHANGED from 0x0 to 0x1
+[ 1325.359970] check_usb_state_by_ep()  usb_state = 1 !!
+[ 1325.363157] bd71827-power bd71827-power: changeToSDPMode
+[ 1325.363187] bd71827-power bd71827-power: setCurrentLimit() set current limit 500 mA
+[ 1325.371618] bd71827-power bd71827-power: setChargeCurrent() set charge current 500 mA
+[ 1325.389531] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,2),v=4108900,vmin=4095666),vsys(v=4131666,vmin=4088333),curr=-179452(avg=-89488),cc=99510032,dcap=1648,fcap=1646
+[ 1325.807759] bd71827-power bd71827-power: charger_detect_work_func(): charger_type=2
+[ 1325.807867] usb plugged 0x1
+[ 1327.533243] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1328.393841] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4117800,vmin=4102750),vsys(v=4161000,vmin=4126250),curr=696864(avg=-89488),cc=99533632,dcap=1648,fcap=1646
+[ 1329.935734] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1331.405886] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4127700,vmin=4123200),vsys(v=4203400,vmin=4157400),curr=743988(avg=-89488),cc=99564294,dcap=1648,fcap=1646
+[ 1332.081984] configfs: exports duplicate symbol config_group_find_item (owned by kernel)
+[ 1332.193791] libcomposite: exports duplicate symbol usb_os_desc_prepare_interf_dir (owned by kernel)
+[ 1332.316731] usb_f_mass_storage: exports duplicate symbol fsg_common_create_lun (owned by kernel)
+[ 1332.339941] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1332.450376] g_mass_storage: disagrees about version of symbol usb_composite_unregister
+[ 1332.450405] g_mass_storage: Unknown symbol usb_composite_unregister (err -22)
+[ 1332.618065] [_lm3630a_set_FL-1123] led A c=31,b=121, led B c=0,b=0
+[ 1332.659180] [_lm3630a_set_FL-1123] led A c=31,b=119, led B c=0,b=0
+[ 1332.697611] [_lm3630a_set_FL-1123] led A c=31,b=117, led B c=0,b=0
+[ 1332.735557] [_lm3630a_set_FL-1123] led A c=31,b=114, led B c=0,b=0
+[ 1332.776732] [_lm3630a_set_FL-1123] led A c=31,b=113, led B c=0,b=0
+[ 1332.821736] [_lm3630a_set_FL-1123] led A c=31,b=109, led B c=0,b=0
+[ 1332.865352] [_lm3630a_set_FL-1123] led A c=31,b=108, led B c=0,b=0
+[ 1332.906050] [_lm3630a_set_FL-1123] led A c=31,b=102, led B c=0,b=0
+[ 1332.946795] [_lm3630a_set_FL-1123] led A c=31,b=98, led B c=0,b=0
+[ 1332.987390] [_lm3630a_set_FL-1123] led A c=31,b=92, led B c=0,b=0
+[ 1333.027824] [_lm3630a_set_FL-1123] led A c=31,b=86, led B c=0,b=0
+[ 1333.067836] [_lm3630a_set_FL-1123] led A c=31,b=79, led B c=0,b=0
+[ 1333.107820] [_lm3630a_set_FL-1123] led A c=31,b=71, led B c=0,b=0
+[ 1333.149286] [_lm3630a_set_FL-1123] led A c=31,b=64, led B c=0,b=0
+[ 1333.190232] [_lm3630a_set_FL-1123] led A c=31,b=59, led B c=0,b=0
+[ 1333.231121] [_lm3630a_set_FL-1123] led A c=31,b=53, led B c=0,b=0
+[ 1333.271838] [_lm3630a_set_FL-1123] led A c=31,b=50, led B c=0,b=0
+[ 1333.312532] [_lm3630a_set_FL-1123] led A c=31,b=47, led B c=0,b=0
+[ 1333.353283] [_lm3630a_set_FL-1123] led A c=31,b=43, led B c=0,b=0
+[ 1333.394073] [_lm3630a_set_FL-1123] led A c=31,b=39, led B c=0,b=0
+[ 1333.434948] [_lm3630a_set_FL-1123] led A c=31,b=36, led B c=0,b=0
+[ 1333.475587] [_lm3630a_set_FL-1123] led A c=31,b=30, led B c=0,b=0
+[ 1333.516251] [_lm3630a_set_FL-1123] led A c=31,b=25, led B c=0,b=0
+[ 1333.557020] [_lm3630a_set_FL-1123] led A c=31,b=20, led B c=0,b=0
+[ 1333.597689] [_lm3630a_set_FL-1123] led A c=31,b=18, led B c=0,b=0
+[ 1333.648331] [_lm3630a_set_FL-1123] led A c=31,b=16, led B c=0,b=0
+[ 1333.687528] [_lm3630a_set_FL-1123] led A c=31,b=14, led B c=0,b=0
+[ 1333.727736] [_lm3630a_set_FL-1123] led A c=31,b=11, led B c=0,b=0
+[ 1333.767734] [_lm3630a_set_FL-1123] led A c=31,b=3, led B c=0,b=0
+[ 1333.807767] [_lm3630a_set_FL-1123] led A c=12,b=4, led B c=0,b=0
+[ 1333.848187] [_lm3630a_set_FL-1123] led A c=208,b=0, led B c=0,b=0
+[ 1334.415301] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4137500,vmin=4137000),vsys(v=4233000,vmin=4187333),curr=722092(avg=-89488),cc=99594308,dcap=1648,fcap=1646
+[ 1334.741843] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1337.144384] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1337.430208] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4147300,vmin=4146857),vsys(v=4255285,vmin=4209142),curr=702576(avg=-89488),cc=99623490,dcap=1648,fcap=1646
+[ 1339.546774] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1340.450201] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4157100,vmin=4154500),vsys(v=4272000,vmin=4231625),curr=683536(avg=-89488),cc=99651986,dcap=1648,fcap=1646
+[ 1341.948830] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1343.470230] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4167000,vmin=4160333),vsys(v=4285000,vmin=4249111),curr=667828(avg=81872),cc=99679786,dcap=1648,fcap=1646
+[ 1344.351190] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1346.489497] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4177000,vmin=4165000),vsys(v=4295500,vmin=4263100),curr=654024(avg=81872),cc=99706988,dcap=1648,fcap=1646
+[ 1346.753745] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1349.156086] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1349.500229] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4186400,vmin=4176100),vsys(v=4323400,vmin=4293100),curr=642124(avg=81872),cc=99733674,dcap=1648,fcap=1646
+[ 1351.558753] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1352.535100] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4196300,vmin=4187100),vsys(v=4352100,vmin=4323100),curr=631652(avg=81872),cc=99759880,dcap=1648,fcap=1646
+[ 1353.961502] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1355.548698] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206900,vmin=4198400),vsys(v=4372900,vmin=4353300),curr=621180(avg=81872),cc=99785678,dcap=1648,fcap=1646
+[ 1356.364245] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1358.560218] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207700,vmin=4206700),vsys(v=4387000,vmin=4368200),curr=613088(avg=81872),cc=99811114,dcap=1648,fcap=1646
+[ 1358.766752] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1361.169137] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1361.580063] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207500,vmin=4206900),vsys(v=4388700,vmin=4378900),curr=604996(avg=81872),cc=99836258,dcap=1648,fcap=1646
+[ 1363.571801] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1364.600078] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207400,vmin=4207000),vsys(v=4389600,vmin=4384100),curr=584528(avg=81872),cc=99860530,dcap=1648,fcap=1646
+[ 1365.974459] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1367.620215] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207300,vmin=4207000),vsys(v=4389700,vmin=4389000),curr=578340(avg=81872),cc=99884498,dcap=1648,fcap=1646
+[ 1368.377080] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1370.640254] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207200,vmin=4206800),vsys(v=4389800,vmin=4389000),curr=571676(avg=81872),cc=99908180,dcap=1648,fcap=1646
+[ 1370.779618] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1373.181938] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1373.660232] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4207000,vmin=4206700),vsys(v=4389900,vmin=4389000),curr=567392(avg=81872),cc=99931670,dcap=1648,fcap=1646
+[ 1375.584250] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1376.680234] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206800,vmin=4206600),vsys(v=4389900,vmin=4389000),curr=562156(avg=81872),cc=99954964,dcap=1648,fcap=1646
+[ 1377.986509] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1379.700425] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206700,vmin=4206500),vsys(v=4389900,vmin=4389000),curr=557872(avg=81872),cc=99978066,dcap=1648,fcap=1646
+[ 1380.388800] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1382.720234] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206600,vmin=4206400),vsys(v=4389900,vmin=4389000),curr=553588(avg=81872),cc=100000984,dcap=1648,fcap=1646
+[ 1382.791342] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1384.661102] sy7636_get_temperature():temperature = 29,reg=0x1d
+[ 1385.193536] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1385.740258] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206500,vmin=4206200),vsys(v=4389500,vmin=4388200),curr=548828(avg=81872),cc=100023734,dcap=1648,fcap=1646
+[ 1387.595917] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1388.760243] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206400,vmin=4206100),vsys(v=4389500,vmin=4388200),curr=546448(avg=81872),cc=100046360,dcap=1648,fcap=1646
+[ 1389.998522] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1391.780576] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206300,vmin=4206000),vsys(v=4389500,vmin=4388300),curr=542164(avg=81872),cc=100068798,dcap=1648,fcap=1646
+[ 1392.400926] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1394.800233] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206200,vmin=4205900),vsys(v=4389400,vmin=4388300),curr=538356(avg=81872),cc=100091080,dcap=1648,fcap=1646
+[ 1394.803521] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1397.206072] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1397.820188] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206100,vmin=4205900),vsys(v=4389400,vmin=4388400),curr=535500(avg=81872),cc=100113234,dcap=1648,fcap=1646
+[ 1399.608724] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1400.840265] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205900),vsys(v=4389400,vmin=4388500),curr=531692(avg=81872),cc=100135248,dcap=1648,fcap=1646
+[ 1402.011219] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1403.860186] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205900),vsys(v=4389400,vmin=4388600),curr=529312(avg=81872),cc=100157138,dcap=1648,fcap=1646
+[ 1404.414105] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1406.816820] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1406.887472] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205800),vsys(v=4389400,vmin=4388400),curr=526932(avg=581196),cc=100178930,dcap=1648,fcap=1646
+[ 1409.220017] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1409.900202] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205700),vsys(v=4389500,vmin=4388300),curr=524552(avg=581196),cc=100200650,dcap=1648,fcap=1646
+[ 1411.623130] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1412.925764] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205700),vsys(v=4389500,vmin=4388300),curr=521220(avg=581196),cc=100222218,dcap=1648,fcap=1646
+[ 1414.025526] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1415.941104] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205700),vsys(v=4389900,vmin=4389200),curr=519316(avg=581196),cc=100243690,dcap=1648,fcap=1646
+[ 1416.428126] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1418.830346] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1418.961041] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4206000,vmin=4205700),vsys(v=4389900,vmin=4389200),curr=516936(avg=581196),cc=100265082,dcap=1648,fcap=1646
+[ 1421.232497] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1421.981055] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4205900,vmin=4205600),vsys(v=4389900,vmin=4389200),curr=514080(avg=581196),cc=100286354,dcap=1648,fcap=1646
+[ 1423.634612] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1424.999525] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4205900,vmin=4205500),vsys(v=4390000,vmin=4389300),curr=511700(avg=581196),cc=100307534,dcap=1648,fcap=1646
+[ 1426.036939] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1428.008574] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4205900,vmin=4205400),vsys(v=4390000,vmin=4389300),curr=508844(avg=581196),cc=100328610,dcap=1648,fcap=1646
+[ 1428.439477] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1430.841936] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1431.015379] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4205800,vmin=4205300),vsys(v=4390000,vmin=4389200),curr=506940(avg=581196),cc=100349586,dcap=1648,fcap=1646
+[ 1433.245776] imx_epdc_v2_fb 228c000.epdc: blank = 0
+[ 1434.033209] bd71827-power bd_work_callback():soc(c=92,v=92,clamp_soc=92),vbat(stat=(32,1),v=4205800,vmin=4205200),vsys(v=4390000,vmin=4389200),curr=508368(avg=581196),cc=100370538,dcap=1648,fcap=1646

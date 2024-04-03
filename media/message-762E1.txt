@@ -1,0 +1,45 @@
+static void _zForce_ir_touch_report_touch_up(char id)
+{
+        if (gIsCustomerUi){
+                if( (2 == id) && (g_touch_pressed&(1<<1)) )  // id 1 still pressed
+                {
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_TRACKING_ID, 0);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_TOUCH_MAJOR, 1);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_WIDTH_MAJOR, 1);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_X, last_x[1]);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_Y, last_y[1]);
+                        input_mt_sync(zForce_ir_touch_data.input);
+                }
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_TRACKING_ID, id);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_TOUCH_MAJOR, 0);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_WIDTH_MAJOR, 0);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_X, last_x[id]);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_Y, last_y[id]);
+                input_report_abs(zForce_ir_touch_data.input, ABS_PRESSURE, 0);
+                input_report_key(zForce_ir_touch_data.input, BTN_TOUCH, 0);
+                if( (1 == id) && (g_touch_pressed&(1<<2)) )  // id 2 still pressed
+                {
+                        input_mt_sync(zForce_ir_touch_data.input);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_TRACKING_ID, 2);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_TOUCH_MAJOR, 1);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_WIDTH_MAJOR, 1);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_X, last_x[2]);
+                        input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_Y, last_y[2]);
+                }
+        }
+        else {
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_TRACKING_ID, id);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_TOUCH_MAJOR, 0);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_WIDTH_MAJOR, 0);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_X, last_x[id]);
+                input_report_abs(zForce_ir_touch_data.input, ABS_MT_POSITION_Y, last_y[id]);
+
+                input_report_abs(zForce_ir_touch_data.input, ABS_Y, last_y[id]);
+                input_report_abs(zForce_ir_touch_data.input, ABS_X, last_x[id]);
+                input_report_abs(zForce_ir_touch_data.input, ABS_PRESSURE, 0);
+                input_report_key(zForce_ir_touch_data.input, BTN_TOUCH, 0);
+        } 
+        //printk (KERN_ERR"[%s-%d] touch %d (%d, %d) up\n",__func__,__LINE__, id,last_x[id],last_y[id]);
+        //printk (KERN_ERR"[%s-%d] touch %d up\n",__func__,__LINE__, id);
+        g_touch_pressed &= (~(1<<id));
+}

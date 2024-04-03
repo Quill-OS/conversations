@@ -1,0 +1,40 @@
+[  644.623965] Dongle Host Driver, version 5.90.125.120.1
+[  644.623973] Compiled in drivers/net/wireless/bcmdhd on Feb  7 2022 at 21:21:30
+[  645.196324] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[  645.197985] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[  645.199637] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[  645.202586] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[  645.205867] mmc2: queuing unknown CIS tuple 0x80 (8 bytes)
+[  645.207194] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[  645.209497] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[  645.211793] mmc2: queuing unknown CIS tuple 0x80 (5 bytes)
+[  645.231960] mmc2: new high speed SDIO card at address 0001
+[  645.238633] dhd_customer_oob_irq_map: customer specific Host GPIO number is (127)
+[  645.238658] dhd_customer_oob_irq_map: customer specific Host GPIO irq number is (383)
+[  645.239156] [bcmsdh_probe-241] IRQ=383 Type=414 
+[  645.239383] F1 signature read @0x18000000=0x1591a962
+[  645.244496] DHD: dongle ram size is set to 245760(orig 245760)
+[  645.244861] wl_iw_attach thr:845 started
+[  645.244949] wl_iw_bt_init thr:846 started
+[  645.245045] dhd_attach thr:847 started
+[  645.245125] dhd_attach thr:848 started
+[  645.245195] dhd_attach thr:849 started
+[  645.246475] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+[  645.249910] _dhdsdio_download_firmware: dongle image file download failed
+[  645.249981] dhd_bus_start: dhdsdio_probe_download failed. firmware = /lib/firmware/wc121/rtecdc.bin nvram = /lib/firmware/wc121/nvram.txt
+[  645.250007] dhd_open: failed with code -1
+[  645.250022] dev_wlc_ioctl: Error dev_open: -1
+[  645.250812] _dhdsdio_download_firmware: dongle image file download failed
+[  645.250877] dhd_bus_start: dhdsdio_probe_download failed. firmware = /lib/firmware/wc121/rtecdc.bin nvram = /lib/firmware/wc121/nvram.txt
+[  645.250901] dhd_open: failed with code -1
+[  645.250914] dev_wlc_ioctl: Error dev_open: -1
+[  645.251679] _dhdsdio_download_firmware: dongle image file download failed
+[  645.251741] dhd_bus_start: dhdsdio_probe_download failed. firmware = /lib/firmware/wc121/rtecdc.bin nvram = /lib/firmware/wc121/nvram.txt
+[  645.251766] dev_wlc_ioctl: Error dev_open: -1
+[  645.252584] dev_wlc_ioctl: Error dev_open: -1
+[  645.252601] Set ISCAN for wl_iw_iscan failed with 0
+kobo:/# ls /lib/firmware/wc121/rtecdc.bin
+/lib/firmware/wc121/rtecdc.bin
+kobo:/# ls /lib/firmware/wc121/nvram.txt 
+/lib/firmware/wc121/nvram.txt
+kobo:/#

@@ -1,0 +1,108 @@
+diff --git a/apps.cpp b/apps.cpp
+index 074f41e..bbf1613 100644
+--- a/apps.cpp
++++ b/apps.cpp
+@@ -250,10 +250,19 @@ bool apps::parseJson() {
+                                 jsonCheckSuccess = false;
+ 
+                             }
+-                            if(!jsonMainObject["SupportedDevices"].isString()) {
++                            if(!jsonMainObject["SupportedDevices"].isArray()) {
+                                 QString function = __func__; log(function + ": Invalid 'SupportedDevices' type inside object", className);
+                                 jsonCheckSuccess = false;
+ 
++                            } else {
++                                QJsonArray jsonArray = jsonMainObject["SupportedDevices"].toArray();
++                                for(QJsonValueRef refJsonObject: jsonArray) {
++                                    // https://doc.qt.io/qt-5/qjsonvalue.html#toInt
++                                    if(!refJsonObject.isString()) {
++                                        QString function = __func__; log(function + ": Array from 'RequiredFeatures' contains a wrong type", className);
++                                        jsonCheckSuccess = false;
++                                    }
++                                }
+                             }
+                             if(!jsonMainObject["RequiredFeatures"].isArray()) {
+                                 QString function = __func__; log(function + ": Invalid 'RequiredFeatures' type inside object", className);
+diff --git a/generaldialog.cpp b/generaldialog.cpp
+index 6738a25..dc6a504 100644
+--- a/generaldialog.cpp
++++ b/generaldialog.cpp
+@@ -192,7 +192,7 @@ generalDialog::generalDialog(QWidget *parent) :
+     else if(global::userApps::appCompatibilityDialog == true) {
+             appCompatibilityDialog = true;
+             global::userApps::appCompatibilityLastContinueStatus = true;
+-            ui->okBtn->setText("Launch");
++            ui->okBtn->setText("Continue");
+             ui->cancelBtn->setText("Cancel");
+             ui->bodyLabel->setText(global::userApps::appCompatibilityText);
+             ui->headerLabel->setText("Compatibility warning");
+diff --git a/main.cpp b/main.cpp
+index 7802553..8e2e37a 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -60,6 +60,7 @@ int main(int argc, char *argv[])
+         while(true) {
+             if(QFile::exists("/tmp/gui_apps_started")) {
+                 if(checkconfig("/tmp/gui_apps_started") == true) {
++                    log("GUI apps service started", "main");
+                     QFile::remove("/tmp/gui_apps_started");
+                     updateUserAppsMainJsonFile();
+                     break;
+diff --git a/userapps.cpp b/userapps.cpp
+index db82e46..184c51b 100644
+--- a/userapps.cpp
++++ b/userapps.cpp
+@@ -137,15 +137,13 @@ void userapps::updateJsonFileSlotUA(QJsonDocument jsonDocumentProvided)
+ void userapps::on_launchBtn_clicked()
+ {
+     // Some command to execute script or binary at "ExecPath"
+-    QString supportedDevices = jsonObject["SupportedDevices"].toString();
+-    QString message = "Supported devices for this app: ";
+-    message.append(supportedDevices);
+-    log(message, className);
++    QJsonArray supportedDevices = jsonObject["SupportedDevices"].toArray();
+ 
++    // this will work even if we are looking for n306 and there is a device named n306b becouse function contains for QJsonArray works in that way
+     if(supportedDevices.contains("all") == false and supportedDevices.contains(global::deviceID.trimmed()) == false) {
+         log("Warning: User app does not support this device", className);
+         global::userApps::appCompatibilityDialog = true;
+-        global::userApps::appCompatibilityText = "<font face='u001'>Your device is not compatible with this app.<br>Launch it anyway</font><font face='Inter'>?</font>";
++        global::userApps::appCompatibilityText = "<font face='u001'>Your device is not compatible with this app.<br>Continue anyway</font><font face='Inter'>?</font>";
+         generalDialogWindow = new generalDialog();
+         generalDialogWindow->setAttribute(Qt::WA_DeleteOnClose);
+ 
+@@ -175,20 +173,30 @@ void userapps::on_launchBtn_clicked()
+ 
+ bool userapps::manageRequiredFeatures()
+ {
++    // This should be already setted false, but just in case
++    global::userApps::appCompatibilityLastContinueStatus = true;
+     QJsonArray jsonArray = jsonObject["RequiredFeatures"].toArray();
+     for(QJsonValueRef refJsonObject: jsonArray) {
+         bool launchDialog = false;
+         int featureId = refJsonObject.toInt();
+         // Wi-Fi connection required
+         if(featureId == 0) {
+-            global::userApps::appCompatibilityText = "<font face='u001'>This app needs Wi-Fi connection, launch anyway</font><font face='Inter'>?</font>";
+-            launchDialog = true;
++            // Double if's to avoid launching unnecesery testPing in emu
++            if(global::deviceID != "emu\n") {
++                if(testPing(true) != 0) {
++                    global::userApps::appCompatibilityText = "<font face='u001'>This app needs Wi-Fi connection, continue anyway</font><font face='Inter'>?</font>";
++                    launchDialog = true;
++                }
++            }
+         }
+         // Rooted kernel required
+         if(featureId == 1) {
+-            global::userApps::appCompatibilityText = "<font face='u001'>This app needs a rooted kernel, launch anyway</font><font face='Inter'>?</font>";
+-            launchDialog = true;
++            if(checkconfig("/external_root/opt/root/rooted") == true) {
++                global::userApps::appCompatibilityText = "<font face='u001'>This app needs a rooted kernel, continue anyway</font><font face='Inter'>?</font>";
++                launchDialog = true;
++            }
+         }
++        // Pseudoterminal support ( id 2 ) is managed by gui_apps service
+ 
+         if(launchDialog == true) {
+             global::userApps::appCompatibilityDialog = true;

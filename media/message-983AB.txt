@@ -1,0 +1,183 @@
+kobo:~# /tmp/inkbox-list-networks 
+kobo:~# cat /run/
+ibxd                   inkbox_gui_git_commit  lock/                  sshd.pid               utmp                   wifi_list_format
+initrd-fifo            ipd/                   openrc/                udev/                  wifi_able              wifi_list_full
+kobo:~# cat /run/wifi_list_format 
+kobo:~# cat /run/wifi_list_full 
+kobo:~# strace /tmp/inkbox-list-networks 
+execve("/tmp/inkbox-list-networks", ["/tmp/inkbox-list-networks"], 0x7e850da0 /* 16 vars */) = 0
+open("/proc/self/exe", O_RDONLY)        = 3
+mmap2(NULL, 154368, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2ab02000
+mmap2(0x2ab02000, 153263, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0) = 0x2ab02000
+cacheflush(0x2ab27020, 0x2ab27b00, 0)   = 0
+mprotect(0x2ab26000, 6912, PROT_READ|PROT_EXEC) = 0
+readlink("/proc/self/exe", "/tmp/inkbox-list-networks", 4095) = 25
+cacheflush(0x7ec80354, 0x7ec80448, 0)   = 0
+mmap2(0x10000, 651264, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x10000
+mmap2(0x10000, 521888, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x10000
+cacheflush(0x10000, 0x100f4, 0)         = 0
+cacheflush(0x100f4, 0x8f6a0, 0)         = 0
+cacheflush(0x8f6a0, 0x8f6a8, 0)         = 0
+mprotect(0x10000, 521888, PROT_READ|PROT_EXEC) = 0
+mmap2(0xa0000, 57396, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xa0000
+cacheflush(0xa0054, 0xae034, 0)         = 0
+mprotect(0xa0000, 57396, PROT_READ|PROT_WRITE) = 0
+brk(0xaf000)                            = 0xaf000
+mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 3, 0) = 0x2ab92000
+close(3)                                = 0
+munmap(0x2ab02000, 154368)              = 0
+mmap2(NULL, 232, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x2ac8f000
+set_tls(0x2ac8f078)                     = 0
+set_tid_address(0xaea54)                = 5578
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x54cf1}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x4e51c, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x54cf7}, NULL, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=0x4e51c, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x54cf7}, NULL, 8) = 0
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x2ad81000
+mprotect(0x2ad81000, 4096, PROT_NONE)   = 0
+sigaltstack({ss_sp=0x2ad82000, ss_flags=0, ss_size=8192}, NULL) = 0
+brk(NULL)                               = 0xaf000
+brk(0xb0000)                            = 0xb0000
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+open("/opt/inkbox_device", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+fstat64(3, {st_mode=S_IFREG|0644, st_size=5, ...}) = 0
+_llseek(3, 0, [0], SEEK_CUR)            = 0
+read(3, "n437\n", 8)                    = 5
+read(3, "", 3)                          = 0
+close(3)                                = 0
+open("/dev/null", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+pipe2([6, 7], O_CLOEXEC)                = 0
+pipe2([8, 9], O_CLOEXEC)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7ec80480, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 5579
+close(9)                                = 0
+read(8, "", 4)                          = 0
+close(8)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(3)                                = 0
+close(5)                                = 0
+close(7)                                = 0
+ioctl(4, FIONBIO, [1])                  = 0
+ioctl(6, FIONBIO, [1])                  = 0
+poll([{fd=4, events=POLLIN}, {fd=6, events=POLLIN}], 2, -1) = 2 ([{fd=4, revents=POLLHUP}, {fd=6, revents=POLLIN|POLLHUP}])
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5579, si_uid=0, si_status=1, si_utime=1, si_stime=0} ---
+read(4, "", 32)                         = 0
+ioctl(6, FIONBIO, [0])                  = 0
+read(6, "insmod: ERROR: could not load mo", 32) = 32
+read(6, "dule /modules/sdio_wifi_pwr.ko: ", 32) = 32
+read(6, "No such file or directory\n", 64) = 26
+read(6, "", 38)                         = 0
+close(6)                                = 0
+close(4)                                = 0
+wait4(5579, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 5579
+open("/dev/null", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+pipe2([6, 7], O_CLOEXEC)                = 0
+pipe2([8, 9], O_CLOEXEC)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7ec80480, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 5580
+close(9)                                = 0
+read(8, "", 4)                          = 0
+close(8)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(3)                                = 0
+close(5)                                = 0
+close(7)                                = 0
+ioctl(4, FIONBIO, [1])                  = 0
+ioctl(6, FIONBIO, [1])                  = 0
+poll([{fd=4, events=POLLIN}, {fd=6, events=POLLIN}], 2, -1) = 2 ([{fd=4, revents=POLLHUP}, {fd=6, revents=POLLIN|POLLHUP}])
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5580, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+read(4, "", 32)                         = 0
+ioctl(6, FIONBIO, [0])                  = 0
+read(6, "insmod: ERROR: could not load mo", 32) = 32
+read(6, "dule eth0: No such file or direc", 32) = 32
+read(6, "tory\n", 64)                   = 5
+read(6, "", 59)                         = 0
+close(6)                                = 0
+close(4)                                = 0
+wait4(5580, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 5580
+nanosleep({tv_sec=1, tv_nsec=500000000}, 0x7ec809a8) = 0
+open("/dev/null", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+pipe2([6, 7], O_CLOEXEC)                = 0
+pipe2([8, 9], O_CLOEXEC)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7ec80550, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 5581
+close(9)                                = 0
+read(8, "", 4)                          = 0
+close(8)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(3)                                = 0
+close(5)                                = 0
+close(7)                                = 0
+ioctl(4, FIONBIO, [1])                  = 0
+ioctl(6, FIONBIO, [1])                  = 0
+poll([{fd=4, events=POLLIN}, {fd=6, events=POLLIN}], 2, -1) = 2 ([{fd=4, revents=POLLHUP}, {fd=6, revents=POLLIN|POLLHUP}])
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5581, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+read(4, "", 32)                         = 0
+ioctl(6, FIONBIO, [0])                  = 0
+read(6, "ifconfig: SIOCGIFFLAGS: No such ", 32) = 32
+read(6, "device\n", 32)                 = 7
+read(6, "", 25)                         = 0
+close(6)                                = 0
+close(4)                                = 0
+wait4(5581, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 5581
+open("/dev/null", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+pipe2([4, 5], O_CLOEXEC)                = 0
+pipe2([6, 7], O_CLOEXEC)                = 0
+pipe2([8, 9], O_CLOEXEC)                = 0
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0x7ec80550, flags=CLONE_VM|CLONE_VFORK|SIGCHLD) = 5586
+close(9)                                = 0
+read(8, "", 4)                          = 0
+close(8)                                = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(3)                                = 0
+close(5)                                = 0
+close(7)                                = 0
+ioctl(4, FIONBIO, [1])                  = 0
+ioctl(6, FIONBIO, [1])                  = 0
+poll([{fd=4, events=POLLIN}, {fd=6, events=POLLIN}], 2, -1) = 2 ([{fd=4, revents=POLLHUP}, {fd=6, revents=POLLIN|POLLHUP}])
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5586, si_uid=0, si_status=255, si_utime=0, si_stime=0} ---
+read(4, "", 32)                         = 0
+ioctl(6, FIONBIO, [0])                  = 0
+read(6, "eth0      Interface doesn't supp", 32) = 32
+read(6, "ort scanning.\n\n", 32)        = 15
+read(6, "", 17)                         = 0
+close(6)                                = 0
+close(4)                                = 0
+wait4(5586, [{WIFEXITED(s) && WEXITSTATUS(s) == 255}], 0, NULL) = 5586
+brk(0xb1000)                            = 0xb1000
+brk(0xb2000)                            = 0xb2000
+getrandom(0x7ec7e4d8, 16, GRND_NONBLOCK) = -1 ENOSYS (Function not implemented)
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+read(3, "\303\312\0203\27\32\234\262\354\v\275\306\227\275\264\366", 16) = 16
+close(3)                                = 0
+brk(0xb5000)                            = 0xb5000
+brk(0xb8000)                            = 0xb8000
+brk(0xbb000)                            = 0xbb000
+brk(0xbe000)                            = 0xbe000
+brk(0xc1000)                            = 0xc1000
+open("/run/wifi_list_full", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+close(3)                                = 0
+open("/run/wifi_list_format", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE|O_CLOEXEC, 0666) = 3
+fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
+close(3)                                = 0
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
+munmap(0x2ad81000, 12288)               = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
+kobo:~#

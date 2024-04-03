@@ -1,0 +1,55 @@
+nicolas@gentoo-ryzen ~/Documents/inkbox-git/sff $ ./build.sh
+~/Documents/inkbox-git/sff/build ~/Documents/inkbox-git/sff
+-- The CXX compiler identification is GNU 11.2.0
+-- The C compiler identification is GNU 11.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/nicolas/x-tools/arm-kobo-linux-gnueabihf/bin/arm-kobo-linux-gnueabihf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/nicolas/x-tools/arm-kobo-linux-gnueabihf/bin/arm-kobo-linux-gnueabihf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nicolas/Documents/inkbox-git/sff/build
+[  5%] Creating directories for 'libvterm_vendored'
+[ 10%] No download step for 'libvterm_vendored'
+[ 15%] No update step for 'libvterm_vendored'
+[ 21%] No patch step for 'libvterm_vendored'
+[ 26%] No configure step for 'libvterm_vendored'
+[ 31%] Performing build step for 'libvterm_vendored'
+LINK libvterm.la
+libtool: link: rm -fr  .libs/libvterm.so .libs/libvterm.so.0.0.3
+libtool: link: gcc -shared  -fPIC -DPIC  src/.libs/encoding.o src/.libs/keyboard.o src/.libs/mouse.o src/.libs/parser.o src/.libs/pen.o src/.libs/screen.o src/.libs/state.o src/.libs/unicode.o src/.libs/vterm.o      -Wl,-soname -Wl,libvterm.so.0 -o .libs/libvterm.so.0.0.3
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/bin/ld: src/.libs/encoding.o: relocations in generic ELF (EM: 40)
+/usr/lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/bin/ld: src/.libs/encoding.o: error adding symbols: file in wrong format
+collect2: error: ld returned 1 exit status
+make[3]: *** [Makefile:55: libvterm.la] Error 1
+==== NOTICE: You can safely ignore the above error, it will be fixed shortly ====
+[ 36%] Performing install step for 'libvterm_vendored'
+~/Documents/inkbox-git/sff/ext/libvterm/.libs ~/Documents/inkbox-git/sff/ext/libvterm
+~/Documents/inkbox-git/sff/ext/libvterm
+[ 42%] Completed 'libvterm_vendored'
+[ 42%] Built target libvterm_vendored
+[ 47%] Automatic MOC for target qvterm
+[ 47%] Built target qvterm_autogen
+[ 57%] Building CXX object qvterm/CMakeFiles/qvterm.dir/region.cpp.o
+[ 57%] Building CXX object qvterm/CMakeFiles/qvterm.dir/highlight.cpp.o
+[ 73%] Building CXX object qvterm/CMakeFiles/qvterm.dir/qvterm.cpp.o
+[ 73%] Building CXX object qvterm/CMakeFiles/qvterm.dir/qvterm_autogen/mocs_compilation.cpp.o
+[ 73%] Building CXX object qvterm/CMakeFiles/qvterm.dir/scrollback.cpp.o
+[ 78%] Linking CXX shared library ../lib/libqvterm.so
+[ 78%] Built target qvterm
+[ 84%] Automatic MOC for target sff
+[ 84%] Built target sff_autogen
+[ 89%] Building CXX object app/CMakeFiles/sff.dir/sff_autogen/mocs_compilation.cpp.o
+[ 94%] Building CXX object app/CMakeFiles/sff.dir/main.cpp.o
+[100%] Linking CXX executable ../bin/sff
+[100%] Built target sff
+~/Documents/inkbox-git/sff
+nicolas@gentoo-ryzen ~/Documents/inkbox-git/sff $

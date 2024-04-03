@@ -1,0 +1,1117 @@
+kobo:/$ env -i PATH="/app-bin:/system-bin" LD_LIBRARY_PATH="/system-lib/lib:/system-lib/qt/lib:/app-lib" QT_QPA_PLATFORM="kobo:debug:keyboard" QT_PL
+UGIN_PATH="/system-lib/qt/plugins/" QT_LOGGING_RULES=qt.qpa.input=true /app-bin/fonts/strace /system-lib/lib/ld-linux-armhf.so.3 /app-bin/feathernot
+es.bin 
+execve("/system-lib/lib/ld-linux-armhf.so.3", ["/system-lib/lib/ld-linux-armhf.s"..., "/app-bin/feathernotes.bin"], [/* 5 vars */]) = 0
+brk(0)                                  = 0x56115000
+open("/app-bin/feathernotes.bin", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\2\0(\0\1\0\0\0005\265\3\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=891916, ...}) = 0
+mmap2(0x10000, 704512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0x10000
+mmap2(0xcb000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xab000) = 0xcb000
+close(3)                                = 0
+uname({sysname="Linux", nodename="kobo", ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76fd4000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/v7l", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/tls", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/v7l", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/HDD/Project/qt-kobo/qt-linux-5.15.2-kobo/lib", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/v7l/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/v7l/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/v7l/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/v7l/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/v7l/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/v7l/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/v7l/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/v7l", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/tls/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/tls", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/v7l/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/v7l/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/v7l/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/v7l/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/v7l/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/v7l/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/v7l/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/v7l", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/neon/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/neon/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/neon/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/neon", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/vfp/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/system-lib/lib/vfp", 0x7ef224c0) = -1 ENOENT (No such file or directory)
+open("/system-lib/lib/libQt5Svg.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\210E\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=258236, ...}) = 0
+mmap2(NULL, 322376, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f85000
+mprotect(0x76fc2000, 65536, PROT_NONE)  = 0
+mmap2(0x76fd2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3d000) = 0x76fd2000
+close(3)                                = 0
+open("/system-lib/lib/libQt5Xml.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\323\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=199216, ...}) = 0
+mmap2(NULL, 263320, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f44000
+mprotect(0x76f74000, 61440, PROT_NONE)  = 0
+mmap2(0x76f83000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2f000) = 0x76f83000
+close(3)                                = 0
+open("/system-lib/lib/libQt5Network.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\210I\3\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1353572, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f43000
+mmap2(NULL, 1418472, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76de8000
+mprotect(0x76f2d000, 65536, PROT_NONE)  = 0
+mmap2(0x76f3d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x145000) = 0x76f3d000
+close(3)                                = 0
+open("/system-lib/lib/libQt5PrintSupport.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\300\221\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=299564, ...}) = 0
+mmap2(NULL, 363776, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76d8f000
+mprotect(0x76dd6000, 61440, PROT_NONE)  = 0
+mmap2(0x76de5000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x46000) = 0x76de5000
+close(3)                                = 0
+open("/system-lib/lib/libQt5DBus.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0 \26\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=464864, ...}) = 0
+mmap2(NULL, 530144, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76d0d000
+mprotect(0x76d7d000, 61440, PROT_NONE)  = 0
+mmap2(0x76d8c000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6f000) = 0x76d8c000
+close(3)                                = 0
+open("/system-lib/lib/libQt5Widgets.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\350|\17\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=4850056, ...}) = 0
+mmap2(NULL, 4914964, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7685d000
+mprotect(0x76ce0000, 65536, PROT_NONE)  = 0
+mmap2(0x76cf0000, 118784, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x483000) = 0x76cf0000
+close(3)                                = 0
+open("/system-lib/lib/libQt5Gui.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0H+\n\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=4482212, ...}) = 0
+mmap2(NULL, 4568092, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76401000
+mprotect(0x76839000, 65536, PROT_NONE)  = 0
+mmap2(0x76849000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x438000) = 0x76849000
+mmap2(0x76857000, 21532, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76857000
+close(3)                                = 0
+open("/system-lib/lib/libQt5Core.so.5", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0x\3\10\0004\0\0\0"..., 512) = 512
+lseek(3, 5116336, SEEK_SET)             = 5116336
+read(3, "\4\0\0\0\20\0\0\0\1\0\0\0GNU\0\0\0\0\0\2\0\0\0\6\0\0\0\34\0\0\0", 32) = 32
+fstat64(3, {st_mode=S_IFREG|0755, st_size=5168060, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76400000
+mmap2(NULL, 5245392, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75eff000
+mprotect(0x763e1000, 61440, PROT_NONE)  = 0
+mmap2(0x763f0000, 53248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4e1000) = 0x763f0000
+mmap2(0x763fd000, 10704, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x763fd000
+close(3)                                = 0
+open("/system-lib/lib/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\271\7\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1385008, ...}) = 0
+mmap2(NULL, 1457684, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75d9b000
+mprotect(0x75ee6000, 65536, PROT_NONE)  = 0
+mmap2(0x75ef6000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14b000) = 0x75ef6000
+mmap2(0x75efd000, 7700, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75efd000
+close(3)                                = 0
+open("/system-lib/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\0<\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=435632, ...}) = 0
+mmap2(NULL, 467088, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75d28000
+mprotect(0x75d92000, 28672, PROT_NONE)  = 0
+mmap2(0x75d99000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x69000) = 0x75d99000
+close(3)                                = 0
+open("/system-lib/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\270\315\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0644, st_size=114072, ...}) = 0
+mmap2(NULL, 145572, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75d04000
+mprotect(0x75d20000, 28672, PROT_NONE)  = 0
+mmap2(0x75d27000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b000) = 0x75d27000
+close(3)                                = 0
+open("/system-lib/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10o\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1226300, ...}) = 0
+mmap2(NULL, 1262952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75bcf000
+mprotect(0x75cf7000, 28672, PROT_NONE)  = 0
+mmap2(0x75cfe000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x127000) = 0x75cfe000
+mmap2(0x75d01000, 9576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75d01000
+close(3)                                = 0
+open("/system-lib/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\344H\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=122897, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75bce000
+mmap2(NULL, 127568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75bae000
+mprotect(0x75bc3000, 28672, PROT_NONE)  = 0
+mmap2(0x75bca000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x75bca000
+mmap2(0x75bcc000, 4688, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75bcc000
+close(3)                                = 0
+open("/system-lib/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0,\t\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=9648, ...}) = 0
+mmap2(NULL, 41144, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75ba3000
+mprotect(0x75ba5000, 28672, PROT_NONE)  = 0
+mmap2(0x75bac000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x75bac000
+close(3)                                = 0
+open("/system-lib/lib/libssl.so.1.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\320\24\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=468868, ...}) = 0
+mmap2(NULL, 435364, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75b38000
+mprotect(0x75b8b000, 61440, PROT_NONE)  = 0
+mmap2(0x75b9a000, 36864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x52000) = 0x75b9a000
+close(3)                                = 0
+open("/system-lib/lib/libcrypto.so.1.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\250R\4\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=2104728, ...}) = 0
+mmap2(NULL, 1765296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x75989000
+mprotect(0x75b0d000, 65536, PROT_NONE)  = 0
+mmap2(0x75b1d000, 98304, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x184000) = 0x75b1d000
+mmap2(0x75b35000, 12208, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x75b35000
+close(3)                                = 0
+open("/system-lib/lib/librt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20\27\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=26480, ...}) = 0
+mmap2(NULL, 57872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7597a000
+mprotect(0x75980000, 28672, PROT_NONE)  = 0
+mmap2(0x75987000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x5000) = 0x75987000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75979000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75978000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75977000
+set_tls(0x759776e0, 0x75977e08, 0x54b53050, 0x759776e0, 0x54b53050) = 0
+mprotect(0x75cfe000, 8192, PROT_READ)   = 0
+mprotect(0x75bca000, 4096, PROT_READ)   = 0
+mprotect(0x75987000, 4096, PROT_READ)   = 0
+mprotect(0x75bac000, 4096, PROT_READ)   = 0
+mprotect(0x75b1d000, 90112, PROT_READ)  = 0
+mprotect(0x75b9a000, 20480, PROT_READ)  = 0
+mprotect(0x75d99000, 4096, PROT_READ)   = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75976000
+mprotect(0x75ef6000, 20480, PROT_READ)  = 0
+mprotect(0x763f0000, 32768, PROT_READ)  = 0
+mprotect(0x76849000, 32768, PROT_READ)  = 0
+mprotect(0x76cf0000, 86016, PROT_READ)  = 0
+mprotect(0x76d8c000, 4096, PROT_READ)   = 0
+mprotect(0x76de5000, 8192, PROT_READ)   = 0
+mprotect(0x76f3d000, 12288, PROT_READ)  = 0
+mprotect(0x76f83000, 4096, PROT_READ)   = 0
+mprotect(0x76fd2000, 4096, PROT_READ)   = 0
+mprotect(0xcb000, 8192, PROT_READ)      = 0
+mprotect(0x54b52000, 4096, PROT_READ)   = 0
+set_tid_address(0x75977288)             = 20
+set_robust_list(0x75977290, 12)         = 0
+rt_sigaction(SIGRTMIN, {0x75bb2248, [], SA_RESTORER|SA_SIGINFO, 0x75bfba80}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x75bb232c, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x75bfba80}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+ugetrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
+brk(0)                                  = 0x56115000
+brk(0x5613a000)                         = 0x5613a000
+geteuid32()                             = 1000
+getuid32()                              = 1000
+futex(0x763fd0c4, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/dev/random", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+clock_gettime(CLOCK_MONOTONIC, {4764, 631839566}) = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+access("/proc/20/exe", F_OK)            = 0
+lstat64("/proc/20/exe", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+lstat64("/proc", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat64("/proc/20", {st_mode=S_IFDIR|0555, st_size=0, ...}) = 0
+lstat64("/proc/20/exe", {st_mode=S_IFLNK|0777, st_size=0, ...}) = 0
+readlink("/proc/20/exe", "/system-lib/lib/ld-2.21.so", 4095) = 26
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/lib", {st_mode=S_IFDIR|0555, st_size=20480, ...}) = 0
+lstat64("/system-lib/lib/ld-2.21.so", {st_mode=S_IFREG|0755, st_size=134324, ...}) = 0
+access("/system-lib/lib/qt.conf", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib", F_OK)         = 0
+access("/system-lib/plugins", F_OK)     = -1 ENOENT (No such file or directory)
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/lib", {st_mode=S_IFDIR|0555, st_size=20480, ...}) = 0
+access("/system-lib/lib", F_OK)         = 0
+access("/system-lib/qt/plugins/platforms/.", F_OK) = 0
+openat(AT_FDCWD, "/system-lib/qt/plugins/platforms", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 3
+getdents64(3, /* 2 entries */, 32768)   = 64
+getdents64(3, /* 0 entries */, 32768)   = 0
+close(3)                                = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/platforms/libkobo.so", {st_mode=S_IFREG|0755, st_size=1174712, ...}) = 0
+open("/system-lib/qt/plugins/platforms/libkobo.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1174712, ...}) = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1174712, ...}) = 0
+mmap2(NULL, 1174712, PROT_READ, MAP_SHARED, 3, 0) = 0x75857000
+close(3)                                = 0
+munmap(0x75857000, 1174712)             = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/platforms", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/platforms/libqvnc.so", {st_mode=S_IFREG|0755, st_size=814452, ...}) = 0
+open("/system-lib/qt/plugins/platforms/libqvnc.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0755, st_size=814452, ...}) = 0
+fstat64(3, {st_mode=S_IFREG|0755, st_size=814452, ...}) = 0
+mmap2(NULL, 814452, PROT_READ, MAP_SHARED, 3, 0) = 0x758af000
+close(3)                                = 0
+munmap(0x758af000, 814452)              = 0
+access("/system-lib/lib/platforms/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib/qt.conf", F_OK) = -1 ENOENT (No such file or directory)
+futex(0x75bad0ac, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+open("/system-lib/qt/plugins/platforms/libkobo.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0hl\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1174712, ...}) = 0
+mmap2(NULL, 1029456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7587a000
+mprotect(0x7595f000, 65536, PROT_NONE)  = 0
+mmap2(0x7596f000, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe5000) = 0x7596f000
+close(3)                                = 0
+mprotect(0x7596f000, 20480, PROT_READ)  = 0
+futex(0x75efd708, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x75efd70c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+access("/bin/kobo_config.sh", F_OK)     = -1 ENOENT (No such file or directory)
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x75977288) = 21
+close(4)                                = 0
+fcntl64(3, F_SETFD, 0)                  = 0
+fstat64(3, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75879000
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+wait4(21, [{WIFEXITED(s) && WEXITSTATUS(s) == 127}], 0, NULL) = 21
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=21, si_uid=1000, si_status=127, si_utime=0, si_stime=0} ---
+munmap(0x75879000, 4096)                = 0
+access("/dev/fb0", F_OK)                = 0
+access("/dev/fb0", F_OK)                = 0
+access("/dev/fb0", R_OK|W_OK)           = 0
+open("/dev/fb0", O_RDWR|O_LARGEFILE|O_CLOEXEC) = 3
+ioctl(3, FBIOGET_VSCREENINFO, 0x7ef22818) = 0
+close(3)                                = 0
+eventfd2(0, O_NONBLOCK|O_CLOEXEC)       = 3
+mmap2(NULL, 65536, PROT_READ|PROT_WRITE|PROT_EXEC, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7586a000
+mprotect(0x7586a000, 65536, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
+cacheflush(0x75879bc8, 0x75879e5c, 0, 0x75879bc9, 0x294) = 0
+cacheflush(0x758795d0, 0x7587996a, 0, 0x758795d1, 0x39a) = 0
+cacheflush(0x75879088, 0x7587938a, 0, 0x75879089, 0x302) = 0
+cacheflush(0x75878de8, 0x75878f84, 0, 0x75878de9, 0x19c) = 0
+cacheflush(0x75878a78, 0x75878c98, 0, 0x75878a79, 0x220) = 0
+cacheflush(0x75878780, 0x75878944, 0, 0x75878781, 0x1c4) = 0
+cacheflush(0x758783a8, 0x75878610, 0, 0x758783a9, 0x268) = 0
+cacheflush(0x75877bf0, 0x75878068, 0, 0x75877bf1, 0x478) = 0
+cacheflush(0x75877528, 0x758778cc, 0, 0x75877529, 0x3a4) = 0
+access("/system-lib/lib", F_OK)         = 0
+open("/system-lib/qtlogging.ini", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("//.config/QtProject/qtlogging.ini", 0x7ef22780) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/QtProject/qtlogging.ini", 0x7ef22780) = -1 ENOENT (No such file or directory)
+clock_gettime(CLOCK_MONOTONIC, {4764, 866319482}) = 0
+write(2, "Motion debug enabled. Debug info"..., 77Motion debug enabled. Debug information for screen and mouse will be printed
+) = 77
+write(2, "Motion debug enabled. Debug info"..., 77Motion debug enabled. Debug information for screen and mouse will be printed
+) = 77
+open("/dev/fb0", O_RDWR|O_CLOEXEC)      = 4
+open("/mnt/onboard/.kobo/version", O_RDONLY|O_CLOEXEC) = 5
+fstat64(5, {st_mode=S_IFREG|0644, st_size=5, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75869000
+read(5, "N306\n", 4096)                 = 5
+read(5, "", 4096)                       = 0
+close(5)                                = 0
+munmap(0x75869000, 4096)                = 0
+write(2, "[FBInk] Unidentified Kobo device"..., 43[FBInk] Unidentified Kobo device code (6)!
+) = 43
+write(2, "[FBInk] Detected a Kobo Unknown!"..., 52[FBInk] Detected a Kobo Unknown! (6 => ?? @ Mark ?)
+) = 52
+write(2, "[FBInk] Clock tick frequency app"..., 50[FBInk] Clock tick frequency appears to be 100 Hz
+) = 50
+write(2, "[FBInk] Screen density set to 16"..., 38[FBInk] Screen density set to 167 dpi
+) = 38
+ioctl(4, FBIOGET_VSCREENINFO, 0x759753d4) = 0
+write(2, "[FBInk] Variable fb info: 758x10"..., 82[FBInk] Variable fb info: 758x1024, 8bpp @ rotation: 3 (Counter Clockwise, 270°)
+) = 82
+ioctl(4, FBIOGET_FSCREENINFO, 0x75975340) = 0
+write(2, "[FBInk] Fixed fb info: ID is \"mx"..., 101[FBInk] Fixed fb info: ID is "mxc_epdc_fb", length of fb mem: 3145728 bytes & line length: 768 bytes
+) = 101
+write(2, "[FBInk] Canonical rotation: 0 (U"..., 45[FBInk] Canonical rotation: 0 (Upright, 0°)
+) = 45
+write(2, "[FBInk] Fontsize set to 16x16 (I"..., 67[FBInk] Fontsize set to 16x16 (IBM (Default) base glyph size: 8x8)
+) = 67
+write(2, "[FBInk] Line length: 47 cols, Pa"..., 49[FBInk] Line length: 47 cols, Page size: 64 rows
+) = 49
+write(2, "[FBInk] Pen colors set to #00000"..., 84[FBInk] Pen colors set to #000000 for the foreground and #FFFFFF for the background
+) = 84
+fstat64(1, {st_mode=S_IFCHR|0777, st_rdev=makedev(136, 4), ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x75869000
+write(1, "Updating bitdepth from 8bpp to 8"..., 36Updating bitdepth from 8bpp to 8bpp
+) = 36
+write(1, "Updating grayscale value from 1 "..., 37Updating grayscale value from 1 to 1
+) = 37
+write(1, "Updating rotation from 3 (Counte"..., 84Updating rotation from 3 (Counter Clockwise, 270°) to 3 (Counter Clockwise, 270°)
+) = 84
+ioctl(4, FBIOPUT_VSCREENINFO, 0x7ef22738) = 0
+write(1, "Bitdepth is now 8bpp (grayscale:"..., 75Bitdepth is now 8bpp (grayscale: 1) @ rotate: 3 (Counter Clockwise, 270°)
+) = 75
+ioctl(4, FBIOGET_VSCREENINFO, 0x759753d4) = 0
+write(2, "Screen info: 758 1024 rotation: "..., 63Screen info: 758 1024 rotation: 3 rotation canonical: 0 bpp: 8
+) = 63
+mmap2(NULL, 3145728, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0) = 0x75569000
+write(2, "Allocated screen buffer. Stride:"..., 58Allocated screen buffer. Stride: 768 buffer size: 3145728
+) = 58
+ioctl(4, FBIOGET_VSCREENINFO, 0x7ef228a0) = 0
+mmap2(NULL, 782336, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x754aa000
+write(3, "\1\0\0\0\0\0\0\0", 8)         = 8
+cacheflush(0x75879c68, 0x75879eae, 0, 0x75879c69, 0x246) = 0
+cacheflush(0x75879498, 0x75879918, 0, 0x75879499, 0x480) = 0
+cacheflush(0x75878dc0, 0x75879164, 0, 0x75878dc1, 0x3a4) = 0
+cacheflush(0x75878a20, 0x75878c6e, 0, 0x75878a21, 0x24e) = 0
+cacheflush(0x75878208, 0x758786ae, 0, 0x75878209, 0x4a6) = 0
+cacheflush(0x75877af0, 0x75877eb2, 0, 0x75877af1, 0x3c2) = 0
+cacheflush(0x75877740, 0x7587799a, 0, 0x75877741, 0x25a) = 0
+cacheflush(0x75876ee0, 0x758773ac, 0, 0x75876ee1, 0x4cc) = 0
+cacheflush(0x75876788, 0x75876b68, 0, 0x75876789, 0x3e0) = 0
+cacheflush(0x758763d8, 0x75876632, 0, 0x758763d9, 0x25a) = 0
+cacheflush(0x75875b78, 0x75876044, 0, 0x75875b79, 0x4cc) = 0
+cacheflush(0x75875420, 0x75875800, 0, 0x75875421, 0x3e0) = 0
+cacheflush(0x75875048, 0x758752bc, 0, 0x75875049, 0x274) = 0
+cacheflush(0x75874718, 0x75874c56, 0, 0x75874719, 0x53e) = 0
+cacheflush(0x75873f08, 0x75874342, 0, 0x75873f09, 0x43a) = 0
+cacheflush(0x75873b30, 0x75873da4, 0, 0x75873b31, 0x274) = 0
+cacheflush(0x75873200, 0x7587373e, 0, 0x75873201, 0x53e) = 0
+cacheflush(0x758729f0, 0x75872e2a, 0, 0x758729f1, 0x43a) = 0
+cacheflush(0x758725e8, 0x75872882, 0, 0x758725e9, 0x29a) = 0
+cacheflush(0x75871ba0, 0x75872184, 0, 0x75871ba1, 0x5e4) = 0
+cacheflush(0x75871298, 0x7587174a, 0, 0x75871299, 0x4b2) = 0
+write(2, "Keyboard support enabled\n", 25Keyboard support enabled
+) = 25
+write(2, "qt.qpa.input: evdevtouch: Adding"..., 61qt.qpa.input: evdevtouch: Adding device at /dev/input/event1
+) = 61
+mmap2(NULL, 8388608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x74caa000
+mprotect(0x74caa000, 4096, PROT_NONE)   = 0
+clone(child_stack=0x754a8f58, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x754a9488, tls=0x754a98e0, child_tidptr=0x754a9488) = 22
+write(2, "device: \"\" 0 \n screen: 758 1024 "..., 41device: "" 0 
+ screen: 758 1024 dpi: 200
+) = 41
+write(2, "libinput not found, hot-plugging"..., 42libinput not found, hot-plugging disabled
+) = 42
+write(2, "tslib not found\n", 16tslib not found
+)       = 16
+futex(0x75d016bc, FUTEX_WAKE_PRIVATE, 1qt.qpa.input: "invertx:hw_range_x_max=758:hw_range_y_max=1024:screenwidth=758:screenheight=1024:screenrotation=0"
+qt.qpa.input: evdevtouch: Using device /dev/input/event1
+qt.qpa.input: evdevtouch: /dev/input/event1: Protocol type A (multi), filtered=no
+qt.qpa.input: evdevtouch: /dev/input/event1: min X: 0 max X: 1024
+qt.qpa.input: evdevtouch: overwriting touch x max: 758
+qt.qpa.input: evdevtouch: /dev/input/event1: min Y: 0 max Y: 758
+) = 1
+futex(0x75d016bc, FUTEX_WAIT_PRIVATE, 2, NULLqt.qpa.input: evdevtouch: overwriting touch y max: 1024
+) = 0
+futex(0x75d016bc, FUTEX_WAKE_PRIVATE, 1) = 0
+write(2, "Additional input libraries aren'"..., 83Additional input libraries aren't available, hot-plugging unavailable, using evdev
+) = 83
+futex(0x75d016bc, FUTEX_WAKE_PRIVATE, 1qt.qpa.input: evdevtouch: /dev/input/event1: min pressure: 0 max pressure: 2048
+qt.qpa.input: evdevtouch: /dev/input/event1: device name: elan-touch
+) = 1
+write(2, "qt.qpa.input: evdevkeyboard: Usi"..., 52qt.qpa.input: evdevkeyboard: Using device discovery
+) = 52
+write(2, "qt.qpa.input: static device disc"..., 102qt.qpa.input: static device discovery for type QFlags<QDeviceDiscovery::QDeviceType>(Device_Keyboard)
+) = 102
+openat(AT_FDCWD, "/dev/input", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 7
+getdents64(7, /* 9 entries */, 32768)   = 264
+getdents64(7, /* 0 entries */, 32768)   = 0
+close(7)                                = 0
+open("/dev/input/event0", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 7
+write(2, "qt.qpa.input: doing static devic"..., 69qt.qpa.input: doing static device discovery for  "/dev/input/event0"
+) = 69
+ioctl(7, EVIOCGBIT(EV_ABS, 12), [ 0 ])  = 8
+ioctl(7, EVIOCGBIT(EV_KEY, 100), [KEY_F1]) = 96
+ioctl(7, EVIOCGBIT(EV_REL, 4), [ 0 ])   = 4
+close(7)                                = 0
+open("/dev/input/event1", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 7
+write(2, "qt.qpa.input: doing static devic"..., 69qt.qpa.input: doing static device discovery for  "/dev/input/event1"
+) = 69
+ioctl(7, EVIOCGBIT(EV_ABS, 12), [ABS_X, ABS_Y]) = 8
+ioctl(7, EVIOCGBIT(EV_KEY, 100), [ 0 ]) = 96
+ioctl(7, EVIOCGBIT(EV_REL, 4), [ 0 ])   = 4
+close(7)                                = 0
+open("/dev/input/event2", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 7
+write(2, "qt.qpa.input: doing static devic"..., 69qt.qpa.input: doing static device discovery for  "/dev/input/event2"
+) = 69
+ioctl(7, EVIOCGBIT(EV_ABS, 12), [ 0 ])  = 8
+ioctl(7, EVIOCGBIT(EV_KEY, 100), [KEY_ESC, KEY_1, KEY_2, KEY_3, ...]) = 96
+ioctl(7, EVIOCGBIT(EV_REL, 4), [ 0 ])   = 4
+close(7)                                = 0
+write(2, "qt.qpa.input: Found keyboard at "..., 52qt.qpa.input: Found keyboard at "/dev/input/event2"
+) = 52
+open("/dev/input/event3", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 7
+write(2, "qt.qpa.input: doing static devic"..., 69qt.qpa.input: doing static device discovery for  "/dev/input/event3"
+) = 69
+ioctl(7, EVIOCGBIT(EV_ABS, 12), [ 0 ])  = 8
+ioctl(7, EVIOCGBIT(EV_KEY, 100), [ 0 ]) = 96
+ioctl(7, EVIOCGBIT(EV_REL, 4), [REL_X, REL_Y]) = 4
+close(7)                                = 0
+open("/dev/input/mice", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = -1 ENXIO (No such device or address)
+write(2, "Device discovery cannot open dev"..., 54Device discovery cannot open device "/dev/input/mice"
+) = 54
+open("/dev/input/mouse0", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = -1 ENXIO (No such device or address)
+write(2, "Device discovery cannot open dev"..., 56Device discovery cannot open device "/dev/input/mouse0"
+) = 56
+open("/dev/input/mouse1", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = -1 ENXIO (No such device or address)
+write(2, "Device discovery cannot open dev"..., 56Device discovery cannot open device "/dev/input/mouse1"
+) = 56
+write(2, "qt.qpa.input: Found matching dev"..., 59qt.qpa.input: Found matching devices ("/dev/input/event2")
+) = 59
+write(2, "qt.qpa.input: Adding keyboard at"..., 51qt.qpa.input: Adding keyboard at /dev/input/event2
+) = 51
+write(2, "qt.qpa.input: Try to create keyb"..., 72qt.qpa.input: Try to create keyboard handler for "/dev/input/event2" ""
+) = 72
+write(2, "qt.qpa.input: Opening keyboard a"..., 52qt.qpa.input: Opening keyboard at /dev/input/event2
+) = 52
+open("/dev/input/event2", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_CLOEXEC) = 7
+ioctl(7, EVIOCGRAB, NULL)               = -1 EINVAL (Invalid argument)
+ioctl(7, EVIOCSREP, [400 80])           = 0
+write(2, "qt.qpa.input: Create keyboard ha"..., 74qt.qpa.input: Create keyboard handler with for device "/dev/input/event2"
+) = 74
+write(2, "qt.qpa.input: Unload current key"..., 57qt.qpa.input: Unload current keymap and restore built-in
+) = 57
+ioctl(7, EVIOCGLED(2), [ 0 ])           = 2
+write(2, "qt.qpa.input: numlock=0 , capslo"..., 51qt.qpa.input: numlock=0 , capslock=0, scrolllock=0
+) = 51
+write(2, "Created instance of QEvdevKeyboa"..., 42Created instance of QEvdevKeyboardManager
+) = 42
+write(2, "WARNING: Additional command line"..., 101WARNING: Additional command line arguments may be required for input. Please read the documentation.
+) = 101
+write(2, "kobofb: Finished initialization."..., 33kobofb: Finished initialization.
+) = 33
+clock_gettime(CLOCK_MONOTONIC, {4765, 311938857}) = 0
+access("/system-lib/qt/plugins/styles/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib/styles/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib", F_OK)         = 0
+access("/system-lib/translations/qt_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/translations/qt_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/translations/qt.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/translations/qt", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib", F_OK)         = 0
+access("/system-lib/translations/qt_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/translations/qt_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/translations/qt.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/translations/qt", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/share/FeatherNotes/translations/feathernotes_C.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/share/FeatherNotes/translations/feathernotes_C", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/share/FeatherNotes/translations/feathernotes.qm", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/local/share/FeatherNotes/translations/feathernotes", R_OK) = -1 ENOENT (No such file or directory)
+socketpair(PF_LOCAL, SOCK_STREAM, 0, [8, 9]) = 0
+socketpair(PF_LOCAL, SOCK_STREAM, 0, [10, 11]) = 0
+socketpair(PF_LOCAL, SOCK_STREAM, 0, [12, 13]) = 0
+socketpair(PF_LOCAL, SOCK_STREAM, 0, [14, 15]) = 0
+rt_sigaction(SIGHUP, {0x3f5f1, [], SA_RESTORER|SA_RESTART, 0x75bfba70}, NULL, 8) = 0
+rt_sigaction(SIGTERM, {0x3f61d, [], SA_RESTORER|SA_RESTART, 0x75bfba70}, NULL, 8) = 0
+rt_sigaction(SIGINT, {0x3f649, [], SA_RESTORER|SA_RESTART, 0x75bfba70}, NULL, 8) = 0
+rt_sigaction(SIGQUIT, {0x3f675, [], SA_RESTORER|SA_RESTART, 0x75bfba70}, NULL, 8) = 0
+clock_gettime(CLOCK_MONOTONIC, {4765, 389523982}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4765, 394416524}) = 0
+access("/system-lib/lib", F_OK)         = 0
+stat64("/system-lib/lib/fonts", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/system-lib/lib/fonts", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 16
+getdents64(16, /* 23 entries */, 32768) = 936
+cacheflush(0x75879d58, 0x75879ef0, 0, 0x75879d59, 0x198) = 0
+cacheflush(0x758799a0, 0x75879bee, 0, 0x758799a1, 0x24e) = 0
+cacheflush(0x758796d0, 0x75879876, 0, 0x758796d1, 0x1a6) = 0
+cacheflush(0x75879428, 0x758795c0, 0, 0x75879429, 0x198) = 0
+cacheflush(0x75879070, 0x758792be, 0, 0x75879071, 0x24e) = 0
+cacheflush(0x75878da0, 0x75878f46, 0, 0x75878da1, 0x1a6) = 0
+cacheflush(0x75878af0, 0x75878c8e, 0, 0x75878af1, 0x19e) = 0
+cacheflush(0x75878738, 0x75878986, 0, 0x75878739, 0x24e) = 0
+cacheflush(0x75878468, 0x7587860e, 0, 0x75878469, 0x1a6) = 0
+cacheflush(0x758781b8, 0x75878356, 0, 0x758781b9, 0x19e) = 0
+cacheflush(0x75877e00, 0x7587804e, 0, 0x75877e01, 0x24e) = 0
+cacheflush(0x75877b30, 0x75877cd6, 0, 0x75877b31, 0x1a6) = 0
+cacheflush(0x75877880, 0x75877a1e, 0, 0x75877881, 0x19e) = 0
+cacheflush(0x758774c8, 0x75877716, 0, 0x758774c9, 0x24e) = 0
+cacheflush(0x758771f8, 0x7587739e, 0, 0x758771f9, 0x1a6) = 0
+getdents64(16, /* 27 entries */, 32768) = 1144
+getdents64(16, /* 0 entries */, 32768)  = 0
+close(16)                               = 0
+open("/system-lib/lib/fonts/Chivo-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=54612, ...}) = 0
+mmap2(NULL, 54612, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c9c000
+close(16)                               = 0
+munmap(0x74c9c000, 54612)               = 0
+open("/system-lib/lib/fonts/Inter-Black.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=294396, ...}) = 0
+mmap2(NULL, 294396, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c62000
+close(16)                               = 0
+munmap(0x74c62000, 294396)              = 0
+open("/system-lib/lib/fonts/Inter-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=293448, ...}) = 0
+mmap2(NULL, 293448, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c62000
+close(16)                               = 0
+munmap(0x74c62000, 293448)              = 0
+open("/system-lib/lib/fonts/Inter-ExtraBold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=294072, ...}) = 0
+mmap2(NULL, 294072, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c62000
+close(16)                               = 0
+munmap(0x74c62000, 294072)              = 0
+open("/system-lib/lib/fonts/Inter-ExtraLight.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=288400, ...}) = 0
+mmap2(NULL, 288400, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c63000
+close(16)                               = 0
+munmap(0x74c63000, 288400)              = 0
+open("/system-lib/lib/fonts/Inter-Light.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=288088, ...}) = 0
+mmap2(NULL, 288088, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c63000
+close(16)                               = 0
+munmap(0x74c63000, 288088)              = 0
+open("/system-lib/lib/fonts/Inter-Medium.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=292140, ...}) = 0
+mmap2(NULL, 292140, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c62000
+close(16)                               = 0
+munmap(0x74c62000, 292140)              = 0
+open("/system-lib/lib/fonts/Inter-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=287928, ...}) = 0
+mmap2(NULL, 287928, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c63000
+close(16)                               = 0
+munmap(0x74c63000, 287928)              = 0
+open("/system-lib/lib/fonts/Inter-SemiBold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=293028, ...}) = 0
+mmap2(NULL, 293028, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c62000
+close(16)                               = 0
+munmap(0x74c62000, 293028)              = 0
+open("/system-lib/lib/fonts/Inter-Thin.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=288568, ...}) = 0
+mmap2(NULL, 288568, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c63000
+close(16)                               = 0
+munmap(0x74c63000, 288568)              = 0
+open("/system-lib/lib/fonts/Inter-VariableFont_slnt,wght.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=748068, ...}) = 0
+mmap2(NULL, 748068, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74a49000
+close(16)                               = 0
+munmap(0x74a49000, 748068)              = 0
+open("/system-lib/lib/fonts/LibertinusSerif-Bold.otf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=427632, ...}) = 0
+mmap2(NULL, 427632, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c41000
+close(16)                               = 0
+brk(0x5615f000)                         = 0x5615f000
+brk(0x5615a000)                         = 0x5615a000
+munmap(0x74c41000, 427632)              = 0
+open("/system-lib/lib/fonts/LibertinusSerif-Italic.otf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=440024, ...}) = 0
+mmap2(NULL, 440024, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c3e000
+close(16)                               = 0
+munmap(0x74c3e000, 440024)              = 0
+open("/system-lib/lib/fonts/LibertinusSerif-Regular.otf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=298384, ...}) = 0
+mmap2(NULL, 298384, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c61000
+close(16)                               = 0
+munmap(0x74c61000, 298384)              = 0
+open("/system-lib/lib/fonts/LibreBaskerville-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=155428, ...}) = 0
+mmap2(NULL, 155428, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c84000
+close(16)                               = 0
+munmap(0x74c84000, 155428)              = 0
+open("/system-lib/lib/fonts/LibreBaskerville-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=172212, ...}) = 0
+mmap2(NULL, 172212, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7f000
+close(16)                               = 0
+munmap(0x74c7f000, 172212)              = 0
+open("/system-lib/lib/fonts/LibreBaskerville-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=154676, ...}) = 0
+mmap2(NULL, 154676, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c84000
+close(16)                               = 0
+munmap(0x74c84000, 154676)              = 0
+open("/system-lib/lib/fonts/NotoMono-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=107848, ...}) = 0
+mmap2(NULL, 107848, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8f000
+close(16)                               = 0
+munmap(0x74c8f000, 107848)              = 0
+open("/system-lib/lib/fonts/NotoSansMono-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=352724, ...}) = 0
+mmap2(NULL, 352724, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c53000
+close(16)                               = 0
+munmap(0x74c53000, 352724)              = 0
+open("/system-lib/lib/fonts/Roboto-Black.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171072, ...}) = 0
+mmap2(NULL, 171072, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 171072)              = 0
+open("/system-lib/lib/fonts/Roboto-BlackItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=177120, ...}) = 0
+mmap2(NULL, 177120, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7e000
+close(16)                               = 0
+munmap(0x74c7e000, 177120)              = 0
+open("/system-lib/lib/fonts/Roboto-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=170348, ...}) = 0
+mmap2(NULL, 170348, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 170348)              = 0
+open("/system-lib/lib/fonts/Roboto-BoldItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=174520, ...}) = 0
+mmap2(NULL, 174520, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7f000
+close(16)                               = 0
+munmap(0x74c7f000, 174520)              = 0
+open("/system-lib/lib/fonts/Roboto-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=173516, ...}) = 0
+mmap2(NULL, 173516, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7f000
+close(16)                               = 0
+munmap(0x74c7f000, 173516)              = 0
+open("/system-lib/lib/fonts/Roboto-Light.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=170012, ...}) = 0
+mmap2(NULL, 170012, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 170012)              = 0
+open("/system-lib/lib/fonts/Roboto-LightItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=176184, ...}) = 0
+mmap2(NULL, 176184, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7e000
+close(16)                               = 0
+munmap(0x74c7e000, 176184)              = 0
+open("/system-lib/lib/fonts/Roboto-Medium.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171656, ...}) = 0
+mmap2(NULL, 171656, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 171656)              = 0
+open("/system-lib/lib/fonts/Roboto-MediumItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=176428, ...}) = 0
+mmap2(NULL, 176428, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7e000
+close(16)                               = 0
+munmap(0x74c7e000, 176428)              = 0
+open("/system-lib/lib/fonts/Roboto-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171272, ...}) = 0
+mmap2(NULL, 171272, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 171272)              = 0
+open("/system-lib/lib/fonts/Roboto-Thin.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=171500, ...}) = 0
+mmap2(NULL, 171500, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 171500)              = 0
+open("/system-lib/lib/fonts/Roboto-ThinItalic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=175872, ...}) = 0
+mmap2(NULL, 175872, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c7f000
+close(16)                               = 0
+munmap(0x74c7f000, 175872)              = 0
+open("/system-lib/lib/fonts/RobotoMono-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=86908, ...}) = 0
+mmap2(NULL, 86908, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c94000
+close(16)                               = 0
+munmap(0x74c94000, 86908)               = 0
+open("/system-lib/lib/fonts/SourceSerifPro-Black.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=228660, ...}) = 0
+mmap2(NULL, 228660, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c72000
+close(16)                               = 0
+munmap(0x74c72000, 228660)              = 0
+open("/system-lib/lib/fonts/SourceSerifPro-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=229740, ...}) = 0
+mmap2(NULL, 229740, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c71000
+close(16)                               = 0
+munmap(0x74c71000, 229740)              = 0
+open("/system-lib/lib/fonts/SourceSerifPro-Italic.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=169568, ...}) = 0
+mmap2(NULL, 169568, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c80000
+close(16)                               = 0
+munmap(0x74c80000, 169568)              = 0
+open("/system-lib/lib/fonts/SourceSerifPro-Regular.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=226812, ...}) = 0
+mmap2(NULL, 226812, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c72000
+close(16)                               = 0
+munmap(0x74c72000, 226812)              = 0
+open("/system-lib/lib/fonts/u001-bol.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=114504, ...}) = 0
+mmap2(NULL, 114504, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8e000
+close(16)                               = 0
+munmap(0x74c8e000, 114504)              = 0
+open("/system-lib/lib/fonts/u001-bolita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=128552, ...}) = 0
+mmap2(NULL, 128552, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8a000
+close(16)                               = 0
+munmap(0x74c8a000, 128552)              = 0
+open("/system-lib/lib/fonts/u001-ita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=118468, ...}) = 0
+mmap2(NULL, 118468, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8d000
+close(16)                               = 0
+munmap(0x74c8d000, 118468)              = 0
+open("/system-lib/lib/fonts/u001-reg.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=114136, ...}) = 0
+mmap2(NULL, 114136, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8e000
+close(16)                               = 0
+munmap(0x74c8e000, 114136)              = 0
+open("/system-lib/lib/fonts/u001con-bol.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=117552, ...}) = 0
+mmap2(NULL, 117552, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8d000
+close(16)                               = 0
+munmap(0x74c8d000, 117552)              = 0
+open("/system-lib/lib/fonts/u001con-bolita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=115720, ...}) = 0
+mmap2(NULL, 115720, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8d000
+close(16)                               = 0
+munmap(0x74c8d000, 115720)              = 0
+open("/system-lib/lib/fonts/u001con-ita.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=115348, ...}) = 0
+mmap2(NULL, 115348, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8d000
+close(16)                               = 0
+munmap(0x74c8d000, 115348)              = 0
+open("/system-lib/lib/fonts/u001con-reg.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0644, st_size=115104, ...}) = 0
+mmap2(NULL, 115104, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74c8d000
+close(16)                               = 0
+munmap(0x74c8d000, 115104)              = 0
+brk(0x56159000)                         = 0x56159000
+open("/system-lib/lib/fonts/Inter-VariableFont_slnt,wght.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=748068, ...}) = 0
+mmap2(NULL, 748068, PROT_READ, MAP_PRIVATE, 16, 0) = 0x74a49000
+close(16)                               = 0
+access("/system-lib/qt/plugins/iconengines/.", F_OK) = 0
+openat(AT_FDCWD, "/system-lib/qt/plugins/iconengines", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 16
+getdents64(16, /* 1 entries */, 32768)  = 40
+getdents64(16, /* 0 entries */, 32768)  = 0
+close(16)                               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/iconengines", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/iconengines/libqsvgicon.so", {st_mode=S_IFREG|0755, st_size=26460, ...}) = 0
+open("/system-lib/qt/plugins/iconengines/libqsvgicon.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=26460, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=26460, ...}) = 0
+mmap2(NULL, 26460, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca3000
+close(16)                               = 0
+munmap(0x74ca3000, 26460)               = 0
+access("/system-lib/lib/iconengines/.", F_OK) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+access("/system-lib/qt/plugins/imageformats/.", F_OK) = 0
+openat(AT_FDCWD, "/system-lib/qt/plugins/imageformats", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 16
+getdents64(16, /* 9 entries */, 32768)  = 288
+getdents64(16, /* 0 entries */, 32768)  = 0
+close(16)                               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqgif.so", {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqgif.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+mmap2(NULL, 22168, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca4000
+close(16)                               = 0
+munmap(0x74ca4000, 22168)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqicns.so", {st_mode=S_IFREG|0755, st_size=26392, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqicns.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=26392, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=26392, ...}) = 0
+mmap2(NULL, 26392, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca3000
+close(16)                               = 0
+munmap(0x74ca3000, 26392)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqico.so", {st_mode=S_IFREG|0755, st_size=18136, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqico.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=18136, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=18136, ...}) = 0
+mmap2(NULL, 18136, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca5000
+close(16)                               = 0
+munmap(0x74ca5000, 18136)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqjpeg.so", {st_mode=S_IFREG|0755, st_size=30704, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqjpeg.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=30704, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=30704, ...}) = 0
+mmap2(NULL, 30704, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca2000
+close(16)                               = 0
+munmap(0x74ca2000, 30704)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqsvg.so", {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqsvg.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+mmap2(NULL, 14032, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca6000
+close(16)                               = 0
+munmap(0x74ca6000, 14032)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqtga.so", {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqtga.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+mmap2(NULL, 13936, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca6000
+close(16)                               = 0
+munmap(0x74ca6000, 13936)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqtiff.so", {st_mode=S_IFREG|0755, st_size=424212, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqtiff.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=424212, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=424212, ...}) = 0
+mmap2(NULL, 424212, PROT_READ, MAP_SHARED, 16, 0) = 0x74c42000
+close(16)                               = 0
+munmap(0x74c42000, 424212)              = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqwbmp.so", {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqwbmp.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+mmap2(NULL, 13960, PROT_READ, MAP_SHARED, 16, 0) = 0x74ca6000
+close(16)                               = 0
+munmap(0x74ca6000, 13960)               = 0
+lstat64("/system-lib", {st_mode=S_IFDIR|0555, st_size=80, ...}) = 0
+lstat64("/system-lib/qt", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats", {st_mode=S_IFDIR|0755, st_size=0, ...}) = 0
+lstat64("/system-lib/qt/plugins/imageformats/libqwebp.so", {st_mode=S_IFREG|0755, st_size=440988, ...}) = 0
+open("/system-lib/qt/plugins/imageformats/libqwebp.so", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 16
+fstat64(16, {st_mode=S_IFREG|0755, st_size=440988, ...}) = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=440988, ...}) = 0
+mmap2(NULL, 440988, PROT_READ, MAP_SHARED, 16, 0) = 0x74c3e000
+close(16)                               = 0
+munmap(0x74c3e000, 440988)              = 0
+access("/system-lib/lib/imageformats/.", F_OK) = -1 ENOENT (No such file or directory)
+open("/system-lib/qt/plugins/imageformats/libqgif.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\370\25\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=22168, ...}) = 0
+mmap2(NULL, 86296, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c94000
+mprotect(0x74c99000, 61440, PROT_NONE)  = 0
+mmap2(0x74ca8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x4000) = 0x74ca8000
+close(16)                               = 0
+mprotect(0x74ca8000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqicns.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\330\37\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=26392, ...}) = 0
+mmap2(NULL, 90520, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c7d000
+mprotect(0x74c83000, 61440, PROT_NONE)  = 0
+mmap2(0x74c92000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x5000) = 0x74c92000
+close(16)                               = 0
+mprotect(0x74c92000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqico.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0l\33\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=18136, ...}) = 0
+mmap2(NULL, 82264, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c68000
+mprotect(0x74c6c000, 61440, PROT_NONE)  = 0
+mmap2(0x74c7b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x3000) = 0x74c7b000
+close(16)                               = 0
+mprotect(0x74c7b000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqjpeg.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\330-\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=30704, ...}) = 0
+mmap2(NULL, 94832, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c50000
+mprotect(0x74c57000, 61440, PROT_NONE)  = 0
+mmap2(0x74c66000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x6000) = 0x74c66000
+close(16)                               = 0
+open("/system-lib/lib/libjpeg.so.62", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\350&\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=371780, ...}) = 0
+mmap2(NULL, 405968, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x749e5000
+mprotect(0x74a38000, 61440, PROT_NONE)  = 0
+mmap2(0x74a47000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x52000) = 0x74a47000
+close(16)                               = 0
+mprotect(0x74a47000, 4096, PROT_READ)   = 0
+mprotect(0x74c66000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqsvg.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\310\33\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=14032, ...}) = 0
+mmap2(NULL, 78160, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c3c000
+mprotect(0x74c3f000, 61440, PROT_NONE)  = 0
+mmap2(0x74c4e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x2000) = 0x74c4e000
+close(16)                               = 0
+mprotect(0x74c4e000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqtga.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0l\25\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=13936, ...}) = 0
+mmap2(NULL, 78064, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c28000
+mprotect(0x74c2b000, 61440, PROT_NONE)  = 0
+mmap2(0x74c3a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x2000) = 0x74c3a000
+close(16)                               = 0
+mprotect(0x74c3a000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqtiff.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0`0\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=424212, ...}) = 0
+mmap2(NULL, 488788, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x7496d000
+mprotect(0x749d2000, 61440, PROT_NONE)  = 0
+mmap2(0x749e1000, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x64000) = 0x749e1000
+close(16)                               = 0
+open("/system-lib/lib/libz.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\30\30\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=58276, ...}) = 0
+mmap2(NULL, 122404, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74c0a000
+mprotect(0x74c18000, 61440, PROT_NONE)  = 0
+mmap2(0x74c27000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0xd000) = 0x74c27000
+close(16)                               = 0
+mprotect(0x749e1000, 12288, PROT_READ)  = 0
+open("/system-lib/qt/plugins/imageformats/libqwbmp.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\260\26\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=13960, ...}) = 0
+mmap2(NULL, 78088, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x74959000
+mprotect(0x7495c000, 61440, PROT_NONE)  = 0
+mmap2(0x7496b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x2000) = 0x7496b000
+close(16)                               = 0
+mprotect(0x7496b000, 4096, PROT_READ)   = 0
+open("/system-lib/qt/plugins/imageformats/libqwebp.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\20D\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=440988, ...}) = 0
+mmap2(NULL, 511848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x748dc000
+mprotect(0x74946000, 65536, PROT_NONE)  = 0
+mmap2(0x74956000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x6a000) = 0x74956000
+mmap2(0x74958000, 3944, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x74958000
+close(16)                               = 0
+mprotect(0x74956000, 4096, PROT_READ)   = 0
+gettimeofday({1677798886, 247945}, NULL) = 0
+open("/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 16
+read(16, "0\n", 8192)                   = 2
+close(16)                               = 0
+clock_gettime(CLOCK_MONOTONIC, {4767, 196143066}) = 0
+access("/system-lib/qt/plugins/accessible/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib/accessible/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/qt/plugins/accessiblebridge/.", F_OK) = -1 ENOENT (No such file or directory)
+access("/system-lib/lib/accessiblebridge/.", F_OK) = -1 ENOENT (No such file or directory)
+brk(0x5617a000)                         = 0x5617a000
+brk(0x56172000)                         = 0x56172000
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+brk(0x561a3000)                         = 0x561a3000
+clock_gettime(CLOCK_MONOTONIC, {4767, 316062899}) = 0
+access("/system-lib/lib", F_OK)         = 0
+access("/.config/feathernotes/fn.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes/fn.conf", 0x7ef21eb0) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes/fn.conf", 0x7ef21e88) = -1 ENOENT (No such file or directory)
+access("/.config/feathernotes.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes.conf", 0x7ef21eb0) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes.conf", 0x7ef21e88) = -1 ENOENT (No such file or directory)
+access("/etc/xdg/feathernotes/fn.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes/fn.conf", 0x7ef21eb0) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes/fn.conf", 0x7ef21e88) = -1 ENOENT (No such file or directory)
+access("/etc/xdg/feathernotes.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes.conf", 0x7ef21eb0) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes.conf", 0x7ef21e88) = -1 ENOENT (No such file or directory)
+access("/.config/feathernotes/fn.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes/fn.conf", 0x7ef21f10) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes/fn.conf", 0x7ef21ee8) = -1 ENOENT (No such file or directory)
+access("/.config/feathernotes/fn.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes/fn.conf", 0x7ef21e40) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes/fn.conf", 0x7ef21e18) = -1 ENOENT (No such file or directory)
+access("/.config/feathernotes.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes.conf", 0x7ef21e40) = -1 ENOENT (No such file or directory)
+stat64("/.config/feathernotes.conf", 0x7ef21e18) = -1 ENOENT (No such file or directory)
+access("/etc/xdg/feathernotes/fn.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes/fn.conf", 0x7ef21e40) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes/fn.conf", 0x7ef21e18) = -1 ENOENT (No such file or directory)
+access("/etc/xdg/feathernotes.conf", F_OK) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes.conf", 0x7ef21e40) = -1 ENOENT (No such file or directory)
+stat64("/etc/xdg/feathernotes.conf", 0x7ef21e18) = -1 ENOENT (No such file or directory)
+open("/system-lib/qt/plugins/iconengines/libqsvgicon.so", O_RDONLY|O_CLOEXEC) = 16
+read(16, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0D\"\0\0004\0\0\0"..., 512) = 512
+fstat64(16, {st_mode=S_IFREG|0755, st_size=26460, ...}) = 0
+mmap2(NULL, 90588, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 16, 0) = 0x748c5000
+mprotect(0x748cb000, 61440, PROT_NONE)  = 0
+mmap2(0x748da000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 16, 0x5000) = 0x748da000
+close(16)                               = 0
+mprotect(0x748da000, 4096, PROT_READ)   = 0
+brk(0x561c6000)                         = 0x561c6000
+brk(0x561c2000)                         = 0x561c2000
+clock_gettime(CLOCK_MONOTONIC, {4767, 595675691}) = 0
+open("/system-lib/lib/fonts/Inter-Bold.ttf", O_RDONLY) = 16
+fcntl64(16, F_SETFD, FD_CLOEXEC)        = 0
+fstat64(16, {st_mode=S_IFREG|0755, st_size=293448, ...}) = 0
+mmap2(NULL, 293448, PROT_READ, MAP_PRIVATE, 16, 0) = 0x7487d000
+close(16)                               = 0
+clock_gettime(CLOCK_MONOTONIC, {4767, 637637024}) = 0
+clock_gettime(CLOCK_MONOTONIC, {4767, 639794524}) = 0
+--- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0x34} ---
++++ killed by SIGSEGV +++
+Segmentation fault
+kobo:/$ 

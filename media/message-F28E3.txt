@@ -1,0 +1,148 @@
+kobo:/# DROPBEAR_PORT=3333 DROPBEAR_ROOT_PASSWORD=root LD_LIBRARY_PATH="/lib:/mn
+t/okular/okular_things/lib/" /stracedir/strace   /dropbear 
+execve("/dropbear", ["/dropbear"], 0x7eb0eda0 /* 16 vars */) = 0
+brk(NULL)                               = 0x55df8000
+uname({sysname="Linux", nodename="kobo", ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76fc5000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/neon/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/neon/vfp", 0x7ed09480) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/neon/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/neon", 0x7ed09480) = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l/vfp", 0x7ed09480)  = -1 ENOENT (No such file or directory)
+open("/lib/tls/v7l/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/v7l", 0x7ed09480)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/neon/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/neon/vfp", 0x7ed09480) = -1 ENOENT (No such file or directory)
+open("/lib/tls/neon/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/neon", 0x7ed09480)     = -1 ENOENT (No such file or directory)
+open("/lib/tls/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls/vfp", 0x7ed09480)      = -1 ENOENT (No such file or directory)
+open("/lib/tls/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/tls", 0x7ed09480)          = -1 ENOENT (No such file or directory)
+open("/lib/v7l/neon/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/neon/vfp", 0x7ed09480) = -1 ENOENT (No such file or directory)
+open("/lib/v7l/neon/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/neon", 0x7ed09480)     = -1 ENOENT (No such file or directory)
+open("/lib/v7l/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l/vfp", 0x7ed09480)      = -1 ENOENT (No such file or directory)
+open("/lib/v7l/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/v7l", 0x7ed09480)          = -1 ENOENT (No such file or directory)
+open("/lib/neon/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/neon/vfp", 0x7ed09480)     = -1 ENOENT (No such file or directory)
+open("/lib/neon/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/neon", 0x7ed09480)         = -1 ENOENT (No such file or directory)
+open("/lib/vfp/libutil.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/lib/vfp", 0x7ed09480)          = -1 ENOENT (No such file or directory)
+open("/lib/libutil.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\360\t\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=9684, ...}) = 0
+mmap2(NULL, 41136, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f94000
+mprotect(0x76f96000, 28672, PROT_NONE)  = 0
+mmap2(0x76f9d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x76f9d000
+close(3)                                = 0
+open("/lib/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/v7l/neon/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/v7l/neon/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/v7l/neon/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/v7l/neon", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/v7l/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/v7l/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/v7l/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/v7l", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/neon/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/neon/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/neon/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/neon", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/tls/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/tls", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/v7l/neon/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/v7l/neon/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/v7l/neon/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/v7l/neon", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/v7l/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/v7l/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/v7l/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/v7l", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/neon/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/neon/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/neon/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/neon", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/vfp/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/mnt/okular/okular_things/lib/vfp", 0x7ed09468) = -1 ENOENT (No such file or directory)
+open("/mnt/okular/okular_things/lib/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\32\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=90824, ...}) = 0
+mmap2(NULL, 139500, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f71000
+mprotect(0x76f83000, 61440, PROT_NONE)  = 0
+mmap2(0x76f92000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x76f92000
+close(3)                                = 0
+open("/lib/libcrypt.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\f\10\0\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=30128, ...}) = 0
+mmap2(NULL, 221536, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f3a000
+mprotect(0x76f41000, 28672, PROT_NONE)  = 0
+mmap2(0x76f48000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x6000) = 0x76f48000
+mmap2(0x76f4a000, 156000, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76f4a000
+close(3)                                = 0
+open("/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\10o\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1226300, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76fc4000
+mmap2(NULL, 1262952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76e05000
+mprotect(0x76f2d000, 28672, PROT_NONE)  = 0
+mmap2(0x76f34000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x127000) = 0x76f34000
+mmap2(0x76f37000, 9576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76f37000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76fc3000
+set_tls(0x76fc34c0)                     = 0
+mprotect(0x76f34000, 8192, PROT_READ)   = 0
+mprotect(0x76f48000, 4096, PROT_READ)   = 0
+mprotect(0x76f92000, 4096, PROT_READ)   = 0
+mprotect(0x76f9d000, 4096, PROT_READ)   = 0
+mprotect(0x54ae9000, 4096, PROT_READ)   = 0
+mprotect(0x76fc6000, 4096, PROT_READ)   = 0
+prlimit64(0, RLIMIT_CORE, NULL, {rlim_cur=0, rlim_max=RLIM64_INFINITY}) = 0
+prlimit64(0, RLIMIT_CORE, {rlim_cur=0, rlim_max=RLIM64_INFINITY}, NULL) = 0
+brk(NULL)                               = 0x55df8000
+brk(0x55e19000)                         = 0x55e19000
+rt_sigaction(SIGINT, {sa_handler=0x54ac3e69, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x76e31a70}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x54ac3e69, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x76e31a70}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x76e31a70}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x54ac3fe5, sa_mask=[], sa_flags=SA_RESTORER|SA_NOCLDSTOP, sa_restorer=0x76e31a70}, NULL, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=0x54ac3fcd, sa_mask=[SEGV], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x76e31a70}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+open("/etc/dropbear/dropbear_rsa_host_key", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+gettimeofday({tv_sec=1684617114, tv_usec=567043}, NULL) = 0
+open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2654, ...}) = 0
+fstat64(3, {st_mode=S_IFREG|0644, st_size=2654, ...}) = 0
+mmap2(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76d05000
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\v\0\0\0\v\0\0\0\0"..., 1048576) = 2654
+_llseek(3, -28, [2626], SEEK_CUR)       = 0
+read(3, "\nCET-1CEST,M3.5.0,M10.5.0/3\n", 1048576) = 28
+close(3)                                = 0
+munmap(0x76d05000, 1048576)             = 0
+getpid()                                = 16971
+socket(AF_UNIX, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/dev/log"}, 110) = -1 ECONNREFUSED (Connection refused)
+close(3)                                = 0
+open("/etc/dropbear/dropbear_ecdsa_host_key", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+gettimeofday({tv_sec=1684617114, tv_usec=587043}, NULL) = 0
+socket(AF_UNIX, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/dev/log"}, 110) = -1 ECONNREFUSED (Connection refused)
+close(3)                                = 0
+open("/etc/dropbear/dropbear_ed25519_host_key", O_RDONLY|O_LARGEFILE) = -1 ENOENT (No such file or directory)
+gettimeofday({tv_sec=1684617114, tv_usec=590109}, NULL) = 0
+socket(AF_UNIX, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/dev/log"}, 110) = -1 ECONNREFUSED (Connection refused)
+close(3)                                = 0
+gettimeofday({tv_sec=1684617114, tv_usec=591604}, NULL) = 0
+socket(AF_UNIX, SOCK_DGRAM|SOCK_CLOEXEC, 0) = 3
+connect(3, {sa_family=AF_UNIX, sun_path="/dev/log"}, 110) = -1 ECONNREFUSED (Connection refused)
+close(3)                                = 0
+exit_group(1)                           = ?
++++ exited with 1 +++
+kobo:/# 

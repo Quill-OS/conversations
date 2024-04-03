@@ -1,0 +1,130 @@
+U-Boot 2009.08-00077-g2f922dc-dirty-svn ( 9月 29 2016 - 14:00:09)
+
+CPU: Freescale i.MX6 family TO0.0 at 792 MHz
+Temperature:   34 C, calibration data 0x5764ff5f
+mx6q pll1: 792MHz
+mx6q pll2: 528MHz
+mx6q pll3: 480MHz
+mx6q pll8: 50MHz
+ipg clock     : 66000000Hz
+ipg per clock : 24000000Hz
+uart clock    : 80000000Hz
+cspi clock    : 60000000Hz
+ahb clock     : 132000000Hz
+axi clock   : 198000000Hz
+emi_slow clock: 22000000Hz
+ddr clock     : 396000000Hz
+usdhc1 clock  : 198000000Hz
+usdhc2 clock  : 198000000Hz
+usdhc3 clock  : 198000000Hz
+usdhc4 clock  : 198000000Hz
+Board: MX6SoloLite-NTX:[ POR ]
+Boot Device: SD
+I2C:   ready
+DRAM:  256 MB
+MMC:   ram p=80000000,size=268435456
+csd is 0x400e0032, 0x5b590000, 0x1d8a7f80, 0xa404000 
+scr addr is 0x875feee0, switch_status addr is 0x875fee70 
+mmc0 is current device
+
+MMC read: dev # 0, block # 1023, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 1024, count 1 ... 1 blocks read: OK
+HW switch boot from ESD
+FSL_USDHC: 0,FSL_USDHC: 1,FSL_USDHC: 2
+i2c: I2C1 SDA is low, start i2c recovery...
+I2C1 Recovery success
+hw_anadig_reg_core=7c3e1f
+
+MMC read: dev # 0, block # 34815, count 1 ... 1 blocks read: OK
+binary magic @ sector no. 34816 not found !
+"logo" not exist !!
+
+MMC read: dev # 0, block # 18431, count 1 ... 1 blocks read: OK
+binary magic @ sector no. 18432 not found !
+"logo" not exist !!
+In:    serial
+Out:   serial
+Err:   serial
+ntx_hw_late_init()
+
+MMC read: dev # 0, block # 1, count 1 ... 1 blocks read: OK
+NTXSN:"N2366A0277190"
+Device: FSL_USDHC
+Manufacturer ID: 3
+OEM: 5344
+Name: SU04G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+Clock: 50000000
+High Capacity: Yes
+Capacity: 3965190144 Bytes
+Bus Width: 4-bit 
+Boot Partition for boot: No boot partition available
+csd is 0x400e0032, 0x5b590000, 0x1d8a7f80, 0xa404000 
+scr addr is 0x875fef58, switch_status addr is 0x875feee8 
+ntx_config_fastboot_layout():9 binaries partition added
+ntx_config_fastboot_layout():3 mbr partition added
+Net:   No ethernet found.
+ 0 
+mmc0 is current device
+
+ hwcfgp=8ffffe00,pcb=59,customer=9
+
+ESDin=0,UPGKey=-1,PWRKey=0,USBin=0x0,BootESD=0,MenuKey=0
+
+MMC read: dev # 0, block # 14335, count 1 ... 1 blocks read: OK
+
+MMC read: dev # 0, block # 14336, count 2274 ... 2274 blocks read: OK
+
+MMC read: dev # 0, block # 1029, count 1 ... 1 blocks read: OK
+[WARNING] Binaries load sequence should Lo->Hi !
+
+MMC read: dev # 0, block # 1030, count 2 ... 2 blocks read: OK
+Kernel RAM visiable size=254M->254M
+
+MMC read: dev # 0, block # 2048, count 8199 ... 8199 blocks read: OK
+hwcfg rootfstype : 2
+hwcfg partition type : 2
+## Booting kernel from Legacy Image at 80800000 ...
+   Image Name:   89399f_#5031 Mar 30 14:26:27
+   Created:      2021-03-30   6:26:29 UTC
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2391276 Bytes =  2.3 MB
+   Load Address: 80008000
+   Entry Point:  80008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+PMU: ricoh61x_battery_probe : version is RICOH61x_BATTERY_VERSION: 2014.02.21 V3.1.0.0-Solution1 2015/02/09
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+1+0 records in
+1+0 records out
+512 bytes (512B) copied, 0.000142 seconds, 3.4MB/s
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+cannot open /dev/null
+fsck.fat 4.1+git (2017-01-24)
+[PROGRESS_BAR-3087] No progess ...
+/dev/mmcblk0p3: 20 files, 68/825139 clusters
+
+kobo login: /usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+/usr/local/Kobo/nickel: /usr/lib/libxml2.so.2: no version information available (required by /usr/local/Kobo/libnickel.so.1)
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+NtxHwCfg_GetCfgFldStrVal:[WARNING]Config version too old !! Please update config file !!
+sh: you need to specify whom to kill
+killall: wpa_supplicant: no process killed
+dhcpcd[1164]: version 6.6.6 starting
+dhcpcd[1164]: eth0: using /sys hwaddr: 58:b0:d4:2d:27:f7
+dhcpcd[1164]: eth0: executing `/libexec/dhcpcd-run-hooks' PREINIT
+dhcpcd[1164]: eth0: executing `/libexec/dhcpcd-run-hooks' NOCARRIER
+dhcpcd[1164]: no interfaces have a carrier
+dhcpcd[1164]: forking to background
+dhcpcd[1164]: forked to background, child pid 1174

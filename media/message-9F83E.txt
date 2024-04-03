@@ -1,0 +1,1047 @@
+Fri Jun 16 23:38:12 2023 | main: Debug mode is enabled
+Fri Jun 16 23:38:12 2023 | main: Saving logs to /var/log/ipd.log
+Fri Jun 16 23:38:12 2023 | functions: Reading system variables
+Fri Jun 16 23:38:12 2023 | functions: /opt/inkbox_device is: n437
+Fri Jun 16 23:38:12 2023 | functions: Running on: n437
+Fri Jun 16 23:38:12 2023 | functions: Path: /opt/root/rooted contains a true boolean
+Fri Jun 16 23:38:12 2023 | functions: /opt/config/12-lockscreen/config is: true
+Fri Jun 16 23:38:12 2023 | functions: lockscreen is: true
+Fri Jun 16 23:38:12 2023 | functions: Lockscreen background mode is: blank
+Fri Jun 16 23:38:13 2023 | functions: /opt/config/10-dark_mode/config is: false
+Fri Jun 16 23:38:13 2023 | functions: darkMode is: false
+Fri Jun 16 23:38:13 2023 | functions: USB networking system service is running
+Fri Jun 16 23:38:13 2023 | functions: /data/config/20-sleep_daemon/1-cinematicBrightnessDelayMs is: 50
+Fri Jun 16 23:38:13 2023 | functions: /data/config/20-sleep_daemon/2-cpuGovernor is: ondemand
+Fri Jun 16 23:38:13 2023 | devices: Setting CPU frequency governor to ondemand
+Fri Jun 16 23:38:13 2023 | devices: Write status writing to 'scaling_governor' is: 8
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/3-whenChargerSleep contains a true boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/4-chargerWakeUp contains a false boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/5-wifiReconnect contains a true boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/6-ledUsage contains a true boolean
+Fri Jun 16 23:38:13 2023 | functions: /data/config/20-sleep_daemon/7-idleSleep is: 0
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/8-customCase contains a false boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /boot/flags/X11_START contains a false boolean
+Fri Jun 16 23:38:13 2023 | fbinkFunctions: Loaded FBInk version: v1.24.0-183-g9c1be63 for Kobo
+Fri Jun 16 23:38:13 2023 | pipeHandler: Starting named pipe server
+Fri Jun 16 23:38:13 2023 | pipeHandler: Creating /run/ipd
+Fri Jun 16 23:38:13 2023 | configUpdate: Starting inotify monitoring for system configuration updates
+Fri Jun 16 23:38:13 2023 | idleSleep: Starting idleSleep
+Fri Jun 16 23:38:13 2023 | idleSleep: Waiting for inkbox-bin to start
+Fri Jun 16 23:38:13 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:13 2023 | monitorEvents: Monitoring events
+Fri Jun 16 23:38:13 2023 | monitorEvents: Grabbed /dev/input/event0
+Fri Jun 16 23:38:13 2023 | monitorEvents: Input device name: gpio-keys
+Fri Jun 16 23:38:13 2023 | monitorEvents: Input device bus: 25 vendor: 1 product: 1
+Fri Jun 16 23:38:13 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:14 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:14 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:15 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:15 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:16 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:16 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:17 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:17 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:18 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:18 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:19 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:19 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:20 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:20 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:21 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:21 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:22 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:22 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:23 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:24 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:25 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:25 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:26 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:26 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:27 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:27 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:28 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:28 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:29 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:29 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:30 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:30 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:31 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:31 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:32 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:33 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:34 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:34 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:35 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:35 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:36 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:36 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:37 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:37 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:38 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:38 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:39 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:39 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:40 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:40 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:41 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:41 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:42 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:42 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:43 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:43 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:44 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:44 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:45 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:45 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:46 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:46 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:47 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:47 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:48 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:48 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:49 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:49 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:50 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:50 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:51 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:51 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:52 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:52 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:53 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:53 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:54 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:54 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:55 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:56 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:57 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:57 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:58 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:58 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:59 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:59 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:00 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:00 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:01 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:01 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Fri Jun 16 23:39:02 2023 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Fri Jun 16 23:39:02 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:02 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:02 2023 | watchdog: Watchdog event received
+Fri Jun 16 23:39:02 2023 | watchdog: Launching 'prepare' thread because of 'Nothing' sleep job
+Fri Jun 16 23:39:02 2023 | prepareSleep: Launching prepareSleep
+Fri Jun 16 23:39:02 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:39:02 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:39:02 2023 | prepareSleep: lockscreenPid is 0
+Fri Jun 16 23:39:02 2023 | prepareSleep: No need to collect zombie process
+Fri Jun 16 23:39:02 2023 | pipeHandler: Sending message
+Fri Jun 16 23:39:02 2023 | configUpdate: inotify read up
+Fri Jun 16 23:39:02 2023 | configUpdate: inotify loop executed
+Fri Jun 16 23:39:02 2023 | configUpdate: inotify: Detected a modification event of name: fifo
+Fri Jun 16 23:39:02 2023 | configUpdate: All events read
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:39:02 2023 | appsFreeze: Looking for process matching 'inkbox.sh' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Found PID of inkbox.sh: 2662 in line: /bin/sh/mnt/onboard/.adds/inkbox/inkbox.sh
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: oobe-inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: lockscreen-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: qalculate-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: qreversi-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: 2048-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: scribble
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'oobe-inkbox-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of oobe-inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'qalculate-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of qalculate-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'qreversi-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of qreversi-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching '2048-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of 2048-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'scribble' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of scribble
+Fri Jun 16 23:39:03 2023 | appsFreeze: Freezing process with PID 2746
+Fri Jun 16 23:39:03 2023 | appsFreeze: Killing process with PID 2746 with signal 19
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:03 2023 | prepareSleep: Custom screensaver not found or an error occured; displaying normal message
+Fri Jun 16 23:39:03 2023 | fbinkFunctions: FBInk: Full screen refresh
+Fri Jun 16 23:39:04 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:04 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "true" to: /tmp/sleep_standby
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "true" to: /tmp/sleep_mode
+Fri Jun 16 23:39:04 2023 | functions: /sys/class/backlight/mxc_msp430_fl.0/brightness is: 0
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "0" to: /tmp/savedBrightness
+Fri Jun 16 23:39:04 2023 | functions: /sys/class/backlight/mxc_msp430_fl.0/brightness is: 0
+Fri Jun 16 23:39:04 2023 | wifi: connectToWifiPid is 0
+Fri Jun 16 23:39:04 2023 | wifi: No need to collect zombie process: connectToWifi
+Fri Jun 16 23:39:04 2023 | wifi: Wi-Fi is turned off
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "false" to: /kobo/inkbox/remount
+Fri Jun 16 23:39:04 2023 | functions: Posix spawning /sbin/hwclock
+Fri Jun 16 23:39:04 2023 | functions: Spawning without errors
+Fri Jun 16 23:39:04 2023 | functions: Spawned with PID: 2773
+Fri Jun 16 23:39:04 2023 | usbnet: Disabling USB networking
+Fri Jun 16 23:39:04 2023 | usbnet: Can't unload module: arcotg_udc
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_rndis
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_ecm_subset
+Fri Jun 16 23:39:05 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_eem
+Fri Jun 16 23:39:05 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_ecm
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: u_ether
+Fri Jun 16 23:39:06 2023 | usbnet: Can't unload module: libcomposite
+Fri Jun 16 23:39:06 2023 | usbnet: Can't unload module: configfs
+Fri Jun 16 23:39:06 2023 | prepareSleep: Exiting prepareSleep
+Fri Jun 16 23:39:06 2023 | watchdog: Launching watchdogNextStep request
+Fri Jun 16 23:39:06 2023 | watchdog: Launching goingSleep thread from request by watchdogNextStep
+Fri Jun 16 23:39:06 2023 | goingSleep: Started goSleep
+Fri Jun 16 23:39:06 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:06 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:07 2023 | goingSleep: Going to sleep now!
+Fri Jun 16 23:39:07 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:07 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:08 2023 | goingSleep: Trying suspend
+Fri Jun 16 23:39:08 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:09 2023 | configUpdate: inotify read up
+Fri Jun 16 23:39:09 2023 | configUpdate: Failed to read from buffer
+Fri Jun 16 23:39:09 2023 | configUpdate: All events read
+Fri Jun 16 23:39:09 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:09 2023 | goingSleep: Got back from suspend
+Fri Jun 16 23:39:09 2023 | goingSleep: Failed to suspend, kernel ring buffer errors:
+<3>[   91.103497] pm_op(): platform_pm_suspend+0x0/0x50 returns -1
+<3>[   91.103504] PM: Device imx_epdc_fb failed to suspend: error -1
+<3>[   91.103510] PM: Some devices failed to suspend
+
+Fri Jun 16 23:39:09 2023 | goingSleep: 
+status of writing to /sys/power/state: -1
+Fri Jun 16 23:39:10 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:10 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:11 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:11 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:12 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:12 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:12 2023 | goingSleep: Trying suspend
+Fri Jun 16 23:39:12 2023 | configUpdate: inotify read up
+Fri Jun 16 23:39:12 2023 | configUpdate: Failed to read from buffer
+Fri Jun 16 23:39:12 2023 | configUpdate: All events read
+Fri Jun 16 23:39:13 2023 | goingSleep: Got back from suspend
+Fri Jun 16 23:39:13 2023 | goingSleep: Failed to suspend, kernel ring buffer errors:
+<3>[   94.863495] pm_op(): platform_pm_suspend+0x0/0x50 returns -1
+<3>[   94.863503] PM: Device imx_epdc_fb failed to suspend: error -1
+<3>[   94.863511] PM: Some devices failed to suspend
+
+Fri Jun 16 23:39:13 2023 | goingSleep: 
+status of writing to /sys/power/state: -1
+Fri Jun 16 23:39:13 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:13 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:14 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:14 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:15 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:15 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:16 2023 | goingSleep: Trying suspend
+Fri Jun 16 23:40:02 2023 | configUpdate: inotify read up
+Fri Jun 16 23:40:02 2023 | configUpdate: Failed to read from buffer
+Fri Jun 16 23:40:02 2023 | configUpdate: All events read
+Fri Jun 16 23:40:02 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Fri Jun 16 23:40:02 2023 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Fri Jun 16 23:40:02 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:02 2023 | watchdog: Watchdog event received
+Fri Jun 16 23:40:02 2023 | watchdog: Launching 'after' thread because of goingSleep job
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:40:02 2023 | goingSleep: Got back from suspend
+Fri Jun 16 23:40:02 2023 | goingSleep: Stopping suspend attempts after 2 failed attempts
+Fri Jun 16 23:40:02 2023 | goingSleep: Exiting goSleep
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Fri Jun 16 23:40:02 2023 | watchdog: Event from monitorEvents requested after thread, but watchdogNextStep already wanted it: skipping monitorEvents request
+Fri Jun 16 23:40:02 2023 | watchdog: Launching watchdogNextStep request
+Fri Jun 16 23:40:02 2023 | watchdog: Launching afterSleep thread from request by watchdogNextStep
+Fri Jun 16 23:40:02 2023 | afterSleep: Launching afterSleep
+Fri Jun 16 23:40:02 2023 | afterSleep: Returning from deep sleep
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:40:02 2023 | functions: Wrote: "false" to: /tmp/sleep_mode
+Fri Jun 16 23:40:02 2023 | functions: Posix spawning /sbin/hwclock
+Fri Jun 16 23:40:02 2023 | functions: Spawning without errors
+Fri Jun 16 23:40:02 2023 | functions: Spawned with PID: 2796
+Fri Jun 16 23:40:03 2023 | afterSleep: Reconnecting to Wi-Fi because of option '5 - wifiReconnect'
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:03 2023 | fbinkFunctions: Variable dumpSuccess is false, avoid taking dump
+Fri Jun 16 23:40:03 2023 | appsFreeze: Unfreezing process with PID 2746
+Fri Jun 16 23:40:03 2023 | functions: /tmp/savedBrightness is: 0
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:03 2023 | fbinkFunctions: Variable dumpSuccess is false, avoid taking dump
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:03 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:03 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:04 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:04 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:04 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:04 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:04 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:04 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:04 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:05 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:05 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:05 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:05 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:05 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:05 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:06 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:06 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:06 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:06 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:06 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:06 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:06 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:06 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:07 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:07 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:07 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:07 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:07 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:07 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:08 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:08 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:08 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:08 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:08 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:08 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:08 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:08 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:09 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:09 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:09 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:09 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:09 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:10 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:10 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:10 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:10 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:10 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:10 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:10 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:10 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:11 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:11 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:11 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:11 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:11 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:11 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:11 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:11 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:12 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:12 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:12 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:12 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:12 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:12 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:12 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:12 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:13 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:13 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:13 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:13 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:13 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:13 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:13 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:14 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:14 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:14 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:14 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:14 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:14 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:14 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:15 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:15 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:15 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:15 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:15 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:15 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:15 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:15 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:16 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:16 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:16 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:16 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:16 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:16 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:16 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:16 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:16 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:16 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:17 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:17 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:17 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:17 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:17 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:17 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:17 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:17 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:17 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:18 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:18 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:18 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:18 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:18 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:18 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:18 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:18 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:19 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:19 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:19 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:19 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:19 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:19 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:19 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:19 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:20 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:20 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:20 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:20 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:20 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:20 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:20 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:20 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:21 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:21 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:21 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:21 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:21 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:21 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:21 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:21 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:22 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:22 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:22 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:22 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:22 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:22 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:22 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:22 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:23 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:23 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:23 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:23 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:23 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:23 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:23 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:23 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:24 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:24 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:24 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:24 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:24 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:24 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:24 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:24 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:24 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:24 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:25 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:25 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:25 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:25 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:25 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:25 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:25 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:26 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:26 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:26 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:26 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:26 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:26 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:26 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:26 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:26 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:27 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:27 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:27 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:27 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:27 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:27 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:27 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:27 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:27 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:28 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:28 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:28 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:28 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:28 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:28 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:28 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:28 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:29 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:29 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:29 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:29 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:29 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:29 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:29 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:29 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:30 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:30 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:30 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:30 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:30 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:30 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:30 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:30 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:31 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:31 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:31 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:31 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:31 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:31 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:31 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:31 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:32 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:32 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:32 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:32 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:32 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:32 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:32 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:32 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:32 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:33 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:33 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:33 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:33 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:33 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:33 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:33 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:34 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:34 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:34 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:34 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:34 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:34 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:34 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:34 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:34 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:35 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:35 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:35 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:35 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:35 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:35 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:35 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:35 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:36 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:36 2023 | idleSleep: Waited 1.5 minute for inkbox-bin: giving up; starting idle sleep service
+Fri Jun 16 23:40:36 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:36 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:36 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:36 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:36 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:37 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:37 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:37 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:37 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:37 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:37 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:38 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:38 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:38 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:38 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:38 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:38 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:39 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:39 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:39 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:39 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:39 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:39 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:40 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:40 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:40 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:40 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:40 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:40 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:41 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:41 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:41 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:41 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:41 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:41 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:42 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:42 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:42 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:42 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:42 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:42 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:42 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:42 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:43 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:43 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:43 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:43 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:43 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:43 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:44 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:44 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:44 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:44 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:44 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:44 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:44 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:45 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:45 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:45 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:45 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:45 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:45 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:46 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:46 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:46 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:46 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:46 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:46 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:47 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:47 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:47 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:47 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:47 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:47 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:48 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:48 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:48 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:48 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:48 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:48 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:49 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:49 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:49 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:49 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:49 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:49 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:50 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:50 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:50 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:50 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:50 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:50 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:51 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:51 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:51 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:51 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:51 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:51 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:51 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:51 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:52 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:52 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:52 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:52 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:52 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:52 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:52 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:53 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:53 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:53 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:53 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:53 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:53 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:54 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:54 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:54 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:54 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:54 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:54 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:55 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:55 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:55 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:55 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:55 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:55 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+kobo:~# cat /var/log/ipd.log 
+Fri Jun 16 23:38:12 2023 | main: Debug mode is enabled
+Fri Jun 16 23:38:12 2023 | main: Saving logs to /var/log/ipd.log
+Fri Jun 16 23:38:12 2023 | functions: Reading system variables
+Fri Jun 16 23:38:12 2023 | functions: /opt/inkbox_device is: n437
+Fri Jun 16 23:38:12 2023 | functions: Running on: n437
+Fri Jun 16 23:38:12 2023 | functions: Path: /opt/root/rooted contains a true boolean
+Fri Jun 16 23:38:12 2023 | functions: /opt/config/12-lockscreen/config is: true
+Fri Jun 16 23:38:12 2023 | functions: lockscreen is: true
+Fri Jun 16 23:38:12 2023 | functions: Lockscreen background mode is: blank
+Fri Jun 16 23:38:13 2023 | functions: /opt/config/10-dark_mode/config is: false
+Fri Jun 16 23:38:13 2023 | functions: darkMode is: false
+Fri Jun 16 23:38:13 2023 | functions: USB networking system service is running
+Fri Jun 16 23:38:13 2023 | functions: /data/config/20-sleep_daemon/1-cinematicBrightnessDelayMs is: 50
+Fri Jun 16 23:38:13 2023 | functions: /data/config/20-sleep_daemon/2-cpuGovernor is: ondemand
+Fri Jun 16 23:38:13 2023 | devices: Setting CPU frequency governor to ondemand
+Fri Jun 16 23:38:13 2023 | devices: Write status writing to 'scaling_governor' is: 8
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/3-whenChargerSleep contains a true boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/4-chargerWakeUp contains a false boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/5-wifiReconnect contains a true boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/6-ledUsage contains a true boolean
+Fri Jun 16 23:38:13 2023 | functions: /data/config/20-sleep_daemon/7-idleSleep is: 0
+Fri Jun 16 23:38:13 2023 | functions: Path: /data/config/20-sleep_daemon/8-customCase contains a false boolean
+Fri Jun 16 23:38:13 2023 | functions: Path: /boot/flags/X11_START contains a false boolean
+Fri Jun 16 23:38:13 2023 | fbinkFunctions: Loaded FBInk version: v1.24.0-183-g9c1be63 for Kobo
+Fri Jun 16 23:38:13 2023 | pipeHandler: Starting named pipe server
+Fri Jun 16 23:38:13 2023 | pipeHandler: Creating /run/ipd
+Fri Jun 16 23:38:13 2023 | configUpdate: Starting inotify monitoring for system configuration updates
+Fri Jun 16 23:38:13 2023 | idleSleep: Starting idleSleep
+Fri Jun 16 23:38:13 2023 | idleSleep: Waiting for inkbox-bin to start
+Fri Jun 16 23:38:13 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:13 2023 | monitorEvents: Monitoring events
+Fri Jun 16 23:38:13 2023 | monitorEvents: Grabbed /dev/input/event0
+Fri Jun 16 23:38:13 2023 | monitorEvents: Input device name: gpio-keys
+Fri Jun 16 23:38:13 2023 | monitorEvents: Input device bus: 25 vendor: 1 product: 1
+Fri Jun 16 23:38:13 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:14 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:14 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:15 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:15 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:16 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:16 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:17 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:17 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:18 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:18 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:19 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:19 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:20 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:20 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:21 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:21 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:22 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:22 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:23 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:24 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:25 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:25 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:26 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:26 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:27 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:27 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:28 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:28 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:29 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:29 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:30 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:30 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:31 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:31 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:32 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:33 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:34 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:34 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:35 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:35 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:36 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:36 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:37 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:37 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:38 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:38 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:39 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:39 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:40 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:40 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:41 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:41 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:42 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:42 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:43 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:43 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:44 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:44 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:45 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:45 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:46 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:46 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:47 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:47 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:48 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:48 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:49 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:49 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:50 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:50 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:51 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:51 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:52 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:52 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:53 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:53 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:54 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:54 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:55 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:56 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:57 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:57 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:58 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:58 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:38:59 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:38:59 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:00 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:00 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:01 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:01 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Fri Jun 16 23:39:02 2023 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Fri Jun 16 23:39:02 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:02 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:02 2023 | watchdog: Watchdog event received
+Fri Jun 16 23:39:02 2023 | watchdog: Launching 'prepare' thread because of 'Nothing' sleep job
+Fri Jun 16 23:39:02 2023 | prepareSleep: Launching prepareSleep
+Fri Jun 16 23:39:02 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:39:02 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:39:02 2023 | prepareSleep: lockscreenPid is 0
+Fri Jun 16 23:39:02 2023 | prepareSleep: No need to collect zombie process
+Fri Jun 16 23:39:02 2023 | pipeHandler: Sending message
+Fri Jun 16 23:39:02 2023 | configUpdate: inotify read up
+Fri Jun 16 23:39:02 2023 | configUpdate: inotify loop executed
+Fri Jun 16 23:39:02 2023 | configUpdate: inotify: Detected a modification event of name: fifo
+Fri Jun 16 23:39:02 2023 | configUpdate: All events read
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Fri Jun 16 23:39:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:39:02 2023 | appsFreeze: Looking for process matching 'inkbox.sh' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Found PID of inkbox.sh: 2662 in line: /bin/sh/mnt/onboard/.adds/inkbox/inkbox.sh
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: oobe-inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: lockscreen-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: qalculate-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: qreversi-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: 2048-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: In app vector: scribble
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'oobe-inkbox-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of oobe-inkbox-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'qalculate-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of qalculate-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'qreversi-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of qreversi-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching '2048-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of 2048-bin
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'scribble' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of scribble
+Fri Jun 16 23:39:03 2023 | appsFreeze: Freezing process with PID 2746
+Fri Jun 16 23:39:03 2023 | appsFreeze: Killing process with PID 2746 with signal 19
+Fri Jun 16 23:39:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:03 2023 | prepareSleep: Custom screensaver not found or an error occured; displaying normal message
+Fri Jun 16 23:39:03 2023 | fbinkFunctions: FBInk: Full screen refresh
+Fri Jun 16 23:39:04 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:04 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "true" to: /tmp/sleep_standby
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "true" to: /tmp/sleep_mode
+Fri Jun 16 23:39:04 2023 | functions: /sys/class/backlight/mxc_msp430_fl.0/brightness is: 0
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "0" to: /tmp/savedBrightness
+Fri Jun 16 23:39:04 2023 | functions: /sys/class/backlight/mxc_msp430_fl.0/brightness is: 0
+Fri Jun 16 23:39:04 2023 | wifi: connectToWifiPid is 0
+Fri Jun 16 23:39:04 2023 | wifi: No need to collect zombie process: connectToWifi
+Fri Jun 16 23:39:04 2023 | wifi: Wi-Fi is turned off
+Fri Jun 16 23:39:04 2023 | functions: Wrote: "false" to: /kobo/inkbox/remount
+Fri Jun 16 23:39:04 2023 | functions: Posix spawning /sbin/hwclock
+Fri Jun 16 23:39:04 2023 | functions: Spawning without errors
+Fri Jun 16 23:39:04 2023 | functions: Spawned with PID: 2773
+Fri Jun 16 23:39:04 2023 | usbnet: Disabling USB networking
+Fri Jun 16 23:39:04 2023 | usbnet: Can't unload module: arcotg_udc
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_rndis
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_ecm_subset
+Fri Jun 16 23:39:05 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_eem
+Fri Jun 16 23:39:05 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: usb_f_ecm
+Fri Jun 16 23:39:05 2023 | usbnet: Can't unload module: u_ether
+Fri Jun 16 23:39:06 2023 | usbnet: Can't unload module: libcomposite
+Fri Jun 16 23:39:06 2023 | usbnet: Can't unload module: configfs
+Fri Jun 16 23:39:06 2023 | prepareSleep: Exiting prepareSleep
+Fri Jun 16 23:39:06 2023 | watchdog: Launching watchdogNextStep request
+Fri Jun 16 23:39:06 2023 | watchdog: Launching goingSleep thread from request by watchdogNextStep
+Fri Jun 16 23:39:06 2023 | goingSleep: Started goSleep
+Fri Jun 16 23:39:06 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:06 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:07 2023 | goingSleep: Going to sleep now!
+Fri Jun 16 23:39:07 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:07 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:08 2023 | goingSleep: Trying suspend
+Fri Jun 16 23:39:08 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:09 2023 | configUpdate: inotify read up
+Fri Jun 16 23:39:09 2023 | configUpdate: Failed to read from buffer
+Fri Jun 16 23:39:09 2023 | configUpdate: All events read
+Fri Jun 16 23:39:09 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:09 2023 | goingSleep: Got back from suspend
+Fri Jun 16 23:39:09 2023 | goingSleep: Failed to suspend, kernel ring buffer errors:
+<3>[   91.103497] pm_op(): platform_pm_suspend+0x0/0x50 returns -1
+<3>[   91.103504] PM: Device imx_epdc_fb failed to suspend: error -1
+<3>[   91.103510] PM: Some devices failed to suspend
+
+Fri Jun 16 23:39:09 2023 | goingSleep: 
+status of writing to /sys/power/state: -1
+Fri Jun 16 23:39:10 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:10 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:11 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:11 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:12 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:12 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:12 2023 | goingSleep: Trying suspend
+Fri Jun 16 23:39:12 2023 | configUpdate: inotify read up
+Fri Jun 16 23:39:12 2023 | configUpdate: Failed to read from buffer
+Fri Jun 16 23:39:12 2023 | configUpdate: All events read
+Fri Jun 16 23:39:13 2023 | goingSleep: Got back from suspend
+Fri Jun 16 23:39:13 2023 | goingSleep: Failed to suspend, kernel ring buffer errors:
+<3>[   94.863495] pm_op(): platform_pm_suspend+0x0/0x50 returns -1
+<3>[   94.863503] PM: Device imx_epdc_fb failed to suspend: error -1
+<3>[   94.863511] PM: Some devices failed to suspend
+
+Fri Jun 16 23:39:13 2023 | goingSleep: 
+status of writing to /sys/power/state: -1
+Fri Jun 16 23:39:13 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:13 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:14 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:14 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:15 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:39:15 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:39:16 2023 | goingSleep: Trying suspend
+Fri Jun 16 23:40:02 2023 | configUpdate: inotify read up
+Fri Jun 16 23:40:02 2023 | configUpdate: Failed to read from buffer
+Fri Jun 16 23:40:02 2023 | configUpdate: All events read
+Fri Jun 16 23:40:02 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 1
+Fri Jun 16 23:40:02 2023 | monitorEvents: monitorEvents: Received power button trigger, attempting device suspend
+Fri Jun 16 23:40:02 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:02 2023 | watchdog: Watchdog event received
+Fri Jun 16 23:40:02 2023 | watchdog: Launching 'after' thread because of goingSleep job
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:40:02 2023 | goingSleep: Got back from suspend
+Fri Jun 16 23:40:02 2023 | goingSleep: Stopping suspend attempts after 2 failed attempts
+Fri Jun 16 23:40:02 2023 | goingSleep: Exiting goSleep
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_KEY codename: KEY_POWER value: 0
+Fri Jun 16 23:40:02 2023 | watchdog: Event from monitorEvents requested after thread, but watchdogNextStep already wanted it: skipping monitorEvents request
+Fri Jun 16 23:40:02 2023 | watchdog: Launching watchdogNextStep request
+Fri Jun 16 23:40:02 2023 | watchdog: Launching afterSleep thread from request by watchdogNextStep
+Fri Jun 16 23:40:02 2023 | afterSleep: Launching afterSleep
+Fri Jun 16 23:40:02 2023 | afterSleep: Returning from deep sleep
+Fri Jun 16 23:40:02 2023 | monitorEvents: Input event received, type: EV_SYN codename: SYN_REPORT value: 0
+Fri Jun 16 23:40:02 2023 | functions: Wrote: "false" to: /tmp/sleep_mode
+Fri Jun 16 23:40:02 2023 | functions: Posix spawning /sbin/hwclock
+Fri Jun 16 23:40:02 2023 | functions: Spawning without errors
+Fri Jun 16 23:40:02 2023 | functions: Spawned with PID: 2796
+Fri Jun 16 23:40:03 2023 | afterSleep: Reconnecting to Wi-Fi because of option '5 - wifiReconnect'
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:03 2023 | fbinkFunctions: Variable dumpSuccess is false, avoid taking dump
+Fri Jun 16 23:40:03 2023 | appsFreeze: Unfreezing process with PID 2746
+Fri Jun 16 23:40:03 2023 | functions: /tmp/savedBrightness is: 0
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:03 2023 | fbinkFunctions: Variable dumpSuccess is false, avoid taking dump
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:03 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:03 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:03 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:03 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:04 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:04 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:04 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:04 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:04 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:04 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:04 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:05 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:05 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:05 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:05 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:05 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:05 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:06 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:06 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:06 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:06 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:06 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:06 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:06 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:06 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:07 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:07 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:07 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:07 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:07 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:07 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:07 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:08 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:08 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:08 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:08 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:08 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:08 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:08 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:08 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:09 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:09 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:09 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:09 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:09 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:09 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:10 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:10 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:10 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:10 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:10 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:10 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:10 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:10 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:11 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:11 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:11 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:11 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:11 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:11 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:11 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:11 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:12 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:12 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:12 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:12 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:12 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:12 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:12 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:12 2023 | appsFreeze: Couldn't find PID of inkbox-bin
+Fri Jun 16 23:40:13 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:13 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:13 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:13 2023 | afterSleep: Waiting for launch_lockscreen.sh to finish
+Fri Jun 16 23:40:13 2023 | appsFreeze: Looking for process matching 'lockscreen-bin' string
+Fri Jun 16 23:40:13 2023 | appsFreeze: Found PID of lockscreen-bin: 2746 in line: /mnt/onboard/.adds/inkbox/lockscreen-bin
+Fri Jun 16 23:40:13 2023 | appsFreeze: Looking for process matching 'inkbox-bin' string
+Fri Jun 16 23:40:14 2023 | appsFreeze: Couldn't find PID of inkbox-bin
