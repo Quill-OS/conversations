@@ -1,0 +1,1645 @@
+{
+  "guild": {
+    "id": "809205711778480158",
+    "name": "Quill OS",
+    "iconUrl": "/mnt/data/projects/git/conversations/media/e0b7ce53fdbaa210cc6789bc0c621f25-3E16D.png"
+  },
+  "channel": {
+    "id": "1123599049157779557",
+    "type": "GuildTextChat",
+    "categoryId": null,
+    "category": null,
+    "name": "announcements",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2024-04-03T21:20:00.2726342+02:00",
+  "messages": [
+    {
+      "id": "1130894965715775579",
+      "type": "Default",
+      "timestamp": "2023-07-18T18:12:50.839+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \n\nThis channel will be used to announce big and small things related to the project, mute it if you prefer that\n\nfirst, 2 new user apps:\n- iterm - Qt terminal that works great, better than xorg alternatives, + gomuks cli matrix client works on it\n- nachat - a Qt matrix client, ancient but usable, its better than gomuks because images, files, scroll bar etc.\n\nas always, downloadable here:\nhttps://github.com/Kobo-InkBox/user-applications\n\nAlso, soon will be an annoucement relating kobo nia model c, the incompatible one. We have already a working image of inkbox where only battery level / sleep button doesnt work. If someone wants to test further i can send the image. In 2 weeks it should be fully supported",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - Kobo-InkBox/user-applications: User applications repository",
+          "url": "https://github.com/Kobo-InkBox/user-applications",
+          "timestamp": null,
+          "description": "User applications repository. Contribute to Kobo-InkBox/user-applications development by creating an account on GitHub.",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "/mnt/data/projects/git/conversations/media/user-applications-362B1",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-27259.svg"
+          },
+          "count": 6,
+          "users": [
+            {
+              "id": "135007701791932416",
+              "name": "sado1",
+              "discriminator": "0000",
+              "nickname": "sado1",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a4da33e0f0898f883fd0c06a25f339c1-10BA2.png"
+            },
+            {
+              "id": "148577214240129024",
+              "name": "mikku_taunter",
+              "discriminator": "0000",
+              "nickname": "Mochito des réseaux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/844c6b11ecd2710eee227516ecce6550-5E167.png"
+            },
+            {
+              "id": "161688908784992256",
+              "name": "qiwulun",
+              "discriminator": "0000",
+              "nickname": "REM",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/f048daaaf647d0d90f39d2324c6e6045-1BD15.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            },
+            {
+              "id": "723167731561660527",
+              "name": "tux_linux",
+              "discriminator": "0000",
+              "nickname": "Nicolas Mailloux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+            },
+            {
+              "id": "999748096068161661",
+              "name": "matty123458687",
+              "discriminator": "0000",
+              "nickname": "matty12345",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/2-ADBB4.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD2F",
+            "code": "exploding_head",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f92f-FF4E0.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "148577214240129024",
+              "name": "mikku_taunter",
+              "discriminator": "0000",
+              "nickname": "Mochito des réseaux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/844c6b11ecd2710eee227516ecce6550-5E167.png"
+            },
+            {
+              "id": "161688908784992256",
+              "name": "qiwulun",
+              "discriminator": "0000",
+              "nickname": "REM",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/f048daaaf647d0d90f39d2324c6e6045-1BD15.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83C\uDFF3️‍\uD83C\uDF08",
+            "code": "rainbow_flag",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f3f3-fe0f-200d-1f308-F64A2.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "161688908784992256",
+              "name": "qiwulun",
+              "discriminator": "0000",
+              "nickname": "REM",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/f048daaaf647d0d90f39d2324c6e6045-1BD15.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1131057338732789800",
+      "type": "Default",
+      "timestamp": "2023-07-19T04:58:03.583+02:00",
+      "timestampEdited": "2023-07-19T04:58:26.126+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nhttps://discord.com/channels/809205711778480158/934581303674798101/1131056703622873168\nThere is huge progress on Clara HD porting; InkBox GUI display and touch (roughly) works now \uD83E\uDD73 \nhttps://photos.app.goo.gl/Xgq6vpQbFuuF9HCe7\nI know it is two general pings in one day but I think a lot of you were waiting for this since a long time",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "New video by Nicolas Mailloux",
+          "url": "https://photos.app.goo.gl/Xgq6vpQbFuuF9HCe7",
+          "timestamp": null,
+          "description": "",
+          "color": "#FFFFFF",
+          "thumbnail": {
+            "url": "/mnt/data/projects/git/conversations/media/AIL4fc8CIAL6KlMRCIvmTSwq_uk16fSB4gsl1dCA2Q-FBB06",
+            "width": 288,
+            "height": 315
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83C\uDF89",
+            "code": "tada",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f389-5C738.svg"
+          },
+          "count": 7,
+          "users": [
+            {
+              "id": "72894610518577152",
+              "name": "fuller",
+              "discriminator": "0000",
+              "nickname": "fuller",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/bd1063a2a0ec239115d421572387e8eb-9699E.png"
+            },
+            {
+              "id": "193433722756923394",
+              "name": "nichobi",
+              "discriminator": "0000",
+              "nickname": "nichobi",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/397cbb5c1218aeacbf7e02bdf7793ea3-53838.png"
+            },
+            {
+              "id": "265665531217051648",
+              "name": "dylantackoor",
+              "discriminator": "0000",
+              "nickname": "DylanTackoor",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/c2d11a189a4f85d2d6d20c1ba21e9900-C16C0.png"
+            },
+            {
+              "id": "297167653909299200",
+              "name": "dobamuffin",
+              "discriminator": "0000",
+              "nickname": "DobaMuffin",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/0b8567c960680da02f3dbc1e5fd4bc28-DF9D9.png"
+            },
+            {
+              "id": "360366477825540096",
+              "name": "seasonphan",
+              "discriminator": "0000",
+              "nickname": "SeaSon",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/5f5ca5fa89d029bcd2fbeb473e6e1f38-9A3FD.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            },
+            {
+              "id": "1011916548333633606",
+              "name": "deleted_user_ec1336a3a768",
+              "discriminator": "0000",
+              "nickname": "deleted_user_ec1336a3a768",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/1-B2132.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "❤️",
+            "code": "heart",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/2764-A3D25.svg"
+          },
+          "count": 5,
+          "users": [
+            {
+              "id": "135007701791932416",
+              "name": "sado1",
+              "discriminator": "0000",
+              "nickname": "sado1",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a4da33e0f0898f883fd0c06a25f339c1-10BA2.png"
+            },
+            {
+              "id": "193433722756923394",
+              "name": "nichobi",
+              "discriminator": "0000",
+              "nickname": "nichobi",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/397cbb5c1218aeacbf7e02bdf7793ea3-53838.png"
+            },
+            {
+              "id": "319532246099034112",
+              "name": "guillaume2123",
+              "discriminator": "0000",
+              "nickname": "Guillaume",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+            },
+            {
+              "id": "520043115269062666",
+              "name": "weeda2192",
+              "discriminator": "0000",
+              "nickname": "Weeda",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/fd068b9f5e8730642625b88bed684535-4E015.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1132037051781492817",
+      "type": "Default",
+      "timestamp": "2023-07-21T21:51:05.376+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nNew user app, downloadable here as always: https://github.com/Kobo-InkBox/user-applications\n\n**Syncthing**\nfrom the description: \nSyncthing is a continuous file synchronization program. It synchronizes files between two or more computers in real time, safely protected from prying eyes. Your data is your data alone and you deserve to choose where it is stored, whether it is shared with some third party, and how it’s transmitted over the internet.\n\nReally cool to sync your new books, backup your ereader progress, make your ereader a backup server for small things ;)\n\nAlso small note to nachat: It requires above 2.0 gui-bundle, if someone wants it i can provide it, otherwise the app won't launch",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1134416095349067846",
+      "type": "Default",
+      "timestamp": "2023-07-28T11:24:33.563+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nKobo nia model C has been ported, downloadable for now here:\n\nhttp://pkgs-inkbox.duckdns.org:25560/bundles/inkbox/native/n306c/inkbox-2.0-n306c.img",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1134461415139319818",
+      "type": "Default",
+      "timestamp": "2023-07-28T14:24:38.643+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Oh and i forgot to mention:\n- dont turn on dark mode - the kernel will panick ( this will be redesigned for 2.1 so don't worry )\n- xorg is unstable sometimes",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1146784654712647760",
+      "type": "Default",
+      "timestamp": "2023-08-31T14:32:47.912+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nAs I'm preparing for the final InkBox release this year ( and the next year propably, hopefully not ever? ) I would like to collect some feedback from users, especially reasons why you stopped using InkBox, but other opinions on improvements are also welcome. If you use it you could also reply in some way ( we have no way of tracking how many users we have\uD83E\uDD74  )\nYou can write them to me via private chat or on the #quill channel",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1152965463089872978",
+      "type": "Default",
+      "timestamp": "2023-09-17T15:53:07.463+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nWhich device in the current Kobo lineup would you like to see ported to InkBox the most? We have got some money from donations but don't know what model to choose.\nThanks",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1194386098399490148",
+      "type": "Default",
+      "timestamp": "2024-01-09T22:03:56.479+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nI have released a beta image for the Clara HD; read the following MobileRead post for details: https://www.mobileread.com/forums/showpost.php?p=4387514&postcount=102\nFeel free to post your thoughts and impressions here!\nEnjoy!",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "MobileRead Forums - View Single Post -  InkBox: a new open-source O...",
+          "url": "https://www.mobileread.com/forums/showpost.php?p=4387514&postcount=102",
+          "timestamp": null,
+          "description": "MobileRead - the resource for mobile geeks seeking information and advice for keeping their gadgets happy.",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1206363932168818718",
+      "type": "Default",
+      "timestamp": "2024-02-11T23:19:34.587+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nHello\nWe are looking to get some opinions regarding the future of this project. The most important thing is a name change\nhttps://forms.gle/rFfoBjFa6dio91nU7 \nThank you for your time",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "InkBox wants your opinion!",
+          "url": "https://forms.gle/rFfoBjFa6dio91nU7",
+          "timestamp": null,
+          "description": "https://github.com/Kobo-InkBox/inkbox\nhttps://inkbox.ddns.net/\n\nInkBox OS, the open source ereader OS looks for opinions from their users to know what to focus for in the next release. We are also looking for a name change because there are too many inkbox things now (A youtuber, a tatoo company...)\n\nWe are also looking for contributors - If you...",
+          "thumbnail": {
+            "url": "/mnt/data/projects/git/conversations/media/GScUcHjWgwM3XQSfjXjxX1Vqoo1HhFJT4rp60dOCod-F89EF",
+            "width": 1200,
+            "height": 630
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83E\uDD2F",
+            "code": "exploding_head",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f92f-FF4E0.svg"
+          },
+          "count": 2,
+          "users": []
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-1f3fb-ED2AA.svg"
+          },
+          "count": 5,
+          "users": [
+            {
+              "id": "158375004008873985",
+              "name": "alec3277",
+              "discriminator": "0000",
+              "nickname": "Alec",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/d5614a6cccd9eeca5063f9aab251303c-1EDE0.png"
+            },
+            {
+              "id": "253590167611244546",
+              "name": "dominiac",
+              "discriminator": "0000",
+              "nickname": "Dominiac",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/6ef6494120510fbf3e3ab6b2472c46c1-195B0.png"
+            },
+            {
+              "id": "307577628699918336",
+              "name": "ab201701",
+              "discriminator": "0000",
+              "nickname": "ab",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/2-ADBB4.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            },
+            {
+              "id": "816949987849404436",
+              "name": "mrburgercz",
+              "discriminator": "0000",
+              "nickname": "MrBurgerCZ",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/3d74b212f7571e733535124fb3f324b7-5FC58.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1218974362141589545",
+      "type": "Default",
+      "timestamp": "2024-03-17T18:28:55.383+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nDo you think BlinkOS would be a good name to replace InkBox OS?",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-27259.svg"
+          },
+          "count": 15,
+          "users": [
+            {
+              "id": "72894610518577152",
+              "name": "fuller",
+              "discriminator": "0000",
+              "nickname": "fuller",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/bd1063a2a0ec239115d421572387e8eb-9699E.png"
+            },
+            {
+              "id": "148577214240129024",
+              "name": "mikku_taunter",
+              "discriminator": "0000",
+              "nickname": "Mochito des réseaux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/844c6b11ecd2710eee227516ecce6550-5E167.png"
+            },
+            {
+              "id": "158375004008873985",
+              "name": "alec3277",
+              "discriminator": "0000",
+              "nickname": "Alec",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/d5614a6cccd9eeca5063f9aab251303c-1EDE0.png"
+            },
+            {
+              "id": "196935276118016000",
+              "name": "_renard_joyeux",
+              "discriminator": "0000",
+              "nickname": "_Renard_Joyeux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/e1eec3266c014ea8092b43779b5f95e8-89602.png"
+            },
+            {
+              "id": "253590167611244546",
+              "name": "dominiac",
+              "discriminator": "0000",
+              "nickname": "Dominiac",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/6ef6494120510fbf3e3ab6b2472c46c1-195B0.png"
+            },
+            {
+              "id": "270054888145158144",
+              "name": "oatmiik",
+              "discriminator": "0000",
+              "nickname": "oats<3",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/82c6e3c3bfb3b8fcec101dfed2f512fa-5EBEE.png"
+            },
+            {
+              "id": "299991040926941184",
+              "name": ".ckeen",
+              "discriminator": "0000",
+              "nickname": "C-Keen",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/ab150cec6aaaa318e3cd9db4f5659448-E167D.png"
+            },
+            {
+              "id": "339400777829449728",
+              "name": ".kitkat1.",
+              "discriminator": "0000",
+              "nickname": "KitKat",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/68cf676bea367798d5c139d958bd0e39-0F6B3.png"
+            },
+            {
+              "id": "435297156350345217",
+              "name": "giorgioren",
+              "discriminator": "0000",
+              "nickname": "GiorgioRen",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/99d253c95e5d1cbcde1ed334c22d2f28-92BE9.png"
+            },
+            {
+              "id": "435309823484100619",
+              "name": "szybet",
+              "discriminator": "0000",
+              "nickname": "Szybet",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+            },
+            {
+              "id": "519144435561267201",
+              "name": "milankolia",
+              "discriminator": "0000",
+              "nickname": "milankolia",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/02964b14113bc7ee90b3334e0d252b39-42CD5.png"
+            },
+            {
+              "id": "520043115269062666",
+              "name": "weeda2192",
+              "discriminator": "0000",
+              "nickname": "Weeda",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/fd068b9f5e8730642625b88bed684535-4E015.png"
+            },
+            {
+              "id": "523208386138079242",
+              "name": "btwarch147",
+              "discriminator": "0000",
+              "nickname": "btwarch147",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/d2feafffe8f524a10457bb9bf4deaf03-B9788.png"
+            },
+            {
+              "id": "607999432419704875",
+              "name": "raven34983",
+              "discriminator": "0000",
+              "nickname": "raven",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/862c5e968eb2bb3160969f0014047658-EAD91.png"
+            },
+            {
+              "id": "616253298143395850",
+              "name": "zoli111",
+              "discriminator": "0000",
+              "nickname": "Zoli",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/ff4ac307eba73edc0fecbd7033bb454a-27525.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4E",
+            "code": "thumbsdown",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44e-EE417.svg"
+          },
+          "count": 5,
+          "users": [
+            {
+              "id": "121739142655639556",
+              "name": "mintpilo",
+              "discriminator": "0000",
+              "nickname": "mintpilo",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/9cfbfef7eec7a550a4c8a085aa4e3949-0A1AE.png"
+            },
+            {
+              "id": "217336331368398848",
+              "name": "soma_sc",
+              "discriminator": "0000",
+              "nickname": "soma",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/9d3864c78372ad26c6c78afc48094dad-F4148.png"
+            },
+            {
+              "id": "278252678218252288",
+              "name": "m8torr",
+              "discriminator": "0000",
+              "nickname": "M8torr",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/022bf103c28a96f3cebc358c67675962-43AE6.png"
+            },
+            {
+              "id": "360366477825540096",
+              "name": "seasonphan",
+              "discriminator": "0000",
+              "nickname": "SeaSon",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/5f5ca5fa89d029bcd2fbeb473e6e1f38-9A3FD.png"
+            },
+            {
+              "id": "620670276912545806",
+              "name": "chownr",
+              "discriminator": "0000",
+              "nickname": "ChuckGPT",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/15c462f59eb388e714b3baf679ad4e8a-76C13.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1218974468576252034",
+      "type": "Default",
+      "timestamp": "2024-03-17T18:29:20.759+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Please react\nThumbs up for yes\nThumbs down for no\nNeutral face for idk",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE10",
+            "code": "neutral_face",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f610-B3309.svg"
+          },
+          "count": 13,
+          "users": [
+            {
+              "id": "72894610518577152",
+              "name": "fuller",
+              "discriminator": "0000",
+              "nickname": "fuller",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/bd1063a2a0ec239115d421572387e8eb-9699E.png"
+            },
+            {
+              "id": "158375004008873985",
+              "name": "alec3277",
+              "discriminator": "0000",
+              "nickname": "Alec",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/d5614a6cccd9eeca5063f9aab251303c-1EDE0.png"
+            },
+            {
+              "id": "168380381584687104",
+              "name": "ansraer",
+              "discriminator": "0000",
+              "nickname": "Ansraer",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/d4c1cc64e4b813ceec6ec6c3c60143f4-DFB76.png"
+            },
+            {
+              "id": "184018035101663232",
+              "name": "rdf300",
+              "discriminator": "0000",
+              "nickname": "RDF300",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/e41dd57e7a6c9d749c4d2e192e02f5fd-C1C10.png"
+            },
+            {
+              "id": "217336331368398848",
+              "name": "soma_sc",
+              "discriminator": "0000",
+              "nickname": "soma",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/9d3864c78372ad26c6c78afc48094dad-F4148.png"
+            },
+            {
+              "id": "264222510042710026",
+              "name": "ihave452toasters",
+              "discriminator": "0000",
+              "nickname": "Ihave452tuna's",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/1fd4b53cf420291bf0ee6c9ee79f06d7-5CEA4.png"
+            },
+            {
+              "id": "272391940560125952",
+              "name": "db.qp.db",
+              "discriminator": "0000",
+              "nickname": "okeh",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/12a38063a95ab9870860c4c915c6a348-32C3F.png"
+            },
+            {
+              "id": "307577628699918336",
+              "name": "ab201701",
+              "discriminator": "0000",
+              "nickname": "ab",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/2-ADBB4.png"
+            },
+            {
+              "id": "322508117395111936",
+              "name": "pgaskin",
+              "discriminator": "0000",
+              "nickname": "pgaskin",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/c86b597219afb21efaf546214ac9b922-C727C.png"
+            },
+            {
+              "id": "372454298287603724",
+              "name": "xsf_nrg_4fr",
+              "discriminator": "0000",
+              "nickname": "Xsf_Nrg_4fr",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/8a1a5bf9bfc4151ee70844bf5526a00d-E943C.png"
+            },
+            {
+              "id": "413468066131738625",
+              "name": "master_of_derp",
+              "discriminator": "0000",
+              "nickname": "DerpyBoi",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/37f406050991e1e76d3f45faa673fb59-FE990.png"
+            },
+            {
+              "id": "542531091098238976",
+              "name": "thelinuxpirate",
+              "discriminator": "0000",
+              "nickname": "TheLinuxPirate",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/3d986d4d6a4987c625c72a662d445480-636A3.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1218978600678719690",
+      "type": "Default",
+      "timestamp": "2024-03-17T18:45:45.929+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Well maybe **Bl**InkBox OS",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-27259.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "184018035101663232",
+              "name": "rdf300",
+              "discriminator": "0000",
+              "nickname": "RDF300",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/e41dd57e7a6c9d749c4d2e192e02f5fd-C1C10.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1221823424301895710",
+      "type": "Default",
+      "timestamp": "2024-03-25T15:10:04.735+01:00",
+      "timestampEdited": "2024-03-25T15:10:16.471+01:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@everyone \nInkBox OS has now been officially renamed to Quill OS\nThank you for your input and we hope to offer you a better, renewed experience soon",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDE04",
+            "code": "smile",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f604-BF863.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "435309823484100619",
+              "name": "szybet",
+              "discriminator": "0000",
+              "nickname": "Szybet",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "❤️",
+            "code": "heart",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/2764-A3D25.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "272391940560125952",
+              "name": "db.qp.db",
+              "discriminator": "0000",
+              "nickname": "okeh",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/12a38063a95ab9870860c4c915c6a348-32C3F.png"
+            },
+            {
+              "id": "519144435561267201",
+              "name": "milankolia",
+              "discriminator": "0000",
+              "nickname": "milankolia",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/02964b14113bc7ee90b3334e0d252b39-42CD5.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D\uD83C\uDFFB",
+            "code": "thumbsup_tone1",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-1f3fb-ED2AA.svg"
+          },
+          "count": 9,
+          "users": [
+            {
+              "id": "168380381584687104",
+              "name": "ansraer",
+              "discriminator": "0000",
+              "nickname": "Ansraer",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/d4c1cc64e4b813ceec6ec6c3c60143f4-DFB76.png"
+            },
+            {
+              "id": "184018035101663232",
+              "name": "rdf300",
+              "discriminator": "0000",
+              "nickname": "RDF300",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/e41dd57e7a6c9d749c4d2e192e02f5fd-C1C10.png"
+            },
+            {
+              "id": "232080368176463873",
+              "name": "zilding",
+              "discriminator": "0000",
+              "nickname": "Zilding",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/abcafc76b4aa9f6b1e2fc126c1d72bd6-5445E.png"
+            },
+            {
+              "id": "307577628699918336",
+              "name": "ab201701",
+              "discriminator": "0000",
+              "nickname": "ab",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/2-ADBB4.png"
+            },
+            {
+              "id": "520043115269062666",
+              "name": "weeda2192",
+              "discriminator": "0000",
+              "nickname": "Weeda",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/fd068b9f5e8730642625b88bed684535-4E015.png"
+            },
+            {
+              "id": "542531091098238976",
+              "name": "thelinuxpirate",
+              "discriminator": "0000",
+              "nickname": "TheLinuxPirate",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/3d986d4d6a4987c625c72a662d445480-636A3.png"
+            },
+            {
+              "id": "617385266931302450",
+              "name": "angus9356",
+              "discriminator": "0000",
+              "nickname": "Angus",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            },
+            {
+              "id": "1164896446206722120",
+              "name": "spagettioso",
+              "discriminator": "0000",
+              "nickname": "Spagett",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a604868b2420061dd7fdd1eb666c5ecb-20A0D.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83C\uDF89",
+            "code": "tada",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f389-5C738.svg"
+          },
+          "count": 3,
+          "users": [
+            {
+              "id": "607999432419704875",
+              "name": "raven34983",
+              "discriminator": "0000",
+              "nickname": "raven",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/862c5e968eb2bb3160969f0014047658-EAD91.png"
+            },
+            {
+              "id": "616253298143395850",
+              "name": "zoli111",
+              "discriminator": "0000",
+              "nickname": "Zoli",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/ff4ac307eba73edc0fecbd7033bb454a-27525.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            }
+          ]
+        },
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDCAA",
+            "code": "muscle",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f4aa-2FD27.svg"
+          },
+          "count": 2,
+          "users": [
+            {
+              "id": "616253298143395850",
+              "name": "zoli111",
+              "discriminator": "0000",
+              "nickname": "Zoli",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/ff4ac307eba73edc0fecbd7033bb454a-27525.png"
+            },
+            {
+              "id": "642132596440170507",
+              "name": "the.mightydill",
+              "discriminator": "0000",
+              "nickname": "dill",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/a995207acbce0d7c18f115f6c6b900aa-3EB11.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    }
+  ],
+  "messageCount": 13
+}

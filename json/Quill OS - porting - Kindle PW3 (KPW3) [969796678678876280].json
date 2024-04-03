@@ -1,0 +1,5064 @@
+{
+  "guild": {
+    "id": "809205711778480158",
+    "name": "Quill OS",
+    "iconUrl": "/mnt/data/projects/git/conversations/media/e0b7ce53fdbaa210cc6789bc0c621f25-3E16D.png"
+  },
+  "channel": {
+    "id": "969796678678876280",
+    "type": "GuildPublicThread",
+    "categoryId": "934478064539295815",
+    "category": "porting",
+    "name": "Kindle PW3 (KPW3)",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2024-04-03T21:39:24.4237656+02:00",
+  "messages": [
+    {
+      "id": "969796686354481202",
+      "type": "Default",
+      "timestamp": "2022-04-30T05:05:47.978+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Let's... try?",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969843366718218260",
+      "type": "Default",
+      "timestamp": "2022-04-30T08:11:17.444+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Docs:\nHow to activate Serial Download Protocol mode (USB downloader mode) without soldering: https://www.mobileread.com/forums/showthread.php?t=341361\nHow to create an initrd (follow exactly the steps): https://www.mobileread.com/forums/showthread.php?t=343310",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Tutorial How-to: Booting U-Boot and Linux over USB - MobileRead Forums",
+          "url": "https://www.mobileread.com/forums/showthread.php?t=341361",
+          "timestamp": null,
+          "description": "Tutorial How-to: Booting U-Boot and Linux over USB Kindle Developer's Corner",
+          "images": [],
+          "fields": []
+        },
+        {
+          "title": "Tutorial How-to: Building a custom initramfs for fun and profit - M...",
+          "url": "https://www.mobileread.com/forums/showthread.php?t=343310",
+          "timestamp": null,
+          "description": "Tutorial How-to: Building a custom initramfs for fun and profit Kindle Developer's Corner",
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969843699804692500",
+      "type": "Default",
+      "timestamp": "2022-04-30T08:12:36.858+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Ping",
+      "author": {
+        "id": "214206917524979713",
+        "name": "nonasuomy",
+        "discriminator": "0000",
+        "nickname": "NonaSuomy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/a9cdf47999991a310fd9b1b1d12704ca-D60CB.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969843960275161149",
+      "type": "Default",
+      "timestamp": "2022-04-30T08:13:38.959+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "What processor is this device?",
+      "author": {
+        "id": "214206917524979713",
+        "name": "nonasuomy",
+        "discriminator": "0000",
+        "nickname": "NonaSuomy",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/a9cdf47999991a310fd9b1b1d12704ca-D60CB.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969844035244142622",
+      "type": "Default",
+      "timestamp": "2022-04-30T08:13:56.833+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i.MX6SL",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969844071709442088",
+      "type": "Default",
+      "timestamp": "2022-04-30T08:14:05.527+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "3.0.35 kernel",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969846640372490291",
+      "type": "Default",
+      "timestamp": "2022-04-30T08:24:17.944+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": true,
+      "content": "How to write a kernel to the eMMC: `dd if=uImage of=/dev/mmcblk0 bs=4096 seek=65`",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "969846674207965184",
+      "type": "ChannelPinnedMessage",
+      "timestamp": "2022-04-30T08:24:26.011+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Pinned a message.",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "969846640372490291",
+        "channelId": "969796678678876280",
+        "guildId": null
+      }
+    },
+    {
+      "id": "970052515192250439",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:02:22.326+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that sounds like all the tolino/kobo devices...",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970052563821006868",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:02:33.92+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "probably just devicetree and we are done?",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970053337103888434",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:05:38.285+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "kindles are so much more compliated than kobos\npw4 and up even have HAB enabled",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970053442997465098",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:06:03.532+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yes, HAB would be problematic...",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970053585125646386",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:06:37.418+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also I have only partial access to the serial console, it seems it activates itself only when the kernel has been started, U-Boot is completely silent\nWhen I bought it, I could access U-Boot but somehow it broke for no reason after that",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970053957957332992",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:08:06.308+02:00",
+      "timestampEdited": "2022-04-30T22:08:15.871+02:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Also the EPDC control is actually a kernel module, mxc_epdc_fb and mxc_epdc_eink\nI don't fully understand how the infrastructure works\nThere are also two U-Boots, a standard one and another one named BIST (built-in self-test) which contains fastboot and is used for recovery or jailbreaking",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054011409543198",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:08:19.052+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "but the PW3 if it is without HAB but with 3.0.35 kernel, things are more interesting. I personally avoided the kindles also because I do not want to finance build such locked stuff",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054093311729734",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:08:38.579+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Fortunately there is a reliable download mode",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054132473942057",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:08:47.916+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that imx_usb seems to be identical to that uuu",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054132750745650",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:08:47.982+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Which leads to an unbrickable device",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054193563963432",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:09:02.481+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "imx_usb can also boot Linux\ncan uuu do that?",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054329207750726",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:09:34.821+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "with the step of booting a bootloader first, probably yes",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054380072083636",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:09:46.948+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I guess imx_usb also does that",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054437051723806",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:10:00.533+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "imx_usb loads U-Boot then the kernel",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054557583417364",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:10:29.27+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that same serial download procotol can be enable in u-boot",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054688122732544",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:11:00.393+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "and if it is... than you can use the same tool",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054809472344094",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:11:29.325+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "sample imx_usb log",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [
+        {
+          "id": "970054809312985160",
+          "url": "/mnt/data/projects/git/conversations/media/message-341EB.txt",
+          "fileName": "message.txt",
+          "fileSizeBytes": 2561
+        }
+      ],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054864254144582",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:11:42.386+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "or boot an u-boot with fastboot  activated per default",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054867634769960",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:11:43.192+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "actually it seems it has hab but it isn't enabled",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970054926141112391",
+      "type": "Reply",
+      "timestamp": "2022-04-30T22:11:57.141+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that would be a great thing",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "934882185943593030",
+          "name": "andi15701",
+          "discriminator": "0000",
+          "nickname": "andi",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+        }
+      ],
+      "reference": {
+        "messageId": "970054864254144582",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970055021427322921",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:12:19.859+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "I'll see if I can understand how their U-Boot works... without a serial console",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970057709875523595",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:23:00.835+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "hmm, so where is the kernel source?",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970059351605780530",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:29:32.254+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/katadelos/linux-3.0.35-lab126/tree/master\nit's also on Amazon's source code downloads page but it's easier to access there",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "GitHub - katadelos/linux-3.0.35-lab126: Linux kernel source tree fo...",
+          "url": "https://github.com/katadelos/linux-3.0.35-lab126/tree/master",
+          "timestamp": null,
+          "description": "Linux kernel source tree for Amazon Kindle devices. Re-upload of GPL release - GitHub - katadelos/linux-3.0.35-lab126: Linux kernel source tree for Amazon Kindle devices. Re-upload of GPL release",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "/mnt/data/projects/git/conversations/media/linux-3.0-FD18C.35-lab126",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970060140453724180",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:32:40.33+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "https://github.com/katadelos/linux-3.0.35-lab126/blob/master/arch/arm/mach-mx6/board-mx6sl_wario.c",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "linux-3.0.35-lab126/board-mx6sl_wario.c at master · katadelos/linux...",
+          "url": "https://github.com/katadelos/linux-3.0.35-lab126/blob/master/arch/arm/mach-mx6/board-mx6sl_wario.c",
+          "timestamp": null,
+          "description": "Linux kernel source tree for Amazon Kindle devices. Re-upload of GPL release - linux-3.0.35-lab126/board-mx6sl_wario.c at master · katadelos/linux-3.0.35-lab126",
+          "color": "#1E2327",
+          "thumbnail": {
+            "url": "/mnt/data/projects/git/conversations/media/linux-3.0-FD18C.35-lab126",
+            "width": 1200,
+            "height": 600
+          },
+          "images": [],
+          "fields": []
+        }
+      ],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970060198960054292",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:32:54.279+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "main information source for porting to recent kernels",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970060302081208380",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:33:18.865+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "not that messy as board-mx6sl-ntx",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970060783625056266",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:35:13.674+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "amazon usually is better than kobo for making an infrastructure that makes sense",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970061637828612156",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:38:37.332+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "that kobo stuff covers a bunch of different devices",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970064015906701322",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:48:04.31+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "feasibility analysis: mmc: easy, main pmic: MAX77696, no source upstream maybe similar chips, but epdc supply needed, one pmic for everything, touchscreen: cyttsp4 / zforce2 both upstream,  sensors, some are there, some are missing,",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-27259.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "723167731561660527",
+              "name": "tux_linux",
+              "discriminator": "0000",
+              "nickname": "tux-linux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "970064327493173258",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:49:18.598+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "wlan is brcmfmac, so a similar situation as the cybertan stuff",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970064448431722530",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:49:47.432+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "keep in mind that I probably won't be able to test that, because of the serial port issue\nmaybe it will show something, maybe not\nthe console seems to start a few moments after the kernel boots\nit's very strange",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970064542207975424",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:50:09.79+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "also, hooking up that thing to serial is a pain.",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970064815949221949",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:51:15.055+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "max77696 is the biggest hurdle there",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970064829895307325",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:51:18.38+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "like, 1mm large pads, I broke Tx and Rx yesterday while trying to solder them\nfortunately on the other side of the board there are tm800 and tm801 pads which bridge to those on the top of the board. so I'm trying to get that hooked up without breaking it again",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970065255147376640",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:52:59.768+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "about the devices next, I guess more priority has getting basic support for the aura 2, glo hd upstream",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970065268367822848",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:53:02.92+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "for me",
+      "author": {
+        "id": "934882185943593030",
+        "name": "andi15701",
+        "discriminator": "0000",
+        "nickname": "andi",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/0-EB806.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970065346910363698",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:53:21.646+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yeah sure",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970065399381098590",
+      "type": "Default",
+      "timestamp": "2022-04-30T22:53:34.156+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "3.0.35 is still a pretty fine kernel version",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970107434209280070",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:40:36.04+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "well, end of the road here or I need a miracle\nI think I just fried half of the board up, no display, no FL, no feedback or anything\nSDP mode still works, loads U-Boot+kernel fine but nothing seems to run after that.\nI'll try to buy another one, a sane one this time...",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970107559488942171",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:41:05.909+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "oh... how?",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970107719791046736",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:41:44.128+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i don't know\nprobably messed up with 3.3v source or it got somewhere on the board it shouldn't have gone",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970107796345487360",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:42:02.38+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "it was already kind of half-working, so...",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970107849692839976",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:42:15.099+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "isin't this just a waste of money?... maybe try to focus on another device ( if its from donation request then its another story )",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "970107434209280070",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970108082812235797",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:43:10.679+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "no, it is not\nit's a great device\nI got that one for <$20, I'll try to find another good deal",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108192778514482",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:43:36.897+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "how? messing up with the software caused that?",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "970107719791046736",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970108438677950495",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:44:35.524+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "no, for SDP mode you need a power source that you connect to CR501 so maybe it was hanging around and touched some of the connectors at the wrong time",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108493203910756",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:44:48.524+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "do you have a multimiter / osciloscope / pure alcohol? we could try to repair this device",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108542549893160",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:45:00.289+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "you didn't solder it, did you?",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "970108438677950495",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970108582899109928",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:45:09.909+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i did try to solder the serial port",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108591547752459",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:45:11.971+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "no luck",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108612829671465",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:45:17.045+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "broke two pads",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108663060643850",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:45:29.021+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "why...",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108706182291486",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:45:39.302+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "why why?\nit was my first time soldering",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108733453647892",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:45:45.804+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "oh okay",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108830941843456",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:46:09.047+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "try practicing some more, it needs time",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108898151387206",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:46:25.071+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the other side of the board contains mirror pads of the serial thing, I wanted to try soldering that tonight but then it just broke while I was preparing",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970108979558613063",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:46:44.48+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yes",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "435309823484100619",
+          "name": "szybet",
+          "discriminator": "0000",
+          "nickname": "Szybet",
+          "color": "#B8D3FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "950058297417936976",
+              "name": "pin-role",
+              "color": null,
+              "position": 16
+            },
+            {
+              "id": "1145785101217701898",
+              "name": "Admin",
+              "color": "#B8D3FF",
+              "position": 15
+            },
+            {
+              "id": "1022891504768913498",
+              "name": "Kobo Nia N306",
+              "color": "#11806A",
+              "position": 11
+            }
+          ],
+          "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+        }
+      ],
+      "reference": {
+        "messageId": "970108493203910756",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970108999435448320",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:46:49.219+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "multimeter",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109060793917510",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:47:03.848+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "is there a datasheet somewhere of that device?",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109101910667305",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:47:13.651+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "good luck finding one",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109160010174494",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:47:27.503+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "could you describe how?",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "970108898151387206",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970109248161841214",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:47:48.52+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "how what?",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109373936439296",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:48:18.507+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "yes, are there letters written on chips?",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "970109101910667305",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970109411190272050",
+      "type": "Reply",
+      "timestamp": "2022-05-01T01:48:27.389+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "they broke off",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "970109248161841214",
+        "channelId": "969796678678876280",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "970109474201288704",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:48:42.412+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "well, the device broke off",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109498612154378",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:48:48.232+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "for some reason",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109646532648960",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:49:23.499+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i meanthe solder pads",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970109733514145802",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:49:44.237+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i don't quite remember",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970110226793656381",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:51:41.844+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "well okay",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970110339981123584",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:52:08.83+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i'm also looking out for kindle touch\nthey are more hackable and have a download mode too",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970110382276493373",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:52:18.914+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "it's about the same specs as the touch b or sony prs t1",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970110746811859024",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:53:45.826+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "well if they are really that cheap then sure its a good idea",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970110878945005588",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:54:17.329+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i should have gotten an older device too, kobo nia was 100$",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970110973828542494",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:54:39.951+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "kobo nia is good, it makes things easier for clara hd port",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970111408069017670",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:56:23.482+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "in what way",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970111553548476446",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:56:58.167+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "it's a newer U-Boot, newer kernel format (zImage), devicetree, etc.",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970111666639474708",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:57:25.13+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "in my experience kobo nia doesn't have a great battery life... im developing things on it, testing it with inkbox kernel and its horrible, but still",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "970111839167979560",
+      "type": "Default",
+      "timestamp": "2022-05-01T01:58:06.264+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i will adress this issue when i will use the reader *in a normal way* for a month",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [
+        {
+          "emoji": {
+            "id": "",
+            "name": "\uD83D\uDC4D",
+            "code": "thumbsup",
+            "isAnimated": false,
+            "imageUrl": "/mnt/data/projects/git/conversations/media/1f44d-27259.svg"
+          },
+          "count": 1,
+          "users": [
+            {
+              "id": "723167731561660527",
+              "name": "tux_linux",
+              "discriminator": "0000",
+              "nickname": "tux-linux",
+              "isBot": false,
+              "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+            }
+          ]
+        }
+      ],
+      "mentions": []
+    },
+    {
+      "id": "1200486883231289407",
+      "type": "Default",
+      "timestamp": "2024-01-26T18:06:16.93+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "How is the situation with PW3? Is it possible/any progress? I want to breathe a bit of life to an 8th gen kindle I got after my sis upgraded to a new one.",
+      "author": {
+        "id": "426835163574566923",
+        "name": "nonridiculousadjective",
+        "discriminator": "0000",
+        "nickname": "\uD835\uDE49\uD835\uDE64\uD835\uDE63\uD835\uDE4D\uD835\uDE5E\uD835\uDE59\uD835\uDE5E\uD835\uDE58\uD835\uDE6A\uD835\uDE61\uD835\uDE64\uD835\uDE6A\uD835\uDE68\uD835\uDE3C\uD835\uDE59\uD835\uDE5F\uD835\uDE5A\uD835\uDE58\uD835\uDE69\uD835\uDE5E\uD835\uDE6B\uD835\uDE5A",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/cfc16e7269df7ddbf9bc478acea3ca14-5877B.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1200487429530984519",
+      "type": "Default",
+      "timestamp": "2024-01-26T18:08:27.178+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "(not in speed ofc, but rather in functionality as I really don't like what amazon has there)",
+      "author": {
+        "id": "426835163574566923",
+        "name": "nonridiculousadjective",
+        "discriminator": "0000",
+        "nickname": "\uD835\uDE49\uD835\uDE64\uD835\uDE63\uD835\uDE4D\uD835\uDE5E\uD835\uDE59\uD835\uDE5E\uD835\uDE58\uD835\uDE6A\uD835\uDE61\uD835\uDE64\uD835\uDE6A\uD835\uDE68\uD835\uDE3C\uD835\uDE59\uD835\uDE5F\uD835\uDE5A\uD835\uDE58\uD835\uDE69\uD835\uDE5E\uD835\uDE6B\uD835\uDE5A",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/cfc16e7269df7ddbf9bc478acea3ca14-5877B.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1200513756279603240",
+      "type": "Default",
+      "timestamp": "2024-01-26T19:53:03.964+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Hi, not really, mine's pretty much bricked, sorry",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1200556678211457116",
+      "type": "Default",
+      "timestamp": "2024-01-26T22:43:37.35+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@\uD835\uDE49\uD835\uDE64\uD835\uDE63\uD835\uDE4D\uD835\uDE5E\uD835\uDE59\uD835\uDE5E\uD835\uDE58\uD835\uDE6A\uD835\uDE61\uD835\uDE64\uD835\uDE6A\uD835\uDE68\uD835\uDE3C\uD835\uDE59\uD835\uDE5F\uD835\uDE5A\uD835\uDE58\uD835\uDE69\uD835\uDE5E\uD835\uDE6B\uD835\uDE5A",
+      "author": {
+        "id": "723167731561660527",
+        "name": "tux_linux",
+        "discriminator": "0000",
+        "nickname": "tux-linux",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891859107921960",
+            "name": "Kobo Glo HD N437",
+            "color": null,
+            "position": 10
+          },
+          {
+            "id": "1022891915445805127",
+            "name": "Kobo Aura 2 (SE) N236",
+            "color": null,
+            "position": 9
+          },
+          {
+            "id": "1022891955438506144",
+            "name": "Kobo Glo N613",
+            "color": null,
+            "position": 8
+          },
+          {
+            "id": "1022891995158564894",
+            "name": "Kobo Touch N905C",
+            "color": null,
+            "position": 7
+          },
+          {
+            "id": "1022892047318913024",
+            "name": "Kobo Touch N905B",
+            "color": null,
+            "position": 6
+          },
+          {
+            "id": "1022892077928960061",
+            "name": "Kobo Mini N705",
+            "color": null,
+            "position": 5
+          },
+          {
+            "id": "1045710957738991706",
+            "name": "Kobo Clara",
+            "color": null,
+            "position": 4
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/51e654ae1a891129a833b5425afd9f86-B19E0.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "426835163574566923",
+          "name": "nonridiculousadjective",
+          "discriminator": "0000",
+          "nickname": "\uD835\uDE49\uD835\uDE64\uD835\uDE63\uD835\uDE4D\uD835\uDE5E\uD835\uDE59\uD835\uDE5E\uD835\uDE58\uD835\uDE6A\uD835\uDE61\uD835\uDE64\uD835\uDE6A\uD835\uDE68\uD835\uDE3C\uD835\uDE59\uD835\uDE5F\uD835\uDE5A\uD835\uDE58\uD835\uDE69\uD835\uDE5E\uD835\uDE6B\uD835\uDE5A",
+          "color": null,
+          "isBot": false,
+          "roles": [],
+          "avatarUrl": "/mnt/data/projects/git/conversations/media/cfc16e7269df7ddbf9bc478acea3ca14-5877B.png"
+        }
+      ]
+    },
+    {
+      "id": "1200566906470539376",
+      "type": "Default",
+      "timestamp": "2024-01-26T23:24:15.957+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": ":(",
+      "author": {
+        "id": "426835163574566923",
+        "name": "nonridiculousadjective",
+        "discriminator": "0000",
+        "nickname": "\uD835\uDE49\uD835\uDE64\uD835\uDE63\uD835\uDE4D\uD835\uDE5E\uD835\uDE59\uD835\uDE5E\uD835\uDE58\uD835\uDE6A\uD835\uDE61\uD835\uDE64\uD835\uDE6A\uD835\uDE68\uD835\uDE3C\uD835\uDE59\uD835\uDE5F\uD835\uDE5A\uD835\uDE58\uD835\uDE69\uD835\uDE5E\uD835\uDE6B\uD835\uDE5A",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/cfc16e7269df7ddbf9bc478acea3ca14-5877B.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 91
+}

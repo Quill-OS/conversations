@@ -1,0 +1,268 @@
+{
+  "guild": {
+    "id": "809205711778480158",
+    "name": "Quill OS",
+    "iconUrl": "/mnt/data/projects/git/conversations/media/e0b7ce53fdbaa210cc6789bc0c621f25-3E16D.png"
+  },
+  "channel": {
+    "id": "1123354654160457758",
+    "type": "GuildPublicThread",
+    "categoryId": "958419944243089479",
+    "category": "dev",
+    "name": "probably the name is different on ubuntu",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2024-04-03T21:39:10.6590425+02:00",
+  "messages": [
+    {
+      "id": "1123354855222804550",
+      "type": "21",
+      "timestamp": "2023-06-27T22:51:08.409+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "166311083739447296",
+        "name": "kuratius",
+        "discriminator": "0000",
+        "nickname": "Kuratius",
+        "color": "#11806A",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/d86f9599ffb6193f75cdb96a965d5d58-6F41A.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": "1123354654160457758",
+        "channelId": "958419944243089479",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "1123354857781342298",
+      "type": "Default",
+      "timestamp": "2023-06-27T22:51:09.019+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "dk@dk-ThinkPad-E560:~/imgtool$ nbd-client\nERROR: no information specified\n\nUsage: nbd-client -name|-N name host [port] nbd_device\n    [-block-size|-b block size] [-timeout|-t timeout] [-swap|-s] [-sdp|-S]\n    [-persist|-p] [-nofork|-n] [-systemd-mark|-m] [-nonetlink|-L]\n    [-readonly|-R] [-size|-B bytes] [-preinit|-P]\nOr   : nbd-client -u (with same arguments as above)\nOr   : nbd-client nbdX\nOr   : nbd-client -d nbd_device\nOr   : nbd-client -c nbd_device\nOr   : nbd-client -h|--help\nOr   : nbd-client -l|--list host\nOr   : nbd-client -V|--version\nAll commands that connect to a host also take:\n    [-F|-certfile certfile] [-K|-keyfile keyfile]\n    [-A|-cacertfile cacertfile] [-H|-tlshostname hostname] [-x|-enable-tls]\nDefault value for blocksize is 512\nAllowed values for blocksize are 512,1024,2048,4096\nNote, that kernel 2.4.2 and older ones do not work correctly with\nblocksizes other than 1024 without patches\nDefault value for port is 10809. Note that port must always be numeric\nBug reports and general discussion should go to nbd@other.debian.org\ndk@dk-ThinkPad-E560:~/imgtool$",
+      "author": {
+        "id": "166311083739447296",
+        "name": "kuratius",
+        "discriminator": "0000",
+        "nickname": "Kuratius",
+        "color": "#11806A",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/d86f9599ffb6193f75cdb96a965d5d58-6F41A.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1123354967089098774",
+      "type": "Default",
+      "timestamp": "2023-06-27T22:51:35.08+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "does this look right?",
+      "author": {
+        "id": "166311083739447296",
+        "name": "kuratius",
+        "discriminator": "0000",
+        "nickname": "Kuratius",
+        "color": "#11806A",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/d86f9599ffb6193f75cdb96a965d5d58-6F41A.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1123355046315315271",
+      "type": "Default",
+      "timestamp": "2023-06-27T22:51:53.969+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "@Szybet",
+      "author": {
+        "id": "166311083739447296",
+        "name": "kuratius",
+        "discriminator": "0000",
+        "nickname": "Kuratius",
+        "color": "#11806A",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/d86f9599ffb6193f75cdb96a965d5d58-6F41A.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "435309823484100619",
+          "name": "szybet",
+          "discriminator": "0000",
+          "nickname": "Szybet",
+          "color": "#B8D3FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "950058297417936976",
+              "name": "pin-role",
+              "color": null,
+              "position": 16
+            },
+            {
+              "id": "1145785101217701898",
+              "name": "Admin",
+              "color": "#B8D3FF",
+              "position": 15
+            },
+            {
+              "id": "1022891504768913498",
+              "name": "Kobo Nia N306",
+              "color": "#11806A",
+              "position": 11
+            }
+          ],
+          "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+        }
+      ]
+    },
+    {
+      "id": "1123355087457243316",
+      "type": "Default",
+      "timestamp": "2023-06-27T22:52:03.778+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "what are you trying to achieve",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1123355117358415882",
+      "type": "Default",
+      "timestamp": "2023-06-27T22:52:10.907+02:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "try if the modprobe command works",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

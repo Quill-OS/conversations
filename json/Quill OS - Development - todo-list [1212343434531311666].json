@@ -1,0 +1,229 @@
+{
+  "guild": {
+    "id": "809205711778480158",
+    "name": "Quill OS",
+    "iconUrl": "/mnt/data/projects/git/conversations/media/e0b7ce53fdbaa210cc6789bc0c621f25-3E16D.png"
+  },
+  "channel": {
+    "id": "1212343434531311666",
+    "type": "GuildTextChat",
+    "categoryId": "1201239931956240455",
+    "category": "Development",
+    "name": "todo-list",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2024-04-03T21:35:59.2218301+02:00",
+  "messages": [
+    {
+      "id": "1212833759804788796",
+      "type": "Default",
+      "timestamp": "2024-02-29T19:48:21.699+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the command\n```\nfindmnt -l -o TARGET | grep .apps | awk '{ print length, $0 }' | sort -r | sort -n | tac | cut -d \" \" -f2- | xargs umount {} 2>/dev/null\n```\ncould be replaced with a simple rust program and such be faster",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1213143674880397358",
+      "type": "ThreadCreated",
+      "timestamp": "2024-03-01T16:19:51.211+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Started a thread.",
+      "author": {
+        "id": "286584087966253056",
+        "name": "marwit",
+        "discriminator": "0000",
+        "nickname": "MarWit",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/e05cf9c74fa2d09b0ff8037c46d90c5a-FAFF8.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [],
+      "reference": {
+        "messageId": null,
+        "channelId": "1212833759804788796",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "1214915682798542848",
+      "type": "Default",
+      "timestamp": "2024-03-06T13:41:10.821+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "rust sucks",
+      "author": {
+        "id": "1179470389743722546",
+        "name": "trololol_20401",
+        "discriminator": "0000",
+        "nickname": "trololol",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/3-FB033.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1214915893935611924",
+      "type": "Default",
+      "timestamp": "2024-03-06T13:42:01.16+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "\"a simple rust program\" is like \"a simple wasm program\"",
+      "author": {
+        "id": "1179470389743722546",
+        "name": "trololol_20401",
+        "discriminator": "0000",
+        "nickname": "trololol",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/3-FB033.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1214926123201331200",
+      "type": "Default",
+      "timestamp": "2024-03-06T14:22:40.007+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Your nickname is very precise\uD83E\uDD74",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1214926384066203658",
+      "type": "Default",
+      "timestamp": "2024-03-06T14:23:42.202+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "Well what can i say\ntalk is cheap, send patches\uD83D\uDE09",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 6
+}

@@ -1,0 +1,192 @@
+{
+  "guild": {
+    "id": "809205711778480158",
+    "name": "Quill OS",
+    "iconUrl": "/mnt/data/projects/git/conversations/media/e0b7ce53fdbaa210cc6789bc0c621f25-3E16D.png"
+  },
+  "channel": {
+    "id": "1212833759804788796",
+    "type": "GuildPublicThread",
+    "categoryId": "1212343434531311666",
+    "category": "todo-list",
+    "name": "the command",
+    "topic": null
+  },
+  "dateRange": {
+    "after": null,
+    "before": null
+  },
+  "exportedAt": "2024-04-03T21:43:02.6964729+02:00",
+  "messages": [
+    {
+      "id": "1213143674880397353",
+      "type": "21",
+      "timestamp": "2024-03-01T16:19:51.211+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "",
+      "author": {
+        "id": "286584087966253056",
+        "name": "marwit",
+        "discriminator": "0000",
+        "nickname": "MarWit",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/e05cf9c74fa2d09b0ff8037c46d90c5a-FAFF8.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": [
+        {
+          "id": "435309823484100619",
+          "name": "szybet",
+          "discriminator": "0000",
+          "nickname": "Szybet",
+          "color": "#B8D3FF",
+          "isBot": false,
+          "roles": [
+            {
+              "id": "950058297417936976",
+              "name": "pin-role",
+              "color": null,
+              "position": 16
+            },
+            {
+              "id": "1145785101217701898",
+              "name": "Admin",
+              "color": "#B8D3FF",
+              "position": 15
+            },
+            {
+              "id": "1022891504768913498",
+              "name": "Kobo Nia N306",
+              "color": "#11806A",
+              "position": 11
+            }
+          ],
+          "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+        }
+      ],
+      "reference": {
+        "messageId": "1212833759804788796",
+        "channelId": "1212343434531311666",
+        "guildId": "809205711778480158"
+      }
+    },
+    {
+      "id": "1213143683013025792",
+      "type": "Default",
+      "timestamp": "2024-03-01T16:19:53.15+01:00",
+      "timestampEdited": "2024-03-01T16:23:51.781+01:00",
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "wouldn't reverse lex sort be enough?\n`$ LC_ALL=C findmnt -l -o TARGET | grep .apps | sort -r | xargs unmount {}`",
+      "author": {
+        "id": "286584087966253056",
+        "name": "marwit",
+        "discriminator": "0000",
+        "nickname": "MarWit",
+        "color": null,
+        "isBot": false,
+        "roles": [],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/e05cf9c74fa2d09b0ff8037c46d90c5a-FAFF8.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1213154450261147648",
+      "type": "Default",
+      "timestamp": "2024-03-01T17:02:40.262+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "i had issues with it",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    },
+    {
+      "id": "1213154527621156934",
+      "type": "Default",
+      "timestamp": "2024-03-01T17:02:58.706+01:00",
+      "timestampEdited": null,
+      "callEndedTimestamp": null,
+      "isPinned": false,
+      "content": "the issue is there are so many that unmount is called so many times instead of just the ioctl, probably",
+      "author": {
+        "id": "435309823484100619",
+        "name": "szybet",
+        "discriminator": "0000",
+        "nickname": "Szybet",
+        "color": "#B8D3FF",
+        "isBot": false,
+        "roles": [
+          {
+            "id": "950058297417936976",
+            "name": "pin-role",
+            "color": null,
+            "position": 16
+          },
+          {
+            "id": "1145785101217701898",
+            "name": "Admin",
+            "color": "#B8D3FF",
+            "position": 15
+          },
+          {
+            "id": "1022891504768913498",
+            "name": "Kobo Nia N306",
+            "color": "#11806A",
+            "position": 11
+          }
+        ],
+        "avatarUrl": "/mnt/data/projects/git/conversations/media/36d10e1f0874970af106af4c3954e214-4CD21.png"
+      },
+      "attachments": [],
+      "embeds": [],
+      "stickers": [],
+      "reactions": [],
+      "mentions": []
+    }
+  ],
+  "messageCount": 4
+}
